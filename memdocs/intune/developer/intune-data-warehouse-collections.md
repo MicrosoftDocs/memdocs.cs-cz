@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461993"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820319"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -116,7 +116,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 
 |  complianceStatus  |                       Popis                      |
 |--------------------|--------------------------------------------------------|
-|    Neznámý         |    Neznámý.                                                                        |
+|    Neznámý         |    Neznámý                                                                        |
 |    Odpovídající       |    Dodržuje předpisy.                                                                      |
 |    Nevyhovuje    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
 |    Konflikt        |    Konflikt s jinými pravidly                                                      |
@@ -242,7 +242,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | UserId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
 | Manufacturer               | Výrobce zařízení                                                                                                                                                             |
-| Modelování                      | Model zařízení                                                                                                                                                                    |
+| Model                      | Model zařízení                                                                                                                                                                    |
 | OperatingSystem            | Operační systém zařízení Windows, iOS/iPadOS atd.                                                                                                                                   |
 | IsDeleted                  | Binární soubor zobrazující, zda se zařízení odstranilo nebo ne.                                                                                                                                 |
 | AndroidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
@@ -253,8 +253,9 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | SubscriberCarrier          | Poskytovatel předplatného na zařízení                                                                                                                                                       |
 | PhoneNumber                | Telefonní číslo zařízení                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Mobilní technologie zařízení                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| CellularTechnology         | Mobilní technologie zařízení.                                                                                                                                                    |
+| WiFiMacAddress             | Síť MAC Wi-Fi.                                                                                                                                                                              |
+| windowsOsEdition             | Edice operačního systému Windows.                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
@@ -271,7 +272,7 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 | deviceTypeID |        Název       |                      Popis                      |
 |--------------|-------------------|-------------------------------------------------------|
 | -1           | Není k dispozici   | Tento typ zařízení není k dispozici.                     |
-| 0            | Aplikace klasické pracovní plochy           | Zařízení se systémem Windows                              |
+| 0            | Desktop           | Zařízení se systémem Windows                              |
 | 1            | Windows           | Zařízení s Windows                                      |
 | 2            | WinMO6            | Zařízení se systémem Windows Mobile 6.0                           |
 | 3            | Nokia             | Zařízení Nokia                                        |
@@ -364,7 +365,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámý                         | Neznámou chybu.                                                                                                |
-| Authentication                  | Ověření se nezdařilo.                                                                                        |
+| Ověřování                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
@@ -582,7 +583,7 @@ Představuje stav instalace mobilní aplikace pomocí správy mobilních aplikac
 | DeviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
 | AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
 | ErrorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
-| Count              | Celkový počet                                                                                                                  |
+| Počet              | Celkový počet                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastnictví nebo neznámé.
@@ -676,7 +677,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
 |    termsAndConditionsBodyText    |    Text těchto podmínek a ujednání       |    *Šifrování zařízení* Vynucení šestimístného číselného kódu PIN    |
-|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    Nepravda    |
+|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    Ne    |
 |    startDateInclusiveUTC    |    Počáteční datum těchto podmínek a ujednání.     |    23. 8. 2018 4:01:34    |
 |    endDateEclusiveUTC    |    Koncové datum těchto podmínek a ujednání.     |    31. 12. 9999 12:00:00    |
 

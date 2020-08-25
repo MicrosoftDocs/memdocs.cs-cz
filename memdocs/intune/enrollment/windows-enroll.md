@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988906"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820591"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -72,7 +72,7 @@ Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. P
 
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
 
-|Typ|Název hostitele|Odkazuje na|Hodnota TTL|
+|Typ|Název hostitele|Odkazuje na|TTL|
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
@@ -85,13 +85,13 @@ Pokud podnik používá více než jednu příponu UPN, musíte vytvořit jeden 
 
 Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
-|Typ|Název hostitele|Odkazuje na|Hodnota TTL|  
+|Typ|Název hostitele|Odkazuje na|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 
-`EnterpriseEnrollment-s.manage.microsoft.com`– Podporuje přesměrování na službu Intune s rozpoznáním domény z doménového názvu e-mailu.
+`EnterpriseEnrollment-s.manage.microsoft.com` – Podporuje přesměrování na službu Intune s rozpoznáním domény z doménového názvu e-mailu.
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
@@ -121,9 +121,9 @@ Další informace o úlohách pro koncové uživatele najdete v tématu [Materi�
 ## <a name="registration-and-enrollment-cnames"></a>Registrace a zápisy CNAME
 Azure Active Directory má jiný záznam CNAME, který používá k registraci zařízení pro zařízení s iOS/iPadOS, Androidem a Windows. Podmíněný přístup Intune vyžaduje, aby se zařízení zaregistrovala, taky se označuje jako připojená k pracovišti. Pokud máte v úmyslu používat podmíněný přístup, měli byste také nakonfigurovat EnterpriseRegistration CNAME pro každý název společnosti, který máte.
 
-| Typ | Název hostitele | Odkazuje na | Hodnota TTL |
+| Typ | Název hostitele | Odkazuje na | TTL |
 | --- | --- | --- | --- |
-| NÁZEV | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
+| CNAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
 
 Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
 
@@ -133,7 +133,7 @@ Tato část se vztahuje na zákazníky v cloudu pro státní správu USA.
 
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva k zadání názvu serveru MDM, enrollment.manage.microsoft.us.
 
-| Typ | Název hostitele | Odkazuje na | Hodnota TTL |
+| Typ | Název hostitele | Odkazuje na | TTL |
 | --- | --- | --- | --- |
 | CNAME | EnterpriseEnrollment.doména_společnosti.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hodina|
 |CNAME | EnterpriseRegistration.doména_společnosti.com | EnterpriseRegistration.windows.net | 1 hodina |

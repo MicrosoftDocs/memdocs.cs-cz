@@ -1,11 +1,11 @@
 ---
 title: Funkce a nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradu Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení v centru pro správu Microsoft Endpoint Manageru. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
+description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o objektech zásad skupiny, funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradech Windows 10, BitLockeru a Microsoft Defenderu, Information Protection Windows, šablonách pro správu a vlastním nastavení konfigurace zařízení v centru pro správu Microsoft Endpoint Manageru Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146316"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820489"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -41,9 +41,7 @@ Tento článek obsahuje přehled různých typů profilů, které můžete vytvo
 
 ## <a name="administrative-templates"></a>Šablony pro správu
 
-[Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, Microsoft Edge, OneDrive, Vzdálená plocha, Word, Excel a další programy Office.
-
-Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které se podobá zásadám skupiny, ale jsou 100% cloudu.
+[Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, Microsoft Edge, OneDrive, Vzdálená plocha, Word, Excel a další programy Office. Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které se podobá zásadám skupiny, ale jsou 100% cloudu.
 
 Tato funkce podporuje:
 

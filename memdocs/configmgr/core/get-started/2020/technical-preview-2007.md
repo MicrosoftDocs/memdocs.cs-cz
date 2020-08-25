@@ -2,7 +2,7 @@
 title: Technical Preview 2007
 titleSuffix: Configuration Manager
 description: Přečtěte si o nových funkcích, které jsou k dispozici ve větvi Configuration Manager Technical Preview verze 2007.
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6759a9a6-f791-4b3f-887a-8d8c7786a1d5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6ae4b54c23f20e930c0430055c63de927972f49
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 03cd0914131b17e1d77b13eeee9b059a6da5c574
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86385048"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819384"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2007"></a>Funkce v Configuration Manager Technical Preview verze 2007
 

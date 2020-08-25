@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c23044b912b7f0edf2852477aad80dd9be66cf54
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526062"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819605"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -293,7 +293,7 @@ End of comment -->
 
 - **Počet dní do vypršení platnosti hesla**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Počet hesel vyžadovaných před opětovným použitím hesla uživatelem**: Toto nastavení použijte, pokud chcete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
   > [!NOTE]
   > Plně spravovaná, vyhrazená a podnikově vlastněná zařízení pracovních profilů nebudou vyzváni k nastavení hesla. Nastavení se vynutilo a budete muset heslo nastavit ručně. Zásady, které vynucují tuto zásadu, budou hlásit jako neúspěšné, dokud nenastavíte heslo, které vyhovuje vašim požadavkům.
@@ -394,7 +394,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 - **Oznámení pracovního profilu, když je zařízení zamknuté**: **blok** zabraňuje oznámením oken, včetně informačních zpráv, příchozích volání, odchozích volání, výstrah systému a systémových chyb, které se zobrazují na zamčených zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazovat oznámení.
 - **Výchozí oprávnění aplikace**: umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od Androidu 6 se uživatelům zobrazí výzva, aby při spuštění aplikace udělila určitá oprávnění požadovaná aplikacemi. Nastavení této zásady vám umožňuje určit, jestli se uživatelům zobrazí výzva k udělení oprávnění všem aplikacím v pracovním profilu. Můžete například přiřadit do pracovního profilu aplikaci, která vyžaduje přístup k poloze. Obvykle aplikace vyzývá uživatele ke schválení nebo zamítnutí přístupu k poloze aplikace. Pomocí této zásady můžete automaticky udělit oprávnění bez výzvy, automaticky odepřít oprávnění bez výzvy nebo se uživatelé můžou rozhodnout. Možnosti:
   - **Výchozí ze zařízení**
-  - **Výzva**
+  - **Výzv**
   - **Automaticky udělit**
   - **Automaticky odepřít**
 
@@ -435,29 +435,33 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
   - Android 7,0 a novější s povoleným pracovním profilem
 
-- **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
-- **Maximální počet minut nečinnosti, po kterém se zamkne pracovní profil**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte například, `5` Pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
+  Také konfigurovat:
 
-  V zařízeních uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
+  - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+  - **Maximální počet minut nečinnosti, po kterém se zamkne pracovní profil**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Uživatelé musí zadat své přihlašovací údaje, aby získali přístup. Zadejte například, `5` Pokud chcete zařízení uzamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
 
-- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním pracovního profilu v zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+    V zařízeních uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
 
-- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než se musí změnit uživatelská hesla (od **1** - **365**).
-- **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
-  - **Výchozí ze zařízení**
-  - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
-  - **Požadováno**
-  - **Aspoň číslice**: obsahuje číselné znaky, například `123456789` .
-  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234` , nejsou povolena.
-  - **Aspoň abecední**znaky: obsahuje písmena v abecedě. Čísla a symboly nejsou požadovány.
-  - **Aspoň alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
-  - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
+  - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním pracovního profilu v zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
-- **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
-- **Odemknutí otiskem prstu**: **blok** znemožní uživatelům používat skener otisků prstů zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
-- **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky na kompatibilních zařízeních. Pokud jsou zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Můžete například obejít heslo pracovního profilu, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+  - **Vypršení platnosti hesla (dny)**: zadejte počet dní, než se musí změnit uživatelská hesla (od **1** - **365**).
+  - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
+    - **Výchozí ze zařízení**
+    - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
+    - **Požadováno**
+    - **Aspoň číslice**: obsahuje číselné znaky, například `123456789` .
+    - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například `1111` nebo `1234` , nejsou povolena.
+    - **Aspoň abecední**znaky: obsahuje písmena v abecedě. Čísla a symboly nejsou požadovány.
+    - **Aspoň alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice.
+    - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+  - **Odemknutí obličeje**: **blok** znemožní uživatelům používat rozpoznávání obličeje zařízení k odemknutí pracovního profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí rozpoznávání obličeje.
+  - **Odemknutí otiskem prstu**: **blok** znemožní uživatelům používat skener otisků prstů zařízení k odemknutí pracovního profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
+  - Rozhraní **Iris Unlock**: **blok** zabraňuje uživatelům v používání skeneru Iris zařízení k odemknutí pracovního profilu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí skeneru Iris.
+  - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky na kompatibilních zařízeních. Pokud jsou zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Můžete například obejít heslo pracovního profilu, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+
+    Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 ### <a name="password"></a>Heslo
 
@@ -468,7 +472,7 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
 
   V zařízeních uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
 
-- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním pracovního profilu v zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním pracovního profilu v zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
@@ -482,6 +486,8 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
 
 - **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Odemknutí otiskem prstu**: **blok** znemožní uživatelům používat skener otisků prstů zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
+- **Odemknutí obličeje**: **blok** znemožní uživatelům používat rozpoznávání obličeje zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí rozpoznávání obličeje.
+- Rozhraní **Iris Unlock**: **blok** zabraňuje uživatelům v používání skeneru Iris zařízení k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí skeneru Iris.
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky na kompatibilních zařízeních. Pokud jsou zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Můžete například obejít heslo pracovního profilu, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.

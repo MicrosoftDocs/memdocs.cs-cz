@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820523"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Zjišťování koncových bodů a zásady odezvy pro zabezpečení koncového bodu v Intune
 
@@ -43,24 +43,11 @@ Zobrazit [nastavení pro zjišťování koncových bodů a profily odpovědí](e
 
 - **Tenant pro Microsoft Defender Advanced Threat Protection** – váš tenant Microsoft Defender ATP musí být integrovaný do vašeho tenanta Microsoft Endpoint Manageru (předplatné Intune), aby bylo možné vytvářet zásady EDR. Viz [Použití ATP v programu Microsoft Defender](advanced-threat-protection.md) v dokumentaci k Intune.
 
-**Podpora zařízení z Configuration Manager**:
+**Podpora pro Configuration Manager klienty**:
 
-Aby bylo možné podporovat používání zásad EDR se zařízeními Configuration Manager, vyžaduje Configuration Manager prostředí následující další konfigurace. [Pokyny k konfiguraci](#set-up-configuration-manager-to-support-edr-policy) jsou k dispozici v tomto článku:
+- **Nastavení připojení tenanta pro Configuration Manager zařízení** – pro podporu nasazení zásad EDR do zařízení spravovaných pomocí Configuration Manager nakonfigurujte *připojení tenanta*. To zahrnuje konfiguraci Configuration Manager kolekcí zařízení pro podporu zásad zabezpečení koncového bodu služby Intune.
 
-- **Configuration Manager verze 2002 nebo novější** – váš web musí běžet Configuration Manager 2002 nebo novější.
-
-- **Instalace aktualizace Configuration Manager** – Pokud chcete povolit podporu v Configuration Manager 2002 pro používání zásad EDR, které vytvoříte v centru pro správu Microsoft Endpoint Manageru, nainstalujte v konzole Configuration Manager konzoly tuto aktualizaci:
-  - **Oprava hotfix Configuration Manager 2002 (KB4563473)**
-
-- **Konfigurace připojení tenanta** – připojení tenanta umožňuje synchronizovat kolekce zařízení z Configuration Manager do centra pro správu Microsoft Endpoint Manager. Pak můžete použít Centrum pro správu k nasazení zásad EDR do těchto kolekcí.
-
-  Připojení klienta se často konfiguruje se spolusprávou, ale můžete nakonfigurovat připojení tenanta sami.
-
-- **Synchronizovat kolekce Configuration Manager** – když konfigurujete připojení tenanta, můžete vybrat kolekce Configuration Managerch zařízení, které se mají synchronizovat s centrem pro správu Microsoft Endpoint Manageru. Můžete se také vrátit později a upravit kolekce zařízení, které synchronizujete. Zásady EDR pro zařízení Configuration Manager se dají přiřadit jenom ke kolekcím, které jste synchronizovali.
-
-  Po výběru kolekcí k synchronizaci je musíte povolit pro použití s Microsoft Defender ATP.
-
-- **Oprávnění ke službě Azure AD** – k dokončení nastavení připojení tenanta a ke konfiguraci kolekcí Configuration Manager budete synchronizovat s centrem pro správu Microsoft Endpoint Manageru, budete potřebovat účet s oprávněním globálního správce k vašemu předplatnému Azure.
+  Pokud chcete nastavit připojení tenanta, včetně synchronizace kolekcí Configuration Manager do centra pro správu Microsoft Endpoint Manageru a jeho povolení pro práci se zásadami zabezpečení koncového bodu, přečtěte si téma [Konfigurace připojení tenanta pro podporu zásad ochrany koncových](../protect/tenant-attach-intune.md)bodů.
 
 ## <a name="edr-profiles"></a>Profily EDR
 
@@ -73,7 +60,7 @@ Aby bylo možné podporovat používání zásad EDR se zařízeními Configurat
 
 **Configuration Manager** – pro zařízení, která spravujete pomocí nástroje Configuration Manager, se podporují tyto možnosti:
 
-- Platforma: **Windows 10 a Windows Server** – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager.
+- Platforma: **Windows 10 a Windows Server (ConfigMgr)** – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager.
 - Profil: **detekce a odpověď koncového bodu (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>Nastavit Configuration Manager pro podporu zásad EDR
@@ -86,8 +73,6 @@ Požadované úlohy jsou pokryté v následujících částech:
 
 1. [Instalace aktualizace pro Configuration Manager](#task-1-install-the-update-for-configuration-manager)
 2. [Povolení připojení tenanta](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [Vybrat kolekce, které se mají synchronizovat](#task-3-select-collections-to-synchronize)
-4. [Povolení kolekcí pro ATP v programu Microsoft Defender](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > Další informace o používání služby Microsoft Defender ATP s Configuration Manager najdete v následujících článcích v Configuration Managerm obsahu:
@@ -111,8 +96,6 @@ Po instalaci aktualizace se sem vraťte, abyste mohli pokračovat v konfiguraci 
 
 ### <a name="task-2-configure-tenant-attach-and-synchronize-collections"></a>Úloha 2: Konfigurace tenanta pro připojení a synchronizaci kolekcí
 
-Pokud byla společná správa dříve povolená, připojení tenanta je už nastavené a můžete přejít k [úloze 3](#task-3-select-collections-to-synchronize).
-
 Když se připojíte ke klientovi, určete kolekce zařízení z nasazení Configuration Manager pro synchronizaci s centrem pro správu Microsoft Endpoint Manageru. Po synchronizaci kolekcí použijte centrum pro správu k zobrazení informací o těchto zařízeních a nasazení zásad EDR z Intune do těchto zařízení.  
 
 Další informace o scénáři připojení klienta najdete v tématu [Povolení připojení tenanta](../../configmgr/tenant-attach/device-sync-actions.md) v obsahu Configuration Manager.
@@ -129,82 +112,26 @@ Pokud plánujete povolit spolusprávu, Seznamte se s spolusprávou, jejich poža
 3. Na stránce registrace **tenanta** vyberte **AzurePublicCloud** pro vaše prostředí. Cloud Azure Government není podporovaný.
    1. Klikněte na **Přihlásit se**. Přihlaste se pomocí účtu *globálního správce* .
 
-   2. Ujistěte se, že je na stránce pro **registraci tenanta** vybraná možnost **nahrajte do centra pro správu Microsoft Endpoint Manageru** .
+Pro zařízení, která spravujete pomocí Intune, se podporují následující možnosti:
 
-   3. Odstraňte kontrolu z **Povolení automatického zápisu klientů pro spolusprávu**.
+- Platforma: **Windows 10 a novější** – Intune nasadí zásady do zařízení ve skupinách Azure AD.
+  - Profil: **detekce a odpověď koncového bodu (MDM)**
 
-      Pokud je vybrána tato možnost, průvodce nabídne další stránky k dokončení nastavení spolusprávy. Další informace najdete v tématu [Povolení spolusprávy](../../configmgr/comanage/how-to-enable.md) v obsahu Configuration Manager.
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Zařízení spravovaná pomocí Configuration Manager *(ve verzi Preview)*
 
-     ![Konfigurovat připojení tenanta](media/endpoint-security-edr-policy/tenant-onboarding.png)
+Pro zařízení, která spravujete pomocí Configuration Manager ve scénáři *připojení tenanta* , se podporují následující:
 
-4. Klikněte na tlačítko **Další** a pak na **Ano** , pokud chcete přijmout oznámení o **Vytvoření aplikace AAD** . Tato akce zřídí instanční objekt a vytvoří registraci aplikace služby Azure AD, aby se usnadnila synchronizace kolekcí do centra pro správu služby Microsoft Endpoint Manager.
-
-5. Na stránce **Konfigurace nahrávání** nakonfigurujte, které kolekce se mají synchronizovat. Můžete omezit konfiguraci na jednu nebo několik kolekcí zařízení nebo použít nastavení Doporučené nahrávání zařízení pro **všechna moje zařízení spravovaná službou Microsoft Endpoint Configuration Manager**.
-
-6. Kliknutím na **Souhrn** zkontrolujte výběr a pak klikněte na **Další**.
-
-7. Po dokončení průvodce klikněte na tlačítko **Zavřít**.
-
-   Připojení tenanta je teď nakonfigurované a vybrané kolekce se synchronizují do centra pro správu Microsoft Endpoint Manageru.
-
-#### <a name="enable-tenant-attach-when-you-use-co-management"></a>Povolit připojení tenanta, když používáte spolusprávu
-
-1. V konzole pro správu Configuration Manager najdete v části **Administration**  >  **Přehled**správy  >  **Cloud Services**  >  **spoluspráva**.
-
-2. Klikněte pravým tlačítkem na nastavení spolusprávy a vyberte **vlastnosti**.
-
-3. Na kartě **Konfigurovat nahrávání** vyberte **Odeslat do centra pro správu služby Microsoft Endpoint Manager**. Klikněte na **Použít**.
-   - Výchozím nastavením pro nahrávání zařízení jsou **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. Můžete taky zvolit omezení konfigurace na jednu nebo několik kolekcí zařízení.
-
-     ![Zobrazit kartu vlastnosti spolusprávy](media/endpoint-security-edr-policy/configure-upload.png)
-
-4. Po zobrazení výzvy se přihlaste pomocí účtu *globálního správce* .
-
-5. Kliknutím na **Ano** přijměte oznámení o **Vytvoření aplikace AAD** . Tato akce zřídí instanční objekt a vytvoří registraci aplikace služby Azure AD, která usnadňuje synchronizaci.
-
-6. Kliknutím na tlačítko **OK** zavřete vlastnosti spolusprávy poté, co provedete změny.
-
-   Připojení tenanta je teď nakonfigurované a vybrané kolekce se synchronizují do centra pro správu Microsoft Endpoint Manageru.
-
-### <a name="task-3-select-collections-to-synchronize"></a>Úloha 3: Vyberte kolekce, které chcete synchronizovat.
-
-Když je nakonfigurované připojení tenanta, můžete vybrat kolekce, které se mají synchronizovat. Pokud jste ještě nesynchronizoval kolekce nebo potřebujete změnit konfiguraci těch, které synchronizujete, můžete upravit vlastnosti spolusprávy v konzole Configuration Manager.
-
-#### <a name="select-collections"></a>Vybrat kolekce
-
-1. V konzole pro správu Configuration Manager najdete v části **Administration**  >  **Přehled**správy  >  **Cloud Services**  >  **spoluspráva**.
-
-2. Klikněte pravým tlačítkem na nastavení spolusprávy a vyberte **vlastnosti**.
-
-3. Na kartě **Konfigurovat nahrávání** vyberte **Odeslat do centra pro správu služby Microsoft Endpoint Manager**. Klikněte na **Použít**.
-
-   Výchozím nastavením pro nahrávání zařízení jsou **všechna moje zařízení spravovaná pomocí koncového bodu Microsoft Configuration Manager**. Můžete taky zvolit omezení konfigurace na jednu nebo několik kolekcí zařízení.
-
-### <a name="task-4-enable-collections-for-microsoft-defender-atp"></a>Úloha 4: povolení kolekcí pro ATP v programu Microsoft Defender
-
-Až nakonfigurujete kolekce, které se mají synchronizovat s centrem pro správu Microsoft Endpoint Manageru, musíte pořád povolit, aby tyto kolekce byly vhodné pro připojování a zásady ochrany ATP v programu Microsoft Defender.  Uděláte to tak, že upravíte vlastnosti každé kolekce v konzole Configuration Manager.
-
-#### <a name="enable-collections-for-use-with-advanced-threat-protection"></a>Povolit kolekce pro použití s pokročilou ochranou hrozeb
-
-1. Z konzoly Configuration Manager připojené k lokalitě nejvyšší úrovně klikněte pravým tlačítkem na kolekci zařízení, kterou synchronizujete do centra pro správu Microsoft Endpoint Manageru, a vyberte **vlastnosti**.
-
-2. Na kartě **synchronizace cloudu** povolte možnost **zpřístupnit tuto kolekci, aby bylo možné přiřadit zásady ochrany ATP v programu Microsoft Defender v Intune**.
-
-   - Tuto možnost nemůžete vybrat, pokud Configuration Manager hierarchie není připojená ke klientovi.
-  
-   ![Konfigurace synchronizace cloudu](media/endpoint-security-edr-policy/cloud-sync.png)
-
-3. Kliknutím na **OK** uložte konfiguraci.
-
-   Zařízení v této kolekci teď můžou přijímat zásady ochrany ATP v programu Microsoft Defender.
+- Platforma: **Windows 10 a Windows Server (ConfigMgr)** – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager.
+  - Profil: **detekce a odpověď koncového bodu (ConfigMgr) (Preview)**
 
 ## <a name="create-and-deploy-edr-policies"></a>Vytvoření a nasazení zásad EDR
 
-Když je předplatné služby Microsoft Defender ATP integrováno do Intune, můžete vytvářet a nasazovat zásady EDR. Existují dva různé typy zásad EDR, které můžete vytvořit. Jeden typ zásad pro zařízení, která spravujete pomocí Intune prostřednictvím MDM. Druhý typ je pro zařízení, která spravujete pomocí Configuration Manager.
+Když integrujete předplatné Microsoft Defender ATP s Intune, můžete vytvářet a nasazovat zásady EDR. Existují dva různé typy zásad EDR, které můžete vytvořit. Jeden typ zásad pro zařízení, která spravujete pomocí Intune prostřednictvím MDM. Druhý typ je pro zařízení, která spravujete pomocí Configuration Manager.
 
-Zvolíte typ zásady, který vytvoříte při vytváření nových zásad EDR při výběru platformy pro danou zásadu.
+Zvolte typ zásady, která se má vytvořit při konfiguraci nových zásad EDR, a to tak, že vyberete platformu pro zásady.
 
-Než budete moct nasadit zásady do zařízení spravovaných pomocí Configuration Manager, [nastavte Configuration Manager tak, aby podporovala zásady EDR](#set-up-configuration-manager-to-support-edr-policy) z centra pro správu Microsoft Endpoint Manageru.
+Než budete moct nasadit zásady do zařízení spravovaných pomocí Configuration Manager, nastavte Configuration Manager tak, aby podporovala zásady EDR z centra pro správu Microsoft Endpoint Manageru. Viz téma [Konfigurace připojení tenanta pro podporu zásad Endpoint Protection](../protect/tenant-attach-intune.md).
+
 
 ### <a name="create-edr-policies"></a>Vytvoření zásad EDR
 
@@ -219,7 +146,7 @@ Než budete moct nasadit zásady do zařízení spravovaných pomocí Configurat
      - Profil: **detekce a odpověď koncového bodu (MDM)**
 
    - Configuration Manager – Configuration Manager nasadí zásady do zařízení v kolekcích Configuration Manager. Když vytváříte zásadu, vyberte:
-     - Platforma: **Windows 10 a Windows Server**
+     - Platforma: **Windows 10 a Windows Server (ConfigMgr)**
      - Profil: **detekce a odpověď koncového bodu (ConfigMgr)**
 
 4. Vyberte **Vytvořit**.
@@ -255,10 +182,9 @@ Podrobnosti o zásadách EDR, které nasadíte, můžete zobrazit v centru pro s
 
 - V případě zásad, které se zaměřují na platformu **Windows 10 a novější** (Intune), uvidíte přehled dodržování zásad. Můžete také vybrat graf pro zobrazení seznamu zařízení, která zásady obdržela, a přejít k jednotlivým zařízením a získat další podrobnosti.
 
-  U **zařízení s grafem senzorů ATP** se zobrazí jenom zařízení, která se úspěšně připojila k ochraně ATP programu Microsoft Defender prostřednictvím použití profilu **Windows 10 a novějšího** . Abyste měli jistotu, že máte v tomto grafu úplná reprezentace svých zařízení, nasaďte profil registrace na všechna vaše zařízení. Zařízení, která docházejí do ochrany ATP Microsoft Defenderu externím způsobem, jako je například Zásady skupiny nebo PowerShell, se počítají jako **zařízení bez senzoru ATP**.
+  Graf pro **zařízení s senzorem ATP** zobrazuje jenom zařízení, která se úspěšně připojila k ochraně ATP Microsoft Defenderu prostřednictvím použití profilu **Windows 10 a novějšího** . Abyste měli jistotu, že máte v tomto grafu úplná reprezentace svých zařízení, nasaďte profil registrace na všechna vaše zařízení. Zařízení, která docházejí do ochrany ATP Microsoft Defenderu externím způsobem, jako je například Zásady skupiny nebo PowerShell, se počítají jako **zařízení bez senzoru ATP**.
 
-- V případě zásad, které cílí na platformu **Windows 10 a Windows Server** (Configuration Manager), uvidíte přehled dodržování zásad, ale nemůžete přejít k podrobnostem a zobrazit další podrobnosti. Zobrazení je omezené, protože centrum pro správu přijímá informace o omezeném stavu od Configuration Manager, které spravuje nasazení zásad pro Configuration Manager zařízení.
-
+- Pro zásady, které cílí na platformu **Windows 10 a Windows Server (nástroj ConfigMgr)** (Configuration Manager), uvidíte přehled dodržování zásad, ale nemůžete přejít k podrobnostem a zobrazit další podrobnosti. Zobrazení je omezené, protože centrum pro správu přijímá informace o omezeném stavu od Configuration Manager, které spravuje nasazení zásad pro Configuration Manager zařízení.
 
 [Prohlédněte si nastavení](endpoint-security-edr-profile-settings.md) , která můžete nakonfigurovat pro platformy i profily.
 

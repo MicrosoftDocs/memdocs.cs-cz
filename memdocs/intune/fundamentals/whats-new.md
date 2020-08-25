@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9de296ec27c20ab25a60b0d825a360c272ca48d
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725413"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820268"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,101 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-24-2020-2008-service-release"></a>Týden z 24. srpna 2020 (2008 Service Release)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322----"></a>Přidružené licence se odvolaly před odstraněním tokenu Apple VPP.<!--6195322  -->
+Při odstranění tokenu Apple VPP v Microsoft Endpoint Manageru se všechny licence přiřazené k tomuto tokenu, které jsou přidružené k tomuto tokenu, automaticky odvolají před odstraněním.
+
+#### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions----7414768-wnstaged---"></a>Vylepšení aktualizace stránky nastavení zařízení v Portál společnosti aplikaci pro Android, která zobrazuje popisy <!-- 7414768 wnstaged -->
+V aplikaci Portál společnosti na zařízeních s Androidem se na stránce **aktualizovat nastavení zařízení** zobrazí seznam nastavení, která je potřeba aktualizovat, aby splňovala předpisy. Uživatelé rozbalí problém a zobrazí se další informace a zobrazí se tlačítko **vyřešit** .
+
+Toto uživatelské prostředí je vylepšené. Uvedená nastavení se ve výchozím nastavení rozbalí a zobrazí se popis a v případě potřeby se zobrazí tlačítko **vyřešit** . Dříve byly problémy sbaleny ve výchozím nastavení. Toto nové výchozí chování omezuje počet kliknutí, takže uživatelé mohou rychleji řešit problémy.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631-----"></a>Použití NetMotion jako typu připojení VPN pro zařízení s iOS/iPadOS a macOS<!-- 1333631   -->
+Když vytváříte profil sítě VPN, NetMotion je k dispozici jako typ připojení VPN (**zařízení**  >  **Konfigurace zařízení**  >  **vytvořit profil**  >  **iOS/iPadOS** nebo **MacOS** pro Platform > **VPN** pro > pro typ připojení **NetMotion** ).
+
+Další informace o profilech sítě VPN v Intune najdete v tématu [Vytvoření profilů sítě VPN pro připojení k SERVERŮM VPN](../configuration/vpn-settings-configure.md).
+
+Platí pro:
+- iOS/iPadOS
+- macOS
+
+#### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Další možnosti protokolu PEAP (Protected Extensible Authentication Protocol) pro profily sítě Wi-Fi s Windows 10<!-- 3805024  -->
+Na zařízeních s Windows 10 můžete vytvořit profily Wi-Fi pomocí protokolu EAP (Extensible Authentication Protocol) k ověřování připojení Wi-Fi (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Windows 10 a novější** pro platformu > **Wi-Fi** pro > **Enterprise**).
+
+Když vyberete protokol PEAP (Protected EAP), jsou k dispozici nová nastavení:
+- **Provést ověření serveru ve fázi protokolu PEAP 1**: ve fázi vyjednávání protokolu PEAP 1 se Server ověří ověřením certifikátu.
+  - **Zakázání výzev uživatele při ověřování serveru v protokolu PEAP fáze 1**: ve fázi vyjednávání protokolu PEAP 1 se nezobrazí výzvy uživatele s výzvou k autorizaci nových serverů protokolu PEAP pro důvěryhodné certifikační autority.
+- **Vyžadovat kryptografickou vazbu**: zabraňuje připojením k serverům PEAP, které během vyjednávání protokolu PEAP nepoužívají kryptografických.
+
+Nastavení, která můžete konfigurovat, najdete v tématu [Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novějším](../configuration/wi-fi-settings-windows.md).
+
+Platí pro: 
+- Windows 10 a novější
+
+#### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>Konfigurace modulu plug-in macOS Microsoft Enterprise SSO<!-- 5627576  idstaged -->
+Tým Microsoft Azure AD vytvořil rozšíření aplikace jednotného přihlašování (SSO) pro přesměrování, které macOS uživatelům 10.15 + + umožňuje získat přístup k aplikacím, organizacím a webům Microsoftu, které podporují funkci jednotného přihlašování a ověřování pomocí Azure AD, s jedním přihlašováním. Ve verzi modulu plug-in Microsoft Enterprise SSO můžete nakonfigurovat rozšíření jednotného přihlašování pomocí nového typu rozšíření aplikace Microsoft Azure AD (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **MacOS** pro **funkce** platformy > zařízení pro profil > typ rozšíření **aplikace jednotného přihlašování** > > **Microsoft Azure AD**).
+
+K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování musí uživatelé na svých zařízeních s macOS instalovat aplikaci Portál společnosti a přihlásit se k ní. 
+
+Další informace o rozšířeních aplikace macOS SSO najdete v tématu [rozšíření aplikace jednotného přihlašování](../configuration/device-features-configure.md#single-sign-on-app-extension).
+
+Platí pro:
+- macOS 10,15 a novější
+
+#### <a name="prevent-users-from-unlocking-android-enterprise-work-profile-devices-using-face-and-iris-scanning--6069759-idmiss---"></a>Zabránit uživatelům v odemčení zařízení s podnikovým profilem Androidu pomocí skenování obličeje a Iris<!--6069759 idmiss -->
+Nyní můžete uživatelům zabránit v použití kontroly obličeje nebo Iris k odemknutí svých zařízení spravovaných pomocí aplikace, a to buď na úrovni zařízení, nebo na úrovni pracovního profilu. Dá se nastavit v části **zařízení**  >  **konfigurační profily**  >  **vytvořit profil**  >  pro**Android Enterprise** for Platform > **Work Profile > omezení zařízení** pro profil > **Nastavení pracovního profilu** a **hesla** .
+
+Další informace najdete v tématu [nastavení zařízení s Androidem Enterprise a povolení nebo omezení funkcí v Intune](../configuration/device-restrictions-android-for-work.md#work-profile-only).
+
+Platí pro: 
+- Pracovní profil Android Enterprise
+
+#### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Použití rozšíření aplikace jednotného přihlašování na dalších aplikacích pro iOS/iPadOS s modulem plug-in Microsoft Enterprise SSO<!-- 7369991  -->
+[Modul plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) se dá použít se všemi aplikacemi, které podporují rozšíření aplikace jednotného přihlašování. Tato funkce v Intune znamená, že modul plug-in funguje s mobilními aplikacemi pro iOS/iPadOS, které nepoužívají knihovnu Microsoft Authentication Library (MSAL) pro zařízení Apple. Aplikace nepotřebují používat MSAL, ale je potřeba je ověřit pomocí koncových bodů Azure AD.
+
+Pokud chcete nakonfigurovat aplikace pro iOS/iPadOS, aby používaly jednotné přihlašování s modulem plug-in, přidejte identifikátory sady prostředků aplikace do konfiguračního profilu iOS/iPadOS (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro **funkce** platformy > zařízení pro profil > **rozšíření aplikace jednotného přihlašování**  >  **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování > **identifikátory sady prostředků aplikace**).
+
+Pokud chcete zobrazit aktuální nastavení rozšíření aplikace jednotného přihlašování, můžete nakonfigurovat, přejít na [rozšíření aplikace s jednotným přihlašováním](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
+
+Platí pro:
+- iOS/iPadOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Zabezpečení zařízení
+
+#### <a name="deploy-endpoint-security-antivirus-policy-to-tenant-attached-devices-preview---5475441----"></a>Nasazení zásad ochrany koncového bodu zabezpečení Endpoint na zařízení připojená k tenantovi (Preview)<!-- 5475441  -->
+V rámci verze Preview můžete nasadit zásady zabezpečení koncového bodu [pro antivirová](../protect/endpoint-security-antivirus-policy.md) řešení do zařízení, která spravujete pomocí Configuration Manager. Tento scénář vyžaduje, abyste nakonfigurovali připojení tenanta mezi podporovanou verzí Configuration Manager a vaším předplatným služby Intune. Podporovány jsou následující verze Configuration Manager:
+
+- Configuration Manager aktuální větev 2006
+
+Další informace najdete v tématu [požadavky na zásady zabezpečení koncového bodu Intune](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies) pro podporu připojení tenanta.
+
+#### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119------"></a>Změny vyloučení zásad antivirové ochrany Endpoint Security<!--5583940, 6018119    -->
+Zavedli jsme dvě změny pro správu seznamů vyloučení antivirové ochrany v programu Microsoft Defender, které nakonfigurujete v rámci [zásad ochrany koncových bodů zabezpečení koncového bodu](../protect/endpoint-security-antivirus-policy.md). Tyto změny vám pomůžou zabránit konfliktům mezi různými zásadami a vyřešit konflikty seznamu vyloučení, které můžou existovat v dříve nasazených zásadách.
+
+Obě změny platí pro nastavení zásad pro následující zprostředkovatele CSP ( [Microsoft Defender Configuration Service Provider](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions) ):
+
+- Defender/ExcludedPaths
+- Defender/ExcludedExtensions
+- Defender/ExcludedProcesses
+
+Změny jsou následující:
+
+- Nový typ profilu: **vyloučení antivirové ochrany v programu Microsoft Defender** – použijte tento nový typ profilu pro Windows 10 a novější, abyste definovali zásadu, která se zaměřuje jenom na výjimky z antivirové ochrany. Tento profil pomáhá zjednodušit správu seznamů vyloučení oddělením od jiných konfigurací zásad.
+
+  Vyloučení, která můžete konfigurovat, zahrnují *procesy*programu Defender, *přípony souborů*a *soubory* a *složky* , které nechcete v programu Microsoft Defender kontrolovat.
+
+- **Sloučení zásad** – Intune teď sloučí seznam vyloučení, která jste definovali v samostatných profilech, do jednoho seznamu vyloučení, který se má použít u každého zařízení nebo uživatele. Pokud například zacílíte na uživatele se třemi samostatnými zásadami, seznamy vyloučení z těchto tří zásad se sloučí do jedné nadmnožiny *vyloučení antivirové ochrany v programu Microsoft Defender*, které se pak vztahují na tohoto uživatele.
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-17-2020"></a>Týden od 17. srpna 2020
@@ -257,7 +352,7 @@ V protokolech DeviceComplianceOrg Intune byly dřív jenom výčty pro Complianc
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
-#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>Přiřadit změny oprávnění profilování a aktualizace profilu<!--7177586 idready wnready wnstaged-->
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-----"></a>Přiřadit změny oprávnění profilování a aktualizace profilu<!--7177586   -->
 Změnila se oprávnění řízení přístupu na základě rolí pro přiřazení profilu a profilu aktualizace pro automatický tok registrace zařízení:
 
 Přiřadit profil: Správci s tímto oprávněním mohou také přiřadit profily k tokenům a přiřadit k tokenu výchozí profil pro automatický zápis zařízení.
@@ -269,7 +364,7 @@ Tyto role zobrazíte tak, že přejdete do centra pro správu [služby Microsoft
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="scripting"></a>Skriptování
 
-#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>Další vlastnosti datového skladu v 1.0<!-- 6125732 wnready -->
+#### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Další vlastnosti datového skladu v 1.0<!-- 6125732  -->
 Další vlastnosti jsou k dispozici pomocí datového skladu Intune v 1.0. Následující vlastnosti jsou nyní zpřístupněny prostřednictvím entity [zařízení](../developer/reports-ref-devices.md#devices) :
 - `ethernetMacAddress` – Jedinečný identifikátor sítě tohoto zařízení.
 - `office365Version` – Verze Office 365, která je na zařízení nainstalovaná.
@@ -521,7 +616,7 @@ Další informace o této podpoře najdete v tématu [citlivostní označování
 Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Licencování
+### <a name="licensing"></a>Licensing
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
 Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 
@@ -574,7 +669,7 @@ V Portál společnosti jsme aktualizovali ikony, aby bylo možné vytvořit pokr
 
 Zásady zabezpečení koncového bodu [pro zjišťování koncových bodů a odpověď](../protect/endpoint-security-edr-policy.md) (EDR) použijte k připojení a konfiguraci zařízení pro nasazení aplikace Microsoft Defender Advanced Threat Protection (Defender ATP). EDR podporuje zásady pro zařízení s Windows spravovaná přes Intune (MDM) a samostatné zásady pro zařízení s Windows spravovaná pomocí Configuration Manager. 
 
-Pokud chcete používat zásady pro Configuration Manager zařízení, musíte [nastavit Configuration Manager pro podporu zásad EDR](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy). Nastavení zahrnuje:
+Pokud chcete používat zásady pro Configuration Manager zařízení, musíte [nastavit Configuration Manager pro podporu zásad EDR](../protect/tenant-attach-intune.md). Nastavení zahrnuje:
 
 - Nakonfigurujte Správce konfigurace pro *připojení tenanta*.
 - Pokud chcete povolit podporu zásad EDR, nainstalujte konzolovou aktualizaci pro Configuration Manager. Tato aktualizace se vztahuje jenom na hierarchie, které mají povolené *připojení tenanta*.

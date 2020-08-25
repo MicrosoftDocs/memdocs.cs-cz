@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695184"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819622"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Vytváření aplikací pro Windows v Configuration Manager
 
@@ -127,6 +127,11 @@ Počínaje verzí 2002 můžete komplexní aplikace nainstalovat pomocí pořad�
 V aplikaci můžete přidat pořadí úloh nasazení mimo OS jako typ nasazení. Pořadí úkolů s vysokým dopadem na nasazení operačního systému nebo upgrade operačního systému se nepodporuje. <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 Když přidáte tento typ nasazení do aplikace, nakonfigurujte jeho vlastnosti na stránce **pořadí úkolů** . Další informace najdete v tématu [Možnosti pro typ nasazení **pořadí úkolů** ](../deploy-use/create-applications.md#bkmk_dt-ts).
+
+Počínaje verzí 2006 použijte následující rutiny Windows PowerShellu k přidání a konfiguraci typu nasazení pořadí úloh:
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Předpoklady pro typ nasazení pořadí úloh
 

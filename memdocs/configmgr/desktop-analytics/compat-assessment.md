@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699071"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819741"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Posouzení kompatibility v Desktop Analytics
 
@@ -243,6 +243,6 @@ Posouzení můžete najít na ovladači v části Desktop Analytics. V seznamu p
 | K dispozici v krabicích a z web Windows Update | Ano | Aktuálně nainstalovaná verze ovladače nebude migrována na novou verzi operačního systému. I když je během upgradu nainstalován nový ovladač, je k dispozici novější verze z web Windows Update. | Pokud počítač automaticky obdrží aktualizace z web Windows Update, není vyžadována žádná akce. V opačném případě importujte nový ovladač z web Windows Update po upgradu Windows. |
 | Obraťte se na dodavatele. | Ano | Ovladač nebude migrován na novou verzi operačního systému a Desktop Analytics nemůže najít kompatibilní verzi. | V případě řešení se poraďte se nezávislým dodavatelem hardwaru (IHV), který vyrábí ovladač, nebo výrobcem OEM (Original Equipment Manufacturer), který toto zařízení poskytl. |
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-Zvýhodnění centra FastTrack pro Windows 10 poskytuje přístup k **zajištění přístupu k desktopové aplikaci**. Tato výhoda je nová služba určená k řešení problémů s Windows 10 a Microsoft 365 aplikacemi pro zajištění kompatibility s podnikovou sítí. Další informace najdete v tématu [zajištění pro desktopovou aplikaci](/fasttrack/win-10-desktop-app-assure).
+Zvýhodnění centra FastTrack pro Windows 10 poskytuje přístup k **zajištění přístupu k desktopové aplikaci**. Tato výhoda je nová služba určená k řešení problémů s Windows 10 a Microsoft 365 aplikacemi pro zajištění kompatibility s podnikovou sítí. Další informace najdete v tématu [zajištění pro desktopovou aplikaci](/fasttrack/win-10-app-assure).

@@ -2,7 +2,7 @@
 title: Co je nového v Desktop Analytics
 titleSuffix: Configuration Manager
 description: Shrnutí nových funkcí v nejnovější měsíční verzi cloudové služby Desktop Analytics.
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614745"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819724"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Co je nového v Desktop Analytics
 
@@ -39,6 +39,12 @@ Konfigurace **důležitosti** aplikace je důležitá pro desktopovou analýzu k
 Pro každou aplikaci, kterou nasazujete pomocí Configuration Manager, ji služba Analytics Desktop ve výchozím nastavení automaticky nakonfiguruje jako důležitou. Toto chování vám umožní rychleji nakonfigurovat aplikace ve vašem prostředí, aby se dosáhlo rychlejšího vývoje produkčního nasazení.
 
 Další informace najdete v tématu [assets-Apps](about-assets.md#apps).
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>Vylepšené zpracování diagnostických dat během generování snímku
+
+Společnost Microsoft zlepšila, jak shromažďují a zpracovávají diagnostická data Windows ze zařízení zaregistrovaných v Desktop Analytics. Tato vylepšení zvyšují spolehlivost každodenního generování snímků a připravují se na nové funkce ve vývoji. V důsledku této práce Microsoft dočasně zakázal počet zařízení, která **tuto aplikaci spustila za posledních 30 dnů** v plánech nasazení. Další informace najdete v tématu [assets-Apps](about-assets.md#usage).
 
 ## <a name="july-2020"></a>Červenec 2020
 

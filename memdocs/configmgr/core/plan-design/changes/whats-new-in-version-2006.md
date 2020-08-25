@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700278"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819673"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -31,6 +31,13 @@ Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci l
 > Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Připojení tenanta Microsoft Endpoint Manageru
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Připojení tenanta: zásady antivirové ochrany v Microsoft Defenderu v centru pro správu Microsoft Endpoint Manageru
+<!--4812909-->
+Nyní můžete vytvořit zásady ochrany před viry v programu Microsoft Defender v konzole Microsoft Endpoint Manager a nasadit je do kolekcí Configuration Manager. Další informace, včetně podrobných pokynů a dostupných nastavení, najdete v následujících článcích:
+- [Připojení tenanta: zprovoznění klientů Configuration Manager do služby Microsoft Defender ATP z centra pro správu (Preview)](../../../tenant-attach/atp-onboard.md)
+- [Připojení tenanta: nasazení zásad ochrany koncového bodu Endpoint Security z centra pro správu (Preview)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Nastavení pro zásady antivirové ochrany v programu Microsoft Defender pro zařízení připojená klientovi v Microsoft Intune](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
 
 ### <a name="install-applications-from-the-admin-center"></a>Instalace aplikací z centra pro správu
 <!--7518897, 6024389-->
@@ -89,7 +96,7 @@ Intranetové klienty mají nyní přístup k bodu aktualizace softwaru CMG při 
 
 ## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> Správa připojená ke cloudu
 
-### <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití Portál společnosti aplikace na spoluspravovaných zařízeních
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití aplikace Portál společnosti na spoluspravovaných zařízeních
 
 <!--CMADO-3601237,INADO-4297660-->
 
@@ -124,7 +131,7 @@ Chcete-li lépe zarovnávat požadavky na analýzu plochy pro diagnostická data
 
 | Verze 2006 a novější | Verze 2002 a starší |
 |---------|---------|
-| Vyžadováno | Základní |
+| Požadováno | Základní |
 | Volitelné (omezené) | Rozšířené (omezené) |
 | – | Rozšířené |
 | Volitelné | Do bloku |

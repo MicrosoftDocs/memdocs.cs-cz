@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c1a51f327f87e26a07cc7c344d0a0afc0bfde9b
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 0d443cb784c19956f52347a10f4123c622ab82a8
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820053"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -82,47 +82,6 @@ Další informace o certifikátech PKCS najdete v tématu [Konfigurace a použí
 Platí pro:
 - Android Enterprise Full Managed (COBO)
 
-### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>Použití NetMotion jako typu připojení VPN pro zařízení s iOS/iPadOS a macOS<!-- 1333631 -->
-Když vytváříte profil sítě VPN, NetMotion je k dispozici jako typ připojení VPN (**zařízení**  >  **Konfigurace zařízení**  >  **vytvořit profil**  >  **iOS/iPadOS** nebo **MacOS** pro Platform > **VPN** pro > pro typ připojení **NetMotion** ).
-
-Další informace o profilech sítě VPN v Intune najdete v tématu [Vytvoření profilů sítě VPN pro připojení k SERVERŮM VPN](../configuration/vpn-settings-configure.md).
-
-Platí pro:
-- iOS/iPadOS
-- macOS
-
-### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>Další možnosti protokolu PEAP (Protected Extensible Authentication Protocol) pro profily sítě Wi-Fi s Windows 10<!-- 3805024 -->
-Na zařízeních s Windows 10 můžete vytvořit profily Wi-Fi pomocí protokolu EAP (Extensible Authentication Protocol) k ověřování připojení Wi-Fi (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Windows 10 a novější** pro platformu > **Wi-Fi** pro > **Enterprise**). Když vyberete protokol PEAP (Protected EAP), jsou k dispozici nová nastavení:
-
-- **Provést ověření serveru ve fázi protokolu PEAP 1**: ve fázi vyjednávání protokolu PEAP 1, zařízení ověřují certifikát a ověřují server.
-  - **Zakázání výzev uživatele při ověřování serveru v protokolu PEAP fáze 1**: ve fázi vyjednávání protokolu PEAP 1 se nezobrazí výzvy uživatele s výzvou k autorizaci nových serverů protokolu PEAP pro důvěryhodné certifikační autority.
-- **Vyžadovat kryptografickou vazbu**: zabraňuje připojením k serverům PEAP, které nepoužívají kryptografickou vazbu během vyjednávání protokolu PEAP.
-
-Pokud se chcete podívat na nastavení, která můžete konfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Windows 10 a novějším](../configuration/wi-fi-settings-windows.md).
-
-Platí pro: 
-- Windows 10 a novější
-
-### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>Konfigurace modulu plug-in macOS Microsoft Enterprise SSO<!-- 5627576 -->
-Tým Microsoft Azure AD vytvořil rozšíření aplikace jednotného přihlašování (SSO) pro přesměrování, které macOS uživatelům 10.15 + + umožňuje získat přístup k aplikacím, organizacím a webům Microsoftu, které podporují funkci jednotného přihlašování a ověřování pomocí Azure AD, s jedním přihlašováním. Ve verzi modulu plug-in Microsoft Enterprise SSO můžete nakonfigurovat rozšíření jednotného přihlašování pomocí nového typu rozšíření aplikace Microsoft Azure AD (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **MacOS** pro **funkce** platformy > zařízení pro profil > typ rozšíření **aplikace jednotného přihlašování** > > **Microsoft Azure AD**).
-
-K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování musí uživatelé na svých zařízeních s macOS instalovat aplikaci Portál společnosti a přihlásit se k ní. 
-
-Další informace o rozšířeních aplikace macOS SSO najdete v tématu [rozšíření aplikace jednotného přihlašování](../configuration/device-features-configure.md#single-sign-on-app-extension).
-
-Platí pro:
-- macOS 10,15 a novější
-
-### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>Použití rozšíření aplikace jednotného přihlašování na dalších aplikacích pro iOS/iPadOS s modulem plug-in Microsoft Enterprise SSO<!-- 7369991 -->
-[Modul plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) se dá použít se všemi aplikacemi, které podporují rozšíření aplikace jednotného přihlašování. Tato funkce v Intune znamená, že modul plug-in funguje s mobilními aplikacemi pro iOS/iPadOS, které nepoužívají knihovnu Microsoft Authentication Library (MSAL) pro zařízení Apple. Aplikace nepotřebují používat MSAL, ale je potřeba je ověřit pomocí koncových bodů Azure AD.
-
-Pokud chcete nakonfigurovat aplikace pro iOS/iPadOS, aby používaly jednotné přihlašování s modulem plug-in, přidejte identifikátory sady prostředků aplikace do konfiguračního profilu iOS/iPadOS (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro **funkce** platformy > zařízení pro profil > **rozšíření aplikace jednotného přihlašování**  >  **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování > **identifikátory sady prostředků aplikace**).
-
-Pokud chcete zobrazit aktuální nastavení rozšíření aplikace jednotného přihlašování, můžete nakonfigurovat, přejít na [rozšíření aplikace s jednotným přihlašováním](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
-
-Platí pro:
-- iOS/iPadOS
-
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
 
@@ -152,9 +111,6 @@ Do centra pro správu služby Microsoft Endpoint Manager budete moct využít s�
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Nasazení aktualizací softwaru do zařízení macOS <!-- 3194876 -->
 Aktualizace softwaru budete moct nasadit do skupin zařízení macOS. Tato funkce zahrnuje kritické, firmware, konfigurační soubor a další aktualizace. V příští registraci zařízení budete moct odesílat aktualizace, nebo můžete vybrat týdenní plán pro nasazení aktualizací do nebo z časového intervalu, který jste nastavili. To pomáhá při aktualizaci zařízení mimo standardní pracovní dobu nebo v případě, že je vaše Helpdesk plně přiřazená. Zobrazí se vám také podrobná sestava všech zařízení macOS s nasazenými aktualizacemi. Pokud chcete zobrazit stav konkrétních aktualizací, můžete přejít k sestavě podle jednotlivých zařízení.
-
-### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>Přidružené licence se odvolaly před odstraněním tokenu Apple VPP.<!--6195322 -->
-Při budoucí aktualizaci se při odstranění tokenu Apple VPP ve službě Microsoft Endpoint Manager automaticky odvolají všechny licence přiřazené pro Intune, které jsou přidružené k tomuto tokenu.
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -189,13 +145,6 @@ Správa hrozeb a ohrožení zabezpečení (TVM) v modulu Microsoft Defender ATP 
 V brzké době může ochrana ATP v programu Microsoft Defender vyvolat úlohu zabezpečení správce koncových bodů (úlohy Security**Manager**  >  **Endpoint**Security  >  **Security**) s podrobnostmi o ohrožení zabezpečení a zobrazit postižená zařízení. Správci IT můžou přijmout úlohu zabezpečení a nasadit požadovanou konfiguraci. 
 
 Další informace o úlohách zabezpečení najdete v tématu [použití Intune k nápravě ohrožení zabezpečení identifikovaných v Microsoft Defender ATP](../protect/atp-manage-vulnerabilities.md).
-
-### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>Změny vyloučení zásad antivirové ochrany Endpoint Security<!--5583940, 6018119  -->
-Zavádíme dvě změny pro správu seznamů vyloučení antivirové ochrany v programu Microsoft Defender, které nakonfigurujete v rámci zásad ochrany koncových bodů zabezpečení koncového bodu. (**Zabezpečení**  >  koncového bodu **Antivirová ochrana**  >  **Vytvořit zásadu**  >  **Windows 10 a novější** pro platformu). Tyto dvě změny zabraňují konfliktům mezi zásadami a stávající zásady, které byly v konfliktu, již nebudou v konfliktu se seznamem vyloučení:
-
-- Nejdřív přidáváme nový typ profilu pro Windows 10 a novější. **Vyloučení antivirové ochrany v programu Microsoft Defender**.  Tento nový typ profilu obsahuje jenom nastavení pro určení seznamu *procesů*Defenderu, *přípon souborů*a *souborů* a *složek* , které nechcete v programu Microsoft Defender kontrolovat. To vám může usnadnit správu seznamů vyloučení jejich oddělením od jiných konfigurací zásad.
-- Druhá změna znamená, že seznam vyloučení definovaných v různých profilech se sloučí do jednoho seznamu vyloučení pro každé zařízení nebo uživatele, a to na základě jednotlivých zásad, které se vztahují na konkrétního uživatele nebo zařízení. Například když cílíte na uživatele se třemi oddělenými zásadami, seznamy vyloučení z těchto tří zásad se sloučí do jedné nadmnožiny vyloučení antivirové ochrany v programu Microsoft Defender, které se pak aplikují na uživatele. Toto sloučení zahrnuje seznamy vyloučení z nového typu profilu, které se přidaly, a také všechny existující zásady, které jste nakonfigurovali v profilu *antivirové ochrany v Microsoft Defenderu* .
-
 
 
 <!-- ***********************************************-->

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217219"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820506"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -175,7 +175,7 @@ Můžete odvolat všechny přidružené licence aplikací pro iOS/iPadOS nebo ma
 
 ## <a name="deleting-vpp-tokens"></a>Odstraňují se tokeny VPP.
 <!-- 820879 -->  
-Pomocí konzoly nástroje můžete odstranit token programu Apple Volume purchase program (VPP). To může být nutné v případě, že máte duplicitní instance tokenu VPP. Odstraněním tokenu se odstraní také všechny přidružené aplikace a přiřazení. Odstraněním tokenu se ale licence aplikací neodvolají ani aplikace neodinstalují. 
+Pomocí konzoly nástroje můžete odstranit token programu Apple Volume purchase program (VPP). To může být nutné v případě, že máte duplicitní instance tokenu VPP. Odstraněním tokenu se odstraní také všechny přidružené aplikace a přiřazení. Odstraněním tokenu se odvolají přidružené licence k aplikacím, ale aplikace se neodinstaluje.  
 
 >[!NOTE]
 >Po odstranění tokenu nemůže Intune odvolat licence aplikací. 

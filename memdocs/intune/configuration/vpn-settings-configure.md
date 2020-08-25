@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: fff3485c7cda02edfe6a0de78b18bd9e582f54d2
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146486"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819979"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -94,6 +94,10 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
 - L2TP
   - Windows 10
+
+- Mobilita NetMotion
+  - iOS/iPadOS
+  - macOS
 
 - Palo Alto Networks GlobalProtect
   - Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-vpn-ae.md)

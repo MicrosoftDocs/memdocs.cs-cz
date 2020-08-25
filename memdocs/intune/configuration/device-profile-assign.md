@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74bdb4276fc5a03fe159b82769a8b358d01b8677
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725368"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819996"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -55,19 +55,6 @@ Ujistěte se, že máte správnou roli pro přiřazování profilů. Další inf
 
 5. Vyberte **zkontrolovat a uložit**. Tento krok nepřiřazuje váš profil.
 6. Vyberte **Uložit**. Když uložíte, váš profil se přiřadí. Vaše skupiny obdrží nastavení vašeho profilu, když se zařízení zaregistrují ve službě Intune.
-
-<!-- MandiA 8.20.20: Commenting out this section, as it may not be in the fullscreen changes. Working with engineering/PM to confirm.
-
-### Evaluate how many users are targeted
-
-When you assign the profile, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
-
-1. In the admin center, select **Devices** > **Configuration profiles**.
-2. Select a profile > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this profile.
-
-If the **Evaluate** button is grayed out, make sure the profile is assigned to one or more groups.
-
--->
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>Použití značek oboru nebo pravidel použitelnosti
 

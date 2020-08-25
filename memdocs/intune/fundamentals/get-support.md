@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093112"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820659"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -54,7 +54,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
 **Přístup k nápovědě a podpoře**:
 
-- **V Azure Portal**
+- **Na webu Azure Portal**
 
   - Vyberte možnost **pomoc a podpora** z jakéhokoli okna nebo stránky Intune.
 
@@ -83,8 +83,6 @@ K tomuto problému dochází, když jste svůj nový účet tenanta neověřili 
 
     > [!div class="mx-imgBorder"]
     > ![Potvrďte typ správy](./media/get-support/confirm-management-selection.png)
-
-  - Pokud otevřete pomoc a podporu pro **řešení problémů**  >  **a podporu a**podporu podpory, neuvidíte vybraný typ správy uvedený níže v části *pomoc a podpora*.
 
   - Pokud přejdete na jakýkoli jiný uzel, třeba na *zařízení*, *aplikace*nebo *uživatele*, a pak vyberte možnost *pomoc a podpora*, nebudete mít možnost vybrat typ správy, ani se nezobrazí zobrazení typu pod možností *pomoc a podpora*. V takovém případě se předpokládá použití služby *Intune* . Pokud nechcete, aby byl kontext Intune, použijte **?** možnost, abyste mohli vybrat jiný typ správy.
 
@@ -162,7 +160,7 @@ Na této stránce vyberte **+ Nová žádost o podporu** a otevřete tak kartu *
 
 Na této stránce:
 
-- Jako *typ problému*vyberte **technický**.
+- Jako *typ problému*vyberte  **technický**.
 - V případě *služby*vyberte **Microsoft Intune**.
 
   Pak se zobrazí odkaz, který vás přesměruje na [stránku pomoci a podpory pro Intune](https://aka.ms/intunehelpsupport).

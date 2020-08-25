@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47f1e121a5010a17d213d21d3208977e8f75514
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217622"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820625"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
-Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na zařízení s Windows 10 a novějšími verzemi. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, použití předsdíleného klíče a další.
+Můžete vytvořit profil s konkrétními nastaveními Wi-Fi. Pak tento profil nasaďte do zařízení s Windows 10 a novějším. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, použití předsdíleného klíče a další.
 
 Těmito nastaveními se zabývá tento článek.
 
@@ -86,7 +86,7 @@ Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (
 
     Například můžete vytvořit síť Wi-Fi **ContosoCorp** a v rámci tohoto konfiguračního profilu **ContosoCorp** použít. V dosahu máte i Wi-Fi **ContosoGuest**. Když jsou v dosahu vaše podniková zařízení, budete chtít, aby se automaticky připojovala k síti **ContosoCorp**. V takové situaci vlastnost **Připojit k upřednostňovanější síti, pokud je k dispozici** nastavte na **Ne**.
 
-  - **Připojit se k této síti i v případě, že nevysílá svůj identifikátor SSID:** Pokud chcete, aby se konfigurační profil připojoval k vaší síti automaticky, i když je síť skrytá (její SSID se nevysílá veřejně), zvolte **Ano**. Pokud nechcete, aby se tento konfigurační profil připojoval ke skryté síti, zvolte **Ne**.
+- **Připojit se k této síti i v případě, že nevysílá svůj identifikátor SSID:** Pokud chcete, aby se konfigurační profil připojoval k vaší síti automaticky, i když je síť skrytá (její SSID se nevysílá veřejně), zvolte **Ano**. Pokud nechcete, aby se tento konfigurační profil připojoval ke skryté síti, zvolte **Ne**.
 
 - **Limit připojení účtovaného podle objemu dat**: Správce může zvolit způsob měření provozu v síti. Aplikace pak mohou na základě tohoto nastavení upravit svůj provoz v síti. Možnosti:
 
@@ -124,19 +124,27 @@ Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (
     > [!NOTE]
     > Profily certifikátů SCEP a PKCS se podporují při použití typu protokolu EAP.
 
-    - **Vztah důvěryhodnosti serveru**  
+    **VZTAH DŮVĚRYHODNOSTI SERVERU**  
 
-      **Názvy certifikačních serverů**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zadejte jeden nebo více běžných názvů použitých v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít dialog dynamického vztahu důvěryhodnosti, který se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.  
+    - **Názvy certifikačních serverů**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zadejte jeden nebo více běžných názvů použitých v certifikátech, které vystavuje vaše důvěryhodná certifikační autorita. Když tento údaj zadáte, můžete obejít dialog dynamického vztahu důvěryhodnosti, který se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.  
 
-      **Kořenový certifikát pro ověřování serveru**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zvolte profil důvěryhodného kořenového certifikátu pro ověření připojení.  
+    - **Kořenový certifikát pro ověřování serveru**: Použijte s protokoly typu **EAP-TLS**, **EAP-TTLS** a **PEAP**. Zvolte profil důvěryhodného kořenového certifikátu pro ověření připojení.  
 
-      **Ochrana identity (vnější identita)**: Použijte s typem **PEAP**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.  
+    - **Ochrana identity (vnější identita)**: Použijte s typem **PEAP**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.  
 
-    - **Ověřování klienta**
+    - **Provést ověření serveru ve fázi protokolu PEAP 1**: Pokud je nastaveno na **Ano**, ve fázi vyjednávání protokolu PEAP 1, zařízení ověřují certifikát a ověřují server. Vyberte **ne** , pokud chcete toto ověření zablokovat nebo zakázat. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
 
-      **Klientský certifikát pro ověření klienta (certifikát identity)**: Použijte s typem **EAP-TLS**. Vyberte profil certifikátu použitý k ověření připojení.
+      Pokud vyberete **Ano**, nakonfiguruje se také:
 
-      **Metoda ověřování**: Použijte s typem **EAP-TTLS**. Vyberte metodu ověřování připojení:  
+      **Zakázat výzvy uživatelů k ověření serveru ve fázi protokolu PEAP fáze 1**: Pokud je hodnota nastavena na **Ano**, ve fázi vyjednávání protokolu PEAP 1 se nezobrazí výzvy uživatele s výzvou k autorizaci nových serverů protokolu PEAP pro důvěryhodné certifikační autority. Pokud chcete zobrazit výzvy, vyberte **ne** . Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+    - **Vyžadovat kryptografickou vazbu**: **Ano** zabraňuje připojením k serverům PEAP, které během vyjednávání protokolu PEAP nepoužívají kryptografických. **Ne** , nevyžaduje kryptografických. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje.
+
+    **OVĚŘOVÁNÍ KLIENTA**
+
+    - **Klientský certifikát pro ověření klienta (certifikát identity)**: Použijte s typem **EAP-TLS**. Vyberte profil certifikátu použitý k ověření připojení.
+
+    - **Metoda ověřování**: Použijte s typem **EAP-TTLS**. Vyberte metodu ověřování připojení:  
 
       - **Certifikáty**: Vyberte klientský certifikát, který je certifikátem identity předloženým serveru.
       - **Uživatelské jméno a heslo**: Zadejte metodu ověřování **Metoda bez protokolu EAP (vnitřní identita)**. Možnosti:
@@ -146,7 +154,7 @@ Podnikové profily používají k ověřování připojení Wi-Fi protokol EAP (
         - **Protokol Microsoft CHAP (MS-CHAP)**
         - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
-      **Ochrana identity (vnější identita)**: Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+    - **Ochrana identity (vnější identita)**: Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 - **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
   - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
@@ -161,9 +169,9 @@ Pro libovolné nastavení, které není v Intune k dispozici, můžete exportova
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
+Profil je vytvořen, ale nemusí provádět žádné akce. Nezapomeňte [profil přiřadit](device-profile-assign.md)a [monitorovat jeho stav](device-profile-monitor.md).
 
 ## <a name="more-resources"></a>Další zdroje informací
 
-- Podívejte se na nastavení, která jsou dostupná pro [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
-- [Přehled nastavení sítě Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem.
+- [Nastavení Windows 8.1 Wi-Fi](wi-fi-settings-import-windows-8-1.md)
+- [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem

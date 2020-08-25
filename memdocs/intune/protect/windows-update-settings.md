@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551906"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819707"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
@@ -179,12 +179,12 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   - **Povolení** – umožní uživatelům zařízení použít web Windows Update prohledávání k vyhledání a stažení aktualizací a instalaci funkcí.
   - **Blok** – zabraňuje uživatelům zařízení v přístupu k web Windows Update kontrole, stahování aktualizací a instalaci funkcí.  
 
-- **Vyžadovat schválení uživatele pro restartování mimo pracovní dobu**  
+- **Pro zavření oznámení o restartování vyžadovat schválení uživatele**  
   **Výchozí**: Nenakonfigurováno  
   Web Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Není nakonfigurováno**  
-  - **Požadováno** – vyžaduje, aby uživatel schválil restart zařízení mimo pracovní dobu.  
+  - **Žádné** automatické odhlašování po 25 sekundách.
+  - **Ano** – vyžaduje vynechávání uživatele.
    
 - **Připomenout uživatele před vyžadováním automatického restartování s připomenutím přeskočit (hodiny)**  
   **Výchozí**: 4  
@@ -239,7 +239,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   - **Období odkladu**  
     **Výchozí**: *není nakonfigurované* web Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Určuje minimální počet dnů po termínu, do kterého proběhne automatické restartování (2-7).
+    Určuje minimální počet dnů po termínu, do kterého proběhne automatické restartování (0-7).
 
   - **Automatický restart před konečným termínem**  
     **Výchozí**: Ano web Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

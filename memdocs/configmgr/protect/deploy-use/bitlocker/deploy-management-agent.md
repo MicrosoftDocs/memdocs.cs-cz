@@ -2,7 +2,7 @@
 title: Nasazení správy nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Nasazení agenta pro správu nástroje BitLocker pro Configuration Manager klientů a služby obnovení do bodů správy
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129269"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819928"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -35,7 +35,7 @@ Před vytvořením a nasazením zásad správy BitLockeru postupujte takto:
 
 - V případě potřeby [Zašifrujte klíče pro obnovení](encrypt-recovery-data.md) v databázi lokality.
 
-## <a name="create-a-policy"></a>Vytvoření zásad
+## <a name="create-a-policy"></a>Vytvoření zásady
 
 Když tuto zásadu vytvoříte a nasadíte, povolí klient Configuration Manager v zařízení agenta pro správu BitLockeru.
 
@@ -118,6 +118,8 @@ Chcete-li změnit nastavení existující zásady, vyberte ji v seznamu a vybert
 
 Když vytvoříte více než jednu zásadu, můžete nakonfigurovat jejich relativní prioritu. Pokud nasadíte do klienta více zásad, použije se k určení jeho nastavení hodnota priority.
 
+Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+
 ## <a name="deploy-a-policy"></a>Nasazení zásady
 
 1. Vyberte existující zásadu v uzlu **Správa nástroje BitLocker** . Na pásu karet vyberte **nasadit**.
@@ -135,6 +137,7 @@ Můžete vytvořit více nasazení stejné zásady. Chcete-li zobrazit další i
 > [!IMPORTANT]
 > Klient MBAM nespustí nástroj BitLocker Drive Encryption akce, pokud je aktivní připojení pomocí protokolu vzdálené plochy. Všechna připojení vzdálené konzoly se musí zavřít a uživatel musí být přihlášený k fyzické relaci konzoly, než začne nástroj BitLocker Drive Encryption.
 
+Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
 
 ## <a name="monitor"></a>Monitorování
 
@@ -162,7 +165,7 @@ K monitorování a odstraňování potíží použijte následující protokoly:
 
 - Protokol událostí služby Recovery Services: v Prohlížeč událostí Windows přejděte do části aplikace a služby > Microsoft > Windows > MBAM-Web. Další informace najdete v tématu [protokoly událostí BitLockeru](../../tech-ref/bitlocker/about-event-logs.md) a [protokoly událostí serveru](../../tech-ref/bitlocker/server-event-logs.md).
 
-- Protokoly trasování služby obnovení:`<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
+- Protokoly trasování služby obnovení: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 
 ## <a name="recovery-service"></a>Služba obnovení
 

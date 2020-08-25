@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31acd37e84e4d421c8bcbd96fee4536dbef22cee
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663357"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820387"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -215,7 +215,7 @@ Je volitelné upravit dobu platnosti šablony certifikátu.
 
 Po [Vytvoření šablony certifikátu SCEP](#create-the-scep-certificate-template)můžete tuto šablonu upravit a zkontrolovat **dobu platnosti** na kartě **Obecné** .
 
-Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Můžete ale nakonfigurovat certifikační autoritu, aby žadateli umožňovala zadat jinou hodnotu a tato hodnota se dá nastavit v konzole Intune.
+Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně, ale můžete nakonfigurovat certifikační autoritu tak, aby žadateli umožňovala zadat jinou hodnotu, aby se tato hodnota mohla nastavit v konzole Intune.
 
 > [!IMPORTANT]
 > Pro iOS/iPadOS a macOS vždycky použijte hodnotu nastavenou v šabloně.
@@ -327,32 +327,51 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>Instalace a vázání certifikátů na serveru, který je hostitelem NDES
 
+Na serveru NDES jsou k dispozici dva certifikáty, které konfigurace vyžaduje.
+Tyto certifikáty jsou **certifikát ověřování klienta** a **ověřovací certifikát serveru** , jak je uvedeno v části [certifikáty a šablony](#certificates-and-templates) .
+
 > [!TIP]
-> V následujícím postupu můžete použít jeden certifikát pro *ověřování serverů* i pro *ověřování klientů* , pokud je tento certifikát nakonfigurovaný tak, aby splňoval kritéria obou použití. Kritéria pro jednotlivá použití jsou popsána v krocích 1 a 3 následujícího postupu.
+> V následujícím postupu můžete použít jeden certifikát pro *ověřování serverů* i pro *ověřování klientů* , pokud je tento certifikát nakonfigurovaný tak, aby splňoval kritéria obou použití.
+> V souvislosti s názvem subjektu musí splňovat požadavky na certifikát *ověřování klienta* .
 
-1. Vyžádejte si **ověřovací certifikát serveru** z vaší interní certifikační autority nebo veřejné certifikační autority a pak na server nainstalujte certifikát.
+- **Certifikát pro ověřování klientů** 
 
-   Pokud server používá externí a interní název pro jednu síťovou adresu, musí mít ověřovací certifikát serveru:
+   Tento certifikát se používá při instalaci Intune Certificate Connectoru.
 
-   - **Název subjektu** s názvem externího veřejného serveru.
-   - **Alternativní název subjektu** , který obsahuje název interního serveru.
-
-2. Vytvoření vazby ověřovacího certifikátu serveru ve službě IIS:
-
-   1. Po instalaci ověřovacího certifikátu serveru otevřete **Správce služby IIS**a vyberte **výchozí web**. V podokně **Akce** vyberte **Vazby**.
-
-   1. Vyberte **Přidat**, nastavte **Typ** na **https** a potom zkontrolujte, že port je **443**.
+   Vyžádejte a nainstalujte certifikát pro **ověřování klientů** z vaší interní certifikační autority nebo veřejné certifikační autority.
    
-   1. Jako **Certifikát SSL**zadejte ověřovací certifikát serverů.
-
-3. Na serveru NDES vyžádejte a nainstalujte certifikát pro **ověřování klientů** z vaší interní certifikační autority nebo z veřejné certifikační autority.
-
-   Certifikát pro ověřování klientů musí mít následující vlastnosti:
+   Certifikát musí splňovat následující požadavky:
 
    - **Rozšířené použití klíče**: Tato hodnota musí zahrnovat **ověřování klientů**.
-   - **Název subjektu**: hodnota musí být stejná jako název DNS serveru, na který instalujete certifikát (Server NDES).
+   - **Název subjektu**: nastavte CN (běžný název) s hodnotou, která se musí shodovat s plně kvalifikovaným názvem domény serveru, na který instalujete certifikát (Server NDES).
 
-4. Server, který je hostitelem služby NDES, je teď připravený na podporu Intune Certificate Connectoru.
+- **Certifikát ověřování serveru**
+
+   Tento certifikát se používá ve službě IIS. Jedná se o jednoduchý certifikát webového serveru, který klientovi umožňuje důvěřovat adrese URL NDES.
+   
+   1. Vyžádejte si **ověřovací certifikát serveru** z vaší interní certifikační autority nebo veřejné certifikační autority a pak na server nainstalujte certifikát.
+      
+      V závislosti na tom, jakým způsobem zveřejníte NDES na internetu, existují různé požadavky. 
+      
+      Dobrá konfigurace:
+   
+      - **Název subjektu**: nastavte CN (běžný název) s hodnotou, která se musí shodovat s plně kvalifikovaným názvem domény serveru, na který instalujete certifikát (Server NDES).
+      - **Alternativní název subjektu**: nastavte záznamy DNS pro každou adresu URL, na kterou NDES odpovídá, jako je například interní plně kvalifikovaný název domény a externí adresy URL.
+   
+      > [!NOTE]
+      > Pokud používáte Aplikace Azure AD proxy, konektor proxy serveru aplikace AAD převede požadavky z externí adresy URL na interní adresu URL.
+      > V takovém případě bude NDES reagovat jenom na požadavky směrované na interní adresu URL, obvykle plně kvalifikovaný název domény serveru NDES.
+      >
+      > V takové situaci se externí adresa URL nevyžaduje.
+   
+   2. Vytvoření vazby ověřovacího certifikátu serveru ve službě IIS:
+
+      1. Po instalaci ověřovacího certifikátu serveru otevřete **Správce služby IIS**a vyberte **výchozí web**. V podokně **Akce** vyberte **Vazby**.
+
+      1. Vyberte **Přidat**, nastavte **Typ** na **https** a potom zkontrolujte, že port je **443**.
+   
+      1. Jako **Certifikát SSL**zadejte ověřovací certifikát serverů.
+
 
 ## <a name="install-the-intune-certificate-connector"></a>Instalace Intune Certificate Connectoru
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820608"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Uzamčení zařízení z aplikace Portál společnosti pro Windows 10
 
@@ -35,9 +35,7 @@ Vzdálené uzamčení se podporuje na zařízení s těmito systémy:
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
-* Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>Vzdálené uzamčení zařízení
 Pomocí následujícího postupu zamkněte zařízení z aplikace Portál společnosti.  
@@ -55,5 +53,7 @@ Pomocí následujícího postupu zamkněte zařízení z aplikace Portál spole�
    ![Snímek obrazovky aplikace Portál společnosti a stránky Detaily zařízení s výzvou k potvrzení vzdáleného uzamčení](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. Když zařízení najdete, odemkněte ho pomocí hesla.  
+
+## <a name="next-steps"></a>Další kroky
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

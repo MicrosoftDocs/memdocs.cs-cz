@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814950"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820183"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -301,10 +301,10 @@ Tato funkce platí pro:
 
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
-  - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení operační systém nebude používat rozšíření aplikací. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
+  - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení operační systém nepoužívá rozšíření aplikace. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
   - **Microsoft Azure AD**: používá modul plug-in Microsoft Enterprise SSO, což je rozšíření aplikace jednotného přihlašování typu přesměrování. Tento modul plug-in poskytuje jednotné přihlašování pro účty služby Active Directory ve všech aplikacích, které podporují funkci [podnikového jednotného přihlašování od společnosti Apple](https://developer.apple.com/documentation/authenticationservices) . Tento typ rozšíření aplikace jednotného přihlašování použijte k povolení jednotného přihlašování v aplikacích Microsoftu, organizačních aplikacích a websites, které se ověřují pomocí Azure AD.
 
-    Modul plug-in jednotného přihlašování funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí. Všechny aplikace, které dřív používaly zprostředkované ověřování pomocí aplikace Microsoft Authenticator, budou i nadále získávat jednotné přihlašování s [modulem plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    Modul plug-in jednotného přihlašování funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí. Všechny aplikace, které používaly aplikaci Microsoft Authenticator pro ověřování, budou nadále získávat jednotné přihlašování s [modulem plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
     > K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování, nejdřív na zařízení nainstalujte Microsoft Authenticator aplikace pro iOS/iPadOS. Aplikace ověřovatele doručí do zařízení modul plug-in Microsoft Enterprise SSO a nastavení rozšíření aplikace pro jednotné přihlašování aktivuje modul plug-in. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje pro přihlášení a navázat relaci na jejich zařízeních. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat. Další informace o ověřovateli najdete v tématu [co je Microsoft Authenticator aplikace](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
@@ -346,7 +346,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - Řetězec
+    - String
     - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
 
@@ -366,12 +366,17 @@ Tato funkce platí pro:
 - **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com` , `user` je hlavní název a `contoso.com` je název sféry.
 
   > [!TIP]
-  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}` . Pokud například chcete zobrazit uživatelské jméno, zadejte `Username: {{username}}` . 
+  > - Můžete také použít proměnné v hlavním názvu tak, že zadáte složené závorky `{{ }}` . Pokud například chcete zobrazit uživatelské jméno, zadejte       `Username: {{username}}` . 
   > - Buďte ale opatrní s náhradou proměnných, protože proměnné nejsou v uživatelském rozhraní ověřené a rozlišují velká a malá písmena. Nezapomeňte zadat správné informace.
 
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.
 - **Název mezipaměti** (jenom Kerberos): zadejte název obecné služby zabezpečení (GSS) mezipaměti protokolu Kerberos. Tuto hodnotu pravděpodobně nemusíte nastavovat.
-- **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos, ověřovacímu lístku a ověřování uživatelů pro služby, kterým mají oprávnění k přístupu.
+- **ID sady prostředků aplikace** (Microsoft Azure AD, Kerberos): Zadejte ID sady prostředků dalších aplikací, které by měly získat jednotné přihlašování prostřednictvím rozšíření na vašich zařízeních.
+
+  Pokud používáte typ rozšíření aplikace Microsoft Azure AD jednotného přihlašování, tyto aplikace používají k ověření uživatele modul plug-in Microsoft Enterprise SSO, aniž by museli přihlašovat. ID sady prostředků aplikace, která zadáte, mají oprávnění použít Microsoft Azure AD rozšíření aplikace jednotného přihlašování, pokud nepoužívají žádné knihovny Microsoftu, například Microsoft Authentication Library (MSAL). Prostředí pro tyto aplikace nemusí být v porovnání s knihovnami Microsoftu bezproblémové. Starší aplikace, které používají ověřování MSAL, nebo aplikace, které nepoužívají nejnovější knihovny Microsoftu, se musí do tohoto seznamu přidat, aby správně fungovaly s rozšířením aplikace Microsoft Azure jednotného přihlašování.  
+
+  Pokud používáte typ rozšíření aplikace pro jednotné přihlašování k protokolu Kerberos, tyto aplikace mají přístup k lístku pro udělení lístku protokolu Kerberos, ověřovacímu lístku a ověřování uživatelů pro služby, kterým mají oprávnění k přístupu.
+
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
 - **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
 

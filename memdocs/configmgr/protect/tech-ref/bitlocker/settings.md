@@ -2,7 +2,7 @@
 title: Reference k nastavení BitLockeru
 titleSuffix: Configuration Manager
 description: Všechna nastavení správy BitLockeru dostupná v Configuration Manager
-ms.date: 04/01/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693518"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820472"
 ---
 # <a name="bitlocker-settings-reference"></a>Reference k nastavení BitLockeru
 
@@ -56,6 +56,8 @@ U Windows 8.1 zařízení povolte možnost **Metoda šifrování jednotky a slo�
 - AES 128-bit (výchozí)
 - AES 256-bit
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps).
+
 #### <a name="windows-10-devices"></a>Zařízení s Windows 10
 
 U zařízení s Windows 10 povolte možnost **Metoda šifrování jednotky a sílu šifrování (Windows 10)**. Pak jednotlivě vyberte jednu z následujících metod šifrování pro jednotky operačního systému, pevné datové jednotky a vyměnitelné datové jednotky:
@@ -69,6 +71,8 @@ U zařízení s Windows 10 povolte možnost **Metoda šifrování jednotky a sí
 > BitLocker používá jako šifrovací algoritmus standard AES (Advanced Encryption Standard) s konfigurovatelnou délkou klíče 128 nebo 256 bitů. V zařízeních s Windows 10 podporuje šifrování STANDARDu CBC (Cipher Block Chaining) nebo odcizení šifrovaných textů (XTS).
 >
 > Pokud potřebujete použít vyměnitelnou jednotku na zařízeních, která nepoužívají Windows 10, použijte AES-CBC.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>Obecné poznámky k používání pro šifrování jednotky a složitost šifrování
 
@@ -88,6 +92,8 @@ Nakonfigurujte tuto zásadu, aby se zlepšil výkon při restartování bez pře
 
 Pokud tuto zásadu nenakonfigurujete, BitLocker při restartování počítače odebere jeho tajné klíče z paměti.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps).
+
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>Ověřit dodržování předpisů pravidla použití certifikátu čipové karty
 
 *Navrhovaná konfigurace*: **není nakonfigurované**
@@ -95,6 +101,8 @@ Pokud tuto zásadu nenakonfigurujete, BitLocker při restartování počítače 
 Nakonfigurujte tuto zásadu tak, aby používala ochranu BitLockerem založenou na certifikátech SmartCard. Pak zadejte **identifikátor objektu**certifikátu.
 
 Pokud tuto zásadu nenakonfigurujete, BitLocker použije k určení certifikátu výchozí identifikátor objektu `1.3.6.1.4.1.311.67.1.1` .
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps).
 
 ### <a name="organization-unique-identifiers"></a>Jedinečné identifikátory organizace
 
@@ -105,6 +113,8 @@ Nakonfigurujte tuto zásadu na použití agenta obnovení dat založeného na ce
 Pokud tuto zásadu nenakonfigurujete, BitLocker nepoužije pole **Identifikace** .
 
 Pokud vaše organizace vyžaduje vyšší míry zabezpečení, nakonfigurujte pole **Identifikace** . Nastavte toto pole na všech cílových zařízeních USB a zarovnejte je s tímto nastavením.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps).
 
 ## <a name="os-drive"></a>Jednotka operačního systému
 
@@ -134,6 +144,8 @@ V zařízeních s kompatibilním čipem TPM lze při spuštění použít dva ty
 >
 > - Při přechodu do režimu spánku (na baterii) zapnout úsporné režimy (S1-S3)
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps).
+
 ### <a name="allow-enhanced-pins-for-startup"></a>Povolení rozšířených PIN kódů pro spuštění
 
 *Navrhovaná konfigurace*: **není nakonfigurované**
@@ -149,6 +161,8 @@ Pokud povolíte toto nastavení, všechny nové spouštěcí kódy nástroje Bit
 
 Pokud nastavení této zásady zakážete nebo nenakonfigurujete, BitLocker nepoužije rozšířené PIN kódy.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps).
+
 ### <a name="operating-system-drive-password-policy"></a>Zásady pro hesla jednotky operačního systému
 
 *Navrhovaná konfigurace*: **není nakonfigurované**
@@ -162,6 +176,8 @@ Pomocí těchto nastavení můžete nastavit omezení pro hesla pro odemknutí j
 - **Vyžadovat hesla jenom standardu ASCII pro vyměnitelné jednotky operačního systému**
 
 Pokud nastavení této zásady povolíte, můžou uživatelé nakonfigurovat heslo, které splňuje požadavky, které definujete.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>Obecné poznámky k používání pro zásady hesel pro jednotky operačního systému
 
@@ -180,6 +196,8 @@ Určuje, zda systém Windows aktualizuje data ověřování platformy při spuš
 Pokud toto nastavení povolíte nebo nenakonfigurujete, systém Windows v této situaci aktualizuje data ověřování platformy.
 
 Pokud nastavení této zásady zakážete, Windows v této situaci neaktualizuje data ověření platformy.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps).
 
 ### <a name="pre-boot-recovery-message-and-url"></a>Zpráva o obnovení před spuštěním a adresa URL
 
@@ -202,6 +220,8 @@ Pokud povolíte toto nastavení, vyberte jednu z následujících možností pro
 > [!NOTE]
 > V nástroji Pre-Boot nejsou podporovány všechny znaky a jazyky. Nejprve otestujte vlastní zprávu nebo adresu URL, abyste se ujistili, že se zobrazí správně na obrazovce pro obnovení nástroje BitLocker před spuštěním.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps).
+
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>Nastavení vynucení zásad šifrování (jednotka operačního systému)
 
 *Navrhovaná konfigurace*: **povoleno**
@@ -215,6 +235,8 @@ Pokud nástroj BitLocker nepožaduje zásah uživatele při přidání ochrany, 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, Configuration Manager nepožaduje, aby uživatelé dodržovali zásady BitLockeru.
 
 Pokud chcete zásady vymáhat hned, nastavte období odkladu `0` .
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps).
 
 ## <a name="fixed-drive"></a>Pevná jednotka
 
@@ -234,6 +256,8 @@ Pokud toto nastavení nenakonfigurujete, nástroj BitLocker nepožaduje, aby už
 
 Pokud toto nastavení zakážete, uživatelé nebudou moci vkládat pevné datové jednotky v rámci ochrany nástrojem BitLocker. Pokud tuto zásadu zakážete poté, co BitLocker zašifruje pevné datové jednotky, BitLocker dešifruje pevné datové jednotky.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps).
+
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>Odepřít přístup pro zápis na pevné jednotky, které nechrání BitLocker
 
 *Navrhovaná konfigurace*: **není nakonfigurované**
@@ -248,7 +272,7 @@ Když zapnete toto nastavení:
 
 Pokud toto nastavení nenakonfigurujete, Windows připojí všechny pevné datové jednotky s přístupem pro čtení a zápis.
 
-<!-- ### Allow access to BitLocker-protected fixed drives from earlier versions of Windows -->
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### <a name="fixed-data-drive-password-policy"></a>Zásady pro hesla pevných datových jednotek
 
@@ -269,6 +293,8 @@ Pro vyšší zabezpečení povolte toto nastavení a pak nakonfigurujte následu
 Pokud toto nastavení zakážete, uživatelé nemůžou nakonfigurovat heslo.
 
 Pokud zásada není nakonfigurovaná, BitLocker podporuje hesla s výchozími nastaveními. Výchozí nastavení nezahrnuje požadavky na složitost hesla a vyžadují jenom osm znaků.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>Obecné poznámky k používání zásad pro hesla pro pevné datové jednotky
 
@@ -291,6 +317,8 @@ Pokud nástroj BitLocker nepožaduje zásah uživatele při přidání ochrany, 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, Configuration Manager nepožaduje, aby uživatelé dodržovali zásady BitLockeru.
 
 Pokud chcete zásady vymáhat hned, nastavte období odkladu `0` .
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps).
 
 ## <a name="removable-drive"></a>Vyměnitelná jednotka
 
@@ -320,6 +348,8 @@ Když zapnete toto nastavení:
 
 Pokud toto nastavení zakážete, uživatelé nemůžou používat BitLocker na vyměnitelných jednotkách.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps).
+
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>Odepřít přístup pro zápis na vyměnitelné jednotky, které nejsou chráněné nástrojem BitLocker
 
 *Navrhovaná konfigurace*: **není nakonfigurované**
@@ -339,7 +369,7 @@ Když toto nastavení zakážete nebo nenakonfigurujete, Windows připojí všec
 > [!NOTE]
 > Toto nastavení můžete přepsat pomocí nastavení zásad skupiny v **systému**  >  **přístup k vyměnitelnému úložišti**. Pokud povolíte nastavení zásad skupiny **Vyměnitelné disky: Odepřít přístup pro zápis**, pak BitLocker ignoruje toto nastavení Configuration Manager.
 
-<!-- ### Allow access to BitLocker-protected removable data drives from earlier versions of Windows -->
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps).
 
 ### <a name="removable-data-drive-password-policy"></a>Zásady hesla pro vyměnitelné datové jednotky
 
@@ -360,6 +390,8 @@ Pro vyšší zabezpečení povolte toto nastavení a pak nakonfigurujte následu
 Pokud toto nastavení zakážete, uživatelé nemůžou nakonfigurovat heslo.
 
 Pokud zásada není nakonfigurovaná, BitLocker podporuje hesla s výchozími nastaveními. Výchozí nastavení nezahrnuje požadavky na složitost hesla a vyžadují jenom osm znaků.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps).
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>Obecné poznámky k používání pro zásady hesel pro vyměnitelné datové jednotky
 
@@ -384,6 +416,11 @@ Když toto nastavení povolíte, Configuration Manager automaticky a tiše zálo
 - **Povolí ukládání informací pro obnovení do prostého textu**: bez šifrovacího certifikátu správy BitLockeru pro SQL Server Configuration Manager ukládá informace pro obnovení klíče do prostého textu. Další informace najdete v tématu [šifrování dat pro obnovení](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
 - **Frekvence stavu kontroly klienta (minuty)**: u nakonfigurované frekvence kontroluje klient zásady ochrany BitLockeru a stav počítače a také zálohuje klíč pro obnovení klienta. Ve výchozím nastavení klient Configuration Manager aktualizuje své informace pro obnovení BitLockeru každých 90 minut.
+
+Další informace o tom, jak tyto zásady vytvořit pomocí Windows PowerShellu, najdete tady:
+
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
 
 ### <a name="user-exemption-policy"></a>Zásady pro výjimky uživatelů
 
@@ -410,6 +447,8 @@ Pokud toto nastavení zakážete nebo nenakonfigurujete, Windows nezobrazí uži
 > [!NOTE]
 > BitLocker spravuje výjimky na uživatele, nikoli na počítač. Pokud se ke stejnému počítači přihlašuje více uživatelů a jeden uživatel není nepřístupný, BitLocker zašifruje počítač.
 
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps).
+
 ### <a name="url-for-the-security-policy-link"></a>Adresa URL odkazu na zásady zabezpečení
 
 *Navrhovaná konfigurace*: **povoleno**
@@ -419,3 +458,9 @@ Zadejte adresu URL, která se zobrazí uživatelům jako **zásady zabezpečení
 Pokud toto nastavení povolíte, nakonfigurujte **adresu URL odkazu na zásady zabezpečení**.
 
 Pokud toto nastavení zakážete nebo nenakonfigurujete, BitLocker nezobrazuje odkaz zásady zabezpečení.
+
+Další informace o tom, jak vytvořit tuto zásadu v prostředí Windows PowerShell, najdete v článku [New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps).
+
+## <a name="next-steps"></a>Další kroky
+
+Pokud k vytvoření těchto objektů zásad používáte Windows PowerShell, použijte rutinu [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) . Tato rutina vytvoří objekt nastavení zásad správy BitLockeru, který obsahuje všechny zadané zásady. K nasazení nastavení zásad do kolekce použijte rutinu [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) .

@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051620"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820052"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -37,10 +37,10 @@ V MC208118 zveřejněné poslední březen jsme představili novou jednoduchou a
 Správa Správce zařízení s Androidem byla vydaná v Androidu 2,2 jako způsob správy zařízení s Androidem. Od verze Android 5 byla vydaná pokročilejší architektura pro správu [Androidu Enterprise](../enrollment/connect-intune-android-enterprise.md) (pro zařízení, která se můžou spolehlivě připojit k Google Mobile Services). Google podporuje pohyb správy správců zařízení tím, že snižuje podporu správy v nových verzích Androidu.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Vzhledem k tomu, že se jedná o tyto změny od společnosti Google, ve čtvrtém čtvrtletí 2020 už nebudete mít k dispozici rozsáhlé možnosti správy na zařízeních spravovaných správcem zařízení, která mají vliv na správu. 
+Z důvodu těchto změn od společnosti Google už v říjnu 2020 nebudete mít k dispozici rozsáhlé možnosti správy na zařízeních spravovaných správcem zařízení, která mají vliv na správu. 
 
 > [!NOTE]
-> Toto datum bylo dříve sděleno jako třetí čtvrtletí 2020, ale bylo přesunuto na základě [nejnovějších informací z Google](https://www.blog.google/products/android-enterprise/da-migration/).
+> Toto datum bylo dříve sděleno jako čtvrté čtvrtletí 2020, ale bylo přesunuto na základě [nejnovějších informací z Google](https://www.blog.google/products/android-enterprise/da-migration/).
 
 ##### <a name="device-types-that-will-be-impacted"></a>Typy zařízení, které budou mít vliv na
 Zařízení, na která bude mít vliv podpora správce pro snižování zařízení, jsou ta, pro kterou platí všechny tři podmínky:
@@ -96,14 +96,14 @@ Ovlivněná nastavení dodržování předpisů:
 - U nově zaregistrovaných zařízení, nově přiřazených nastavení a aktualizovaných nastavení se ovlivněná nastavení dodržování předpisů budou dál zobrazovat jako důvody pro nedodržování předpisů na stránce aktualizovat nastavení zařízení a zařízení nedodržuje předpisy, ale přísnější požadavky na heslo se v aplikaci nastavení neuplatní.
 
 #### <a name="cause-of-impact"></a>Příčina dopadu 
-Na zařízení bude mít vliv na čtvrté čtvrtletí 2020. V tomto okamžiku bude k dispozici Portál společnosti aktualizace aplikace, která zvýší cílení rozhraní Portál společnosti API z úrovně 28 na úroveň 29 ([podle požadavku Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
+Na zařízení bude mít vliv v říjnu 2020. V tomto okamžiku bude k dispozici Portál společnosti aktualizace aplikace, která zvýší cílení rozhraní Portál společnosti API z úrovně 28 na úroveň 29 ([podle požadavku Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
 V tomto okamžiku bude mít vliv na zařízení spravovaná správcem zařízení, která nejsou vyráběná společností Samsung, jakmile uživatel dokončí obě tyto akce:
 - Aktualizace pro Android 10 nebo novější.
 - Aktualizuje aplikaci Portál společnosti na verzi, která cílí na úroveň rozhraní API 29.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Abyste se vyhnuli snížení funkčnosti, které přichází ve čtvrtém čtvrtletí 2020, doporučujeme následující:
+Abyste se vyhnuli omezení funkčnosti nacházejícím se v říjnu 2020, doporučujeme následující:
 - **Nové registrace**: připojení nových zařízení do správy [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) Management (Pokud je k dispozici) nebo [zásad ochrany aplikací](../apps/app-protection-policies.md). Nepoužívejte registraci nových zařízení do správy Správce zařízení. 
 - **Dřív zaregistrovaná zařízení**: Pokud na zařízení spravovaném správcem zařízení běží Android 10 nebo novější nebo se může aktualizovat na Android 10 nebo novější (obzvláště pokud se nejedná o zařízení Samsung), přesuňte ho od správy zařízení k [Androidu Enterprise](../enrollment/connect-intune-android-enterprise.md) managementu a/nebo [zásadám ochrany aplikací](../apps/app-protection-policies.md). Pomocí zjednodušeného toku můžete [zařízení s Androidem přesunout ze Správce zařízení do správy pracovního profilu](../enrollment/android-move-device-admin-work-profile.md).
 

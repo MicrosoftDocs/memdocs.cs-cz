@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695507"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819690"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Online dokumentace pro Configuration Manager
 
@@ -48,7 +48,7 @@ V online dokumentaci pro aktuální větev Configuration Manager najdete na adre
 
 - [Zabezpečení a ochrana osobních údajů v nástroji Configuration Manager](../plan-design/security/security-and-privacy.md)  
 
-### <a name="release-notes"></a>Zpráva k vydání verze
+### <a name="release-notes"></a>Poznámky k verzi
 
 Poznámky k verzi obsahují informace, které nejsou k dispozici v dokumentaci k produktu a mohou být vyžadovány k úspěšné instalaci a použití Configuration Manager. Další informace najdete v [poznámkách k verzi pro Configuration Manager](../servers/deploy/install/release-notes.md)  
 
@@ -106,4 +106,4 @@ Další informace o funkcích, produktech a službách, které usnadňují Confi
 
 ### <a name="downloadable-documentation"></a>Dokumentace ke stažení
 
-Stáhněte si kopii technické dokumentace k System Center 2012 R2 Configuration Manager z webu [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29901).
+Stáhněte si kopii technické dokumentace k System Center 2012 R2 Configuration Manager z webu [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29256).

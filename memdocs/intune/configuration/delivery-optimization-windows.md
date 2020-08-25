@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 4d491a3210229d5dd6c74ccaed7f44c4ae4eb83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820438"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení Optimalizace doručení v Microsoft Intune
 
@@ -54,11 +54,11 @@ Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [akt
 
 7. Na stránce **nastavení konfigurace** definujte, jak chcete stahovat aktualizace a aplikace. Informace o dostupných nastaveních najdete v tématu věnovaném [nastavení optimalizace doručování pro Intune](delivery-optimization-settings.md).
 
-   Po dokončení konfigurace nastavení vyberte **Další**.
+   Až budete s konfigurací nastavení hotovi, vyberte **Další**.
 
 8. Na stránce **obor (značky)** vyberte **Vybrat značky oboru** a otevřete tak podokno *Vybrat značky* , abyste přiřadili značky oboru k profilu.
   
-   Pokračujte výběrem tlačítka **Next** (Další).
+   Pokračujte výběrem tlačítka **Další**.
 
 9. Na stránce **přiřazení** vyberte skupiny, které získají tento profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 

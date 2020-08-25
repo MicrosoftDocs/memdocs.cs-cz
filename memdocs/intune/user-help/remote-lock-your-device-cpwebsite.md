@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880918"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820642"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -35,9 +35,7 @@ Nastavení vzdáleného uzamčení funguje v těchto systémech:
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
-* Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo)  
+* Windows 10  
 
 1. Na [webu Portál společnosti](https://portal.manage.microsoft.com) vyberte tlačítko __nabídky__ > __Zařízení__.  
 
@@ -53,6 +51,8 @@ Nastavení vzdáleného uzamčení funguje v těchto systémech:
 
 4. Zobrazí se zpráva, která vás upozorní, že se chystáte uzamknout zařízení. Potvrďte klepnutím na **Vzdálené uzamčení**.
 
+## <a name="check-the-status-of-remote-lock"></a>Zkontroluje stav vzdáleného zámku.
+
 Po potvrzení se Portál společnosti pokusí zařízení uzamknout. Během této doby se zobrazí zpráva "vzdálené uzamčení čeká na vyřízení". Když je zařízení zamknuté, zobrazí se stav "vzdálené uzamčení bylo úspěšné."  
 
 Stav vzdáleného uzamčení se zobrazuje na třech místech:
@@ -66,4 +66,6 @@ Stav vzdáleného uzamčení se zobrazuje na třech místech:
 
 Pokud najdete své zařízení a chcete ho odemknout po použití vzdáleného uzamčení, stačí zadat heslo.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="next-steps"></a>Další kroky
+
+Máte nějaké otázky nebo potřebujete pomáhat? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
