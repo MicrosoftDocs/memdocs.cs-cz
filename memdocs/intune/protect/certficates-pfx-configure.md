@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: 80979c31f6950513ea5bd35064dbbf63f1d7d636
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946639"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895985"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -119,6 +119,12 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
     > **Název šablony** je ve výchozím nastavení stejný jako **Zobrazovaný název šablony**, pouze *bez mezer*. Poznamenejte si název šablony, budete ho potřebovat později.
 
 6. Ve **Vyřízení žádosti** vyberte **Umožnit export soukromého klíče**.
+    
+    > [!NOTE]
+    > V rozporu s protokolem SCEP se ve formátu PKCS vygeneruje privátní klíč certifikátu na serveru, na kterém je konektor nainstalovaný, a ne na zařízení. Je nutné, aby šablona certifikátu mohla exportovat soukromý klíč, aby mohl konektor Certificate Connector exportovat certifikát PFX a odeslat ho do zařízení. 
+    >
+    > Upozorňujeme však, že při instalaci certifikátů do samotného zařízení nebude privátní klíč označený jako exportovatelný.
+    
 7. V **Kryptografii** zkontrolujte, že je **Minimální velikost klíče** nastavená na hodnotu 2048.
 8. V **Názvu subjektu** zvolte **Dodat v žádosti**.
 9. V **Rozšíření** zkontrolujte, jestli jsou v rozšíření **Zásady použití** položky Šifrování systému souborů, Zabezpečení e-mailu a Ověření klienta.
@@ -150,7 +156,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
    ![Stažení Microsoft Intune Certificate Connector](./media/certficates-pfx-configure/download-ndes-connector.png)
 
-4. Po dokončení stahování se přihlaste k serveru. Potom:
+4. Po dokončení stahování se přihlaste k serveru. Pak:
 
     1. Zkontrolujte, že je nainstalované rozhraní .NET 4.5 Framework nebo novější, protože ho NDES Certificate Connector vyžaduje. Rozhraní .NET 4.5 Framework je automaticky součástí Windows Serveru 2012 R2 a novějších verzí.
     2. Spusťte instalační program (NDESConnectorSetup.exe) a potvrďte výchozí umístění. Konektor se nainstaluje do `\Program Files\Microsoft Intune\NDESConnectorUI`. V možnostech instalačního programu vyberte **distribuci PFX**. Pokračujte až do konce instalace.

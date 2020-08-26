@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 35c19c777a96842f405fa1d68477fa4c7e937dee
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462129"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896038"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Řešení potíží s Intune Exchange Connectorem
 
@@ -52,9 +52,9 @@ Než začnete řešit potíže s Exchange Connectorem v Intune, shromážděte n
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Použití PowerShellu k získání dalších informací o problémech s Exchange Connectorem
 
-- Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte`Get-ActiveSyncDeviceStatistics -mailbox mbx`
-- Chcete-li získat seznam adres SMTP pro poštovní schránku, použijte`Get-Mailbox -Identity user | select emailaddresses | fl`
-- Podrobné informace o stavu přístupu k zařízení získáte pomocí`Get-CASMailbox <upn> | fl`
+- Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte `Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Chcete-li získat seznam adres SMTP pro poštovní schránku, použijte `Get-Mailbox -Identity user | select emailaddresses | fl`
+- Podrobné informace o stavu přístupu k zařízení získáte pomocí `Get-CASMailbox <upn> | fl`
 
 ## <a name="review-the-connector-configuration"></a>Kontrola konfigurace konektoru
 
@@ -86,4 +86,4 @@ Následující články vám pomůžou vyřešit běžné problémy a konkrétn�
 Vyhledejte pomoc od podpory nebo komunity Intune:
 
 - V tématu [získání podpory](../fundamentals/get-support.md) pro používání konzoly Intune můžete pomoct s řešením problému nebo otevřít případ podpory s Microsoftem. 
-- Vystavte svůj problém ve [fórech Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Vystavte svůj problém ve [fórech Microsoft Intune](https://docs.microsoft.com/answers/products/mem).  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb35fdc400c89c64b689f4695a48d201e50fc617
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9203c3654671680eaeaa8e73597912783c0cdf1f
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79328883"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896062"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Řešení běžných chyb pro Intune Exchange Connector
 
@@ -30,7 +30,7 @@ Tento článek vám může pomáhat správci Intune vyřešit konkrétní chyby 
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000001"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000001
 
-**Problém:**  
+**Problém**:  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:
 
 ```
@@ -53,7 +53,7 @@ Konfigurovat nastavení proxy serveru:
 
 ## <a name="configuration-failed-and-returned-error-code-0x000000b"></a>Konfigurace se nezdařila a vrátila kód chyby 0x000000b   
 
-**Problém:**  
+**Problém**:  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```
@@ -69,7 +69,7 @@ Přihlaste se k Intune pomocí účtu, který je globálním správcem, nebo př
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000006"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000006
 
-**Problém:**  
+**Problém**:  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```  
@@ -77,7 +77,7 @@ Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí násle
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-K této chybě může dojít, pokud proxy server slouží k připojení k Internetu a blokuje provoz do služby Intune. Pokud chcete zjistit, jestli se proxy používá, přejděte na **Ovládací panely** > **Možnosti Internetu**, vyberte kartu **připojení** a pak klikněte na **Nastavení místní sítě**.
+K této chybě může dojít, pokud proxy server slouží k připojení k Internetu a blokuje provoz do služby Intune. Pokud chcete zjistit, jestli se proxy používá, přejděte na **Ovládací panely**  >  **Možnosti Internetu**, vyberte kartu **připojení** a pak klikněte na **Nastavení místní sítě**.
 
 **Řešení**:  
 
@@ -89,7 +89,7 @@ K této chybě může dojít, pokud proxy server slouží k připojení k Intern
 
 ## <a name="event-7000-or-7041-microsoft-intune-exchange-connector-service-wont-start"></a>Událost 7000 nebo 7041: Služba Microsoft Intune Exchange Connector se nespustí
 
-**Problém:**  
+**Problém**:  
 Nepovedlo se zaregistrovat zařízení s iOS v Intune a vygeneruje se jedna z těchto chybových zpráv:  
 
 ```  
@@ -132,7 +132,7 @@ Chcete-li přiřadit uživatelské právo **Přihlásit se jako služba** k úč
 
 1. Přihlaste se k počítači jako správce nebo jako člen skupiny Administrators.
 2. Spusťte **secpol. msc** a otevřete tak místní zásady zabezpečení.
-3. Přejít na **Nastavení** > zabezpečení**místní zásady**a potom vyberte **přiřazení uživatelských práv**.
+3. Přejít na **nastavení zabezpečení**  >  **místní zásady**a potom vyberte **přiřazení uživatelských práv**.
 4. V pravém podokně klikněte dvakrát na možnost **Přihlásit se jako služba**.
 5. Vyberte **Přidat uživatele nebo skupinu**, přidejte **WIEC_USER** k zásadě a pak vyberte **OK** dvakrát.
 
@@ -145,4 +145,4 @@ Následující článek vám může pomáhat vyřešit konkrétní chyby:
 
 Vyhledejte pomoc od podpory nebo komunity Intune.
 - V tématu [získání podpory](../fundamentals/get-support.md) pro používání konzoly Intune můžete pomoct s řešením problému nebo otevřít případ podpory s Microsoftem. 
-- Vystavte svůj problém ve [fórech Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Vystavte svůj problém ve [fórech Microsoft Intune](https://docs.microsoft.com/answers/products/mem).  

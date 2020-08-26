@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d7c71a35c41e319d6a224868889a77fdad3ec35f
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988170"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896000"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -68,7 +68,7 @@ K odeslání následujících typů zpětné vazby použijte problémy GitHubu:
 - Lokalizace: zpětná vazba k překladu obsahu.
 - Optimalizace vyhledávače (SEO): zpětná vazba k potížím při hledání obsahu. Do komentářů zahrňte vyhledávací web, klíčová slova a cílový článek.
 
-Pokud se pro témata nesouvisející s dokumentem, jako jsou například [názory na produkt](https://microsoftintune.uservoice.com/forums/291681-ideas), [dotazy](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)na produkt nebo [žádosti o podporu](get-support.md), vyvolají problémy, budou tyto problémy uzavřeny a uživatel se přesměruje na správný kanál zpětné vazby.
+Pokud se pro témata nesouvisející s dokumentem, jako jsou například [názory na produkt](https://microsoftintune.uservoice.com/forums/291681-ideas), [dotazy](https://docs.microsoft.com/answers/products/mem)na produkt nebo [žádosti o podporu](get-support.md), vyvolají problémy, budou tyto problémy uzavřeny a uživatel se přesměruje na správný kanál zpětné vazby.
 
 Pokud chcete sdílet názory na platformu docs.microsoft.com, přečtěte si [názory na dokumentaci](https://aka.ms/sitefeedback). Platforma zahrnuje všechny komponenty obálky, například záhlaví, obsah a pravou nabídku. Také způsob vykreslování článků v prohlížeči, například písmo, pole výstrah a kotvy stránky.
 

@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot – ukázkové skripty
       href: cmpivot-samples-attached.md
+- name: Zabezpečení koncového bodu pro zařízení připojená k tenantovi (Preview)
+  items:
+    - name: Povolení zabezpečení koncového bodu
+      href: atp-onboard.md
+    - name: Vytvoření a nasazení zásad antivirové ochrany zabezpečení koncového bodu
+      href: deploy-antivirus-policy.md
+    - name: Nastavení zásad antivirové ochrany v programu Microsoft Defender
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: Odstraňování potíží
   items:
     - name: Připojení tenanta a akce zařízení

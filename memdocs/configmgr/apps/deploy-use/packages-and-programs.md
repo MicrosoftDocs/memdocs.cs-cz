@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2c125212a13790e196d001f53411633d1e42d4f8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c87ae35fa3e5a76c57342a0d1cad4167b0f14685
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81710108"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895961"
 ---
 # <a name="packages-and-programs-in-configuration-manager"></a>Balíčky a programy v Configuration Manager
 
@@ -67,7 +67,9 @@ Balíčky můžou využívat některé nové funkce Configuration Manager, včet
     - **Zdrojová složka**: Pokud balíček obsahuje zdrojové soubory, zvolte **Procházet** a otevřete dialogové okno **nastavit zdrojovou složku** a zadejte umístění zdrojových souborů pro daný balíček.  
 
         > [!NOTE]  
-        > Účet počítače serveru lokality musí mít k zadané zdrojové složce oprávnění pro čtení.  
+        > Účet počítače serveru lokality musí mít k zadané zdrojové složce oprávnění pro čtení.
+        >
+        > Systém Windows omezuje cestu ke zdroji na 256 znaků nebo méně. Toto omezení platí pro zdroj balíčku i pro aplikace. Další informace najdete v tématu [pojmenování souborů, cest a oborů názvů](/windows/win32/fileio/naming-a-file).
 
     - Pokud chcete v klientovi předem ukládat obsah do mezipaměti, začněte ve verzi 1906 a určete **architekturu** a **jazyk** balíčku. Další informace najdete v tématu [Konfigurace obsahu před ukládáním do mezipaměti](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 

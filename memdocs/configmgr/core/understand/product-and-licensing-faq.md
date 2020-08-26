@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0f249c4ad981c289be33d364dcb4f5b8635faecb
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695762"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88895897"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Nejčastější dotazy týkající se Configuration Manager větví a licencování
 
@@ -102,6 +102,7 @@ Licence spolusprávy umožňuje Configuration Manager zákazníkům se Software 
 |Správa aktualizací softwaru|Ano|Ano|
 |inventář|Ano|Ano|
 |Správa aplikací|Ano|Ano|
+|Vzdálené úplné/selektivní vymazání|Ano|Ano|
 |Vzdálená pomoc<br>(Vyžaduje se licence TeamVieweru)|Ano|Ano|
 |Desktop Analytics<br>(Vyžaduje se licence předplatného systému Windows|Ano|–|
 |Připojení tenanta|Ano|–|
@@ -131,11 +132,11 @@ Pokud používáte System Center Endpoint Protection a platnost vašeho přidru�
 
 ### <a name="do-i-own-the-current-branch"></a><a name="bkmk_owncb"></a> Mám "vlastní" aktuální větev?
 
-Ne. Máte licenci na používání aktuální větve, když máte aktivní SA. Pokud třeba *SA* vyprší, můžete například prostřednictvím služby *l&SA*použít jenom *L (licence)* , která nezahrnují práva k používání aktuální větve. Pokud vaše L poskytuje trvalá práva, můžete místo aktuální větve použít Configuration Manager LTSB. Pokud vaše přidružení zabezpečení vypršelo před 1. října 2016, můžete také použít System Center 2012 R2 Configuration Manager.
+No. Máte licenci na používání aktuální větve, když máte aktivní SA. Pokud třeba *SA* vyprší, můžete například prostřednictvím služby *l&SA*použít jenom *L (licence)* , která nezahrnují práva k používání aktuální větve. Pokud vaše L poskytuje trvalá práva, můžete místo aktuální větve použít Configuration Manager LTSB. Pokud vaše přidružení zabezpečení vypršelo před 1. října 2016, můžete také použít System Center 2012 R2 Configuration Manager.
 
 ### <a name="can-i-purchase-configuration-manager-standalone-without-sa"></a><a name="bkmk_standalone"></a> Můžu Configuration Manager samostatně koupit bez SA?
 
-Ne. Jediným způsobem, jak získat práva k používání Configuration Manager, je získat licenci pomocí SA nebo přes ekvivalentní předplatné. K dispozici jsou vývojářské programy, jako je například MSDN, kde se Configuration Manager nabízet pro účely vývoje a testování, ale ne produkční využití.
+No. Jediným způsobem, jak získat práva k používání Configuration Manager, je získat licenci pomocí SA nebo přes ekvivalentní předplatné. K dispozici jsou vývojářské programy, jako je například MSDN, kde se Configuration Manager nabízet pro účely vývoje a testování, ale ne produkční využití.
 
 ### <a name="does-a-non-production-environment-for-testing-or-development-require-an-explicit-license"></a><a name="bkmk_lab"></a> Vyžaduje prostředí, které není v provozu, pro testování nebo vývoj určitou explicitní licenci?
 

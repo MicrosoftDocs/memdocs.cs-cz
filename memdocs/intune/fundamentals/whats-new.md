@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: fe94b838ea1da859ee651cf45717118c865a7cad
+ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820268"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88896084"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -171,7 +171,7 @@ Intune teď podporuje [řešení MDM třetích stran jako zdroj podrobností o d
 
 V této verzi jsou podporovány následující poskytovatelé MDM od jiných výrobců jako verze Public Preview:
 
-- Pracovní prostor VMWare ONE UEM (dříve označovaný jako pro sledování)
+- Pracovní prostor VMware ONE UEM (dříve označovaný jako pro sledování)
 
 *Tato aktualizace je pro zákazníky nahromadá globálně. Tato možnost by se měla zobrazit během příštího týdne.*
 
@@ -1149,7 +1149,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mail
+- E-mailu
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP

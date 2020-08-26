@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: Migrace pravidel firewallu
           href: endpoint-security-firewall-rule-tool.md
+        - name: Připojení tenanta
+          href: tenant-attach-intune.md
         - name: Šifrování disků
           items:
             - name: Správa zásad nástroje BitLocker
@@ -308,8 +310,10 @@
           items:
             - name: Nastavení antivirové ochrany v Microsoft Defenderu pro macOS
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Nastavení antivirové ochrany v Microsoft Defenderu pro Windows 10
+            - name: Nastavení antivirové ochrany v programu Microsoft Defender pro Windows 10
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: Nastavení antivirové ochrany v programu Microsoft Defender pro zařízení připojená k tenantovi
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Nastavení prostředí Zabezpečení Windows
               href: antivirus-security-experience-windows-settings.md
         - name: Nastavení profilu pro šifrování disků
