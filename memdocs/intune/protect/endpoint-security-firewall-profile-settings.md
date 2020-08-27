@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 49be1ae762e50ade9e2881137a97b379ad380f7a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431289"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915020"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad brány firewall pro zabezpečení koncového bodu v Intune
 
@@ -29,7 +29,7 @@ Podívejte se na nastavení, která můžete nakonfigurovat v části profily pr
 
 Podporované platformy a profily:
 
-- **MacOS**:
+- **macOS**:
   - Profil: **MacOS firewall**
 
 - **Windows 10 a novější**:
@@ -37,7 +37,7 @@ Podporované platformy a profily:
 
 ## <a name="macos-firewall-profile"></a>Profil brány firewall macOS
 
-### <a name="firewall"></a>Brána firewall
+### <a name="firewall"></a>Firewall
 
 Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení koncového bodu pro MacOS brány firewall](../protect/endpoint-security-firewall-policy.md) .
 
@@ -91,7 +91,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   Pokud nepotřebujete *UTF-8*, předsdílené klíče se zpočátku zakódují pomocí kódování UTF-8. Pak uživatelé zařízení můžou zvolit jinou metodu kódování.
 
   - **Nenakonfigurováno** (*výchozí*)
-  - **Žádné**
+  - **Žádný**
   - **UTF**
 
 - **Výjimky brány firewall s povoleným PROTOKOLem Neighbor Discovery**  
@@ -123,7 +123,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
    Určete, jak se vynutilo ověřování seznamu odvolaných certifikátů (CRL).
   - **Nenakonfigurováno** (*výchozí*) – výchozí nastavení klienta je zakázat ověření seznamu CRL.
-  - **Žádné**
+  - **Žádný**
   - **Byl**
   - **Vyžadovat**
 
@@ -138,7 +138,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
   Určete, jak povolit škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.
   - **Nenakonfigurováno** (*výchozí*) – služba Řízení front paketů se vrátí zpátky do výchozího nastavení klienta, což je zakázané.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Příchozí fronta**
   - **Odchozí fronta**
   - **Zařadit do fronty**
@@ -174,7 +174,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
 #### <a name="windows-firewall-rule"></a>Pravidlo brány Windows Firewall
 
-- **Název**  
+- **Name**  
   Zadejte popisný název pravidla. Tento název se zobrazí v seznamu pravidel, který vám pomůže ho identifikovat.
 
 - **Popis**  
@@ -192,28 +192,28 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
 - **Typ sítě**  
   Zadejte typ sítě, ke kterému pravidlo patří. Můžete vybrat jednu nebo více z následujících možností. Pokud nevyberete možnost, bude pravidlo platit pro všechny typy sítí.
-  - **Domain**
-  - **Hlášen**
-  - **Republik**
+  - **Doména**
+  - **Soukromá**
+  - **Veřejná**
   - **Není nakonfigurováno**
 
 - **Název rodiny balíčků**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Názvy rodin balíčků můžete načíst spuštěním příkazu Get-AppxPackage z PowerShellu.
 
 - **Cesta k souboru**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
-  Pokud chcete zadat cestu k souboru aplikace, zadejte umístění aplikací v klientském zařízení. Například: `C:\Windows\System\Notepad.exe` nebo`%WINDIR%\Notepad.exe`
+  Pokud chcete zadat cestu k souboru aplikace, zadejte umístění aplikací v klientském zařízení. Například: `C:\Windows\System\Notepad.exe` nebo `%WINDIR%\Notepad.exe`
 
 - **Název služby**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Pokud služba, ne aplikace, odesílá nebo přijímá provoz, používejte krátký název služby Windows. Krátké názvy služby se načítají spuštěním `Get-Service` příkazu z PowerShellu.
 
-- **Protocol (Protokol)**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+- **Protokol**  
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Zadejte protokol pro toto pravidlo portu.
   - Protokoly přenosové vrstvy, jako jsou *TCP (6)* a *UDP (17)* , umožňují zadat porty nebo rozsahy portů.
@@ -228,7 +228,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   - **Není nakonfigurováno**
 
 - **Autorizovaní uživatelé**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Zadejte seznam autorizovaných místních uživatelů pro toto pravidlo. Seznam autorizovaných uživatelů nelze zadat, je-li *název služby* v této zásadě nastaven jako služba systému Windows. Pokud není zadán žádný autorizovaný uživatel, výchozí hodnota je *Všichni uživatelé*.
 
@@ -237,7 +237,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   - **Ano** – podporuje jakoukoli místní adresu a nekonfigurujte rozsah adres.
 
 - **Rozsahy místních adres**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
   Přidejte jednu nebo více adres jako čárkami oddělený seznam místních adres, na které se vztahuje pravidlo. Platné položky (tokeny) obsahují následující možnosti:
   - **Hvězdička** – hvězdička ( \* ) označuje libovolnou místní adresu. Pokud je k dispozici, hvězdička musí být jediným tokenem, který je součástí.
@@ -253,7 +253,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   - **Ano** – podporuje všechny vzdálené adresy a nekonfigurujte rozsah adres.
 
 - **Vzdálené rozsahy adres**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
   Přidejte jednu nebo více adres jako čárkami oddělený seznam vzdálených adres, na které se vztahuje pravidlo. Platné položky (tokeny) zahrnují následující a bez rozlišení velkých a malých písmen:
   - **Hvězdička** – hvězdička ( \* ) označuje jakoukoli vzdálenou adresu. Pokud je k dispozici, hvězdička musí být jediným tokenem, který je součástí.

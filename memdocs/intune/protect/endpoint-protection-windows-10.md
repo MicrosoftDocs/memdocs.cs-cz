@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252618"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915071"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
 
@@ -34,7 +34,7 @@ Pokud chcete nakonfigurovat antivirovou ochranu v programu Microsoft Defender, p
 
 [Vytvoření profilu konfigurace zařízení Endpoint Protection](endpoint-protection-configure.md).  
 
-Další informace o poskytovatelích konfiguračních služeb (CSP) najdete v tématu [Reference k poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
+Další informace o poskytovatelích konfiguračních služeb (CSP) najdete v tématu [Reference k poskytovateli služby konfigurace](/windows/client-management/mdm/configuration-service-provider-reference).  
 
 ## <a name="microsoft-defender-application-guard"></a>Ochrana Application Guard v programu Microsoft Defender  
 
@@ -44,7 +44,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 
 - **Ochrana Application Guard**  
   **Výchozí**: Nenakonfigurováno  
-   Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Povoleno pro Edge** – zapne tuto funkci, která otevírá nedůvěryhodné weby v kontejneru procházení virtualizovaného na Hyper-V.  
   - **Nenakonfigurováno** – na zařízení může být otevřena žádná lokalita (důvěryhodná a nedůvěryhodná).  
@@ -63,7 +63,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 - **Obsah schránky**  
   Toto nastavení je k dispozici pouze v případě, že je *chování schránky* nastaveno na jedno z nastavení *povoleno* .  
   **Výchozí**: Nenakonfigurováno  
-  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   Vyberte povolený obsah schránky.  
   - **Není nakonfigurováno**  
@@ -303,7 +303,7 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
 
 #### <a name="general-settings"></a>Obecná nastavení:  
 
-- **Název**  
+- **Name**  
   **Výchozí**: *žádný název*  
 
   Zadejte popisný název pravidla. Tento název se zobrazí v seznamu pravidel, který vám pomůže ho identifikovat.  
@@ -315,19 +315,19 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
 
 - **Směr**   
   **Výchozí**: Nenakonfigurováno  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   Určete, jestli se toto pravidlo vztahuje na **příchozí**nebo **odchozí** provoz. Pokud je nastavená jako **nenakonfigurovaná**, pravidlo se automaticky použije pro odchozí přenosy.  
 
 - **Akce**  
   **Výchozí**: Nenakonfigurováno  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*za akci](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action)a [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*za akci](/windows/client-management/mdm/firewall-csp#action)a [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   Vyberte z **povolených** nebo **blokovaných**. Pokud je nastavená jako **nenakonfigurovaná**, pravidlo povolí provoz.  
 
 - **Typ sítě**  
   **Výchozí**: vybraná hodnota 0  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   Vyberte až tři typy sítí, do kterých toto pravidlo patří. Mezi možnosti patří **doména**, **privátní**a **Veřejná**.  Pokud nejsou vybrané žádné typy sítí, pravidlo se použije na všechny tři typy sítě.  
 
@@ -338,13 +338,13 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
 
   Řízení připojení aplikace nebo programu. Vyberte jednu z následujících možností a dokončete další konfiguraci:  
   - **Název rodiny balíčků** – zadejte název rodiny balíčků. Pokud chcete najít název řady balíčků, použijte příkaz PowerShellu **Get-AppxPackage**.   
-    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **Cesta k souboru** – je nutné zadat cestu k souboru aplikace v klientském zařízení, což může být absolutní cesta nebo relativní cesta. Například: C:\Windows\System\Notepad.exe nebo% WINDIR% \Notepad.exe.  
-    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Služba systému Windows** – zadejte krátký název služby systému Windows, pokud se jedná o službu, nikoli o aplikaci, která odesílá nebo přijímá provoz. Chcete-li najít krátký název služby, použijte příkaz prostředí PowerShell **Get-Service**.  
-    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **Vše**– *k dispozici není žádná další konfigurace*.  
 
@@ -354,7 +354,7 @@ Zadejte místní a vzdálené adresy, na které se toto pravidlo vztahuje.
 
 - **Místní adresy**    
   **Výchozí**: Libovolná adresa  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   Vyberte **libovolnou adresu** nebo **zadanou adresu**.  
 
@@ -367,7 +367,7 @@ Zadejte místní a vzdálené adresy, na které se toto pravidlo vztahuje.
 
 - **Vzdálené adresy**  
   **Výchozí**: Libovolná adresa  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   Vyberte **libovolnou adresu** nebo **zadanou adresu**.  
 
@@ -392,21 +392,21 @@ Zadejte místní a vzdálené porty, na které se toto pravidlo vztahuje.
 
 - **Protokol**  
   **Výchozí**: Any  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   Vyberte některou z následujících možností a dokončete všechny požadované konfigurace:  
   - **Vše** – k dispozici není žádná další konfigurace.  
   - **TCP** – konfigurace místních a vzdálených portů. Obě možnosti podporují všechny porty nebo zadané porty. Zadejte zadané porty pomocí čárkami odděleného seznamu.  
-    - **Místní porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Vzdálené porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Místní porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Vzdálené porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **UDP** – konfigurace místních a vzdálených portů. Obě možnosti podporují všechny porty nebo zadané porty. Zadejte zadané porty pomocí čárkami odděleného seznamu.  
-    - **Místní porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Vzdálené porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Místní porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Vzdálené porty** – zprostředkovatel brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Vlastní** – zadejte číslo vlastního **protokolu** od 0 do 255.  
 
 #### <a name="advanced-configuration"></a>Pokročilá konfigurace  
 - **Typy rozhraní**  
   **Výchozí**: vybraná hodnota 0  
-  CSP brány firewall: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   Vyberte z následujících možností:  
   - **Vzdálený přístup**  
@@ -483,7 +483,7 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
   - **Povolit Standard uživatelům povolit šifrování během připojení ke službě Azure AD**  
     *Toto nastavení platí jenom pro zařízení s Azure Active Directory připojená (Azure ADJ) a závisí na předchozím nastavení `Warning for other disk encryption` .*  
     **Výchozí**: Nenakonfigurováno  
-    CSP nástroje BitLocker: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    CSP nástroje BitLocker: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **Povolit** – standardní uživatelé (bez správců) můžou povolit šifrování BitLockeru, když se přihlásí.  
      - **Nenakonfigurovaní** jenom správci můžou na zařízení povolit šifrování BitLockeru.  
@@ -656,7 +656,7 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
 
   - **Otočení hesla pro obnovení na základě klienta**  
     **Výchozí**: pro zařízení připojená k Azure AD je zapnuté střídání klíčů.  
-    CSP nástroje BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    CSP nástroje BitLocker: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
@@ -780,7 +780,7 @@ Tato nastavení platí konkrétně pro vyměnitelné datové jednotky.
  
 ## <a name="microsoft-defender-exploit-guard"></a>Ochrana před zneužitím programu Microsoft Defender  
 
-Pomocí [ochrany před zneužitím](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) můžete spravovat a snižovat plochu útoků aplikací používaných vašimi zaměstnanci.  
+Pomocí [ochrany před zneužitím](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) můžete spravovat a snižovat plochu útoků aplikací používaných vašimi zaměstnanci.  
 
 ### <a name="attack-surface-reduction"></a>Omezení možností útoku  
 
@@ -790,7 +790,7 @@ Pravidla pro omezení možností útoku zabraňují malwaru chování často pou
 
 - **Flag credential stealing from the Windows local security authority subsystem (Označit příznakem použití jiných přihlašovacích údajů ze subsystému Windows Local Security Authority)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Pravidlo: [blokovat odcizení přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Používejte ochranu před akcemi a aplikacemi, které obvykle využívá malware s cílem zneužití a nakažení počítačů.  
 
@@ -800,7 +800,7 @@ Pravidla pro omezení možností útoku zabraňují malwaru chování často pou
 
 - **Vytváření procesů z aplikace Adobe Reader (beta verze)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [zablokuje Adobe Reader z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes) .  
+  Pravidlo: [zablokuje Adobe Reader z vytváření podřízených procesů](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes) .  
 
   - **Není nakonfigurováno**  
   - **Enable** – zablokuje podřízené procesy vytvořené z aplikace Adobe Reader.  
@@ -812,7 +812,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
 
 - **Injektáž aplikací Office do jiných procesů (bez výjimek)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat aplikacím Office vkládání kódu do jiných procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Pravidlo: [blokovat aplikacím Office vkládání kódu do jiných procesů](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje aplikacím Office vkládání do jiných procesů.  
@@ -820,7 +820,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
 
 - **Aplikace a makra Office vytvářející spustitelný obsah**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat aplikacím Office vytváření spustitelného obsahu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Pravidlo: [blokovat aplikacím Office vytváření spustitelného obsahu](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje aplikacím Office a makrům vytváření spustitelného obsahu.  
@@ -828,7 +828,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
 
 - **Aplikace Office spouštějící podřízené procesy**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat všechny aplikace Office z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Pravidlo: [blokovat všechny aplikace Office z vytváření podřízených procesů](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje aplikacím Office spouštění podřízených procesů.  
@@ -836,7 +836,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   
 - **Importy Win32 z kódu maker v Office**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokování volání Win32 API v makrech Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Pravidlo: [blokování volání Win32 API v makrech Office](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje importy Win32 z kódu makra v Office.  
@@ -844,7 +844,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   
 - **Vytváření procesů z komunikačních produktů Office**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [Blokovat aplikaci Office Communications z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  Pravidlo: [Blokovat aplikaci Office Communications z vytváření podřízených procesů](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Není nakonfigurováno**  
   - **Enable** – zablokuje vytváření podřízeného procesu z aplikací Office Communications.  
@@ -856,7 +856,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
 
 - **Obfuskovaný kód js, vbs, ps nebo makra**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [zablokuje spuštění potenciálně zablokovaných skriptů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts) .    
+  Pravidlo: [zablokuje spuštění potenciálně zablokovaných skriptů](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts) .    
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje všechny zakódovaná kód JS, VBS, PS nebo makra.  
@@ -864,7 +864,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
 
 - **Skripty js a vbs spouštějící datovou část staženou z internetu (bez výjimek)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [zablokovat jazyk JavaScript nebo VBScript pro spuštění staženého spustitelného obsahu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Pravidlo: [zablokovat jazyk JavaScript nebo VBScript pro spuštění staženého spustitelného obsahu](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Není nakonfigurováno**  
   - **Blok** -Block js/vbs ze spouštění datové části stažené z Internetu  
@@ -872,7 +872,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
 
 - **Process creation from PSExec and WMI commands (Vytvoření procesů z příkazů PSExec a WMI)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokování vytváření procesů, které pocházejí z příkazů PsExec a WMI](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  Pravidlo: [blokování vytváření procesů, které pocházejí z příkazů PsExec a WMI](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Není nakonfigurováno**  
   - **Blokové** vytváření procesů, které pocházejí z příkazů PsExec a WMI.  
@@ -881,7 +881,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
 
 - **Untrusted and unsigned processes that run from USB (Nedůvěryhodné a nepodepsané procesy spouštěné z USB)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokuje nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb) .    
+  Pravidlo: [blokuje nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb) .    
 
   - **Není nakonfigurováno**  
   - **Blokuje** nedůvěryhodné a nepodepsané procesy, které se SPOUŠTĚJÍ z USB.  
@@ -889,7 +889,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   
 - **Spustitelné soubory, které nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných souborů**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [zablokovat spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Pravidlo: [zablokovat spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Není nakonfigurováno**  
   - **Blok** – zablokuje spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných souborů.  
@@ -901,7 +901,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 
 - **Spuštění spustitelného obsahu (exe, dll, ps, js, vbs atd.) doručeného v e-mailu (webová pošta/poštovní klient) (bez výjimek)**  
   **Výchozí**: Nenakonfigurováno  
-  Pravidlo: [blokovat spustitelný obsah z e-mailového klienta a webové pošty](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  Pravidlo: [blokovat spustitelný obsah z e-mailového klienta a webové pošty](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Není nakonfigurováno**  
   - **Blok** -blokovat spuštění spustitelného obsahu (exe, DLL, PS, js, VBS atd.) vyřazeného z e-mailu (webová pošta/pošta – klient).  
@@ -911,7 +911,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 
 - **Advanced ransomware protection (Rozšířená ochrana před ransonwarem)**  
   Výchozí: Nenakonfigurováno  
-  Pravidlo: [použití rozšířené ochrany proti ransomwarem](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  Pravidlo: [použití rozšířené ochrany proti ransomwarem](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Není nakonfigurováno**  
   - **Povolit** – používejte agresivní ransomwarem ochranu.  
@@ -940,7 +940,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 
 ### <a name="controlled-folder-access"></a>Řízený přístup ke složkám  
 
-[Chraňte cenná data](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) před škodlivými aplikacemi a hrozbami, jako je například ransomwarem.  
+[Chraňte cenná data](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) před škodlivými aplikacemi a hrozbami, jako je například ransomwarem.  
 
 - **Ochrana složky**  
   **Výchozí**: Nenakonfigurováno  
@@ -986,7 +986,7 @@ Blokuje odchozí připojení z libovolné aplikace na IP adresy nebo domény s n
 - **Nahrát XML**  
   **Výchozí**: *Nenakonfigurováno*  
 
-  Pokud chcete ochranu [zařízení před zneužitím chránit](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)pomocí ochrany před zneužitím, vytvořte soubor XML, který bude obsahovat nastavení pro omezení rizik systému a aplikací. Existují dvě metody vytvoření souboru XML:  
+  Pokud chcete ochranu [zařízení před zneužitím chránit](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)pomocí ochrany před zneužitím, vytvořte soubor XML, který bude obsahovat nastavení pro omezení rizik systému a aplikací. Existují dvě metody vytvoření souboru XML:  
 
   - *PowerShell* – použijte jednu nebo více rutin PowerShellu *Get-ProcessMitigation*, *set-ProcessMitigation*a *ConvertTo-powershellových processmitigationpolicy* . Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.  
 
@@ -1043,7 +1043,7 @@ Ochrana Credential Guard v programu Microsoft Defender chrání před útoky kr�
 
 ## <a name="microsoft-defender-security-center"></a>Security Center programu Microsoft Defender  
 
-Microsoft Defender Security Center v každé z jednotlivých funkcí funguje jako samostatná aplikace nebo proces. Zobrazuje oznámení prostřednictvím Centra akcí. Slouží jako kolekce nebo jedno místo pro zobrazení stavu a spuštění některé konfigurace pro každou z těchto funkcí. Další informace najdete v dokumentaci k [Microsoft Defenderu](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) .  
+Microsoft Defender Security Center v každé z jednotlivých funkcí funguje jako samostatná aplikace nebo proces. Zobrazuje oznámení prostřednictvím Centra akcí. Slouží jako kolekce nebo jedno místo pro zobrazení stavu a spuštění některé konfigurace pro každou z těchto funkcí. Další informace najdete v dokumentaci k [Microsoft Defenderu](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) .  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Aplikace a oznámení v programu Microsoft Defender Security Center  
 
@@ -1257,7 +1257,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 - **Uvolnit zařízení bez přihlášení**  
   **Výchozí**: Nenakonfigurováno  
-  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **Blok** – uživatel se musí přihlásit k zařízení a získat oprávnění k odložení zařízení.
   - **Nenakonfigurováno** – uživatelé můžou k bezpečnému odložení zařízení stisknout tlačítko fyzického vysunutí přenosného zařízení.
@@ -1321,7 +1321,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 - **Informace o uživateli na zamykací obrazovce**  
   **Výchozí**: Nenakonfigurováno  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   Nakonfigurujte informace o uživateli, které se zobrazí, když je relace uzamčena. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.  
 
@@ -1648,4 +1648,4 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](../configuration/device-profile-assign.md)a [sledujte jeho stav](../configuration/device-profile-monitor.md).  
 
-Nakonfigurujte nastavení ochrany koncových bodů na zařízeních [MacOS](endpoint-protection-macos.md) .  
+Nakonfigurujte nastavení ochrany koncových bodů na zařízeních [MacOS](endpoint-protection-macos.md) .

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f7f4bf735ee5145bdad269a0ea6a6016d0ad97e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c28bda5aa1733bb7dfe3062d24fac27f103ebb48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985957"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915122"
 ---
 # <a name="learn-about-conditional-access-and-intune"></a>Další informace o podmíněném přístupu a Intune
 
@@ -33,7 +33,7 @@ Enterprise Mobility + Security (EMS) není samostatný produkt. Jedná se o ře�
 Můžete definovat podmínky, které omezují přístup k podnikovým datům podle polohy, zařízení, stavu uživatele a „choulostivosti“ aplikace.
 
 > [!NOTE]
-> Podmíněný přístup také rozšiřuje své možnosti na [služby Office 365](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
+> Podmíněný přístup také rozšiřuje své možnosti na [služby Office 365](/office365/enterprise/office-365-client-support-conditional-access).
 
 ![Diagram podmíněného přístupu](./media/conditional-access/ca-diagram-1.png)
 

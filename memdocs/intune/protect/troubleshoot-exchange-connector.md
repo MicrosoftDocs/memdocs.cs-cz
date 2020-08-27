@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c19c777a96842f405fa1d68477fa4c7e937dee
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896038"
+ms.locfileid: "88914748"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Řešení potíží s Intune Exchange Connectorem
 
@@ -31,7 +31,7 @@ Tento článek popisuje, jak řešit problémy související s Intune Exchange C
 
 > [!IMPORTANT]
 >
-> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA) a možnost přidat konektor Exchange Connector do Intune se odebere.
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA) a možnost přidat konektor Exchange Connector do Intune se odebere.
 >
 > Zákazníci, kteří dřív nakonfigurovali a používali Exchange Connector, budou mít i nadále podporu konektoru.
 
@@ -66,7 +66,7 @@ Zkontrolujte [požadavky na místní Exchange Connector](exchange-connector-inst
 
 - Počítač, který je hostitelem Intune Exchange Connectoru a server Exchange Client Access (CAS), by měl být připojený k doméně a ve stejné síti LAN. Ujistěte se, že se pro účet, který používá Intune Exchange Connector, přidají požadovaná oprávnění.
 
-- Účet oznámení slouží k načtení nastavení *Konfigurace* . Další informace o Autodisover v systému Exchange najdete v tématu [Služba automatické konfigurace v systému Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- Účet oznámení slouží k načtení nastavení *Konfigurace* . Další informace o Autodisover v systému Exchange najdete v tématu [Služba automatické konfigurace v systému Exchange Server](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
 - Intune Exchange Connector pošle požadavek na adresu URL služby EWS pomocí přihlašovacích údajů účtu oznámení k odeslání e-mailových zpráv s oznámením s odkazem *Začínáme* (k registraci v Intune). Použití odkazu *Začínáme* k registraci je požadavkem na zařízení s Androidem, která nejsou Knox. Jinak budou tato zařízení blokovaná podmíněným přístupem.
 
@@ -86,4 +86,4 @@ Následující články vám pomůžou vyřešit běžné problémy a konkrétn�
 Vyhledejte pomoc od podpory nebo komunity Intune:
 
 - V tématu [získání podpory](../fundamentals/get-support.md) pro používání konzoly Intune můžete pomoct s řešením problému nebo otevřít případ podpory s Microsoftem. 
-- Vystavte svůj problém ve [fórech Microsoft Intune](https://docs.microsoft.com/answers/products/mem).  
+- Vystavte svůj problém ve [fórech Microsoft Intune](/answers/products/mem).  

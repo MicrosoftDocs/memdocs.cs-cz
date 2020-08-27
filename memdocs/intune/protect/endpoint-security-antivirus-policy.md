@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: db1ad3250d04f79abd000a23f9f2064862b1dbd7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820288"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915088"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Zásady antivirové ochrany pro zabezpečení koncového bodu v Intune
 
@@ -39,7 +39,7 @@ Zásady antivirové ochrany obsahují stejná nastavení, která se nacházejí 
 
 - **macOS**
   - Libovolná podporovaná verze macOS
-  - Aby mohla Intune spravovat nastavení antivirové ochrany na zařízení, musí být na tomto zařízení nainstalovaná ochrana ATP programu Microsoft Defender. Si. [Microsoft Defender ATP pro MacOS](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (v dokumentaci ke službě Microsoft Defender ATP)
+  - Aby mohla Intune spravovat nastavení antivirové ochrany na zařízení, musí být na tomto zařízení nainstalovaná ochrana ATP programu Microsoft Defender. Si. [Microsoft Defender ATP pro MacOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (v dokumentaci ke službě Microsoft Defender ATP)
 
 - **Windows 10 a novější**
   - Nevyžadují se žádné další požadavky.
@@ -65,7 +65,7 @@ Pro zařízení, která spravujete pomocí Intune, jsou podporovány následují
 
   - Profil: **Antivirus** – Správa [nastavení zásad antivirové ochrany](../protect/antivirus-microsoft-defender-settings-macos.md) pro MacOS.
 
-    Pokud používáte [Microsoft Defender ATP pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), můžete nakonfigurovat a nasadit nastavení antivirového programu do spravovaných zařízení MacOS prostřednictvím Intune namísto konfigurace těchto nastavení pomocí `.plist` souborů.
+    Pokud používáte [Microsoft Defender ATP pro Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), můžete nakonfigurovat a nasadit nastavení antivirového programu do spravovaných zařízení MacOS prostřednictvím Intune namísto konfigurace těchto nastavení pomocí `.plist` souborů.
 
 **Windows 10**:
 
@@ -117,9 +117,9 @@ Sloučení zásad podporuje následující nastavení:
 
 [Zásady antivirové ochrany v programu Microsoft Defender](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Procesy Defenderu k vyloučení** – CSP: [Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase** – CSP: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Soubory a složky Defenderu k vyloučení** – CSP: [Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Procesy Defenderu k vyloučení** – CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase** – CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Soubory a složky Defenderu k vyloučení** – CSP: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>Sestavy zásad antivirové ochrany
 
@@ -127,7 +127,7 @@ V sestavách zásad antivirové ochrany se zobrazí podrobnosti o stavu vašich 
 
 Pokud si chcete zobrazit sestavy, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), navštivte Endpoint Security a vyberte **antivirová ochrana**. Výběrem antivirového programu otevřete stránku Shrnutí. Další zobrazení sestav a stavů jsou k dispozici jako další stránky.
 
-### <a name="summary"></a>Souhrn
+### <a name="summary"></a>Shrnutí
 
 Na stránce **Souhrn** můžete [vytvořit nové zásady](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) a zobrazit seznam dříve vytvořených zásad. Seznam obsahuje podrobné informace o profilu, který zásada zahrnuje (typ zásady), a informace o tom, jestli je zásada přiřazená.
 

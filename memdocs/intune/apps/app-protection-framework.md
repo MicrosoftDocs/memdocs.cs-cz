@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410925"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913371"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad APP (App Protection Policies) 
 
@@ -49,7 +49,7 @@ Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací násled
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Kontrola kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Preview  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Provoz  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | Nelze použít  | 7 dní do několika týdnů, po verzi Preview  |
+| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele.
 
@@ -64,7 +64,7 @@ Tato nastavení zásad ochrany aplikací by měla být povolená pro příslušn
 Společnost Microsoft doporučuje kontrolu a kategorizaci scénářů používání a následně konfiguraci uživatelů pomocí doporučených pokynů pro danou úroveň. Stejně jako u všech platforem může být potřeba upravit nastavení v odpovídající úrovni v závislosti na potřebách organizace, protože ochrana dat musí vyhodnocovat hrozby, později rizika a dopad na použitelnost.  
 
 ### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
-Aby se zajistilo, že pouze aplikace, které podporují zásady ochrany aplikací Azure Active Directory, mají přístup k datům v pracovním nebo školním účtu, jsou vyžadovány zásady podmíněného přístupu Viz **scénář 1: aplikace Office 365 vyžadují schválené aplikace se zásadami ochrany aplikací** v tématu [vyžadování zásad ochrany aplikací pro cloudovou aplikaci přístup pomocí podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) pro kroky pro implementaci konkrétních zásad.
+Aby se zajistilo, že pouze aplikace, které podporují zásady ochrany aplikací Azure Active Directory, mají přístup k datům v pracovním nebo školním účtu, jsou vyžadovány zásady podmíněného přístupu Viz **scénář 1: aplikace Office 365 vyžadují schválené aplikace se zásadami ochrany aplikací** v tématu [vyžadování zásad ochrany aplikací pro cloudovou aplikaci přístup pomocí podmíněného přístupu](/azure/active-directory/conditional-access/app-protection-based-conditional-access) pro kroky pro implementaci konkrétních zásad.
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Aplikace, které se mají zahrnout do zásad ochrany aplikací  
 
@@ -161,7 +161,7 @@ Nastavení zásad vyžadované v úrovni 2 zahrnuje všechna nastavení zásad d
 
 | Nastavení | Popis nastavení |          Hodnota/akce  |          Platforma        | Poznámky |
 |--------------------|----------------------------|-----------------------------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze. sestavení <br> Příklad: 12.4.6* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
+| Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze. sestavení <br> Příklad: 12.4.6* /Block Access |          iOS/iPadOS        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi iOS tak, aby odpovídala podporovaným verzím iOS pro aplikace Microsoftu.   Aplikace Microsoftu podporují N-1 přístup, kde N je aktuální hlavní verze iOS. V případě hodnot menších verzí a verze sestavení doporučuje společnost Microsoft zajistit, aby byla zařízení v aktuálním stavu s příslušnými aktualizacemi zabezpečení. Seznamte se s   [aktualizacemi zabezpečení Apple](https://support.apple.com/en-us/HT201222) pro nejnovější doporučení společnosti Apple. |
 | Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze <br>   Příklad: 5,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
 | Podmínky zařízení  |       Minimální verze opravy  |          *Formát: rrrr-mm-dd <br> Příklad: 2020-01-01* /blokovat přístup  |          Android        | Zařízení s Androidem můžou přijímat měsíční opravy zabezpečení, ale tato verze závisí na výrobci OEM nebo nosiči. Organizace musí před implementací tohoto nastavení zajistit, aby nasazená zařízení s Androidem přijímala aktualizace zabezpečení. Nejnovější verze oprav najdete v [bulletinech zabezpečení pro Android](https://source.android.com/security/bulletin/) .  |
 
@@ -199,7 +199,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnuje všechna nastavení zásad d
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Podmínky zařízení  |       Minimální verze operačního systému  |          *Formát: Hlavní_verze. podverze <br>   Příklad: 8,0* /blokovat přístup   |          Android        | Microsoft doporučuje nakonfigurovat minimální hlavní verzi Androidu tak, aby odpovídala podporovaným verzím Androidu pro aplikace Microsoftu. Výrobci OEM a zařízení, kteří dodržují doporučené požadavky na Android Enterprise, musí podporovat aktuální dodací verzi a jeden upgrade na jedno písmeno.   V současné době Android doporučuje Android 8,0 a novější pro pracovníky znalostní báze.   Nejnovější doporučení pro Android najdete v tématu [Doporučené požadavky pro Android Enterprise](https://www.android.com/enterprise/recommended/requirements/) |
 |       Podmínky zařízení  |          Zařízení s jailbreakem nebo rootem  |        Data není k dispozici a vymazání  |          iOS/iPadOS, Android        |  |
-|       Podmínky zařízení  |          Maximální povolená úroveň hrozeb  |          Zabezpečený/blokovaný přístup  |          iOS/iPadOS, Android        | <p>U neregistrovaných zařízení je možné kontrolovat hrozby pomocí ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před [mobilními hrozbami u neregistrovaných zařízení](https://aka.ms/mtdmamdocs).      </p><p>     Pokud je zařízení zaregistrované, toto nastavení se dá přeskočit při nasazení ochrany před mobilními hrozbami pro zaregistrovaná zařízení. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).</p> |
+|       Podmínky zařízení  |          Maximální povolená úroveň hrozeb  |          Zabezpečený/blokovaný přístup  |          iOS/iPadOS, Android        | <p>U neregistrovaných zařízení je možné kontrolovat hrozby pomocí ochrany před mobilními hrozbami. Další informace najdete v tématu Ochrana před  [mobilními hrozbami u neregistrovaných zařízení](https://aka.ms/mtdmamdocs).      </p><p>     Pokud je zařízení zaregistrované, toto nastavení se dá přeskočit při nasazení ochrany před mobilními hrozbami pro zaregistrovaná zařízení. Další informace najdete v tématu Ochrana před [mobilními hrozbami u zaregistrovaných zařízení](../protect/mtd-device-compliance-policy-create.md).</p> |
 
 ## <a name="next-steps"></a>Další kroky
 

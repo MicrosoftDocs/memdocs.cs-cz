@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048153"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915003"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -32,7 +32,7 @@ Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravi
 * Upozorněte studenty a zaměstnance na změny aplikace a registrace.
 * Aktualizujte dokumentaci vaší organizace nebo postupy helpdesku.  
 
-Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done).  
+Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obrazovky a odkazy na Portál společnosti dokumentaci k nápovědě. Další informace o tom, jak používat aplikaci Portál společnosti, najdete v [dokumentaci k nápovědě pro uživatele portál společnosti](../user-help/use-managed-devices-to-get-work-done.md).  
 
 ## <a name="week-of-august-10-2020"></a>Týden od 10. srpna 2020
 
@@ -193,7 +193,7 @@ Portál společnosti na obrazovkách a krocích pro registraci zařízení s iOS
 * Otevřete aplikaci nastavení a nainstalujte na jejich zařízení profil správy.  
 * Vraťte se do aplikace Portál společnosti, abyste mohli dokončit registraci.  
 
-Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+Aktualizované kroky a obrazovky registrace najdete v tématu [registrace zařízení se systémem iOS v Intune](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace Portál společnosti pro iOS  <!-- 2536024 -->
 Změnila se Domovská stránka aplikace Portál společnosti pro zařízení s iOS. Tato změna způsobí, že se Domovská stránka bude lépe řídit vzorci uživatelského rozhraní iOS a zároveň poskytuje vylepšenou zjistitelnost pro aplikace a e-knihy.  
@@ -217,7 +217,7 @@ Správce služby Microsoft Intune může nahrát obrázek vlastní značky, kter
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro web Portál společnosti  <!--2000968 -->  
-Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
+Do Portál společnosti webu jsme přidali nové funkce založené na zpětné vazbě od zákazníků. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](../user-help/using-the-intune-company-portal-website.md), aby reflektovala tyto změny.   
 
 Mezi nové aktualizace patří:  
 
@@ -257,7 +257,7 @@ Ukázkový snímek obrazovky se zobrazením podrobností:
 
 ## <a name="week-of-april-23-2018"></a>Týden od 23. dubna 2018
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Aktualizované navigační zobrazení v aplikaci Portál společnosti pro Windows 10  <!-- 1195010 -->
-Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. 
+Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. 
 
 ![Snímek obrazovky řídicího panelu aplikace Portál společnosti s navigačním zobrazením Fluent Design](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 
@@ -656,7 +656,7 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > Níže uvedené obrázky mohou být verze Preview a uvedený produkt se může lišit od prezentovaných verzí.  
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 * [Blog Microsoft Intune](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v Intune](whats-new.md)

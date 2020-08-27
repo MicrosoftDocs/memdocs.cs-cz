@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866124"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915683"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -53,9 +53,9 @@ Tento článek:
 
 Další informace naleznete v tématu:
 
-- [Autorizace přístupu k webovým aplikacím s použitím OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Autorizace přístupu k webovým aplikacím s použitím OAuth 2.0 a Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Začínáme s ověřováním Azure AD](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Integrace aplikací se službou Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Integrace aplikací se službou Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Principy OAuth 2.0](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Registrace aplikací k používání rozhraní Microsoft Graph API
@@ -80,7 +80,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
     2. Hodnoty **Typ aplikace** a **Identifikátor URI pro přesměrování**
 
-        Tyto hodnoty se budou lišit podle vašich požadavků. Pokud používáte například Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), nastavte **Typ aplikace** na `Native` a **Identifikátor URI pro přesměrování** na `urn:ietf:wg:oauth:2.0:oob`.
+        Tyto hodnoty se budou lišit podle vašich požadavků. Pokud používáte například Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), nastavte **Typ aplikace** na `Native` a **Identifikátor URI pro přesměrování** na `urn:ietf:wg:oauth:2.0:oob`.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -88,7 +88,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Další informace najdete v tématu [Scénáře ověřování pro Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        Další informace najdete v tématu [Scénáře ověřování pro Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. V okně aplikace:
 
@@ -106,7 +106,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    Vyberte požadované role pro aplikaci tak, že zaškrtnete políčko nalevo od příslušného názvu.  Další informace o konkrétních oborech oprávnění pro Intune najdete v tématu [Obory oprávnění pro Intune](#intune-permission-scopes).  Další informace o dalších oborech oprávnění pro rozhraní Graph API najdete v tématu [Referenční informace o oprávněních pro Microsoft Graph](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    Vyberte požadované role pro aplikaci tak, že zaškrtnete políčko nalevo od příslušného názvu.  Další informace o konkrétních oborech oprávnění pro Intune najdete v tématu [Obory oprávnění pro Intune](#intune-permission-scopes).  Další informace o dalších oborech oprávnění pro rozhraní Graph API najdete v tématu [Referenční informace o oprávněních pro Microsoft Graph](/graph/permissions-reference).
 
     Nejlepších výsledků dosáhnete, když zvolíte co nejméně rolí potřebných k implementaci aplikace.
 
@@ -141,8 +141,8 @@ Azure AD a Microsoft Graph používají obory oprávnění k řízení přístup
 Obory oprávnění (označují se také jako _rozsahy OAuth_) řídí přístup ke konkrétním entitám Intune a jejich vlastnostem. Tento oddíl shrnuje obory oprávnění pro funkce rozhraní Intune API.
 
 Další informace najdete v tématech:
-- [Ověřování Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Obory oprávnění aplikací](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Ověřování Azure AD](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Obory oprávnění aplikací](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Když udělujete oprávnění pro Microsoft Graph, můžete určit následující obory pro řízení přístupu k funkcím Intune: Následující tabulka shrnuje obory oprávnění rozhraní Intune API.  V prvním sloupci je název funkce, který se zobrazuje na portálu Azure Portal, a ve druhém sloupci je název oboru oprávnění.
 

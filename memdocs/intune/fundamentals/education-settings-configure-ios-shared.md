@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5749ed0e31d9eec661acb2930e4d244b8f383cbc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076131"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913745"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
@@ -59,9 +59,9 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="find-out-more"></a>Další informace
 
-- [Další informace o úplné synchronizaci místních školních dat se službou Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Další informace o úplné synchronizaci místních školních dat se službou Azure AD](/azure/active-directory/connect/active-directory-aadconnect)
 - [Další informace o službě Microsoft SDS (School Data Sync](https://sds.microsoft.com/)
-- [Další informace o licencování ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Další informace o licencování ve službě Azure Active Directory](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Krok 2 – Vytvoření a přiřazení vzdělávacího profilu pro iOS/iPadOS v Intune
@@ -75,7 +75,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 6. V podokně **vytvořit profil** zadejte **název** a **Popis** vzdělávacího profilu pro iOS/iPadOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9. Vyberte **Nastavení** > **Konfigurovat**.
+9. Vyberte **Nastavení**  >  **Konfigurovat**.
 
 Dále potřebujete certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
 
@@ -183,9 +183,9 @@ Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento post
 4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily košíků**.
 5. V podokně profilů zvolte **Vytvořit profil**.
 6. V podokně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
-7. Zvolte **Vybrat třídy** > **Konfigurovat** a přidružte skupiny k profilu košíku.
+7. Zvolte **Vybrat třídy**  >  **Konfigurovat** a přidružte skupiny k profilu košíku.
 8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
-9. Zvolte **Vybrat košíky** > **Konfigurovat** a přidružte skupiny k profilu košíku.
+9. Zvolte **Vybrat košíky**  >  **Konfigurovat** a přidružte skupiny k profilu košíku.
 10. Zvolte skupiny, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**.
 11. V podokně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
 

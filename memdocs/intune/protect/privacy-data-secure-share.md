@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 90ff1f6380e16fa5c970557ca1409fd5e4a8d035
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079548"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914935"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
@@ -72,7 +72,7 @@ Informace o datech sdílených s některými třetími stranami najdete v násle
 
 Microsoft Intune nesdílí žádná data s Configuration Manager. Configuration Manager je místní produkt nasazený, spravovaný a provozovaný přímo zákazníkem. Diagnostická data a data o využití shromažďovaná Configuration Managerem se využívají pouze ke zlepšení instalace produktu, kvality a zabezpečení budoucích verzí.
 
-Další informace najdete v tématu [Diagnostika a data o využití pro Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Další informace najdete v tématu [Diagnostika a data o využití pro Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Další kroky

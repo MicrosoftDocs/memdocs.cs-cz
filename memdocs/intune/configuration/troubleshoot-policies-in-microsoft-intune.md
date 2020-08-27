@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 1daad2fb9f681c0372bfd0848e2162175c8dd771
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146503"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915666"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -122,9 +122,9 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 ## <a name="policy-troubleshooting-resources"></a>Zásady odstraňování potíží s prostředky
 
 - [Řešení potíží se zásadami iOS/iPadOS nebo Androidem, které se nevztahují na zařízení](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otevírá se další web Microsoftu)
-- [Řešení potíží s chybami zásad Windows 10 v Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otevření blogu)
+- [Řešení potíží s chybami zásad Windows 10 v Intune](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (otevření blogu)
 - [Řešení potíží s vlastním nastavením CSP pro Windows 10](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otevře další web Microsoftu)
-- Zásady správy mobilních zařízení s [Windows 10 zásady skupiny a Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otevře se další web Microsoftu)
+- Zásady správy mobilních zařízení s [Windows 10 zásady skupiny a Intune](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (otevře se další web Microsoftu)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Výstraha: Uložení pravidel přístupu do systému Exchange se nezdařilo
 

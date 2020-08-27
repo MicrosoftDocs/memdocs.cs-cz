@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d2b344395cec06839ff8c24db21aec62bc210ed0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989410"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915394"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 
@@ -70,8 +70,8 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 
     Další informace o těchto typech členství a vytváření dynamických výrazů naleznete v tématu:
 
-    - [Vytvoření základní skupiny a přidání členů pomocí Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Pravidla dynamického členství pro skupiny v Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Vytvoření základní skupiny a přidání členů pomocí Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Pravidla dynamického členství pro skupiny v Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > V tomto centru pro správu se při vytváření uživatelů nebo skupin nemusí zobrazovat značka **Azure Active Directory** . Ale to je to, co právě používáte.
@@ -106,4 +106,4 @@ Doporučení a pokyny ke konfiguračnímu profilu najdete v tématu [přiřazen�
 ## <a name="see-also"></a>Viz také
 
 - [Řízení přístupu na základě role (RBAC) s Microsoft Intune](role-based-access-control.md)
-- [Správa přístupu k prostředkům pomocí skupin Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Správa přístupu k prostředkům pomocí skupin Azure AD](/azure/active-directory/active-directory-manage-groups)

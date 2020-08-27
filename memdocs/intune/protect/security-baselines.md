@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914918"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -46,7 +46,7 @@ Směrné plány zabezpečení vám můžou při práci s Microsoft 365 mít komp
 - Pokud s Intune začínáte a nejste si jistí, kde začít, pak vám standardní hodnoty zabezpečení poskytnou výhodu. Můžete rychle vytvořit a nasadit zabezpečený profil s vědomím, že pomáháte chránit prostředky a data vaší organizace.
 - Pokud aktuálně používáte zásady skupiny, je migrace na Intune pro správu mnohem jednodušší u těchto směrných plánů. Tyto směrné plány jsou nativně integrované do Intune a zahrnují moderní prostředí pro správu.
 
-Hlavní [směry zabezpečení Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) jsou skvělým prostředkem pro další informace o této funkci. [Správa mobilních zařízení](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) je skvělým prostředkem o MDM a o tom, co můžete dělat na zařízeních s Windows.
+Hlavní [směry zabezpečení Windows](/windows/security/threat-protection/windows-security-baselines) jsou skvělým prostředkem pro další informace o této funkci. [Správa mobilních zařízení](/windows/client-management/mdm/) (MDM) je skvělým prostředkem o MDM a o tom, co můžete dělat na zařízeních s Windows.
 
 ## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení
 
@@ -62,7 +62,7 @@ Následující instance standardních hodnot zabezpečení jsou k dispozici pro 
   - [Směrné plány ATP v programu Microsoft Defender pro březen 2020 – verze 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+  > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
 - **Základní hodnoty Microsoft Edge**
   - [Směrný plán Microsoft Edge pro duben 2020 (hrana verze 80 a novější)](security-baseline-settings-edge.md?pivots-edge-april-2020)
@@ -253,9 +253,9 @@ Pokud máte profil přidružený ke staršímu směrnému plánu, bude tento sta
 
 ## <a name="co-managed-devices"></a>Společně spravovaná zařízení
 
-Standardní hodnoty zabezpečení na zařízeních spravovaných přes Intune se podobají spoluspravovaným zařízením s Configuration Manager. Společně spravovaná zařízení používají Configuration Manager a Microsoft Intune ke správě zařízení s Windows 10 současně. Umožňuje cloudu připojit stávající Configuration Manager investic k výhodám služby Intune. [Přehled spolusprávy](https://docs.microsoft.com/configmgr/comanage/overview) je skvělý prostředek, pokud používáte Configuration Manager a chcete mít i výhody cloudu.
+Standardní hodnoty zabezpečení na zařízeních spravovaných přes Intune se podobají spoluspravovaným zařízením s Configuration Manager. Společně spravovaná zařízení používají Configuration Manager a Microsoft Intune ke správě zařízení s Windows 10 současně. Umožňuje cloudu připojit stávající Configuration Manager investic k výhodám služby Intune. [Přehled spolusprávy](/configmgr/comanage/overview) je skvělý prostředek, pokud používáte Configuration Manager a chcete mít i výhody cloudu.
 
-Pokud používáte spoluspravovaná zařízení, musíte přepnout zatížení **Konfigurace zařízení** (jeho nastavení) do Intune. Další informace najdete v [úlohách konfigurace zařízení](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) .
+Pokud používáte spoluspravovaná zařízení, musíte přepnout zatížení **Konfigurace zařízení** (jeho nastavení) do Intune. Další informace najdete v [úlohách konfigurace zařízení](/configmgr/comanage/workloads#device-configuration) .
 
 ## <a name="q--a"></a>Otázky a odpovědi
 
@@ -273,11 +273,11 @@ Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je n
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Jaké certifikace má standardní hodnoty zabezpečení od Microsoftu? 
 
-- Společnost Microsoft nadále zveřejňuje standardní hodnoty zabezpečení pro zásady skupiny (GPO) a [sadu nástrojů dodržování předpisů zabezpečení](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), protože to trvá mnoho let. Tyto směrné plány používá mnoho organizací. Doporučení v těchto směrných plánech vycházejí ze závazku týmu zabezpečení společnosti Microsoft s podnikovými zákazníky a externími úřady, včetně ministerstva obrany, National Institute of Standards and Technology (NIST) a dalších. Naše doporučení a směrné plány sdílíme s těmito organizacemi. Tyto organizace mají také svá vlastní doporučení, která pečlivě zrcadlí doporučení Microsoftu. Protože správa mobilních zařízení (MDM) se stále rozrůstá do cloudu, společnost Microsoft vytvořila ekvivalentní doporučení MDM těchto směrných plánů zásad skupiny. Tyto další směrné plány jsou integrované pro Microsoft Intune a zahrnují zprávy o dodržování předpisů pro uživatele, skupiny a zařízení, která následují (nebo nesleduje) na základě směrného plánu.
+- Společnost Microsoft nadále zveřejňuje standardní hodnoty zabezpečení pro zásady skupiny (GPO) a [sadu nástrojů dodržování předpisů zabezpečení](/windows/security/threat-protection/security-compliance-toolkit-10), protože to trvá mnoho let. Tyto směrné plány používá mnoho organizací. Doporučení v těchto směrných plánech vycházejí ze závazku týmu zabezpečení společnosti Microsoft s podnikovými zákazníky a externími úřady, včetně ministerstva obrany, National Institute of Standards and Technology (NIST) a dalších. Naše doporučení a směrné plány sdílíme s těmito organizacemi. Tyto organizace mají také svá vlastní doporučení, která pečlivě zrcadlí doporučení Microsoftu. Protože správa mobilních zařízení (MDM) se stále rozrůstá do cloudu, společnost Microsoft vytvořila ekvivalentní doporučení MDM těchto směrných plánů zásad skupiny. Tyto další směrné plány jsou integrované pro Microsoft Intune a zahrnují zprávy o dodržování předpisů pro uživatele, skupiny a zařízení, která následují (nebo nesleduje) na základě směrného plánu.
 
 - Spousta zákazníků používá jako výchozí bod doporučení základní úrovně Intune a pak je přizpůsobuje tak, aby splňovala požadavky na IT a zabezpečení. **Směrný plán zabezpečení MDM** pro Windows 10 RS5 je první základ pro vydání. Tato standardní hodnota je sestavená jako obecná infrastruktura, která zákazníkům umožňuje nakonec importovat další standardní hodnoty zabezpečení založené na CIS, NIST a dalších standardech. V současné době je k dispozici pro Windows a nakonec bude zahrnovat iOS/iPadOS a Android.
 
-- Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
+- Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: abf2ad4a1b0857f1a839de49bb709fc4ff27f369
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531532"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913949"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
@@ -37,7 +37,7 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 >
 > Nemůžete použít integrované nasazení aplikace Microsoft Edge pro počítače připojení k síti na pracovišti. Integrované nasazení aplikací vyžaduje rozšíření pro správu Intune, které existuje jenom pro zařízení připojená k AAD. Verzi Microsoft Edge *77 a novější* můžete nasadit pomocí souboru *. msi* nahraného do **aplikací**. Přečtěte si téma [Přidání obchodní aplikace pro Windows do Microsoft Intune](lob-apps-windows.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Windows 10 verze 1709 nebo novější.
 - Všechny předinstalované verze Microsoft Edge *verze 77 a novější* pro všechny kanály v uživatelském kontextu budou přepsány s hranou nainstalovanými v kontextu systému.
@@ -119,9 +119,9 @@ Pokud potřebujete odinstalovat Microsoft Edge ze zařízení uživatele, použi
 > [!IMPORTANT]
 > Aby se aplikace úspěšně odinstalovala, nezapomeňte odebrat členy nebo přiřazení skupiny pro instalaci, než je přiřadíte k odinstalování. Pokud je skupina přiřazena k instalaci aplikace i k odinstalaci aplikace, aplikace zůstane a nebude odebrána.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 **Microsoft Edge verze 77 a novější pro Windows 10:**<br>
-Intune používá rozšíření pro správu Intune ke stažení a nasazení instalačního programu Microsoft Edge na přiřazená zařízení s Windows 10 a pak sdělí nastavení nasazení k instalačnímu programu Microsoft Edge, který stáhne a nainstaluje prohlížeč Microsoft Edge přímo ze sítě CDN. Odkažte na [požadavky pro rozšíření pro správu Intune](intune-management-extension.md#prerequisites)a osvědčené postupy, které jsou uvedené v části přístup ke službě Azure Update a CDN, aby bylo zajištěno, že konfigurace sítě umožní přístup k těmto umístěním pro zařízení s Windows 10. Chcete-li kromě toho dovolit přístup k instalačním souborům ze sítě CDN pro instalaci prohlížeče, je nutné povolený přístup k koncovým bodům web Windows Update. Další informace najdete v tématu [Správa koncových bodů připojení pro Windows 10, verze 1809 – web Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) a [koncových bodů sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md).
+Intune používá rozšíření pro správu Intune ke stažení a nasazení instalačního programu Microsoft Edge na přiřazená zařízení s Windows 10 a pak sdělí nastavení nasazení k instalačnímu programu Microsoft Edge, který stáhne a nainstaluje prohlížeč Microsoft Edge přímo ze sítě CDN. Odkažte na [požadavky pro rozšíření pro správu Intune](intune-management-extension.md#prerequisites)a osvědčené postupy, které jsou uvedené v části přístup ke službě Azure Update a CDN, aby bylo zajištěno, že konfigurace sítě umožní přístup k těmto umístěním pro zařízení s Windows 10. Chcete-li kromě toho dovolit přístup k instalačním souborům ze sítě CDN pro instalaci prohlížeče, je nutné povolený přístup k koncovým bodům web Windows Update. Další informace najdete v tématu [Správa koncových bodů připojení pro Windows 10, verze 1809 – web Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) a [koncových bodů sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Další kroky
 - [Přiřazení aplikací skupinám](apps-deploy.md)

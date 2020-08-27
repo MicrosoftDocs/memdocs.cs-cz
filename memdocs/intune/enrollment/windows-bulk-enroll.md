@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110728"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915462"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -78,7 +78,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
    - Zřizovací balíček umístěte do jednotky USB a vložte jednotku USB do zařízení, které chcete hromadně zaregistrovat, a použijte ho při počáteční instalaci.
    - Zřizovací balíček umístěte do síťové složky a nainstalujte ho po počáteční instalaci.
 
-   Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. Po použití balíčku se zařízení za minutu automaticky restartuje.
    ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-add.png)

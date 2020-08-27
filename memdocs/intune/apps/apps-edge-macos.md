@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d0b9af43c149912d4972e2f79f5e89840823ca94
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531584"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914034"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Přidání Microsoft Edge do zařízení macOS pomocí Microsoft Intune
 
@@ -35,7 +35,7 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 > [!NOTE]
 > Pro Windows 10 je k dispozici také Microsoft Edge *verze 77 a novější* .
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Před instalací Microsoft Edge musí být na zařízení macOS spuštěný macOS 10,12 nebo novější.
 
@@ -95,6 +95,6 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazov
 > V současné době Apple neposkytuje pro Intune způsob, jak odinstalovat Microsoft Edge na zařízeních macOS.
 
 ## <a name="next-steps"></a>Další kroky
-- Informace o tom, jak nakonfigurovat Microsoft Edge na zařízeních macOS, najdete v tématu [Konfigurace Microsoft Edge na zařízeních MacOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+- Informace o tom, jak nakonfigurovat Microsoft Edge na zařízeních macOS, najdete v tématu [Konfigurace Microsoft Edge na zařízeních MacOS](/deployedge/configure-microsoft-edge-on-mac).
 - Informace o zahrnutí a vyloučení přiřazení aplikací ze skupin uživatelů najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).
 - [Přiřazení aplikací skupinám](apps-deploy.md)

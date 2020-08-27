@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285279"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913099"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -112,9 +112,9 @@ Existují specifické požadavky, které je nutné dodržovat ke shromáždění
 
 Mezi typy aplikací, které jsou podporované na zařízeních ARM64, patří následující:
 - Webové aplikace, které nevyžadují otevření spravovaného prohlížeče. 
-- Microsoft Store pro obchodní aplikace nebo aplikace Windows Universal LOB ( `.appx` ) s kteroukoli z následujících kombinací `TargetDeviceFamily` `ProcessorArchitectures` prvků a:
-  - `TargetDeviceFamily`zahrnuje desktopové aplikace, univerzální aplikace a aplikace Windows8x. Aplikace Windows8x se vztahují jenom na online Microsoft Store pro obchodní aplikace.
-  - `ProcessorArchitecture`zahrnuje aplikace x86, aplikace ARM, aplikace ARM64 a neutrální aplikace.
+- Microsoft Store pro obchodní aplikace nebo aplikace Windows Universal LOB ( `.appx` ) s kteroukoli z následujících kombinací `TargetDeviceFamily`  `ProcessorArchitectures` prvků a:
+  - `TargetDeviceFamily` zahrnuje desktopové aplikace, univerzální aplikace a aplikace Windows8x. Aplikace Windows8x se vztahují jenom na online Microsoft Store pro obchodní aplikace.
+  - `ProcessorArchitecture` zahrnuje aplikace x86, aplikace ARM, aplikace ARM64 a neutrální aplikace.
 - Aplikace pro Windows Store
 - Mobilní aplikace pro Mobile MSI
 - Aplikace Win32 s pravidlem požadavku 32-bit.
@@ -125,7 +125,7 @@ Mezi typy aplikací, které jsou podporované na zařízeních ARM64, patří n�
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Řešení problémů s aplikacemi z Microsoft Storu
 
-Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Microsoft Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomůžou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Microsoft Storu, ať už k ní využíváte službu Intune, nebo jiný nástroj.
+Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Microsoft Store](/windows/win32/appxpkg/troubleshooting) vám pomůžou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Microsoft Storu, ať už k ní využíváte službu Intune, nebo jiný nástroj.
 
 ## <a name="app-troubleshooting-resources"></a>Prostředky pro řešení potíží s aplikací
 - [Nasazení aplikací Visio a Project jako součást nasazení aplikací Microsoft 365](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

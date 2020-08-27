@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 73201375c9416b3a30181062d310a1d9bd60756d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882205"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914612"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 
@@ -58,11 +58,11 @@ V závislosti na velikosti vaší společnosti můžete na Portálu společnosti
 ## <a name="share-apps"></a>Sdílení aplikací  
 Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. Následující kroky popisují, jak sdílet odkaz přímo z Portálu společnosti.
 
-1. Na Portálu společnosti klikněte pravým tlačítkem myši na některou aplikaci (nebo ji stiskněte a podržte), aby se otevřela její [kontextová nabídka](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+1. Na Portálu společnosti klikněte pravým tlačítkem myši na některou aplikaci (nebo ji stiskněte a podržte), aby se otevřela její [kontextová nabídka](//windows/uwp/design/controls-and-patterns/menus).  
 
     ![Aplikace Portál společnosti pro Windows 10, úvodní stránka se zobrazeným seznamem aplikací a zařízení Místní nabídka Sdílet, na kterou jde kliknout, je zobrazená v horní části ikony ukázkové aplikace. ](./media/1808_ShareContext_CP_Windows.png)  
 
-2. Vyberte **sdílet**.
+2. Vyberte **Sdílet**.
 3. Zvolte si z jednotlivých kontaktů nebo vyberte jiný program, jako je například OneNote, a můžete to poslat celé skupině. Pokud nevidíte aplikaci, kterou chcete použít, vyberte **Získat aplikace ve Storu**, aby se zobrazily další dostupné aplikace.  
 
     ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows 10, místní stránka sdílení. Na stránce je Další informace o: <název ukázkové aplikace> v aplikaci Portál společnosti. Zobrazuje jeden kontakt a 2 aplikace, z kterých jde zvolit, kam se má poslat odkaz, a odkaz Získat aplikace ve Storu. ](./media/1808_ShareApps_CP_Windows.png) 
@@ -97,4 +97,4 @@ Pokud se chcete dostat na tuto stránku, přejděte do navigační nabídky a vy
 
 Pomocí **Seřadit podle** můžete změnit uspořádání typu přiřazení aplikace, vydavatele, abecedně podle názvu nebo chronologicky podle data publikování. Pomocí **Filter by** můžete omezit aplikace, se kterými se zobrazuje stav instalace.  Pokud nejsou k dispozici žádné aplikace, zobrazí se zpráva, že nebyly nainstalovány žádné aplikace společnosti.  
 
-Potřebujete další informace? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete další informace? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

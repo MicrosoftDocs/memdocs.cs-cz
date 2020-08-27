@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: d652bea6e60417654ac06ebc1d0baa300f229a05
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137378"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915377"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune provozovaný společností 21Vianet v Číně  
 
@@ -44,11 +44,11 @@ Vzhledem k tomu, že čínské služby provozuje partner z Číny v Číně, exi
 - Správa Windows 10 je podporovaná pomocí moderního kanálu MDM.
 - Intune provozovaný společností 21Vianet nepodporuje místní Exchange Connector.
 - Funkce Windows autopilot a Business Store nejsou aktuálně k dispozici.
-- Protože Google Mobile Services není k dispozici v Číně, zákazníci v Intune, které provozuje společnost 21Vianet, nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří:
+- Protože Google Mobile Services není k dispozici v Číně, zákazníci v Intune, které provozuje společnost 21Vianet, nemůžou používat funkce, které vyžadují Google Mobile Services. Patří k nim:
   - Google Play chránit možnosti, jako je například ověření zařízení SafetyNet.
   - Správa aplikací z Obchod Google Play.
   - Možnosti Androidu Enterprise. Další informace najdete v této [dokumentaci k Google](https://support.google.com/work/android/answer/6270910?hl=en).
-- Aplikace Portál společnosti Intune pro Android používá ke komunikaci se službou Microsoft Intune Google Mobile Services. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- Aplikace Portál společnosti Intune pro Android používá ke komunikaci se službou Microsoft Intune Google Mobile Services. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
 - Pro sledování místních předpisů a poskytování lepších funkcí se může klient Intune a prostředí klienta Intune (Portál společnosti aplikace) v Číně lišit.
 - Oplocení není dostupné.
 - Dostupnost správy mobilních aplikací (MAM) je podmíněná pro tyto aplikace, které jsou k dispozici v Číně v Čínské lidové republice.
@@ -72,8 +72,8 @@ Pomocí Microsoft Azure, Intune, Office 365 a Power BI provozovaných společnos
 
 Role Správce klienta pro Intune, kterou provozuje 21Vianet, může vyžádat data pro předměty dat následujícími způsoby:
 
-- Pomocí centra pro správu Azure Active Directory může Správce klienta trvale odstranit subjekt údajů z Azure Active Directory a souvisejících služeb. Další informace najdete v tématu [požadavky na subjekt dat Azure – odstranění](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- Protokoly generované systémem pro služby Microsoftu provozované společností 21Vianet můžou exportovat Správci klientů pomocí exportu protokolů dat. Další informace najdete v tématu [požadavky na subjekt dat Azure – export](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Pomocí centra pro správu Azure Active Directory může Správce klienta trvale odstranit subjekt údajů z Azure Active Directory a souvisejících služeb. Další informace najdete v tématu [požadavky na subjekt dat Azure – odstranění](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- Protokoly generované systémem pro služby Microsoftu provozované společností 21Vianet můžou exportovat Správci klientů pomocí exportu protokolů dat. Další informace najdete v tématu [požadavky na subjekt dat Azure – export](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## <a name="next-steps"></a>Další kroky
 

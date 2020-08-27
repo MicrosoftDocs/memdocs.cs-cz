@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b0324755ef4706e1642357ae7a4e7dc90e719a7e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461704"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915190"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Nastavení registrace Intune pro plně spravovaná zařízení s Androidem Enterprise 
 
@@ -60,7 +60,7 @@ Pokud chcete nastavit správu plně spravovaného zařízení s Androidem Enterp
 2. V části **dovolit uživatelům registrovat zařízení uživatelů vlastněná společností**vyberte **Ano**.
 
 > [!NOTE]
-> Pokud máte definované zásady podmíněného přístupu Azure AD, které používají *označení vyžadovat, aby zařízení bylo označené jako ovládací prvek pro dodržování předpisů* nebo zásady blokování a platí **pro všechny cloudové aplikace**, **Android**a **prohlížeče**, musíte z této zásady vyloučit **Microsoft Intune** cloudovou aplikaci. Důvodem je to, že proces instalace pro Android používá k ověření uživatelů během registrace kartu Chrome. Další informace najdete v [dokumentaci k podmíněnému přístupu v Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Pokud máte definované zásady podmíněného přístupu Azure AD, které používají *označení vyžadovat, aby zařízení bylo označené jako ovládací prvek pro dodržování předpisů* nebo zásady blokování a platí **pro všechny cloudové aplikace**, **Android**a **prohlížeče**, musíte z této zásady vyloučit **Microsoft Intune** cloudovou aplikaci. Důvodem je to, že proces instalace pro Android používá k ověření uživatelů během registrace kartu Chrome. Další informace najdete v [dokumentaci k podmíněnému přístupu v Azure AD](/azure/active-directory/conditional-access/).
 
 Pokud je toto nastavení nastaveno na **Ano**, poskytne vám token pro zápis (náhodný řetězec) a kód QR pro vašeho tenanta Intune. Tento token jediného zápisu je platný pro všechny uživatele a nevyprší jeho platnost. V závislosti na operačním systému Android a verzi zařízení můžete k registraci zařízení použít buď token, nebo kód QR.
 
@@ -70,4 +70,3 @@ Nyní můžete [zaregistrovat plně spravovaná zařízení](android-dedicated-d
 ## <a name="next-steps"></a>Další kroky
 - [Přidat zásady konfigurace zařízení s plnou správou pro Android Enterprise](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Konfigurace zásad konfigurace aplikací pro plně spravovaná zařízení s Androidem Enterprise](../apps/app-configuration-policies-use-android.md)
-

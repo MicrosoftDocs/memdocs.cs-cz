@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 26d944911f475fbd719161d9b0f7077e0bc1e64f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332805"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913694"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
@@ -34,7 +34,7 @@ Intune je součástí [sady Microsoft Enterprise mobility + Securitye (EMS)](htt
 
 Intune vám umožňuje:
 
-- Vyberte možnost 100% Cloud s Intune nebo se [spoluspravuje](https://docs.microsoft.com/configmgr/comanage/overview) pomocí Configuration Manager a Intune.
+- Vyberte možnost 100% Cloud s Intune nebo se [spoluspravuje](/configmgr/comanage/overview) pomocí Configuration Manager a Intune.
 - Nastavte pravidla a nakonfigurujte nastavení na osobních zařízeních a na zařízeních vlastněných organizací pro přístup k datům a sítím.
 - Nasaďte a ověřte aplikace na zařízeních – místně a mobilní zařízení.
 - Zabezpečte informace společnosti tím, že řídíte způsob přístupu uživatelů k informacím a jejich sdílení.
@@ -108,7 +108,7 @@ Intune je k dispozici:
 - Součástí [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) a [Microsoft 365 státní správy](https://www.microsoft.com/microsoft-365/government)
 - Jako [správu mobilních zařízení v Office 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), která se skládá z některých omezených funkcí Intune
 
-Intune se používá v mnoha odvětvích, včetně [státní správy](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [vzdělávání](https://www.microsoft.com/en-us/education/intune), veřejného [terminálu nebo vyhrazeného zařízení](../configuration/kiosk-settings.md) pro výrobu a prodej a další.
+Intune se používá v mnoha odvětvích, včetně [státní správy](/enterprise-mobility-security/solutions/ems-govt-service-description), [vzdělávání](https://www.microsoft.com/en-us/education/intune), veřejného [terminálu nebo vyhrazeného zařízení](../configuration/kiosk-settings.md) pro výrobu a prodej a další.
 
 ## <a name="next-steps"></a>Další kroky
 

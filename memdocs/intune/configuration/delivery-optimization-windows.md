@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820438"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913762"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení Optimalizace doručení v Microsoft Intune
 
@@ -30,7 +30,7 @@ Tento článek popisuje, jak nakonfigurovat nastavení Optimalizace doručení v
 
 Seznam nastavení Optimalizace doručení, která Intune podporuje, najdete v tématu [nastavení Optimalizace doručení pro Intune](delivery-optimization-settings.md).  
 
-Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [aktualizace pro optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) v dokumentaci k Windows.  
+Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [aktualizace pro optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization) v dokumentaci k Windows.  
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 

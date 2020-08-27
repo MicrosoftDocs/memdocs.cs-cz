@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 1420bf03fe236decba0345e299eb5d5893f96c93
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663443"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915105"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune
 
@@ -51,7 +51,7 @@ Vezměte v úvahu událost, kdy někdo pošle Wordovou přílohu s vloženým š
 Ochrana ATP v programu Microsoft Defender může pomáhat vyřešit události zabezpečení, jako je tento scénář.
 
 - V našem příkladu ATP Microsoft Defender detekuje, že zařízení provedlo neobvyklý kód, narazilo na eskalaci s oprávněním procesu, vložil škodlivý kód a vystavilo podezřelé vzdálené prostředí.
-- Na základě těchto akcí ze zařízení klasifikuje ATP v programu Microsoft Defender [zařízení jako vysoce rizikové](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) a obsahuje podrobnou zprávu o podezřelé aktivitě na portálu Microsoft Defender Security Center.
+- Na základě těchto akcí ze zařízení klasifikuje ATP v programu Microsoft Defender [zařízení jako vysoce rizikové](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) a obsahuje podrobnou zprávu o podezřelé aktivitě na portálu Microsoft Defender Security Center.
 
 Integraci rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) můžete integrovat s Microsoft Intune jako řešení ochrany před mobilními hrozbami. Integrace vám může přispět k tomu, abyste zabránili narušení zabezpečení a omezili dopad narušení v rámci organizace.
 
@@ -65,7 +65,7 @@ Pokud chcete používat Microsoft Defender ATP s Intune, ujistěte se, že máte
 
 - Tenant s licencí pro Enterprise Mobility + Security E3 a Windows E5 (nebo Microsoft 365 Enterprise E5)
 - Prostředí Microsoft Intune s využitím zařízení s Windows 10 [spravovaných pomocí Intune](../enrollment/windows-enroll.md) nebo zařízení s Androidem, která jsou taky připojená k Azure AD
-- Prostředí [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , které vám umožní přístup k Security Center programu Microsoft Defender (portál ATP)
+- Prostředí [ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , které vám umožní přístup k Security Center programu Microsoft Defender (portál ATP)
 
 > [!NOTE]
 > Ochrana ATP v programu Microsoft Defender není podporována zásadami ochrany aplikací pro iOS/iPadOS a Android Intune.
@@ -81,5 +81,5 @@ Další informace najdete v dokumentaci k Intune:
 
 Další informace najdete v dokumentaci ke službě Microsoft Defender ATP:
 
-- [Podmíněný přístup Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Řídicí panel rizik pro ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Podmíněný přístup Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Řídicí panel rizik pro ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 70c0418f02bd94a957967c72045be210dad56c78
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252516"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914697"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -134,4 +134,4 @@ Windows Holografick pro firmy podporuje následující nastavení pro Windows He
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o Windows Hello pro firmy najdete v [příručce](https://technet.microsoft.com/library/mt589441.aspx) v dokumentaci k Windows 10.
+Další informace o Windows Hello pro firmy najdete v [příručce](/windows/security/identity-protection/hello-for-business/hello-identity-verification) v dokumentaci k Windows 10.

@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc226279ea72a804a0d6ac0fa63f0b9bb90fe7a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 17f039bede5b179b85abd66cc4c1f3b7aaefcb3a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531549"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914170"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Přidání ATP Microsoft Defenderu do zařízení macOS pomocí Microsoft Intune
 
 Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](apps-add.md#app-types-in-microsoft-intune) je program Microsoft Defender Advanced Threat Protection (ATP). Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat ATP Microsoft Defenderu na zařízení, která spravujete pomocí macOS. Tento typ aplikace usnadňuje přiřazení ATP programu Microsoft Defender k macOS zařízením bez nutnosti používat nástroj pro zabalení aplikace macOS. K zajištění bezpečnější a aktuálnosti aplikací je aplikace součástí Microsoft AutoUpdate (MAU).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Na zařízení macOS musí být spuštěný macOS 10,13 nebo novější.
 - Zařízení macOS musí mít minimálně 650 MB místa na disku.
 - Nasaďte rozšíření jádra do Intune. Další informace najdete v tématu [Přidání rozšíření jádra MacOS do Intune](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> Rozšíření jádra se dá automaticky schválit jenom v případě, že se nachází na zařízení před instalací aplikace Microsoft Defender ATP. Jinak se uživatelům zobrazí zpráva "rozšíření systému je blokované" na počítači Mac a musí toto rozšíření schválit tak, že přejde na **Předvolby zabezpečení** nebo na zabezpečení **Předvolby systému**  >  **& ochrany osobních údajů** a potom vyberte **Povolit**. Další informace najdete v tématu [řešení potíží s rozšířením jádra v programu Microsoft Defender ATP pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> Rozšíření jádra se dá automaticky schválit jenom v případě, že se nachází na zařízení před instalací aplikace Microsoft Defender ATP. Jinak se uživatelům zobrazí zpráva "rozšíření systému je blokované" na počítači Mac a musí toto rozšíření schválit tak, že přejde na **Předvolby zabezpečení** nebo na zabezpečení **Předvolby systému**  >  **& ochrany osobních údajů** a potom vyberte **Povolit**. Další informace najdete v tématu [řešení potíží s rozšířením jádra v programu Microsoft Defender ATP pro Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Přidání ATP Microsoft Defenderu do Intune
 Do Intune můžete přidat ATP programu Microsoft Defender pomocí následujících kroků:
@@ -80,4 +80,3 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazov
 - Další informace o použití zásad antivirové ochrany pro zabezpečení koncového bodu v Intune najdete v tématu [zásady antivirové ochrany pro službu Endpoint Security v Intune](../protect/endpoint-security-antivirus-policy.md) . 
 - Informace o zahrnutí a vyloučení přiřazení aplikací ze skupin uživatelů najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).
 - Informace o tom, jak přiřadit aplikace do skupin v Intune, najdete v článku [přiřazení aplikací do skupin](apps-deploy.md).
-

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: e700af4ef48f231f55fe515dadc2e852734d9ad3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865818"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915547"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -47,8 +47,8 @@ Můžete také zkontrolovat správné nastavení času a data na zařízení už
 
 Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat protokoly registrace a diagnostiky. Pokyny pro uživatele ke shromažďování protokolů najdete tady:
 
-- [Odeslání chyb registrace zařízení s Androidem správci IT](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [Odeslání chyb iOS/iPadOS správci IT](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Odeslání chyb registrace zařízení s Androidem správci IT](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [Odeslání chyb iOS/iPadOS správci IT](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Obecné problémy s registrací
@@ -126,7 +126,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 - mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com).
 
 
-[Kumulativní aktualizace pro službu AD FS 2.0](https://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+[Kumulativní aktualizace pro službu AD FS 2.0](https://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
@@ -215,7 +215,7 @@ Uživatel možná bude moct načíst chybějící certifikát podle pokynů v t�
 
 Uživatelům se může po tom, co zadali svoje podnikové přihlašovací údaje a byli přesměrováni na federované přihlašování, nadále zobrazovat chyba chybějícího certifikátu. V tom případě může tato chyba znamenat, že na vašem serveru Active Directory Federation Services (AD FS) chybí zprostředkující certifikát.
 
-Příčinou chyby certifikátu je, že zařízení s Androidem vyžadují zahrnutí zprostředkujících certifikátů do odpovědi [SSL Server hello](https://technet.microsoft.com/library/cc783349.aspx). Momentálně výchozí instalace serveru AD FS nebo proxy serveru WAP – AD FS odesílá v odpovědi SSL Server hello na zprávu SSL Client hello jenom certifikát SSL služby AD FS.
+Příčinou chyby certifikátu je, že zařízení s Androidem vyžadují zahrnutí zprostředkujících certifikátů do odpovědi [SSL Server hello](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)). Momentálně výchozí instalace serveru AD FS nebo proxy serveru WAP – AD FS odesílá v odpovědi SSL Server hello na zprávu SSL Client hello jenom certifikát SSL služby AD FS.
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
@@ -294,9 +294,9 @@ Registrace zařízení ADE s přidružením uživatele vyžaduje, aby bylo povol
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Další informace najdete v [dokumentaci k rutině Get-AdfsEndpoint](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+Další informace najdete v [dokumentaci k rutině Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
-Další informace najdete v tématu [Doporučené postupy zabezpečení služby AD FS](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). Získání pomoci při určování, jestli máte koncový bod WS-Trust 1.3 Username/Mixed ve svém zprostředkovateli identity federace povolený:
+Další informace najdete v tématu [Doporučené postupy zabezpečení služby AD FS](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). Získání pomoci při určování, jestli máte koncový bod WS-Trust 1.3 Username/Mixed ve svém zprostředkovateli identity federace povolený:
 - Pokud používáte službu ADFS, obraťte se na podporu Microsoftu.
 - Obraťte se na poskytovatele identity třetí strany.
 

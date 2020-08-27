@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ea7c06df8fec4b5961d9f89be156119fc90ff26
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820319"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915615"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -272,7 +272,7 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 | deviceTypeID |        Název       |                      Popis                      |
 |--------------|-------------------|-------------------------------------------------------|
 | -1           | Není k dispozici   | Tento typ zařízení není k dispozici.                     |
-| 0            | Desktop           | Zařízení se systémem Windows                              |
+| 0            | Plocha           | Zařízení se systémem Windows                              |
 | 1            | Windows           | Zařízení s Windows                                      |
 | 2            | WinMO6            | Zařízení se systémem Windows Mobile 6.0                           |
 | 3            | Nokia             | Zařízení Nokia                                        |
@@ -365,7 +365,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámý                         | Neznámou chybu.                                                                                                |
-| Ověřování                  | Ověření se nezdařilo.                                                                                        |
+| Authentication                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
@@ -595,7 +595,7 @@ Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastni
 | ownerTypeName | Představuje typ vlastníka zařízení: podniková zařízení jsou vlastněná podnikem.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Firemní osobní neznámý |
 
 > [!Note]  
-> Pro `ownerTypeName` Filtr v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Pro `ownerTypeName` Filtr v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>Zásady
 Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.

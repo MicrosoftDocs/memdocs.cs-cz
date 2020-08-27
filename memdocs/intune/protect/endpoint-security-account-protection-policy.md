@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431365"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915054"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Zásady ochrany účtů pro zabezpečení koncového bodu v Intune
 
@@ -30,7 +30,7 @@ Zásady zabezpečení koncového bodu služby Intune se používají pro ochranu
 - *Windows Hello pro firmy* nahrazuje hesla se silným dvojúrovňovém ověřováním na počítačích a mobilních zařízeních.
 - *Credential Guard* pomáhá chránit přihlašovací údaje a tajné klíče, které používáte s vašimi zařízeními.
 
-Další informace najdete v tématu [Správa identit a přístupu](https://docs.microsoft.com/windows/security/identity-protection/) v dokumentaci pro správu identit a přístupu Windows.
+Další informace najdete v tématu [Správa identit a přístupu](/windows/security/identity-protection/) v dokumentaci pro správu identit a přístupu Windows.
 
 Zásady zabezpečení koncového bodu pro ochranu účtu najdete v části *Správa* v uzlu **zabezpečení koncového** bodu v [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990623"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913320"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -50,7 +50,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
    Zobrazí se podrobnosti o aplikaci.
 
     > [!NOTE]
-    > Mezi přípony souborů pro aplikace pro Windows patří soubory **. msi**, **. appx**, **. appxbundle**, **. msix**a **. msixbundle**. Další informace o **. msix**najdete v tématu [dokumentace Msix](https://docs.microsoft.com/windows/msix/) a [distribuce aplikací msix](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > Mezi přípony souborů pro aplikace pro Windows patří soubory **. msi**, **. appx**, **. appxbundle**, **. msix**a **. msixbundle**. Další informace o **. msix**najdete v tématu [dokumentace Msix](/windows/msix/) a [distribuce aplikací msix](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. Až budete hotovi, vyberte **OK** v podokně **soubor balíčku aplikace** a přidejte aplikaci.
 
@@ -62,7 +62,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
     - **Vydavatel**: zadejte název vydavatele aplikace.
     - **Kontext instalace aplikace**: vyberte kontext instalace, který se má přidružit k této aplikaci. Pro aplikace v duálním režimu vyberte požadovaný kontext pro tuto aplikaci. Pro všechny ostatní aplikace je tato možnost předem vybraná na základě balíčku a nedá se změnit.
     - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář. Tato možnost platí jen pro mobilní aplikace .msi.
-    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít při spuštění souboru .msi.  Příkladem je **/q**. Nepoužívejte příkaz nebo argumenty příkazu msiexec, například **/i** nebo **/x**, jak se používají automaticky. Další informace najdete v tématu [Možnosti příkazového řádku](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Pokud. Soubor MSI potřebuje další možnosti příkazového řádku, které se považují za použití [správy aplikací Win32](app-management.md).
+    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít při spuštění souboru .msi.  Příkladem je **/q**. Nepoužívejte příkaz nebo argumenty příkazu msiexec, například **/i** nebo **/x**, jak se používají automaticky. Další informace najdete v tématu [Možnosti příkazového řádku](/windows/desktop/Msi/command-line-options). Pokud. Soubor MSI potřebuje další možnosti příkazového řádku, které se považují za použití [správy aplikací Win32](app-management.md).
     - **Kategorie**: vyberte jednu nebo více předdefinovaných kategorií aplikací nebo vyberte kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
@@ -99,7 +99,7 @@ Aplikace, kterou jste vytvořili, se nyní zobrazí v seznamu aplikací. V tomto
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Aby služba Intune úspěšně nasadila nový soubor APPX do zařízení, musíte zvýšit hodnotu `Version` řetězce v souboru appxmanifest. XML v balíčku appx.
+   > Aby služba Intune úspěšně nasadila nový soubor APPX do zařízení, musíte zvýšit hodnotu `Version` řetězce v souboru AppxManifest.xml v balíčku appx.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurace automaticky aktualizované mobilní aplikace MSI na ignorování procesu kontroly verzí
 

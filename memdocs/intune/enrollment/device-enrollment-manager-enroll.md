@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986756"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913133"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení v Intune pomocí účtu správce registrace zařízení
 
@@ -49,7 +49,7 @@ Pro uživatelské účty správce registrace zařízení a zařízení, která j
 
 K registraci zařízení pomocí účtů DEM můžete použít následující metody:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Hromadná registrace zařízení s Windows](windows-bulk-enroll.md)
 - DEM iniciované prostřednictvím Portál společnosti
 
@@ -77,4 +77,3 @@ Odebrání správce registrace zařízení neovlivní zaregistrovaná zařízen�
 
 1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení**  >  **Registrovat zařízení**  >  **Správci registrace zařízení**.
 2. V okně **Správci registrace zařízení** vyberte uživatele DEM a pak vyberte **Odstranit**.
-

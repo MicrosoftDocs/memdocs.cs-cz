@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455068"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913473"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
 - **Poslední synchronizace**: čas poslední synchronizace aplikace s Intune.
 
 >[!NOTE]
-> Sloupec **Poslední synchronizace** představuje stejnou hodnotu jak v sestavě pro stav uživatele v konzole, tak v [sestavě pro vyexportované. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities)zásady ochrany aplikací. Rozdíl je krátké zpoždění synchronizace mezi hodnotou ve dvou sestavách.
+> Sloupec **Poslední synchronizace** představuje stejnou hodnotu jak v sestavě pro stav uživatele v konzole, tak v [sestavě pro vyexportované. csv](/intune/app-protection-policies-monitor#export-app-protection-activities)zásady ochrany aplikací. Rozdíl je krátké zpoždění synchronizace mezi hodnotou ve dvou sestavách.
 >
 > Čas, na který se odkazuje v poslední synchronizaci, je čas, kdy se naposledy viděla instance aplikace Intune. Když uživatel spustí aplikaci, může u této doby spuštění informovat službu Intune App Protection, v závislosti na tom, kdy se naposledy vrátila. Podívejte [se na časy intervalu opakování při vrácení se změnami zásad ochrany aplikací](app-protection-policy-delivery.md). Pokud uživatel nepoužil tuto konkrétní aplikaci v intervalu Poslední vrácení se změnami (což je obvykle 30 minut z aktivního použití) a spustí aplikaci, pak:
 >

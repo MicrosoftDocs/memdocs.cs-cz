@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559534"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915581"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -104,16 +104,16 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
          - **CN = {{IMEINumber}}**: jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
          - **CN = {{OnPrem_Distinguished_Name}}**: sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
 
-           Pokud chcete použít proměnnou *{{OnPrem_Distinguished_Name}}* , proveďte synchronizaci atributu uživatele *onpremisesdistinguishedname* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do služby Azure AD.
+           Pokud chcete použít proměnnou *{{OnPrem_Distinguished_Name}}* , proveďte synchronizaci atributu uživatele *onpremisesdistinguishedname* pomocí [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) do služby Azure AD.
 
          - **CN = {{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
 
-            Pokud chcete použít proměnnou *{{onPremisesSamAccountName}}* , nezapomeňte synchronizovat atribut uživatele *onPremisesSamAccountName* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do Azure AD.
+            Pokud chcete použít proměnnou *{{onPremisesSamAccountName}}* , nezapomeňte synchronizovat atribut uživatele *onPremisesSamAccountName* pomocí [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) do Azure AD.
 
          Kombinací jedné nebo několika těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako třeba:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
+         Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) popisuje tuto funkci a její podporované řetězce.
          
          \* Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, například janedoe@contoso.com
 
@@ -313,7 +313,7 @@ Než budete pokračovat, zvažte následující:
 
 - Pokud chcete do zařízení po jeho registraci certifikát rychle publikovat, přiřaďte profil certifikátu ke skupině uživatelů (ne zařízení). Pokud ho přiřadíte ke skupině zařízení, budete je muset před obdržením zásad plně zaregistrovat.
 
-- Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na **Intune** nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
+- Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](/configmgr/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na **Intune** nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
 
 > [!NOTE]
 > - Když se na zařízeních s iOS/iPadOS přihlásí profil certifikátu SCEP nebo profil certifikátu PKCS k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení se systémem iOS/iPadOS má několik certifikátů dodaných žádostí o certifikát SCEP nebo PKCS. 

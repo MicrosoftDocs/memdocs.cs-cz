@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 544db0c11894967eca71a5b8c2e107e0fab47ef5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e151f45f8b65050496504ecdc95c0084b74e7c2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989002"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915156"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
 
@@ -71,7 +71,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **skupiny**  >  **všechny skupiny**  >  **Nová skupina**.
 2. V okně **Skupina** vyplňte požadovaná pole následujícím způsobem:
-    - **Typ skupiny**: zabezpečení
+    - **Typ skupiny**: Zabezpečení
     - **Název skupiny**: Zadejte výstižný název (například Zařízení závodu 1).
     - **Typ členství**: Dynamické zařízení
 3. Zvolte **Přidat dynamický dotaz**.
@@ -80,7 +80,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
     - **Přidat zařízení, kde**: Název registračního profilu
     - V prostředním poli vyberte **Equals (rovná**se).
     - Do posledního pole zadejte název dříve vytvořeného registračního profilu.
-    Další informace o pravidlech dynamického členství najdete v tématu [Pravidla dynamického členství pro skupiny v AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    Další informace o pravidlech dynamického členství najdete v tématu [Pravidla dynamického členství pro skupiny v AAD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Klikněte **na tlačítko Přidat dotaz**  >  **vytvořit**.
 
 ### <a name="replace-or-remove-tokens"></a>Nahrazení nebo odebrání tokenů

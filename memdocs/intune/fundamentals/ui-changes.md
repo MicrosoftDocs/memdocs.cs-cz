@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077916"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915224"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou se pokoušíte najít, ponechte na konci článku komentář, abychom ho mohli aktualizovat.
@@ -45,7 +45,7 @@ Nastavení Portálu společnosti|Správce > Portál společnosti|**Správa** > M
 
 
 ## <a name="where-do-i-manage-groups"></a>Kde můžu spravovat skupiny?
-Intune na Azure Portalu používá ke správě skupin službu [Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
+Intune na Azure Portalu používá ke správě skupin službu [Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal).
 
 ## <a name="where-did-enrollment-rules-go"></a>Kde najdu pravidla registrace?
 Na klasickém portálu jste mohli nastavit pravidla, která řídí registraci mobilních a dalších moderních zařízení s Windows a macOS do MDM.
@@ -73,7 +73,7 @@ Nové možnosti omezení se přidají jenom do portálu Azure Portal.
 ## <a name="where-did-my-conditional-access-policies-go"></a>Kde se zásady podmíněného přístupu přecházejí?
 Jakmile se tenant migruje do Azure Portal, budou zásady podmíněného přístupu vašeho tenanta i nadále vynutily. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud chcete zobrazit a změnit zásady podmíněného přístupu z Azure Portal, bude nutné odebrat staré zásady z portálu Classic. A potom je znovu vytvořit na webu Azure Portal. Další informace o migraci zásad podmíněného přístupu najdete v tématu [migrace klasických zásad na webu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
+Pokud chcete zobrazit a změnit zásady podmíněného přístupu z Azure Portal, bude nutné odebrat staré zásady z portálu Classic. A potom je znovu vytvořit na webu Azure Portal. Další informace o migraci zásad podmíněného přístupu najdete v tématu [migrace klasických zásad na webu Azure Portal](/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Kde jsou moje zásady dodržování předpisů?
 Po migraci tenanta na web Azure Portal zůstávají zásady dodržování předpisů tenanta nadále v platnosti. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
@@ -101,11 +101,11 @@ Na klasickém portálu můžete zařízení s iOSem registrovat prostřednictví
 
 Tam najdete sériová čísla pro registraci pomocí DEP Apple i Apple Configuratoru v jednom seznamu. Abychom omezili neshody při přiřazení profilů (profil DEP přiřazený sériovému číslu AC a naopak), rozdělili jsme sériová čísla na portálu Apple Portal do dvou seznamů:
 
-**Sériová čísla**
-![DEP obrázek sériových čísel DEP v Azure](./media/ui-changes/10-azure-dep-serials.png)
+**Sériová čísla DEP** 
+ ![ Obrázek sériových čísel Azure DEP](./media/ui-changes/10-azure-dep-serials.png)
 
-**Sériová čísla**
-![Apple Configuratoru obrázek sériových čísel Apple Configuratoru v Azure](./media/ui-changes/11-azure-ac-serials.png)
+**Sériová čísla** 
+ ![ Apple Configuratoru Obrázek sériových čísel Apple Configuratoru v Azure](./media/ui-changes/11-azure-ac-serials.png)
 
 ### <a name="by-imei-all-platforms"></a>Podle IMEI (všechny platformy)
 
@@ -128,8 +128,8 @@ Tento seznam ukazuje profily povolené pro použití s Programem registrace zař
 
 Abychom omezili možnost záměny obou typů profilů a potenciální nesprávná přiřazení (profil DEP přiřazený zařízením Configuratoru a naopak), oddělili jsme tvorbu a správu profilů programu registrace (podporují Program registrace zařízení Apple i Apple School Manager) a profilů Apple Configuratoru:
 
-**Profily DEP obrázek**
-![DEP Azure](./media/ui-changes/15-azure-dep-profiles.png)
+**Profily DEP** 
+ ![ Obrázek profilů Azure DEP](./media/ui-changes/15-azure-dep-profiles.png)
 
-**Profily Apple Configuratoru**
-obrázek profilů Apple Configuratoru![v Azure](./media/ui-changes/16-azure-ac-profiles.png)
+**Apple Configurator profiles** 
+ Profily ![ Apple Configuratoru Obrázek profilů Apple Configuratoru v Azure](./media/ui-changes/16-azure-ac-profiles.png)

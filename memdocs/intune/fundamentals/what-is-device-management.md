@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d2b7deb7d3c09a41a16b1ebf3da26075f0cc70eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353611"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915343"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
@@ -59,13 +59,13 @@ Další informace o Intune najdete v tématu [co je Intune](what-is-intune.md).
 
 ## <a name="co-management"></a>Spoluspráva
 
-Mnoho organizací používá místní Configuration Manager ke správě zařízení, včetně stolních počítačů a serverů. K Microsoft Intune můžete v cloudu připojit místní Configuration Manager. Když se připojíte ke cloudu, získáte výhody Intune a cloudu, včetně [podmíněného přístupu](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [spouštění vzdálených akcí](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [používání Windows autopilotu](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)a dalších.
+Mnoho organizací používá místní Configuration Manager ke správě zařízení, včetně stolních počítačů a serverů. K Microsoft Intune můžete v cloudu připojit místní Configuration Manager. Když se připojíte ke cloudu, získáte výhody Intune a cloudu, včetně [podmíněného přístupu](../../configmgr/comanage/quickstart-conditional-access.md), [spouštění vzdálených akcí](../../configmgr/comanage/quickstart-remote-actions.md), [používání Windows autopilotu](../../configmgr/comanage/quickstart-autopilot.md)a dalších.
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) je platforma řešení, která sjednocuje několik služeb. Zahrnuje [Microsoft Intune](what-is-intune.md) pro cloudovou správu zařízení a [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) pro správu zařízení pomocí cloudu.
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) je platforma řešení, která sjednocuje několik služeb. Zahrnuje [Microsoft Intune](what-is-intune.md) pro cloudovou správu zařízení a [Configuration Manager + Intune](../../configmgr/comanage/overview.md) pro správu zařízení pomocí cloudu.
 
 Pokud používáte Configuration Manager a jste připraveni přesunout některé úkoly do cloudu, pak je spoluspráva vaše odpověď.
 
-Další informace o připojení Configuration Manager ke cloudu najdete v tématu [co je spoluspráva](https://docs.microsoft.com/mem/configmgr/comanage/overview).
+Další informace o připojení Configuration Manager ke cloudu najdete v tématu [co je spoluspráva](../../configmgr/comanage/overview.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrace se službami zabezpečení a ochrany
 
@@ -108,11 +108,11 @@ V centru pro správu správy zařízení můžete:
 - Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Správa aktualizací pro iOS/iPadOS](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [Spravovat uživatele](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Správa skupin a členů](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Řešení potíží](help-desk-operators.md)
+- [Azure Active Directory](/azure/active-directory)  
+- [Správa uživatelů](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Správa skupin a členů](/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Odstraňování potíží](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Další kroky
 
-Až budete připraveni začít s řešením MDM nebo MAM, Projděte si jednotlivé kroky k nastavení Intune, registraci zařízení a zahájení vytváření zásad. [Správa mobilních zařízení pro Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) je také skvělým prostředkem.
+Až budete připraveni začít s řešením MDM nebo MAM, Projděte si jednotlivé kroky k nastavení Intune, registraci zařízení a zahájení vytváření zásad. [Správa mobilních zařízení pro Microsoft 365](/microsoft-365/enterprise/mobility-infrastructure) je také skvělým prostředkem.

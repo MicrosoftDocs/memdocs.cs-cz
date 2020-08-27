@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428972"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914901"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Řešení potíží se zásadami BitLockeru v Microsoft Intune
 
@@ -35,7 +35,7 @@ Pomocí Microsoft Intune máte k dispozici následující metody pro správu ná
 
 - **Zásady konfigurace zařízení** – některé integrované možnosti zásad jsou k dispozici v Intune, když vytváříte profil konfigurace zařízení pro správu služby Endpoint Protection. Pokud chcete najít tyto možnosti, [vytvořte profil zařízení pro Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), vyberte **Windows 10 a novější** pro *platformu*a pak vyberte kategorii **šifrování Windows** pro *Nastavení*. 
 
-   Informace o dostupných možnostech a funkcích si můžete přečíst tady: [šifrování Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Informace o dostupných možnostech a funkcích si můžete přečíst tady: [šifrování Windows](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Standardní hodnoty zabezpečení**  -  [Směrné plány zabezpečení](security-baselines.md) jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
 
@@ -43,12 +43,12 @@ Pro hardware, který je kompatibilní s moderní pohotovostní úsporou a HSTI p
 
 Je také možné, že nastavení nástroje BitLocker jsou spravovaná jiným způsobem, například Zásady skupiny, nebo ručně nastaveným uživatelem zařízení.
 
-Bez ohledu na to, jak se na zařízení aplikují nastavení, zásady BitLockeru využívají [CSP nástroje BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) ke konfiguraci šifrování na zařízení. Zprostředkovatel kryptografických služeb BitLocker je integrovaný do systému Windows a když Intune nasadí zásady BitLockeru na přiřazené zařízení, je na zařízení CSP nástroje BitLocker, které zapisuje příslušné hodnoty do registru Windows, aby se nastavení ze zásad projevilo.
+Bez ohledu na to, jak se na zařízení aplikují nastavení, zásady BitLockeru využívají [CSP nástroje BitLocker](/windows/client-management/mdm/bitlocker-csp) ke konfiguraci šifrování na zařízení. Zprostředkovatel kryptografických služeb BitLocker je integrovaný do systému Windows a když Intune nasadí zásady BitLockeru na přiřazené zařízení, je na zařízení CSP nástroje BitLocker, které zapisuje příslušné hodnoty do registru Windows, aby se nastavení ze zásad projevilo.
 
 Pokud se chcete dozvědět víc o BitLockeru, podívejte se na následující zdroje informací:
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Přehled nástroje BitLocker a požadavky – Nejčastější dotazy](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Přehled nástroje BitLocker a požadavky – Nejčastější dotazy](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Teď, když máte obecné informace o tom, co tyto zásady dělají a jak fungují, si přečtěte, jak můžete ověřit, jestli se nastavení BitLockeru úspěšně netýká klienta Windows.
 
@@ -105,11 +105,11 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Kontrola konfigurace klíče registru zařízení
 
-Po úspěšném nasazení zásad BitLockeru do zařízení se podívejte na následující klíč registru na zařízení, kde můžete zkontrolovat konfiguraci nastavení BitLockeru: *HKEY_LOCAL_MACHINE \software\microsoft\policymanager\current\device\bitlocker*. Tady je příklad:
+Po úspěšném nasazení zásad BitLockeru do zařízení se podívejte na následující klíč registru na zařízení, kde můžete zkontrolovat konfiguraci nastavení BitLockeru:  *HKEY_LOCAL_MACHINE \software\microsoft\policymanager\current\device\bitlocker*. Tady je příklad:
 
 ![Klíč registru BitLockeru](./media/troubleshooting-bitlocker-policies/registry.png)
 
-Tyto hodnoty konfiguruje CSP nástroje BitLocker. Ověřte, že hodnoty klíčů odpovídají nastavením zadaným ve zdroji zásad šifrování systému Windows v Intune. Další informace o jednotlivých nastaveních najdete v tématu [CSP nástroje BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+Tyto hodnoty konfiguruje CSP nástroje BitLocker. Ověřte, že hodnoty klíčů odpovídají nastavením zadaným ve zdroji zásad šifrování systému Windows v Intune. Další informace o jednotlivých nastaveních najdete v tématu [CSP nástroje BitLocker](/windows/client-management/mdm/bitlocker-csp).
 
 > [!NOTE]
 > Windows Prohlížeč událostí bude obsahovat také různé informace týkající se nástroje BitLocker. Seznam obsahuje příliš mnoho, ale hledání pomocí **nástroje BITLOCKER API** vám poskytne spoustu užitečných informací.
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-Na [dokumentaci k nástroji BITLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) můžete odkazovat, abyste viděli, co každá hodnota znamená. V tomto příkladu je fragment kódu sdílen na následujícím obrázku.
+Na [dokumentaci k nástroji BITLOCKER CSP](/windows/client-management/mdm/bitlocker-csp) můžete odkazovat, abyste viděli, co každá hodnota znamená. V tomto příkladu je fragment kódu sdílen na následujícím obrázku.
 
 ![Účely hodnot](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 - **Selže nasazení celé zásady, nebo se jedná o pouze určitá nastavení, která neplatí?** Pokud se rozhodnete, že jste se seznámili se scénářem, kde se nevztahují jenom některá nastavení zásad, Projděte si následující požadavky:
 
   1. **Ne všechna nastavení nástroje BitLocker jsou podporovaná ve všech verzích Windows**.
-     Zásady se v zařízení přinášejí jako jedna jednotka, takže pokud se některá nastavení uplatní a jiné ne, můžete si být jistí, že je obdržená samotná zásada. V tomto scénáři je možné, že verze Windows na zařízení nepodporuje problematická nastavení. Podrobnosti o požadavcích na verzi jednotlivých nastaveních najdete v dokumentaci k [nástroji BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) v dokumentaci k Windows.
+     Zásady se v zařízení přinášejí jako jedna jednotka, takže pokud se některá nastavení uplatní a jiné ne, můžete si být jistí, že je obdržená samotná zásada. V tomto scénáři je možné, že verze Windows na zařízení nepodporuje problematická nastavení. Podrobnosti o požadavcích na verzi jednotlivých nastaveních najdete v dokumentaci k [nástroji BitLocker](/windows/client-management/mdm/bitlocker-csp) v dokumentaci k Windows.
 
   2. **BitLocker není podporován na všech hardwarových počítačích**.
-     I v případě, že máte správnou verzi Windows, je možné, že základní hardware zařízení nesplňuje požadavky na šifrování BitLockeru. [Požadavky na systém pro nástroj BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) najdete v dokumentaci k systému Windows, ale hlavní akce, které je třeba ověřit, že má zařízení kompatibilní čip TPM (1,2 nebo novější) a firmware systému BIOS kompatibilní se standardem TCG (Trusted Computing Group) nebo rozhraní UEFI.
+     I v případě, že máte správnou verzi Windows, je možné, že základní hardware zařízení nesplňuje požadavky na šifrování BitLockeru. [Požadavky na systém pro nástroj BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) najdete v dokumentaci k systému Windows, ale hlavní akce, které je třeba ověřit, že má zařízení kompatibilní čip TPM (1,2 nebo novější) a firmware systému BIOS kompatibilní se standardem TCG (Trusted Computing Group) nebo rozhraní UEFI.
      
 **Šifrování BitLockeru se neprovádí v tichém režimu** – nakonfigurovali jste zásady Endpoint Protection s nastavením upozornění pro jiné šifrování disku, které se nastaví jako zablokované a Průvodce šifrováním se pořád zobrazuje:
 
@@ -201,7 +201,7 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
   > [!NOTE]
   > Stav čipu TPM můžete také ověřit spuštěním **čipu TPM. msc** na zařízení.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 Když vyřešíte problémy se zásadami BitLockeru v Intune a můžete potvrdit, že zásada dosáhne zamýšleného zařízení, je možné, že problém nesouvisí přímo s Intune. Problém je pravděpodobnější, že se jedná o problém s operačním systémem Windows nebo s hardwarem. V takovém případě začněte hledat v jiných oblastech, jako je například konfigurace čipu TPM nebo rozhraní UEFI a zabezpečené spouštění).
 
@@ -209,11 +209,11 @@ Když vyřešíte problémy se zásadami BitLockeru v Intune a můžete potvrdit
 
 V následující části najdete další zdroje informací, které mohou při práci s nástrojem BitLocker pomáhat:
 
-- [Dokumentace k produktu BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [Systémové požadavky BitLockeru](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [Nejčastější dotazy k nástroji BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [Dokumentace k nástroji BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Nastavení zásad šifrování Windows v Intune](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [Automatické šifrování nástrojem BitLocker nezávislé na hardwaru pomocí AAD/MDM](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [Dokumentace k produktu BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Systémové požadavky BitLockeru](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [Nejčastější dotazy k nástroji BitLocker](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [Dokumentace k nástroji BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)
+- [Nastavení zásad šifrování Windows v Intune](/intune/endpoint-protection-windows-10#windows-encryption)
+- [Automatické šifrování nástrojem BitLocker nezávislé na hardwaru pomocí AAD/MDM](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [Zásady CSP pro šifrování BitLockeru na zařízeních s automatickým pilotem](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Návod k vytváření a nasazování zásad BitLockeru pomocí Intune](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Návod k vytváření a nasazování zásad BitLockeru pomocí Intune](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

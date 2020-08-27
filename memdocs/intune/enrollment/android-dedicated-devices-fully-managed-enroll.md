@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461721"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915241"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrace firemních zařízení s Androidem, plně spravovaných nebo vlastněných společností s pracovními profily
 
@@ -31,15 +31,15 @@ Po nastavení podnikových [zařízení](android-kiosk-enroll.md)s Androidem, [p
 
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |
-| Bezkontaktní komunikace (NFC) | 6.0 |
-| Zadání tokenu | 6.0 |
-| Kód QR | 7.0 |
+| Bezkontaktní komunikace (NFC) | 6,0 |
+| Zadání tokenu | 6,0 |
+| Kód QR | 7,0 |
 | Zero Touch  | 8.0<br><br> U zúčastněných výrobců. |
-| [Registrace pro mobilní zařízení Knox](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Jenom na zařízeních Samsung KNOX 2,8 nebo vyšších. |
+| [Registrace pro mobilní zařízení Knox](./android-samsung-knox-mobile-enroll.md)  | 6,0<br><br> Jenom na zařízeních Samsung KNOX 2,8 nebo vyšších. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Registrace pomocí bezkontaktní komunikace (NFC)
 
-U zařízení 6 a novějších, která podporují NFC, můžete zařízení zřídit vytvořením speciálně formátované značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v dokumentaci k [registraci zařízení se systémem Android Enterprise v jazyce C s Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) a v [dokumentaci k rozhraní API pro správu Androidu](https://developers.google.com/android/management/provision-device#nfc_method).
+U zařízení 6 a novějších, která podporují NFC, můžete zařízení zřídit vytvořením speciálně formátované značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v dokumentaci k [registraci zařízení se systémem Android Enterprise v jazyce C s Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) a v [dokumentaci k rozhraní API pro správu Androidu](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ## <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
@@ -91,9 +91,8 @@ Abyste mohli použít systém Zero Touch od Googlu, musí ho zařízení podporo
 4. Zvolte **Použít**.
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>Registrovat pomocí zápisu pro mobilní zařízení Knox
-Pokud chcete použít registraci mobilního telefonu Samsung v Samsung, musí na zařízení běžet Android OS verze 6 nebo novější a Samsung KNOX 2,8 nebo vyšší. Další informace najdete v tématu [Automatická registrace zařízení pomocí služby Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll).
+Pokud chcete použít registraci mobilního telefonu Samsung v Samsung, musí na zařízení běžet Android OS verze 6 nebo novější a Samsung KNOX 2,8 nebo vyšší. Další informace najdete v tématu [Automatická registrace zařízení pomocí služby Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).
 
 ## <a name="next-steps"></a>Další kroky
 - [Nasazení aplikací pro Android](../apps/apps-deploy.md)
 - [Přidat zásady konfigurace pro Android](../configuration/device-profiles.md)
-

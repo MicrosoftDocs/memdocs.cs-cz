@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7c71a35c41e319d6a224868889a77fdad3ec35f
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 77959edc21bc6912dc540407b21cbc2018e81d49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896000"
+ms.locfileid: "88915139"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -48,7 +48,7 @@ Obecnou nápovědu a podporu pro Intune najdete v tématu [získání podpory pr
 
 ## <a name="provide-doc-feedback"></a>Poskytnutí zpětné vazby k dokumentu
 
-Část zpětné vazby je k dispozici ve spodní části každého článku. Kliknutím na odkaz pro **zpětnou vazbu** v pravém horním rohu libovolného článku přejděte do této části. Zpětná vazba je integrovaná s problémy GitHubu. Další informace o integraci s problémy GitHubu najdete v příspěvku na blogu věnovaném této [platformě docs](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Část zpětné vazby je k dispozici ve spodní části každého článku. Kliknutím na odkaz pro **zpětnou vazbu** v pravém horním rohu libovolného článku přejděte do této části. Zpětná vazba je integrovaná s problémy GitHubu. Další informace o integraci s problémy GitHubu najdete v příspěvku na blogu věnovaném této [platformě docs](/teamblog/a-new-feedback-system-is-coming-to-docs).
 
 Pokud chcete sdílet svůj názor na službu Intune (ne dokumentaci), klikněte na **svůj názor na produkt**.
 
@@ -74,7 +74,7 @@ Pokud chcete sdílet názory na platformu docs.microsoft.com, přečtěte si [n�
 
 ## <a name="contribute-to-docs"></a>Přispívání do dokumentace
 
-Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, je otevřená na GitHubu. Tato knihovna přijímá a podporuje komunitní příspěvky. Další informace o tom, jak začít, najdete v [příručce pro přispěvatele](https://docs.microsoft.com/contribute). Jediným předpokladem je vytvoření [účtu GitHub](https://github.com/join) .
+Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, je otevřená na GitHubu. Tato knihovna přijímá a podporuje komunitní příspěvky. Další informace o tom, jak začít, najdete v [příručce pro přispěvatele](/contribute). Jediným předpokladem je vytvoření [účtu GitHub](https://github.com/join) .
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Základní kroky pro přispívání do dokumentů
 
@@ -82,7 +82,7 @@ Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, j
 
 2. Chcete-li upravit zdrojový soubor, klikněte na ikonu tužky.  
 
-3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
+3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](/contribute/contribute-how-to-write-use-markdown).  
 
 4. V části navrhnout změnu souboru zadejte komentář veřejné potvrzení popisující, *co* jste změnili. Pak klikněte na **navrhnout změnu souboru**.  
 
@@ -109,7 +109,7 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 
 - Nedělejte si u velkých žádostí o přijetí změn. Místo toho zapište [problém](#provide-doc-feedback) a spusťte diskuzi. Pak můžeme souhlasit s směrem a teprve potom investovat velké množství času.  
 
-- Přečtěte si [příručku ke stylům Microsoftu](https://aka.ms/MicrosoftStyle). Poznejte [10 nejoblíbenějších tipů pro Microsoft Style a Voice](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Přečtěte si [příručku ke stylům Microsoftu](https://aka.ms/MicrosoftStyle). Poznejte [10 nejoblíbenějších tipů pro Microsoft Style a Voice](/style-guide/top-10-tips-style-voice).  
 
 - Postupujte podle [pracovního postupu Flow GitHub](https://guides.github.com/introduction/flow/).  
 
@@ -117,7 +117,7 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
 
-Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager byla dokumentace Intune a Configuration Manager konsolidovaná na webu Microsoft Endpoint Manager. Dokumentace k Intune je teď v [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) a v knihovně dokumentace Configuration Manager je dostupná na adrese [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) . Pokud používáte starou adresu URL, všechny odkazy se automaticky přesměrují, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager byla dokumentace Intune a Configuration Manager konsolidovaná na webu Microsoft Endpoint Manager. Dokumentace k Intune je teď v [. /index.yml](../index.yml) a Knihovna dokumentace Configuration Manager je k dispozici na adrese [... /.. /ConfigMgr/index.yml](../../configmgr/index.yml). Pokud používáte starou adresu URL, všechny odkazy se automaticky přesměrují, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
 
 Pokud zadáte zpětnou vazbu nebo přispějete k článkům, jsou nutné některé změny:
 

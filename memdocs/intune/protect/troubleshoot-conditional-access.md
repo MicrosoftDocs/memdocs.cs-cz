@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 279b9fc91d26827dbca7eeb294023d2be29e7580
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663374"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914816"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -49,7 +49,7 @@ Aby podmíněný přístup fungoval, musí být splněné následující požada
 
 - Pro místní Exchange musí být váš Intune Exchange Connector správně nakonfigurovaný. Další informace najdete v tématu [Poradce při potížích s Exchange Connectorem v Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- Pro místní Skype musíte nakonfigurovat hybridní moderní ověřování. Podívejte se na [Přehled hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Pro místní Skype musíte nakonfigurovat hybridní moderní ověřování. Podívejte se na [Přehled hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview).
 
 Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Portal a v inventární sestavě zařízení.
 
@@ -94,7 +94,7 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Zařízení nedodržují předpisy, ale uživatelé nejsou blokovaní
 
-- U počítačů s Windows podmíněný přístup blokuje jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování starších verzí aplikace Outlook nebo všech poštovních aplikací na počítačích s Windows vyžaduje Konfigurace registrace zařízení Azure AD a Active Directory Federation Services (AD FS) (AD FS) podle [nastavení služby SharePoint Online a Exchange Online pro Azure Active Directory podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- U počítačů s Windows podmíněný přístup blokuje jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování starších verzí aplikace Outlook nebo všech poštovních aplikací na počítačích s Windows vyžaduje Konfigurace registrace zařízení Azure AD a Active Directory Federation Services (AD FS) (AD FS) podle [nastavení služby SharePoint Online a Exchange Online pro Azure Active Directory podmíněný přístup](/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Pokud se zařízení z Intune selektivně vymaže nebo vyřadí, může mu několik hodin po vyřazení nadále zůstat možnost přístupu. Důvodem je to, že Exchange ukládá přístupová práva do mezipaměti po dobu šesti hodin. Zvažte možnost použití jiných způsobů ochrany dat na vyřazených zařízení v tomto scénáři.
 

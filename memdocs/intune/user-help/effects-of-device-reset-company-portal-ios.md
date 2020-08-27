@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878093"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913405"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Účinky Portál společnosti obnovení zařízení s iOS 
 
@@ -42,6 +42,6 @@ Pokud je vaše zařízení nastavené jenom na přístup k pracovnímu nebo ško
 
 - Váš pracovní nebo školní e-mailový účet se odstraní. Odstraní se neuložené e-maily.   
 
-Možnost resetování zařízení není dostupná pro všechna zařízení s iOS. Pokud jste pracovníkem podpory IT a chcete získat další informace o těchto omezeních, přečtěte si téma [odebrání zařízení pomocí vymazání, vyřazení nebo ručnímu zrušení registrace zařízení](https://docs.microsoft.com/intune/devices-wipe).  
+Možnost resetování zařízení není dostupná pro všechna zařízení s iOS. Pokud jste pracovníkem podpory IT a chcete získat další informace o těchto omezeních, přečtěte si téma [odebrání zařízení pomocí vymazání, vyřazení nebo ručnímu zrušení registrace zařízení](/intune/devices-wipe).  
 
 Pokud máte nějaké dotazy, obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

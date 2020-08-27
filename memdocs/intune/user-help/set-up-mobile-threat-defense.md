@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 9ac83ce840d4a43de98791d6b116bb373a018a7d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725345"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914187"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
@@ -71,7 +71,7 @@ Pokud se zobrazí výzva k instalaci aplikace MTD, ale nejste si jistí, která 
 ### <a name="device-registration"></a>Registrace zařízení  
 Registrace zařízení je nutná k potvrzení vaší identity a připojení školního nebo pracovního účtu k vašemu zařízení. Pokud zařízení není zaregistrované, po dokončení instalace aplikace MTD vás automaticky provedete těmito kroky na obrazovce.   
 
-Další informace o registraci zařízení najdete v tématu [registrace osobního zařízení v síti vaší organizace](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).  
+Další informace o registraci zařízení najdete v tématu [registrace osobního zařízení v síti vaší organizace](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### <a name="ios-setup"></a>instalace iOS  
 Tyto kroky začínají na obrazovce **získat přístup** , která se zobrazí po přihlášení k chráněné aplikaci.  

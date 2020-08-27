@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 865a6f33053d9e1fe011d6c2cddf94d0e3995148
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084777"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914956"
 ---
 # <a name="view-and-correct-personal-data"></a>Zobrazení a oprava osobních údajů
 
@@ -37,7 +37,7 @@ Správci Intune mohou na základě svých přístupových oprávnění zobrazit 
 Správcům se osobní údaje koncových uživatelů zobrazují na různých listech uživatelského rozhraní služby Intune. Následující články vysvětlují, co Správci informací dělají a nemají přístup k těmto akcím:
 - V [části Podrobnosti o zařízení](../remote-actions/device-inventory.md) v Intune se dozvíte, jak můžete zkontrolovat podrobnosti o zařízení koncového uživatele.
 - [Monitorování informací a přiřazení aplikace](../apps/apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
-- [Jaké informace může moje společnost vidět po registraci zařízení? článek](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) poskytuje koncovým uživatelům seznam dat, která jejich společnost uvidí a neuvidí. Je vhodné jasně říct uživatelům, jaký druh dat shromažďujete a proč je shromažďujete. Prvním krokem vstříc transparentnosti může být právě tento článek.
+- [Jaké informace může moje společnost vidět po registraci zařízení? článek](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) poskytuje koncovým uživatelům seznam dat, která jejich společnost uvidí a neuvidí. Je vhodné jasně říct uživatelům, jaký druh dat shromažďujete a proč je shromažďujete. Prvním krokem vstříc transparentnosti může být právě tento článek.
 
 ### <a name="who-can-view-the-data"></a>Kdo může zobrazit údaje?
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126511"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915173"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu
 
@@ -34,13 +34,13 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 2. Registrace do správy pracovního profilu
 3. Řešení problémů s dodržováním předpisů. 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Uživatelé musí mít [zařízení zaregistrovaná správcem zařízení](android-enroll-device-administrator.md) s androidem portál společnosti verze 5.0.4720.0 nebo novější.
 - Nastavte správu pracovního profilu Androidu [připojením účtu tenanta Intune k vašemu účtu Android Enterprise](connect-intune-android-enterprise.md).
 - [Nastavte registraci pracovního profilu Android Enterprise](android-work-profile-enroll.md) pro skupinu uživatelů, kteří přesunou na pracovní profil Android.
 - Zvažte zvýšení omezení vašich uživatelských zařízení. Při rušení registrace zařízení ze správy správců zařízení nemusí být záznamy zařízení okamžitě odebrány. Aby bylo možné během této doby poskytnout polštář, možná budete muset zvýšit kapacitu omezení počtu zařízení, aby se uživatelé mohli zaregistrovat do správy pracovního profilu.
-  - [Nakonfigurujte Azure Active Directory nastavení zařízení](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) pro maximální počet zařízení na uživatele.
+  - [Nakonfigurujte Azure Active Directory nastavení zařízení](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) pro maximální počet zařízení na uživatele.
   - Nastavením limitu zařízení nastavte [omezení počtu zařízení v Intune](enrollment-restrictions-set.md#create-a-device-limit-restriction) . 
 
 ## <a name="create-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů pro zařízení
@@ -56,7 +56,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
     
 4. Na stránce **Nastavení dodržování předpisů** v části **stav zařízení** nastavte možnost **blokovat zařízení spravovaná pomocí Správce zařízení** na **Ano**  >  **Další**.
 
-    ![Blokovat zařízení](./media/android-move-device-admin-work-profile/block-devices.png)
+    ![Bloková zařízení](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. Na stránce **umístění** můžete přidat umístění, pokud chcete > **Další**.
 
@@ -83,7 +83,7 @@ Když uživatelé uvidí, že z tohoto důvodu nejsou v souladu s předpisy, mů
 8. Na stránce **přiřazení** přiřaďte zásadu ke skupině, která má zařízení zaregistrovaná pomocí správy správce zařízení > **Další**.
 9. Na stránce **Revize + vytvořit** potvrďte všechna nastavení a potom vyberte **vytvořit**.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Poradce při potížích
 
 [Tok koncového uživatele, který se má přesunout do nového nastavení správy zařízení](../user-help/move-to-new-device-management-setup.md) , provede uživatele tím, že zruší registraci ze správy Správce zařízení a nastavuje se pomocí správy pracovního profilu. Uživatelé musí mít [zařízení zaregistrovaná správcem zařízení](android-enroll-device-administrator.md) s androidem portál společnosti verze 5.0.4720.0 nebo novější.
 

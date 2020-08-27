@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: d11f3d38923e50492992586bfb263a530e6da9e3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663272"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915530"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
@@ -40,15 +40,15 @@ Následující akční plán je možné provést při splnění následujících
 
 ## <a name="action-plan"></a>Akční plán
 
-Absolvujte [rychlý úvodní kurz pro Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/infoprotect-quick-start-tutorial).  
+Absolvujte [rychlý úvodní kurz pro Azure Information Protection](/information-protection/get-started/infoprotect-quick-start-tutorial).  
 
 ## <a name="what-to-tell-employees-and-students"></a>Co sdělit zaměstnancům a studentům
 
-Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, které obsahují citlivé informace](https://docs.microsoft.com/information-protection/deploy-use/help-users).
+Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, které obsahují citlivé informace](/information-protection/deploy-use/help-users).
 
 ## <a name="next-steps"></a>Další kroky
 
 V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
-* Naučte se používat [Azure Information Protection na zařízeních s iOS/iPadOS a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
-* Informace o počítačích Mac najdete v [aplikaci Microsoft Rights Management Sharing](https://technet.microsoft.com/dn451248).
+* Naučte se používat [Azure Information Protection na zařízeních s iOS/iPadOS a Androidem](/information-protection/rms-client/mobile-app-faq).
+* Informace o počítačích Mac najdete v [aplikaci Microsoft Rights Management Sharing](/previous-versions/msdn10/dn451248(v=msdn.10)).

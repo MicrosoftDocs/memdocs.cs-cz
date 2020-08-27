@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491299"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914884"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -57,7 +57,7 @@ Informace o tom, co se změnilo v této verzi směrného plánu z předchozí ve
 
 ## <a name="above-lock"></a>Nad zámkem
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) .  
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – AboveLock](/windows/client-management/mdm/policy-csp-abovelock) .  
 
 - **Blokovat zobrazování oznámení informačních**zpráv:  
   Toto nastavení zásad umožňuje zabránit zobrazování oznámení aplikace na zamykací obrazovce. Pokud toto nastavení zásad povolíte, na zamykací obrazovce se nezobrazí žádná oznámení aplikací. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, uživatelé budou moci zvolit, které aplikace budou zobrazovat oznámení na zamykací obrazovce.  
@@ -76,7 +76,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Abo
 
 ## <a name="app-runtime"></a>Modul runtime aplikace
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – AppRuntime](/windows/client-management/mdm/policy-csp-appruntime) .
 
 - **Volitelné účty Microsoft pro aplikace pro Windows Store**:  
   Nastavení této zásady umožňuje řídit, jestli jsou účty Microsoft volitelné pro aplikace pro Windows Store, které vyžadují účet pro přihlášení. Tato zásada ovlivňuje pouze aplikace pro Windows Store, které ji podporují. Pokud toto nastavení zásad povolíte, aplikace pro Windows Store, které obvykle vyžadují účet Microsoft pro přihlášení, umožní uživatelům přihlásit se místo toho podnikovým účtem. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, uživatelé se musí přihlašovat pomocí účet Microsoft.  
@@ -86,7 +86,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 
 ## <a name="application-management"></a>Správa aplikací
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) .
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -118,7 +118,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 
 ## <a name="auto-play"></a>Automatické přehrávání
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – automatické přehrávání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – automatické přehrávání](/windows/client-management/mdm/policy-csp-autoplay) .
 
 - **Automatické přehrání výchozího chování při automatickém spuštění**:  
   Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokud je tato možnost *povolená*, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.  
@@ -140,7 +140,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – aut
 
 ## <a name="bitlocker"></a>BitLocker
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – BitLocker](/windows/client-management/mdm/policy-csp-bitlocker) .
 
 - **Zásada pro vyměnitelné jednotky BitLockeru**:  
   Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
@@ -193,7 +193,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
 
 ## <a name="browser"></a>Prohlížeč
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](/windows/client-management/mdm/policy-csp-browser) .
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**:  
   Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení uživatelé také nemůžou zakázat (vypnout) filtr SmartScreen v programu Microsoft Defender. Povolením této zásady dojde k vypnutí filtru SmartScreen v programu Microsoft Defender a zabránění uživatelům v jeho zapnutí. Nekonfigurujte tuto zásadu, aby uživatelům umožnila zvolit nebo vypnout filtr SmartScreen v programu Microsoft Defender.  
@@ -227,7 +227,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
 
 ## <a name="connectivity"></a>Připojení
 
-Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) .
+Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](/windows/client-management/mdm/policy-csp-connectivity) .
 
 - **Blokovat stažení z Internetu pro publikování na webu a průvodce pro online řazení**:  
   Nastavení této zásady určuje, jestli má systém Windows stáhnout seznam poskytovatelů pro Průvodce pro publikování na webu a online řazení. Tito průvodci umožňují uživatelům vybrat ze seznamu společností, které poskytují služby, jako je online úložiště a fotografický tisk. Ve výchozím nastavení Windows zobrazuje kromě poskytovatelů uvedených v registru také poskytovatele stažené z webu Windows. Pokud nastavení této zásady povolíte, Windows nestáhne poskytovatele a jenom poskytovatele služeb, které jsou uložené v místním registru. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, zobrazí se seznam zprostředkovatelů, které se stáhnou, když uživatel použije průvodce publikováním na webu nebo online řazení. Další informace, které obsahují podrobnosti o určení poskytovatelů služeb v registru, najdete v dokumentaci pro Průvodce pro publikování na webu a online objednávky.  
@@ -260,7 +260,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
 ## <a name="credentials-delegation"></a>Delegování přihlašovacích údajů
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation) .
 
 - **Delegování vzdáleného hostitele pro neexportované přihlašovací údaje**:  
   Vzdálený hostitel umožňuje delegování neexportovatelných přihlašovacích údajů. Při použití delegování přihlašovacích údajů zařízení poskytují exportovatelné verze přihlašovacích údajů ke vzdálenému hostiteli, který uživatelům zveřejňuje riziko krádeže přihlašovacích údajů od útočníků na vzdáleném hostiteli. Pokud nastavení této zásady povolíte, hostitel podporuje režim omezené správy nebo vzdáleného Credential Guard. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, režim omezené správy a ochrana před vzdáleným přihlašovacími údaji se nepodporuje. Uživatel bude vždycky muset předat přihlašovací údaje k hostiteli.  
@@ -270,7 +270,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Cre
 
 ## <a name="credentials-ui"></a>Přihlašovací uživatelské rozhraní
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) .
 
 - **Zobrazit výčet správců**:  
   Nastavení této zásady určuje, jestli se účty správců zobrazí, když se uživatel pokusí zvýšit úroveň spuštěné aplikace. Ve výchozím nastavení se účty správců nezobrazují, když se uživatel pokusí zvýšit úroveň spuštěné aplikace. Pokud nastavení této zásady povolíte, zobrazí se všechny účty místních správců v počítači, aby si uživatel mohl vybrat heslo a zadat správné heslo. Pokud nastavení této zásady zakážete, budou uživatelé vždycky muset zadat uživatelské jméno a heslo, aby se mohli zvýšit.  
@@ -280,7 +280,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Cre
 
 ## <a name="data-protection"></a>Ochrana dat
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DataProtection](/windows/client-management/mdm/policy-csp-dataprotection) .
 
 - **Zablokovat přímý přístup do paměti**:  
   Toto nastavení zásad umožňuje zablokovat přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem po dobu, než se uživatel do Windows přihlásí. Jakmile se uživatel přihlásí, Windows Vypíše zařízení PCI připojená k portům plug-in hostitele PCI. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený. Nastavení této zásady se vynutilo jenom v případě, že je povolené BitLocker nebo šifrování zařízení.  
@@ -290,7 +290,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
 
 ## <a name="device-guard"></a>Ochrana zařízení
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard) .
 
 - **Zapnout ochranu Credential Guard**:  
   Toto nastavení umožňuje uživatelům zapnout ochranu Credential Guard se zabezpečením na základě virtualizace, které pomáhá chránit přihlašovací údaje při příštím restartování počítače.  
@@ -318,11 +318,11 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
 ## <a name="device-installation"></a>Instalace zařízení
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) .
 
 - **Instalace hardwarových zařízení podle identifikátorů zařízení**:  
   Toto nastavení zásad umožňuje zadat seznam technologie Plug and Play ID hardwaru a kompatibilní ID pro zařízení, na která systém Windows znemožňuje instalaci. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud nastavení této zásady povolíte, Windows nemůže nainstalovat zařízení, jehož ID hardwaru nebo kompatibilní ID se zobrazí v seznamu, který vytvoříte. Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, zařízení se můžou instalovat a aktualizovat tak, aby se povolila nebo zabránila jiným nastavením zásad.  
-  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
+  [Další informace](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **Výchozí**: blokovat instalaci hardwarového zařízení
 
@@ -340,7 +340,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
 - **Instalace hardwarových zařízení pomocí tříd instalace**:  
   Nastavení této zásady umožňuje zadat seznam globálně jedinečných identifikátorů (GUID) třídy nastavení zařízení pro ovladače zařízení, které systém Windows znemožňuje nainstalovat. Nastavení této zásady má přednost před jinými nastaveními zásad, která umožňují systému Windows nainstalovat zařízení. Pokud nastavení této zásady povolíte, Windows nemůže nainstalovat ani aktualizovat ovladače zařízení, jejichž identifikátory GUID třídy nastavení zařízení se zobrazí v seznamu, který vytvoříte. Pokud nastavení této zásady povolíte na vzdáleném počítači, nastavení zásad bude mít vliv na přesměrování zadaných zařízení z klienta vzdálené plochy na server vzdálené plochy. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, může systém Windows instalovat a aktualizovat zařízení podle povolených nebo zabránících jiným nastavením zásad.  
-  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
+  [Další informace](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **Výchozí**: blokovat instalaci hardwarového zařízení
 
@@ -358,7 +358,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
 ## <a name="device-lock"></a>Zámek zařízení
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) .
 
 - **Zabránit použití kamery**:  
   Zakáže přepínač kamery zamykací obrazovky v nastavení počítače a zabraňuje tomu, aby se kamera vyvolala na zamykací obrazovce. Ve výchozím nastavení můžou uživatelé povolit vyvolání dostupné kamery na zamykací obrazovce. Pokud povolíte toto nastavení, uživatelé nebudou moci povolit ani zakázat přístup k fotoaparátu zamykací obrazovky v nastavení počítače a fotoaparát nelze vyvolat na zamykací obrazovce.  
@@ -436,11 +436,11 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
 ## <a name="dma-guard"></a>Ochrana DMA
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DmaGuard](/windows/client-management/mdm/policy-csp-dmaguard) .
 
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**:  
   Cílem této zásady je zajistit další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing. Tato zásada se projeví jenom v případě, že je ochrana DMA pro jádro podporovaná a povolená systémovým firmwarem. Ochrana pomocí jádra DMA je funkce platformy, kterou nelze řídit pomocí zásad nebo koncového uživatele. Musí být podporován systémem v době výroby. Pokud chcete zjistit, jestli systém podporuje ochranu před nejenom jádrem, na stránce Souhrn v MSINFO32.exe ověřte pole ochrana jádra DMA.  
-  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [Další informace](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Výchozí**: Blokovat vše
 
@@ -449,7 +449,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dma
 
 ## <a name="event-log-service"></a>Služba protokolu událostí
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) .
 
 - **Maximální velikost souboru protokolu zabezpečení v KB**:  
   Nastavení této zásady určuje maximální velikost souboru protokolu v kilobajtech. Pokud nastavení této zásady povolíte, můžete nakonfigurovat maximální velikost souboru protokolu na 1 megabajt (1024 kilobajtů) a 2 terabajty (2147483647 kilobajtů) v kilobajtech. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude maximální velikost souboru protokolu nastavena na místně konfigurovanou hodnotu. Tuto hodnotu může změnit místní správce pomocí dialogu Vlastnosti protokolu a výchozí hodnota je 20 megabajtů.  
@@ -471,7 +471,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Eve
 
 ## <a name="experience"></a>Prostředí
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskytovatele cloudu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskytovatele cloudu](/windows/client-management/mdm/policy-csp-experience) .
 
 - **Blokovat Windows Spotlight**:  
   Umožňuje správcům IT vypnout (blokovat) všechny funkce Windows Spotlightu. To zahrnuje i Windows Spotlight na zamykací obrazovce, tipy pro Windows, funkce Microsoftu pro uživatele a další související funkce.  
@@ -495,7 +495,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskyto
 
 ## <a name="exploit-guard"></a>Zneužití Guard
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard) .
 
 - **Nahrát XML**:  
   Umožňuje správci IT doručovat konfiguraci, která představuje požadované možnosti pro zmírnění rizika systému a aplikace pro všechna zařízení v organizaci. Konfigurace je reprezentovaná kódem XML. Ochrana před zneužitím pomáhá chránit zařízení před malwarem, který využívá zneužití k rozšíření a nakazit. Pomocí aplikace zabezpečení systému Windows nebo PowerShellu vytvoříte sadu zmírnění hrozeb (označované jako konfigurace). Tuto konfiguraci pak můžete exportovat jako soubor XML a sdílet ho s více počítači ve vaší síti, aby všichni měli stejnou sadu nastavení pro zmírnění rizik. Existující konfigurační soubor XML nástroje EMET můžete také převést a importovat do konfiguračního souboru XML ochrany před zneužitím.  
@@ -505,7 +505,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Exp
 
 ## <a name="file-explorer"></a>Průzkumník souborů
 
-Další informace najdete v dokumentaci k systému Windows v tématu [zásady CSP – Průzkumník](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) souborů.  
+Další informace najdete v dokumentaci k systému Windows v tématu [zásady CSP – Průzkumník](/windows/client-management/mdm/policy-csp-fileexplorer) souborů.  
 
 - **Zabránění spuštění dat blokování**:  
   Zakázání prevence spuštění dat může některé starší verze modulů plug-in umožňovat fungování bez ukončení Průzkumníka.  
@@ -519,9 +519,9 @@ Další informace najdete v dokumentaci k systému Windows v tématu [zásady CS
 
   **Výchozí**: zakázáno
 
-## <a name="firewall"></a>Brána firewall
+## <a name="firewall"></a>Firewall
 
-Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.
+Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.
 
 - **Doména profilu brány firewall**:  
   Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
@@ -579,7 +579,7 @@ Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.micros
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
-Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) .
+Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](/windows/client-management/mdm/policy-csp-internetexplorer) .
 
 - **Aktualizace zóny s omezeným přístupem aplikace Internet Explorer na stavovém řádku prostřednictvím skriptu**:  
   Toto nastavení zásad umožňuje spravovat, jestli má skript povoleno aktualizovat stavový řádek v rámci zóny.
@@ -808,7 +808,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 - **Možnosti přihlášení k zóně omezeného Internet Exploreru**:  
   Toto nastavení zásad umožňuje spravovat nastavení možností přihlášení. Pokud nastavení této zásady povolíte, můžete si vybrat z následujících možností přihlášení.
 
-  - *Anonymní* – pomocí anonymního přihlášení můžete zakázat ověřování protokolu HTTP a použít účet hosta pouze pro protokol CIFS (Common Internet File System).
+  - *Anonymní*  – pomocí anonymního přihlášení můžete zakázat ověřování protokolu HTTP a použít účet hosta pouze pro protokol CIFS (Common Internet File System).
 
   - *Výzva* – pomocí výzvy k zadání uživatelského jména a hesla můžete zadávat dotazy uživatelů na ID a hesla uživatelů. Po zadání dotazu na uživatele lze tyto hodnoty použít v tichém režimu pro zbytek relace.
 
@@ -1340,7 +1340,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
 ## <a name="local-policies-security-options"></a>Možnosti zabezpečení místních zásad
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) .
 
 - **Omezit anonymní přístup k pojmenovaným kanálům a sdíleným složkám**:  
   Když je toto nastavení zabezpečení povolené, omezí anonymní přístup ke sdíleným složkám a kanálům na nastavení pro: (1) pojmenované kanály, ke kterým se dá přistupovat anonymně (2) ke sdíleným složkám, ke kterým se dá přistupovat anonymně.  
@@ -1548,14 +1548,14 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](/windows/client-management/mdm/policy-csp-defender) .
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Zablokuje Adobe Reader při vytváření podřízených procesů**:  
 Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváření dalších procesů. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader. Blokováním podřízených procesů, které jsou vygenerovány aplikací Adobe Reader, se pokus o použití malwaru jako vektoru zabrání v rozprostření.
-[Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+[Další informace](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **Výchozí**: Povolit
 
@@ -1670,7 +1670,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   **Výchozí**: Povolit
 
 - **Akce potenciálně nežádoucí aplikace v Defenderu**:  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které je možné vydávat do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako "neautorizovaný antivirový program"). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.
 
@@ -1715,7 +1715,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 
 ## <a name="ms-security-guide"></a>Průvodce zabezpečením MS
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) .
 
 - **Použijte omezení nástroje řízení uživatelských účtů na místní účty při přihlášení k síti**:  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067188)
@@ -1744,7 +1744,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSS
 
 ## <a name="mss-legacy"></a>MSS – starší
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) .
 
 - **Úroveň ochrany směrování zdroje IP sítě**:  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067220)
@@ -1768,7 +1768,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSS
 
 ## <a name="power"></a>Napájení
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – napájení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – napájení](/windows/client-management/mdm/policy-csp-power) .
 
 - **Vyžadovat heslo při probuzení během napájení**:  
   Nastavení této zásady určuje, jestli se uživateli zobrazí výzva k zadání hesla, když se systém obnoví z režimu spánku. Pokud nastavení této zásady povolíte nebo nenakonfigurujete, bude uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku. Pokud nastavení této zásady zakážete, uživatel nebude vyzván k zadání hesla, když se systém obnoví z režimu spánku.  
@@ -1799,7 +1799,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – nap
 
 ## <a name="remote-assistance"></a>Vzdálená pomoc
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) .
 
 - **Vyžádané vzdálené pomoci**:  
   Toto nastavení zásad umožňuje zapnout nebo vypnout funkci vyžádaná (požádat o) o vzdálenou pomoc na tomto počítači.
@@ -1836,7 +1836,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
 ## <a name="remote-desktop-services"></a>Vzdálená plocha
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) .
 
 - **Blokovat ukládání hesla**:  
   Určuje, jestli je možné ukládat hesla na tomto počítači z Připojení ke vzdálené ploše. Pokud povolíte toto nastavení, zaškrtávací políčko pro uložení hesla v Připojení ke vzdálené ploše je zakázané a uživatelé nebudou moct hesla ukládat. Když uživatel otevře soubor RDP pomocí Připojení ke vzdálené ploše a uloží jeho nastavení, odstraní se všechna hesla, která dříve existovala v souboru RDP. Pokud toto nastavení zakážete nebo necháte není nakonfigurované, může uživatel ukládat hesla pomocí Připojení ke vzdálené ploše.  
@@ -1878,7 +1878,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
 ## <a name="remote-management"></a>Vzdálená správa
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) .
 
 - **Blokovat ukládání přihlašovacích údajů spustit jako**:  
   Základní ověřování klienta.  
@@ -1918,7 +1918,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
 ## <a name="remote-procedure-call"></a>Vzdálené volání procedur
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) .
 
 - **Možnosti neověřeného klienta RPC**:  
   Nastavení této zásady určuje, jak bude modul runtime serveru RPC zpracovávat neověřené klienty RPC připojující se k serverům RPC. Nastavení této zásady má vliv na všechny aplikace RPC. V prostředí domény použijte nastavení této zásady opatrně, protože může mít vliv na celou řadu funkcí, včetně samotného zpracování zásad skupiny. Vrácení změny nastavení této zásady může vyžadovat ruční zásah na každém dotčeném počítači. Toto nastavení zásad nepoužívejte pro řadič domény. Pokud nastavení této zásady zakážete, bude modul runtime serveru RPC používat hodnotu "Ověřený" v klientovi Windows a hodnotu "žádné" ve verzích Windows serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady nenakonfigurujete, zůstane zakázané. Modul runtime serveru RPC se chová, jako by byl povolen s hodnotou "ověřené" používané pro klienta Windows, a s hodnotou "none" použitou pro skladové položky serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady povolíte, přesměruje modul runtime serveru RPC, aby omezil neověřené klienty RPC připojující se k serverům RPC běžícím v počítači. Klient se považuje za ověřeného klienta, pokud používá pojmenovaný kanál ke komunikaci se serverem nebo v případě, že používá zabezpečení RPC. Rozhraní RPC, která jsou výslovně vyžadovaná k přístupu neověřeným klientům, můžou být z tohoto omezení vyloučená v závislosti na zvolené hodnotě pro toto nastavení zásad.
@@ -1935,7 +1935,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
 ## <a name="search"></a>Hledat
 
-Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
+Další informace najdete v tématu [zásady CSP – hledání](/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 
 - **Zakázat indexování šifrovaných položek**:  
   Tato zásada povolí nebo zakáže indexování položek. Tento přepínač je určen pro indexer služby Windows Search, který určuje, zda budou zašifrovány položky, například soubory chráněné jako Windows Information Protection (nedokončené výroby). Pokud je tato zásada povolená, chráněné položky WIP se indexují a metadata o nich se ukládají do nešifrovaného umístění. Součástí metadat jsou takové položky jako cesta k souboru a datum změny. Když je zásada zakázaná, položky chráněné při nedokončené výrobě nejsou indexované a nezobrazují se ve výsledcích v Cortana nebo v Průzkumníkovi souborů. Pokud se v zařízení nachází mnoho souborů médií chráněných WIP, může to mít také dopad na výkon fotografií a aplikací Groove.  
@@ -1945,7 +1945,7 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
 
 ## <a name="smart-screen"></a>Inteligentní obrazovka
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](/windows/client-management/mdm/policy-csp-smartscreen) .
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -1991,7 +1991,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
 ## <a name="system"></a>Systém
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](/windows/client-management/mdm/policy-csp-system) .
 
 - **Inicializace ovladače spuštění systému**:  
   Nastavení této zásady umožňuje určit, které spouštěcí ovladače se mají inicializovat, na základě klasifikace, která je určená ovladačem spuštění antimalwarového spuštění od předčasného spuštění. Spouštěcí ovladač předčasného spuštění antimalwarového spuštění může pro každý ovladač spouštěcího spuštění vrátit následující klasifikace:
@@ -2011,7 +2011,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – sys
 
 ## <a name="wi-fi"></a>Wi-Fi
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WiFi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WiFi](/windows/client-management/mdm/policy-csp-wifi) .
 
 - **Blokovat sdílení internetu**:  
   Určuje, jestli je na zařízení možné sdílení internetu.  
@@ -2027,7 +2027,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WiF
 
 ## <a name="windows-connection-manager"></a>Správce připojení k Windows
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) .
 
 - **Blokovat připojení k sítím mimo doménu**:  
   Nastavení této zásady zabraňuje počítačům v připojení k síti založené na doméně i k síti, která není založená na doméně. Pokud je toto nastavení zásad povolené, počítač reaguje na automatické a ruční pokusy o připojení k síti na základě následujících okolností:
@@ -2086,7 +2086,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
 ## <a name="windows-ink-workspace"></a>Pracovní prostor Windows Ink
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) .
 
 - **Pracovní prostor rukopisu**:  
   Určuje, jestli má uživatel přístup k pracovnímu prostoru rukopisu.
@@ -2103,7 +2103,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) .
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) .
 
 - **Protokolování bloku skriptu PowerShellu**:  
   Nastavením této zásady lze povolit protokolování veškerého vstupu skriptu PowerShell do protokolu Microsoft-Windows-PowerShell/Operational Event Log. Pokud toto nastavení zásad povolíte, bude Windows PowerShell protokolovat zpracování příkazů, bloků skriptu, funkcí a skriptů – ať už se vyvolají interaktivně nebo prostřednictvím automatizace. Pokud nastavení této zásady zakážete, protokolování vstupu skriptu PowerShellu je zakázané. Pokud povolíte protokolování volání bloku skriptu, PowerShell kromě toho při vyvolání příkazu, bloku skriptu, funkce nebo skriptu spustí nebo zastaví protokol události. Povolení protokolování vyvolání generuje velké množství protokolů událostí. Poznámka: Toto nastavení zásad existuje v editoru Zásady skupiny v části Konfigurace počítače i Konfigurace uživatele. Nastavení zásad konfigurace počítače má přednost před nastavením zásad konfigurace uživatele.  

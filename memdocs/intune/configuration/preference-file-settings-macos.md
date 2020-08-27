@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988667"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915309"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Přidání souboru se seznamem vlastností do zařízení macOS pomocí Microsoft Intune
 
@@ -66,7 +66,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
     - **Název domény předvolby**: Zadejte ID sady prostředků, například `com.company.application` . Zadejte například `com.Contoso.applicationName` , `com.Microsoft.Edge` nebo `com.microsoft.wdav` .
 
-      Soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků.
+      Soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků.
 
     - **Soubor seznamu vlastností**: vyberte soubor seznamu vlastností přidružený k vaší aplikaci. Ujistěte se, že se jedná o `.plist` `.xml` soubor nebo. Například odešlete `YourApp-Manifest.plist` `YourApp-Manifest.xml` soubor nebo.
 
@@ -97,4 +97,4 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Další informace o souborech předvoleb pro Microsoft Edge najdete v tématu [Konfigurace nastavení zásad Microsoft Edge na MacOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+Další informace o souborech předvoleb pro Microsoft Edge najdete v tématu [Konfigurace nastavení zásad Microsoft Edge na MacOS](/deployedge/configure-microsoft-edge-on-mac).

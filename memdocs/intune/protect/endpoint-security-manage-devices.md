@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088526"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914986"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Správa zařízení pomocí zabezpečení koncového bodu v Microsoft Intune
 
-Jako správce zabezpečení můžete pomocí zobrazení *všechna zařízení* v centru pro správu Microsoft Endpoint Manageru zkontrolovat a reagovat na správu svých zařízení. Zobrazení zobrazuje seznam všech zařízení z Azure Active Directory (Azure AD). To zahrnuje zařízení spravovaná pomocí Intune, Configuration Manager a prostřednictvím [spolusprávy](https://docs.microsoft.com/configmgr/comanage/overview) pomocí intune i Configuration Manager. Zařízení můžou být v cloudu a z místní infrastruktury, pokud jsou integrovaná s Azure AD.
+Jako správce zabezpečení můžete pomocí zobrazení *všechna zařízení* v centru pro správu Microsoft Endpoint Manageru zkontrolovat a reagovat na správu svých zařízení. Zobrazení zobrazuje seznam všech zařízení z Azure Active Directory (Azure AD). To zahrnuje zařízení spravovaná pomocí Intune, Configuration Manager a prostřednictvím [spolusprávy](/configmgr/comanage/overview) pomocí intune i Configuration Manager. Zařízení můžou být v cloudu a z místní infrastruktury, pokud jsou integrovaná s Azure AD.
 
  Pokud chcete toto zobrazení najít, otevřete [Centrum pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zabezpečení koncového bodu**  >  **všechna zařízení**.
 
@@ -49,7 +49,7 @@ Vezměte v úvahu následující pole:
 
 - **Spravované podle** – tento sloupec identifikuje způsob správy zařízení. Možnosti spravované pomocí zahrnují:
 
-  - **MDM** – tato zařízení se spravují přes Intune. Intune shromažďuje a hlásí data o dodržování předpisů do centra pro správu.
+  - **MDM**  – tato zařízení se spravují přes Intune. Intune shromažďuje a hlásí data o dodržování předpisů do centra pro správu.
 
   - **ConfigMgr** – tato zařízení se zobrazí v centru pro správu Microsoft Endpoint Manageru, když pomocí možnosti *připojit klienta* přidáte zařízení, která spravujete pomocí nástroje Configuration Manager. Aby bylo možné zařízení spravovat, musí spustit klienta Configuration Manager a být:
 
@@ -59,15 +59,13 @@ Vezměte v úvahu následující pole:
 
     Stav dodržování předpisů pro zařízení, která jsou spravovaná nástrojem Configuration Manager, není zobrazený v centru pro správu Microsoft Endpoint Manageru.
 
-    Další informace najdete v tématu [Povolení připojení klienta](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) v dokumentaci k Configuration Manager.
+    Další informace najdete v tématu [Povolení připojení klienta](/configmgr/tenant-attach/device-sync-actions) v dokumentaci k Configuration Manager.
 
   - **Agent MDM/ConfigMgr** – tato zařízení jsou spoluspravována mezi Intune a Configuration Manager.
 
-    Díky spolusprávě můžete [zvolit různé úlohy spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) , abyste zjistili, jaké aspekty jsou spravované Configuration Manager nebo Intune. Tyto možnosti budou mít vliv na to, které zásady zařízení použije a jak budou data o dodržování předpisů hlášena v centru pro správu.
+    Díky spolusprávě můžete [zvolit různé úlohy spolusprávy](/configmgr/comanage/how-to-switch-workloads) , abyste zjistili, jaké aspekty jsou spravované Configuration Manager nebo Intune. Tyto možnosti budou mít vliv na to, které zásady zařízení použije a jak budou data o dodržování předpisů hlášena v centru pro správu.
 
     Pomocí Intune můžete například nakonfigurovat zásady pro antivirovou ochranu, bránu firewall a šifrování. Tyto typy zásad se považují za zásady pro *Endpoint Protection*. Pokud chcete, aby spoluspravované zařízení používalo zásady Intune a ne zásady Configuration Manager, nastavte pro Endpoint Protection posuvník pro spolusprávu na *Intune* nebo *pilotní Intune*. Pokud je posuvník nastavený na Configuration Manager, zařízení místo toho použije zásady a nastavení z Configuration Manager.
-
-  - **Pracovní prostor jedno** – tato zařízení spravuje partner dodržování předpisů zařízením třetí strany, jeden pracovní prostor. Další informace najdete v tématu [partneři dodržování předpisů zařízením](../protect/device-compliance-partners.md).
 
 - **Dodržování předpisů**: dodržování předpisů se vyhodnocuje na základě zásad dodržování předpisů, které jsou přiřazené k zařízení. Zdroj těchto zásad a informace v konzole nástroje závisí na tom, jak je zařízení spravované. Intune, Configuration Manager nebo spoluspráva. Pro spoluspravovaná zařízení pro nahlášení dodržování předpisů nastavte posuvník spolusprávy pro dodržování předpisů zařízením pro Intune nebo pilotní Intune.  
 

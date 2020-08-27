@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 28a867c735a05cfa4a4765534d200b806711f9b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428995"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913014"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows 10 v Intune
 
@@ -36,11 +36,11 @@ Tato funkce platí pro:
 
 Vlastní profily zařízení s Windows 10 používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení.
 
-Ve Windows 10 je k dispozici řada nastavení od poskytovatelů konfiguračních služeb (CSP), třeba [Poskytovatel konfiguračních služeb pro zásady (CSP pro zásady)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers).
+Ve Windows 10 je k dispozici řada nastavení od poskytovatelů konfiguračních služeb (CSP), třeba [Poskytovatel konfiguračních služeb pro zásady (CSP pro zásady)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
 Pokud hledáte konkrétní nastavení, nezapomeňte, že řada integrovaných nastavení je v [restriktivním profilu zařízení s Windows 10](device-restrictions-windows-10.md). Takže možná nebude potřeba zadávat vlastní hodnoty.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte vlastní profil Windows 10](custom-settings-configure.md#create-the-profile).
 
@@ -57,7 +57,7 @@ Pokud hledáte konkrétní nastavení, nezapomeňte, že řada integrovaných na
   - Logická hodnota
   - Řetězec (soubor XML)
   - Datum a čas
-  - String
+  - Řetězec
   - Plovoucí desetinná čárka
   - Integer
 
@@ -67,11 +67,11 @@ Po přidání nastavení můžete vybrat **Exportovat**. **Export** vytvoří se
 
 ## <a name="find-the-policies-you-can-configure"></a>Vyhledání zásad, které můžete nakonfigurovat
 
-Úplný seznam všech poskytovatelů konfiguračních služeb (CSP) podporovaných systémem Windows 10 najdete v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
+Úplný seznam všech poskytovatelů konfiguračních služeb (CSP) podporovaných systémem Windows 10 najdete v [referenčních informacích o poskytovatelích konfiguračních služeb](/windows/client-management/mdm/configuration-service-provider-reference).
 
-Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. Informace o tom, jaké verze konfiguračních služeb každý poskytovatel podporuje, najdete v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
+Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. Informace o tom, jaké verze konfiguračních služeb každý poskytovatel podporuje, najdete v [referenčních informacích o poskytovatelích konfiguračních služeb](/windows/client-management/mdm/configuration-service-provider-reference).
 
-Intune navíc nepodporuje všechna nastavení, která jsou v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Na každé stránce nastavení se zobrazuje podporovaná operace. Aby bylo možné pracovat s Intune, musí nastavení podporovat operace **Přidat**, **nahradit**a **získat** . Pokud hodnota vrácená operací **Get** neodpovídá hodnotě poskytované operacemi **Přidat** nebo **nahradit** , Intune ohlásí chybu kompatibility.
+Intune navíc nepodporuje všechna nastavení, která jsou v [referenčních informacích o poskytovatelích konfiguračních služeb](/windows/client-management/mdm/configuration-service-provider-reference). Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Na každé stránce nastavení se zobrazuje podporovaná operace. Aby bylo možné pracovat s Intune, musí nastavení podporovat operace **Přidat**, **nahradit**a **získat** . Pokud hodnota vrácená operací **Get** neodpovídá hodnotě poskytované operacemi **Přidat** nebo **nahradit** , Intune ohlásí chybu kompatibility.
 
 ## <a name="next-steps"></a>Další kroky
 

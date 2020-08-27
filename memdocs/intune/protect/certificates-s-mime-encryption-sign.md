@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915564"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Přehled s/MIME k podepsání a šifrování e-mailu v Intune
 
@@ -33,7 +33,7 @@ E-mailové certifikáty (označované také jako certifikát S/MIME) poskytují 
 
 Na zařízeních S iOS/iPadOS můžete vytvořit e-mailový profil spravovaný přes Intune, který používá S/MIME a certifikáty k podepisování a šifrování příchozích a odchozích e-mailů. Ostatní platformy mohou, ale nemusí, S/MIME podporovat. Pokud je tato podpora podporovaná, nainstalujte certifikáty, které používají podepisování a šifrování S/MIME. Koncový uživatel pak ve své e-mailové aplikaci povolí S/MIME.
 
-Další informace o podepisování a šifrování e-mailu S/MIME pomocí Exchange najdete v části [S/MIME pro podepisování a šifrování zpráv](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+Další informace o podepisování a šifrování e-mailu S/MIME pomocí Exchange najdete v části [S/MIME pro podepisování a šifrování zpráv](/Exchange/policy-and-compliance/smime).
 
 Tento článek poskytuje přehled použití certifikátů S/MIME k podepisování a šifrování e-mailů v zařízeních.
 
@@ -41,7 +41,7 @@ Tento článek poskytuje přehled použití certifikátů S/MIME k podepisován�
 
 Certifikáty používané k podepisování umožňují e-mailové aplikaci klienta bezpečně komunikovat s e-mailovým serverem.
 
-Pokud chcete používat podpisové certifikáty, vytvořte šablonu v certifikační autoritě (CA), která se zaměřuje na podepisování. V článku o [konfiguraci šablony certifikátu serveru](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) najdete postup k vytvoření šablon certifikátu v certifikační autoritě Microsoft Active Directory.
+Pokud chcete používat podpisové certifikáty, vytvořte šablonu v certifikační autoritě (CA), která se zaměřuje na podepisování. V článku o [konfiguraci šablony certifikátu serveru](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) najdete postup k vytvoření šablon certifikátu v certifikační autoritě Microsoft Active Directory.
 
 Podpisové certifikáty v Intune používají certifikáty PKCS. [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md) popisuje, jak certifikát PKCS v prostředí Intune nasadit a používat. Tyto kroky zahrnují:
 

@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988300"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914850"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS/iPadOS v Intune
 
@@ -35,7 +35,7 @@ Tato funkce platí pro:
 Ve výchozím nastavení se zařízení zaregistrují v Intune každých 8 hodin. Pokud je aktualizace dostupná prostřednictvím zásad aktualizace, zařízení tuto aktualizaci stáhne. Zařízení pak nainstaluje aktualizaci při dalším vrácení se změnami v rámci konfigurace plánu. I když proces aktualizace obvykle nezahrnuje interakci s uživatelem, pokud má zařízení heslo, musí ho uživatel zadat, aby mohl spustit aktualizaci softwaru. Profily nebrání uživatelům v ruční aktualizaci operačního systému. Uživatelům se dá zabránit v ruční aktualizaci operačního systému pomocí zásad konfigurace zařízení, aby se omezila viditelnost aktualizací softwaru.
 
 > [!NOTE]
-> Pokud používáte [autonomní režim jedné aplikace (Asam)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam), měli byste zvážit dopad aktualizací operačního systému, protože výsledné chování může být nežádoucí.
+> Pokud používáte [autonomní režim jedné aplikace (Asam)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), měli byste zvážit dopad aktualizací operačního systému, protože výsledné chování může být nežádoucí.
 Zvažte testování, abyste posoudili dopad aktualizací operačního systému na aplikaci, kterou používáte v ASAM.
 
 ## <a name="configure-the-policy"></a>Konfigurace zásad
@@ -64,7 +64,7 @@ Zvažte testování, abyste posoudili dopad aktualizací operačního systému n
       ![Příklad výběru, který se má aktualizovat během naplánovaného času](./media/software-updates-ios/scheduled-time.png)
 
       - **Časové pásmo**: Vyberte časové pásmo.
-      - **Časový interval**: definujte jeden nebo více bloků času, které omezují, kdy se aktualizace nainstalují. Účinek následujících možností závisí na typu plánu, který jste vybrali. Pomocí počátečního a koncového dne se podporují přenocování kamenných bloků. Mezi možnosti patří:
+      - **Časový interval**: definujte jeden nebo více bloků času, které omezují, kdy se aktualizace nainstalují. Účinek následujících možností závisí na typu plánu, který jste vybrali. Pomocí počátečního a koncového dne se podporují přenocování kamenných bloků. Vaše možnosti jsou:
 
         - **Počáteční den**: vyberte den, ve kterém se spustí okno plán.
         - **Čas spuštění**: vyberte časový den, kdy se má okno plánování začít. Pokud například vyberete hodnotu 5 AM a naplánujete typ plánu *aktualizace během naplánovaného času*, bude 5 am čas, kdy aktualizace může začít instalovat. Pokud jste zvolili typ plánu *aktualizace mimo naplánovaný čas*, bude čas od 5. až do doby, kdy aktualizace nebude možné instalovat, bude začínat.

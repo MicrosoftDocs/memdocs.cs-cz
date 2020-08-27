@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983233"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914357"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -43,7 +43,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 
      Výběrem libovolného zařízení [zobrazíte další podrobnosti o tomto zařízení](device-inventory.md), jako jsou podrobnosti o hardwaru, nainstalované aplikace, zásady a další.
 
-   - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+   - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](/azure/active-directory/device-management-introduction).
    - **Akce zařízení** zahrnují historii vzdálených akcí spuštěných na různých zařízeních, včetně akce, jejího stavu, uživatele, který tuto akci zahájil, a času.
 
      ![Snímek obrazovky s monitorováním akcí zařízení](./media/device-management/monitor-device-actions.png)
@@ -57,7 +57,7 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
 
 - [Zobrazit inventář zařízení](device-inventory.md)
 - Spouštění akcí ve vzdáleném zařízení:
-  - [Resetování autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Resetování autopilotu](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
   - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Zakázat zámek aktivace](device-activation-lock-disable.md) (jenom iOS)
@@ -72,7 +72,7 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Resetovat heslo](device-passcode-reset.md)
   - [Restartovat](device-restart.md) (jenom Windows)
   - [Vyřadit](devices-wipe.md#retire)
-  - [Aktualizace funkce Security Intelligence v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Aktualizace funkce Security Intelligence v programu Windows Defender](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
   - [Vymazání](devices-wipe.md#wipe)
   - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)

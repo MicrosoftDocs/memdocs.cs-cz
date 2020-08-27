@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 508741d0cdb88e19bc5b2f27942e9e797f501356
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084808"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914459"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -60,13 +60,13 @@ Existují tři způsoby, jak odebrat osobní data spravovaná v Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Odstranění uživatele z Intune
 
-Pokud chcete z Intune odstranit osobní údaje koncového uživatele, správce musí [uživatele odstranit z Azure Active Directory (AAD)](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Když se uživatel z AAD odstraní (nevratný), obdrží Intune signál odstranit z AAD a pak automaticky zahájí mazání všech osobních údajů tohoto uživatele ze služby Intune. Informace o uživateli budou odstraněny ze služby Intune do 30 dnů od akce odebrání.
+Pokud chcete z Intune odstranit osobní údaje koncového uživatele, správce musí [uživatele odstranit z Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Když se uživatel z AAD odstraní (nevratný), obdrží Intune signál odstranit z AAD a pak automaticky zahájí mazání všech osobních údajů tohoto uživatele ze služby Intune. Informace o uživateli budou odstraněny ze služby Intune do 30 dnů od akce odebrání.
 
 ### <a name="reset-device-to-factory-settings"></a>Resetování zařízení do továrního nastavení
 Když zařízení resetujete do továrního nastavení, obnoví se všechna firemní i osobní data a nastavení do původního továrního nastavení. To je užitečné, když chcete zařízení předat dalšímu zaměstnanci. Do 30 dnů od odebrání uživatele budou ze služby Intune odstraněny uživatelské soubory, aplikace instalované uživatelem a veškeré nastavení, které není výchozí.
 
 ### <a name="user-self-removal-from-intune-management"></a>Samostatné odebrání uživatele ze správy v Intune
-Uživatelé mohou odebrat osobní zařízení se systémem [Android, Apple nebo Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) ze správy v Intune i bez pomoci správce.   
+Uživatelé mohou odebrat osobní zařízení se systémem [Android, Apple nebo Windows](../user-help/unenroll-your-device-from-intune-android.md) ze správy v Intune i bez pomoci správce.   
 
 ### <a name="retire"></a>Vyřazení
 Když zařízení **vyřadíte**, Intune odebere poskytnutá data, jako jsou firemní aplikace, data o aplikacích spravovaných v Intune, nastavení zásad a e-mailové profily zřízené prostřednictvím Intune. Tato akce opustí osobní údaje uživatele v zařízení.

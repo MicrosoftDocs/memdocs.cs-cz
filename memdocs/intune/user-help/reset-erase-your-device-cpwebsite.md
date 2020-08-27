@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881460"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915513"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Resetování zařízení z Portál společnosti webu
 
@@ -32,7 +32,7 @@ Resetování použitého, ztraceného nebo odcizeného zařízení do výchozíh
 
 Po obnovení továrního nastavení se zařízení na webu Portál společnosti přestane zobrazovat. Aplikace a soubory z dřívějška se vymažou a zařízení se obnoví do výchozího továrního nastavení. 
 
-Resetování zařízení v Portál společnosti není k dispozici pro všechna zařízení s iOS. Pokud jste pracovníkem podpory IT a chcete získat další informace o resetování zařízení a jeho omezeních, přečtěte si téma [odebrání zařízení pomocí vymazání, vyřazení nebo ručnímu zrušení registrace zařízení](https://docs.microsoft.com/intune/devices-wipe).  
+Resetování zařízení v Portál společnosti není k dispozici pro všechna zařízení s iOS. Pokud jste pracovníkem podpory IT a chcete získat další informace o resetování zařízení a jeho omezeních, přečtěte si téma [odebrání zařízení pomocí vymazání, vyřazení nebo ručnímu zrušení registrace zařízení](/intune/devices-wipe).  
 
 > [!Note]
 > Tyto kroky můžete provést také z jiného zařízení, které jste zaregistrovali. Otevřete aplikaci Portál společnosti a proveďte kroky pro podobné možnosti obnovení. 

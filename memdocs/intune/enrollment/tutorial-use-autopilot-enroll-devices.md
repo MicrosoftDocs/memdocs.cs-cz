@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546839"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915428"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 
@@ -40,12 +40,12 @@ V tomto kurzu se naučíte:
 
 Pokud nemáte předplatné Intune, [Zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-Přehled výhod, scénáře a požadavky Autopilotu najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+Přehled výhod, scénáře a požadavky Autopilotu najdete v [přehledu Windows Autopilotu](/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## <a name="prerequisites"></a>Předpoklady
 - [Nastavení automatické registrace Windows](quickstart-setup-auto-enrollment.md)
-- [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Předplatné Azure Active Directory Premium](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>Přidání zařízení
@@ -128,5 +128,3 @@ Můžete si přečíst další informace o dalších možnostech dostupných pro
 
 > [!div class="nextstepaction"]
 > [Článek s podrobnými informacemi o registraci pomocí Autopilotu](../../autopilot/enrollment-autopilot.md)
-
-

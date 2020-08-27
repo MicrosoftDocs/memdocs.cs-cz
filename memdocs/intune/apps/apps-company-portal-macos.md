@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452831"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914153"
 ---
 # <a name="add-the-macos-company-portal-app"></a>Přidání aplikace Portál společnosti macOS
 
@@ -40,7 +40,7 @@ Pro lepší zabezpečení a aktuálnost aplikací po instalaci aplikace Portál 
 > Aplikaci Portál společnosti lze nainstalovat do zařízení pomocí služby Intune, které jsou již zaregistrovány pomocí přímého registrace nebo automatizovaného registrace zařízení. Pro osobní zařízení nebo ruční registrace se musí stáhnout a nainstalovat aplikace Portál společnosti pro zahájení registrace. Viz [pokyn pro uživatele ke stažení a instalaci portál společnosti](#instruct-users-to-download-and-install-company-portal).
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>Vyzvat uživatele ke stažení a instalaci Portál společnosti
 
-Můžete uživatelům dát pokyn ke stažení, instalaci a přihlášení Portál společnosti pro macOS. Pokyny ke stažení, instalaci a přihlášení do Portál společnosti najdete v tématu [registrace zařízení MacOS pomocí portál společnosti aplikace](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+Můžete uživatelům dát pokyn ke stažení, instalaci a přihlášení Portál společnosti pro macOS. Pokyny ke stažení, instalaci a přihlášení do Portál společnosti najdete v tématu [registrace zařízení MacOS pomocí portál společnosti aplikace](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>Instalace Portál společnosti pro macOS jako aplikace macOS LOB
 
@@ -66,5 +66,5 @@ Portál společnosti pro macOS se dají stáhnout a nainstalovat pomocí funkce 
 > Skript bude vyžadovat přístup k Internetu, pokud je spuštěn pro stažení aktuální verze Portál společnosti pro macOS. 
 ## <a name="next-steps"></a>Další kroky
 - Další informace o přiřazování aplikací najdete v tématu [přiřazení aplikací do skupin](apps-deploy.md).
-- Další informace o konfiguraci automatizované registrace zařízení najdete v tématu [program registrace zařízení – MacOS registrace](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos).
-- Další informace o konfiguraci nastavení Microsoft AutoUpdate na macOS najdete v tématu [aktualizace pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates).
+- Další informace o konfiguraci automatizované registrace zařízení najdete v tématu [program registrace zařízení – MacOS registrace](../enrollment/device-enrollment-program-enroll-macos.md).
+- Další informace o konfiguraci nastavení Microsoft AutoUpdate na macOS najdete v tématu [aktualizace pro Mac](/windows/security/threat-protection/microsoft-defender-atp/mac-updates).

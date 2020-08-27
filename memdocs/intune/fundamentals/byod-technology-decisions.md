@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455238"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915411"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -33,7 +33,7 @@ V tomto tématu prozkoumáme jednoduchý případ použití, ve kterém se povol
 * Vaše e-mailové účty jsou hostované v Exchangi Online.
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Běžné situace, při kterých se provádí správa zařízení (MDM)
-Nasazením zásad [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) na Exchangi Online můžete snadno řídit uživatelům registraci svých zařízení do správy zařízení. Toto jsou situace, kdy je vhodné spravovat osobní zařízení:
+Nasazením zásad [podmíněného přístupu](/azure/active-directory/active-directory-conditional-access-azure-portal) na Exchangi Online můžete snadno řídit uživatelům registraci svých zařízení do správy zařízení. Toto jsou situace, kdy je vhodné spravovat osobní zařízení:
 
 **WiFi/VPN** – Pokud uživatelé potřebují k produktivní práci podnikový profil připojení, je možné ho bezproblémově nakonfigurovat.
 

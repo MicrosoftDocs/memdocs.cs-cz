@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d51b1ded77ac9d7e1a619c56cb87501c70a9447e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329427"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913082"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zabránění únikům dat na nespravovaných zařízeních pomocí Microsoft Intune
 
@@ -35,7 +35,7 @@ Pro ochranu firemních dat můžete nastavit zásady ochrany aplikací pro mobil
 
 Zásady ochrany aplikací Intune fungují nezávisle na správě zařízení. Zásady ochrany aplikací umožňují spravovat mobilní aplikace Office na nespravovaných zařízeních i zařízeních spravovaných v Intune, jakož i na zařízeních spravovaných v řešeních MDM od jiných výrobců než Microsoftu.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Následující akční plán je možné provést při splnění následujících požadavků:
 
@@ -55,7 +55,7 @@ Pro zařízení s iOS/iPadOS a Androidem:
 
 Pro zařízení s Windows 10:
 
-1. Podívejte se, jak [funguje Windows Information Protection (WIP)](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
+1. Podívejte se, jak [funguje Windows Information Protection (WIP)](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
 2. Připravte se na [konfiguraci zásad ochrany aplikací pro Windows 10](../apps/app-protection-policies-configure-windows-10.md).
 3. [Vytvořte a nasaďte zásady ochrany aplikací WIP v Intune](../apps/windows-information-protection-policy-create.md).
 
@@ -68,4 +68,4 @@ Podle potřeby nasdílejte následující odkazy na další informace:
 
 ## <a name="next-steps"></a>Další kroky
 
-Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

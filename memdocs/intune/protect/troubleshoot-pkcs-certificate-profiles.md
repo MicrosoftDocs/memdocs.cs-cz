@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110677"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914782"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Řešení potíží s nasazením certifikátu PKCS v Microsoft Intune
 
@@ -39,7 +39,7 @@ Nejběžnějším zdrojem problémů s profily certifikátů PKCS je konfigurace
 - **Certifikační autorita**: interní plně kvalifikovaný název domény počítače certifikační autority. Například Server1. domain. Local.
 - **Název certifikační autority**: název certifikační autority, jak se zobrazuje v konzole MMC Certifikační autorita. Podívejte se na části **certifikační autorita (místní)** .
 
-K potvrzení správného názvu certifikační autority a názvu certifikační autority můžete použít [program příkazového řádku Certutil](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) v certifikační autoritě.
+K potvrzení správného názvu certifikační autority a názvu certifikační autority můžete použít [program příkazového řádku Certutil](/windows-server/administration/windows-commands/certutil) v certifikační autoritě.
 
 ## <a name="pkcs-communication-overview"></a>Přehled komunikace PKCS
 
@@ -76,7 +76,7 @@ Soubory protokolu pro tyto role zahrnují Prohlížeč událostí Windows, konzo
 
 - **NDESConnector_date_time. svclog**:
 
-  Tento protokol zobrazuje komunikaci z Microsoft Intune Certificate Connector do cloudové služby Intune. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
+  Tento protokol zobrazuje komunikaci z Microsoft Intune Certificate Connector do cloudové služby Intune. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
 
   Související klíč registru: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ Soubory protokolu pro tyto role zahrnují Prohlížeč událostí Windows, konzo
 
 - **CertificateRegistrationPoint_date_time. svclog**:
 
-  Tento protokol zobrazuje modul zásad NDES, který přijímá a ověřuje žádosti o certifikát. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
+  Tento protokol zobrazuje modul zásad NDES, který přijímá a ověřuje žádosti o certifikát. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
 
   Umístění: na serveru, který je hostitelem NDES, na adrese *% program_files% \ Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -217,7 +217,7 @@ K tomuto problému dochází, pokud počítač, který je hostitelem konektoru N
 
 **Řešení**:
 
-Ručně nakonfigurujte název serveru zásad zápisu certifikátů na počítači, který je hostitelem konektoru NDES. Pokud chcete nakonfigurovat název, použijte rutinu prostředí PowerShell [Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) .
+Ručně nakonfigurujte název serveru zásad zápisu certifikátů na počítači, který je hostitelem konektoru NDES. Pokud chcete nakonfigurovat název, použijte rutinu prostředí PowerShell [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) .
 
 ### <a name="the-submission-is-pending"></a>Odeslání čeká na vyřízení.
 

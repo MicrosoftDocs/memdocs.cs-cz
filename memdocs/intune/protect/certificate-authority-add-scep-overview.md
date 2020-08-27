@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 8cb847410bf04b4d7d8132e2069b6ced1751b921
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871997"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913575"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -70,7 +70,7 @@ Před provedení integrace externích certifikačních autorit s Intune zkontrol
 
 Pokud chcete externímu serveru SCEP povolit spuštění vlastního ověření výzvy pomocí Intune, vytvořte aplikaci ve službě Azure AD. Tato aplikace poskytne Intune delegovaná práva k ověřování žádostí protokolu SCEP.
 
-Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. Viz [požadovaná oprávnění](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)v dokumentaci k Azure AD.
+Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. Viz [požadovaná oprávnění](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)v dokumentaci k Azure AD.
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory  
 

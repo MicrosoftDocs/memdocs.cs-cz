@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 737301d8171cd123224017a32c03db8365f4a90c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eb30db6043a1b2f02db8baa93f324fa38449769c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364744"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915649"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Používání rozhraní Graph API a odpovídajících poskytovatelů konfiguračních služeb pro Windows 10 v Intune
 
-Microsoft Intune používá [entity Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otevře další web dokumentů) ke konfiguraci zařízení ( **Konfigurace zařízení** > v**Intune** ) se systémem Windows 10 nebo novějším. Graph API používá poskytovatele konfiguračních služeb (CSP) ke čtení, nastavení, změně nebo odstranění nastavení konfigurace na zařízeních.
+Microsoft Intune používá [entity Graph API](/graph/api/resources/intune-graph-overview) (otevře další web docs) ke konfiguraci zařízení (konfigurace zařízení v**Intune**  >  **Device configuration**) se systémem Windows 10 nebo novějším. Graph API používá poskytovatele konfiguračních služeb (CSP) ke čtení, nastavení, změně nebo odstranění nastavení konfigurace na zařízeních.
 
 Tento seznam platí pro:
 
@@ -35,25 +35,25 @@ Tento článek obsahuje seznam entit grafu a jejich odpovídajících identifik�
 
 Tyto informace jsou užitečné pro nejrůznější scénáře. Podívejte se například na to, co se používá v Intune, v části nastavení, která se mají zahrnout do vlastních konfigurací OMA-URI a tak dále. 
 
-## <a name="windows-10-csps"></a>Windows 10 CSPs
+## <a name="windows-10-csps"></a>Windows 10 – CSP
 
-Další informace o poskytovatelích konfigurační služby Windows 10 najdete v referenčních informacích o [poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Otevírá další web v dokumentaci).
+Další informace o poskytovatelích konfigurační služby Windows 10 najdete v referenčních informacích o [poskytovateli služby konfigurace](/windows/client-management/mdm/configuration-service-provider-reference) (Otevírá další web v dokumentaci).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>Graph API vlastností mapování CSP
 
 Následující seznam obsahuje většinu Graph API entit používaných Microsoft Intune pro konfiguraci zařízení s Windows 10. Zobrazuje taky odpovídající identifikátory URI Windows 10 CSP a offset.
 
-Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní API: [Reference k poskytovateli konfigurační služby](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) Windows 10 (otevře se další lokalita dokumentů).
+Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní API: [Reference k poskytovateli konfigurační služby](/windows/client-management/mdm/configuration-service-provider-reference) Windows 10 (otevře se další lokalita dokumentů).
 
-### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
+### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration. License 
 **CSP**:./Device/Vendor/MSFT/WindowsLicensing  
 **Identifikátor URI posunu**:/UpgradeEditionWithLicense
 
-### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration.LicenseType 
+### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration. LicenseType 
 **CSP**:./Device/Vendor/MSFT/WindowsLicensing  
 **Identifikátor URI posunu**:/LicenseKeyType
 
-### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration.ProductKey 
+### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration. ProductKey 
 **CSP**:./Device/Vendor/MSFT/WindowsLicensing  
 **Identifikátor URI posunu**:/UpgradeEditionWithProductKey
 
@@ -93,7 +93,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 **CSP**:./Vendor/MSFT/SharedPC  
 **Identifikátor URI posunu**:/SignInOnResume
 
-### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration.Enabled 
+### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration. Enabled 
 **CSP**:./Vendor/MSFT/SharedPC  
 **Identifikátor URI posunu**:/EnableSharedPCMode
 
@@ -258,7 +258,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecutionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
 **CSP**:./Device/Vendor/MSFT/Policy – **identifikátor URI pro posun**:/config/ExploitGuard/ExploitProtectionSettings
@@ -283,7 +283,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunchType
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcess 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -291,7 +291,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcessType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjection 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -299,7 +299,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjectionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType 
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType 
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -307,11 +307,11 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration.DefenderPreventCredentialStealingType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreation 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -331,7 +331,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecutionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCode 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -339,7 +339,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCodeType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
 **CSP**:./Device/Vendor/MSFT/Policy – **identifikátor URI pro posun**:/config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
@@ -414,7 +414,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcessType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
+**Identifikátor URI posunu**:/config/Defender/ATTACKSURFACEREDUCTIONRULES (CSP/konfigurace vyžaduje vlastnosti grafu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, Windows10endpointprotection/Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, Windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType, windows10endpointprotection/Configuration. defenderEmailContentExecutionType, Windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, Windows10endpointprotection/Configuration. defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -565,7 +565,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration.LanManagerAuthenticationLevel 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_LANManagerAuthenticationLevel
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity \_ LANManagerAuthenticationLevel
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationDisableInsecureGuestLogons 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -577,195 +577,195 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorAccountName 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_RenameAdministratorAccount
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ RenameAdministratorAccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorElevationPromptBehavior
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForAdministrators
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForAdministrators
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_AllowPKU2UAuthenticationRequests
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity \_ AllowPKU2UAuthenticationRequests
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Shutdown\_AllowSystemToBeShutDownWithoutHavingToLogOn
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Shutdown \_ AllowSystemToBeShutDownWithoutHavingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_AllowUIAccessApplicationsToPromptForElevation
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ AllowUIAccessApplicationsToPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices\_AllowUndockWithoutHavingToLogon
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices \_ AllowUndockWithoutHavingToLogon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockMicrosoftAccounts 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_BlockMicrosoftAccounts
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ BlockMicrosoftAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteLogonWithBlankPassword 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteOpticalDriveAccess 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices\_RestrictCDROMAccessToLocallyLoggedOnUserOnly
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices \_ RestrictCDROMAccessToLocallyLoggedOnUserOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockUsersInstallingPrinterDrivers 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices\_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices \_ PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClearVirtualMemoryPageFile 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Shutdown\_ClearVirtualMemoryPageFile
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Shutdown \_ ClearVirtualMemoryPageFile
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientDigitallySignCommunicationsAlways 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsAlways
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_SendUnencryptedPasswordToThirdPartySMBServers
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ SendUnencryptedPasswordToThirdPartySMBServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_DetectApplicationInstallationsAndPromptForElevation
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ DetectApplicationInstallationsAndPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableAdministratorAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ EnableAdministratorAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsIfServerAgrees
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsIfServerAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ EnableGuestAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsAlways
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsIfClientAgrees
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsIfClientAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSAMAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotRequireCtrlAltDel 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotRequireCTRLALTDEL
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity \_ DoNotStoreLANManagerHashValueOnNextPasswordChange
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableAdministratorAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ EnableAdministratorAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ EnableGuestAccountStatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices\_AllowedToFormatAndEjectRemovableMedia
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Devices \_ AllowedToFormatAndEjectRemovableMedia
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsGuestAccountName 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts\_RenameGuestAccount
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/Accounts \_ RenameGuestAccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideLastSignedInUser 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayLastSignedIn
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotDisplayLastSignedIn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideUsernameAtSignIn 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayUsernameAtSignIn
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotDisplayUsernameAtSignIn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationDisplayedOnLockScreen 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DisplayUserInformationWhenTheSessionIsLocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationShownOnLockScreen 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DisplayUserInformationWhenTheSessionIsLocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageText 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTextForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageTitle 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTitleForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimit 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MachineInactivityLimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimitInMinutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MachineInactivityLimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedClients
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsOnlyElevateSignedExecutables 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateExecutableFilesThatAreSignedAndValidated
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateExecutableFilesThatAreSignedAndValidated
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictAnonymousAccessToNamedPipesAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSmartCardRemovalBehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ SmartCardRemovalBehavior
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsStandardUserElevationPromptBehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForStandardUsers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ SwitchToTheSecureDesktopWhenPromptingForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalMode 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_UseAdminApprovalMode
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ UseAdminApprovalMode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_RunAllAdministratorsInAdminApprovalMode
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ RunAllAdministratorsInAdminApprovalMode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
 **CSP**:./Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl\_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+**Identifikátor URI pro posun**:/config/LocalPoliciesSecurityOptions/UserAccountControl \_ VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
 
 ### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -821,7 +821,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/RemoteManagement/AllowBasicAuthentication\_klienta
+**Identifikátor URI pro posun**: \_ klient/config/RemoteManagement/AllowBasicAuthentication
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientDigestAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -829,11 +829,11 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**:/config/RemoteManagement/AllowUnencryptedTraffic\_klienta
+**Identifikátor URI pro posun**: \_ klient/config/RemoteManagement/AllowUnencryptedTraffic
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**: služba/config/RemoteManagement/AllowBasicAuthentication\_
+**Identifikátor URI pro posun**: \_ Služba/config/RemoteManagement/AllowBasicAuthentication
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -841,7 +841,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Identifikátor URI pro posun**: služba/config/RemoteManagement/AllowUnencryptedTraffic\_
+**Identifikátor URI pro posun**: \_ Služba/config/RemoteManagement/AllowUnencryptedTraffic
 
 ### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration.RpcUnauthenticatedClientOptions 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -2225,7 +2225,7 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 **CSP**:./User/Vendor/MSFT/Policy  
 **Identifikátor URI posunu**:/config/Education/DefaultPrinterName
 
-### <a name="windows10generalconfigurationprinternames"></a>Windows10GeneralConfiguration.PrinterNames 
+### <a name="windows10generalconfigurationprinternames"></a>Windows10GeneralConfiguration. Název_tiskárny 
 **CSP**:./User/Vendor/MSFT/Policy  
 **Identifikátor URI posunu**:/config/Education/PrinterNames
 
@@ -2987,4 +2987,4 @@ Pokud se chcete podívat na verze Windows 10, použijte následující rozhraní
 ## <a name="next-steps"></a>Další kroky
 
 - [Přehled konfigurace zařízení](../configuration/device-profiles.md)
-- [Referenční informace o poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Otevírá další web dokumentace)
+- [referenční informace o poskytovateli služby konfigurace](/windows/client-management/mdm/configuration-service-provider-reference) (Otevírá další web dokumentace)

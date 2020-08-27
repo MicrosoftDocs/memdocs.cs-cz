@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871976"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915292"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné dotazy a odpovědi se zásadami a profily zařízení v Microsoft Intune
 
@@ -40,18 +40,18 @@ Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v 
 | --- | --- |
 | iOS/iPadOS | Přibližně každých 8 hodin |
 | macOS | Přibližně každých 8 hodin |
-| Telefon | Přibližně každých 8 hodin |
+| Android | Přibližně každých 8 hodin |
 | Počítače s Windows 10 zaregistrované jako zařízení | Přibližně každých 8 hodin |
 | telefon se systémem Windows | Přibližně každých 8 hodin |
 | Windows 8.1 | Přibližně každých 8 hodin |
 
 Pokud se zařízení nedávno zaregistrovalo, spouští se ověření dodržování předpisů, nedodržování předpisů a konfigurace častěji, což je **Odhadované** na:
 
-| Platforma | Frekvence |
+| Platforma | Frequency |
 | --- | --- |
 | iOS/iPadOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin |  
 | macOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin | 
-| Telefon | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
+| Android | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Počítače s Windows 10 zaregistrované jako zařízení | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | telefon se systémem Windows | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 | Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
@@ -149,7 +149,7 @@ Některá nastavení na zařízeních s Windows 10 se můžou zobrazovat jako "n
 - Nastavení je dostupné jenom pro novější verze Windows a ne pro aktuální verzi operačního systému (OS) na zařízení.
 - Toto nastavení je dostupné jenom pro konkrétní edice Windows nebo konkrétní SKU, jako je například Home, Professional, Enterprise a školství.
 
-Další informace o požadavcích na verzi a SKU pro různá nastavení najdete v referenčních informacích k [poskytovateli konfiguračních služeb (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Další informace o požadavcích na verzi a SKU pro různá nastavení najdete v referenčních informacích k [poskytovateli konfiguračních služeb (CSP)](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="next-steps"></a>Další kroky
 

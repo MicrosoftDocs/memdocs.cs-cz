@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556315"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914425"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -61,25 +61,25 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   Určuje, která schémata ověřování HTTP jsou podporovaná. Zásady můžete nakonfigurovat pomocí těchto hodnot: *Basic*, *Digest*, *NTLM*a *Negotiate*. Více hodnot oddělte čárkami. Pokud tuto zásadu nenakonfigurujete, použijí se všechna čtyři schémata.
 
   - **Povolené** (*výchozí*) – používají se schémata, která jste vybrali.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Nenakonfigurováno** – používají se všechna čtyři schémata.
   
   Pokud je nastavené na *povoleno* , můžete nakonfigurovat následující nastavení, ve kterém můžete vybrat, které ověřování se má použít:
 
   - **Podporovaná schémata ověřování**  
     Vyberte z následujících možností:
-    - **Základní**
+    - **Basic**
     - **Otisk**
     - **Protokol NTLM** *(vybraný ve výchozím nastavení)*
     - **Negotiate** *(vybráno ve výchozím nastavení)*
 
 - **Výchozí nastavení Adobe Flash**  
-  CSP: [browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)a [browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP: [browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)a [browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   Povolte přístup k následujícímu nastavení, kde můžete nakonfigurovat chování pro spuštění modulu plug-in Adobe Flash.  
 
   - **Povoleno** (*výchozí*)
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Není nakonfigurováno**
 
   Pokud je nastavené na *povoleno* , můžete nakonfigurovat následující nastavení.
@@ -93,7 +93,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   Povolí použití seznamu, který určuje rozšíření, která uživatelé nemůžou instalovat na Microsoft Edge. Když se seznam používá, všechna nastavení v seznamu, která byla dříve nainstalována, jsou zakázána a uživatel je nemůže povolit. Odeberete-li položku ze seznamu blokovaných přípon, bude tato přípona automaticky znovu povolena kdekoli, kde byla dříve nainstalována.
 
   - **Povoleno** (*výchozí*) – povolí blokování rozšíření pomocí seznamu.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Nenakonfigurováno** – uživatelé můžou instalovat jakékoli rozšíření v Microsoft Edge.
   
   Pokud je nastavené na *povoleno*, můžete nakonfigurovat následující nastavení definující seznam rozšíření, která mají být zablokovaná.
@@ -105,12 +105,12 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 - **Povolí hostitelům nativního zasílání zpráv na úrovni uživatele (nainstalované bez oprávnění správce).**  
   Povoluje instalaci nativních hostitelů zasílání zpráv na úrovni uživatele.
 
-  - **Enabled** (Povoleno)
+  - **Povoleno**
   - **Zakázáno** (*výchozí*) – Microsoft Edge používá pouze nativní hostitele zasílání zpráv nainstalované na úrovni systému.
   - **Nenakonfigurováno** – Microsoft Edge umožňuje používat nativní hostitele zasílání zpráv na úrovni uživatele.
 
 - **Povolit ukládání hesel do Správce hesel**  
-  Microsoft Edge CSP: [browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Povolí Microsoft Edge ukládat hesla uživatelů.
 
@@ -119,7 +119,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   - **Nenakonfigurováno** – uživatelé můžou ukládat hesla a tuto funkci vypnout.
 
 - **Zabránit obcházení výzev filtru SmartScreen v programu Microsoft Defender pro weby**  
-  CSP: [browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP: [browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Rozhodněte, jestli uživatelé můžou potlačit upozornění filtru SmartScreen v programu Microsoft Defender o potenciálně škodlivých webech.
 
@@ -128,7 +128,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   - **Není nakonfigurováno** Uživatelé můžou ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a pokračovat v lokalitě.
 
 - **Zabránit obcházení upozornění filtru SmartScreen v programu Microsoft Defender o souborech ke stažení**  
-  CSP: [browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Určete, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Microsoft Defender o neověřených souborech ke stažení.
 
@@ -143,10 +143,10 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   - **Zakázáno** – uživatelé můžou odhlásit izolaci webu. Izolace webu není vypnutá.
   - **Nenakonfigurováno** – uživatelé můžou odhlásit izolaci lokality. Izolace webu není vypnutá.
 
-  Microsoft Edge podporuje taky zásady [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) , které můžou izolovat další, jemnější navýšení zdroje.  Intune nepodporuje konfiguraci zásad IsolateOrigins.
+  Microsoft Edge podporuje taky zásady [IsolateOrigins](/deployedge/microsoft-edge-policies#isolateorigins) , které můžou izolovat další, jemnější navýšení zdroje.  Intune nepodporuje konfiguraci zásad IsolateOrigins.
   
 - **Konfigurovat filtr SmartScreen v programu Microsoft Defender**  
-  CSP: [browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP: [browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   Filtr SmartScreen v programu Microsoft Defender poskytuje varovné zprávy, které usnadňují ochranu uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem. Ve výchozím nastavení je filtr SmartScreen v programu Microsoft Defender zapnutý.
   
@@ -166,7 +166,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   Tato zásada je dostupná jenom v instancích systému Windows, které jsou připojené k doméně Microsoft Active ředitele, nebo k instancím Windows 10 pro nebo Enterprise zaregistrovaným pro správu zařízení.
 
 - **Povolí uživatelům pokračovat ze stránky s upozorněním SSL.**  
-   CSP: [browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP: [browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge zobrazí stránku upozornění, když uživatelé navštíví weby s chybami SSL.
   - **Povoleno** – uživatelé můžou kliknout na stránky s upozorněními.
@@ -177,7 +177,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
   Povolte možnost nastavit minimální podporovanou verzi SSL.
 
   - **Povoleno** (*výchozí*) – povolí přístup k dalšímu nastavení, kde ZAdáte minimální verzi TLS, která se má použít.
-  - **Disabled** (Zakázáno)
+  - **Zakázáno**
   - **Nenakonfigurováno** – Microsoft Edge používá výchozí minimální verzi *TLS 1,0*.
 
   Pokud je nastavené na *povoleno*, můžete TLS nakonfigurovat pomocí následujícího nastavení.
@@ -193,7 +193,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 
 - **Zabránit obcházení výzev filtru SmartScreen v programu Microsoft Defender pro weby**  
   **Výchozí**: povoleno  
-  Microsoft Edge CSP: [browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  Microsoft Edge CSP: [browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Nastavení této zásady umožňuje určit, jestli uživatelé můžou potlačit upozornění filtru SmartScreen v programu Microsoft Defender o potenciálně škodlivých webech. 
   - Pokud toto nastavení povolíte, uživatelé nebudou moct ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a jejich pokračování na webu bude zablokováno. 
@@ -213,7 +213,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 
 - **Zabránit obcházení upozornění filtru SmartScreen v programu Microsoft Defender o souborech ke stažení**  
   **Výchozí**: povoleno  
-  Microsoft Edge CSP: [browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  Microsoft Edge CSP: [browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Tato zásada vám umožní určit, jestli můžou uživatelé potlačit upozornění filtru SmartScreen v programu Microsoft Defender o neověřených souborech ke stažení.
   - Pokud tuto zásadu povolíte, uživatelé ve vaší organizaci nemůžou ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a nebudou moct dokončit neověřené soubory ke stažení.
@@ -221,13 +221,13 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 
 - **Povolí uživatelům pokračovat ze stránky s upozorněním SSL.**  
   **Výchozí**: zakázáno  
-  Microsoft Edge CSP: [browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  Microsoft Edge CSP: [browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge zobrazí stránku upozornění, když uživatelé navštíví weby s chybami SSL. Pokud nastavíte tuto zásadu na *povolenou* nebo *nenakonfigurovanou*, můžou uživatelé kliknout na tyto stránky s upozorněními. Pokud je tato zásada *zakázaná*, uživatelé budou mít možnost kliknout na jakoukoli stránku s upozorněním. 
 
 - **Výchozí nastavení Adobe Flash**  
   **Výchozí**: povoleno  
-  Microsoft Edge CSP: [browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)a [browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  Microsoft Edge CSP: [browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)a [browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   Určuje, jestli weby, které nejsou pokryté ' PluginsAllowedForUrls ' nebo ' PluginsBlockedForUrls ', můžou automaticky spustit modul plug-in Adobe Flash. 
 
@@ -264,7 +264,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 
 - **Povolit ukládání hesel do Správce hesel**  
   **Výchozí**: zakázáno  
-  Microsoft Edge CSP: [browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Povolí Microsoft Edge ukládat hesla uživatelů.
   - Pokud tuto zásadu povolíte, můžou si uživatelé ukládat svoje hesla na Microsoft Edge. Při příštím návštěvě webu bude Microsoft Edge automaticky zadávat heslo.
@@ -288,7 +288,7 @@ Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozíc
 
 - **Konfigurovat filtr SmartScreen v programu Microsoft Defender**  
   **Výchozí**: povoleno  
-  Microsoft Edge CSP: [browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  Microsoft Edge CSP: [browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   Nastavením této zásady lze nakonfigurovat, zda má být filtr SmartScreen v programu Microsoft Defender zapnut. Filtr SmartScreen v programu Microsoft Defender poskytuje varovné zprávy, které vám pomůžou ochránit uživatele před potenciálními podvodnými zprávami a škodlivým softwarem.
   

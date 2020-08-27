@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991021"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914731"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Přehled řešení potíží s profily certifikátů SCEP pomocí Microsoft Intune
 
@@ -58,7 +58,7 @@ Následující obrázek ukazuje základní přehled procesu komunikace SCEP v In
 
 6. [Vytváření sestav nasazení do Intune](troubleshoot-scep-certificate-reporting.md) Intune Certificate Connector hlásí událost vystavení certifikátu do Intune.
 
-## <a name="log-files"></a>Soubory protokolů
+## <a name="log-files"></a>Soubory protokolu
 
 Pokud chcete identifikovat problémy pro pracovní postup pro komunikaci a zřizování certifikátů, Projděte si soubory protokolů z serverové infrastruktury i ze zařízení. Pozdější oddíly pro řešení potíží s profily certifikátů SCEP odkazují na soubory protokolu, na které se odkazuje v této části.
 
@@ -80,7 +80,7 @@ Následující seznam obsahuje protokoly nebo konzoly, na které se odkazuje v n
 
 - **NDESConnector_date_time. svclog**:
 
-  Tento protokol zobrazuje komunikaci z Microsoft Intune Certificate Connector do cloudové služby Intune. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
+  Tento protokol zobrazuje komunikaci z Microsoft Intune Certificate Connector do cloudové služby Intune. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
 
   Související klíč registru: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ Následující seznam obsahuje protokoly nebo konzoly, na které se odkazuje v n
 
 - **CertificateRegistrationPoint_date_time. svclog**:
 
-  Tento protokol zobrazuje modul zásad NDES, který přijímá a ověřuje žádosti o certifikát. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
+  Tento protokol zobrazuje modul zásad NDES, který přijímá a ověřuje žádosti o certifikát. K zobrazení tohoto souboru protokolu můžete použít [Nástroj Prohlížeč trasování služby](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) .
 
   Umístění: na serveru, který je hostitelem NDES, na adrese *% program_files% \ Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -148,4 +148,4 @@ Na zařízení otevřete **Prohlížeč událostí**  >  **aplikace a protokoly 
 
 ## <a name="next-steps"></a>Další kroky
 
-Kontrola [nasazení profilů certifikátů SCEP](troubleshoot-scep-certificate-profile-deployment.md) 
+Kontrola [nasazení profilů certifikátů SCEP](troubleshoot-scep-certificate-profile-deployment.md)

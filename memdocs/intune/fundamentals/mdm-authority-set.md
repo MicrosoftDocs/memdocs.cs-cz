@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 5d4826936245790c951b40c38fde6e0a90f51e23
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614732"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915598"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -34,7 +34,7 @@ Možné konfigurace:
 
 - **Intune Standalone** – jedná se o pouze cloudovou správu, kterou můžete nakonfigurovat pomocí portálu Azure Portal. Zahrnuje celou sadu možností, které Intune nabízí. [Nastavte autoritu MDM v konzole Intune](#set-mdm-authority-to-intune).
 
-- **Spoluspráva Intune** – integrace cloudového řešení Intune s Configuration Manager pro zařízení s Windows 10. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Konfigurace automatického zápisu zařízení do Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
+- **Spoluspráva Intune** – integrace cloudového řešení Intune s Configuration Manager pro zařízení s Windows 10. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Konfigurace automatického zápisu zařízení do Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
 - **Základní mobilita a zabezpečení pro Office 365** – Pokud máte tuto konfiguraci aktivovanou, uvidíte autoritu MDM nastavenou na "Office 365". Pokud chcete začít používat Intune, budete si muset koupit licence Intune.
 

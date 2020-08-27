@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663425"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913439"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ Podrobnosti v tomto článku se týkají verze 3 standardních hodnot ATP v prog
 
 Směrný plán rozšířené ochrany před internetovými útoky v programu Microsoft Defender je dostupný, když vaše prostředí splňuje požadavky na používání [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
-Tato standardní hodnota je optimalizovaná pro fyzická zařízení a v tuto chvíli se nedoporučuje používat na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích. Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+Tato standardní hodnota je optimalizovaná pro fyzická zařízení a v tuto chvíli se nedoporučuje používat na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích. Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
 
 ## <a name="application-guard"></a>Ochrana Application Guard
 
-Další informace najdete v tématu [WINDOWSDEFENDERAPPLICATIONGUARD CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) v dokumentaci k systému Windows.  
+Další informace najdete v tématu [WINDOWSDEFENDERAPPLICATIONGUARD CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) v dokumentaci k systému Windows.  
 
 Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard chrání vaše prostředí od webů, které nedůvěřují vaší organizaci. Když uživatelé navštíví weby, které nejsou uvedené ve vaší izolované síti, lokality se otevřou v rámci virtuální relace procházení technologie Hyper-V. Důvěryhodné lokality jsou definovány pomocí hranice sítě.  
 
@@ -89,7 +89,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
     - **Povoluje kopírování a vkládání mezi počítačem a prohlížečem** – neexistuje žádný blok pro obsah.
 
 - **Zásady izolace sítě systému Windows**  
-  CSP: [zásady CSP – NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [zásady CSP – NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Zadejte seznam *domén sítě*, což jsou podnikové prostředky hostované v cloudu, které Application Guard považuje za podnikové lokality.
   - **Konfigurace** (*výchozí*)
@@ -102,7 +102,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
 
 ## <a name="bitlocker"></a>BitLocker
 
-Další informace najdete v dokumentaci k Windows v části [nastavení zásady skupiny BitLockeru](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
+Další informace najdete v dokumentaci k Windows v části [nastavení zásady skupiny BitLockeru](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
 
 - **Vyžadovat šifrování paměťových karet (jenom mobilní zařízení)**  
   CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 ## <a name="dma-guard"></a>Ochrana DMA
 
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Tato zásada může poskytovat další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing.
   
@@ -302,10 +302,10 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
 ## <a name="endpoint-detection-and-response"></a>Zjištění a odpověď koncového bodu
 
-Další informace o následujících nastaveních najdete v tématu [WindowsAdvancedThreatProtection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP v dokumentaci k systému Windows.
+Další informace o následujících nastaveních najdete v tématu [WindowsAdvancedThreatProtection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP v dokumentaci k systému Windows.
 
 - **Sdílení ukázky pro všechny soubory**  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
   
@@ -313,7 +313,7 @@ Další informace o následujících nastaveních najdete v tématu [WindowsAdva
   - **Není nakonfigurováno**
 
 - **Urychlení četnosti vytváření sestav telemetrie**  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Urychlení generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender  
 
@@ -322,7 +322,7 @@ Další informace o následujících nastaveních najdete v tématu [WindowsAdva
 
 ## <a name="firewall"></a>Firewall
 
-Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) .
+Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel CSP brány firewall](/windows/client-management/mdm/firewall-csp) .
 
 - **Zakázat stavovou protokol FTP (File Transfer Protocol) (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Ve výchozím nastavení je tato hodnota nastavená na **2 dop**.
 
 - **Konfigurace nízké priority procesoru pro naplánovaná prohledávání**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Ano** (*výchozí*)
   - **Není nakonfigurováno**
@@ -630,7 +630,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   Nakonfigurujte počet dní, po které se mají položky uchovávat ve složce karantény, než se odeberou. Výchozí hodnota je nula (**0**), což vede k tomu, že se soubory v karanténě nikdy neodstraňují.
 
 - **Plán kontroly systémových úloh Defenderu**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Naplánujte, který den v Defenderu prohledává zařízení. Ve výchozím nastavení je vyhledávání **definováno uživatelem** , ale může být nastaveno *na každý den v týdnu*nebo na možnost *bez naplánovaného prohledávání*.
 
@@ -754,7 +754,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Nenakonfigurováno** – klient se vrátí k výchozímu, což zakáže kontrolu síťových souborů.
   
 - **Akce potenciálně nežádoucí aplikace v Defenderu**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   Zadejte úroveň detekce potenciálně nežádoucích aplikací (PUAs). Program Defender upozorní uživatele, když se stahuje potenciálně nežádoucí software nebo se pokouší o instalaci na zařízení.
   - **Výchozí ze zařízení**
@@ -762,7 +762,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
   - **Audit** -Defender detekuje potenciálně nežádoucí aplikace, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Defender přijal, pomocí hledání událostí, které vytvořil Defender v Prohlížeč událostí.
 
 - **Zapnutí ochrany poskytované cloudem**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Ve výchozím nastavení Defender v zařízeních s Windows 10 Desktop odesílá společnosti Microsoft informace o případných problémech, které najde. Microsoft analyzuje tyto informace, aby se dozvěděly Další informace o problémech, které se týkají vás a dalších zákazníků, a nabízí Vylepšená řešení.
 
@@ -879,7 +879,7 @@ CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
-Další informace najdete v tématu [PASSPORTFORWORK CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) v dokumentaci k systému Windows.
+Další informace najdete v tématu [PASSPORTFORWORK CSP](/windows/client-management/mdm/passportforwork-csp) v dokumentaci k systému Windows.
 
 - **Blokovat Windows Hello pro firmy**  
 

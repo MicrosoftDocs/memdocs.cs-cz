@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146027"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913456"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -177,7 +177,7 @@ Podporované platformy a profily:
 ### <a name="microsoft-defender-application-control"></a>Řízení aplikací v programu Microsoft Defender
 
 - **Řízení aplikací v aplikaci Locker**  
-  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Vynutilit komponenty a aplikace ze Storu**
@@ -250,7 +250,7 @@ Podporované platformy a profily:
 
   Toto pravidlo ASR se řídí pomocí následujícího identifikátoru GUID: 92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího nastavení systému Windows, které je vypnuté.
-  - **Blok** -makro sady Office je blokováno pomocí Win32 API volání.
+  - **Blok**  -makro sady Office je blokováno pomocí Win32 API volání.
   - **Režim auditu** – místo blokování se vyvolají události systému Windows.
 
 - **Blokování aplikací pro komunikaci Office z vytváření podřízených procesů**  
@@ -397,7 +397,7 @@ Podporované platformy a profily:
   - **Ano** – zablokuje přímý přístup do paměti (DMA) pro všechny bezplatných portů PCI pro příjem dat, dokud se uživatel do Windows nepřihlásí. Jakmile se uživatel přihlásí, systém Windows zobrazí zařízení PCI připojená k portům plug-in hostitele. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už byla ve výčtu v době, kdy byl počítač odemčený, budou dál fungovat, dokud nebude odpojená.
 
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Tato zásada může poskytovat další zabezpečení proti externímu zařízení podporujícím technologii DMA. Umožňuje lepší kontrolu nad výčtem externích zařízení s technologií DMA, která nejsou kompatibilní s přemapováním DMA/izolací paměti zařízení a sandboxing.
 
@@ -408,43 +408,43 @@ Podporované platformy a profily:
   - **Povolení všech**
 
 - **Blokovat připojení Bluetooth**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – zablokuje připojení Bluetooth k zařízení a.
 
 - **Blokování zjistitelnosti Bluetooth**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – zabrání zařízení, aby bylo zjistitelné jinými zařízeními podporujícími technologii Bluetooth.
 
 - **Zablokovat předběžné párování Bluetooth**  
-  CSP: [Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP: [Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – zabraňuje automatickému párování specifických zařízení Bluetooth s hostitelským zařízením.
 
 - **Blokovat reklamu přes Bluetooth**  
-  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – zabrání zařízení v posílání reklamy Bluetooth.  
 
 - **Blokování blízkých připojení Bluetooth**  
-  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) zablokovat uživatelům používání páru SWIFT a dalších scénářů založených na blízkosti
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) zablokovat uživatelům používání páru SWIFT a dalších scénářů založených na blízkosti
 
   - **Nenakonfigurováno** (*výchozí*)
   - **Ano** – zabrání uživateli v použití páru SWIFT a dalších scénářů založených na blízkosti.  
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Povolené služby Bluetooth**  
-  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
-  Další informace o seznamu služeb najdete v tématu [Průvodce využitím ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) .
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  Další informace o seznamu služeb najdete v tématu [Průvodce využitím ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) .
 
   - **Přidat** – zadejte povolené služby a profily Bluetooth jako šestnáctkové řetězce, například `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
-  - **Import** – importujte soubor. csv, který obsahuje seznam služeb a profilů Bluetooth, jako šestnáctkové řetězce, například`{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+  - **Import** – importujte soubor. csv, který obsahuje seznam služeb a profilů Bluetooth, jako šestnáctkové řetězce, například `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
 
 ## <a name="exploit-protection-profile"></a>Profil ochrany před zneužitím
 

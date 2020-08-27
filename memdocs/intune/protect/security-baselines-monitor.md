@@ -16,16 +16,16 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461789"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914867"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Sledujte standardní hodnoty a profily zabezpečení v Microsoft Intune
 
-Intune nabízí několik možností monitorování standardních hodnot zabezpečení. Můžete:
+Intune nabízí několik možností monitorování standardních hodnot zabezpečení. Další možnosti:
 
 - Sledujte základní hodnoty zabezpečení a všechna zařízení, která se shodují (nebo se neshodují) s doporučenými hodnotami.
 - Monitorujte profil standardních hodnot zabezpečení, který se týká vašich uživatelů a zařízení.
@@ -168,7 +168,7 @@ Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické 
 
   Podívejte se například na oddíl **zaregistrované zdrojové konfigurace a cílové prostředky** nebo na oddíl **nespravované zásady** . Můžete získat představu o tom, proč způsobuje chybu nebo konflikt.
 
-[Diagnostika selhání MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) poskytuje další informace o této předdefinované sestavě.
+[Diagnostika selhání MDM ve Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) poskytuje další informace o této předdefinované sestavě.
 
 > [!TIP]
 >

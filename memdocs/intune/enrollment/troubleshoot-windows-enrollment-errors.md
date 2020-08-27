@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 80d3a0d66821037fba53813b8ae7b1e415e4f29a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795580"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915445"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
 Tento článek pomáhá správcům Intune pochopit a řešit problémy při registraci zařízení s Windows v Intune.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Než začnete řešit potíže, je důležité shromáždit některé základní informace. Tyto informace vám pomůžou lépe porozumět problému a zkrátit dobu, po kterou je možné najít řešení.
 
 Shromážděte následující informace o problému:
@@ -162,7 +162,7 @@ Chyba 80180026: něco se pokazilo. Potvrďte, že používáte správné přihla
 K vyřešení tohoto problému použijte jednu z následujících metod:
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Zakáže automatickou registraci MDM v Azure.
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).    
+1. Přihlaste se na [Azure Portal](https://portal.azure.com/).    
 2. Přejít na **Azure Active Directory**  >  **mobility (MDM a mam)**  >  **Microsoft Intune**.    
 3. Nastavte **obor uživatele MDM** na **žádný**a pak klikněte na **Uložit**.    
      
@@ -216,9 +216,9 @@ Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupu
 
    Pokud zvolíte **vybrané** **, klikněte na vybrat a**potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
  
-Další informace o tom, jak vytvořit zřizovací balíček pro Windows Configuration Designer, najdete v tématu [Vytvoření zřizovacího balíčku pro Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
+Další informace o tom, jak vytvořit zřizovací balíček pro Windows Configuration Designer, najdete v tématu [Vytvoření zřizovacího balíčku pro Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package).
 
-Další informace o tom, jak nainstalovat aplikaci školních počítačů, najdete v tématu [použití aplikace s nastavením školních počítačů](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
+Další informace o tom, jak nainstalovat aplikaci školních počítačů, najdete v tématu [použití aplikace s nastavením školních počítačů](/education/windows/use-set-up-school-pcs-app).
 
 
 ### <a name="auto-mdm-enroll-failed"></a>Automatický zápis MDM: selhání 
@@ -276,7 +276,7 @@ Ujistěte se, že formát názvů splňuje následující požadavky:
 **Příčina:** K tomuto problému dochází, pokud máte proxy, bránu firewall nebo jiné síťové zařízení blokující přístup k poskytovateli identity (IdP).
 
 #### <a name="resolution"></a>Řešení
-Ujistěte se, že požadovaný přístup k internetovým službám pro autopilota není blokovaný. Další informace najdete v tématu [požadavky na síť Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+Ujistěte se, že požadovaný přístup k internetovým službám pro autopilota není blokovaný. Další informace najdete v tématu [požadavky na síť Windows autopilot](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Registrace zařízení autopilotu se nezdařila s chybou HRESULT = 0x80180022
 
@@ -294,7 +294,7 @@ Upgradujte čip TPM na verzi 2,0.
 
 Pokud se problém opakuje, ověřte, jestli je stejné zařízení ve dvou přiřazených skupinách, přičemž každé skupině se přiřadí jiný profil pro autopilot. Pokud se nachází ve dvou skupinách, určete, který profil pro autopilot by se měl na zařízení použít, a pak odeberte přiřazení druhého profilu.
 
-Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>Zabezpečení hardwaru (Chyba: 0x800705b4).
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>Řešení
 Ujistěte se, že cílové zařízení splňuje obě požadavky popsané v části **Příčina** .
 
-Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>Něco se nepovedlo. Kód chyby 80070774.
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění k organizační jednotce, kde se vytváří zařízení Windows autopilotu. Další informace najdete v tématu [zvýšení limitu účtu počítače v organizační jednotce](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění k organizační jednotce, kde se vytváří zařízení Windows autopilotu. Další informace najdete v tématu [zvýšení limitu účtu počítače v organizační jednotce](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
 1. Otevřete položku **Uživatelé a počítače služby Active Directory (DSA. msc)**.
 2. Klikněte pravým tlačítkem na organizační jednotku, kterou použijete k vytvoření hybridních počítačů připojených k Azure AD > **delegování ovládacího prvku**.
@@ -377,7 +377,7 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 8. Zaškrtněte políčko **pouze následující objekty ve složce** a potom vyberte **objekty počítače**, **vytvořte vybrané objekty v této složce**a zrušte zaškrtnutí políček **Odstranit vybrané objekty v této** složce.
 9. Vyberte **Další**.
 10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
-11. Vyberte **Další**  >  **Dokončit**.
+11. Vyberte **Další** > **Dokončit**.
 
 ### <a name="the-enrollment-status-page-times-out-before-the-sign-in-screen"></a>Časový limit stránky stavu registrace vypršel před přihlašovací obrazovkou.
 
@@ -398,4 +398,4 @@ Zkuste jednu z těchto možností:
 - [Podívejte se na blog týmu podpory Microsoft Intune.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Podívejte se na blog Microsoft Enterprise mobility and Security.](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Získat podporu pro Microsoft Intune](../fundamentals/get-support.md)
-- [Najít chyby při registraci spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [Najít chyby při registraci spolusprávy](/configmgr/comanage/how-to-monitor#enrollment-errors)

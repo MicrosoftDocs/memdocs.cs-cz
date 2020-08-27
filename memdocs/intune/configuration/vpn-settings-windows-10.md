@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461348"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915496"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
@@ -82,14 +82,14 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
 
     - **Certifikáty počítače** (jenom IKEv2): Vyberte existující profil certifikátu klienta zařízení pro ověření zařízení.
 
-      Pokud používáte [připojení zařízení pomocí tunelového propojení](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), musíte tuto možnost vybrat.
+      Pokud používáte [připojení zařízení pomocí tunelového propojení](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config), musíte tuto možnost vybrat.
 
       Informace o vytváření profilů certifikátů v Intune najdete v tématu [použití certifikátů k ověřování](../protect/certificates-configure.md).
 
     - **EAP** (jenom IKEv2): Vyberte existující profil certifikátu klienta EAP (Extensible Authentication Protocol), který se má ověřit. V nastavení **protokolu EAP XML** zadejte parametry ověřování.
   - **Zapamatovat si přihlašovací údaje při každém přihlášení**: při zvolení této možnosti se přihlašovací údaje uloží do mezipaměti.
   - **Vlastní XML**: zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
-  - **XML protokolu EAP**: Zadejte libovolné příkazy protokolu EAP XML, které KONFIGURUJÍ připojení VPN. Další informace najdete v tématu [Konfigurace protokolu EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+  - **XML protokolu EAP**: Zadejte libovolné příkazy protokolu EAP XML, které KONFIGURUJÍ připojení VPN. Další informace najdete v tématu [Konfigurace protokolu EAP](/windows/client-management/mdm/eap-configuration).
 
   - **Tunelové zařízení** (pouze IKEv2): **povolí možnost** připojit zařízení k síti VPN automaticky bez zásahu uživatele nebo přihlášení. Toto nastavení platí pro počítače, které jsou připojené k Azure Active Directory (AD).
 
@@ -159,7 +159,7 @@ Příklad:
 ### <a name="writing-custom-xml"></a>Psaní vlastních příkazů XML
 Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
 
-Další informace o vytváření vlastních dat XML protokolu EAP najdete v tématu [Konfigurace protokolu EAP](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+Další informace o vytváření vlastních dat XML protokolu EAP najdete v tématu [Konfigurace protokolu EAP](/windows/client-management/mdm/eap-configuration).
 
 ## <a name="apps-and-traffic-rules"></a>Pravidla pro aplikace a síťové přenosy
 

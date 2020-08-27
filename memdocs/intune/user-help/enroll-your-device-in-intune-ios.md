@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: fd7807d332e02e5511dd3555ccc596d6f1bd7923
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048034"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914646"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -54,7 +54,7 @@ Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolov
 ### <a name="setting-notifications"></a>Nastavení oznámení  
 Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení (například vícefaktorové ověřování), aplikace Portál společnosti vás o něm informuje. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
 
-Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
 ## <a name="prerequisties"></a>Prerequisties  
 
@@ -188,4 +188,4 @@ Pokud jste správcem IT a máte potíže s registrací zařízení, přečtěte 
 ## <a name="next-steps"></a>Další kroky  
 Najděte aplikace, které vám pomůžou při práci nebo ve škole. Seznamte se s tím, [jak jsou aplikace zpřístupněny](use-managed-apps-on-your-device-ios.md) prostřednictvím portál společnosti.  
 
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
