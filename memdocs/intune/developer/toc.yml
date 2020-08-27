@@ -67,13 +67,13 @@
                   href: reports-ref-user-device.md
                 - name: Referenční informace pro entitu uživatele
                   href: reports-ref-user.md
-        - name: Přesunutí dat účtu datového skladu Intune
+        - name: Přesunutí vašich dat účtu datového skladu Intune
           href: data-warehouse-account-move.md
     - name: Přístup k rozhraním Intune API v Microsoft Graphu
       items:
         - name: Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
           href: intune-graph-apis.md
         - name: Referenční dokumentace k rozhraní Intune API
-          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: Rozhraní Graph API používaná ke konfiguraci zařízení
           href: graph-apis-used-by-intune-device-configuration-windows.md
