@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c77a7355d63eb7f670949846c15670148b61c971
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165834"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907173"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
 
@@ -106,7 +106,7 @@ Aplikace Office, jako je například Outlook a OneDrive, mají chování s více
 
 Pokud používáte pracovní profily, možná budete chtít zakázat toto chování s více identitami. Když ho zakážete, budou se s označením instance aplikace v pracovním profilu moct konfigurovat jenom s identitou organizace. Použijte nastavení konfigurace aplikace povolených účtů pro podporu aplikací Office pro Android.
 
-Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="when-to-use-intune-app"></a>Kdy použít aplikaci Intune
 
@@ -129,7 +129,7 @@ Někteří zákazníci nepotřebují žádnou formu správy zařízení, včetn�
 
 Například zákazníci, kteří mají nebo mají uživatele v Číně, nemůžou používat správu zařízení s Androidem, protože jsou blokované služby Google. V takovém případě použijte k ochraně před únikem informací aplikaci Intune.
 
-## <a name="summary"></a>Souhrn
+## <a name="summary"></a>Shrnutí
 
 V Intune jsou pro váš program pro Android BYOD k dispozici obě pracovní profily APP-WE i Android Enterprise. Pokud chcete zvolit APP-WE nebo pracovní profily, záleží na vašich firmách a požadavcích na použití. V souhrnu použijte pracovní profily, pokud potřebujete aktivity MDM na spravovaných zařízeních, jako je nasazení certifikátů, nabízení aplikace atd. Použijte APP-WE, pokud nechcete nebo nemůžete spravovat zařízení a používáte jenom aplikace s podporou aplikací Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 00d515743f2391d9c232b9ae5d97062a01302c48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093783"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908815"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Nastavení registrace zařízení se systémem iOS/iPadOS pomocí nástroje Apple Configurator
 
@@ -35,7 +35,7 @@ Intune podporuje registraci zařízení se systémem iOS/iPadOS pomocí [Apple C
 
 Metoda registrace pomocí Apple Configuratoru se nedá použít se [Správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Fyzický přístup k zařízením s iOS/iPadOS
 - [Nastavení autority pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
@@ -60,7 +60,7 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
 
 4. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
 
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Tato možnost je podporovaná jenom pro registraci Pomocníka s nastavením. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Zařízení musí mít přidruženého uživatele (pomocí Průvodce nastavením), aby mohlo dostat přístup k firemním datům a e-mailu. Tato možnost je podporovaná jenom pro registraci Pomocníka s nastavením. Přidružení uživatelů vyžaduje [koncový bod WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Přečtěte si další informace](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, které vyžadují přidružení uživatele (včetně aplikace Portál společnosti používané pro instalaci obchodních aplikací), nebudou fungovat. Vyžaduje se pro přímou registraci.
 
@@ -171,8 +171,3 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
 6. Na zařízení se systémem iOS/iPadOS otevřete **Nastavení** a přejdete na **Obecné**  >  **Device Management**  >  **Profil správy**správy zařízení. Potvrďte, že je uvedená instalace profilu, a zkontrolujte omezení zásad pro iOS/iPadOS a nainstalované aplikace. Zobrazení omezení vyplývajících ze zásad a aplikací na zařízení může trvat až 10 minut.
 
 7. Distribuujte zařízení. Zařízení s iOS/iPadOS je teď zaregistrované v Intune a spravované.
-
-
-
-
-

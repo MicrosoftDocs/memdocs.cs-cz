@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443845"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907748"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -42,7 +42,7 @@ Aplikaci Power BI dodržování předpisů můžete použít k načtení interak
 Jsou tu také zvýrazněné trendy pro registraci, dodržování předpisů, konfigurační profil zařízení a aktualizace softwaru. Ukázkové grafy a sestavy používají uživatelsky přívětivé filtry plátna. Pokud chcete použít rozšířené filtry, podívejte se na podokno **Filtr** v aplikaci Power BI Desktop.
 
 > [!NOTE]
-> Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Můžete například použít šablonu sestavy dodržování předpisů Power BI v 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [aktualizace aplikace šablony](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [aplikace pro dodržování předpisů v Intune (datový sklad)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)a [co jsou Power BIch aplikací šablon](https://docs.microsoft.com/power-bi/service-template-apps-overview) .
+> Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Můžete například použít šablonu sestavy dodržování předpisů Power BI v 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [aktualizace aplikace šablony](/power-bi/service-template-apps-install-distribute#update-a-template-app), [aplikace pro dodržování předpisů v Intune (datový sklad)](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)a [co jsou Power BIch aplikací šablon](/power-bi/service-template-apps-overview) .
 
 Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak používat odkaz OData s Power BI.
 

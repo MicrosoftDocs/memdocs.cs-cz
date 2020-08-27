@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262536"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912402"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -91,7 +91,7 @@ Pokud k nasazení skriptů PowerShellu nebo aplikací Win32 používáte Intune,
 
 ## <a name="windows-push-notification-services-wns"></a>Služba nabízených oznámení Windows (WNS)  
 
-U zařízení s Windows spravovaných pomocí Intune spravovaných pomocí správy mobilních zařízení (MDM) musí akce zařízení a další okamžité aktivity vyžadovat používání služby nabízených oznámení Windows (WNS). Další informace najdete v tématu [Povolení přenosů oznámení systému Windows prostřednictvím podnikových bran firewall](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+U zařízení s Windows spravovaných pomocí Intune spravovaných pomocí správy mobilních zařízení (MDM) musí akce zařízení a další okamžité aktivity vyžadovat používání služby nabízených oznámení Windows (WNS). Další informace najdete v tématu [Povolení přenosů oznámení systému Windows prostřednictvím podnikových bran firewall](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## <a name="delivery-optimization-port-requirements"></a>Požadavky na port Optimalizace doručení  
 
@@ -101,7 +101,7 @@ Pro přenosy peer-to-peer používá Optimalizace doručení 7680 pro protokol T
 
 ### <a name="proxy-requirements"></a>Požadavky na proxy server  
 
-Chcete-li použít optimalizaci doručování, je nutné, abyste povolili požadavky na rozsah bajtů. Další informace najdete v tématu [požadavky na proxy serveru pro web Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+Chcete-li použít optimalizaci doručování, je nutné, abyste povolili požadavky na rozsah bajtů. Další informace najdete v tématu [požadavky na proxy serveru pro web Windows Update](/windows/deployment/update/windows-update-troubleshooting).
 
 ### <a name="firewall-requirements"></a>Požadavky na bránu firewall  
 
@@ -125,10 +125,10 @@ Další informace najdete v tématu [porty TCP a UDP společnosti Apple použív
 
 ## <a name="android-port-information"></a>Informace o portu Android
 
-V závislosti na tom, jak se rozhodnete spravovat zařízení s Androidem, možná budete muset otevřít porty Google Android Enterprise nebo nabízené oznámení Androidu. Další informace o podporovaných metodách správy Androidu najdete v [dokumentaci k registraci Androidu](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+V závislosti na tom, jak se rozhodnete spravovat zařízení s Androidem, možná budete muset otevřít porty Google Android Enterprise nebo nabízené oznámení Androidu. Další informace o podporovaných metodách správy Androidu najdete v [dokumentaci k registraci Androidu](../enrollment/android-enroll.md). 
 
 > [!NOTE]
-> Protože Google Mobile Services není k dispozici v Číně, zařízení v Číně spravovaná službou Intune nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří: Google Play Ochrana zařízení, jako je SafetyNet ověřování zařízení, Správa aplikací z Obchod Google Play funkcí Android Enterprise (viz tato [dokumentace k Google](https://support.google.com/work/android/answer/6270910)). Kromě toho Portál společnosti Intune aplikace pro Android používá Google Mobile Services ke komunikaci se službou Microsoft Intune. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
+> Protože Google Mobile Services není k dispozici v Číně, zařízení v Číně spravovaná službou Intune nemůžou používat funkce, které vyžadují Google Mobile Services. Mezi tyto funkce patří: Google Play Ochrana zařízení, jako je SafetyNet ověřování zařízení, Správa aplikací z Obchod Google Play funkcí Android Enterprise (viz tato [dokumentace k Google](https://support.google.com/work/android/answer/6270910)). Kromě toho Portál společnosti Intune aplikace pro Android používá Google Mobile Services ke komunikaci se službou Microsoft Intune. Vzhledem k tomu, že služba Google Play Services není k dispozici v Číně, můžou některé úlohy vyžadovat dokončení až 8 hodin. Další informace najdete v tomto [článku](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable).
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune využívá pro nabízené oznámení Google Firebase Cloud Messaging (FCM
 
 ## <a name="endpoint-analytics"></a>Analýza koncového bodu
 
-Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+Další informace o požadovaných koncových bodech pro službu Endpoint Analytics najdete v tématu [konfigurace proxy serveru Endpoint Analytics](../../analytics/troubleshoot.md#bkmk_endpoints).

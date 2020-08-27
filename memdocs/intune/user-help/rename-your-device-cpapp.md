@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881151"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907646"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Přejmenování zařízení z aplikace Portál společnosti pro Windows
 Přejmenujte zařízení, aby bylo snazší ho na ostatních zařízeních rozpoznat. Aplikace Portál společnosti pro Windows vám umožňuje přejmenovat následující typy připojených zařízení:  
@@ -47,7 +47,7 @@ Pomocí následujícího postupu odeberte zařízení ze stránky **Detaily zař
      ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, stránka Detaily zařízení, pole místní nabídky Přejmenovat](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Přejmenování zařízení z místní nabídky zařízení  
-Pomocí následujícího postupu odeberte zařízení prostřednictvím akcí [místní nabídky](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+Pomocí následujícího postupu odeberte zařízení prostřednictvím akcí [místní nabídky](//windows/uwp/design/controls-and-patterns/menus).  
 
 1. Na **domovské stránce** aplikace Portál společnosti přejděte na **Moje zařízení**.
 
@@ -61,4 +61,3 @@ Pomocí následujícího postupu odeberte zařízení prostřednictvím akcí [m
      ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows, domovská stránka Nad zařízením se zobrazí pole místní nabídky Přejmenovat, do kterého uživatel může napsat nový název a může kliknout na Přejmenovat nebo Zrušit.](./media/1808_RenameApp_Popup.png)  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
-

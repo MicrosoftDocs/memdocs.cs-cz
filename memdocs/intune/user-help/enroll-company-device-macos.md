@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4a20e1b26df1d07a80d8919f8e59e0d9117f891d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6c437fbab8dd78540e8a87dd344df48aed307ed1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880262"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912130"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
@@ -36,7 +36,7 @@ Aby se nastavení správy zahájilo, zapněte zařízení a přihlaste se pomoc�
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos).  
+Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](/intune/enrollment/device-enrollment-program-enroll-macos).  
 
 ## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe94b838ea1da859ee651cf45717118c865a7cad
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 34c69a8263a76b83f81470c214e05a5e02dc873c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896084"
+ms.locfileid: "88916057"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -191,7 +191,7 @@ Nyní můžete spustit instalaci aplikace v reálném čase pro zařízení při
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Šablona sestavy dodržování předpisů Power BI V 2.0<!-- 636958 -->
-Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Správci mohou aktualizovat verzi šablony sestavy dodržování předpisů Power BI z verze 1.0 až V 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](../developer/reports-proc-get-a-link-powerbi.md) a [aktualizace šablony aplikace](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Další informace najdete v blogovém příspěvku [s oznámením o nové verzi sestavy dodržování předpisů Power BI s datovým skladem Intune](https://aka.ms/new_compliance_report).
+Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Power BI aplikace s malým nebo žádným kódováním a nasazovat je na jakéhokoli Power BIho zákazníka. Správci mohou aktualizovat verzi šablony sestavy dodržování předpisů Power BI z verze 1.0 až V 2.0. Verze 2.0 zahrnuje vylepšený návrh a také změny výpočtů a dat, která jsou v rámci šablony Surface. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](../developer/reports-proc-get-a-link-powerbi.md) a [aktualizace šablony aplikace](/power-bi/service-template-apps-install-distribute#update-a-template-app). Další informace najdete v blogovém příspěvku [s oznámením o nové verzi sestavy dodržování předpisů Power BI s datovým skladem Intune](https://aka.ms/new_compliance_report).
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>Týden od 13. července 2020 (2007 vydání služby)
@@ -200,10 +200,10 @@ Power BI šablonových aplikací umožňují Power BI partnerům vytvářet Powe
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Podpora konektoru On-Premises Exchange<!-- 7138486  -->
-Intune odebírá podporu funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto zákazníky společnost Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
+Intune odebírá podporu funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto zákazníky společnost Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
 
 #### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>S/MIME pro Outlook na zařízeních s iOS a Androidem bez registrace<!-- 6517155 -->
-Teď můžete povolit S/MIME pro Outlook na zařízeních s iOS a Androidem pomocí zásad konfigurace aplikací pro spravované aplikace. To umožňuje doručování zásad bez ohledu na stav registrace zařízení. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravované aplikace**. Kromě toho můžete zvolit, jestli chcete uživatelům dovolit, aby toto nastavení v Outlooku změnili. K automatickému nasazení certifikátů S/MIME do Outlooku pro iOS a Android se ale musí zařízení zaregistrovat. Obecné informace o S/MIME najdete v tématu [s/MIME – přehled pro podepsání a šifrování e-mailu v Intune](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Další informace o nastavení konfigurace Outlooku najdete v tématu [nastavení konfigurace Microsoft Outlooku](../apps/app-configuration-policies-outlook.md) a [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md). Informace o aplikaci Outlook pro iOS a Android S/MIME najdete v tématu [scénáře S/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) a [konfigurační klíče nastavení s/MIME](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
+Teď můžete povolit S/MIME pro Outlook na zařízeních s iOS a Androidem pomocí zásad konfigurace aplikací pro spravované aplikace. To umožňuje doručování zásad bez ohledu na stav registrace zařízení. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**  >  **spravované aplikace**. Kromě toho můžete zvolit, jestli chcete uživatelům dovolit, aby toto nastavení v Outlooku změnili. K automatickému nasazení certifikátů S/MIME do Outlooku pro iOS a Android se ale musí zařízení zaregistrovat. Obecné informace o S/MIME najdete v tématu [s/MIME – přehled pro podepsání a šifrování e-mailu v Intune](../protect/certificates-s-mime-encryption-sign.md). Další informace o nastavení konfigurace Outlooku najdete v tématu [nastavení konfigurace Microsoft Outlooku](../apps/app-configuration-policies-outlook.md) a [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](../apps/app-configuration-policies-managed-app.md). Informace o aplikaci Outlook pro iOS a Android S/MIME najdete v tématu [scénáře S/MIME](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) a [konfigurační klíče nastavení s/MIME](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -252,7 +252,7 @@ Platí pro:
 - Vlastníci zařízení s Androidem Enterprise, vyhrazená zařízení (COSU)
 
 #### <a name="administrative-templates-updated-for-microsoft-edge-84--7722068--"></a>Šablony pro správu aktualizované pro Microsoft Edge 84<!--7722068-->
-Nastavení ADMX dostupná pro Microsoft Edge se aktualizovala. Koncoví uživatelé teď můžou konfigurovat a nasazovat nová nastavení ADMX přidaná na Edge 84. Další informace najdete v [poznámkách k verzi Edge 84](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
+Nastavení ADMX dostupná pro Microsoft Edge se aktualizovala. Koncoví uživatelé teď můžou konfigurovat a nasazovat nová nastavení ADMX přidaná na Edge 84. Další informace najdete v [poznámkách k verzi Edge 84](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Registrace zařízení
@@ -610,7 +610,7 @@ Nyní můžete používat certifikáty pro podepisování S/MIME a šifrování 
 
 Tím se rozšíří podpora přidaná za poslední měsíc pro jiné verze Androidu (podpora podpisových a šifrovacích certifikátů S aplikací s Outlookem v Androidu). Tyto certifikáty můžete zřídit pomocí profilů certifikátů SCEP a PKCS.
 
-Další informace o této podpoře najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) v dokumentaci k Exchangi.
+Další informace o této podpoře najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) v dokumentaci k Exchangi.
 
 #### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Přidání odkazu na web podpory portálu společnosti na e-maily při nedodržení předpisů<!-- 7225498    -->
 Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
@@ -765,7 +765,7 @@ Platí pro:
 Nyní můžete přiřadit značky oboru k omezením registrace. Provedete to tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **Devices**  >  **omezení registrace**  >  **vytvořit omezení**. Vytvořte buď typ omezení, a zobrazí se stránka **značky oboru** . Další informace najdete v tématu [Nastavení omezení registrace](../enrollment/enrollment-restrictions-set.md).
 
 #### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Podpora autopilotu pro zařízení HoloLens 2<!--6305220  -->
-Windows autopilot teď podporuje zařízení HoloLens 2. Další informace o použití autopilotu pro HoloLens najdete v tématu [Windows autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot).
+Windows autopilot teď podporuje zařízení HoloLens 2. Další informace o použití autopilotu pro HoloLens najdete v tématu [Windows autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Správa zařízení
@@ -825,7 +825,7 @@ V Outlooku v Androidu teď můžete použít certifikáty pro podepisování S/M
 
 Brzy se připraví podpora pro zařízení s plnou správou pro Android Enterprise.
 
-Další informace o této podpoře najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) v dokumentaci k Exchangi.
+Další informace o této podpoře najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) v dokumentaci k Exchangi.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -861,7 +861,7 @@ Microsoft Endpoint Manager spojuje Configuration Manager a Intune s jednou konzo
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="microsoft-office-365-proplus-rename---6368143---"></a>systém Microsoft Office 365 přeplus přejmenovat<!-- 6368143 -->
-Systém Microsoft Office 365 ProPlus se přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/name-change). V naší dokumentaci na ni běžně odkazujeme jako na Microsoft 365 aplikace. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete sadu aplikací najít tak, že vyberete **aplikace**  >  **Windows**  >  **Přidat**. Informace o přidávání aplikací najdete v tématu [Přidání aplikací do Microsoft Intune](../apps/apps-add.md).
+Systém Microsoft Office 365 ProPlus se přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V naší dokumentaci na ni běžně odkazujeme jako na Microsoft 365 aplikace. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete sadu aplikací najít tak, že vyberete **aplikace**  >  **Windows**  >  **Přidat**. Informace o přidávání aplikací najdete v tématu [Přidání aplikací do Microsoft Intune](../apps/apps-add.md).
 
 <!-- ########################## -->
 ## <a name="week-of-april-13-2020-2004-service-release"></a>Týden od 13. dubna 2020 (2004 Service Release)
@@ -1226,7 +1226,7 @@ Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a
 
 - **Antivirus (Preview)**:
   - MacOS
-    - **Antivirová ochrana** – Správa [nastavení zásad](../protect/antivirus-microsoft-defender-settings-macos.md) pro MACOS pro správu ochrany [ATP v programu Microsoft Defender pro Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
+    - **Antivirová ochrana** – Správa [nastavení zásad](../protect/antivirus-microsoft-defender-settings-macos.md) pro MACOS pro správu ochrany [ATP v programu Microsoft Defender pro Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).
 
   - Windows 10 a novější:
     - **Antivirová ochrana v programu Microsoft Defender** – spravujte [nastavení zásad](../protect/antivirus-microsoft-defender-settings-windows.md) ochrany před cloudem, vyloučení antivirové ochrany, nápravy, možnosti kontroly a další.
@@ -1234,7 +1234,7 @@ Níže jsou uvedené nové typy zásad, které jsou všechny ve verzi Preview, a
       Antivirový profil pro *antivirovou ochranu v programu Microsoft Defender* je výjimka, která zavádí novou instanci nastavení, která se nachází jako součást profilu omezení zařízení. Tato nová nastavení antivirové ochrany:
 
         - Jsou stejná nastavení, která se nacházejí v omezeních zařízení, ale podporují třetí možnost konfigurace, která není k dispozici, pokud je nakonfigurovaná jako omezení zařízení.
-        - Platí pro zařízení, která jsou spoluspravovaná pomocí Configuration Manager, když je [posuvník úlohy spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) pro Endpoint Protection nastavený na Intune.
+        - Platí pro zařízení, která jsou spoluspravovaná pomocí Configuration Manager, když je [posuvník úlohy spolusprávy](/configmgr/comanage/how-to-switch-workloads) pro Endpoint Protection nastavený na Intune.
 
      Naplánujte *použití nového antivirového*  >  profilu*Microsoft Defenderu* místo konfigurace přes profil omezení zařízení.
 
@@ -1292,9 +1292,9 @@ Tato funkce se zavede na zákazníky ve verzi Preview globálně. Tato funkce by
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758--"></a>Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení<!-- 6317104, CM3555758-->
-Microsoft Endpoint Manager spojuje Configuration Manager a Intune s jednou konzolou. Od verze Configuration Manager Technical Preview 2002,2 můžete nahrát vaše Configuration Manager zařízení do cloudové služby a provádět na nich akce v centru pro správu. Další informace najdete v tématu [funkce v Configuration Manager Technical Preview verze 2002,2](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach).
+Microsoft Endpoint Manager spojuje Configuration Manager a Intune s jednou konzolou. Od verze Configuration Manager Technical Preview 2002,2 můžete nahrát vaše Configuration Manager zařízení do cloudové služby a provádět na nich akce v centru pro správu. Další informace najdete v tématu [funkce v Configuration Manager Technical Preview verze 2002,2](/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach).
 
-Před instalací této aktualizace si přečtěte [článek o Configuration Manager Technical Preview](https://docs.microsoft.com/configmgr/core/get-started/technical-preview) . V tomto článku se seznámíte s obecnými požadavky a omezeními používání Technical Preview, jak aktualizovat mezi verzemi a jak poskytnout zpětnou vazbu.
+Před instalací této aktualizace si přečtěte [článek o Configuration Manager Technical Preview](/configmgr/core/get-started/technical-preview) . V tomto článku se seznámíte s obecnými požadavky a omezeními používání Technical Preview, jak aktualizovat mezi verzemi a jak poskytnout zpětnou vazbu.
 
 #### <a name="bulk-remote-actions--4576882--"></a>Hromadné vzdálené akce<!--4576882-->
 Nyní můžete vydávat hromadné příkazy pro následující vzdálené akce: restart, přejmenování, autopilot resetování, vymazání a odstranění. Nové hromadné akce zobrazíte tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **zařízení**  >  **všechna zařízení**  >  **hromadných akcí**.
@@ -1304,7 +1304,7 @@ Seznam všechna zařízení byl vylepšen pro lepší výkon, vyhledávání, ř
 
 ### <a name="app-management"></a>Správa aplikací  
 ####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Vylepšené prostředí pro přihlašování v Portál společnosti pro Android    
-Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud se chcete podívat na vylepšení, přečtěte si téma [co je nového v uživatelském rozhraní aplikace](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui).
+Aktualizovali jsme rozložení několika přihlašovacích obrazovek v aplikaci Portál společnosti pro Android, aby bylo prostředí pro uživatele užitečnější, jednoduché a čisté. Pokud se chcete podívat na vylepšení, přečtěte si téma [co je nového v uživatelském rozhraní aplikace](./whats-new-app-ui.md).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Týden od 24. února 2020
@@ -1338,7 +1338,7 @@ Export ze stránky **Devices**  >  **všechna zařízení** jsou teď ve formát
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>Aplikace Microsoft Defender Advanced Threat Protection (ATP) pro macOS<!-- 5424618 -->
-Intune poskytuje snadný způsob, jak nasadit aplikaci Microsoft Defender Advanced Threat Protection (ATP) pro macOS do spravovaných zařízení Mac. Další informace najdete v tématu [Přidání ATP v programu Microsoft Defender do zařízení MacOS pomocí Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) a [programu Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
+Intune poskytuje snadný způsob, jak nasadit aplikaci Microsoft Defender Advanced Threat Protection (ATP) pro macOS do spravovaných zařízení Mac. Další informace najdete v tématu [Přidání ATP v programu Microsoft Defender do zařízení MacOS pomocí Microsoft Intune](../apps/apps-advanced-threat-protection-macos.md) a [programu Microsoft Defender Advanced Threat Protection for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac).  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -1452,5 +1452,3 @@ V předchozích měsících se podívejte do [archivu co je nového](whats-new-a
 ## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
-
-

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461178"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911110"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -69,9 +69,9 @@ Intune podporuje odvozená pověření na těchto platformách:
 
 Intune podporuje jeden odvozený Vystavitel přihlašovacích údajů na každého tenanta. Intune můžete nakonfigurovat tak, aby fungoval s následujícími vystaviteli:
 
-- **DISA purebred**:https://public.cyber.mil/pki-pke/purebred/
-- **Entrust Datacard**:https://www.entrustdatacard.com/
-- **Intercede**:https://www.intercede.com/
+- **DISA purebred**: https://public.cyber.mil/pki-pke/purebred/
+- **Entrust Datacard**: https://www.entrustdatacard.com/
+- **Intercede**: https://www.intercede.com/
 
 Důležité informace o používání různých vystavitelů najdete v pokynech k tomuto vystaviteli. Další informace najdete v tématu [plánování odvozených přihlašovacích údajů](#plan-for-derived-credentials) v tomto článku.
 
@@ -119,8 +119,8 @@ Následují klíčové důležité požadavky pro každého podporovaného partn
 
 Pro zařízení, která použijete s odvozenými přihlašovacími údaji, si Projděte pracovní postup pro uživatele pro konkrétní platformu.
 
-- [iOS a iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Zařízení se systémem Android Enterprise s plnou správou](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS a iPadOS](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Zařízení se systémem Android Enterprise s plnou správou](../user-help/enroll-android-device-disa-purebred.md)
 
 **Mezi klíčové požadavky patří**:
 
@@ -138,7 +138,7 @@ Informace o tom, jak získat a nakonfigurovat aplikaci DISA purebred, najdete v 
 
 Pro zařízení, která použijete s odvozenými přihlašovacími údaji, si Projděte pracovní postup pro uživatele pro konkrétní platformu.
 
-- [iOS a iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS a iPadOS](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Zařízení se systémem Android Enterprise s plnou správou](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Mezi klíčové požadavky patří**:
@@ -156,7 +156,7 @@ Pro zařízení, která použijete s odvozenými přihlašovacími údaji, si Pr
 
 Pro zařízení, která použijete s odvozenými přihlašovacími údaji, si Projděte pracovní postup pro uživatele pro konkrétní platformu.
 
-- [iOS a iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS a iPadOS](/intune-user-help/enroll-ios-device-intercede)
 - [Zařízení se systémem Android Enterprise s plnou správou](../user-help/enroll-android-device-intercede.md)
 
 **Mezi klíčové požadavky patří**:
@@ -180,7 +180,7 @@ Vytvořte a poskytněte uživatelům pokyny k tomu, jak spustit odvozený proces
 
 Doporučujeme zadat adresu URL, která bude hostovat vaše doprovodné materiály. Tuto adresu URL zadáte při konfiguraci vystavitele odvozeného pověření pro vašeho tenanta a tato adresa URL je zpřístupněna v rámci aplikace Portál společnosti. Pokud nezadáte svoji vlastní adresu URL, Intune poskytuje odkaz na obecné podrobnosti. Tyto podrobnosti nemůžou pokrýt všechny scénáře a nemusí být pro vaše prostředí správné.
 
-### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects">5) nasazení zásad Intune, které vyžadují odvozenou přihlašovací údaje
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects"> 5) nasazení zásad Intune, které vyžadují odvozenou přihlašovací údaje
 
 Vytvořte nové zásady nebo upravte stávající zásady pro použití odvozených přihlašovacích údajů. Odvozené přihlašovací údaje nahrazují jiné metody ověřování pro následující objekty:
 

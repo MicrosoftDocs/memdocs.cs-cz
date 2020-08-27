@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c6440b800b3bf652cb9adc8c565efcb48ef334
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 84fe1afcf04c6b3771d1541ad0488a95b9313dca
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165953"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908832"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Použití datového skladu Microsoft Intune
 
@@ -43,7 +43,7 @@ Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mo
 - Datovému modelu používajícímu standard OData
 
 > [!Note]
-> Pokud používáte spoluspravovanou správu mobilních zařízení (MDM) se službou Microsoft Endpoint Configuration Manager a Microsoft Intune, je nutné načíst data z Configuration Manager. Datový sklad Intune obsahuje jenom data Intune. Pro vlastní sestavy můžete použít řídicí panel Configuration Manager Power BI. Další informace najdete v tématu o[oznámení Power BI šablony řešení pro Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)a[Power BI obsahu pro Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page).
+> Pokud používáte spoluspravovanou správu mobilních zařízení (MDM) se službou Microsoft Endpoint Configuration Manager a Microsoft Intune, je nutné načíst data z Configuration Manager. Datový sklad Intune obsahuje jenom data Intune. Pro vlastní sestavy můžete použít řídicí panel Configuration Manager Power BI. Další informace najdete v tématu o[oznámení Power BI šablony řešení pro Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)a[Power BI obsahu pro Dynamics 365](/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page).
 
 > [!Important]  
 > Nastavením parametru dotazu  `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.<br><br>

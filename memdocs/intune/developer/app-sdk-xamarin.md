@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912306"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908866"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -52,11 +52,11 @@ Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich
 
 Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přijímají zásady ochrany aplikací Intune na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune i na neregistrovaných zařízeních.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Přečtěte si [licenční smlouvy](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
-Sada Intune SDK se spoléhá na [knihovnu Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+Sada Intune SDK se spoléhá na [knihovnu Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) pro své scénáře [ověřování](/azure/active-directory/develop/authentication-vs-authorization) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis). 
 
 Pokud je vaše aplikace už nakonfigurovaná tak, aby používala MSAL, a má své vlastní ID klienta, které se používá k ověřování pomocí Azure Active Directory, zajistěte, aby se použila vaše oprávnění aplikace Xamarin pro správu mobilních aplikací (MAM) služby Intune. Postupujte podle pokynů v části "[poskytnutí přístupu aplikace ke službě Intune App Protection](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" v tématu [Začínáme s Intune SDK](app-sdk-get-started.md).
 
@@ -69,7 +69,7 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
   * [Profil NuGet sady Microsoft Intune App SDK](https://www.nuget.org/profiles/msintuneappsdk)
   * [Úložiště GitHub sady Intune App SDK Xamarin](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * Nakonfigurujte konfiguraci NuGet pro váš projekt tak, aby důvěřovala podepsaným, nezměněným balíčkům NuGet.
-Další informace najdete v tématu [instalace podepsaných balíčků](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages) .
+Další informace najdete v tématu [instalace podepsaných balíčků](/nuget/consume-packages/installing-signed-packages) .
 * Zabezpečte výstupní adresář, který obsahuje aplikaci Xamarin. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
 
@@ -212,14 +212,14 @@ Po přidání remapovače do projektu budete muset provést přemístění ekviv
 ```
 
 Pokud nejsou náhrady provedeny, může dojít k následujícím chybám při kompilaci, dokud neprovedete náhrady:
-* [Chyba kompilátoru CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba se obvykle objevuje v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
+* [Chyba kompilátoru CS0239](/dotnet/csharp/misc/cs0239). Tato chyba se obvykle objevuje v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
 To je očekáváno, protože když přemapování mění dědění tříd Xamarin, budou provedeny určité funkce `sealed` a místo toho je přidána nová varianta mam k přepsání.
-* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public` . Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby byly u těchto přepsání `public` také.
+* [Chyba kompilátoru CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public` . Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby byly u těchto přepsání `public` také.
 
 > [!NOTE]
 > Remapper znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování IntelliSense. Proto může být nutné znovu načíst a znovu sestavit projekt při přidání nového mapování pro technologii IntelliSense, aby byly změny správně rozpoznány.
 
-#### <a name="troubleshooting"></a>Řešení potíží
+#### <a name="troubleshooting"></a>Poradce při potížích
 * Pokud narazíte na prázdnou, bílou obrazovku aplikace při spuštění, může být nutné vynutit, aby bylo volání navigace spuštěno v hlavním vlákně.
 * Vazby Xamarin sady Intune SDK nepodporují aplikace, které používají architekturu pro víc platforem, jako je například MvvmCross, z důvodu konfliktů mezi MvvmCross a třídami MAM Intune. I když někteří zákazníci mohou mít po přesunu svých aplikací do jednoduchých Xamarin. Forms úspěch s integrací, neposkytujeme pro vývojáře aplikací explicitní pokyny a moduly plug-in, které používají MvvmCross.
 
@@ -235,4 +235,4 @@ U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrov
 Ukázkové aplikace zvýrazňování MAM funkcí v aplikacích Xamarin. Android a Xamarin. Forms jsou dostupné na [GitHubu](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Podpora
-Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na svého zástupce podpory Microsoftu, aby otevřel lístek podpory a [na stránce problémů na GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)vytvořil problém. Pomůžeme vám, jakmile budeme. 
+Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na svého zástupce podpory Microsoftu, aby otevřel lístek podpory a [na stránce problémů na GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)vytvořil problém. Pomůžeme vám, jakmile budeme.

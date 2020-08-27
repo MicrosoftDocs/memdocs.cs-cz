@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d1bb0f7a00fb8cf1055488f2ae0d3bd9094ce982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262757"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911535"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -32,7 +32,7 @@ Správa moderního stolního počítače z cloudu přináší přidaný přínos
 
 Pokud chcete vyhodnotit cloudovou moderní plochu ve vaší vlastní organizaci, tento scénář s asistencí předem definuje všechny nezbytné konfigurace pro základní nasazení. V tomto scénáři vytvoříte zabezpečené prostředí, kde si můžete vyzkoušet možnosti správy zařízení v Intune.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - [Nastavení autority MDM na Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) – nastavení autority správy mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
 - M365 E3 minimum (nebo M365 E5 pro nejlepší zabezpečení)
@@ -55,7 +55,7 @@ V tomto scénáři s asistencí je nutné dodat testovací zařízení a testova
 
 - Nastavte účet testovacího uživatele v Azure Active Directory.
 - Vytvořte testovací zařízení s Windows 10 verze 1903 nebo novější.
-- Volitelné [Zaregistrujte testovací zařízení pomocí modulu Windows autopilot](../enrollment/enrollment-autopilot.md#add-devices).
+- Volitelné [Zaregistrujte testovací zařízení pomocí modulu Windows autopilot](../../autopilot/enrollment-autopilot.md#add-devices).
 - Volitelné Povolte [branding na přihlašovací stránce Azure Active Directory vaší organizace](https://go.microsoft.com/fwlink/?linkid=2102455).
 
 ## <a name="step-2---user"></a>Krok 2 – uživatel
@@ -74,7 +74,7 @@ Windows autopiloter automatizuje konfiguraci nových zařízení, aby je uživat
 
 ### <a name="option-b--manual-device-enrollment"></a>Možnost B – Ruční registrace zařízení
 
-Uživatelé ručně nastaví a zaregistrují nová zařízení ve správě mobilních zařízení. Po dokončení tohoto scénáře resetujte zařízení a poskytněte primárnímu uživateli pokyny k registraci pro zařízení s Windows. Další informace najdete v tématu [připojení zařízení s Windows 10 k Azure AD během prvního spuštění prostředí](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+Uživatelé ručně nastaví a zaregistrují nová zařízení ve správě mobilních zařízení. Po dokončení tohoto scénáře resetujte zařízení a poskytněte primárnímu uživateli pokyny k registraci pro zařízení s Windows. Další informace najdete v tématu [připojení zařízení s Windows 10 k Azure AD během prvního spuštění prostředí](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ## <a name="step-4---review--create"></a>Krok 4 – přezkoumání a vytvoření
 
@@ -94,8 +94,8 @@ Poslední krok vám umožní zkontrolovat souhrn nastavení, která jste nakonfi
         - Nastavte na **vše** nebo,
         - Nastavte na **nějaké**. Přidejte také skupinu uživatelů vytvořenou tímto scénářem s asistencí.
 3. Postupujte podle příslušných kroků v zařízení a připojte je k Azure AD na základě následujících kroků:
-    - S autopilotem. Další informace najdete v tématu [režim založený na uživatelském režimu Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Bez automatického pilotního nasazení: Další informace najdete v tématu [připojení zařízení s Windows 10 k Azure AD během prvního spuštění prostředí](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
+    - S autopilotem. Další informace najdete v tématu [režim založený na uživatelském režimu Windows autopilot](/windows/deployment/windows-autopilot/user-driven).
+    - Bez automatického pilotního nasazení: Další informace najdete v tématu [připojení zařízení s Windows 10 k Azure AD během prvního spuštění prostředí](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).
 
 ### <a name="what-happens-when-i-click-deploy"></a>Co se stane, když kliknu na nasadit?
 Uživatel a zařízení se přidají do nových skupin zabezpečení. Budou taky nakonfigurované s použitím nastavení doporučeného pro zabezpečení a produktivitu v práci nebo ve škole. Jakmile uživatel připojí zařízení k Azure AD, do zařízení se přidají další aplikace a nastavení. Další informace o těchto dalších konfiguracích najdete v tématu [rychlý Start: registrace zařízení s Windows 10](../enrollment/quickstart-enroll-windows-device.md).

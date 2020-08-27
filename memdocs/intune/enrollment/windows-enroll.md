@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820591"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911793"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Tento článek pomáhá správcům IT zjednodušit svým uživatelům registraci zařízení s Windows. Jakmile [nastavíte Intune](../fundamentals/setup-steps.md), mohou uživatelé registrovat svá zařízení s Windows tím, že se [přihlásí](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) pomocí pracovního nebo školního účtu.  
+Tento článek pomáhá správcům IT zjednodušit svým uživatelům registraci zařízení s Windows. Jakmile [nastavíte Intune](../fundamentals/setup-steps.md), mohou uživatelé registrovat svá zařízení s Windows tím, že se [přihlásí](../user-help/windows-enrollment-company-portal.md) pomocí pracovního nebo školního účtu.  
 
 Jako správce Intune můžete registraci zjednodušit. Máte tyto možnosti:
 
@@ -39,7 +39,7 @@ Jako správce Intune můžete registraci zjednodušit. Máte tyto možnosti:
 
 Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
-- **Používáte Azure Active Directory Premium?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) je součástí Enterprise Mobility + Security a dalších plánů licencování.
+- **Používáte Azure Active Directory Premium?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) je součástí Enterprise Mobility + Security a dalších plánů licencování.
 - **Jaké verze klientů Windows si uživatelé budou registrovat?** <br>Zařízení s Windows 10 se můžou zaregistrovat automaticky přidáním pracovního nebo školního účtu. Starší verze se musí zaregistrovat pomocí aplikace Portál společnosti.
 
 ||**Azure AD Premium**|**Jiné AD**|
@@ -125,7 +125,7 @@ Azure Active Directory má jiný záznam CNAME, který používá k registraci z
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
 
-Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
+Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](/azure/active-directory/devices/device-management-azure-portal) .
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Automatický zápis a registrace zařízení s Windows 10
 

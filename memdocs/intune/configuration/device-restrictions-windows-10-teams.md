@@ -16,24 +16,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 9f4dafeacb2aabd4d2d2241a26ce52e55c08ce04
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429691"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915734"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Nastavení Windows 10 Team pro povolení nebo omezení funkcí v zařízeních Surface Hub s využitím Intune
 
 V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízení, která můžete nakonfigurovat pro zařízení s Windows 10 Team, včetně zařízení Surface Hub.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil zařízení](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="apps-and-experience"></a>Aplikace a prostředí
 
-Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **Probuzení obrazovky, když je někdo v místnosti**: **blok** brání automatickému probuzení obrazovky, když senzor detekuje někoho v místnosti. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Informace o schůzce zobrazené na úvodní obrazovce**: vyberte informace, které se zobrazí na dlaždici schůzky na úvodní obrazovce. Možnosti:
@@ -53,7 +53,7 @@ Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://doc
 
 ## <a name="maintenance"></a>Údržba
 
-Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - Časové **období údržby pro aktualizace**: **možnost Povolit** vytvoří okno údržby, když se můžou aktualizace nainstalovat. Zadejte **čas spuštění časového**období údržby a **dobu v hodinách**od 1-5 hodin.
 
@@ -61,7 +61,7 @@ Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://doc
 
 ## <a name="session"></a>Relace
 
-Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **Svazek**: zadejte výchozí hodnotu svazku pro novou relaci, od 0-100. Pokud je ponecháno prázdné, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení může operační systém nastavit svazek na 45.
 - **Časový limit obrazovky**: zadejte počet minut, než se vypne obrazovka centra.
@@ -71,7 +71,7 @@ Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://doc
 
 ## <a name="wireless-projection"></a>Bezdrátová projekce
 
-Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp).
+Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](/windows/client-management/mdm/surfacehub-csp).
 
 - **PIN pro bezdrátovou projekci**: **vyžaduje** , aby uživatelé před použitím funkcí bezdrátové projekce na zařízení zadali PIN kód. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Bezdrátová projekce Miracast**: **blok** zabraňuje použití zařízení s podporou Miracast k projektu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.

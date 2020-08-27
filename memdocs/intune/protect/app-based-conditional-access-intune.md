@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5347837a45c40ebc3ec551d2d962b156a38235b4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080143"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909393"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -36,7 +36,7 @@ Podmíněný přístup na základě aplikace a Správa klientských aplikací p�
 
 Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete blokovat aplikace, které nemají zásady ochrany aplikací Intune použité pro přístup k SharePointu Online.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Před vytvořením zásad podmíněného přístupu na základě aplikace musíte mít:
 
@@ -47,7 +47,7 @@ Další informace najdete v tématu [ceny pro Enterprise mobility](https://www.m
 
 ## <a name="supported-apps"></a>Podporované aplikace
 
-Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [dokumentaci technické Reference k podmíněnému přístupu Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
+Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [dokumentaci technické Reference k podmíněnému přístupu Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-technical-reference)
 
 Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace (LOB)](app-modern-authentication-block.md), ale tyto aplikace potřebují používat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 

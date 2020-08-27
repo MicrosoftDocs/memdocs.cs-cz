@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531636"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909920"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Použití sad zásad k seskupení kolekcí objektů pro správu
 
@@ -71,7 +71,7 @@ Při vytváření sady zásad můžete vytvořit jednu jednotku přiřazení a s
 5. Klikněte na **Další: Správa zařízení**.<br>
    Stránka **Správa zařízení** umožňuje přidat objekty správy zařízení do sady zásad, jako jsou například [konfigurační profily zařízení](../configuration/device-profiles.md) a [zásady dodržování předpisů zařízením](../protect/device-compliance-get-started.md). Nezapomeňte zahrnout všechny přidružené objekty, jako jsou další zásady, certifikáty a profily standardních hodnot zabezpečení.
 6. Klikněte na **Další: registrace zařízení**.<br>
-   Stránka **registrace zařízení** umožňuje přidat objekty registrace zařízení do sady zásad, jako jsou například [omezení typu zařízení](../enrollment/enrollment-restrictions-set.md), [profily nasazení Windows autopilot](../enrollment/enrollment-autopilot.md)a [profily stránky stavu registrace](../enrollment/windows-enrollment-status.md).
+   Stránka **registrace zařízení** umožňuje přidat objekty registrace zařízení do sady zásad, jako jsou například [omezení typu zařízení](../enrollment/enrollment-restrictions-set.md), [profily nasazení Windows autopilot](../../autopilot/enrollment-autopilot.md)a [profily stránky stavu registrace](../enrollment/windows-enrollment-status.md).
 7. Klikněte na **Další: přiřazení**.<br>
    Na stránce **přiřazení** můžete přiřadit sadu zásad pro uživatele a zařízení. Je důležité si uvědomit, že můžete přiřadit sadu zásad k zařízení bez ohledu na to, jestli je zařízení spravované přes Intune.
 8. Klikněte na **Další: zkontrolovat + vytvořit** a zkontrolujte hodnoty, které jste zadali pro profil.

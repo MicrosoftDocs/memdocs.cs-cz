@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906697"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v Microsoft Defenderu pro Windows 10 v Microsoft Intune
 
@@ -36,7 +36,7 @@ Tato nastavení jsou k dispozici v následujících profilech:
 **Nastavení**:
 
 - **Zapnutí ochrany poskytované cloudem**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Ve výchozím nastavení Defender v zařízeních s Windows 10 Desktop odesílá společnosti Microsoft informace o případných problémech, které najde. Microsoft analyzuje tyto informace, aby se dozvěděly Další informace o problémech, které se týkají vás a dalších zákazníků, a nabízí Vylepšená řešení.
 
@@ -45,7 +45,7 @@ Tato nastavení jsou k dispozici v následujících profilech:
   - **Ano** – ochrana Doručená v cloudu je zapnutá.  Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Úroveň ochrany v cloudu**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Nakonfigurujte, jak agresivní antivirová antivirová ochrana blokuje a kontroluje podezřelé soubory.
   - **Nenakonfigurováno** (*výchozí*) – výchozí úroveň blokování v programu Defender.
@@ -54,7 +54,7 @@ Tato nastavení jsou k dispozici v následujících profilech:
   - **Nulová tolerance** – zablokuje všechny neznámé spustitelné soubory.
 
 - **Rozšířený časový limit pro Cloud Defenderu v sekundách**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Antivirová ochrana automaticky blokuje podezřelé soubory po dobu 10 sekund, když je kontroluje v cloudu, aby se zajistila bezpečnost. K tomuto časovému limitu můžete přidat až 50 dalších sekund.
 
@@ -70,17 +70,17 @@ Tato nastavení jsou k dispozici v následujících profilech:
 Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **Přidat**a zadat hodnotu vyloučení.
 
 - **Procesy v programu Defender k vyloučení**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Určuje seznam souborů otevřených procesy, které se mají ignorovat během kontroly. Samotný proces není při kontrole vyloučený.
 
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Zadejte seznam přípon typu souboru, které mají být při kontrole ignorovány.
 
 - **Soubory a složky Defenderu k vyloučení**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Zadejte seznam souborů a cest k adresářům, které se mají ignorovat během kontroly.
 
@@ -93,7 +93,7 @@ Tato nastavení jsou k dispozici v následujících profilech:
 **Nastavení**:
 
 - **Zapnout ochranu v reálném čase**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   K použití funkcí monitorování v reálném čase vyžaduje program Defender na zařízeních s Windows 10 Desktop.
   - **Nenakonfigurováno** (*výchozí*) – nastavení se obnoví do výchozího nastavení systému.
@@ -127,7 +127,7 @@ Tato nastavení jsou k dispozici v následujících profilech:
   - **Ano** – vynutilo používání monitorování chování v reálném čase. Uživatelé zařízení nemůžou toto nastavení změnit.
 
 - **Zapnout ochranu sítě**  
-  CSP: [EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Chraňte uživatele zařízení pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. Ochrana zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.
 
@@ -321,14 +321,14 @@ Tato nastavení jsou k dispozici v následujících profilech:
   Zadejte interval od nuly do 24 (v hodinách), který se používá ke kontrole podpisů. Nulová hodnota nemá za následek kontrolu nových podpisů. Hodnota 2 bude kontrolovat každé dvě hodiny atd.
 
 - **Definovat sdílené složky pro stahování aktualizací definic**  
-  CSP: [SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP: [SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   Spravujte umístění, jako je například sdílená složka UNC, jako umístění zdroje ke stažení pro získání aktualizací definic. Po úspěšném stažení aktualizací definic z jednoho zadaného zdroje nebudou kontaktovány zbývající zdroje v seznamu.
 
   Můžete **Přidat** jednotlivá umístění nebo **importovat** seznam umístění jako soubor. csv.
 
 - **Definování pořadí zdrojů pro stahování aktualizací definic**  
-  CSP: [SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP: [SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   Určete, v jakém pořadí mají být kontaktována zdrojová umístění, která jste zadali, abyste získali aktualizace definic. Po úspěšném stažení aktualizací definic z jednoho zadaného zdroje nebudou kontaktovány zbývající zdroje v seznamu.
 
@@ -346,4 +346,3 @@ Tato nastavení jsou k dispozici v následujících profilech:
   - **Nenakonfigurováno** (*výchozí*) – nastavení se vrátí do výchozího nastavení klienta, ve kterém se uživatelské rozhraní a oznámení povolují.
   - **Ne** – uživatelské rozhraní (UI) programu Defender je nedostupné a nepřístupné oznámení se nepoužívá.
   - **Ano**
-

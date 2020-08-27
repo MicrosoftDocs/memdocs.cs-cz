@@ -9,7 +9,7 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurace automatického zápisu MDM
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com) a vyberte **Azure Active Directory**.
+1. Přihlaste se k [Azure Portal](https://portal.azure.com)a vyberte **Azure Active Directory**.
 
    ![Snímek obrazovky webu Azure Portal](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
 
@@ -46,4 +46,4 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
 
 6. Vyberte **Uložit**.
 
-Ve výchozím nastavení služby není povoleno dvoufaktorové ověřování. Dvoufaktorové ověřování ale doporučujeme při registraci zařízení. Pokud chcete povolit dvoufaktorové ověřování, nakonfigurujte v Azure AD zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurujte vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Ve výchozím nastavení služby není povoleno dvoufaktorové ověřování. Dvoufaktorové ověřování ale doporučujeme při registraci zařízení. Pokud chcete povolit dvoufaktorové ověřování, nakonfigurujte v Azure AD zprostředkovatele dvoufaktorového ověřování a u uživatelských účtů nakonfigurujte vícefaktorové ověřování. Informace najdete v článku [Začínáme s Azure Multi-Factor Authentication Serverem](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464939"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910787"
 ---
 # <a name="store-your-personal-filevault-key"></a>Uložte si svůj osobní klíč trezoru. 
 
@@ -63,7 +63,7 @@ Provedením těchto kroků uložte klíč úložiště osobních úložišť pro
 2. Vyberte šifrované zařízení.
 3. Vyberte **obnovovací klíč úložiště**.  
 4. Zadejte svůj 24 znaků alfanumerický klíč trezoru.  
-5. Zadejte klíč znovu. Potom vyberte **Uložit**.
+5. Zadejte klíč znovu. Pak vyberte **Uložit**.
 6. Portál společnosti se pokusí ověřit, otočit a uložit váš osobní obnovovací klíč. Po uložení klíče není nutná žádná další akce. Pokud necháte web před dokončením nahrávání, můžete zobrazit jeho stav na stránce Podrobnosti o zařízení při příštím přihlášení.  
 
 Další informace o zprávách, které se mohou zobrazit během tohoto procesu, naleznete v tématu [portál společnosti Messages](store-recovery-key.md#company-portal-messages).  
@@ -81,7 +81,7 @@ Další informace o zprávách, které se mohou zobrazit během tohoto procesu, 
 
 ## <a name="it-pro-support"></a>Podpora IT pro
 
-Pokud jste pracovníkem podpory IT a chcete nakonfigurovat a spravovat šifrování trezoru pro zařízení Mac ve vaší organizaci, přečtěte si téma [použití šifrování disku trezoru úložiště pro MacOS s Intune](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
+Pokud jste pracovníkem podpory IT a chcete nakonfigurovat a spravovat šifrování trezoru pro zařízení Mac ve vaší organizaci, přečtěte si téma [použití šifrování disku trezoru úložiště pro MacOS s Intune](../protect/encrypt-devices-filevault.md).  
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -89,4 +89,4 @@ Klíč můžete kdykoli získat z Portál společnosti webu, aplikace Intune a P
 
 Zjistěte, co dalšího můžete dělat na webu Portál společnosti. Seznam akcí najdete v tématu věnovaném [použití portál společnosti Intune webu](using-the-intune-company-portal-website.md) .  
 
-Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

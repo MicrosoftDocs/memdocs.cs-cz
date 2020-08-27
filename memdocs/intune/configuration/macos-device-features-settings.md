@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 83da63ef78d8b97cad47b811fee0cc3fde8a5502
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819656"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907451"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -304,7 +304,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - String
+    - Řetězec
     - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
 
@@ -324,7 +324,7 @@ Tato funkce platí pro:
 - **Automatická konfigurace** (jenom Kerberos): Pokud je nastavená na **blokovat**, nebude rozšíření protokolu Kerberos automaticky používat LDAP a DNS k určení jeho názvu lokality Active Directory. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém způsobit, že rozšíření automaticky nalezne název lokality služby Active Directory.
 - **Změny hesla** (jenom Kerberos): **blok** znemožní uživatelům měnit hesla, která používají pro přihlášení k doménám, které jste zadali. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém způsobit změny hesla.  
 - **Synchronizace hesel** (jenom Kerberos): Pokud chcete synchronizovat místní hesla uživatelů do Azure AD, vyberte **Povolit** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zakázat synchronizaci hesel do služby Azure AD. Toto nastavení použijte jako alternativu nebo zálohu k jednotnému přihlašování. Toto nastavení nefunguje, pokud jsou uživatelé přihlášení pomocí mobilního účtu Apple.
-- **Složitost hesla služby Active Directory systému Windows Server** (pouze Kerberos): vyberte možnost **vyžadovat** , pokud chcete vynutit uživatelská hesla pro splnění požadavků na složitost hesla služby Active Directory. Další informace najdete v tématu [heslo musí splňovat požadavky na složitost](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé splnili požadavky na heslo služby Active Directory.
+- **Složitost hesla služby Active Directory systému Windows Server** (pouze Kerberos): vyberte možnost **vyžadovat** , pokud chcete vynutit uživatelská hesla pro splnění požadavků na složitost hesla služby Active Directory. Další informace najdete v tématu [heslo musí splňovat požadavky na složitost](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyžadovat, aby uživatelé splnili požadavky na heslo služby Active Directory.
 - **Minimální délka hesla** (jenom Kerberos): zadejte minimální počet znaků, které můžou vytvářet hesla uživatelů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí pro uživatele vymáhat minimální délku hesla.
 - **Omezení opakovaného použití hesla** (jenom Kerberos): zadejte počet nových hesel, od 1-24, která se použijí, až bude možné znovu použít předchozí heslo v doméně. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vynutilit omezení opakovaného použití hesla.
 - **Minimální stáří hesla** (jenom Kerberos): zadejte počet dní, po které se heslo v doméně používá, než je může uživatel změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí vyhovět minimálnímu stáří hesla, aby bylo možné je změnit.

@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b85ad64bbb4783cd8ca43817d4446efd771297
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819707"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915955"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
@@ -34,7 +34,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
 
 - **Kanál pro údržbu**  
   **Výchozí**: půlroční kanál  
-  Web Windows Update CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
+  Web Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   Nastavte kanál (větev), ze kterého zařízení přijímá aktualizace systému Windows. Různé kanály můžou před doručením aktualizací používat odlišná období odložení.  
 
@@ -48,7 +48,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
   - Windows Insider – pomalé  
   - Windows Insider – Release  
 
-  Když vyberete kanál Insider, Intune automaticky nakonfiguruje nastavení služby Windows Update [Update/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) , aby se Build Insider mohl pracovat.  
+  Když vyberete kanál Insider, Intune automaticky nakonfiguruje nastavení služby Windows Update [Update/ManagePreviewBuilds](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) , aby se Build Insider mohl pracovat.  
 
 
   > [!IMPORTANT]  
@@ -56,21 +56,21 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
  
 - **Aktualizace produktů Microsoftu**  
   **Výchozí**: povolení  
-  Web Windows Update CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+  Web Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Povolení** – vyberte možnost *umožňuje* vyhledávat aktualizace aplikací z Microsoft Update.  
   - **Blok-výběr** bloku, který zabrání v kontrole aktualizací aplikace.  
 
 - **Ovladače pro Windows**  
   **Výchozí**: povolení  
-  Web Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
+  Web Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - **Povoleno** – zaškrtněte políčko *povoleno* zahrnout web Windows Update ovladače během aktualizací.  
   - **Blok-výběr** bloku, který zabrání v kontrole ovladačů.  
 
 - **Doba odložení aktualizace kvality (ve dnech)**  
   **Výchozí hodnota**: 0  
-  Web Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Web Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   Zadejte počet dní od 0 do 30, pro které se odložit aktualizace kvality. Toto období je kromě všech období odložení, které je součástí zvoleného kanálu služby. Doba odložení začíná, když zařízení obdrží zásady.  
 
@@ -78,7 +78,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
 
 - **Doba odložení aktualizace funkcí (ve dnech)**  
   **Výchozí hodnota**: 0  
-  Web Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Web Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   Zadejte počet dní, po které se mají odložit aktualizace funkcí. Toto období je kromě všech období odložení, které je součástí zvoleného kanálu služby. Doba odložení začíná, když zařízení obdrží zásady.  
 
@@ -90,7 +90,7 @@ Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne
 
 - **Nastavit období odinstalace aktualizací funkcí (2 – 60 dní)**  
   **Výchozí**: 10  
-  Web Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+  Web Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   Nakonfigurujte čas, po kterém se aktualizace funkcí nedají odinstalovat.  
 
@@ -104,7 +104,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 - **Chování automatické aktualizace**  
   **Výchozí**: automaticky instalovat v době údržby  
-  Web Windows Update CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Web Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   Vyberte, jak se mají nainstalovat automatické aktualizace, a v případě potřeby i po restartování zařízení.  
 
@@ -118,11 +118,11 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
     - **Začátek aktivních hodin** – zadejte počáteční čas pro potlačení restartování z důvodu instalace aktualizací.  
       **Výchozí**: 8 dop.  
-      Web Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Web Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Aktivní hodiny končí** – zadejte čas ukončení pro potlačení restartování kvůli instalaci aktualizací.  
       **Výchozí**: 5 odp.  
-      Web Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Web Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - Automaticky **nainstalovat a restartovat v době údržby** – aktualizace se automaticky stahují a pak se nainstalují během automatické údržby, když se zařízení nepoužívá nebo se spouští při napájení z baterie. Pokud je vyžadováno restartování, zařízení se restartuje, když se nepoužívá. (Toto je výchozí nastavení pro nespravovaná zařízení.)  
 
@@ -130,14 +130,14 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
     - **Začátek aktivních hodin** – zadejte počáteční čas pro potlačení restartování z důvodu instalace aktualizací.  
       **Výchozí**: 8 dop.  
-      Web Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Web Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Aktivní hodiny končí** – zadejte čas ukončení pro potlačení restartování kvůli instalaci aktualizací.  
       **Výchozí**: 5 odp.  
-      Web Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Web Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Automaticky nainstalovat a restartovat v naplánovaném čase** – zadejte den a čas instalace. Je-li tento parametr zadán, bude instalace spuštěna 3. den a následuje 15 minut odpočítávání za účelem restartu. Přihlášené používání může zpozdit odpočítávání a restartování.   
-  Web Windows Update CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Web Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     Tato možnost podporuje další nastavení.  
 
@@ -157,7 +157,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 - **Restartovat kontroly**  
   **Výchozí**: povolení  
-  Web Windows Update CSP: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+  Web Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   Pokud tyto kontroly chcete přeskočit, zvolte **Přeskočit**. 
   
@@ -167,28 +167,28 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 - **Zablokovat uživateli pozastavit aktualizace Windows**  
   **Výchozí**: povolení  
-  Web Windows Update CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+  Web Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
   - **Povolení** – povolí uživatelům zařízení pozastavit instalaci aktualizace.  
   - **Blok** – zabraňuje uživatelům zařízení pozastavit instalaci aktualizace.  
 
 - **Zablokovat uživateli kontrolu aktualizací Windows**  
   **Výchozí**: povolení  
-  Web Windows Update CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+  Web Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
   - **Povolení** – umožní uživatelům zařízení použít web Windows Update prohledávání k vyhledání a stažení aktualizací a instalaci funkcí.
   - **Blok** – zabraňuje uživatelům zařízení v přístupu k web Windows Update kontrole, stahování aktualizací a instalaci funkcí.  
 
 - **Pro zavření oznámení o restartování vyžadovat schválení uživatele**  
   **Výchozí**: Nenakonfigurováno  
-  Web Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+  Web Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **Žádné** automatické odhlašování po 25 sekundách.
   - **Ano** – vyžaduje vynechávání uživatele.
    
 - **Připomenout uživatele před vyžadováním automatického restartování s připomenutím přeskočit (hodiny)**  
   **Výchozí**: 4  
-  Web Windows Update CSP: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+  Web Windows Update CSP: [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
   Určete, jak dlouho předem má automatické restartování zobrazovat oznámení přeskočit uživateli zařízení o tomto restartování. Jsou podporovány hodnoty **2**, **4**, **8**, **12**a **24** hodin.  
   
@@ -196,7 +196,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 - **Připomenout uživatele před vyžadováním automatického restartování s trvalým připomenutím (minuty)**  
   **Výchozí**: 15  
-  Web Windows Update CSP: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
+  Web Windows Update CSP: [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
   Zadejte, jak dlouho předem bude automatické restartování pro uživatele zařízení o tomto restartování zobrazovat upozornění bez přeskočit. Jsou podporovány hodnoty **15**, **30** a **60** minut.  
 
@@ -204,7 +204,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 - **Změna úrovně oznámení aktualizace**  
   **Výchozí**: použít výchozí oznámení web Windows Update  
-  Web Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  Web Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   Určete, jakou úroveň oznámení web Windows Update uživatelé uvidí. Toto nastavení neurčuje, jak a kdy se aktualizace stahují a instalují.  
 
@@ -226,23 +226,23 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
   - **Konečný termín pro aktualizace funkcí**  
     **Výchozí**: *Nenakonfigurováno*  
-    Web Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
+    Web Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Určuje počet dní, po které má uživatel, než se aktualizace funkcí na svých zařízeních nainstalují automaticky (2-30).
 
   - **Konečný termín pro aktualizace kvality**  
     **Výchozí**: *Nenakonfigurováno*  
-    Web Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+    Web Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Určuje počet dní, po které má uživatel k automatické instalaci aktualizací kvality na svých zařízeních (2-30).
 
   - **Období odkladu**  
-    **Výchozí**: *není nakonfigurované* web Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Výchozí**: *není nakonfigurované* web Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Určuje minimální počet dnů po termínu, do kterého proběhne automatické restartování (0-7).
 
   - **Automatický restart před konečným termínem**  
-    **Výchozí**: Ano web Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **Výchozí**: Ano web Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     Určuje, jestli se má zařízení před konečným termínem automaticky restartovat.
     - **Ano**

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820183"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908999"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -304,10 +304,10 @@ Tato funkce platí pro:
   - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení operační systém nepoužívá rozšíření aplikace. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
   - **Microsoft Azure AD**: používá modul plug-in Microsoft Enterprise SSO, což je rozšíření aplikace jednotného přihlašování typu přesměrování. Tento modul plug-in poskytuje jednotné přihlašování pro účty služby Active Directory ve všech aplikacích, které podporují funkci [podnikového jednotného přihlašování od společnosti Apple](https://developer.apple.com/documentation/authenticationservices) . Tento typ rozšíření aplikace jednotného přihlašování použijte k povolení jednotného přihlašování v aplikacích Microsoftu, organizačních aplikacích a websites, které se ověřují pomocí Azure AD.
 
-    Modul plug-in jednotného přihlašování funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí. Všechny aplikace, které používaly aplikaci Microsoft Authenticator pro ověřování, budou nadále získávat jednotné přihlašování s [modulem plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin).
+    Modul plug-in jednotného přihlašování funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí. Všechny aplikace, které používaly aplikaci Microsoft Authenticator pro ověřování, budou nadále získávat jednotné přihlašování s [modulem plug-in Microsoft Enterprise SSO pro zařízení Apple](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování, nejdřív na zařízení nainstalujte Microsoft Authenticator aplikace pro iOS/iPadOS. Aplikace ověřovatele doručí do zařízení modul plug-in Microsoft Enterprise SSO a nastavení rozšíření aplikace pro jednotné přihlašování aktivuje modul plug-in. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje pro přihlášení a navázat relaci na jejich zařízeních. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat. Další informace o ověřovateli najdete v tématu [co je Microsoft Authenticator aplikace](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování, nejdřív na zařízení nainstalujte Microsoft Authenticator aplikace pro iOS/iPadOS. Aplikace ověřovatele doručí do zařízení modul plug-in Microsoft Enterprise SSO a nastavení rozšíření aplikace pro jednotné přihlašování aktivuje modul plug-in. Po nainstalování ověřovacích dat a profilu rozšíření aplikace jednotného přihlašování do zařízení musí uživatelé zadat své přihlašovací údaje pro přihlášení a navázat relaci na jejich zařízeních. Tato relace se pak použije v různých aplikacích, aniž by se museli uživatelé znovu ověřovat. Další informace o ověřovateli najdete v tématu [co je Microsoft Authenticator aplikace](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Přesměrování**: k použití jednotného přihlašování s moderními toky ověřování použijte obecné a přizpůsobitelné rozšíření aplikace pro přesměrování. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
   - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji můžete používat jednotné přihlašování s toky ověřování typu Challenge a Response. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
@@ -318,7 +318,7 @@ Tato funkce platí pro:
 
 - **Režim sdíleného zařízení** (jenom Microsoft Azure AD): Pokud nasazujete modul plug-in Microsoft Enterprise SSO do zařízení s iOS/iPadOS nakonfigurovaných pro funkci režimu sdíleného zařízení Azure AD, vyberte **Povolit** . Zařízení ve sdíleném režimu umožňují mnoha uživatelům globálně přihlašovat se k aplikacím, které podporují režim sdíleného zařízení. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení nejsou zařízení s iOS/iPadOS určená ke sdílení mezi více uživateli.
 
-  Další informace o režimu sdíleného zařízení a jeho povolení najdete v tématu Přehled režimu [sdíleného zařízení](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) a [sdíleného zařízení pro zařízení s iOS](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices).  
+  Další informace o režimu sdíleného zařízení a jeho povolení najdete v tématu Přehled režimu [sdíleného zařízení](/azure/active-directory/develop/msal-shared-devices) a [sdíleného zařízení pro zařízení s iOS](/azure/active-directory/develop/msal-ios-shared-devices).  
 
   Tato funkce platí pro:
   
@@ -346,7 +346,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` .
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - String
+    - Řetězec
     - Boolean: v **konfigurační hodnotě**zadejte `True` nebo `False` .
     - Integer: v **hodnotě konfigurace**zadejte číslo.
 

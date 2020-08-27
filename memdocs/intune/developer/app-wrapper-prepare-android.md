@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 82c27aaef1f30e4f021f6370d5c7cf7ce157f3c0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166055"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908849"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -99,7 +99,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 | **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 
 
-- Seznam společných parametrů najdete v [Centru skriptů Microsoftu](https://technet.microsoft.com/library/hh847884.aspx).
+- Seznam společných parametrů najdete v [Centru skriptů Microsoftu](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7).
 
 - Pokud chcete zobrazit podrobné informace o použití tohoto nástroje, zadejte tento příkaz:
 
@@ -107,7 +107,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
     Help Invoke-AppWrappingTool
     ```
 
-**Případě**
+**Příklad:**
 
 Naimportujte modul PowerShellu.
 

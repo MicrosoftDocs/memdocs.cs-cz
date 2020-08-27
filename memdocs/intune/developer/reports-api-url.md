@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0ba25d697bca6d6a6af7aad3565e6c2c70841e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 6b4508c0382b27efba2be9bcdcfa8693784f3e4a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165936"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907122"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -35,7 +35,7 @@ Rozhraní API datového skladu Intune můžete použít s účtem s řízením p
 
 Azure Active Directory (Azure AD) používá standard OAuth 2.0 za účelem umožnění autorizace přístupu k webovým aplikacím a webovým rozhraním API v tenantovi Azure AD. Tato příručka je nezávislá na jazyce a popisuje, jak posílat a přijímat zprávy HTTP bez použití knihoven open-source. Tok autorizačního kódu OAuth 2,0 je popsaný v [části 4,1](https://tools.ietf.org/html/rfc6749#section-4.1) specifikace OAuth 2,0.
 
-Další informace najdete v tématu [Autorizace přístupu k webovým aplikacím pomocí OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Další informace najdete v tématu [Autorizace přístupu k webovým aplikacím pomocí OAuth 2.0 a Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 ## <a name="api-url-structure"></a>Struktura adresy URL rozhraní API
 
@@ -78,10 +78,10 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 > [!NOTE]
 > Příklady filtru předpokládají, že dnes je 2/21/2019.
 
-|                             Filtrovat                             |           Optimalizace výkonu           |                                          Popis                                          |
+|                             Filtr                             |           Optimalizace výkonu           |                                          Popis                                          |
 |----------------------------------------------------------------|----------------------------------------------|-----------------------------------------------------------------------------------------------|
 |    `maxhistorydays=7`                                            |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Do bloku                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Do bloku                                       |    Vrácení dat s `RowLastModifiedDateTimeUTC` je větší než nebo rovno`2018-02-21T23:18:51.3277273Z`                             |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Do bloku                                       |    Vrácení dat s `RowLastModifiedDateTimeUTC` je větší než nebo rovno `2018-02-21T23:18:51.3277273Z`                             |

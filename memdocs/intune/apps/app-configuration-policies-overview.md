@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461653"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907268"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -71,7 +71,7 @@ Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrét
 ![Typ registrace zařízení](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Pro aplikace s více identitami, jako je Microsoft Outlook, se můžou zvážit uživatelské předvolby. Prioritní Doručená pošta, například, bude respektovat nastavení uživatele a nemění konfiguraci. Další parametry umožňují řídit, jestli uživatel může nebo nemůže změnit nastavení. Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Pro aplikace s více identitami, jako je Microsoft Outlook, se můžou zvážit uživatelské předvolby. Prioritní Doručená pošta, například, bude respektovat nastavení uživatele a nemění konfiguraci. Další parametry umožňují řídit, jestli uživatel může nebo nemůže změnit nastavení. Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="android-app-configuration-policies"></a>Zásady konfigurace aplikací pro Android
 
@@ -165,7 +165,7 @@ Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Int
 
 Konfiguraci Androidu můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
-Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Tady je postup:
+Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postupujte takto:
 
 1. Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .
@@ -176,7 +176,7 @@ Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy neb
     
 ## <a name="graph-api-support-for-app-configuration"></a>Podpora Graph API pro konfiguraci aplikací
 
-K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v tématu [Graph API cílené konfigurace mam reference](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Další informace o Intune a graphu najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
+K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v tématu [Graph API cílené konfigurace mam reference](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Další informace o Intune a graphu najdete [v tématu práce s Intune v Microsoft Graph](/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Poradce při potížích
 

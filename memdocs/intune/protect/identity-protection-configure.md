@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252533"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909138"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Použití Windows Hello pro firmy na zařízeních s Windows 10 s Microsoft Intune
 
@@ -56,11 +56,11 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 
    - **Konfigurace Windows Hello pro firmy**: vyberte, jak chcete nakonfigurovat Windows Hello pro firmy:
 
-     - **Nenakonfigurováno** (výchozí): zřídí na zařízení [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) . Pokud profily ochrany identit přiřazujete jen uživatelům, kontext zařízení nastaví výchozí hodnotu **Nenakonfigurováno**.
+     - **Nenakonfigurováno** (výchozí): zřídí na zařízení [Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) . Pokud profily ochrany identit přiřazujete jen uživatelům, kontext zařízení nastaví výchozí hodnotu **Nenakonfigurováno**.
 
      - **Zakázáno**: Pokud nechcete používat Windows Hello pro firmy, vyberte tuto možnost. Tato možnost zakáže Windows Hello pro firmy pro všechny uživatele.
 
-     - **Povoleno**: tuto možnost vyberte, pokud chcete [zřídit](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)a nakonfigurovat nastavení Windows Hello pro firmy v Intune. Zadejte nastavení, která chcete nakonfigurovat. Seznam všech nastavení a jejich možnosti najdete v tématu [nastavení zařízení s Windows 10 k povolení Windows Hello pro firmy](identity-protection-windows-settings.md).
+     - **Povoleno**: tuto možnost vyberte, pokud chcete [zřídit](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)a nakonfigurovat nastavení Windows Hello pro firmy v Intune. Zadejte nastavení, která chcete nakonfigurovat. Seznam všech nastavení a jejich možnosti najdete v tématu [nastavení zařízení s Windows 10 k povolení Windows Hello pro firmy](identity-protection-windows-settings.md).
 
    - **Použít bezpečnostní klíče pro přihlášení**: Povolte klíč zabezpečení Windows Hello jako přihlašovací údaje pro všechny počítače v tenantovi.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264470"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909461"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>Konfigurace ATP v programu Microsoft Defender na zařízeních s Androidem, která spravujete pomocí Intune
 
@@ -31,7 +31,7 @@ Předtím, než budete pokračovat, musíte úspěšně [nakonfigurovat ATP v pr
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>Konfigurace webové ochrany na zařízeních se systémem Android
 
-Ve výchozím nastavení služba Microsoft Defender ATP pro Android zahrnuje a povoluje funkci webové ochrany. [Webové ochrany](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) pomáhají zabezpečit zařízení proti webovým hrozbám a chránit uživatele před útoky typu phishing.
+Ve výchozím nastavení služba Microsoft Defender ATP pro Android zahrnuje a povoluje funkci webové ochrany. [Webové ochrany](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) pomáhají zabezpečit zařízení proti webovým hrozbám a chránit uživatele před útoky typu phishing.
 
 Přestože je ve výchozím nastavení povolená, existují důvody, proč tuto ochranu na některých zařízeních s Androidem zakázat. Můžete se třeba rozhodnout, že použijete jenom funkci pro kontrolu aplikace v programu Microsoft Defender ATP, nebo můžete zabránit webové ochraně v používání sítě VPN během vyhledávání škodlivých adres URL.
 
@@ -127,5 +127,5 @@ Ke konfiguraci webové ochrany na zařízeních použijte následující postupy
 
 Další informace najdete v dokumentaci ke službě Microsoft Defender ATP:
 
-- [Podmíněný přístup Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Řídicí panel rizik pro ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Podmíněný přístup Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Řídicí panel rizik pro ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

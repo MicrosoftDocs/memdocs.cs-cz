@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8a0fba0f342995070b3408f4edc6b06d2012e7c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 468e62fe9f9eb1b10469ed664ae6aa380d9114c7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989540"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910396"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
 
@@ -47,7 +47,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 - V případě vícenásobného přiřazení požadovaných nebo dostupných aplikací nemá novější přiřazení aditivní účinek. Novější přiřazení aplikací přepíše dříve existující přiřazení nainstalovaných aplikací. Pokud například první sada aplikací Office obsahuje Word a novější sada ho neobsahuje, Word se odinstaluje. To se netýká aplikací Visio a Project.
 - Více nasazení sady Office 365 není aktuálně podporováno. Do zařízení se doručí jenom jedno nasazení.
 - **Verze Office** – vyberte, jestli chcete přiřadit 32 nebo 64 verzi systému Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-- **Odebrat MSI ze zařízení koncových uživatelů**: Vyberte, jestli chcete ze zařízení koncových uživatelů odebrat dřívější aplikace Office .MSI. Instalace se nezdaří, pokud již existuje. Aplikace MSI na zařízeních koncových uživatelů. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v tématu [odebrání stávajících verzí Office MSI při upgradu aplikací toMicrosoft 365](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI.
+- **Odebrat MSI ze zařízení koncových uživatelů**: Vyberte, jestli chcete ze zařízení koncových uživatelů odebrat dřívější aplikace Office .MSI. Instalace se nezdaří, pokud již existuje. Aplikace MSI na zařízeních koncových uživatelů. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v tématu [odebrání stávajících verzí Office MSI při upgradu aplikací toMicrosoft 365](/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI.
 
 ## <a name="select-microsoft-365-apps"></a>Vybrat Microsoft 365 aplikace
 
@@ -92,14 +92,14 @@ Když zvolíte **Configuration Designer** , změní se podokno **Přidat aplikac
    - **Vyberte aplikace Office**: v rozevíracím seznamu vyberte aplikace, které chcete přiřadit k zařízením, a vyberte standardní aplikace Office, které chcete přiřadit k zařízením.
    - **Vybrat jiné aplikace Office (vyžaduje se licence)**: vyberte další aplikace Office, které chcete přiřadit k zařízením a k jejichž licencím máte licence, a to tak, že vyberete aplikace v rozevíracím seznamu. Mezi tyto aplikace patří licencované aplikace, jako je Microsoft Project Online Desktop Client a Microsoft Visio Online Plan 2.
    - **Architektura**: vyberte, jestli chcete přiřadit **32** nebo **64** verzi Microsoft 365 aplikací. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-    - **Kanál aktualizací**: Zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
-        - **Nadpis**
+    - **Kanál aktualizací**: Zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
+        - **Měsíčně**
         - **Měsíční (cílený)**
         - **Půlroční**
         - **Půlroční (cílený)**
 
         Po výběru kanálu můžete vybrat následující možnosti:
-        - **Odebrat jiné verze**: Pokud chcete z uživatelských zařízení odebrat jiné verze Office (MSI), vyberte **Ano** . Tuto možnost vyberte, když chcete odebrat již existující sadu Office. Aplikace MSI ze zařízení koncových uživatelů. Instalace se nezdaří, pokud již existuje. Aplikace MSI na zařízeních koncových uživatelů. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v tématu [odebrání stávajících verzí Office MSI při upgradu na aplikace Microsoft 365](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. 
+        - **Odebrat jiné verze**: Pokud chcete z uživatelských zařízení odebrat jiné verze Office (MSI), vyberte **Ano** . Tuto možnost vyberte, když chcete odebrat již existující sadu Office. Aplikace MSI ze zařízení koncových uživatelů. Instalace se nezdaří, pokud již existuje. Aplikace MSI na zařízeních koncových uživatelů. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v tématu [odebrání stávajících verzí Office MSI při upgradu na aplikace Microsoft 365](/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. 
         - **Verze, která se má nainstalovat**: vyberte verzi Office, která se má nainstalovat.
         - **Konkrétní verze**: Pokud jste ve výše uvedeném nastavení vybrali **konkrétní** verzi, kterou **chcete nainstalovat** , můžete vybrat instalaci konkrétní verze Office pro vybraný kanál na zařízeních koncových uživatelů. 
             
@@ -107,11 +107,11 @@ Když zvolíte **Configuration Designer** , změní se podokno **Přidat aplikac
             
             Pokud se nainstalovala starší verze, na zařízeních, které aktualizují připnutou verzi (nebo jakékoli jiné vlastnosti) a nasazují se jako dostupné, se až do ohlášení zařízení zobrazí stav hlášení Nainstalováno. Když se zařízení ohlásí, stav se dočasně změní na Neznámé, ale nezobrazí se uživateli. Jakmile uživatel zahájí instalaci novější dostupné verze, uvidí změněný stav Nainstalováno.
             
-            Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
-    - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v tématu [Přehled aktivace sdíleného počítače pro aplikace Microsoft 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
+            Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+    - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v tématu [Přehled aktivace sdíleného počítače pro aplikace Microsoft 365](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
     - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
-        Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **všechny aplikace**  >  **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **všechny aplikace**  >  **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Krok 2 – (**možnost 2**) konfigurace sady aplikací s využitím dat XML 
@@ -127,7 +127,7 @@ Pokud jste vybrali možnost **zadat data XML** v rozevíracím seznamu **formát
 
 2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
-Další informace o zadávání dat XML najdete v tématu [Možnosti konfigurace pro nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+Další informace o zadávání dat XML najdete v tématu [Možnosti konfigurace pro nástroj pro nasazení Office](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="step-3---select-scope-tags-optional"></a>Krok 3 – výběr značek oboru (volitelné)
 Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o klientské aplikaci. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
@@ -149,7 +149,7 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 
 ## <a name="deployment-details"></a>Podrobnosti o nasazení
 
-Jakmile se zásada nasazení z Intune přiřadí cílovým počítačům prostřednictvím [zprostředkovatele CSP (Office Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/office-csp), bude koncové zařízení automaticky stahovat instalační balíček z umístění *officecdn.Microsoft.com* . V adresáři *Program Files* se zobrazí dva adresáře:
+Jakmile se zásada nasazení z Intune přiřadí cílovým počítačům prostřednictvím [zprostředkovatele CSP (Office Configuration Service Provider)](/windows/client-management/mdm/office-csp), bude koncové zařízení automaticky stahovat instalační balíček z umístění *officecdn.Microsoft.com* . V adresáři *Program Files* se zobrazí dva adresáře:
 
 ![Instalační balíčky Office v adresáři Program Files](./media/apps-add-office365/office-folder.png)
 
@@ -163,8 +163,8 @@ V adresáři *systém Microsoft Office 15* jsou uloženy instalační soubory n�
 
 Instalace bude v tichém režimu, pokud je přiřazení sady O365 nakonfigurované podle požadavků. Po úspěšném dokončení instalace budou stažené instalační soubory odstraněny. Pokud je přiřazení nakonfigurované jako **dostupné**, aplikace Office se zobrazí v aplikaci Portál společnosti, takže koncoví uživatelé můžou instalaci aktivovat ručně.
 
-## <a name="troubleshooting"></a>Řešení potíží
-Intune používá [Nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus do klientských počítačů pomocí [sady Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Na základě doporučených postupů uvedených v článku [Správa koncových bodů Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) můžete zajistit, aby vaše síťová konfigurace mohla klientům přistupovat přímo k CDN místo směrování provozu prostřednictvím centrálních proxy serverů, aby nedocházelo k zbytečnému zavlečení latence.
+## <a name="troubleshooting"></a>Poradce při potížích
+Intune používá [Nástroj pro nasazení Office](/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus do klientských počítačů pomocí [sady Office 365 CDN](/office365/enterprise/content-delivery-networks). Na základě doporučených postupů uvedených v článku [Správa koncových bodů Office 365](/office365/enterprise/managing-office-365-endpoints) můžete zajistit, aby vaše síťová konfigurace mohla klientům přistupovat přímo k CDN místo směrování provozu prostřednictvím centrálních proxy serverů, aby nedocházelo k zbytečnému zavlečení latence.
 
 Pokud narazíte na problémy s instalací nebo v době běhu, spusťte [průvodce podpora Microsoftu a obnovení pro Office 365](https://diagnostics.office.com) na cílovém zařízení.
 
@@ -176,8 +176,8 @@ Nemůžete-li nainstalovat aplikace O365 do zařízení, je nutné zjistit, zda 
 - V zařízení je aktivní síťové připojení. Pokud je zařízení v režimu v letadle, je vypnuté nebo se nachází v umístění bez služby, zásada se nepoužije, dokud nebude navázáno připojení k síti.
 - Jsou splněné požadavky na síť Intune i Office 365 a související rozsahy IP adres jsou dostupné v závislosti na následujících článcích:
 
-  - [Požadavky na konfiguraci a šířka pásma sítě pro Intune](https://docs.microsoft.com/intune/network-bandwidth-use)
-  - [Adresy URL a rozsahy IP adres pro Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
+  - [Požadavky na konfiguraci a šířka pásma sítě pro Intune](/intune/network-bandwidth-use)
+  - [Adresy URL a rozsahy IP adres pro Office 365](/office365/enterprise/urls-and-ip-address-ranges)
 
 - Této sadě aplikací O365 byly přiřazeny správné skupiny. 
 
@@ -213,7 +213,7 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 | 1460 (ERROR_TIMEOUT) | Stáhnout | Nepodařilo se stáhnout nástroj pro nasazení Office. |
 | 13 (ERROR_INVALID_DATA) | - | Nelze ověřit podpis staženého nástroje pro nasazení Office. |
 | Kód chyby z CertVerifyCertificateChainPolicy | - | Nezdařila se kontrola certifikace staženého nástroje pro nasazení Office. |
-| 997 | WIP | Installing |
+| 997 | WIP | Instalace |
 | 0 | Po instalaci | Instalace proběhla úspěšně. |
 | 1603 (ERROR_INSTALL_FAILURE) | - | Neúspěšná Kontrola požadavků, například: SxS (pokus o instalaci, když je nainstalováno 2016 MSI) verze mismatchOthers |
 | 0x8000ffff (E_UNEXPECTED) | - | Pokus odinstalovat, když na počítači není technologie Office Klikni a spusť |
@@ -236,4 +236,4 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 
 ## <a name="next-steps"></a>Další kroky
 
-- Pokud chcete sadu aplikací přiřadit k dalším skupinám, přečtěte si téma [přiřazení aplikací do skupin](/mem/intune/apps/apps-deploy).
+- Pokud chcete sadu aplikací přiřadit k dalším skupinám, přečtěte si téma [přiřazení aplikací do skupin](./apps-deploy.md).

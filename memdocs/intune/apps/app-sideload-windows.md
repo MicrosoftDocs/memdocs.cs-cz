@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179617"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910464"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
 Jako správce Intune můžete nasazovat obchodní aplikace (LOB) do Windows 8.1 plochy nebo Windows 10 Desktop & mobilní zařízení, včetně aplikace Portál společnosti. Pokud chcete nasadit aplikace *. appx* pro Windows 8.1 Desktop nebo Windows 10 Desktop & mobilní zařízení, můžete použít certifikát pro podepisování kódu od veřejné certifikační autority, která už je pro vaše zařízení s Windows důvěryhodná, nebo můžete použít vlastní certifikační autoritu.
 
  > [!NOTE]
- > Windows 8.1 Desktop vyžaduje pro povolení zkušebního načtení nebo použití klíčů pro zkušební načtení (automaticky povolených pro zařízení připojená k doméně) buď zásadu Enterprise. Další informace najdete v tématu [zkušební načtení systému Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
+ > Windows 8.1 Desktop vyžaduje pro povolení zkušebního načtení nebo použití klíčů pro zkušební načtení (automaticky povolených pro zařízení připojená k doméně) buď zásadu Enterprise. Další informace najdete v tématu [zkušební načtení systému Windows 8](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
 ## <a name="windows-10-sideloading"></a>Zkušební načtení Windows 10
 
@@ -36,11 +36,11 @@ Ve Windows 10 se zkušební verze liší od verze v dřívějších verzích Win
 
 - Zařízení můžete odemknout pro zkušební načtení pomocí podnikových zásad. Intune poskytuje zásady konfigurace zařízení s názvem "instalace důvěryhodné aplikace". Tato možnost <allow> je nutná pro zařízení, která již důvěřují certifikátu používanému k podepsání aplikace appx.
 
-- Certifikáty Symantec Phone a licenční klíče pro zkušební načtení se nevyžadují. Pokud však není k dispozici místní certifikační autorita, může být nutné získat certifikát pro podpis kódu od veřejné certifikační autority. Další informace najdete v tématu [Úvod do podepisování kódu](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- Certifikáty Symantec Phone a licenční klíče pro zkušební načtení se nevyžadují. Pokud však není k dispozici místní certifikační autorita, může být nutné získat certifikát pro podpis kódu od veřejné certifikační autority. Další informace najdete v tématu [Úvod do podepisování kódu](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### <a name="code-sign-your-app"></a>Podpis kódu vaší aplikace
 
-Prvním krokem je podepsání vašeho balíčku appx vaším kódem. Podrobnosti najdete v tématu [podepsání balíčku aplikace pomocí nástroje SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
+Prvním krokem je podepsání vašeho balíčku appx vaším kódem. Podrobnosti najdete v tématu [podepsání balíčku aplikace pomocí nástroje SignTool](/windows/uwp/packaging/sign-app-package-using-signtool).
 
 ### <a name="upload-your-app"></a>Nahrání aplikace
 
@@ -98,7 +98,7 @@ Pokud nechcete poskytnout přístup k Microsoft Store, můžete ručně nasadit 
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Vraťte se do Intune a nahrajte aplikaci Portál společnosti jako novou aplikaci. Nasaďte ji jako požadovanou aplikaci pro vybranou skupinu cílových uživatelů.  
 
-Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  
+Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Návody aktualizovat Portál společnosti na zařízeních uživatelů, pokud už nainstalovaly starší aplikace z obchodu?
 
@@ -136,4 +136,4 @@ Tímto způsobem můžete aplikaci podepsat a nasadit takto:
 |      PublisherId      |      ID vydavatele dané organizace. Pokud chybí, použije se pole Subject certifikátu Symantec Enterprise Mobile Code Signing Certificate.       |
 |        SdkPath        | Cesta ke kořenové složce sady Windows SDK pro Windows 10. Tento argument je volitelný a jeho výchozí hodnota je ${env:ProgramFiles(x86)}\Windows Kits\10. |
 
-Po ukončení běhu tohoto skriptu bude jeho výstupem podepsaná verze aplikace Portál společnosti pro Windows 10. Potom můžete podepsanou verzi aplikace nasadit jako obchodní aplikaci prostřednictvím Intune. Tím se aktuálně nasazené verze upgradují na tuto novou aplikaci.  
+Po ukončení běhu tohoto skriptu bude jeho výstupem podepsaná verze aplikace Portál společnosti pro Windows 10. Potom můžete podepsanou verzi aplikace nasadit jako obchodní aplikaci prostřednictvím Intune. Tím se aktuálně nasazené verze upgradují na tuto novou aplikaci.

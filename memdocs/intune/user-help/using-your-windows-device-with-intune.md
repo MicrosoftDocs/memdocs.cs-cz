@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: c175d9bba142c9126552a71f1d942e5a7b975b11
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179320"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907582"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
@@ -33,7 +33,7 @@ Tento oddíl popisuje úlohy a informace týkající se Portálu společnosti pr
 ## <a name="how-to-get-company-portal"></a>Získání Portálu společnosti
 Portál společnosti je dostupný ve webové verzi i jako aplikace ke stažení. [Přístup na web Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) získáte po přihlášení pomocí pracovních nebo školních přihlašovacích údajů.  
 
-Přečtěte si téma [Přihlášení k Portálu společnosti](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal), kde najdete podrobný postup a snímky obrazovek.
+Přečtěte si téma [Přihlášení k Portálu společnosti](./sign-in-to-the-company-portal.md), kde najdete podrobný postup a snímky obrazovek.
 
 ## <a name="supported-versions"></a>Podporované verze
 

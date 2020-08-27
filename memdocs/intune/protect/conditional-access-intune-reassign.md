@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acd807911dc68c3139e953379a569990c34ac85b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fa5593486f51d28c33ed280c97f819426be60fa2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989106"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911314"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune na Azure Portal
 
 Počínaje novým Azure Portal poskytuje podmíněný přístup podporu více zásad pro jednotlivé aplikace, společně s větší úpravou. Pokud jste dříve vytvořili zásady podmíněného přístupu na klasickém portálu Intune, můžete je migrovat do Azure Portal. 
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Pokud jste připraveni přejít na Azure Portal, postupujte podle kroků v tomto tématu a znovu přiřaďte zásady podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune:
 
@@ -96,7 +96,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 8. Zvolte aplikaci, na kterou chcete nové zásady podmíněného přístupu použít, a klikněte na **Vybrat**.
 
-9. Klikněte na **Done** (Hotovo).
+9. Klikněte na **Hotovo**.
 
     ![Obrázek porovnání uživatelského rozhraní cloudové aplikace mezi službami Intune a portály Azure](./media/conditional-access-intune-reassign/reassign-ca-3.png)
 
@@ -203,4 +203,4 @@ Vzhledem k tomu, že MDM byla odebrána z klasického portálu Intune, byl k dis
 
 - [Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
 - [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)
-- [Podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Podmíněný přístup v Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

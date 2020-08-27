@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179515"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909580"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Konfigurace ochrany ATP v programu Microsoft Defender v Intune
 
@@ -84,9 +84,9 @@ Pokud jste povolili podporu pro Microsoft Defender ATP v Intune, navážeme spoj
 
 Po navázání spojení mezi Intune a ATP Microsoft Defenderu Intune obdrželo konfigurační balíček aktualizace ATP Microsoft Defenderu z ochrany ATP od Microsoft Defenderu. Tento konfigurační balíček nasadíte do zařízení s Windows s profilem konfigurace zařízení pro Microsoft Defender ATP.
 
-Konfigurační balíček konfiguruje zařízení ke komunikaci se [službami ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , aby kontrolovala soubory a zjišťoval hrozby. Zařízení je také nakonfigurované tak, aby hlásilo službě Microsoft Defender ATP úroveň rizika zařízení na základě zásad dodržování předpisů, které vytvoříte.
+Konfigurační balíček konfiguruje zařízení ke komunikaci se [službami ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , aby kontrolovala soubory a zjišťoval hrozby. Zařízení je také nakonfigurované tak, aby hlásilo službě Microsoft Defender ATP úroveň rizika zařízení na základě zásad dodržování předpisů, které vytvoříte.
 
-Po připojení zařízení pomocí konfiguračního balíčku to nemusíte dělat znovu. Zařízení můžete také připojit pomocí [zásad skupiny nebo Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Po připojení zařízení pomocí konfiguračního balíčku to nemusíte dělat znovu. Zařízení můžete také připojit pomocí [zásad skupiny nebo Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile-to-onboard-windows-devices"></a>Vytvoření profilu konfigurace zařízení pro připojování zařízení s Windows
 
@@ -105,7 +105,7 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
    - **Sdílení ukázek pro všechny soubory**: **Povolit** umožňuje shromažďovat vzorky a sdílet je s Microsoft Defender atp. Pokud se například zobrazí podezřelý soubor, můžete ho odeslat do ochrany ATP v programu Microsoft Defender pro hloubkovou analýzu. **Nenakonfigurováno** nesdílí žádné ukázky do ochrany ATP v programu Microsoft Defender.
    - **Urychlení generování sestav telemetrie**: u zařízení, která mají vysoké riziko, toto nastavení **Povolte** , aby se častěji nahlášení telemetrie do služby ATP v programu Microsoft Defender.
 
-     Připojení [počítačů s Windows 10 pomocí služby Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) obsahuje další podrobnosti o těchto nastaveních ATP v programu Microsoft Defender.
+     Připojení [počítačů s Windows 10 pomocí služby Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) obsahuje další podrobnosti o těchto nastaveních ATP v programu Microsoft Defender.
 
 7. Výběrem **Další** otevřete stránku **značky oboru** . Značky oboru jsou volitelné. Pokračujte výběrem tlačítka **Další**.
 
@@ -120,7 +120,7 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 
 Po navázání připojení služby mezi Intune a ATP Microsoft Defender můžete zařízení s Androidem připojit do ATP v programu Microsoft Defender. Připojování zařízení konfiguruje, aby komunikovala s modulem Defender, který pak shromažďuje data o úrovni rizika zařízení.
 
-Na rozdíl od zařízení s Windows není k dispozici konfigurační balíček pro zařízení se systémem Android. Místo toho si přečtěte téma [Přehled služby Microsoft Defender ATP pro Android](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) v dokumentaci ke službě Microsoft Defender ATP pro požadavky a pokyny k registraci pro Android.
+Na rozdíl od zařízení s Windows není k dispozici konfigurační balíček pro zařízení se systémem Android. Místo toho si přečtěte téma [Přehled služby Microsoft Defender ATP pro Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) v dokumentaci ke službě Microsoft Defender ATP pro požadavky a pokyny k registraci pro Android.
 
 U zařízení s Androidem můžete pomocí zásad Intune upravovat ATP Microsoft Defender v Androidu. Další informace najdete v tématu [ochrana ATP na webu Microsoft Defender ATP](../protect/advanced-threat-protection-manage-android.md).
 
@@ -145,7 +145,7 @@ Pokud nejste obeznámeni s vytvářením zásad dodržování předpisů, v [čl
   
 5. Na kartě **Nastavení dodržování předpisů** rozbalte skupinu **ATP v programu Microsoft Defender** a nastavte možnost **vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače** na upřednostňovanou úroveň.
 
-   Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+   Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
    - **Vymazat:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže mít žádné existující hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Ochrana ATP v programu Microsoft Defender používá hodnotu *Secure*.)
    - **Nízká:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nacházejí jenom hrozby nízké úrovně. Zařízení se středními nebo vysokou úrovní hrozeb nejsou kompatibilní.
@@ -194,5 +194,5 @@ Další informace najdete v dokumentaci k Intune:
 
 Další informace najdete v dokumentaci ke službě Microsoft Defender ATP:
 
-- [Podmíněný přístup Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Řídicí panel rizik pro ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Podmíněný přístup Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Řídicí panel rizik pro ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

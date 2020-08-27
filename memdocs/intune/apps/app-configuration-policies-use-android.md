@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed9fe2ce2f674b5202deecce512802520f6a1d
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 19a5123b3c6415e67591027ccf87c5d5631d1157
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758172"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907258"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -89,7 +89,7 @@ Pokud je aplikace navržená tak, aby podporovala nastavení konfigurace, může
 
 Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících možností:
 
-| Parametr | Příklad |
+| Možnost | Příklad |
 |----|----|
 | ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
@@ -155,7 +155,7 @@ Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby 
 ## <a name="additional-information"></a>Další informace
 
 - [Přiřazení spravované aplikace Google Play k zařízením s Androidem Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
-- [Nasazení Outlooku pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Nasazení Outlooku pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Další kroky
 

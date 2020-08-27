@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c2689e010c0ec75340e1a96952cf6ac162322da
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a6c9cee236900c4620d8c28ac8ae8a7ebd35b42f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758274"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907680"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Omezení registrace zařízení s Androidem Enterprise
 
@@ -58,9 +58,9 @@ Pro zajištění vysokého zabezpečení pracovních profilů pro Android Enterp
 Ujistěte se, že organizace podporuje registraci zařízení s plnou správou Android Enterprise tím, že zkontroluje [registraci plně spravovaných zařízení](android-fully-managed-enroll.md#enroll-the-fully-managed-devices). 
 
 ## <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
-Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, aby uživatelé měli přístup k pracovnímu nebo školnímu obsahu jenom na registrovaných zařízeních s Androidem. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat spravovaná zařízení pro cloudovou aplikaci přístup s podmíněným přístupem](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices). 
+Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, aby uživatelé měli přístup k pracovnímu nebo školnímu obsahu jenom na registrovaných zařízeních s Androidem. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat spravovaná zařízení pro cloudovou aplikaci přístup s podmíněným přístupem](/azure/active-directory/conditional-access/require-managed-devices). 
 
-Postupujte podle kroků v části [scénář: vyžadovat registraci zařízení pro zařízení s iOS a Androidem](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), která zajistí, aby se k koncovým bodům Office 365 mohla připojit jenom zaregistrovaná mobilní zařízení, která jsou kompatibilní.
+Postupujte podle kroků v části [scénář: vyžadovat registraci zařízení pro zařízení s iOS a Androidem](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices), která zajistí, aby se k koncovým bodům Office 365 mohla připojit jenom zaregistrovaná mobilní zařízení, která jsou kompatibilní.
 
 ## <a name="next-steps"></a>Další kroky
 

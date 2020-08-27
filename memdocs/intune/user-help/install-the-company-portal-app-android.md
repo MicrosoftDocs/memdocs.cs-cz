@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 042a89016127fe7a088aa31ce64468c9337c77bc
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: de24c1b008fa6332f89f0d7006a33556af87f84a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880993"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915921"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
@@ -46,6 +46,6 @@ Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
-Po stažení aplikace Portál společnosti pravděpodobně budete chtít [zaregistrovat zařízení v Intune](enroll-device-android-company-portal.md) , abyste měli úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).  
+Po stažení aplikace Portál společnosti pravděpodobně budete chtít [zaregistrovat zařízení v Intune](enroll-device-android-company-portal.md) , abyste měli úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](./sign-in-to-the-company-portal.md#sign-in-from-another-device).  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

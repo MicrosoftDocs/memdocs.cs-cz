@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911484"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
@@ -44,10 +44,10 @@ Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu pře
 |Agent Operations Manageru|11 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
 |Agent zásad|3 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
 |Agent Vzdálené pomoci prostřednictvím nástroje Microsoft Easy Assist|6 MB|**Jednorázový**<br /><br />Další stahování je možné, pokud jsou pro tento typ obsahu dostupné aktualizace.|
-|Denní operace klienta|6 MB|**denně**<br /><br />Klient Intune pravidelně komunikuje se službou Intune a kontroluje aktualizace a zásady a oznamuje službě stav klienta.|
-|Aktualizace definicí malwaru Endpoint Protection|Různé<br /><br />Obvykle 40 KB až 2 MB|**denně**<br /><br />Až třikrát denně|
-|Aktualizace modulu Endpoint Protection|5 MB|**Nadpis**|
-|Aktualizace softwaru|Různé<br /><br />Velikost závisí na nasazených aktualizacích.|**Nadpis**<br /><br />Aktualizace softwaru se obvykle vydávají k druhému úterý v měsíci.<br /><br />Nově zaregistrovaný nebo nasazený počítač může používat větší šířku pásma sítě při stahování celé sady dříve vydaných aktualizací.|
+|Denní operace klienta|6 MB|**Denně**<br /><br />Klient Intune pravidelně komunikuje se službou Intune a kontroluje aktualizace a zásady a oznamuje službě stav klienta.|
+|Aktualizace definicí malwaru Endpoint Protection|Různé<br /><br />Obvykle 40 KB až 2 MB|**Denně**<br /><br />Až třikrát denně|
+|Aktualizace modulu Endpoint Protection|5 MB|**Měsíčně**|
+|Aktualizace softwaru|Různé<br /><br />Velikost závisí na nasazených aktualizacích.|**Měsíčně**<br /><br />Aktualizace softwaru se obvykle vydávají k druhému úterý v měsíci.<br /><br />Nově zaregistrovaný nebo nasazený počítač může používat větší šířku pásma sítě při stahování celé sady dříve vydaných aktualizací.|
 |Aktualizace Service Pack|Různé<br /><br />Velikost se liší u každé nasazené aktualizace Service Pack.|**Různé**<br /><br />Závisí na tom, kdy aktualizace Service Pack nasadíte.|
 |Distribuce softwaru|Různé<br /><br />Velikost závisí na nasazeném softwaru.|**Různé**<br /><br />Závisí na tom, kdy software nasadíte.|
 
@@ -79,7 +79,7 @@ Informace o používání proxy serveru k ukládání obsahu do mezipaměti najd
 
 Optimalizace doručení vám umožní používat Intune k omezení spotřeby šířky pásma, když zařízení s Windows 10 stahují aplikace a aktualizace. Pomocí samoobslužné distribuce distribuované mezipaměti lze soubory ke stažení načíst z tradičních serverů a alternativních zdrojů (jako jsou síťové partnery).
 
-Úplný seznam verzí a typů obsahu, které podporuje Optimalizace doručení, najdete v článku věnovaném [optimalizaci doručování pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+Úplný seznam verzí a typů obsahu, které podporuje Optimalizace doručení, najdete v článku věnovaném [optimalizaci doručování pro Windows 10](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 [Optimalizace doručování můžete nastavit](../configuration/delivery-optimization-settings.md) jako součást profilů konfigurace zařízení.
 
@@ -95,14 +95,14 @@ Během hodin, které nakonfigurujete, můžete k omezení šířky pásma sítě
 > [!NOTE]
 > Pro správu MDM v systému Windows používá ke stažení bitů jenom rozhraní pro správu operačního systému pro typ aplikace MobileMSI. AppX/MsiX používají vlastní zásobník pro stahování bez služby BITS a aplikace Win32 přes agenta Intune místo bitů používá optimalizaci doručování.
 
-Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](https://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
+Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](/windows/win32/bits/background-intelligent-transfer-service-portal) v knihovně TechNet.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Použít BranchCache na počítačích (vyžaduje softwarového klienta Intune)
 
 Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache podporují následující operační systémy:
 
-- Windows 7
+- Windows 7
 - Windows 8.0
 - Windows 8.1
 - Windows 10
@@ -111,7 +111,7 @@ Abyste mohli BranchCache používat, musíte na klientském počítači povolit 
 
 Když je klient Intune nainstalovaný na počítačích, služba BranchCache a režim distribuované mezipaměti jsou ve výchozím nastavení povolené. Pokud ale Zásady skupiny zakázal službu BranchCache, Intune tyto zásady nepřepíše a služba BranchCache zůstane zakázaná.
 
-Pokud používáte BranchCache, měli byste při správě zásad skupiny a zásad brány firewall pro Intune spolupracovat s ostatními správci ve vaší organizaci. Zajistěte, aby nasadily zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](https://technet.microsoft.com/library/hh831696.aspx).
+Pokud používáte BranchCache, měli byste při správě zásad skupiny a zásad brány firewall pro Intune spolupracovat s ostatními správci ve vaší organizaci. Zajistěte, aby nasadily zásady zakazující BranchCache nebo výjimky brány firewall. Další informace o BranchCache najdete v tématu [BranchCache – přehled](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 
 ## <a name="next-steps"></a>Další kroky

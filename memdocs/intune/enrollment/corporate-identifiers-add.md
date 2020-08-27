@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 061ee72dfb473eef8e1373497ad6494fa0c3541c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252720"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912606"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -36,7 +36,7 @@ Během registrace Intune automaticky přiřadí některým zařízením stav, kt
 - Je registrované pomocí nějakého účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) (všechny platformy)
 - Je registrované přes [Program registrace zařízení](device-enrollment-program-enroll-ios.md) od Applu, [Apple School Manager](apple-school-manager-set-up-ios.md) nebo [Apple Configurator](apple-configurator-enroll-ios.md) (jen iOS)
 - [Před registrací je identifikované jako ve vlastnictví firmy](#identify-corporate-owned-devices-with-imei-or-serial-number) pomocí čísla IMEI (International Mobile Equipment Identifier) (všechny platformy s čísly IMEI) nebo sériového čísla (iOS a Android)
-- Připojí se k Azure Active Directory pomocí pracovních nebo školních přihlašovacích údajů. [Zařízení, která jsou Azure Active Directory registrována](https://docs.microsoft.com/azure/active-directory/devices/overview) , budou označena jako osobní.
+- Připojí se k Azure Active Directory pomocí pracovních nebo školních přihlašovacích údajů. [Zařízení, která jsou Azure Active Directory registrována](/azure/active-directory/devices/overview) , budou označena jako osobní.
 - Je na [seznamu vlastností zařízení](#change-device-ownership) označené jako firemní
 
 Po registraci můžete [měnit nastavení vlastnictví](#change-device-ownership) na **Osobní** a **Firemní**.

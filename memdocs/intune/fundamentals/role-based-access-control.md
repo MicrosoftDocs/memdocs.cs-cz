@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220162"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911433"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
 
@@ -37,7 +37,7 @@ Pokud potřebujete Rady a návrhy týkající se RBAC v Intune, můžete si vyzk
 ## <a name="roles"></a>Role
 Role definuje sadu oprávnění udělených uživatelům přiřazeným k této roli.
 Můžete použít jak předdefinované, tak i vlastní role. Předdefinované role se týkají některých běžných scénářů Intune. Můžete [vytvořit vlastní role](create-custom-role.md) s přesnou sadou oprávnění, která potřebujete. Několik rolí Azure Active Directory má oprávnění k Intune.
-Pokud chcete zobrazit roli,**Vyberte role** >  **Intune** > **všechny role** > zvolit roli. Zobrazí se následující stránky:
+Pokud chcete zobrazit roli, vyberte role **Intune**  >  **Roles**  >  **všechny role** > zvolit roli. Zobrazí se následující stránky:
 
 - **Vlastnosti**: značky název, popis, typ, přiřazení a obor pro roli. 
 - **Oprávnění**: vypíše dlouhou sadu přepínačů definujících, jaká oprávnění role má.
@@ -62,16 +62,16 @@ Můžete vytvořit vlastní role s vlastními oprávněními. Další informace 
 | --- | :---: | :---: |
 | Globální správce | Čtení/zápis | Čtení/zápis |
 | Správce služby Intune | Čtení/zápis | Čtení/zápis |
-| Správce podmíněného přístupu | Žádná | Žádná |
+| Správce podmíněného přístupu | Žádné | Žádné |
 | Správce zabezpečení | Jen pro čtení (úplná oprávnění správce pro uzel Security Endpoint Security) | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
-| Čtecí modul zabezpečení | Jen pro čtení | Jen pro čtení |
-| Správce dodržování předpisů | Žádná | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádná | Jen pro čtení |
+| Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
+| Správce dodržování předpisů | Žádné | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
 | Globální čtenář | Jen pro čtení | Jen pro čtení |
 
 > [!TIP]
-> Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**a **podmíněný přístup**, které se řídí pomocí Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+> Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**a **podmíněný přístup**, které se řídí pomocí Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="role-assignments"></a>Přiřazení rolí
 Přiřazení role definuje:
@@ -81,7 +81,7 @@ Přiřazení role definuje:
 - Jaké prostředky mohou změnit.
 
 Uživatelům můžete přiřadit vlastní i předdefinované role. Uživatel musí mít licenci Intune, aby mu byla přiřazena role Intune.
-Pokud chcete zobrazit přiřazení role,**Vyberte role** >  **Intune** > **všechny role** > vyberte roli > zvolit přiřazení. Zobrazí se následující stránky:
+Pokud chcete zobrazit přiřazení role, vyberte role **Intune**  >  **Roles**  >  **všechny role** > vyberte roli > zvolit přiřazení. Zobrazí se následující stránky:
 
 - **Properties (vlastnosti**): název, popis, role, členy, obory a značky přiřazení.
 - **Členové**: všichni uživatelé v uvedených skupinách zabezpečení Azure mají oprávnění ke správě uživatelů nebo zařízení, která jsou uvedená v oboru (skupiny).

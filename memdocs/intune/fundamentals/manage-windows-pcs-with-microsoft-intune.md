@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326499"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915887"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -90,7 +90,7 @@ I když klientský software Intune podporuje [možnosti správy, které pomáhaj
 
 Pokud ke správě počítačů s Windows používáte klientský software Intune, můžete používat jenom zásady, které jsou uvedené v části **Správa počítače**.
 
-Intune spravuje počítače s Windows pomocí zásad, podobně jako to dělají objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud počítače připojené k doméně Active Directory spravujete pomocí Intune, [zajistěte, aby zásady Intune nekolidovaly s jinými objekty zásad skupiny](resolve-gpo-and-microsoft-intune-policy-conflicts.md) používanými ve vaší organizaci. Další informace najdete v článku [Zásady skupiny pro začátečníky](https://technet.microsoft.com/library/hh147307.aspx).
+Intune spravuje počítače s Windows pomocí zásad, podobně jako to dělají objekty zásad skupiny (GPO) služby AD DS (Active Directory Domain Services) Windows Serveru. Pokud počítače připojené k doméně Active Directory spravujete pomocí Intune, [zajistěte, aby zásady Intune nekolidovaly s jinými objekty zásad skupiny](resolve-gpo-and-microsoft-intune-policy-conflicts.md) používanými ve vaší organizaci. Další informace najdete v článku [Zásady skupiny pro začátečníky](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
   ![Výběr šablony pro nové zásady počítačů PC se systémem Windows](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

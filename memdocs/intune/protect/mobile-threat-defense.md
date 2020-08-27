@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412337"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906884"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
 
@@ -35,7 +35,7 @@ Intune může integrovat data od dodavatele ochrany před mobilními hrozbami (M
 Intune může používat stejná data jako zdroj pro neregistrovaná zařízení pomocí zásad ochrany aplikací Intune. Správci tak můžou tyto informace použít k ochraně podnikových dat v rámci [aplikace Microsoft Intune Protected](../apps/apps-supported-intune-apps.md)a vystavení bloku nebo selektivního vymazání.
 
 > [!NOTE]
-> Integrace ochrany před mobilními hrozbami s nabídkou High a DoD v Intune se *v současné době nepodporuje.* Přečtěte si další informace o [Microsoft Intune pro vysokou podporu pro vládu USA úrovně RSZ](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+> Integrace ochrany před mobilními hrozbami s nabídkou High a DoD v Intune se *v současné době nepodporuje.* Přečtěte si další informace o [Microsoft Intune pro vysokou podporu pro vládu USA úrovně RSZ](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## <a name="protect-corporate-resources"></a>Ochrana podnikových prostředků
 

@@ -2,7 +2,7 @@
 title: Konfigurace funkce Wake on LAN
 titleSuffix: Configuration Manager
 description: V Configuration Manager vyberte Wake On LAN nastavení.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127031"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907843"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Postup konfigurace funkce Wake on LAN v Configuration Manager
 
@@ -23,11 +23,11 @@ ms.locfileid: "88127031"
 
 Zadejte nastavení funkce Wake on LAN pro Configuration Manager, pokud chcete počítače uvést do stavu spánku.
 
-## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a>Funkce Wake on LAN počínaje verzí 1810
+## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a> Funkce Wake on LAN počínaje verzí 1810
 <!--3607710-->
 Počínaje Configuration Manager 1810 existuje nový způsob, jak vybudit počítače v režimu spánku. Klienty můžete probouzet z konzoly Configuration Manager, i když klient nástroje není ve stejné podsíti jako server lokality. Pokud potřebujete provést údržbu nebo dotazování na zařízení, nebudete omezeni vzdálenými klienty, kteří jsou v režimu spánku. Webový server používá kanál oznámení klienta k identifikaci jiných klientů, kteří se nacházejí ve stejné vzdálené podsíti, a pak tyto klienty používá k odeslání požadavku Wake on LAN (Magic Packet). Použití kanálu pro oznamování klienta pomáhá předcházet klapkám MAC, což by mohlo způsobit vypnutí portu směrovačem. Novou verzi funkce Wake on LAN lze povolit ve stejnou dobu jako [starší verze](#bkmk_wol-previous).
 
-### <a name="limitations"></a>Omezení
+### <a name="prerequisites-and-limitations"></a>Požadavky a omezení
 <!--7323898, 7363492-->
 - Aspoň jeden klient v cílové podsíti musí být v běhu.
 - Tato funkce nepodporuje tyto síťové technologie:
@@ -38,6 +38,8 @@ Počínaje Configuration Manager 1810 existuje nový způsob, jak vybudit počí
 - Počítače se probudí jenom v případě, že je upozorníte pomocí oznámení klienta **Wake-up** .
     - Pro probuzení, když dojde ke konečnému termínu, se použije starší verze funkce Wake on LAN.
     -  Pokud starší verze není povolená, neproběhne probuzení klienta pro nasazení vytvořená pomocí nastavení **použít funkci Wake-on-LAN k probuzení klientů pro požadovaná nasazení** nebo **odesílání paketů buzení ze spánku**.  
+- Doba trvání zapůjčení DHCP nemůže být nastavená na Infinity. <!--8018584-->
+   - Může se stát, že SleepAgent_ &lt; *doména* bude \> @SYSTEM_0.log velmi velká a pravděpodobně všesměrové vysílání v prostředích, kde jsou zapůjčení DHCP nastavené na nekonečné.  
 
 ### <a name="security-role-permissions"></a>Oprávnění role zabezpečení
 
@@ -82,7 +84,7 @@ Pokud máte zapnuté obě verze funkce Wake on LAN, můžete použít oznámení
 Počínaje verzí 1902 se oznámení klienta **probuzení** dodrží stávající nastavení **Wake on LAN číslo portu (UDP)** .
 
 
-## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>Funkce Wake on LAN pro verzi 1806 a starší
+## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>  Funkce Wake on LAN pro verzi 1806 a starší
 
 Zadejte nastavení funkce Wake on LAN pro Configuration Manager, pokud chcete počítačům přenášet stav z režimu spánku, aby bylo možné nainstalovat požadovaný software, například aktualizace softwaru, aplikace, pořadí úloh a programy.
 

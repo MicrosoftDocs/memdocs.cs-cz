@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b8ef2832d853ae98da99cfd505adc7799c115a7b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907714"
 ---
 # <a name="data-apple-sends-to-intune"></a>Data odesílaná Applem do Intune
 
@@ -33,7 +33,7 @@ Pokud se na zařízení povolí některá z následujících služeb Apple, Micr
 
 - [Program Apple DEP (Device Enrollment Program)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM push Certificate (APNs)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Program Apple VPP (Volume Purchase Program)](../apps/vpp-apps-ios.md)
 
 Aby mohla služba Microsoft Intune navázat spojení, je napřed nutné pro každou službu Apple vytvořit účet Apple.
@@ -56,7 +56,7 @@ Následující tabulka obsahuje data, která zařízení Apple odesílá do Intu
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Ověření | MEID | Identifikátor mobilního zařízení |
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | Téma | Téma, kterému bude zařízení naslouchat |
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | UDID | UDID zařízení |
-| [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | Podpisový | Token push pro zařízení Server by měl použít tento aktualizovaný token při odesílání nabízených oznámení do zařízení. |
+| [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | Token | Token push pro zařízení Server by měl použít tento aktualizovaný token při odesílání nabízených oznámení do zařízení. |
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | PushMagic | Magický řetězec, který musí být součástí zprávy nabízeného oznámení  |
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | UnlockToken | Objekt blob, který slouží k odemknutí zařízení |
 | [APN](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | TokenUpdate | AwaitingConfiguration | Pokud je nastaveno na true, zařízení očekává před pokračováním prostřednictvím Pomocníka s nastavením příkaz DeviceConfigured MDM.  |
@@ -70,7 +70,7 @@ Následující tabulka obsahuje data, která zařízení Apple odesílá do Intu
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Sériové číslo | Sériové číslo zařízení |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | model | Název modelu zařízení |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Popis | Popis zařízení |
-| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Barvy | Barva zařízení |
+| [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Color | Barva zařízení |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Asset tag | Inventární štítek zařízení |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Profile status | Stav instalace profilu |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token Programu registrace | Profile UUID | UUID přiřazeného profilu |
@@ -108,5 +108,3 @@ Následující tabulka obsahuje data, která zařízení Apple odesílá do Intu
 
 
 Pokud chcete ukončit používání služeb Apple v Microsoft Intune a odstranit data, je nutné deaktivovat token Apple v Microsoft Intune a také odstranit váš účet Apple. Vyhledejte si v účtu Apple postup pro správu účtu.
-
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990284"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911977"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Vytvoření a nasazení zásad Windows Information Protection (NV) pomocí Intune
 
@@ -31,7 +31,7 @@ ms.locfileid: "83990284"
 
 Zásady pro Windows Information Protection (nedokončené výroby) s aplikacemi pro Windows 10 můžete použít k ochraně aplikací bez registrace zařízení.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Musíte porozumět několika konceptům při přidání zásady WIP:
 
@@ -47,16 +47,16 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 - **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Microsoft Storu.
 - **Desktopové aplikace Windows:** Do zásad můžete přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe nebo dll).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Než budete moct vytvořit zásady nedokončené výroby, musíte nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).  
 
 > [!IMPORTANT]
-> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita. Další informace o možnostech a omezeních nedokončené výroby najdete v tématu [Ochrana podnikových dat pomocí Information Protection Windows (NV)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita. Další informace o možnostech a omezeních nedokončené výroby najdete v tématu [Ochrana podnikových dat pomocí Information Protection Windows (NV)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Navíc musíte mít následující licenci a aktualizaci:
 
-- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) licence
+- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) licence
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ Navíc musíte mít následující licenci a aktualizaci:
 Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zásadu specifickou pro WIP.
 
 > [!TIP]  
-> Související informace o vytváření zásad WIP pro Intune, včetně dostupných nastavení a postupů jejich konfigurace, najdete v tématu o [vytvoření zásad WIP (Windows Information Protection) s MAM pomocí webu Azure Portal pro Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) v knihovně dokumentace k zabezpečení systému Windows. 
+> Související informace o vytváření zásad WIP pro Intune, včetně dostupných nastavení a postupů jejich konfigurace, najdete v tématu o [vytvoření zásad WIP (Windows Information Protection) s MAM pomocí webu Azure Portal pro Microsoft Intune](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) v knihovně dokumentace k zabezpečení systému Windows. 
 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -78,7 +78,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
     - **Popis:** Volitelně zadejte popis.
     - **Platforma:** Jako podporovanou platformu pro vaši zásadu nedokončené výroby vyberte **Windows 10** .
     - **Stav registrace:** Jako stav registrace pro vaši zásadu zvolte **Bez registrace**.
-4. Zvolte **Vytvořit**. Zásada se vytvoří a zobrazí se v tabulce v podokně **Zásady ochrany aplikací** .
+4. Vyberte **vytvořit**. Zásada se vytvoří a zobrazí se v tabulce v podokně **Zásady ochrany aplikací** .
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
 
@@ -88,7 +88,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 4. V podokně **Intune App Protection** vyberte **chráněné aplikace** . Otevře se podokno **chráněné aplikace** , ve kterém se zobrazí všechny aplikace, které už jsou v seznamu pro tuto zásadu ochrany aplikací uvedené.
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Otevřete každou aplikaci, které chcete povolit přístup k podnikovým datům.
-7. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+7. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 8. Klikněte na **Uložit**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Přidání aplikace ze Storu do seznamu chráněných aplikací
@@ -102,7 +102,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Aplikace pro Store**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Přidání desktopové aplikace do seznamu chráněných aplikací
@@ -115,13 +115,13 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Desktopové aplikace**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu**, **Soubor**, **Minimální verze**, **Maximální verze** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="wip-learning"></a>Kurzy k WIP
 Po přidání aplikací, které chcete chránit pomocí WIP, je potřeba použít režim ochrany prostřednictvím **Kurzů k WIP**.
 
-### <a name="before-you-begin"></a>Před zahájením
+### <a name="before-you-begin"></a>Než začnete
 
 Kurzy k WIP jsou sestava umožňující monitorovat vaše aplikace podporující WIP a neznámé aplikace v rámci WIP. Neznámé aplikace jsou ty, které nesadí IT oddělení vaší organizace. Tyto aplikace můžete exportovat ze sestavy a přidat je do zásad nedokončené výroby, abyste se vyhnuli výpadkům v produktivitě, aby se vynutily nedokončené výroby v režimu blokovat.
 
@@ -156,7 +156,7 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
-1. Otevřete [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
+1. Otevřete web [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
 
 3. Vyberte **aplikace Intune**  >  **Apps**.
 
@@ -194,4 +194,4 @@ Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve 
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o službě Windows Information Protection najdete v tématu [Ochrana podnikových dat pomocí služby Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Další informace o službě Windows Information Protection najdete v tématu [Ochrana podnikových dat pomocí služby Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

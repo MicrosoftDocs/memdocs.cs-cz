@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217460"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912963"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -59,7 +59,7 @@ Běžné problémy koncových uživatelů jsou rozdělené do následujících k
 Platforma | Scénář | Vysvětlení |
 ---| --- | --- |
 iOS | Koncový uživatel může pomocí rozšíření pro sdílení pro iOS/iPadOS otevírat pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že se zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace.** Nemůže při tom dojít k úniku dat? | Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto **Intune „podniková“ data před jejich sdílením mimo příslušnou aplikaci zašifruje**. Můžete si to ověřit pokusem o otevření „podnikového“ souboru mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
-iOS | Proč se koncovým uživatelům **zobrazí výzva k instalaci aplikace Microsoft Authenticator** | To je potřeba v případě, že se používá podmíněný přístup na základě aplikace, přečtěte si téma [vyžadování schválené klientské aplikace](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Proč se koncovým uživatelům **zobrazí výzva k instalaci aplikace Microsoft Authenticator** | To je potřeba v případě, že se používá podmíněný přístup na základě aplikace, přečtěte si téma [vyžadování schválené klientské aplikace](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Proč je potřeba, aby si koncový uživatel **nainstaloval aplikaci Portál společnosti** i v případě, že používám ochranu aplikací MAM bez registrace zařízení?  | V Androidu je většina funkcí ochrany aplikací integrovaná do aplikace Portál společnosti. **Aplikace Portál společnosti se sice vyžaduje vždycky, ale registrace zařízení se nevyžaduje**. K ochraně aplikací bez registrace je jenom nutné, aby měl koncový uživatel aplikaci Portál společnosti na zařízení nainstalovanou.
 iOS/Android | Zásady ochrany aplikací se nepoužívají při použití konceptu e-mailu v aplikaci Outlook. | Vzhledem k tomu, že Outlook podporuje podnikový i osobní kontext, nevynutilo MAM v konceptu e-mailu.
 iOS/Android | Zásady ochrany aplikací se nepoužívají pro nové dokumenty v WXP (Word, Excel, PowerPoint) | Vzhledem k tomu, že WXP podporuje podnikový i osobní kontext, neuplatňuje MAM na nových dokumentech, dokud se neuloží do identifikovaného podnikového umístění, jako je OneDrive.

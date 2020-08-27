@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: c2183f68cd49c9ca353511aadb4cb3a0b6901e84
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872048"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915751"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
@@ -35,7 +35,7 @@ Další informace o profilech sítě Wi-Fi v Intune najdete v tématu [Přidán�
 
 Příklady v tomto článku používají pro profily Intune ověřování pomocí certifikátu SCEP. Také předpokládá, že důvěryhodné kořenové a profily SCEP fungují na zařízení správně.
 
-## <a name="android"></a>Telefon
+## <a name="android"></a>Android
 
 V této části jsme při instalaci konfiguračních profilů na zařízení s Androidem provedli kroky koncového uživatele.
 
@@ -72,7 +72,7 @@ V tomto scénáři se používá zařízení Nokia 6,1. Předtím, než se profi
 
 V Androidu soubor **Omadmlog. log** podrobně popisuje aktivity profilu Wi-Fi při instalaci do zařízení. Můžete mít až pět souborů protokolu Omadmlog. Nezapomeňte získat časové razítko poslední synchronizace, protože vám pomůže najít související položky protokolu.
 
-V následujícím příkladu použijte [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ke čtení protokolů a vyhledejte "wifimgr":
+V následujícím příkladu použijte [CMTrace](/configmgr/core/support/cmtrace) ke čtení protokolů a vyhledejte "wifimgr":
 
 > [!div class="mx-imgBorder"]
 > ![Připojení Wi-Fi ukazuje jako uloženou síť.](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -201,7 +201,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Ukázkové diagnostické informace MDM zobrazující konfiguraci profilu Wi-Fi na zařízeních s Windows 10](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > Další informace najdete v tématu [Diagnostika selhání MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+  > Další informace najdete v tématu [Diagnostika selhání MDM ve Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 
 - Pokud v zařízeních s Androidem nejsou nainstalované důvěryhodné kořenové a profily SCEP na zařízení, zobrazí se v souboru Portál společnosti App Omadmlog následující položka:
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Potvrďte, že všechny požadované certifikáty v rámci kompletního řetězu certifikátů jsou na zařízení s Androidem. V opačném případě se profil sítě Wi-Fi nedá na zařízení nainstalovat. Další informace najdete v tématu [chybějící zprostředkující certifikační autorita](https://developer.android.com/training/articles/security-ssl#MissingCa) (otevře web v Androidu).
   - Vyfiltrujte Omadmlog s klíčovými slovy pro hledání informací, například který certifikát se používá v profilu sítě Wi-Fi, a pokud byl profil úspěšně použit.
 
-    Můžete například použít [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ke čtení protokolů. Pomocí vyhledávacího řetězce vyfiltrujte "wifimgr":
+    Můžete například použít [CMTrace](/configmgr/core/support/cmtrace) ke čtení protokolů. Pomocí vyhledávacího řetězce vyfiltrujte "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![Filtrovat CMTrace, aby se vyhledaly konfigurační profily WiFiMgr na zařízeních s Androidem](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 155d205c819924869da235f64042bcd118728629
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501180"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915819"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -40,14 +40,14 @@ V případě, že se přihlásíte k odběru Enterprise Mobility + Security sady
 > Nové webové klipy (připnuté webové aplikace) na zařízeních se systémem iOS se otevřou v Edge pro iOS a Android místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. U starších webových klipů pro iOS je nutné tyto webové klipy znovu zaměřit, aby se místo Managed Browser otevíraly v hraničních zařízeních pro iOS a Android.
 
 ## <a name="apply-conditional-access"></a>Použití podmíněného přístupu
-Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, aby uživatelé měli přístup k pracovnímu nebo školnímu obsahu jenom pomocí Edge pro iOS a Android. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat zásady ochrany aplikací pro cloudovou aplikaci přístup s podmíněným přístupem](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, aby uživatelé měli přístup k pracovnímu nebo školnímu obsahu jenom pomocí Edge pro iOS a Android. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat zásady ochrany aplikací pro cloudovou aplikaci přístup s podmíněným přístupem](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
 
-1. Postupujte podle [scénáře 2: aplikace prohlížeče vyžadují schválené aplikace se zásadami ochrany aplikací](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), které umožňují hraniční instalaci pro iOS a Android, ale blokuje další webové prohlížeče mobilních zařízení z připojení k koncovým bodům Office 365.
+1. Postupujte podle [scénáře 2: aplikace prohlížeče vyžadují schválené aplikace se zásadami ochrany aplikací](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), které umožňují hraniční instalaci pro iOS a Android, ale blokuje další webové prohlížeče mobilních zařízení z připojení k koncovým bodům Office 365.
 
    >[!NOTE]
    > Tato zásada zajišťuje, že mobilní uživatelé mají přístup ke všem koncovým bodům Office 365 z hraničního prostředí pro iOS a Android. Tato zásada taky zabrání uživatelům v používání služby InPrivate pro přístup k koncovým bodům Office 365.
 
-Pomocí podmíněného přístupu můžete taky cílit na místní weby, které jste nastavili externím uživatelům prostřednictvím [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
+Pomocí podmíněného přístupu můžete taky cílit na místní weby, které jste nastavili externím uživatelům prostřednictvím [Azure proxy aplikací služby AD](/azure/active-directory/active-directory-application-proxy-get-started).
 
 ## <a name="create-intune-app-protection-policies"></a>Vytvoření zásad ochrany aplikací Intune
 
@@ -268,7 +268,7 @@ Ve výchozím nastavení umožňuje služba Microsoft Edge Sync uživatelům př
 - Hesla
 - Adresy a další (položka formuláře pro automatické vyplnění)
 
-Funkce synchronizace je povolena prostřednictvím souhlasu uživatele a uživatelé mohou zapnout nebo vypnout synchronizaci pro každý z výše uvedených typů dat. Další informace najdete v tématu [synchronizace Microsoft Edge](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync).
+Funkce synchronizace je povolena prostřednictvím souhlasu uživatele a uživatelé mohou zapnout nebo vypnout synchronizaci pro každý z výše uvedených typů dat. Další informace najdete v tématu [synchronizace Microsoft Edge](/DeployEdge/microsoft-edge-enterprise-sync).
 
 Organizace mají možnost zakázat synchronizaci Edge na iOS a Androidu. 
 
@@ -343,7 +343,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
 
 ### <a name="manage-proxy-configuration"></a>Správa konfigurace proxy serveru
 
-Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Příklad: 
+Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](/azure/active-directory/active-directory-application-proxy-get-started) společně a poskytnout uživatelům přístup k intranetovým webům na svých mobilních zařízeních. Příklad: 
 
 - Uživatel používá mobilní aplikaci Outlook, která je chráněná službou Intune. Pak klikněte na odkaz na intranetový server v e-mailu a hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby před dosažením intranetového serveru provedl ověřování pomocí služby Multi-Factor Authentication a podmíněného přístupu. Uživatel teď může získat přístup k interním webům i na jejich mobilních zařízeních a odkaz v Outlooku funguje podle očekávání.
 - Uživatel otevře Edge pro iOS a Android na svém zařízení s iOS nebo Androidem. Pokud je Edge pro iOS a Android chráněný pomocí Intune a proxy aplikací je povolený, může uživatel přejít na intranetový server pomocí interní adresy URL, ke které se používá. Hraniční aplikace pro iOS a Android rozpozná, že tento intranetový server byl uživateli zpřístupněn prostřednictvím proxy aplikací. Uživatel je automaticky směrován prostřednictvím proxy aplikace, aby bylo možné provést ověření před dosažením intranetového webu. 
@@ -351,7 +351,7 @@ Můžete použít Edge pro iOS a Android a [Azure proxy aplikací služby AD](ht
 Než začnete, potřebujete:
 
 - Pomocí Proxy aplikací služby AD Azure nastavte interní aplikace.
-  - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+  - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](/azure/active-directory/manage-apps/application-proxy).
 - Aplikace Edge pro iOS a Android musí mít přiřazenou [zásadu ochrany aplikací Intune](app-protection-policy.md) .
 - Aplikace Microsoftu musí mít zásady ochrany aplikací, které mají **omezení přenosu webového obsahu s jinými** nastaveními přenosů dat pro aplikace nastavené na **Microsoft Edge**.
 
@@ -438,7 +438,7 @@ Uživatelé s hranou pro iOS a Android nainstalovaný na svém zařízení s iOS
 
 Seznam nastavení uložených v protokolech aplikací najdete v tématu [Kontrola protokolů ochrany klientských aplikací](app-protection-policy-settings-log.md).
 
-Informace o tom, jak zobrazit protokoly na zařízeních s Androidem, najdete v tématu [odeslání protokolů správci IT e-mailem](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
+Informace o tom, jak zobrazit protokoly na zařízeních s Androidem, najdete v tématu [odeslání protokolů správci IT e-mailem](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 ## <a name="next-steps"></a>Další kroky
 

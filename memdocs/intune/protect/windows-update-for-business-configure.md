@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252567"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915972"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa softwarových aktualizací Windows 10 v Intune
 
@@ -38,9 +38,9 @@ Intune poskytuje pro správu aktualizací následující typy zásad:
 
 Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10. Oba typy zásad můžete použít ve stejném prostředí Intune ke správě aktualizací softwaru pro zařízení s Windows 10 a k vytvoření strategie aktualizace, která odráží vaše obchodní požadavky.
 
-Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](/windows/deployment/update/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, musí se splnit následující požadavky.
 
@@ -182,7 +182,7 @@ Při použití nástroje Uninstall Vezměte v úvahu následující skutečnosti
 
   Představte si například aktualizační kanál s dobou odinstalace aktualizace funkcí o 20 dní. Po 25 dnech se rozhodnete vrátit nejnovější aktualizaci funkcí a použít možnost odinstalace.  Zařízení, na která se nainstalovala aktualizace funkcí víc než 20 dní, ji nemůžou odinstalovat, protože v rámci údržby odebrala potřebné bity. Zařízení, u kterých se tato funkce nainstalovala jenom do 19 dnů, ale můžou aktualizaci odinstalovat, jenom když se úspěšně zaregistrují, aby se před tím, než je doba odinstalace odinstalovala.
 
-Další informace o web Windows Updatech zásadách najdete v tématu [aktualizace CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) v dokumentaci ke správě klientů Windows.
+Další informace o web Windows Updatech zásadách najdete v tématu [aktualizace CSP](/windows/client-management/mdm/update-csp) v dokumentaci ke správě klientů Windows.
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>Odinstalace nejnovější aktualizace Windows 10
 
@@ -247,7 +247,7 @@ V tomto podokně můžete:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Ověřování a vytváření sestav pro aktualizace Windows 10
 
-Pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10 použijte [zprávy o dodržování předpisů Intune](windows-update-compliance-reports.md) k monitorování stavu aktualizace zařízení. Toto řešení používá [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) s vaším předplatným Azure.
+Pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10 použijte [zprávy o dodržování předpisů Intune](windows-update-compliance-reports.md) k monitorování stavu aktualizace zařízení. Toto řešení používá [Update Compliance](/windows/deployment/update/update-compliance-monitor) s vaším předplatným Azure.
 
 ## <a name="next-steps"></a>Další kroky
 

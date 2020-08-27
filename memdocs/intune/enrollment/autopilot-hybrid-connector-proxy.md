@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986892"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908679"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Práce se stávajícími místními proxy servery
 
 Tento článek vysvětluje, jak nakonfigurovat konektor Intune pro službu Active Directory pro práci s odchozími proxy servery. Je určená pro zákazníky se síťovými prostředími, která mají existující proxy servery.
 
-Ve výchozím nastavení se konektor Intune pro službu Active Directory pokusí automaticky najít proxy server v síti pomocí automatického zjišťování (WPAD) webového proxy serveru. Pokud je tato konfigurace ve vaší síti nakonfigurovaná, nemusí se vyžadovat další konfigurace.  Pokud jsou potřebné změny, následující části popisují, jak přepsat výchozí nastavení, a to s využitím [standardních možností .NET Framework pro konfiguraci nastavení proxy serveru](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  Další možnosti jsou popsány v této dokumentaci.
+Ve výchozím nastavení se konektor Intune pro službu Active Directory pokusí automaticky najít proxy server v síti pomocí automatického zjišťování (WPAD) webového proxy serveru. Pokud je tato konfigurace ve vaší síti nakonfigurovaná, nemusí se vyžadovat další konfigurace.  Pokud jsou potřebné změny, následující části popisují, jak přepsat výchozí nastavení, a to s využitím [standardních možností .NET Framework pro konfiguraci nastavení proxy serveru](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings).  Další možnosti jsou popsány v této dokumentaci.
 
-Další informace o tom, jak fungují konektory, najdete v tématu [vysvětlení konektorů Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
+Další informace o tom, jak fungují konektory, najdete v tématu [vysvětlení konektorů Azure proxy aplikací služby AD](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## <a name="completely-bypass-outbound-proxies"></a>Zcela obejít odchozí proxy
 
@@ -64,7 +64,7 @@ Pokud chcete pro konektor zakázat použití odchozího proxy serveru, upravte s
 </configuration>
 ```
 
-Chcete-li zajistit, aby služba Aktualizátor konektorů také obcházela proxy serveru, udělejte podobnou změnu v adresáři C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
+Chcete-li zajistit, že služba Aktualizátor konektorů obejít proxy server, udělejte podobnou změnu v adresáři C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,7 +124,7 @@ Pokud se pro službu Intune Connector musí u služby Active Directory použít 
 </configuration>
 ```
 
-Chcete-li zajistit, aby služba Aktualizátor konektorů také obcházela proxy serveru, udělejte podobnou změnu v adresáři C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
+Chcete-li zajistit, že služba Aktualizátor konektorů obejít proxy server, udělejte podobnou změnu v adresáři C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

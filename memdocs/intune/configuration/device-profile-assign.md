@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819996"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915802"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -31,7 +31,7 @@ Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V
 V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
 
 > [!NOTE]  
-> Když je profil odebraný nebo už není přiřazený k zařízení, může dojít k různým akcím v závislosti na nastavení v profilu. Nastavení jsou založená na zprostředkovatelích CSP a každý CSP může docházet k odstranění profilu odlišně. Nastavení může například zachovat existující hodnotu a nevracet se zpět na výchozí hodnotu. Chování řídí každý CSP v operačním systému. Seznam zprostředkovatelů kryptografických služeb systému Windows najdete v [referenčních informacích k poskytovateli CSP (Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> Když je profil odebraný nebo už není přiřazený k zařízení, může dojít k různým akcím v závislosti na nastavení v profilu. Nastavení jsou založená na zprostředkovatelích CSP a každý CSP může docházet k odstranění profilu odlišně. Nastavení může například zachovat existující hodnotu a nevracet se zpět na výchozí hodnotu. Chování řídí každý CSP v operačním systému. Seznam zprostředkovatelů kryptografických služeb systému Windows najdete v [referenčních informacích k poskytovateli CSP (Configuration Service Provider)](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > Pokud chcete změnit nastavení na jinou hodnotu, vytvořte nový profil, nakonfigurujte nastavení na **Nenakonfigurováno**a přiřaďte profil. Po použití na zařízení by uživatelé měli mít kontrolu nad tím, aby nastavení změnili na upřednostňovanou hodnotu.
 >

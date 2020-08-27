@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42547885c5f791749517415b325c8c785ec52c13
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 20b5b3de16023ac475cc41a633e5d3ab915a1bd0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051399"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910719"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -45,13 +45,13 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
  
         Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Pokud chcete odstranit Obecné nastavení konfigurace, zvolte tři tečky (**...**) a vyberte **Odstranit**. Další informace najdete v tématu [konfigurační hodnoty pro používání tokenů](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    - **Nastavení konfigurace Outlooku** – Outlook pro iOS a Android nabízí správcům možnost přizpůsobení výchozí konfigurace pro několik nastavení v aplikaci. Další informace najdete v tématu [scénáře konfigurace aplikací pro iOS a Android – obecné](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+    - **Nastavení konfigurace Outlooku** – Outlook pro iOS a Android nabízí správcům možnost přizpůsobení výchozí konfigurace pro několik nastavení v aplikaci. Další informace najdete v tématu [scénáře konfigurace aplikací pro iOS a Android – obecné](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
    
     - **S/** MIME – Secure Multipurpose Internet Mail Extensions (s/MIME) je specifikace, která uživatelům umožňuje odesílat a přijímat digitálně podepsané a šifrované e-maily.
         - **Povolit S/MIME** – určuje, jestli se mají povolit ovládací prvky s/MIME při vytváření e-mailu. Výchozí hodnota: **není nakonfigurováno**.
         - **Povolit uživateli změnu nastavení** – určuje, jestli má uživatel povoleno změnit nastavení. Musí být povolený Standard S/MIME. Výchozí hodnota: **Ano**.
         
-    Informace o nastavení zásad konfigurace aplikace Outlook najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+    Informace o nastavení zásad konfigurace aplikace Outlook najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikací pro Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
 8. Klikněte na **Vybrat skupiny, které chcete zahrnout**.

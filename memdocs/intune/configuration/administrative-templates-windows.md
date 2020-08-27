@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 53d267ec6b97579d256b11744768e6bdb7344328
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990195"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910141"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -33,17 +33,17 @@ Tato funkce platí pro:
 
 - Windows 10 a novější
 
-Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná ve Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) , která používají XML. Nastavení Office a Microsoft Edge jsou ingestovaná v ADMX a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030) a v [souborech šablon pro správu Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). A šablony Intune jsou 100% cloudu. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
+Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná ve Windows a jsou [Nastavení založená na ADMX](/windows/client-management/mdm/understanding-admx-backed-policies) , která používají XML. Nastavení Office a Microsoft Edge jsou ingestovaná v ADMX a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030) a v [souborech šablon pro správu Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). A šablony Intune jsou 100% cloudu. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
 
 **Šablony pro správu** jsou integrované do Intune a nevyžadují žádné vlastní nastavení, včetně použití OMA-URI. Jako součást řešení pro správu mobilních zařízení (MDM) použijte při správě zařízení s Windows 10 Tato nastavení šablony jako zastávku.
 
 Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s Windows 10 a ukazuje, jak filtrovat všechna dostupná nastavení v Intune. Když vytvoříte šablonu, vytvoří se profil konfigurace zařízení. Pak můžete tento profil přiřadit nebo nasadit do zařízení s Windows 10 ve vaší organizaci.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 - Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1709 (RS2/Build 15063). Některá nastavení nejsou součástí všech edicí systému Windows. Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1/Build 18362) a novější.
 
-- Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
 ## <a name="create-the-template"></a>Vytvoření šablony
 
@@ -86,7 +86,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 11. Výběrem **OK** uložte změny.
 
-    Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Zde je několik příkladů:
+    Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Tady je několik příkladů:
 
     - Pomocí nastavení pro **oznamování maker v jazyce VBA** můžete zpracovávat makra VBA v různých systém Microsoft Office programech, včetně Wordu a Excelu.
     - Pomocí nastavení **povolení stahování souborů** povolte nebo Zabraňte stažení z aplikace Internet Explorer.
@@ -128,7 +128,7 @@ V těchto šablonách jsou k dispozici tisíce nastavení. Aby bylo snazší naj
 
 - Hledání můžete také zúžit tak, že vyberete jenom **konfiguraci počítače** nebo **konfiguraci uživatele**.
 
-  Chcete-li například zobrazit všechna dostupná uživatelská nastavení aplikace Internet Explorer, vyberte možnost **Konfigurace uživatele**a vyhledejte `Internet Explorer` . Zobrazí se pouze nastavení IE, která platí pro uživatele:
+  Chcete-li například zobrazit všechna dostupná uživatelská nastavení aplikace Internet Explorer, vyberte možnost  **Konfigurace uživatele**a vyhledejte `Internet Explorer` . Zobrazí se pouze nastavení IE, která platí pro uživatele:
 
   :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="V šabloně ADMX vyberte konfigurace uživatele a vyhledejte nebo vyfiltrujte Internet Explorer v Microsoft Intune.":::
 

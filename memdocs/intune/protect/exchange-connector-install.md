@@ -18,26 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9f275254a7b392491d01769db71d42f04c33f2
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 91f7b3ecad15c9663aa7467fa60843b33123a6e5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048119"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909325"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
 
 > [!IMPORTANT]
 > Informace v tomto článku se vztahují na zákazníky, kteří jsou podporováni pro použití konektoru Exchange.
 >
-> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, váš tenant Intune zůstane pro své použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, váš tenant Intune zůstane pro své použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
 >
 >Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
 
 Aby se chránil přístup k Exchangi, Intune spoléhá na místní komponentu, která se označuje jako konektor Microsoft Intune Exchange. Tento konektor se také označuje jako *konektor Exchange ActiveSync On-Premises Connector* v některých umístěních konzoly Intune.
 
 > [!IMPORTANT]
-> V Intune se odebere podpora funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto klienty Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
+> V Intune se odebere podpora funkce konektoru On-Premises Connector ze služby Intune počínaje verzí 2007 (červenec). Stávající zákazníci s aktivním konektorem budou v tuto chvíli moci pokračovat s aktuálními funkcemi. Noví zákazníci a stávající zákazníci, kteří nemají aktivní konektor, už nebudou moct vytvářet nové konektory ani spravovat zařízení Exchange ActiveSync (EAS) z Intune. Pro tyto klienty Microsoft doporučuje používat [hybridní moderní ověřování Exchange (HMA)](/office365/enterprise/hybrid-modern-auth-overview) k ochraně přístupu k místnímu Exchangi. HMA umožňuje Intune App Protection zásady (označované také jako MAM) a podmíněný přístup prostřednictvím Outlook Mobile pro místní Exchange.
 
 Informace v tomto článku vám pomůžou nainstalovat a monitorovat konektor Intune Exchange Connector. Konektor se [zásadami podmíněného přístupu](conditional-access-exchange-create.md) můžete použít k povolení nebo blokování přístupu k místním poštovním schránkám Exchange.
 
@@ -174,7 +174,7 @@ Pomocí těchto kroků nainstalujete Intune Exchange Connector. Pokud máte víc
 
 5. Zadejte přihlašovací údaje pro odesílání oznámení do poštovní schránky Exchange serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel oznámení potřebuje poštovní schránku Exchange k odesílání oznámení e-mailem. Tato oznámení můžete nakonfigurovat pomocí zásad podmíněného přístupu v Intune.
 
-   Ujistěte se, že je služba Automatická konfigurace a webové služby systému Exchange nakonfigurované na certifikačních autoritách Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
+   Ujistěte se, že je služba Automatická konfigurace a webové služby systému Exchange nakonfigurované na certifikačních autoritách Exchange. Další informace najdete v tématu [Server pro klientský přístup](/Exchange/architecture/client-access/client-access?view=exchserver-2019).
 
 6. Do pole **heslo** zadejte heslo pro tento účet, aby měl Intune přístup k systému Exchange Server.
 

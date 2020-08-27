@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690689"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911178"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Použití stránky stavu tenanta Intune
 
 Stránka stav tenanta Microsoft Intune je centralizované centrum, kde si můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost a používání licencí, stav konektoru a důležitou komunikaci týkající se služby Intune.
 
 > [!TIP]
-> Tenant je instance Azure Active Directory (Azure AD). Vaše předplatné Intune hostuje tenant služby Azure AD. Další informace najdete v tématu [Nastavení tenanta](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) v dokumentaci k Azure AD.
+> Tenant je instance Azure Active Directory (Azure AD). Vaše předplatné Intune hostuje tenant služby Azure AD. Další informace najdete v tématu [Nastavení tenanta](/azure/active-directory/develop/quickstart-create-new-tenant) v dokumentaci k Azure AD.
 
 Řídicí panel zobrazíte tak, že se přihlásíte do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) , přejdete na **Správa tenanta**a pak vyberete **stav tenanta**.
 

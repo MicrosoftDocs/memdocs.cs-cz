@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906833"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -33,7 +33,7 @@ Intune umožňuje spravovat zařízení s macOS tak, abyste uživatelům umožni
 
 Jako správce Intune můžete nastavit registraci zařízení s macOS ve vlastnictví společnosti a zařízení s macOS v osobním vlastnictví (možnost Přineste si vlastní zařízení neboli BYOD). 
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Před nastavením registrace zařízení s macOS zajistěte splnění následujících požadavků:
 
@@ -51,7 +51,7 @@ Uživatelům můžete umožnit registraci vlastních osobních zařízení do sp
 - Na [portál společnosti web](https://portal.manage.microsoft.com) nebo
 - Stahuje se aplikace Portál společnosti Mac na adrese [aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac).
 
-Uživatelům můžete také poslat odkaz na postup online registrace: [registrace zařízení MacOS v Intune](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+Uživatelům můžete také poslat odkaz na postup online registrace: [registrace zařízení MacOS v Intune](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
@@ -82,7 +82,7 @@ U softwaru VMware Fusion musíte [upravit soubor .vmx](https://kb.vmware.com/s/a
 
 Registrace MDM schválená uživatelem je typ registrace macOS, kterou můžete využít ke správě určitých nastavení citlivých na zabezpečení. Další informace najdete v [dokumentaci podpory Apple](https://support.apple.com/HT208019).  
  
-Od června 2020 se všechna nová macOS registrace MDM v Intune, včetně těch, které se neprovádí prostřednictvím automatického zápisu zařízení (ADE), považují za schválená uživatelem. Koncový uživatel musí ručně nainstalovat profil pro správu v profilech **systémových předvoleb**  >  **Profiles**a tím zajistit schválení profilu správy. Předvolby systému se automaticky spustí z aplikace Portál společnosti pro uživatele BYOD macOS. [Pokyny k instalaci profilu správy](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) najdete v aplikaci Portál společnosti.     
+Od června 2020 se všechna nová macOS registrace MDM v Intune, včetně těch, které se neprovádí prostřednictvím automatického zápisu zařízení (ADE), považují za schválená uživatelem. Koncový uživatel musí ručně nainstalovat profil pro správu v profilech **systémových předvoleb**  >  **Profiles**a tím zajistit schválení profilu správy. Předvolby systému se automaticky spustí z aplikace Portál společnosti pro uživatele BYOD macOS. [Pokyny k instalaci profilu správy](../user-help/enroll-your-device-in-intune-macos-cp.md) najdete v aplikaci Portál společnosti.     
 
 Registrace BYOD MacOS MDM do 15. června 2020 nemusí být schválená uživatelem, pokud koncový uživatel neposkytl ručně schválení profilu správy v **System Preferences**  >  **profilech**systémových předvoleb. Pro registraci BYOD po června 2020 spustí aplikace Portál společnosti pro uživatele **Předvolby systému** a uživatel bude muset vybrat nainstalovat. Pokud uživatel během registrace neschválil profil správy, může přejít do profilů **systémových předvoleb**  >  **Profiles**, vybrat profil správy a vybrat **schválit** ke schválení profilu později.
 

@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 41782c13e3e1cfb8b0c9952a52a60e2ee0baf7ca
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022176"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909155"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
@@ -47,8 +48,8 @@ Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ 
 
 Pro zvýšení zabezpečení firemních dat jste použili podmíněný přístup na základě aplikace. V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
-* Nastavení [podmíněného přístupu na základě dodržování předpisů zařízením, rizik zařízení, umístění a atributů uživatele ve službě Active Directory a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
+* Nastavení [podmíněného přístupu na základě dodržování předpisů zařízením, rizik zařízení, umístění a atributů uživatele ve službě Active Directory a Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Nastavení zásad ochrany aplikací, které pomáhají chránit firemní data před úmyslným nebo neúmyslným únikem informací 
 * Využití služby Azure Information Protection k ochraně firemních dat mimo vaši síť 
 
-Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program). 
+Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 38465f709cf07da97e26c36a9fabba232aca9ba2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303449"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912878"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -29,7 +29,7 @@ Tento článek obsahuje seznam a popis všech různých nastavení, která můž
 Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s Windows 10.
 
 > [!Note]
-> Ne všechny možnosti jsou k dispozici ve všech edicích systému Windows. Pokud chcete zobrazit podporované edice, přečtěte si téma [zásady CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otevře se další web společnosti Microsoft).
+> Ne všechny možnosti jsou k dispozici ve všech edicích systému Windows. Pokud chcete zobrazit podporované edice, přečtěte si téma [zásady CSP](/windows/client-management/mdm/policy-configuration-service-provider) (otevře se další web společnosti Microsoft).
 >  
 > V profilu omezení zařízení s Windows 10 se většina konfigurovatelných nastavení nasadí na úrovni zařízení pomocí skupin zařízení. Zásady nasazené do skupin uživatelů se vztahují na cílové uživatele a vztahují se na uživatele, kteří mají licenci Intune, a přihlaste se k tomuto zařízení.
 
@@ -39,12 +39,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="app-store"></a>App Store
 
-Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement), který obsahuje také podporované edice Windows.
 
 - **App Store (jenom mobilní)**: **blok** zabraňuje uživatelům v přístupu k obchodu s aplikacemi na mobilních zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přístup k obchodu s aplikacemi.
 - **Automatické aktualizace aplikací ze Storu**: **blok** zabraňuje automatické instalaci aktualizací z Microsoft Store. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat automatickou aktualizaci aplikací nainstalovaných z Microsoft Store.
 
-  [CSP ApplicationManagement/AllowAppStoreAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+  [CSP ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 
 - **Instalace důvěryhodných aplikací**: vyberte, jestli se můžou instalovat aplikace, které nejsou Microsoft Store, označované taky jako zkušební načtení. Probíhá instalace zkušebního načtení a následné spuštění nebo otestování aplikace, která není certifikována Microsoft Store. Například aplikace, která je interní pro vaši společnost. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
@@ -56,33 +56,33 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
   - **Blok**: znemožní vývojářský režim a aplikace pro zkušební načtení.
   - **Povolit**: povolí vývojářský režim a aplikace pro zkušební načtení.
 
-  [Povolit pro vývoj zařízení](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) Další informace o této funkci.
+  [Povolit pro vývoj zařízení](/windows/uwp/get-started/enable-your-device-for-development) Další informace o této funkci.
   
-  [CSP ApplicationManagement/AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
+  [CSP ApplicationManagement/AllowAllTrustedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
 - **Sdílená data aplikací uživatele**: vyberte možnost **umožňuje** sdílet data aplikací mezi různými uživateli na stejném zařízení a dalšími instancemi této aplikace. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit sdílení dat s ostatními uživateli a dalšími instancemi stejné aplikace.
 
-  [CSP ApplicationManagement/AllowSharedUserAppData](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+  [CSP ApplicationManagement/AllowSharedUserAppData](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
 
 - **Použít pouze privátní úložiště**: **povolí** možnost stahovat aplikace pouze z privátního úložiště a nestahovat z veřejného úložiště, včetně maloobchodního katalogu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat stažení aplikací z privátního úložiště a veřejného úložiště.
 
-  [CSP ApplicationManagement/RequirePrivateStoreOnly](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+  [CSP ApplicationManagement/RequirePrivateStoreOnly](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
 
 - **Spuštění aplikace pocházející ze Storu**: **blokování** zakáže všechny aplikace, které byly v zařízení předem nainstalovány, nebo stažené z Microsoft Store. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tyto aplikace otevřít.
 
-  [CSP ApplicationManagement/DisableStoreOriginatedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+  [CSP ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
 
 - **Nainstalovat data aplikací na systémový svazek**: **blok** zastaví aplikacím ukládat data na systémový svazek zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat aplikacím ukládat data na diskový svazek.
 
-  [CSP ApplicationManagement/RestrictAppDataToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+  [CSP ApplicationManagement/RestrictAppDataToSystemVolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
 
 - **Nainstalovat aplikace na systémovou jednotku**: **blokovat** znemožní aplikacím instalovat na systémovou jednotku na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat instalaci aplikací na systémovou jednotku.
 
-  [CSP ApplicationManagement/RestrictAppToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+  [CSP ApplicationManagement/RestrictAppToSystemVolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
 
 - Záznam ze **hry (jenom Desktop)**: **blokování** zakáže zaznamenávání a vysílání her ve Windows. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat zaznamenávání a vysílání her.
 
-  [CSP ApplicationManagement/AllowGameDVR](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+  [CSP ApplicationManagement/AllowGameDVR](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
 - **Jenom aplikace ze Storu**: Toto nastavení určuje uživatelské prostředí, když uživatelé nainstalují aplikace z jiných míst než z Microsoft Store. Nebrání instalaci obsahu ze zařízení USB, síťových sdílených složek ani jiných zdrojů, které nejsou v Internetu. Pomocí důvěryhodného prohlížeče můžete zajistit, aby tato ochrana fungovala podle očekávání.
 
@@ -94,23 +94,23 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
   - **Doporučení**: při instalaci aplikace z webu, který je k dispozici v Microsoft Store, se uživatelům zobrazí zpráva doporučující si ji stáhnout ze Storu.  
   - **Preferovat Store**: upozorní uživatele, když instalují aplikace z jiných míst než z Microsoft Store.
 
-  [Zprostředkovatel SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+  [Zprostředkovatel SmartScreen/EnableAppInstallControl CSP](/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
 - **Uživatelský ovládací prvek pro instalace**: **blok** znemožní uživatelům měnit možnosti instalace, které jsou obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení Instalační služba systému Windows může zabránit uživatelům v změně těchto možností instalace a některé z funkcí zabezpečení Instalační služba systému Windows se přeskočí.
 
-  [CSP ApplicationManagement/MSIAllowUserControlOverInstall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
+  [CSP ApplicationManagement/MSIAllowUserControlOverInstall](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
 - **Instalace aplikací se zvýšenými oprávněními**: **zablokování** Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používaly zvýšená oprávnění. Tato oprávnění se rozšiřují na všechny programy. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může systém použít oprávnění aktuálního uživatele při instalaci programů, které správce systému neinstaluje nebo nenabízí.
 
-  [CSP ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
+  [CSP ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
 - **Spouštěné aplikace**: Zadejte seznam aplikací, které se otevřou po přihlášení uživatele k zařízení. Nezapomeňte použít středníkem oddělený seznam názvů (PFN) aplikací pro Windows, které jsou odděleny středníky. Aby tyto zásady fungovaly, musí manifest v aplikacích pro Windows používat úlohu po spuštění.
 
-  [CSP ApplicationManagement/LaunchAppAfterLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
+  [CSP ApplicationManagement/LaunchAppAfterLogOn](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
-Tato nastavení používají [zásady připojení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) a zprostředkovatele kryptografických služeb sítě [Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) , které také uvádějí podporované edice Windows.
+Tato nastavení používají [zásady připojení](/windows/client-management/mdm/policy-csp-connectivity) a zprostředkovatele kryptografických služeb sítě [Wi-Fi](/windows/client-management/mdm/policy-csp-wifi) , které také uvádějí podporované edice Windows.
 
 - **Mobilní datový kanál**: vyberte, jestli uživatelé můžou používat data, jako je procházení webu, při připojení k mobilní síti. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Uživatelé je můžou vypnout.
@@ -129,37 +129,37 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 
 ### <a name="bluetooth"></a>Bluetooth
 
-Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth), který obsahuje taky podporované edice Windows.
+Tato nastavení používají [poskytovatele zásad Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth), který obsahuje taky podporované edice Windows.
 
 - **Bluetooth**: **blok** znemožní uživatelům povolit Bluetooth. **Nenakonfigurováno** (výchozí) povolí Bluetooth na zařízení.
 - **Zjistitelnost Bluetooth**: **blok** zabraňuje zařízení, aby bylo zjistitelné jinými zařízeními podporujícími technologii Bluetooth. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém pro zjištění zařízení povolit jiná zařízení s podporou Bluetooth, jako je třeba sluchátka.
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
 - **Předpárování Bluetooth**: **blokování** zabraňuje konkrétním zařízením Bluetooth, aby se automaticky spároval s hostitelským zařízením. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat Automatické párování s hostitelským zařízením.
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
 - **Inzerce Bluetooth**: **blok** zabraňuje zařízení v posílání reklamy Bluetooth. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení odeslat reklamy Bluetooth.
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
 - **Dotyková připojení Bluetooth**: **blok** brání uživateli v použití páru SWIFT a dalších scénářů založených na blízkosti. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení odeslat reklamy Bluetooth.
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Zprostředkovatel kryptografických služeb Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Povolené služby Bluetooth**: **přidejte** seznam povolených služeb a profilů Bluetooth jako šestnáctkové řetězce, například `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
 
-  [Průvodce používáním ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) obsahuje další informace o seznamu služeb.
+  [Průvodce používáním ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) obsahuje další informace o seznamu služeb.
 
-  [Zprostředkovatel kryptografických služeb Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)
+  [Zprostředkovatel kryptografických služeb Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
-Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), který obsahuje také podporované edice Windows.
+Tato nastavení používají [CSP v zásadách účtů](/windows/client-management/mdm/policy-csp-accounts), který obsahuje také podporované edice Windows.
 
 > [!IMPORTANT]
-> Blokování nebo zakázání těchto nastavení účet Microsoft může mít vliv na scénáře registrace, které vyžadují, aby se uživatelé přihlásili ke službě Azure AD. Například používáte [šetrnější pro Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud jsou tato nastavení nastavená tak, aby **blokovala** nebo **zakázala**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
+> Blokování nebo zakázání těchto nastavení účet Microsoft může mít vliv na scénáře registrace, které vyžadují, aby se uživatelé přihlásili ke službě Azure AD. Například používáte [šetrnější pro Autopilotu](/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud jsou tato nastavení nastavená tak, aby **blokovala** nebo **zakázala**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
 
 - **Účet Microsoft**: **blok** zabraňuje uživatelům v přidružení účet Microsoft k zařízení. **Blok** může mít také vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí proces registrace. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přidat a použít účet Microsoft.
 - **Bez účet Microsoft**: **blok** zabraňuje uživatelům v přidávání účtů mimo Microsoft pomocí uživatelského rozhraní. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přidat e-mailové účty, které nejsou přidružené k účet Microsoft.
@@ -168,11 +168,11 @@ Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.c
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém uživatelům dovolit, aby spouštěli a zastavili službu wlidsvc ( **Microsoft account Signing Assistant** ).
   - **Disabled (zakázáno**): nastaví službu Pomocník pro přihlášení do Microsoftu (wlidsvc) na zakázanou a zabrání tak uživatelům v ručním spuštění.
 
-      **Zakažte** také může mít vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí registraci. Například používáte [šetrnější pro Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud je nastavené na **Zakázat**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
+      **Zakažte** také může mít vliv na některé scénáře registrace, které se spoléhají na to, že uživatelé dokončí registraci. Například používáte [šetrnější pro Autopilotu](/windows/deployment/windows-autopilot/white-glove). Uživatelům se obvykle zobrazuje okno pro přihlášení k Azure AD. Pokud je nastavené na **Zakázat**, možnost přihlášení k Azure AD se nemusí zobrazit. Místo toho se uživatelům zobrazí výzva k přijetí smlouvy EULA a vytvoření místního účtu, který nemusí být požadovaný.
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
-Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint](/windows/client-management/mdm/policy-csp-enterprisecloudprint), který obsahuje také podporované edice Windows.
 
 - **Adresa URL pro zjišťování tiskáren**: zadejte adresu URL pro hledání cloudových tiskáren. Zadejte například `https://cloudprinterdiscovery.contoso.com`.
 - **Adresa URL autority pro přístup k tiskárně**: zadejte adresu URL koncového bodu ověřování a získejte tokeny OAuth. Zadejte například `https://azuretenant.contoso.com/adfs`.
@@ -182,7 +182,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint
 - **Identifikátor URI prostředku služby zjišťování tiskáren**: zadejte identifikátor URI prostředku OAuth pro službu zjišťování tiskáren nakonfigurovanou v Azure Portal. Zadejte například `http://MopriaDiscoveryService/CloudPrint`.
 
 > [!TIP]
-> Po nastavení [tisku hybridního cloudu Windows serveru](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview)můžete tato nastavení nakonfigurovat a pak nasadit na vaše zařízení s Windows.
+> Po nastavení [tisku hybridního cloudu Windows serveru](/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview)můžete tato nastavení nakonfigurovat a pak nasadit na vaše zařízení s Windows.
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
@@ -199,7 +199,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint
     - **Změny nastavení oblasti** (jenom desktopové): **blokovat** znemožní uživatelům měnit nastavení oblasti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
     - **Změny nastavení jazyka (jenom desktopové verze)**: **blokovat** znemožní uživatelům měnit nastavení jazyka v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
 
-      [Zásady nastavení – CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
+      [Zásady nastavení – CSP](/windows/client-management/mdm/policy-csp-settings)
 
   - **Hraní her**: **blok** znemožní přístup k herní oblasti aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Usnadnění přístupu**: **blok** znemožní přístup k oblasti snadného přístupu v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
@@ -208,7 +208,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad EnterpriseCloudPrint
 
 ## <a name="display"></a>Zobrazení
 
-Tato nastavení používají [zprostředkovatele kryptografických služeb pro zobrazení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), který obsahuje taky podporované edice Windows.
+Tato nastavení používají [zprostředkovatele kryptografických služeb pro zobrazení](/windows/client-management/mdm/policy-csp-display), který obsahuje taky podporované edice Windows.
 
 Škálování DPI GDI umožňuje aplikacím, které nepodporují rozlišení DPI, přesměrovat na monitorované rozlišení DPI.
 
@@ -224,7 +224,7 @@ Můžete také **naimportovat** soubor. CSV se seznamem aplikací.
 
 ## <a name="general"></a>Obecné
 
-Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)), který obsahuje taky podporované edice Windows. 
+Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP](/windows/client-management/mdm/policy-csp-experience)), který obsahuje taky podporované edice Windows. 
 
 - **Snímek obrazovky** (jenom mobilní): **blok** znemožní uživatelům získat na zařízení snímky obrazovky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Kopírování a vkládání (jenom mobilní)**: **blok** brání uživatelům v používání kopírování a vkládání mezi aplikacemi na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
@@ -237,27 +237,27 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
 
   Intune spravuje jenom přístup k kameře zařízení. Nemá přístup k obrázkům a videím.
 
-  [CSP pro kameru](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+  [CSP pro kameru](/windows/client-management/mdm/policy-csp-camera)
 
 - **OneDrive File Sync**: **blok** brání uživatelům v synchronizaci souborů se ze zařízení na OneDrivu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [CSP pro System/DisableOneDriveFileSync](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
+  [CSP pro System/DisableOneDriveFileSync](/windows/client-management/mdm/policy-csp-system#system-disableonedrivefilesync)
 
 - **Vyměnitelné úložiště**: **blok** zabraňuje uživatelům v používání externích úložných zařízení, jako jsou SD karty se zařízením. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Zeměpisná poloha**: **blok** zabraňuje uživatelům v zapínání služeb zjišťování polohy na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [CSP pro System/AllowLocation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowlocation)
+  [CSP pro System/AllowLocation](/windows/client-management/mdm/policy-csp-system#system-allowlocation)
 
 - **Sdílení internetu**: **blok** zabraňuje sdílení internetového připojení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Resetování na telefonu**: **blok** brání uživatelům v vymazání nebo obnovení továrního nastavení v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Připojení USB**: **blok** zabraňuje přístupu k externímu úložnému zařízení přes připojení USB na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Toto nastavení neovlivňuje zpoplatnění přes USB.
 
-  [Připojení/AllowUSBConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+  [Připojení/AllowUSBConnection CSP](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
 - **Režim AntiTheft** (jenom mobilní): **blok** zabraňuje uživatelům v výběru předvolby režimu AntiTheft na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Cortana**: **Block** zakáže hlasového asistenta Cortany na zařízení. Když je Cortana vypnutá, uživatelé můžou pořád vyhledávat položky v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat Cortanu.
 
-  [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
+  [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
 - **Záznam hlasu** (jenom mobilní): **blok** znemožní uživatelům používat na zařízení záznam hlasu zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat záznam hlasu pro aplikace.
 - **Úprava názvu zařízení** (jenom mobilní): **blok** znemožní uživatelům měnit název zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
@@ -265,7 +265,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
 - **Odebrat zřizovací balíčky**: **blok** zabraňuje agentům konfigurace běhu, který ze zařízení odebírá zřizovací balíčky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Zjišťování zařízení**: **blok** zabraňuje tomu, aby se zařízení zjistilo jinými zařízeními. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Experience/AllowDeviceDiscovery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
+  [Experience/AllowDeviceDiscovery](/windows/client-management/mdm/policy-csp-experience#experience-allowdevicediscovery)
 
 - **Přepínání úloh** (jenom mobilní): **blok** zabraňuje přepínání úloh na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Chybový dialog SIM karty** (jenom mobilní): **blokovat** zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit chybové zprávy.
@@ -274,52 +274,52 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
   - **Zakázáno na zamykací obrazovce**: pracovní prostor Ink je povolen a funkce je zapnutá. Uživatelé k nim ale nemají přístup nad zamykací obrazovkou.
   - **Zakázáno**: přístup k pracovnímu prostoru Ink je zakázán. Tato funkce je vypnutá.
 
-  [CSP zásad WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace)
+  [CSP zásad WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace)
 
 - **Resetování autopilotu**: vyberte **Povolit** , aby uživatelé s právy správce mohli odstranit všechna uživatelská data a nastavení pomocí **kombinace kláves Ctrl + Win + R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje do správy. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit této funkci.
 - Vyžadovat, aby se **Uživatelé během instalace zařízení připojili k síti**: vyberte **vyžadovat** , aby se zařízení připojovalo k síti před tím, než bude instalace systému Windows po síti. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přejít přes stránku síť, a to i v případě, že není připojen k síti.
 
   Nastavení se projeví při příštím vymazání nebo resetování zařízení. Stejně jako u jakékoli jiné konfigurace Intune musí být zařízení zaregistrované a spravované přes Intune, aby přijímalo nastavení konfigurace. Ale jakmile je zaregistrované, a když se dostávají zásady, zařízení resetuje nastavení v průběhu příští instalace Windows.
 
-  [TenantLockdown CSP](https://docs.microsoft.com/windows/client-management/mdm/tenantlockdown-csp)
+  [TenantLockdown CSP](/windows/client-management/mdm/tenantlockdown-csp)
 
 - **Přímý přístup do paměti**: **blok** zabraňuje přímému přístupu do paměti (DMA) pro všechny bezplatných portů PCI pro příjem dat, dokud se uživatel přihlásí do systému Windows. **Povoleno** (výchozí) umožňuje přístup k DMA i v případě, že uživatel není přihlášený.
 
-  [Poskytovatel CSP pro DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+  [Poskytovatel CSP pro DataProtection/AllowDirectMemoryAccess](/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
 - **Ukončit procesy ze Správce úloh**: Toto nastavení určuje, jestli uživatelé bez oprávnění správce můžou k ukončení úloh používat Správce úloh. **Blok** zabraňuje standardním uživatelům (bez správců) v používání Správce úloh k ukončení procesu nebo úlohy v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém standardně použít k ukončení procesu nebo úlohy pomocí Správce úloh.
 
-  [CSP TaskManager/AllowEndTask](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-taskmanager#taskmanager-allowendtask)
+  [CSP TaskManager/AllowEndTask](/windows/client-management/mdm/policy-csp-taskmanager#taskmanager-allowendtask)
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
 - **Oznámení centra akcí (jenom mobilní)**: **blok** zabraňuje zobrazování oznámení centra akcí na zamykací obrazovce zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vybrat, které aplikace budou zobrazovat oznámení na zamykací obrazovce.
 
-  [CSP AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
+  [CSP AboveLock/AllowActionCenterNotifications](/windows/client-management/mdm/policy-configuration-service-provider#AboveLock_AllowActionCenterNotifications)
 
 - **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)**: zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
 
-  [Přizpůsobení/LockScreenImageUrl CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
+  [Přizpůsobení/LockScreenImageUrl CSP](/windows/client-management/mdm/personalization-csp)
 
 - **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)**: **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí uživatelům dát tuto možnost.
 
-  [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
+  [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](/windows/client-management/mdm/policy-configuration-service-provider#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana na uzamčené obrazovce** (jenom stolní počítače): **blok** zabraňuje uživatelům v interakci s Cortana, když je zařízení na zamykací obrazovce. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat interakci s Cortana.
 
-  [CSP AboveLock/AllowCortanaAboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
+  [CSP AboveLock/AllowCortanaAboveLock](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
 
 - **Informační zprávy na uzamčené obrazovce**: **blok** znemožní zobrazování oznámení na zamykací obrazovce zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tato oznámení umožňovat.
 
-  [CSP AboveLock/AllowToasts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
+  [CSP AboveLock/AllowToasts](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 
 - **Časový limit obrazovky (jenom mobilní zařízení)**: Nastavte dobu trvání (v sekundách) na zamykací obrazovce na obrazovku vypnutí. Podporované hodnoty jsou 11-1800. Zadejte například, pokud `300` chcete nastavit tento časový limit na 5 minut.
 
-  [CSP DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
+  [CSP DeviceLock/ScreenTimeoutWhileLocked](/windows/client-management/mdm/policy-configuration-service-provider#DeviceLock_ScreenTimeoutWhileLocked)
 
 ## <a name="messaging"></a>Zasílání zpráv
 
-Tato nastavení používají [CSP zásady zasílání zpráv](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging), ve kterém jsou uvedeny také podporované edice Windows.
+Tato nastavení používají [CSP zásady zasílání zpráv](/windows/client-management/mdm/policy-csp-messaging), ve kterém jsou uvedeny také podporované edice Windows.
 
 - **Synchronizace zpráv (jenom mobilní zařízení)**: **blok** zakáže zálohování a obnovování textových zpráv a synchronizaci zpráv mezi zařízeními s Windows. Vypnutí pomáhá zabránit ukládání informací na serverech mimo řízení organizace. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit tato nastavení měnit a synchronizovat jejich zprávy.
 - **MMS (jenom mobilní)**: **blokování** zakáže na zařízení funkci Send a Receive MMS. V případě podniků použijte tuto zásadu k zakázání MMS na zařízeních v rámci požadavku auditování nebo správy. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat odesílání a příjem MMS.
@@ -327,7 +327,7 @@ Tato nastavení používají [CSP zásady zasílání zpráv](https://docs.micro
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
-Tato nastavení používají [zprostředkovatele CSP zásad prohlížeče](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser), který také uvádí podporované edice systému Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad prohlížeče](/windows/client-management/mdm/policy-csp-browser), který také uvádí podporované edice systému Windows.
 
 > [!NOTE]
 > Použití zprostředkovatele kryptografických služeb zásad prohlížeče se vztahuje na Microsoft Edge verze 45 a starší. Informace o Microsoft Edge Enterprise verze 77 a novějších najdete v tématu [Konfigurace nastavení zásad pro Microsoft Edge pomocí Microsoft Intune](/DeployEdge/configure-edge-with-intune).
@@ -337,25 +337,25 @@ Tato nastavení používají [zprostředkovatele CSP zásad prohlížeče](https
 Dostupná nastavení se mění v závislosti na tom, co zvolíte. Možnosti:
 
 - **Ne** (výchozí): Microsoft Edge není spuštěný v celoobrazovkovém režimu. Všechna nastavení Microsoft Edge jsou k dispozici pro změnu a konfiguraci.
-- **Digitální nebo interaktivní signice (samoobslužný terminál)**: filtruje nastavení Microsoft Edge, která se vztahují k digitálnímu a interaktivnímu registračnímu režimu Microsoft Edge pro použití jenom v terminálech s jednou aplikací ve Windows 10. Toto nastavení vyberte, pokud chcete otevřít adresu URL na celé obrazovce a zobrazit jenom obsah na tomto webu. [Nastavení digitální znaménka](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+- **Digitální nebo interaktivní signice (samoobslužný terminál)**: filtruje nastavení Microsoft Edge, která se vztahují k digitálnímu a interaktivnímu registračnímu režimu Microsoft Edge pro použití jenom v terminálech s jednou aplikací ve Windows 10. Toto nastavení vyberte, pokud chcete otevřít adresu URL na celé obrazovce a zobrazit jenom obsah na tomto webu. [Nastavení digitální znaménka](/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
 - **Veřejné procházení InPrivate (samoobslužný terminál)**: filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení InPrivate pro použití v terminálech s jednou aplikací ve Windows 10 a v celoobrazovkovém režimu. Spustí více karet verze Microsoft Edge.
 - **Normální režim (veřejný terminál s více aplikacemi)**: filtruje nastavení Microsoft Edge, která platí pro normální celoobrazovkový režim Microsoft Edge. Spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení.
 - **Veřejné procházení (veřejný terminál s více aplikacemi)**: filtruje nastavení Microsoft Edge, která se vztahují k veřejnému procházení veřejného terminálu pro více aplikací ve Windows 10.  Spustí na více kartách verzi Microsoft Edge InPrivate.
 
 > [!TIP]
-> Další informace o tom, co tyto možnosti dělají, najdete v článku [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+> Další informace o tom, co tyto možnosti dělají, najdete v článku [typy konfigurace celoobrazovkového režimu Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
 Tento profil omezení zařízení přímo souvisí s profilem veřejného terminálu, který vytvoříte pomocí [Nastavení veřejného terminálu Windows](kiosk-settings-windows.md). Shrnutí:
 
 1. Vytvořte profil [Nastavení veřejného terminálu Windows](kiosk-settings-windows.md) pro spuštění zařízení v celoobrazovkovém režimu. Jako aplikaci vyberte Microsoft Edge a v profilu veřejného terminálu nastavte celoobrazovkový režim Microsoft Edge.
 2. Vytvořte profil omezení zařízení, který je popsaný v tomto článku, a nakonfigurujte konkrétní funkce a nastavení povolená v Microsoft Edge. Nezapomeňte zvolit stejný typ celoobrazovkového režimu Microsoft Edge, jak je vybraný v profilu veřejného terminálu ([Nastavení veřejného terminálu pro Windows](kiosk-settings-windows.md)). 
 
-    [Nastavení podporovaného celoobrazovkového režimu](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) je skvělý prostředek.
+    [Nastavení podporovaného celoobrazovkového režimu](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) je skvělý prostředek.
 
 > [!IMPORTANT] 
 > Ujistěte se, že tento profil Microsoft Edge přiřadíte ke stejným zařízením jako profil veřejného terminálu ([Nastavení veřejného terminálu pro Windows](kiosk-settings-windows.md)).
 
-[ConfigureKioskMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
+[ConfigureKioskMode CSP](/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Úvodní prostředí
 
@@ -452,13 +452,13 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolit jazyk JavaScript**: **Ano** (výchozí) umožňuje spouštění skriptů, jako je například JavaScript, v prohlížeči Microsoft Edge. **Žádné** zabraňuje spuštění skriptů Java v prohlížeči.
 - **Uživatel může nainstalovat rozšíření**: **Ano** (výchozí) umožňuje uživatelům instalovat rozšíření Microsoft Edge na zařízení. **Nebrání instalaci** .
 - **Povolení zkušebního načtení rozšíření pro vývojáře**: **Ano** (výchozí) používá výchozí operační systém, který může umožňovat zkušební načtení. Zkušební načtení nainstaluje a spustí neověřená rozšíření. Možnost **nijak** nebrání Microsoft Edge ve zkušebním načtení pomocí funkce **rozšíření zatížení** . Nebrání rozšíření zkušebního načtení jiným způsobem, jako je například PowerShell.
-- **Požadovaná rozšíření**: vyberte, která rozšíření uživatelé v Microsoft Edge nemůžou vypnout. Zadejte názvy rodin balíčků a vyberte **Přidat**. Pokyny [pro připojení k síti VPN pro jednotlivé aplikace najdete v části název rodiny balíčků (PFN)](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) .
+- **Požadovaná rozšíření**: vyberte, která rozšíření uživatelé v Microsoft Edge nemůžou vypnout. Zadejte názvy rodin balíčků a vyberte **Přidat**. Pokyny [pro připojení k síti VPN pro jednotlivé aplikace najdete v části název rodiny balíčků (PFN)](/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn) .
 
   Můžete také **importovat** soubor CSV, který obsahuje názvy rodin balíčků. Případně **exportujte** názvy rodin balíčků, které zadáte.
 
 ## <a name="network-proxy"></a>Síťový proxy server
 
-Tato nastavení používají [zprostředkovatele CSP zásad NetworkProxy](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad NetworkProxy](/windows/client-management/mdm/networkproxy-csp), který obsahuje také podporované edice Windows.
 
 - **Automaticky zjišťovat nastavení proxy serveru**: **blokování** zakáže zařízením automaticky zjišťovat skript automatické konfigurace proxy serveru (PAC). Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci povolit a zařízení se pokusí najít cestu ke skriptu PAC.
 - **Použít skript proxy serveru**: **pokud chcete nakonfigurovat** proxy server, zadejte cestu k vašemu skriptu PAC. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém Neumožnit zadání adresy URL ke skriptu PAC.
@@ -471,67 +471,67 @@ Tato nastavení používají [zprostředkovatele CSP zásad NetworkProxy](https:
 
 ## <a name="password"></a>Heslo
 
-Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](/windows/client-management/mdm/policy-csp-devicelock), který obsahuje také podporované edice Windows.
 
 - **Heslo**: **vyžaduje** , aby uživatelé zadali heslo pro přístup k zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat přístup k zařízením bez hesla. Platí jenom pro místní účty. Hesla doménového účtu zůstávají nakonfigurovaná službou Active Directory (AD) a službou Azure AD.
 
-  [CSP DeviceLock/DevicePasswordEnabled](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+  [CSP DeviceLock/DevicePasswordEnabled](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 
   - **Vyžadovaný typ hesla**: Vyberte typ hesla. Možnosti:
     - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém heslo obsahovat číslice a písmena.
     - **Alfanumerické**: heslo musí být kombinací číslic a písmen.
     - **Číselná**: heslo musí obsahovat pouze čísla.
 
-    [CSP DeviceLock/AlphanumericDevicePasswordRequired](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    [CSP DeviceLock/AlphanumericDevicePasswordRequired](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
 
   - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte například, pokud `6` chcete, aby délka hesla vyžadovala alespoň šest znaků. Ve výchozím nastavení může operační systém nastavit na `4` .
   
-    [CSP DeviceLock/MinDevicePasswordLength](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordlength)
+    [CSP DeviceLock/MinDevicePasswordLength](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordlength)
   
     > [!IMPORTANT]
     > Když se požadavek na heslo změní na plochu Windows, uživatelé budou mít vliv na jeho další přihlášení, protože zařízení přecházejí z nečinnosti na aktivní. Uživatelům s hesly, kteří splňují požadavky, se stále zobrazí výzva ke změně hesla.
 
-  - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet nesprávných hesel, která se mají povolit, než se zařízení vymaže, až do 11. Platné číslo, které zadáte, závisí na edici. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) obsahuje seznam podporovaných hodnot. `0`(nula) může zakázat funkci vymazání zařízení.
+  - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet nesprávných hesel, která se mají povolit, než se zařízení vymaže, až do 11. Platné číslo, které zadáte, závisí na edici. [DeviceLock/MAXDEVICEPASSWORDFAILEDATTEMPTS CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) obsahuje seznam podporovaných hodnot. `0` (nula) může zakázat funkci vymazání zařízení.
 
-    Toto nastavení má také jiný dopad v závislosti na edici. Konkrétní podrobnosti o tomto nastavení najdete v tématu [CSP pro DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
+    Toto nastavení má také jiný dopad v závislosti na edici. Konkrétní podrobnosti o tomto nastavení najdete v tématu [CSP pro DeviceLock/MaxDevicePasswordFailedAttempts](/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maximální počet minut nečinnosti, po kterém se uzamkne obrazovka**: zadejte dobu, po kterou musí být zařízení v nečinnosti, než se zamkne obrazovka. Zadejte například, `5` Pokud chcete zařízení zamknout po 5 minutách nečinnosti. Pokud je nastavené na **Nenakonfigurováno**, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení se operační systém může nastavit na `0` (nula), což není časový limit.
 
-    [CSP DeviceLock/MaxInactivityTimeDeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxinactivitytimedevicelock)
+    [CSP DeviceLock/MaxInactivityTimeDeviceLock](/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxinactivitytimedevicelock)
 
   - **Vypršení platnosti hesla (dny)**: zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje. Ve výchozím nastavení se operační systém může nastavit na `0` (nula), což není vypršení platnosti.
 
-    [CSP DeviceLock/DevicePasswordExpiration](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordexpiration)
+    [CSP DeviceLock/DevicePasswordExpiration](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordexpiration)
 
   - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
-    [CSP DeviceLock/DevicePasswordHistory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordhistory)
+    [CSP DeviceLock/DevicePasswordHistory](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordhistory)
 
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** (mobilní a holografické): **vyžaduje** , aby uživatelé po nečinnosti odemkli zařízení zadáním hesla. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí po nečinnosti vyžadovat kód PIN nebo heslo.
 
-    [CSP DeviceLock/AllowIdleReturnWithoutPassword](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
+    [CSP DeviceLock/AllowIdleReturnWithoutPassword](/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
   - **Jednoduchá hesla**: **blok** znemožní uživatelům vytvářet jednoduchá hesla, například `1234` nebo `1111` . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožnit uživatelům vytvářet jednoduchá hesla. Toto nastavení také blokuje použití obrázkových hesel.
 
-    [CSP DeviceLock/AllowSimpleDevicePassword](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowsimpledevicepassword)
+    [CSP DeviceLock/AllowSimpleDevicePassword](/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowsimpledevicepassword)
 
 - **Automatické šifrování během AADJ**: **blok** zabraňuje automatickému šifrování zařízení bitlockerem, když se zařízení připravují k prvnímu použití, a když jsou zařízení připojená k Azure AD. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém povolit šifrování.
 
-  Další informace o [šifrování zařízení nástrojem BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+  Další informace o [šifrování zařízení nástrojem BitLocker](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
-  [CSP pro zabezpečení/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+  [CSP pro zabezpečení/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
 - **Zásada FIPS (Federal Information Processing Standard)**: **povoluje** použití zásad FIPS (Federal Information Processing Standard), což je standard státní správy USA pro šifrování, algoritmus hash a podepisování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí Standard FIPS umožňovat.
 
-  [Kryptografie/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+  [Kryptografie/AllowFipsAlgorithmPolicy CSP](/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
 - **Ověřování zařízení ve Windows Hello**: **umožňuje** uživatelům používat doprovodné zařízení Windows Hello, jako je telefon, síť vhodnosti nebo zařízení IoT, pro přihlášení k počítači s Windows 10. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit ověřování doprovodných zařízení Windows Hell.
 
-  [Ověřování/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+  [Ověřování/AllowSecondaryAuthenticationDevice CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
 - **Upřednostňovaná doména tenanta Azure AD**: zadejte název existující domény v organizaci Azure AD. Když se uživatelé v této doméně přihlásí, nemusí zadávat název domény. Zadejte například `contoso.com`. Uživatelé v `contoso.com` doméně se můžou přihlásit pomocí svého uživatelského jména, jako `abby` je místo `abby@contoso.com` .
 
-  [Ověřování/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
+  [Ověřování/PreferredAadTenantDomainName CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 
@@ -563,7 +563,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
 
 ## <a name="personalization"></a>Personalizace
 
-Tato nastavení používají [zprostředkovatele kryptografických služeb v zásadách přizpůsobení](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), který obsahuje taky podporované edice Windows.
+Tato nastavení používají [zprostředkovatele kryptografických služeb v zásadách přizpůsobení](/windows/client-management/mdm/personalization-csp), který obsahuje taky podporované edice Windows.
 
 - **Adresa URL obrázku na pozadí plochy (jenom desktopové aplikace)**: zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
@@ -573,35 +573,35 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb v zá
 
 - **Tiskárny**: přidejte tiskárny pomocí názvů síťových hostitelů (název DNS). Operační systém vyhledá a nainstaluje pro každou tiskárnu v zařízení vyhovující ovladače tiskáren. Pokud nezadáte žádnou hodnotu, Intune toto nastavení nezmění ani neaktualizuje.
 
-  [CSP pro vzdělávání/Název_tiskárny](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-printernames)
+  [CSP pro vzdělávání/Název_tiskárny](/windows/client-management/mdm/policy-csp-education#education-printernames)
 
 - **Výchozí tiskárna**: zadejte název síťového hostitele (název DNS) nainstalované tiskárny, který se použije jako výchozí tiskárna. Pokud nezadáte žádnou hodnotu, Intune toto nastavení nezmění ani neaktualizuje.
 
-  [Poskytovatel CSP pro vzdělávání/DefaultPrinterName](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
+  [Poskytovatel CSP pro vzdělávání/DefaultPrinterName](/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
 
 - **Přidat nové tiskárny**: **blok** zabraňuje uživatelům v přidávání nových tiskáren. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přizpůsobit přidávání nových tiskáren.
 
-  [Poskytovatel CSP pro vzdělávání/PreventAddingNewPrinters](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-education#education-preventaddingnewprinters)
+  [Poskytovatel CSP pro vzdělávání/PreventAddingNewPrinters](/windows/client-management/mdm/policy-csp-education#education-preventaddingnewprinters)
 
 ## <a name="privacy"></a>Ochrana osobních údajů
 
-Tato nastavení používají [CSP zásady ochrany osobních údajů](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy), který také uvádí podporované edice Windows.
+Tato nastavení používají [CSP zásady ochrany osobních údajů](/windows/client-management/mdm/policy-csp-privacy), který také uvádí podporované edice Windows.
 
 - **Prostředí ochrany osobních údajů**: **blok** zabraňuje otevření ochrany osobních údajů při přihlášení uživatelů a otevření pro nové a aktualizované uživatele. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Soukromí/DisablePrivacyExperience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-disableprivacyexperience)
+  [Soukromí/DisablePrivacyExperience](/windows/client-management/mdm/policy-csp-privacy#privacy-disableprivacyexperience)
 
 - **Přizpůsobení vstupu**: **blok** zabraňuje použití hlasu pro diktování a komunikaci s Cortana a dalšími aplikacemi, které využívají rozpoznávání řeči od Microsoftu. Je zakázaná a uživatelé nemůžou povolit online rozpoznávání řeči pomocí nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vybrat možnost Uživatelé. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
 
-  [Soukromí/AllowInputPersonalization CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-allowinputpersonalization)
+  [Soukromí/AllowInputPersonalization CSP](/windows/client-management/mdm/policy-csp-privacy#privacy-allowinputpersonalization)
 
 - **Automatické přijetí párování a výzev k souhlasu uživatele s ochranou osobních údajů**: vyberte možnost **umožnit** , aby systém Windows mohl automaticky přijímat párování a zprávy o souhlasu s ochranou osobních údajů při spouštění aplikací. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit automatickému přijetí.
 
-  [Soukromí/AllowAutoAcceptPairingAndPrivacyConsentPrompts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-allowautoacceptpairingandprivacyconsentprompts)
+  [Soukromí/AllowAutoAcceptPairingAndPrivacyConsentPrompts CSP](/windows/client-management/mdm/policy-csp-privacy#privacy-allowautoacceptpairingandprivacyconsentprompts)
 
 - **Publikování aktivit uživatelů**: **blokování** brání aplikacím a operačnímu systému v publikování aktivit uživatelů. Zabrání taky sdílení a zjišťování naposledy použitých prostředků v informačním kanálu o aktivitách. Aktivity uživatelů sledují stav uživatelských úloh v aplikaci nebo operačním systému. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci povolit, takže aplikace můžou publikovat aktivity uživatelů.
 
-  [Soukromí/PublishUserActivities CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy#privacy-publishuseractivities)
+  [Soukromí/PublishUserActivities CSP](/windows/client-management/mdm/policy-csp-privacy#privacy-publishuseractivities)
 
 - **Pouze místní aktivity**: **blok** zabraňuje sdíleným prostředím a zjišťování naposledy použitých prostředků v přepínání úloh na základě pouze místních aktivit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
@@ -630,19 +630,19 @@ Můžete nakonfigurovat informace, ke kterým mají přístup všechny aplikace 
 
 ## <a name="projection"></a>Projekce
 
-Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](/windows/client-management/mdm/policy-csp-wirelessdisplay), který obsahuje také podporované edice Windows.
 
 - **Vstup uživatele z přijímačů bezdrátového zobrazení**: **blok** brání vstupu uživatele z přijímačů bezdrátového zobrazení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat bezdrátové zobrazení odesílání klávesnice, myši, pera a dotykového vstupu zpátky na zdrojové zařízení.
 
-  [CSP WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver)
+  [CSP WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowuserinputfromwirelessdisplayreceiver)
 
 - **Projekce na tento počítač**: **blokování** zabrání ostatním zařízením najít zařízení pro projekci a zabrání v projekci do jiných zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém povolit, aby byla zařízení zjistitelná a aby mohla promítnout zařízení nad zamykací obrazovkou.
 
-  [CSP WirelessDisplay/AllowProjectionFromPC](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompc)
+  [CSP WirelessDisplay/AllowProjectionFromPC](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-allowprojectionfrompc)
 
 - **Vyžadovat pro párování PIN**: při připojování k zařízení projekce **vyžadovat** vždycky výzvy k zadání kódu PIN. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém nemusí pro spárování zařízení vyžadovat kód PIN.
 
-  [CSP WirelessDisplay/RequirePinForPairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-requirepinforpairing)
+  [CSP WirelessDisplay/RequirePinForPairing](/windows/client-management/mdm/policy-csp-wirelessdisplay#wirelessdisplay-requirepinforpairing)
 
 ## <a name="reporting-and-telemetry"></a>Generování sestav a telemetrie
 
@@ -653,7 +653,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
   - **Rozšířené**: Další přehledy, včetně toho, jak se používají Windows, Windows Server, System Center a aplikace, jak provádějí, pokročilá data o spolehlivosti a data ze základních i úrovní zabezpečení
   - **Úplné**: všechna data potřebná pro identifikaci a pomoc při řešení problémů a data ze zabezpečení, úrovně Basic a rozšířené úrovně.
 
-  [CSP pro System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
+  [CSP pro System/AllowTelemetry](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Odeslat data o procházení Microsoft Edge do Microsoft 365 Analytics**: Pokud chcete tuto funkci používat, nastavte nastavení **sdílet data o využití** na **Rozšířené** nebo **úplné**. Tato funkce řídí, jaká data Microsoft Edge odesílá Microsoft 365 analýze pro podniková zařízení s nakonfigurovaným komerčním ID. Možnosti:
   - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení operační systém nemusí shromažďovat ani odesílat žádná data historie procházení.
@@ -661,7 +661,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
   - **Odesílat pouze Internetová data**: umožňuje správcům odesílat historii internetových dat.
   - **Odesílat intranetová a Internetová data**: umožňuje správcům odesílat historii intranetových a internetových dat.
 
-  [CSP pro Browser/ConfigureTelemetryForMicrosoft365Analytics](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configuretelemetryformicrosoft365analytics)
+  [CSP pro Browser/ConfigureTelemetryForMicrosoft365Analytics](/windows/client-management/mdm/policy-csp-browser#browser-configuretelemetryformicrosoft365analytics)
 
 - **Proxy server telemetrie**: zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy server, aby se předaly požadavky na uživatelské prostředí a telemetrie pomocí připojení SSL (Secure SOCKETS Layer) (SSL). Formát pro toto nastavení je *server*:*port*. Pokud pojmenovaný proxy server selhává nebo pokud proxy server nezadáte, nebudou se posílat data o prostředích a datech telemetrie připojené uživatele. Zůstane na místním zařízení.
 
@@ -675,11 +675,11 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
   FQDN: www.contoso.com:345
   ```
 
-  [CSP pro System/TelemetryProxy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
+  [CSP pro System/TelemetryProxy](/windows/client-management/mdm/policy-csp-system#system-telemetryproxy)
 
 ## <a name="search"></a>Hledat
 
-Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), ve kterém jsou uvedeny také podporované edice systému Windows.
+Tato nastavení používají [CSP v zásadách hledání](/windows/client-management/mdm/policy-csp-search), ve kterém jsou uvedeny také podporované edice systému Windows.
 
 - **Bezpečné vyhledávání (jenom mobilní)**: Určuje, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Možnosti:
   - **Definováno uživatelem**: Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé si zvolí vlastní nastavení.
@@ -688,72 +688,72 @@ Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft
 - **Zobrazit výsledky webu v hledání**: **blok** zabraňuje uživatelům ve vyhledávání na internetu pomocí služby Windows Search a výsledky webu nejsou zobrazeny ve vyhledávání. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit vyhledat web a výsledky se zobrazí na zařízení.
 - **Diakritická znaménka**: **blok** znemožňuje zobrazování diakritických znamének ve Windows Search. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazovat diakritická znaménka.
 
-  [Hledání/AllowUsingDiacritics CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowusingdiacritics)
+  [Hledání/AllowUsingDiacritics CSP](/windows/client-management/mdm/policy-csp-search#search-allowusingdiacritics)
 
 - **Automatické zjišťování jazyka**: **zablokování** zabrání službě Windows Search v automatickém zjišťování jazyka při indexování obsahu nebo vlastností. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci dovolit.
 
-  [Hledání/AlwaysUseAutoLangDetection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-alwaysuseautolangdetection)
+  [Hledání/AlwaysUseAutoLangDetection CSP](/windows/client-management/mdm/policy-csp-search#search-alwaysuseautolangdetection)
 
 - **Umístění pro hledání**: **blok** zabrání službě Windows Search v použití umístění. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci dovolit.
 
-  [Hledání/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
+  [Hledání/AllowSearchToUseLocation CSP](/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
 - **Indexer omezení rychlosti**: **Block** zakáže funkci omezení rychlosti indexeru vyhledávání. Indexování pokračuje s plnou rychlostí, a to i v případě, že je aktivita systému vysoká. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém použít logiku omezení rychlosti k omezení zpětné aktivity indexování v případě vysoké aktivity systému.
 
-  [Hledání/DisableBackoff CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-disablebackoff)
+  [Hledání/DisableBackoff CSP](/windows/client-management/mdm/policy-csp-search#search-disablebackoff)
 
 - **Indexování vyměnitelných jednotek**: **blok** zabraňuje přidávání umístění na vyměnitelných jednotkách do knihoven a z indexování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci dovolit.
 
-  [Hledání/DisableRemovableDriveIndexing CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-disableremovabledriveindexing)
+  [Hledání/DisableRemovableDriveIndexing CSP](/windows/client-management/mdm/policy-csp-search#search-disableremovabledriveindexing)
 
 - **Nedostatek místa při indexování**: **Povolení** povoluje automatické indexování, i když je nedostatek místa na disku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém vypnout automatické indexování, je-li místo na pevném disku 600 MB nebo méně. Pokud mají zařízení ve vaší organizaci omezené místo na pevném disku, nastavte ji na **nenakonfigurovanou**.
 
-  [Hledání/PreventIndexingLowDiskSpaceMB CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-preventindexinglowdiskspacemb)
+  [Hledání/PreventIndexingLowDiskSpaceMB CSP](/windows/client-management/mdm/policy-csp-search#search-preventindexinglowdiskspacemb)
 
 - **Vzdálené dotazy**: **Povolit** povoluje vzdálené dotazy na index zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům ve vzdáleném dotazování na index zařízení.
 
-  [Hledání/PreventRemoteQueries CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-preventremotequeries)
+  [Hledání/PreventRemoteQueries CSP](/windows/client-management/mdm/policy-csp-search#search-preventremotequeries)
 
 ## <a name="start"></a>Spustit
 
-Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
+Tato nastavení používají [zprostředkovatele CSP zásad spuštění](/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
 
 - **Rozložení nabídky Start**: Nahrajte soubor XML, který obsahuje vaše vlastní nastavení, včetně pořadí, ve kterém jsou aplikace uvedené, a další. Soubor XML přepisuje výchozí počáteční rozložení. Uživatelé nemůžou měnit rozložení nabídky Start, které zadáte.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/upravily CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-startlayout)
+  [Spustit/upravily CSP](/windows/client-management/mdm/policy-csp-start#start-startlayout)
 
 - **Připnout weby na dlaždice v nabídce Start**: importovat obrázky z Microsoft Edge. Tyto image se zobrazují jako odkazy v nabídce Start systému Windows pro stolní zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/ImportEdgeAssets CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-importedgeassets)
+  [Spustit/ImportEdgeAssets CSP](/windows/client-management/mdm/policy-csp-start#start-importedgeassets)
 
 - **Odepnout aplikace z panelu úloh**: **blok** znemožní uživatelům odpnutí aplikací z panelu úloh. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit odepnout aplikace na hlavním panelu.
 
-  [Spustit/NoPinningToTaskbar CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-nopinningtotaskbar)
+  [Spustit/NoPinningToTaskbar CSP](/windows/client-management/mdm/policy-csp-start#start-nopinningtotaskbar)
 
 - **Rychlé přepínání uživatelů**: **blok** zabraňuje přepínání mezi uživateli, kteří jsou přihlášeni současně bez odhlášení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na dlaždici uživatele zobrazit **přepínač uživatel** .
 
-  [Spustit/HideSwitchAccount CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+  [Spustit/HideSwitchAccount CSP](/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
 
 - **Nejčastěji používané aplikace**: **blok** skryje v nabídce Start nejčastěji používané aplikace. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit nejčastěji používané aplikace.
 
-  [Spustit/HideFrequentlyUsedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidefrequentlyusedapps)
+  [Spustit/HideFrequentlyUsedApps CSP](/windows/client-management/mdm/policy-csp-start#start-hidefrequentlyusedapps)
 
 - **Nedávno přidané aplikace**: **blok** skryje nedávno přidané aplikace v nabídce Start. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit nedávno přidané aplikace v nabídce Start.
 
-  [Spustit/HideRecentlyAddedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderecentlyaddedapps)
+  [Spustit/HideRecentlyAddedApps CSP](/windows/client-management/mdm/policy-csp-start#start-hiderecentlyaddedapps)
 
 - **Režim úvodní obrazovky**: vyberte velikost obrazovky Start. Možnosti:
   - **Definováno uživatelem**: Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé můžou nastavit velikost.
   - **Celá obrazovka**: vynutí celou velikost spuštění.
   - Neúplná obrazovka: vynutí **nekompletní**velikost spuštění.
 
-  [Spustit/ForceStartSize CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-forcestartsize)
+  [Spustit/ForceStartSize CSP](/windows/client-management/mdm/policy-csp-start#start-forcestartsize)
 
 - **Naposledy otevřené položky v seznamech odkazů**: **blokovat** skryje v nabídce Start a na hlavním panelu nedávný seznam odkazů. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit nedávno otevřené položky v seznamy odkazů.
 
-  [Spustit/HideRecentJumplists CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderecentjumplists)
+  [Spustit/HideRecentJumplists CSP](/windows/client-management/mdm/policy-csp-start#start-hiderecentjumplists)
 
 - **Seznam aplikací**: Vyberte způsob zobrazení seznamů všechny aplikace. Možnosti:
   - **Definováno uživatelem**: Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé zvolí, jak se zobrazuje seznam aplikací.
@@ -761,107 +761,107 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
   - **Sbalit a zakázat aplikaci nastavení**: skryje seznam všechny aplikace a zakáže možnost **Zobrazit seznam aplikací v nabídce Start** v aplikaci nastavení.
   - **Odebere a zakáže aplikaci nastavení**: skryje seznam všechny aplikace, odebere všechny aplikace a zakáže možnost **Zobrazit seznam aplikací v nabídce Start** v aplikaci nastavení.
 
-  [Spustit/HideAppList CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideapplist)
+  [Spustit/HideAppList CSP](/windows/client-management/mdm/policy-csp-start#start-hideapplist)
 
 - **Tlačítko napájení**: **Block** skryje tlačítko napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může OS zobrazit tlačítko napájení.
 
-  [Spustit/HidePowerButton CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidepowerbutton)
+  [Spustit/HidePowerButton CSP](/windows/client-management/mdm/policy-csp-start#start-hidepowerbutton)
 
 - **Dlaždice uživatele**: **blok** skryje dlaždici uživatele v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může OS zobrazit dlaždici uživatele. Nakonfigurujte tahle nastavení:
   - **Lock**: **Block** skryje možnost **Lock** na dlaždici uživatele v nabídce Start.  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit možnost **zámku** .
   - **Odhlásit**: **blok** skryje možnost **Odhlásit** se na dlaždici uživatele v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí možnost **Odhlásit** se.
 
-  [Spustit/HideUserTile CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideusertile)
+  [Spustit/HideUserTile CSP](/windows/client-management/mdm/policy-csp-start#start-hideusertile)
 
 - **Vypnout**: **blok** skryje možnosti **aktualizace a vypnutí** **a vypnutí na** tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/HideShutDown CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideshutdown)
+  [Spustit/HideShutDown CSP](/windows/client-management/mdm/policy-csp-start#start-hideshutdown)
 
 - **Režim spánku**: **blok** skryje možnost **spánku** na tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/HideSleep CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidesleep)
+  [Spustit/HideSleep CSP](/windows/client-management/mdm/policy-csp-start#start-hidesleep)
 
 - **Hibernace**: **blok** skryje možnost **Hibernace** na tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/HideHibernate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hidehibernate)
+  [Spustit/HideHibernate CSP](/windows/client-management/mdm/policy-csp-start#start-hidehibernate)
 
 - **Switch Account**: **Block** skryje na dlaždici uživatele v nabídce Start **účet Switch** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/HideSwitchAccount CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
+  [Spustit/HideSwitchAccount CSP](/windows/client-management/mdm/policy-csp-start#start-hideswitchaccount)
 
-- **Možnosti restartování**: **blokovat** skryje možnosti **aktualizace a restartování** a **restartování** na tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Možnosti restartování**:  **blokovat** skryje možnosti **aktualizace a restartování** a **restartování** na tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [Spustit/HideRestart CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-hiderestart)
+  [Spustit/HideRestart CSP](/windows/client-management/mdm/policy-csp-start#start-hiderestart)
 
 - **Dokumenty na začátku**: skryje nebo zobrazí složku dokumenty v nabídce Start systému Windows. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderDocuments CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdocuments)
+  [Spustit/AllowPinnedFolderDocuments CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdocuments)
 
 - **Soubory ke stažení na začátku**: skryje nebo zobrazí složku stažené soubory v nabídce Start systému Windows. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderDownloads CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdownloads)
+  [Spustit/AllowPinnedFolderDownloads CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderdownloads)
 
 - **Průzkumník souborů v nabídce Start**: skrýt nebo zobrazit Průzkumníka souborů v nabídce Start systému Windows. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderFileExplorer CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderfileexplorer)
+  [Spustit/AllowPinnedFolderFileExplorer CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderfileexplorer)
 
 - **Domácí skupina v nabídce Start**: v nabídce Start systému Windows skryjte nebo zobrazte zástupce domácí skupiny. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderHomeGroup CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderhomegroup)
+  [Spustit/AllowPinnedFolderHomeGroup CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderhomegroup)
 
 - **Hudba na začátku**: skryje nebo zobrazí složku hudba v nabídce Windows Start. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderMusic CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldermusic)
+  [Spustit/AllowPinnedFolderMusic CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldermusic)
 
 - **Síť v nabídce Start**: skrýt nebo zobrazit síťové vstupy nabídce Windows Start. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderNetwork CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldernetwork)
+  [Spustit/AllowPinnedFolderNetwork CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldernetwork)
 
 - **Osobní složka v nabídce Start**: skrýt nebo zobrazit osobní složku v nabídce Start systému Windows. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderPersonalFolder CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpersonalfolder)
+  [Spustit/AllowPinnedFolderPersonalFolder CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpersonalfolder)
 
 - **Obrázky v nabídce Start**: umožňuje skrýt nebo zobrazit složku pro obrázky v nabídce Windows Start. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderPictures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpictures)
+  [Spustit/AllowPinnedFolderPictures CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfolderpictures)
 
 - **Nastavení na začátku**: v nabídce Start systému Windows skryjte nebo zobrazte zástupce nastavení. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderSettings CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldersettings)
+  [Spustit/AllowPinnedFolderSettings CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldersettings)
 
 - **Videa na začátku**: v nabídce Start systému Windows skryjte nebo zobrazte složku pro videa. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a nastavení je v aplikaci nastavení zakázané.
   - **Zobrazit**: zástupce se zobrazí a nastavení je v aplikaci nastavení zakázané.
 
-  [Spustit/AllowPinnedFolderVideos CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldervideos)
+  [Spustit/AllowPinnedFolderVideos CSP](/windows/client-management/mdm/policy-csp-start#start-allowpinnedfoldervideos)
 
 ## <a name="microsoft-defender-smartscreen"></a>Filtr SmartScreen v programu Microsoft Defender
 
@@ -869,57 +869,57 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
 
   Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem.
 
-  [CSP pro Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [CSP pro Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Přístup ke škodlivému webu**: **blok** zabraňuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje jejich přechodu na web. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit ignorovat upozornění a pokračovat v lokalitě.
 
-  [CSP pro Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [CSP pro Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Stahování neověřených souborů**: **blok** zabraňuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje stahování neověřených souborů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit ignorovat upozornění a pokračovat v stahování neověřených souborů.
 
-  [CSP pro Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [CSP pro Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
-Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)), který obsahuje taky podporované edice Windows.
+Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP](/windows/client-management/mdm/policy-csp-experience)), který obsahuje taky podporované edice Windows.
 
 - **Windows Spotlight**: **blokování** vypne Windows Spotlight na zamykací obrazovce, tipůch pro Windows, funkcích Microsoftu pro uživatele a dalších souvisejících funkcích. Pokud vaším cílem je minimalizovat síťový provoz ze zařízení, vyberte **Ano**. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat funkce Windows Spotlight a můžou je řídit uživatelé.
 
-  [Experience/AllowWindowsSpotlight CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlight)
+  [Experience/AllowWindowsSpotlight CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlight)
 
   Pokud je nastavené na **Nenakonfigurováno**, můžete také povolí nebo zablokovat následující nastavení:
 
   - **Windows Spotlight na zamykací obrazovce**: **blokovat** zastaví zobrazování informací na zamykací obrazovce zařízení ve Windows Spotlightu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit informace Windows Spotlight na zamykací obrazovce.
 
-    [Experience/ConfigureWindowsSpotlightOnLockScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-configurewindowsspotlightonlockscreen)
+    [Experience/ConfigureWindowsSpotlightOnLockScreen CSP](/windows/client-management/mdm/policy-csp-experience#experience-configurewindowsspotlightonlockscreen)
 
   - **Návrhy třetích stran ve Windows Spotlightu**: **blok** zastaví Windows Spotlight z návrhu obsahu, který nepublikoval Microsoft. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém pro partnery umožňovat návrhy aplikace a obsahu a v nabídce Start zobrazit navrhované aplikace a tipy k Windows.
 
-    [Experience/AllowThirdPartySuggestionsInWindowsSpotlight CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowthirdpartysuggestionsinwindowsspotlight)
+    [Experience/AllowThirdPartySuggestionsInWindowsSpotlight CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowthirdpartysuggestionsinwindowsspotlight)
 
   - **Funkce příjemce**: **blokování** vypíná prostředí, která jsou typicky pro uživatele, jako jsou návrhy zahájení, oznámení o členství, instalace aplikací po ukončení a přesměrování dlaždic. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-    [Experience/AllowWindowsConsumerFeatures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures)
+    [Experience/AllowWindowsConsumerFeatures CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsconsumerfeatures)
 
   - **Tipy pro Windows**: **blokování** zakáže automaticky otevíraná okna s tipy pro Windows. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zobrazit tipy pro systém Windows.
 
-    [Experience/AllowWindowsTips CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)
+    [Experience/AllowWindowsTips CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowstips)
 
   - **Windows Spotlight v centru akcí**: **blok** zabraňuje zobrazování oznámení Windows Spotlightu v centru akcí. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém v centru akcí zobrazovat oznámení, která navrhují aplikace nebo funkce, které uživatelům pomůžou zvýšit produktivitu Windows.
 
-    [Experience/AllowWindowsSpotlightOnActionCenter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)
+    [Experience/AllowWindowsSpotlightOnActionCenter CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightonactioncenter)
 
   - **Přizpůsobení Windows Spotlightu**: **blok** zabraňuje systému Windows používat diagnostická data k poskytování přizpůsobených prostředí uživatelům. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém společnosti Microsoft umožnit použití diagnostických dat k poskytnutí individuálních doporučení, tipů a nabídek, které přizpůsobí Windows potřebám daného uživatele.
 
-    [Experience/AllowTailoredExperiencesWithDiagnosticData CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowtailoredexperienceswithdiagnosticdata)
+    [Experience/AllowTailoredExperiencesWithDiagnosticData CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowtailoredexperienceswithdiagnosticdata)
 
   - **Prostředí uvítání systémem Windows**: **blok** vypne funkci Windows Spotlight Windows Welcome Experience. Prostředí uvítání systémem Windows se nezobrazí, pokud jsou k dispozici aktualizace a změny ve Windows a jejích aplikacích. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat uvítání systémem Windows, které zobrazuje informace o uživatelích o nových nebo aktualizovaných funkcích.
 
-    [Experience/AllowWindowsSpotlightWindowsWelcomeExperience CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightwindowswelcomeexperience)
+    [Experience/AllowWindowsSpotlightWindowsWelcomeExperience CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowwindowsspotlightwindowswelcomeexperience)
 
 ## <a name="microsoft-defender-antivirus"></a>Antivirová ochrana v programu Microsoft Defender
 
-Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), který obsahuje také podporované edice Windows.
+Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](/windows/client-management/mdm/policy-csp-defender), který obsahuje také podporované edice Windows.
 
 - **Sledování v reálném čase**: **Povolení** zapne kontrolu v reálném čase pro malware, spyware a další nežádoucí software. Uživatelé ji nemůžou vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém tuto funkci zapne a umožňuje uživatelům ji změnit.
 
@@ -927,7 +927,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 - **Monitorování chování**: **Povolit** zapne monitorování chování a kontroluje určité známé vzorce podezřelé aktivity na zařízeních. Uživatelé nemůžou monitorování chování vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout monitorování chování a povolit uživatelům jeho změnu.
 
@@ -935,7 +935,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+  [Defender/AllowBehaviorMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Systém kontroly sítě (NIS)**: NIS pomáhá chránit zařízení před zneužitím prostřednictvím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
 
@@ -947,7 +947,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Defender/EnableNetworkProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Prohledat všechny soubory ke stažení**: **Povolit** zapne toto nastavení a Defender zkontroluje všechny soubory stažené z Internetu. Uživatelé nemůžou toto nastavení vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout toto nastavení a povolit uživatelům jeho změnu.
 
@@ -955,7 +955,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+  [Defender/AllowIOAVProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
 - **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: **Povolit** umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru. Uživatelé nemůžou toto nastavení vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout toto nastavení a povolit uživatelům jeho změnu.
 
@@ -963,7 +963,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+  [Defender/AllowScriptScanning CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
 - **Přístup koncového uživatele k programu Defender**: **blok** skryje uživatelské rozhraní programu Microsoft Defender pro uživatele. Potlačí se také všechna oznámení programu Microsoft Defender. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat uživateli přístup k uživatelskému rozhraní programu Microsoft Defender a umožňuje uživatelům ho změnit.
 
@@ -973,7 +973,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Když se toto nastavení změní, projeví se při příštím restartování zařízení.
 
-  [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+  [Defender/AllowUserUIAccess CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
 - **Interval aktualizace Security Intelligence (v hodinách)**: zadejte interval, který Defender kontroluje pro nové Security Intelligence, od 0-24. Možnosti:
 
@@ -981,7 +981,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Nekontrolovat**: Defender nehledá nové aktualizace Security Intelligence.
   - **1-24**: `1` kontroluje každou hodinu, kontroluje každé `2` dvě hodiny, `24` kontroluje každý den atd.
   
-  [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  [Defender/SignatureUpdateInterval CSP](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
   
 - **Monitorovat aktivitu souborů a programů**: umožňuje programu Defender monitorovat aktivitu souborů a programů na zařízeních. Možnosti:
 
@@ -991,13 +991,13 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Monitorovat pouze příchozí soubory**
   - **Monitorovat jenom odchozí soubory**
 
-  [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+  [Defender/RealTimeScanDirection CSP](/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
 - **Dny před odstraněním malwaru v karanténě**: pokračovat v sledování vyřešeného malwaru po dobu, po kterou zadáte, abyste mohli ručně kontrolovat dříve zasažená zařízení. 
 
   Pokud toto nastavení nenakonfigurujete nebo nastavíte na `0` dny, malware zůstane ve složce karantény a automaticky se neodebere. Pokud je nastaveno na `90` , karanténní položky jsou uloženy po dobu 90 dnů v systému a poté odebrány.
 
-  [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+  [Defender/DaysToRetainCleanedMalware CSP](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Limit využití procesoru při kontrole**: Omezte počet procesorů, které mohou kontroly použít, od `0` do `100` procent. Ve výchozím nastavení může operační systém nastavit na 50%.
 - **Kontrolovat archivní soubory**: **Povolit** zapne Defender, aby kontroloval archivní soubory, jako jsou soubory ZIP nebo CAB. Uživatelé nemůžou toto nastavení vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zapnout tuto kontrolu a povolit uživatelům jejich změnu.
@@ -1006,7 +1006,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+  [Defender/AllowArchiveScanning CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
 - **Kontrolovat příchozí e-mailové zprávy**: **Povolit** umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručování na zařízeních. Pokud je tento modul povolený, analyzuje poštovní schránku a e-mailové soubory a analyzuje body pošty a přílohy. Můžete kontrolovat formáty. PST (Outlook),. dbx,. mbx, MIME (Outlook Express) a BinHex (Mac).
 
@@ -1016,7 +1016,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+  [Defender/AllowEmailScanning CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**: **Povolit zapne možnost** při úplné kontrole zapnout kontrolu vyměnitelných jednotek v Defenderu. Uživatelé nemůžou toto nastavení vypnout. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém nechat v programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB hole, a umožnit uživatelům změnit toto nastavení.
 
@@ -1026,7 +1026,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+  [Defender/AllowFullScanRemovableDriveScanning CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
 - **Kontrolovat namapované síťové jednotky během úplného prohledávání**: **Povolit** programu Defender prohledává soubory na namapovaných síťových jednotkách. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel. Uživatelé nemůžou toto nastavení vypnout.
 
@@ -1038,7 +1038,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+  [Defender/AllowFullScanOnMappedNetworkDrives CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
 - **Kontrolovat soubory otevřené ze síťových složek**: **možnost Povolit** v programu Defender prohledává soubory otevřené ze síťových složek nebo sdílených síťových jednotek, jako jsou například soubory dostupné z cesty UNC. Uživatelé nemůžou toto nastavení vypnout. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel.
 
@@ -1048,7 +1048,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+  [Defender/AllowScanningNetworkFiles CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
 - **Ochrana cloudu**: **Povolit** zapne služba Microsoft Active Protection Service pro příjem informací o činnosti malwaru ze zařízení, která spravujete. Uživatelé toto nastavení nemůžou změnit. 
 
@@ -1058,7 +1058,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
-  [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  [Defender/AllowCloudProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
 - **Dotázat se uživatele před odesláním vzorku**: Určuje, jestli se mají do Microsoftu automaticky posílat potenciálně škodlivé soubory, které by mohly vyžadovat další analýzu. Možnosti:
 
@@ -1068,13 +1068,13 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Nikdy Neodesílat data**
   - **Odesílat všechna data bez zobrazení výzvy**: data se odesílají automaticky.
 
-  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  [Defender/SubmitSamplesConsent CSP](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Čas, kdy se má provést rychlá denní kontrola**: vyberte hodinu spuštění každodenní rychlé kontroly. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém spustit tuto kontrolu ve 2 dop.
 
   Pokud chcete další možnosti přizpůsobení, nakonfigurujte **typ Systémové kontroly, který se má provést** .
 
-  [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+  [Defender/ScheduleQuickScanTime CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
 - **Typ Systémové kontroly, který se má provést**: naplánovat kontrolu systému, včetně úrovně kontroly a dne a času, kdy se má kontrola spustit. Možnosti:
   - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Žádné nastavení není vynuceno. Uživatelé můžou na svých zařízeních ručně spouštět kontroly podle potřeby nebo na jejich zařízení.
@@ -1097,9 +1097,9 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   > 
   > - Nekonfigurujte **dobu, kdy se má provést nastavení denní rychlé kontroly** současně s **typem kontroly systému, který má být proveden** pro **rychlé prohledání**. Tato nastavení mohou být v konfliktu a kontrola nemusí běžet.
 
-  [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
-  [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
-  [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
+  [Defender/ScanParameter CSP](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
+  [Defender/ScheduleScanDay CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Defender/ScheduleScanTime CSP](/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Zjišťovat potenciálně nežádoucí aplikace**: Tato funkce identifikuje a blokuje potenciálně nežádoucí aplikace (PUA) ze stahování a instalace ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb. Ale můžou spouštět akce u koncových bodů, které mohou ovlivnit jejich výkon nebo použití. Vyberte úroveň ochrany, když systém Windows detekuje PUAs. Možnosti:
 
@@ -1108,9 +1108,9 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Povolit**: Microsoft Defender detekuje PUAs a zjištěné položky jsou blokované. Tyto položky se zobrazují v historii spolu s dalšími hrozbami.
   - **Audit**: Microsoft Defender detekuje PUAs, ale neprovede žádnou akci. Můžete zkontrolovat informace o aplikacích, které Microsoft Defender provede, na základě těchto akcí. Vyhledejte například události vytvořené v programu Microsoft Defender v Prohlížeč událostí.
 
-  Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
+  Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
-  [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  [Defender/PUAProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Vyjádření souhlasu s ukázkami**: v současné době toto nastavení nemá žádný vliv. Toto nastavení nepoužívejte. Může být odebráno v budoucí verzi.
 
@@ -1120,7 +1120,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Intune tuto funkci nezapíná. Pokud ho chcete povolit, použijte vlastní identifikátor URI.
 
-  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+  [Defender/AllowOnAccessProtection CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Akce u zjištěných malwarových hrozeb**: výběrem možnosti **Povolit** můžete zvolit akce, které má Defender provést pro každou úroveň hrozby, kterou zjistí: nízká, střední, vysoká a závažná. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém aplikace Microsoft Defender zvolit nejlepší možnost.
 
@@ -1131,11 +1131,11 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Odebrat**
   - **Povolit**
   - **Definováno uživatelem**
-  - **Blokované**
+  - **Blok**
 
   Pokud vaše akce není možná, pak Microsoft Defender vybere nejlepší možnost, abyste zajistili, že dojde k nápravě hrozby.
 
-  [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
+  [Defender/ThreatSeverityDefaultAction CSP](/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Vyloučení antivirové ochrany v programu Microsoft Defender
 
@@ -1150,7 +1150,7 @@ Můžete vyloučit určité soubory z kontroly antivirové ochrany v programu Mi
 
 ## <a name="power-settings"></a>Nastavení napájení
 
-Tato nastavení používají [zprostředkovatele kryptografických služeb pro zásady napájení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power), který obsahuje taky podporované edice Windows.
+Tato nastavení používají [zprostředkovatele kryptografických služeb pro zásady napájení](/windows/client-management/mdm/policy-csp-power), který obsahuje taky podporované edice Windows.
 
 ### <a name="battery"></a>Baterie
 
@@ -1158,7 +1158,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
 
   Pokud nezadáte žádnou hodnotu, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení může operační systém nastavit na 70%.
 
-  [CSP pro Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
+  [CSP pro Power/EnergySaverBatteryThresholdOnBattery](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
 - **Zavření víka (jenom mobilní)**: Pokud zařízení používá napájení z baterie, vyberte, co se stane po zavření víka. Možnosti:
 
@@ -1168,7 +1168,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
 
-  [CSP pro Power/SelectLidCloseActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
+  [CSP pro Power/SelectLidCloseActionOnBattery](/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
 
 - **Tlačítko napájení**: Pokud zařízení používá napájení z baterie, vyberte, co se stane po výběru tlačítka napájení. Možnosti:
 
@@ -1178,7 +1178,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
 
-  [CSP pro Power/SelectPowerButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
+  [CSP pro Power/SelectPowerButtonActionOnBattery](/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
 
 - **Tlačítko režimu spánku**: když zařízení používá napájení z baterie, vyberte, co se stane po výběru tlačítka režimu spánku. Možnosti:
 
@@ -1188,7 +1188,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
 
-  [CSP pro Power/SelectSleepButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+  [CSP pro Power/SelectSleepButtonActionOnBattery](/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
 
 - **Hybridní režim spánku**: Pokud zařízení používá napájení z baterie, vyberte možnost povolit nebo zakázat hybridní režim spánku.
 
@@ -1196,7 +1196,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Povolit**: zařízení můžou přejít do hybridního režimu spánku. Otevřené aplikace a soubory jsou uložené v paměti Random Access (RAM) a na pevném disku. Používá malé množství poplatků za napájení.
   - **Zakázat**: zabrání zařízením přejít do hybridního režimu spánku.
 
-  [CSP pro Power/TurnOffHybridSleepOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
+  [CSP pro Power/TurnOffHybridSleepOnBattery](/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
 
 ### <a name="pluggedin"></a>PluggedIn
 
@@ -1204,7 +1204,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
 
   Pokud nezadáte žádnou hodnotu, Intune toto nastavení nezmění ani neaktualizuje. Ve výchozím nastavení může operační systém nastavit na 70%.
 
-  [CSP pro Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
+  [CSP pro Power/EnergySaverBatteryThresholdPluggedIn](/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
 - **Zavření víka (jenom mobilní)**: když je zařízení napájené z elektrické sítě, vyberte, co se stane po zavření víka. Možnosti:
 
@@ -1214,7 +1214,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
   
-    [CSP pro Power/SelectLidCloseActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
+    [CSP pro Power/SelectLidCloseActionPluggedIn](/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
   
 - **Tlačítko napájení**: když je zařízení napájené z elektrické sítě, vyberte, co se stane po výběru tlačítka napájení. Možnosti:
 
@@ -1224,7 +1224,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
 
-  [CSP pro Power/SelectPowerButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
+  [CSP pro Power/SelectPowerButtonActionPluggedIn](/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
 
 - **Tlačítko pro režim spánku**: když je zařízení napájené z elektrické sítě, vyberte, co se stane, když se vybere tlačítko režimu spánku. Možnosti:
 
@@ -1234,7 +1234,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
   - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
 
-  [CSP pro Power/SelectSleepButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
+  [CSP pro Power/SelectSleepButtonActionPluggedIn](/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
 
 - **Hybridní režim spánku**: když je zařízení napájené ze sítě, vyberte možnost povolit nebo zakázat hybridní režim spánku.
 
@@ -1242,10 +1242,10 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb pro z
   - **Povolit**: zařízení můžou přejít do hybridního režimu spánku. Otevřené aplikace a soubory jsou uložené v paměti Random Access (RAM) a na pevném disku.
   - **Zakázat**: zabrání zařízením přejít do hybridního režimu spánku.
 
-  [CSP pro Power/TurnOffHybridSleepPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
+  [CSP pro Power/TurnOffHybridSleepPluggedIn](/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Další kroky
 
-Další technické podrobnosti o jednotlivých nastaveních a podporovaných edicích Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider).
+Další technické podrobnosti o jednotlivých nastaveních a podporovaných edicích Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](/windows/client-management/mdm/policy-configuration-service-provider).
 
 [Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051668"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907292"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -59,7 +59,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Zařízení zakoupená v nástroji [ADE společnosti Apple](https://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
@@ -154,7 +154,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 4. Vyberte **Další: nastavení správy zařízení**.
 
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a používáte pomocníka s nastavením k ověřování, je třeba zadat [uživatelské jméno/Smíšený Koncový bod WS-Trust 1,3](https://technet.microsoft.com/library/adfs2-help-endpoints) [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte pro zařízení, která patří uživatelům a chtějí používat portál společnosti pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a používáte pomocníka s nastavením k ověřování, je třeba zadat [uživatelské jméno/Smíšený Koncový bod WS-Trust 1,3](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [Další informace](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) .
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům. Pokud chcete koncovému uživateli povolit, aby se přihlásil k Portál společnosti iOS a navázal jako primárního uživatele zařízení, pošlete `IntuneUDAUserlessDevice` klíč do portál společnosti pro iOS v zásadách konfigurace aplikace pro spravovaná zařízení. Všimněte si, že jako primární uživatel se naváže jenom první přihlášený uživatel. Pokud se první uživatel odhlásí a druhý uživatel přihlásí, první uživatel zůstane primárním uživatelem zařízení. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti pro podporu zařízení se systémem iOS a IPADOS DEP](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
@@ -266,9 +266,9 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. Pro iOS/iPadOS 12,0 a novější. |
     | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele Pro macOS 10,14 a novější a iOS/iPadOS 13,0 a novější. |
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
-    | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
+    | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si  **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení. Pro iOS/iPadOS 13,0 a novější. |
-    | <strong>Registrace</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
+    | <strong>Evidenc</strong> | Zobrazit registrační obrazovku uživateli Pro macOS 10,9 a novější. |
     | <strong>FileVault</strong> | Zobrazit na uživateli obrazovku šifrování trezoru 2. Pro macOS 10,10 a novější. |
     | <strong>Diagnostika iCloud</strong> | Zobrazit obrazovku analýzy iCloud pro uživatele Pro macOS 10.12.4 a novější. |
     | <strong>Úložiště iCloud</strong> | Zobrazí uživateli iCloud dokumenty a plochu obrazovky. Pro macOS 10.13.4 a novější. |

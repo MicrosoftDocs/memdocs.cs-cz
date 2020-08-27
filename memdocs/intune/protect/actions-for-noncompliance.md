@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252771"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909648"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -29,7 +29,7 @@ U zařízení, která nevyhovují zásadám nebo pravidlům dodržování předp
 
 ## <a name="overview"></a>Přehled
 
-Ve výchozím nastavení Každá zásada dodržování předpisů zahrnuje akci při nedodržení předpisů **Označit zařízení jako nekompatibilní** s plánem nula dnů (**0**). Výsledkem tohoto výchozího nastavení je, že Intune zjistí, že zařízení nedodržuje předpisy, Intune hned zařízení označí jako nedodržující předpisy. Jakmile se zařízení označí jako nedodržující předpisy, Azure Active Directory (AD) [podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) může zařízení blokovat.
+Ve výchozím nastavení Každá zásada dodržování předpisů zahrnuje akci při nedodržení předpisů **Označit zařízení jako nekompatibilní** s plánem nula dnů (**0**). Výsledkem tohoto výchozího nastavení je, že Intune zjistí, že zařízení nedodržuje předpisy, Intune hned zařízení označí jako nedodržující předpisy. Jakmile se zařízení označí jako nedodržující předpisy, Azure Active Directory (AD) [podmíněný přístup](/azure/active-directory/active-directory-conditional-access-azure-portal) může zařízení blokovat.
 
 Konfigurací  **akcí při nedodržení předpisů** získáte flexibilitu při rozhodování o tom, co dělat pro zařízení nedodržující předpisy, a kdy to udělat. Například můžete zvolit, aby zařízení neblokovalo okamžitě, a dát uživateli možnost, aby se zajistilo, že bude dodržovat předpisy.
 
@@ -107,7 +107,7 @@ Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o za�
 
 Při konfiguraci zásad dodržování předpisů zařízením nebo později můžete [Přidat akce, které nedodržují předpisy](#add-actions-for-noncompliance) , a to úpravou zásad. Do každé zásady můžete přidat další akce, které budou vyhovovat vašim potřebám. Mějte na paměti, že každá zásada dodržování předpisů automaticky zahrnuje výchozí akci při nedodržení předpisů, která označuje zařízení jako nedodržující předpisy s plánem nastaveným na 0 dní.
 
-Pokud chcete používat zásady dodržování předpisů pro zařízení k blokování zařízení z firemních prostředků, musíte nastavit podmíněný přístup Azure AD. Pokyny [k použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md) najdete [v tématu podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) nebo běžné způsoby používání služby Intune.
+Pokud chcete používat zásady dodržování předpisů pro zařízení k blokování zařízení z firemních prostředků, musíte nastavit podmíněný přístup Azure AD. Pokyny [k použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md) najdete [v tématu podmíněný přístup v Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) nebo běžné způsoby používání služby Intune.
 
 Pokud chcete vytvořit zásady dodržování předpisů pro zařízení, přečtěte si následující pokyny pro konkrétní platformu:
 
@@ -125,7 +125,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 2. Vybrat oznámení dodržování předpisů pro zařízení **zabezpečení Endpoint Security**  >  **Device compliance**  >  **Notifications**  >  **vytvořit oznámení**
 3. V části *základy*zadejte následující informace:
 
-   - **Název**
+   - **Name**
    - **Předmět**
    - **Zpráva**
 

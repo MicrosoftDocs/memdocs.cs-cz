@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093161"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911858"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows holografickým pro firmy, která se mají spustit jako veřejný terminál v Intune
 
@@ -74,7 +74,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
   - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Nepodporováno ve Windows holografickém pro firmy.
   - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Účet, který zadáte, se přihlaste k veřejnému terminálu.
   - **Uživatel nebo skupina Azure AD (Windows 10, verze 1803+)**: Vyžaduje zadání přihlašovacích údajů, aby se uživatel mohl k zařízení přihlásit. Vyberte **Přidat** a zvolte uživatele nebo skupiny Azure AD ze seznamu. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
-  - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Prohlížeč a aplikace**: Přidejte aplikace, které se mají spustit v celoobrazovkovém zařízení. Nezapomeňte, že můžete přidat několik aplikací.
 
@@ -84,7 +84,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
       - **Normální režim (plná verze Microsoft Edge)**: spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení. Data a stav uživatele jsou ukládána mezi relacemi.
       - **Veřejné procházení (InPrivate)**: spouští vícevrstvou verzi Microsoft Edge InPrivate s přizpůsobeným prostředím pro veřejné terminály, které běží v režimu celé obrazovky.
 
-      Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil omezení zařízení (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Windows 10** pro platformu > **omezení zařízení**  >  **prohlížeč Microsoft Edge**). [Prohlížeč Microsoft Edge](device-restrictions-windows-holographic.md#microsoft-edge-browser) uvádí a popisuje dostupná nastavení pro holografické firmy.
@@ -97,12 +97,12 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
     - **Přidat podle AUMID**: Tuto možnost použijte pro přidání aplikací pro Windows, například Poznámkového bloku nebo Kalkulačky. Zadejte tyto vlastnosti:
 
       - **Název aplikace**: Povinné. Zadejte název aplikace.
-      - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     - **AUTOLAUNCH**: volitelné. Po přidání aplikací a prohlížeče vyberte jednu aplikaci nebo prohlížeč, které se automaticky otevřou, když se uživatel přihlásí. Spustit se dá jenom jedna aplikace nebo prohlížeč.
     - **Velikost dlaždice**: Povinné. Po přidání aplikací vyberte malou, střední, širokou nebo velkou velikost dlaždice aplikace.
 
-- **Použít alternativní počáteční rozložení**: vyberte **Ano** , pokud chcete zadat soubor XML, který popisuje, jak se aplikace objeví v nabídce Start, včetně pořadí aplikací. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
+- **Použít alternativní počáteční rozložení**: vyberte **Ano** , pokud chcete zadat soubor XML, který popisuje, jak se aplikace objeví v nabídce Start, včetně pořadí aplikací. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku o [přizpůsobení a exportu rozložení nabídky Start](/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
 
 - **Hlavní panel Windows**: Na zařízeních s Windows Holographic for Business se nepodporuje.
 - **Povolení přístupu ke složce stažené soubory**: Nepodporováno ve Windows Holografick pro firmy.

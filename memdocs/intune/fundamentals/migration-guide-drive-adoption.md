@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ca64791256acbdcd124ee79401d116962671dd71
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462214"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909699"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Podpora přijetí koncovými uživateli pomocí podmíněného přístupu v Microsoft Intune
 
@@ -65,9 +65,9 @@ Existuje i celá řada dalších přístupů. Můžete zvolit jednodušší proc
 
 Zvolte jednu z následujících možností:
 
-- [Konfigurace podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Konfigurace podmíněného přístupu v Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Konfigurace hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
+- [Konfigurace hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Nastavení zásad podmíněného přístupu na základě aplikace pro Exchange Online](../protect/app-based-conditional-access-intune-create.md)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252335"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906748"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -39,7 +39,7 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 |Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
 |:-------------:|:------------:|:------------:|------------|
 |**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
-|**Vymazání**| Zaškrtnuto | No | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Odebere se profil pro správu.|
-|E-mail|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
+|E-mailu|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
 
 ### <a name="android-device-administrator"></a>Správce zařízení s Androidem
@@ -107,7 +107,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
-|E-mail|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
+|E-mailu|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
 
 ### <a name="android-enterprise-devices-with-a-work-profile"></a>Zařízení s Androidem Enterprise s pracovním profilem
@@ -138,7 +138,7 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|
-|E-mail|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Nepodporováno|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
+|E-mailu|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows.|Nepodporováno|Odeberou se e-maily s povoleným systémem souborů EFS. To zahrnuje e-maily a přílohy v aplikaci Pošta pro Windows. Odebere e-mailové účty, které byly zřízené Intune.|
 |Zrušení připojení k Azure AD|No.|No.|Odebere se záznam Azure AD.|
 
 > [!NOTE]
@@ -168,7 +168,7 @@ Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, kt
 4. Klikněte na tlačítko **Uložit**.
 
 > [!NOTE]
-> Pravidla čištění zařízení nejsou k dispozici pro scénáře Android Enterprise, jako je [plně spravovaná](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [vyhrazená](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)a [Podniková s pracovním profilem](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll). 
+> Pravidla čištění zařízení nejsou k dispozici pro scénáře Android Enterprise, jako je [plně spravovaná](../enrollment/android-fully-managed-enroll.md), [vyhrazená](../enrollment/android-kiosk-enroll.md)a [Podniková s pracovním profilem](../enrollment/android-corporate-owned-work-profile-enroll.md). 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
@@ -206,4 +206,3 @@ Platí pro zařízení s Windows 10. Přečtěte si další informace o [čerstv
 ## <a name="next-steps"></a>Další kroky
 
 Pokud chcete znovu zaregistrovat odstraněné zařízení, najdete informace v tématu o [možnostech registrace](../enrollment/enrollment-options.md).
-

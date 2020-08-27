@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f88d4e7aefe9a32238bb6d14203de0defd65ef
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e8d3dcb0be698938c303ab218be12329e314dd75
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988256"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909070"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Vzdálená pomoc mobilním zařízením spravovaným pomocí Microsoft Endpoint Manageru
 
@@ -30,7 +30,7 @@ K dispozici jsou čtyři možnosti pro vzdálenou správu zařízení spravovan�
 - [Microsoft Teams](https://products.office.com/microsoft-teams/) je centrum pro týmovou práci, kde můžete chatovat, plnit a spolupracovat bez ohledu na to, kde jste.
 - [Rychlá pomoc](https://support.microsoft.com/help/4027243/windows-10-solve-pc-problems-with-quick-assist) je aplikace pro Windows 10, která umožňuje dvěma osobám sdílet zařízení přes vzdálené připojení.
 - [TeamViewer](https://www.teamviewer.com/) je program třetí strany, který si koupíte samostatně. Poskytuje komplexní sadu vzdáleného přístupu a možností podpory. Integrace Intune a [TeamViewer](teamviewer-support.md) umožňuje vzdálenou podporu pomocí TeamVieweru a konektor se spravuje přímo v Intune.
-- [Vzdálené řízení](https://docs.microsoft.com/configmgr/core/clients/manage/remote-control/introduction-to-remote-control) je součástí služby Microsoft Endpoint Configuration Manager. Slouží ke vzdálené správě, poskytování pomoci nebo zobrazení libovolného počítače v pracovní skupině a počítači připojeného k doméně.
+- [Vzdálené řízení](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control) je součástí služby Microsoft Endpoint Configuration Manager. Slouží ke vzdálené správě, poskytování pomoci nebo zobrazení libovolného počítače v pracovní skupině a počítači připojeného k doméně.
 
 | Funkce, platformy, licencování | **Teams** | Rychlý pomocník | TeamViewer (Intune) | Vzdálené řízení (ConfigMgr) |
 |:---:|:---:|:---:|:---:|:---:|
@@ -49,4 +49,4 @@ K dispozici jsou čtyři možnosti pro vzdálenou správu zařízení spravovan�
 | Vyžaduje, aby zařízení byla spoluspravovaná pomocí Configuration Manager a Intune. ||||![Značka zaškrtnutí](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Vyžaduje další licencování\* |![Značka zaškrtnutí](../enrollment/media/enrollment-method-capab/checkmark.png)||![Značka zaškrtnutí](../enrollment/media/enrollment-method-capab/checkmark.png)|![Značka zaškrtnutí](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\*Týmy vyžadují licencování O365 nebo M365. Použití TeamVieweru a Intune vyžaduje licencování z TeamVieweru i Intune. Vzdálené řízení je funkce Configuration Manager a vyžaduje licencování Configuration Manager.
+\* Týmy vyžadují licencování O365 nebo M365. Použití TeamVieweru a Intune vyžaduje licencování z TeamVieweru i Intune. Vzdálené řízení je funkce Configuration Manager a vyžaduje licencování Configuration Manager.

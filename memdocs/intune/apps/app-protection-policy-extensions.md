@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2e05e86bf765071d9d22edebfec2ec03115123
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd98355424ed949f4e3423aa6c3e609a7ada8337
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217597"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910583"
 ---
 # <a name="protecting-application-extensions"></a>Ochrana rozšíření aplikace
 
@@ -41,8 +41,8 @@ Pokud chcete svým koncovým uživatelům používání a instalaci doplňků Ou
 
 Tyto pokyny se vztahují na Office 365, Exchange 2016 a Exchange 2013 napříč Outlookem na webu, v systémech Windows, Mac a na mobilních zařízeních.
 
-- Další informace o [doplňcích pro Outlook](https://technet.microsoft.com/library/jj943753(v=exchg.150).aspx).
-- Přečtěte si další informace o tom [jak určit, kteří správci a uživatelé můžou instalovat a spravovat doplňky pro aplikaci Outlook](https://technet.microsoft.com/library/jj943754(v=exchg.150).aspx).
+- Další informace o [doplňcích pro Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook).
+- Přečtěte si další informace o tom [jak určit, kteří správci a uživatelé můžou instalovat a spravovat doplňky pro aplikaci Outlook](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins).
 
 ## <a name="linkedin-account-connections-for-microsoft-apps"></a>Připojení účtů LinkedIn pro aplikace Microsoft
 
@@ -66,9 +66,9 @@ Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků
 
 |Oprávnění Microsoft Graph  |Popis  |
 |---------|---------|
-|Oprávnění ke čtení pro možnost [Lidé](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Umožňuje aplikaci přístup k seznamu osob se skóre, které jsou pro přihlášeného uživatele relevantní. Seznam může obsahovat místní kontakty, kontakty ze sociálních sítí nebo adresáře vaší organizace a osoby z posledních komunikací (například z e-mailu nebo Skypu).         |
-|Oprávnění ke čtení pro možnost [Kalendáře](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
-|Oprávnění ke čtení pro možnost [Profil uživatele](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
+|Oprávnění ke čtení pro možnost [Lidé](/graph/permissions-reference#people-permissions)     |Umožňuje aplikaci přístup k seznamu osob se skóre, které jsou pro přihlášeného uživatele relevantní. Seznam může obsahovat místní kontakty, kontakty ze sociálních sítí nebo adresáře vaší organizace a osoby z posledních komunikací (například z e-mailu nebo Skypu).         |
+|Oprávnění ke čtení pro možnost [Kalendáře](/graph/permissions-reference#calendars-permissions)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
+|Oprávnění ke čtení pro možnost [Profil uživatele](/graph/permissions-reference#user-permissions)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
 |Předplatná     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje předplatná, která organizace uživatele poskytuje aplikacím a službám Microsoft, například Office 365.         |
 |Insights     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
 
@@ -76,6 +76,5 @@ Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků
 
 - Přečtěte si o [informacích a funkcích LinkedIn v aplikacích Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
 - Přečtěte si o možnosti připojení účtů LinkedIn na [stránce roadmapy Office 365](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
-- Přečtěte si o [konfiguraci připojení účtů LinkedIn](https://docs.microsoft.com/azure/active-directory/linkedin-integration).
+- Přečtěte si o [konfiguraci připojení účtů LinkedIn](/azure/active-directory/linkedin-integration).
 - Další informace o datech, která jsou sdílená mezi uživateli LinkedIn a pracovními nebo školními účty uživatelů, najdete [v tématu LinkedIn v aplikacích Microsoftu ve vaší práci nebo ve škole](https://www.linkedin.com/help/linkedin/answer/84077).
-

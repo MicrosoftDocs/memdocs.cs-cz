@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565661"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906782"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -96,7 +96,7 @@ K ověření ve službě Intune potřebuje server SCEP ID aplikace Azure, klíč
 
 K získání těchto dat se správce serveru SCEP musí přihlásit k webu Azure Portal, zaregistrovat aplikaci, poskytnout aplikaci oprávnění k **ověření výzvy rozhraní Microsoft Intune API nebo SCEP** a vytvořit pro danou aplikaci klíč. Potom si bude moct ID aplikace, její klíč a ID tenanta stáhnout.
 
-Pokyny k registraci aplikace a získání ID a klíčů najdete v tématu o [použití webu Azure Portal k vytvoření aplikace a instančního objektu AAD pro přístup k prostředkům](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+Pokyny k registraci aplikace a získání ID a klíčů najdete v tématu o [použití webu Azure Portal k vytvoření aplikace a instančního objektu AAD pro přístup k prostředkům](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### <a name="java-library-api"></a>Rozhraní API knihovny Java
 
@@ -241,7 +241,7 @@ Upozorní Intune, že při zpracování požadavku SCEP došlo k chybě. Tato me
 
 - **transactionId** – ID transakce SCEP
 - **certificateRequest** -kódování PKCS #10 pro žádost o certifikát kódování Base64 jako řetězec
-- **hResult** – kód chyby Win32, který nejlépe popisuje chybu, ke které došlo. Viz [kódy chyb Win32](https://msdn.microsoft.com/library/cc231199.aspx).
+- **hResult** – kód chyby Win32, který nejlépe popisuje chybu, ke které došlo. Viz [kódy chyb Win32](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d).
 - **errorDescription** – popis zjištěné chyby
 
 **Vyvolá**:

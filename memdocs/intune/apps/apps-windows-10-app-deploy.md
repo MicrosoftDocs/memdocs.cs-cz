@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985926"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907799"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -69,7 +69,7 @@ Do konzoly pro správu Intune můžete podepisovat a nahrávat obchodní aplikac
 
 ## <a name="microsoft-store-for-business-apps"></a>Aplikace z Microsoft Storu pro firmy
 
-Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít online licenci nebo offline licenci. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
+Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít online licenci nebo offline licenci. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorizace Microsoft Store pro obchodní aplikace 
 Kategorizace Microsoft Store pro obchodní aplikace: 
@@ -106,7 +106,7 @@ Aplikace LOB pro Windows (konkrétně APPX a MSIX) a Microsoft Store pro firmy (
   - Chyba: uživatel se nemůže zaměřit na instalaci kontextu zařízení.
 
 > [!IMPORTANT]
-> Při použití v kombinaci s prázdným scénářem pro šetrnější zřizování autopilotu neexistuje žádný požadavek na obchodní aplikace a Microsoft Store pro podnikové aplikace nasazené v kontextu zařízení pro účely cílení na skupinu zařízení. Další informace najdete v tématu [nasazení White šetrnější (Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)) pro Windows.
+> Při použití v kombinaci s prázdným scénářem pro šetrnější zřizování autopilotu neexistuje žádný požadavek na obchodní aplikace a Microsoft Store pro podnikové aplikace nasazené v kontextu zařízení pro účely cílení na skupinu zařízení. Další informace najdete v tématu [nasazení White šetrnější (Windows autopilot](/windows/deployment/windows-autopilot/white-glove)) pro Windows.
 
 > [!Note]
 > Po uložení přiřazení aplikace pomocí konkrétního nasazení nemůžete změnit kontext tohoto přiřazení, s výjimkou moderních aplikací. Pro moderní aplikace můžete změnit kontext z kontextu uživatele na kontext zařízení. 

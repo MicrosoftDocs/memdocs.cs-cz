@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693501"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909750"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
 
-Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba. Tady je příklad: iPad zakoupený vaší společností nejdřív musí být zaregistrovaný s vaším účtem Microsoft Intune, aby ho vaše společnost mohla spravovat. pak je potřeba nakonfigurovat míru vaší společnosti; pak je nutné chránit data, která jsou na něm uložena uživatelem. a konečně, pokud už tento iPad nepotřebujete, musíte na něm [vyřadit nebo vymazat](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) všechna citlivá data.
+Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba. Tady je příklad: iPad zakoupený vaší společností nejdřív musí být zaregistrovaný s vaším účtem Microsoft Intune, aby ho vaše společnost mohla spravovat. pak je potřeba nakonfigurovat míru vaší společnosti; pak je nutné chránit data, která jsou na něm uložena uživatelem. a konečně, pokud už tento iPad nepotřebujete, musíte na něm [vyřadit nebo vymazat](../remote-actions/devices-wipe.md) všechna citlivá data.
 
 ![Životní cyklus zařízení](./media/device-lifecycle/device-lifecycle.png "životní cyklus zařízení v Intune")
 

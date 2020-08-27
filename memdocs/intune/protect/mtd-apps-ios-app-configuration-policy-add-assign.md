@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: b487b9f921e40df8730fab235a2ec2c0d3f0f788
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914611"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910855"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -45,7 +45,7 @@ V Intune proveďte následující kroky. Ujistěte se, že jste obeznámeni s pr
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>Konfigurace aplikace Microsoft Authenticator pro iOS
 
-U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Kromě toho potřebujete zásadu konfigurace aplikace pro iOS, která nastavuje MTD aplikaci pro iOS, kterou používáte s Intune.
+U zařízení se systémem iOS je potřeba [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Kromě toho potřebujete zásadu konfigurace aplikace pro iOS, která nastavuje MTD aplikaci pro iOS, kterou používáte s Intune.
 
 Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](../apps/store-apps-ios.md). Použijte tuto [adresu URL obchodu s aplikacemi Microsoft Authenticator](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) při konfiguraci **informací o aplikaci**.
 
@@ -197,7 +197,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
     5. Přidejte k aplikaci **Delegovaná oprávnění**.
 
     > [!NOTE]
-    > Další podrobnosti najdete v článku o [konfiguraci nativní klientské aplikace pomocí Azure AD](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+    > Další podrobnosti najdete v článku o [konfiguraci nativní klientské aplikace pomocí Azure AD](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application).
 
   - **Přidání souboru IPA aplikace Lookout for Work**
 

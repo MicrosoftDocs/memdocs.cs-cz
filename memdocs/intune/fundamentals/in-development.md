@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d443cb784c19956f52347a10f4123c622ab82a8
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: df27691858df13e4dc8006997e8b3e43244c2f51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820053"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912589"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -67,7 +67,7 @@ Aktualizujeme ikony zařízení v aplikacích Portál společnosti a Intune na z
 v zařízeních zaregistrovaných pomocí automatizované registrace zařízení společnosti Apple se bude podporovat iOS Portál společnosti, aniž by museli přiřazeného uživatele. Koncový uživatel se může přihlásit k Portál společnosti iOS, aby se sám navázal jako primární uživatel na zařízení se systémem iOS/iPadOS, které je zaregistrované bez spřažení zařízení. Další informace o automatizované registraci zařízení najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí automatizované registrace zařízení společnosti Apple](../enrollment/device-enrollment-program-enroll-ios.md).
 
 ### <a name="the-windows-company-portal-adds-configuration-manager-application-support---4297660---"></a>Windows Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
-Windows Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i nasazené aplikace Intune v Portál společnosti Windows pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2006#bkmk_portal).
+Windows Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i nasazené aplikace Intune v Portál společnosti Windows pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../configmgr/core/get-started/2020/technical-preview-2006.md#bkmk_portal).
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení

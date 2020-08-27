@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 366cb0bbdb20a118013e49073c6c1c76722cf26c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501163"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907434"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -79,7 +79,7 @@ Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty 
 
 Pokud je jako krok sestavení použitý [ProGuard](https://www.guardsquare.com/en/products/proguard) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. AAR v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
 
-[Knihovna Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) může mít vlastní omezení ProGuard. Pokud vaše aplikace integruje MSAL, musíte postupovat podle těchto omezení v dokumentaci MSAL.
+[Knihovna Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) může mít vlastní omezení ProGuard. Pokud vaše aplikace integruje MSAL, musíte postupovat podle těchto omezení v dokumentaci MSAL.
 
 > [!NOTE]
 > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -187,7 +187,7 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 | Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
 | Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
 
-#### <a name="reporting"></a>Vytváření sestav
+#### <a name="reporting"></a>Přehledy
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
 
 ```groovy
@@ -422,7 +422,7 @@ Intune App SDK vyžaduje tři [oprávnění pro systém Android](https://develop
 
 * `android.permission.USE_CREDENTIALS`
 
-Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
+Azure Active Directory Authentication Library ([ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
 
 > [!NOTE]
 > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -897,7 +897,7 @@ Jakmile se příjemce vaší aplikace vrátí, už nebude mít přístup k šifr
 
 Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
-Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
+Sada SDK spoléhá na [knihovnu ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
 
 Když chcete konfigurovat svoji aplikaci a povolit správné ověření, přidejte do uzlu aplikace v souboru AndroidManifest.xml následující kód. Některé z těchto konfigurací jsou potřeba, jen když vaše aplikace používá ADAL pro ověřování obecně; v takovém případě budete potřebovat konkrétní hodnoty, které vaše aplikace používá k registraci v AAD. To slouží k zajištění, že koncovému uživateli se nezobrazí výzva k ověření dvakrát kvůli tomu, že AAD rozpozná hodnoty dvou samostatných registrací: jedné z aplikace a jedné ze sady SDK.
 
@@ -1913,7 +1913,7 @@ Výchozí selektivní vymazání ukončí aplikaci řádným způsobem, dokonču
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Povolení konfigurace určené pro správu mobilních aplikací pro Android (nepovinné)
-Páry klíč-hodnota specifické pro aplikaci můžou být nakonfigurované v konzole Intune pro [mam](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) a [Android Enterprise](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+Páry klíč-hodnota specifické pro aplikaci můžou být nakonfigurované v konzole Intune pro [mam](/intune/app-configuration-policies-managed-app) a [Android Enterprise](/intune/app-configuration-policies-use-android).
 Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale předávají se do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
 
 > [!NOTE] 
@@ -2022,10 +2022,10 @@ Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.M
 Konfigurace aplikace přidá nový typ oznámení:
 * **REFRESH_APP_CONFIG**: Toto oznámení se odesílá v rámci `MAMUserNotification` a do aplikace posílá informace, že jsou k dispozici nová konfigurační data aplikace.
 
-### <a name="further-reading"></a>Další čtení
-Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](https://docs.microsoft.com/intune/app-configuration-policies-managed-app).
+### <a name="further-reading"></a>Další materiály
+Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](/intune/app-configuration-policies-managed-app).
 
-Konfiguraci aplikace je také možné nakonfigurovat pomocí Graph API. Informace najdete v tématu [Graph API docs pro cílenou konfiguraci mam](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
+Konfiguraci aplikace je také možné nakonfigurovat pomocí Graph API. Informace najdete v tématu [Graph API docs pro cílenou konfiguraci mam](/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
 
 ## <a name="custom-themes-optional"></a>Vlastní motivy (volitelné)
 Vlastní motiv se dá poskytnout sadě SDK MAM, která se použije pro všechny obrazovky a dialogy MAM. Pokud není zadán motiv, bude použit výchozí motiv MAM.
@@ -2165,7 +2165,7 @@ Interakce se zavedenou vázanou službou může vyvolat výjimku `SecurityExcept
 Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace Portál společnosti ve výchozím nastavení protokoluje data generovaná systémem. Tato data se odešlou do Microsoft Intune. V rámci zásad Microsoftu neshromažďujeme žádné osobní údaje.
 
 > [!NOTE]
-> Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## <a name="recommended-android-best-practices"></a>Doporučené osvědčené postupy pro Android
 

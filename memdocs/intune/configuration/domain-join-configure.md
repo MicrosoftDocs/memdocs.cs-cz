@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 211722a02183d3b86525468f907d4093331d9de6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2472354c4f1c6b704f1e681c3e839f9903d4d079
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988427"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912759"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Nastavení připojení k doméně konfigurace pro zařízení připojená k hybridní službě Azure AD v Microsoft Intune
 
-Mnoho prostředí používá místní službu Active Directory (AD). Když jsou zařízení připojená k doméně připojená také k Azure AD, nazývají se zařízení připojená k hybridní službě Azure AD. Pomocí automatických pilotů Windows můžete [zaregistrovat zařízení připojená k hybridní službě Azure AD](../enrollment/windows-autopilot-hybrid.md) v Intune. K registraci budete potřebovat taky konfigurační profil **připojení k doméně** .
+Mnoho prostředí používá místní službu Active Directory (AD). Když jsou zařízení připojená k doméně připojená také k Azure AD, nazývají se zařízení připojená k hybridní službě Azure AD. Pomocí automatických pilotů Windows můžete [zaregistrovat zařízení připojená k hybridní službě Azure AD](../../autopilot/windows-autopilot-hybrid.md) v Intune. K registraci budete potřebovat taky konfigurační profil **připojení k doméně** .
 
 Konfigurační profil **připojení k doméně** zahrnuje místní informace o doméně služby Active Directory. Při zřizování zařízení (a obvykle offline) Tento profil nasadí podrobnosti o doméně služby AD, aby zařízení věděli, která místní doména se mají připojit. Pokud nevytvoříte profil připojení k doméně, možná se tato zařízení nepodaří nasadit.
 
@@ -55,10 +55,10 @@ V tomto článku se dozvíte, jak vytvořit profil připojení k doméně pro na
 7. V **nastavení konfigurace**zadejte následující vlastnosti:
 
     - **Předpona názvu počítače**: Zadejte předponu názvu zařízení. Názvy počítačů mají délku 15 znaků. Po předponě se budou náhodně generovat zbylé 15 znaků.
-    - **Název domény**: zadejte plně kvalifikovaný název domény (FQDN), ke které se mají zařízení připojit. Zadejte například`americas.corp.contoso.com.`
-    - **Organizační jednotka** (volitelné): zadejte úplnou cestu ([rozlišující název](https://docs.microsoft.com/windows/win32/ad/object-names-and-identities#distinguished-name)) k organizační jednotce (OU), které se mají vytvořit účty počítačů. Zadejte například `"CN=Users,DC=Contoso,DC=com"`. Pokud nezadáte hodnotu, použije se dobře známý kontejner objektů počítače.
+    - **Název domény**: zadejte plně kvalifikovaný název domény (FQDN), ke které se mají zařízení připojit. Zadejte například `americas.corp.contoso.com.`
+    - **Organizační jednotka** (volitelné): zadejte úplnou cestu ([rozlišující název](/windows/win32/ad/object-names-and-identities#distinguished-name)) k organizační jednotce (OU), které se mají vytvořit účty počítačů. Zadejte například `"CN=Users,DC=Contoso,DC=com"`. Pokud nezadáte hodnotu, použije se dobře známý kontejner objektů počítače.
 
-      Další informace a Rady k tomuto nastavení najdete v tématu [nasazení hybridních zařízení připojených k Azure AD](../enrollment/windows-autopilot-hybrid.md).
+      Další informace a Rady k tomuto nastavení najdete v tématu [nasazení hybridních zařízení připojených k Azure AD](../../autopilot/windows-autopilot-hybrid.md).
 
 8. Vyberte **Další**.
 
@@ -72,10 +72,10 @@ V tomto článku se dozvíte, jak vytvořit profil připojení k doméně pro na
 
 11. V rámci **Revize a vytvoření**zkontrolujte nastavení. Když vyberete **vytvořit**, vaše změny se uloží a profil se přiřadí. Tato zásada se taky zobrazuje v seznamu profily.
 
-Nyní je připraven k [nasazení hybridních zařízení připojených k Azure AD pomocí Intune a Windows autopilotu](../enrollment/windows-autopilot-hybrid.md).
+Nyní je připraven k [nasazení hybridních zařízení připojených k Azure AD pomocí Intune a Windows autopilotu](../../autopilot/windows-autopilot-hybrid.md).
 
 ## <a name="next-steps"></a>Další kroky
 
 Po [přiřazení](device-profile-assign.md)profilu [sledujte jeho stav](device-profile-monitor.md).
 
-[Nasaďte hybridní zařízení připojená k Azure AD pomocí Intune a Windows autopilotu](../enrollment/windows-autopilot-hybrid.md).
+[Nasaďte hybridní zařízení připojená k Azure AD pomocí Intune a Windows autopilotu](../../autopilot/windows-autopilot-hybrid.md).

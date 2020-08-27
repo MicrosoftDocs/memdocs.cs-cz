@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: b7486fa6770db03bb47ccf3e069499c02c6d598c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791750"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916040"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Správa a používání různých funkcí správy zařízení na zařízeních s Windows holografickými a HoloLens pomocí Intune
 
-Microsoft Intune zahrnuje mnoho funkcí pro usnadnění správy zařízení s Windows Holographic pro firmy, jako [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Pomocí Intune můžete potvrdit, že jsou zařízení v souladu s pravidly vaší organizace, a můžete zařízení přizpůsobit tak, že přidáte profil sítě VPN nebo Wi-Fi. Další klíčovou funkcí je použití zařízení jako veřejného terminálu a spuštění konkrétní aplikace nebo konkrétní sady aplikací.
+Microsoft Intune zahrnuje mnoho funkcí pro usnadnění správy zařízení s Windows Holographic pro firmy, jako [Microsoft HoloLens](/hololens/). Pomocí Intune můžete potvrdit, že jsou zařízení v souladu s pravidly vaší organizace, a můžete zařízení přizpůsobit tak, že přidáte profil sítě VPN nebo Wi-Fi. Další klíčovou funkcí je použití zařízení jako veřejného terminálu a spuštění konkrétní aplikace nebo konkrétní sady aplikací.
 
 Úlohy v tomto článku vám pomůžou při správě, přizpůsobování a zabezpečování zařízení s Windows Holographic pro firmy, včetně aktualizací softwaru a použití Windows Hello pro firmy.
 
@@ -35,9 +35,9 @@ Pokud chcete používat zařízení s Windows Holographic v Intune, vytvořte pr
 
 Azure Active Directory (AD) představuje skvělý prostředek, který vám pomůže se správou a řízením zařízení, na nichž běží Windows Holographic for Business. Pomocí Intune a Azure AD můžete: 
 
-- **[Připojit zařízení k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: v Azure Active Directory (AD) můžete přidat vlastní zařízení s Windows 10, včetně zařízení s Windows holografickým pro firmy. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
+- **[Připojit zařízení k Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: v Azure Active Directory (AD) můžete přidat vlastní zařízení s Windows 10, včetně zařízení s Windows holografickým pro firmy. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
 
-  Další podrobnosti najdete [v správě zařízení ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) .
+  Další podrobnosti najdete [v správě zařízení ve službě Azure AD](/azure/active-directory/devices/overview) .
 
 - **[Hromadně registrovat zařízení s Windows](../enrollment/windows-bulk-enroll.md)**: K Azure Active Directory (AD) a Intune můžete připojit větší počet nových zařízení s Windows. Tato funkce se označuje jako hromadná registrace a využívá zřizovací balíčky. Tyto balíčky připojí zařízení s Windows Holographic for Business k tenantovi Azure AD a zaregistrují je v Intune.
 
@@ -117,7 +117,7 @@ V profilech můžete k přizpůsobení některých nastavení, vytvoření omeze
 
 Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic for Business, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
 
-Podívejte se na [příklad](../configuration/custom-profile-hololens.md) , který pomocí [zprostředkovatele CSP v programu Windows Defender Application Control (WDAC)](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) povolí nebo zablokuje otevírání aplikací na zařízeních HoloLens 2.
+Podívejte se na [příklad](../configuration/custom-profile-hololens.md) , který pomocí [zprostředkovatele CSP v programu Windows Defender Application Control (WDAC)](/windows/client-management/mdm/applicationcontrol-csp) povolí nebo zablokuje otevírání aplikací na zařízeních HoloLens 2.
 
 ### <a name="configure-kiosk-mode"></a>[Konfigurace beznabídkového režimu](../configuration/kiosk-settings-holographic.md)
 
@@ -143,7 +143,7 @@ Zařízení s Windows holografickým pro firmy, jako je například Microsoft Ho
 
 ## <a name="software-updates"></a>Aktualizace softwaru
 
-**[Spravovat aktualizace softwaru](../protect/windows-update-for-business-configure.md)**
+**[Správa aktualizací softwaru](../protect/windows-update-for-business-configure.md)**
 
 V Intune je funkce Aktualizační kanály zařízení s Windows 10. Tyto aktualizační kanály zahrnují skupinu nastavení, která určují, jak se budou aktualizace instalovat. Pro instalaci aktualizací můžete třeba vytvořit časové období údržby nebo můžete zvolit, že po instalaci aktualizací chcete zařízení restartovat. Aktualizační kanál můžete použít pro více zařízení s Windows Holographic for Business.
 

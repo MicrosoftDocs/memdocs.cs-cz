@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531515"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915768"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
 Pokud ke správě zařízení autopilot používáte Intune, můžete po registraci spravovat nastavení rozhraní UEFI (DFCI) pomocí rozhraní pro konfiguraci firmwaru zařízení. Přehled výhod, scénářů a požadavků najdete v tématu [Přehled DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
-DFCI [umožňuje systému Windows](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) předat příkazy správy z Intune do rozhraní UEFI (rozhraní UEFI (Unified Extensible Firmware Interface)).
+DFCI [umožňuje systému Windows](/windows/client-management/mdm/uefi-csp) předat příkazy správy z Intune do rozhraní UEFI (rozhraní UEFI (Unified Extensible Firmware Interface)).
 
 Pomocí této funkce můžete v Intune ovládat nastavení systému BIOS. Firmware je typicky odolný vůči škodlivým útokům. Omezuje koncovým uživatelům kontrolu nad systémem BIOS, což je v napadené situaci dobré.
 
@@ -39,17 +39,17 @@ Tato funkce platí pro:
 
 - Windows 10 RS5 (1809) a novější v podporovaném rozhraní UEFI
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 - Výrobce zařízení musí mít v výrobním procesu přidaný DFCI do firmwaru rozhraní UEFI nebo jako aktualizaci firmwaru, kterou nainstalujete. Spolupracujte se svými dodavateli zařízení a určete [výrobce, kteří podporují DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), nebo verzi firmwaru, která je potřebná k použití DFCI.
 
 - Zařízení musí být zaregistrované pro Windows autopiloter pomocí [partnera poskytovatele řešení Microsoft Cloud (CSP)](https://partner.microsoft.com/cloud-solution-provider)nebo zaregistrovaného přímo výrobcem OEM. 
 
-  Zařízení, která se registrují ručně pro autopilot, jako je [Import ze souboru CSV](../enrollment/enrollment-autopilot.md#add-devices), nemůžou používat DFCI. V rámci návrhu DFCI Management vyžaduje externí ověření komerčního akvizice zařízení prostřednictvím výrobce OEM nebo registrace partnera Microsoft CSP pro Windows autopilot.
+  Zařízení, která se registrují ručně pro autopilot, jako je [Import ze souboru CSV](../../autopilot/enrollment-autopilot.md#add-devices), nemůžou používat DFCI. V rámci návrhu DFCI Management vyžaduje externí ověření komerčního akvizice zařízení prostřednictvím výrobce OEM nebo registrace partnera Microsoft CSP pro Windows autopilot.
 
   Po registraci zařízení se v seznamu zařízení s Windows autopilotem zobrazí jeho sériové číslo.
 
-  Další informace o autopilotu, včetně všech požadavků, najdete v tématu [registrace zařízení s Windows v Intune pomocí automatických pilotů Windows](../enrollment/enrollment-autopilot.md).
+  Další informace o autopilotu, včetně všech požadavků, najdete v tématu [registrace zařízení s Windows v Intune pomocí automatických pilotů Windows](../../autopilot/enrollment-autopilot.md).
 
 ## <a name="create-your-azure-ad-security-groups"></a>Vytvoření skupin zabezpečení služby Azure AD
 
@@ -66,7 +66,7 @@ Pokud chcete používat DFCI, vytvořte následující profily a přiřaďte je 
 
 ### <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
 
-Tento profil nastaví a předem nakonfiguruje nová zařízení. [Profil nasazení autopilotu](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) obsahuje seznam kroků pro vytvoření profilu.
+Tento profil nastaví a předem nakonfiguruje nová zařízení. [Profil nasazení autopilotu](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) obsahuje seznam kroků pro vytvoření profilu.
 
 ### <a name="create-an-enrollment-state-page-profile"></a>Vytvořit profil stránky stavu registrace
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988401"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912725"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Použití aplikace nabrat na zařízeních s Windows 10 v Microsoft Intune
 
@@ -30,7 +30,7 @@ Vzdělávací profily v Intune jsou navržené pro studenty, kteří můžou na 
 
 - Windows 10 a novější
 
-Když se uživatel přihlásí, automaticky se otevře testovací aplikace se zadaným testem. V zařízení nemůžou běžet žádné jiné aplikace, zatímco probíhá test. [Pořizovat testy ve Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) poskytují další podrobnosti o aplikaci převzít test.
+Když se uživatel přihlásí, automaticky se otevře testovací aplikace se zadaným testem. V zařízení nemůžou běžet žádné jiné aplikace, zatímco probíhá test. [Pořizovat testy ve Windows 10](/education/windows/take-tests-in-windows-10) poskytují další podrobnosti o aplikaci převzít test.
 
 V tomto článku jsou uvedené kroky pro vytvoření profilu konfigurace zařízení v Microsoft Intune. Obsahuje také informace o dostupných nastaveních vzdělávání pro vaše zařízení s Windows 10.
 

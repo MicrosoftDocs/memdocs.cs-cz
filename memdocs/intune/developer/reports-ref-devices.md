@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 223d3aa55365241983c197d0aa80e82087465d48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165426"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907697"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -50,7 +50,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 
 ### <a name="example"></a>Příklad
 
-| deviceTypeID  | Name | Popis |
+| deviceTypeID  | Název | Popis |
 |---------|------------|--------|
 | 0 |Plocha |Zařízení se systémem Windows |
 | 1 |WindowsRT |Zařízení se systémem WindowsRT |
@@ -63,7 +63,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 | 8 |IPhone |Zařízení iPhone |
 | 9 |IPad |Zařízení iPad |
 | 10 |IPod |Zařízení iPod |
-| 11 |Telefon |Zařízení Android spravované pomocí Správce zařízení |
+| 11 |Android |Zařízení Android spravované pomocí Správce zařízení |
 | 12 |ISocConsumer |Zařízení iSoc Consumer |
 | 14 |MacMDM |Zařízení se systémem Mac OS X spravované pomocí integrovaného agenta MDM |
 | 15 |HoloLens |Zařízení HoloLens |
@@ -71,7 +71,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 | 17 |AndroidForWork |Zařízení Android spravované pomocí vlastníka profilu Androidu |
 | 100 |Blackberry |Zařízení Blackberry |
 | 101 |Palm |Zařízení Palm |
-| 255 |Není známo |Neznámý typ zařízení |
+| 255 |Neznámý |Neznámý typ zařízení |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 Entita **enrollmentActivity** označuje aktivitu registrace zařízení.
@@ -99,8 +99,8 @@ Entita **enrollmentEventStatus** indikuje výsledek registrace zařízení.
 
 | enrollmentEventStatusName  | Popis                            |
 |----------------------------|----------------------------------------|
-| Úspěch                    | Úspěšná registrace zařízení         |
-| Failed                     | Neúspěšná registrace zařízení             |
+| Success                    | Úspěšná registrace zařízení         |
+| Neúspěšný                     | Neúspěšná registrace zařízení             |
 | Není k dispozici              | Stav registrace není k dispozici.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
@@ -117,7 +117,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
-| Není známo                         | Neznámou chybu.                                                                                                |
+| Neznámý                         | Neznámou chybu.                                                                                                |
 | Authentication                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
@@ -144,7 +144,7 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Neuvedeno                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
-| Není známo                          | Neznámá chyba.                                                                                                                                                                                         |
+| Neznámý                          | Neznámá chyba.                                                                                                                                                                                         |
 | UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
 | UserUnknown                      | Intune nezná uživatele.                                                                                                                                                                           |
 | BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení dřív zaregistroval jiný uživatel.                                                                                                                |
@@ -170,7 +170,7 @@ Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vla
 | ownerTypeName |Představuje typ vlastníka zařízení:  <br>Podnik – zařízení je ve vlastnictví podniku. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Firemní osobní neznámý |
 
 > [!Note]  
-> Při `ownerTypeName` vytváření dynamických skupin pro zařízení v nástroji AzureAD je potřeba nastavit hodnotu filtru `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Při `ownerTypeName` vytváření dynamických skupin pro zařízení v nástroji AzureAD je potřeba nastavit hodnotu filtru `deviceOwnership` jako `Company` . Další informace najdete v tématu [pravidla pro zařízení](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,9 +184,9 @@ Entita **managementStates** poskytuje podrobné informace o stavu zařízení. P
 
 ### <a name="example"></a>Příklad
 
-| managementStateID  | Name | Popis |
+| managementStateID  | Název | Popis |
 |---------|------------|--------|
-| 0 |Spravovaní | Spravováno bez čekajících vzdálených akcí |
+| 0 |Spravované | Spravováno bez čekajících vzdálených akcí |
 | 1 |RetirePending | Pro toto zařízení existuje příkaz pro vyřazení z provozu, který čeká na vyřízení. |
 | 2 |RetireFailed | Příkaz pro vyřazení z provozu u tohoto zařízení selhal. |
 | 3 |WipePending | Pro toto zařízení existuje příkaz pro vymazání, který čeká na vyřízení. |
@@ -211,7 +211,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 
 ### <a name="example"></a>Příklad
 
-| ManagementAgentTypeID  | Name | Popis |
+| ManagementAgentTypeID  | Název | Popis |
 |---------|------------|--------|
 | 1 |EAS | Zařízení se spravuje prostřednictvím protokolu Exchange Active Sync. |
 | 2 |MDM | Zařízení se spravuje pomocí agenta MDM. |
@@ -219,7 +219,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 | 4 |IntuneClient | Zařízení se spravuje pomocí agenta Intune pro počítače. |
 | 5 |EasIntuneClient | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
 | 8 |ConfigManagerClient | Zařízení spravuje agent Configuration Manager. |
-| 16 |Není známo | Neznámý typ agenta správy |
+| 16 |Neznámý | Neznámý typ agenta správy |
 
 ## <a name="devices"></a>zařízení
 
@@ -288,4 +288,3 @@ Entita **devicePropertyHistory** má stejné vlastnosti jako tabulka zařízení
 | deviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení 
 | physicalMemoryInBytes      | Fyzická paměť v bajtech.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Celková kapacita úložiště v bajtech                                                                                                                                                                |
-

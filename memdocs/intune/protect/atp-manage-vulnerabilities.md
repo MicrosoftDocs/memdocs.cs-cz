@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262587"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909376"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Použití Intune k nápravě ohrožení zabezpečení identifikovaných ATP v programu Microsoft Defender
 
 Když integruje Intune s rozšířenou ochranou před internetovými útoky v programu Microsoft Defender (ATP), můžete využít výhod správy ohrožení zabezpečení ATPs Threat & (TVM) a pomocí Intune napravit slabiny koncových bodů identifikované systémem TVM. Tato integrace přináší přístup na základě rizika pro zjišťování a stanovení priorit ohrožení zabezpečení, která můžou zlepšit dobu odezvy nápravy napříč vaším prostředím.
 
-[Správa ohrožení zabezpečení & hrozeb](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) je součástí [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
+[Správa ohrožení zabezpečení & hrozeb](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) je součástí [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection).
 
 ## <a name="how-integration-works"></a>Jak funguje integrace
 
@@ -63,7 +63,7 @@ Příklad pracovního postupu:
 
 - Po dokončení nápravy správce Intune otevře úlohu zabezpečení a vybere **dokončit úlohu**.  Stav nápravy se aktualizuje pro Intune a ATP, kde správci zabezpečení potvrzují revidovaný stav ohrožení zabezpečení.
 
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Předpoklady  
 
 **Předplatná**:
 
@@ -108,4 +108,4 @@ Přečtěte si další informace o službě Intune a [ATP Microsoft Defender](ad
 
 Zkontrolujte ochranu před [mobilními hrozbami](mobile-threat-defense.md)Intune.
 
-Projděte si [řídicí panel pro správu ohrožení zabezpečení & hrozeb](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) v ochraně ATP v programu Microsoft Defender.
+Projděte si [řídicí panel pro správu ohrožení zabezpečení & hrozeb](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) v ochraně ATP v programu Microsoft Defender.

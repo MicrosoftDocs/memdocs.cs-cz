@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881322"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912079"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)
 
@@ -39,13 +39,13 @@ Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci a
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Registrace v Datalertu pomocí pracovního nebo školního účtu Microsoft
 
 > [!NOTE]
-> Abyste se mohli zaregistrovat tímto způsobem, musíte mít v telefonu nainstalovanou a aktivovanou aplikaci [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
+> Abyste se mohli zaregistrovat tímto způsobem, musíte mít v telefonu nainstalovanou a aktivovanou aplikaci [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
 
 1. Vyberte __Zaregistrovat se pomocí účtu Microsoft__.
 
    ![Snímek obrazovky Nastavení v aplikaci Datalert, na které je v horní části zobrazeno pole pro registraci zařízení a v dolní části možnost registrace pomocí účtu Microsoft, pokud máte účet Microsoft Office 365 a předplatné Intune](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
-2. Zobrazí se oznámení __Datalert chce otevřít Authenticator__. Vyberte __Open__ (Otevřít).
+2. Zobrazí se oznámení __Datalert chce otevřít Authenticator__. Vyberte __Otevřít__.
 
    ![Snímek automaticky otevíraného okna s výzvou, aby uživatel otevřel aplikaci Authenticator na žádost aplikace Datalert](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 

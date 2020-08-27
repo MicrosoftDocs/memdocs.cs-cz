@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406569"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907890"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune
 
@@ -37,7 +37,7 @@ ms.locfileid: "83406569"
 - **Office**: Stáhněte [se na Microsoft 365 aplikace, Office 2019 a Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 - **Windows**: integrovaný v operačním systému Windows 10.
 
-Další informace o zásadách pro ADMX najdete v tématu [Principy zásad zálohovaných v ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+Další informace o zásadách pro ADMX najdete v tématu [Principy zásad zálohovaných v ADMX](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Tyto šablony jsou integrované pro Microsoft Intune a jsou dostupné jako profily **šablon pro správu** . V tomto profilu nakonfigurujete nastavení, která chcete zahrnout, a potom tento profil přiřadíte k vašim zařízením.
 
@@ -55,9 +55,9 @@ Tato funkce platí pro:
 
 - Windows 10 verze 1709 a novější
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
-- Předplatné Microsoft 365 E3 nebo E5, které zahrnuje Intune a Azure Active Directory (AD) Premium. Pokud nemáte předplatné E3 nebo E5, [zkuste to zdarma](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Předplatné Microsoft 365 E3 nebo E5, které zahrnuje Intune a Azure Active Directory (AD) Premium. Pokud nemáte předplatné E3 nebo E5, [zkuste to zdarma](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Další informace o tom, co se dostanete s různými licencemi Microsoft 365, najdete v tématu věnovaném [transformaci vaší organizace pomocí Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -190,10 +190,10 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
 
 - Dynamické skupiny jsou funkce v Azure AD Premium. Pokud nemáte Azure AD Premium, máte licenci jenom k vytváření přiřazených skupin. Další informace o dynamických skupinách najdete v těchto tématech:
 
-  - [Dynamické členství ve skupině v Azure Active Directory (část 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Dynamické členství ve skupině v Azure Active Directory (část 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Dynamické členství ve skupině v Azure Active Directory (část 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Dynamické členství ve skupině v Azure Active Directory (část 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium zahrnuje další služby, které se běžně používají při správě aplikací a zařízení, včetně služby [Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) a [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/overview).
+- Azure AD Premium zahrnuje další služby, které se běžně používají při správě aplikací a zařízení, včetně služby [Multi-Factor Authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) a [podmíněného přístupu](/azure/active-directory/conditional-access/overview).
 
 - Mnoho správců žádá o použití skupin uživatelů a kdy použít skupiny zařízení. Nějaké pokyny najdete v tématu [skupiny uživatelů a skupiny zařízení](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -203,7 +203,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a do těchto skup
   - Všechna zařízení s Androidem
   - Všechna zařízení s iOS/iPadOS
   - Marketing
-  - Personální oddělení
+  - Human Resources
   - Všichni zaměstnanci Charlotte
   - Všichni zaměstnanci Redmond
   - Západní pobřeží správců IT
@@ -420,7 +420,7 @@ Vaše nastavení vypadá podobně jako u následujících nastavení:
 > [!div class="mx-imgBorder"]
 > ![Vytvoření šablony pro správu OneDrivu v Microsoft Intune](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-Další informace o nastavení klienta OneDrive najdete v tématu [použití zásady skupiny k řízení nastavení synchronizace klienta OneDrive](https://docs.microsoft.com/onedrive/use-group-policy).
+Další informace o nastavení klienta OneDrive najdete v tématu [použití zásady skupiny k řízení nastavení synchronizace klienta OneDrive](/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Přiřazení šablony
 
@@ -438,7 +438,7 @@ V tuto chvíli jste vytvořili některé šablony pro správu a přiřadili je s
 Tato část používá následující zdroje informací. Tyto prostředky nainstalujeme v této části.
 
 - [Sada Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Rozhraní API pro Microsoft Graph pro Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Rozhraní API pro Microsoft Graph pro Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. V **počítači pro správu**otevřete **Windows PowerShell** jako správce:
 
@@ -450,17 +450,17 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
 
 2. Získejte a nastavte zásady spouštění.
 
-    1. Napište`get-ExecutionPolicy`
+    1. Napište `get-ExecutionPolicy`
 
         Zapište, co je nastaveno na, což může být **omezeno**. Po dokončení kurzu ho nastavte zpátky na původní hodnotu.
 
-    2. Napište`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+    2. Napište `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 
     3. Pokud `Y` ho chcete změnit, zadejte.
 
-    Zásady spouštění prostředí PowerShell pomáhají zabránit spouštění škodlivých skriptů. Další informace najdete v tématu [o zásadách spouštění](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    Zásady spouštění prostředí PowerShell pomáhají zabránit spouštění škodlivých skriptů. Další informace najdete v tématu [o zásadách spouštění](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-3. Napište`Install-Module -Name Microsoft.Graph.Intune`
+3. Napište `Install-Module -Name Microsoft.Graph.Intune`
 
     Zadejte `Y` if:
 
@@ -472,9 +472,9 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
     > [!div class="mx-imgBorder"]
     > ![Windows PowerShell – výzva po instalaci modulu](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
 
-4. Ve webovém prohlížeči přejdete na adresu [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases) a vyberte soubor **Intune-PowerShell-SDK_v6. zip** .
+4. Ve webovém prohlížeči, přejít na [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases) a vyberte soubor **Intune-PowerShell-SDK_v6.1907.00921.0001.zip** .
 
-    1. Vyberte **Uložit jako**a vyberte složku, kterou si pamatujete. `c:\psscripts`je dobrá volba.
+    1. Vyberte **Uložit jako**a vyberte složku, kterou si pamatujete. `c:\psscripts` je dobrá volba.
     2. Otevřete složku, klikněte pravým tlačítkem na soubor. zip > **extrahování všech**  >  **extrakcí**. Struktura složek vypadá podobně jako v následující složce:
 
         > [!div class="mx-imgBorder"]
@@ -500,9 +500,9 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
 
 8. Šablony pro správu Intune používají beta verzi grafu:
 
-    1. Napište`Update-MSGraphEnvironment -SchemaVersion 'beta'`
+    1. Napište `Update-MSGraphEnvironment -SchemaVersion 'beta'`
 
-    2. Napište`Connect-MSGraph -AdminConsent`
+    2. Napište `Connect-MSGraph -AdminConsent`
 
     3. Po zobrazení výzvy se přihlaste pomocí stejného účtu správce Microsoft 365. Tyto rutiny vytvářejí zásady ve vaší organizaci tenanta.
 
@@ -581,7 +581,7 @@ Pokud už je nepotřebujete, můžete:
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto kurzu se seznámíte s [centrem pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), pomocí Tvůrce dotazů můžete vytvářet dynamické skupiny a v Intune vytvářet šablony pro správu, které slouží ke konfiguraci [Nastavení ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies). V Intune jste také porovnali používání šablon ADMX místně a v cloudu. Jako bonus jste k vytvoření šablony pro správu použili rutiny prostředí PowerShell.
+V tomto kurzu se seznámíte s [centrem pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), pomocí Tvůrce dotazů můžete vytvářet dynamické skupiny a v Intune vytvářet šablony pro správu, které slouží ke konfiguraci [Nastavení ADMX](/windows/client-management/mdm/understanding-admx-backed-policies). V Intune jste také porovnali používání šablon ADMX místně a v cloudu. Jako bonus jste k vytvoření šablony pro správu použili rutiny prostředí PowerShell.
 
 Další informace o šablonách pro správu v Intune najdete v těchto tématech:
 

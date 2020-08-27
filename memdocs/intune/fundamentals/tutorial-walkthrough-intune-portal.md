@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330299"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907003"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: návod Microsoft Intune v Azure Portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, které vám pomůžou s nejrůznějšími scénáři a možnostmi cloud computingu. Microsoft Intune je jedna z několika služeb dostupných v Azure. Intune vám pomůže zajistit, aby zařízení, aplikace a data vaší společnosti splňovaly požadavky na zabezpečení vaší společnosti. Máte kontrolu nad tím, které požadavky je potřeba zkontrolovat a co se stane, když tyto požadavky nebudou splněné. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Porozumění funkcím dostupným v Intune vám pomůže dosáhnout různých úloh správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM).
+[Azure](/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, které vám pomůžou s nejrůznějšími scénáři a možnostmi cloud computingu. Microsoft Intune je jedna z několika služeb dostupných v Azure. Intune vám pomůže zajistit, aby zařízení, aplikace a data vaší společnosti splňovaly požadavky na zabezpečení vaší společnosti. Máte kontrolu nad tím, které požadavky je potřeba zkontrolovat a co se stane, když tyto požadavky nebudou splněné. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Porozumění funkcím dostupným v Intune vám pomůže dosáhnout různých úloh správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM).
 
 V tomto kurzu provedete následující:
 > [!div class="checklist"]
@@ -36,7 +36,7 @@ V tomto kurzu provedete následující:
 
 Pokud nemáte předplatné Intune, [Zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Než budete nastavovat Microsoft Intune, projděte si následující požadavky:
 
 - [Podporované operační systémy a prohlížeče](supported-devices-browsers.md) 

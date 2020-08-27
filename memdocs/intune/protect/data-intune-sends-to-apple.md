@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c605598897edca4e9aecfa090811ee9fe282e09
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079735"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907629"
 ---
 # <a name="data-intune-sends-to-apple"></a>Data z Intune odesílaná Applu
 
@@ -33,7 +33,7 @@ Pokud se na zařízení povolí některá z následujících služeb Apple, Micr
 
 - [Program Apple DEP (Device Enrollment Program)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Certifikát Apple MDM Push Certificate (APNS)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Program Apple VPP (Volume Purchase Program)](../apps/vpp-apps-ios.md)
 
 Aby mohla služba Microsoft Intune navázat spojení, je napřed nutné pro každou službu Apple vytvořit účet Apple.
@@ -54,7 +54,7 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá ze zaří
 | ASM/DEP | org_id | ID zákazníka s programem DEP. Tento klíč je dostupný jenom ve verzi protokolu 3 nebo novější. |
 | ASM/DEP | serial_number | Sériové číslo zařízení (řetězec). |
 | ASM/DEP | model | Název modelu (řetězec) |
-| ASM/DEP | description | Popis zařízení (řetězec) |
+| ASM/DEP | Popis | Popis zařízení (řetězec) |
 | ASM/DEP | asset_tag | Inventární štítek zařízení (řetězec). |
 | ASM/DEP | profile_status | Stav instalace profilu. Možné hodnoty: **empty**, **assigned**, **pushed** nebo **removed** |
 | ASM/DEP | profile_uuid | Jedinečné ID přiřazeného profilu |
@@ -71,5 +71,3 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá ze zaří
 | VPP | Sériové číslo | Sériové číslo spravovaného zařízení |
 
 Pokud chcete ukončit používání služeb Apple v Microsoft Intune a odstranit data, je nutné deaktivovat token Apple v Microsoft Intune a také odstranit váš účet Apple. Vyhledejte si v účtu Apple postup pro správu účtu.
-
-

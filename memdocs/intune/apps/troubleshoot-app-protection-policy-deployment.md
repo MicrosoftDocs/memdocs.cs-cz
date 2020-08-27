@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 15c4ff7a6164517d0193c1830c8e9649f0009d64
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531566"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915853"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Řešení potíží s nasazením zásad ochrany aplikací v Intune
 
@@ -64,16 +64,16 @@ I když můžete používat zásady ochrany aplikací Intune nezávisle na řeš
   > [!NOTE]
   > Mobilní aplikace Office v současné době podporují jenom SharePoint Online a ne místní SharePoint.
 
-- Pokud používáte zásady ochrany aplikací Intune spolu s místními prostředky (Microsoft Skype pro firmy a Microsoft Exchange Server), musíte povolit [hybridní moderní ověřování (HMA) pro Skype pro firmy a Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- Pokud používáte zásady ochrany aplikací Intune spolu s místními prostředky (Microsoft Skype pro firmy a Microsoft Exchange Server), musíte povolit [hybridní moderní ověřování (HMA) pro Skype pro firmy a Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
 Zásady ochrany aplikací Intune vyžadují, aby byla identita uživatele konzistentní mezi aplikací a [sadou Intune App SDK](../developer/app-sdk-get-started.md). Jediným způsobem, jak zaručit tuto konzistenci, je prostřednictvím moderního ověřování. Existují scénáře, ve kterých aplikace mohou fungovat v místní konfiguraci bez moderního ověřování. Výsledky se ale neshodují ani nezaručují.
 
 Další informace o tom, jak povolit HMA pro hybridní a místní konfiguraci Skypu pro firmy, najdete v následujících článcích:
 
-- **Hybridní**<br>
+- **Hybridní model**<br>
 [Hybridní moderní ověřování pro SfB a Exchange dosáhne GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
-- **Místní**<br>
+- **On-premises (místní)** <br>
 [Moderní ověřování pro SfB OnPrem s AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Zkontroluje stav zásad ochrany aplikací.
@@ -95,9 +95,9 @@ Další informace najdete v tématu [ověření nastavení zásad ochrany aplika
 
 Ve většině scénářů se uživatelé přihlašují ke svým účtům pomocí hlavního názvu uživatele (UPN). V některých prostředích (například v místních scénářích) ale uživatelé můžou použít jinou formu přihlašovacích údajů pro přihlášení. V těchto případech se může stát, že hlavní název uživatele (UPN), který se používá v aplikaci, se neshoduje s objektem UPN ve službě Azure AD. Pokud k tomuto problému dojde, zásady ochrany aplikací se nepoužijí podle očekávání.
 
-Doporučené osvědčené postupy od Microsoftu odpovídají hlavnímu názvu uživatele (UPN) k primární adrese SMTP. Tento postup umožňuje uživatelům přihlašovat se ke spravovaným aplikacím, ochraně aplikací Intune a dalším prostředkům služby Azure AD pomocí konzistentní identity. Další informace najdete v tématu [populace Azure AD userPrincipalName](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Doporučené osvědčené postupy od Microsoftu odpovídají hlavnímu názvu uživatele (UPN) k primární adrese SMTP. Tento postup umožňuje uživatelům přihlašovat se ke spravovaným aplikacím, ochraně aplikací Intune a dalším prostředkům služby Azure AD pomocí konzistentní identity. Další informace najdete v tématu [populace Azure AD userPrincipalName](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-Pokud vaše prostředí vyžaduje alternativní metody přihlašování, přečtěte si téma [Konfigurace alternativního přihlašovacího ID](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), konkrétně [hybridní moderní ověřování s alternativním identifikátorem](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Pokud vaše prostředí vyžaduje alternativní metody přihlašování, přečtěte si téma [Konfigurace alternativního přihlašovacího ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), konkrétně [hybridní moderní ověřování s alternativním identifikátorem](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Ověření cílení na uživatele
 
@@ -115,7 +115,7 @@ Když přiřadíte zásadu do skupiny uživatelů, ujistěte se, že je uživate
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **skupiny > všechny skupiny**a pak vyhledejte a vyberte skupinu, která se používá pro přiřazení zásad ochrany aplikací.
 3. V části **Spravovat** vyberte **členy**.
-4. Pokud tento ovlivněný uživatel není uvedený, přečtěte si téma [Správa přístupu k aplikacím a prostředkům pomocí skupin Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) a pravidel členství ve skupinách. Ujistěte se, že je příslušný uživatel součástí skupiny.
+4. Pokud tento ovlivněný uživatel není uvedený, přečtěte si téma [Správa přístupu k aplikacím a prostředkům pomocí skupin Azure Active Directory](/azure/active-directory/fundamentals/active-directory-manage-groups) a pravidel členství ve skupinách. Ujistěte se, že je příslušný uživatel součástí skupiny.
 5. Ujistěte se, že ovlivněný uživatel není v žádné z vyloučených skupin pro danou zásadu.
 
 > [!IMPORTANT]
@@ -128,7 +128,7 @@ Když přiřadíte zásadu do skupiny uživatelů, ujistěte se, že je uživate
 
 Když konfigurujete zásady ochrany aplikací Intune, cílové aplikace musí používat [sadu Intune App SDK](../developer/app-sdk-get-started.md). V opačném případě zásady ochrany aplikací nemusí správně fungovat.
 
-Ujistěte se, že je cílová aplikace uvedená v [Microsoft Intune chráněných aplikacích](../apps/apps-supported-intune-apps.md). V případě LOB nebo vlastních aplikací ověřte, že aplikace používají nejnovější verzi sady [Intune App SDK](../developer/app-sdk-get-started.md). Je třeba počítat s následujícím:
+Ujistěte se, že je cílová aplikace uvedená v [Microsoft Intune chráněných aplikacích](../apps/apps-supported-intune-apps.md). V případě LOB nebo vlastních aplikací ověřte, že aplikace používají nejnovější verzi sady [Intune App SDK](../developer/app-sdk-get-started.md). Všimněte si, že:
 
 Pro iOS je tento postup důležitý, protože každá verze obsahuje opravy, které mají vliv na to, jak se tyto zásady používají a jak fungují. Další informace najdete v tématu [verze iOS sady Intune App SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases).
 V případě Androidu není tento postup důležitý. Uživatelé ale musí mít nainstalovanou nejnovější verzi aplikace Portál společnosti, protože Portál společnosti aplikace funguje jako agent zprostředkovatele zásad.
@@ -194,7 +194,7 @@ Další informace o tom, jak přijímat a sdílet data aplikací, najdete v tém
 
 Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](../apps/data-transfer-between-apps-manage-ios.md).
 
-## <a name="references"></a>Odkazy
+## <a name="references"></a>Reference
 
 Pokud pořád hledáte řešení souvisejícího s nějakým problémem nebo pokud chcete získat další informace o Intune, vystavte si na našem [Microsoft Intune fóru](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)dotaz. Řada techniků podpory, MVP a členů našeho vývojového týmu navštíví fóra. Proto je velmi pravděpodobné, že můžete najít někoho, kdo má informace, které potřebujete.
 

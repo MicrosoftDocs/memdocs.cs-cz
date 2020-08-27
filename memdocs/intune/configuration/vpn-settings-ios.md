@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c8aeab9ba7f6b6abd42793bf2af9452b4482edf4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819911"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911824"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
 
@@ -31,7 +31,7 @@ Microsoft Intune zahrnuje mnoho nastavení sítě VPN, která se dají nasadit d
 [Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
 
 > [!NOTE]
-> Tato nastavení jsou k dispozici pro všechny typy registrace s výjimkou registrace uživatele. Zápis uživatele je omezený na [síť VPN pro jednotlivé aplikace](https://docs.microsoft.com/mem/intune/configuration/vpn-setting-configure-per-app). Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
+> Tato nastavení jsou k dispozici pro všechny typy registrace s výjimkou registrace uživatele. Zápis uživatele je omezený na [síť VPN pro jednotlivé aplikace](./vpn-setting-configure-per-app.md). Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
 
 ## <a name="connection-type"></a>Typ připojení
 

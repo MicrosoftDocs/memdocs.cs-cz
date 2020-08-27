@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 77e51e625fd248a5f60a31e49d015315145d3cf9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820574"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909988"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS, iPadOS nebo macOS v Intune
 
@@ -153,7 +153,7 @@ Tato nastavení konfigurují rozšíření aplikace, které umožňuje jednotné
 
 Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření aplikace jednotného přihlašování vytvořené vaší organizací, vaším poskytovatelem identity, Microsoftem nebo společností Apple. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování pro typ přesměrování a přihlašovací údaje.
 
-- Typ přesměrování je navržený pro moderní ověřovací protokoly, jako jsou OpenID Connect, OAuth a typu Saml2. Můžete si vybrat mezi Microsoft Azure AD příponou SSO ([modul plug-in Microsoft Enterprise SSO](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) a obecným rozšířením pro přesměrování.
+- Typ přesměrování je navržený pro moderní ověřovací protokoly, jako jsou OpenID Connect, OAuth a typu Saml2. Můžete si vybrat mezi Microsoft Azure AD příponou SSO ([modul plug-in Microsoft Enterprise SSO](/azure/active-directory/develop/apple-sso-plugin)) a obecným rozšířením pro přesměrování.
 - Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat rozšíření přihlašovací údaje specifické pro protokol Kerberos poskytované společností Apple a obecné rozšíření přihlašovacích údajů.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozšíření aplikace pro iOS/IPADOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) a [rozšíření aplikace MacOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).

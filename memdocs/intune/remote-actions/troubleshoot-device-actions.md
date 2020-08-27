@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078838"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910804"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
@@ -49,16 +49,16 @@ K nejpravděpodobnějším důvodům patří:
 - Zařízení není pod dohledem zásad omezení zařízení, aby bylo možné Zámek aktivace.
 
 ### <a name="is-the-disable-activation-lock-code-case-sensitive"></a>Rozlišuje velká a malá písmena Zámek aktivace kódu?
-Ne. A nemusíte zadávat pomlčky.
+No. A nemusíte zadávat pomlčky.
 
 ## <a name="remove-devices-action"></a>Akce odebrání zařízení
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Návody informovat, kdo zahájil vyřazení/vymazání?
-V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části > **protokoly auditu** **správy tenanta**> zkontrolujte **iniciované** sloupce.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do **Tenant administration**části  >  **protokoly auditu** správy tenanta > zkontrolujte **iniciované** sloupce.
 Pokud položku nevidíte, nejpravděpodobnější osoba, která iniciovala tuto akci, je uživatel tohoto zařízení. Pravděpodobně použili Portál společnosti aplikaci nebo portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Proč se mi po použití vyřazení nenainstalovala moje aplikace?
-Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. To zahrnuje:
+Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. Sem patří:
 - Aplikace se nasadila jako povinná.
 - Aplikace byla nasazená jako dostupná a pak koncovým uživatelem nainstalovaná v aplikaci Portál společnosti.
 
@@ -69,7 +69,7 @@ Toto chování je očekávané. Google neumožňuje obnovení továrního nastav
 Protože vyřazení zařízení z provozu neodvolává přístupové tokeny. Pomocí zásad podmíněného přístupu můžete zmírnit tuto podmínku.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Jak můžu monitorovat akci vyřazení/vymazání po jejím vydání?
-V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části > **protokoly auditu** **správy tenanta**.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do **Tenant administration**části  >  **protokoly auditu**správy tenanta.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Proč se vymazání někdy zobrazuje na neomezenou dobu?
 Zařízení před zahájením resetování vždy hlásí svůj stav zpět do služby Intune. Proto se akce zobrazí jako čeká na vyřízení. Pokud jste ověřili, že se akce úspěšně provedla, odstraňte zařízení ze služby.
@@ -99,7 +99,7 @@ Vzhledem k tomu, že jedna ze zásad dodržování předpisů vyžaduje heslo.
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Po použití akce vymazání nejde restartovat zařízení s Windows 10.
 To může být způsobeno tím, že použijete **zařízení pro vymazání a chcete pokračovat v mazání i v případě, že zařízení ztratí napájení. Pokud vyberete tuto možnost, uvědomte si, že může dojít k tomu, že se některá zařízení s Windows 10 nespustí znovu.** na zařízení s Windows 10.
 
-To může být způsobeno tím, že instalace systému Windows má zásadní poškození, které brání přeinstalaci operačního systému. V takovém případě se proces nezdařil a opustí systém v [prostředí Windows Recovery Environment]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+To může být způsobeno tím, že instalace systému Windows má zásadní poškození, které brání přeinstalaci operačního systému. V takovém případě se proces nezdařil a opustí systém v [prostředí Windows Recovery Environment]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Po použití akce vymazání nejde restartovat zařízení zašifrované BitLockerem
 To může být způsobeno tím, že použijete **zařízení pro vymazání a chcete pokračovat v mazání i v případě, že zařízení ztratí napájení. Pokud vyberete tuto možnost, uvědomte si, že může dojít k tomu, že se některá zařízení s Windows 10 nespustí znovu.** možnost na zařízení šifrované pomocí BitLockeru.

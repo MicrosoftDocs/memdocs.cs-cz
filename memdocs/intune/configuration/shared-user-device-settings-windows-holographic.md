@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556281"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915717"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows holografického pro firmy pro správu sdílených zařízení pomocí Intune
 
@@ -32,7 +32,7 @@ Pomocí Microsoft Intune se uživatelé můžou k těmto sdíleným zařízením
 
 Tento článek uvádí a popisuje nastavení, která používáte v profilu konfigurace zařízení ve Windows holografické pro firmy. Když profil vytvoříte v Intune, nasadíte nebo přiřadíte tento profil skupinám zařízení ve vaší organizaci. Tento profil můžete také přiřadit ke skupině zařízení s typy smíšených zařízení a verzí operačního systému.
 
-Další informace o této funkci v Intune najdete v tématu [řízení přístupu, účtů a funkcí napájení na sdílených počítačích nebo na zařízeních s více uživateli](shared-user-device-settings.md). Další informace o zprostředkovateli kryptografických služeb systému Windows najdete v tématu [službu ACCOUNTMANAGEMENT CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp).
+Další informace o této funkci v Intune najdete v tématu [řízení přístupu, účtů a funkcí napájení na sdílených počítačích nebo na zařízeních s více uživateli](shared-user-device-settings.md). Další informace o zprostředkovateli kryptografických služeb systému Windows najdete v tématu [službu ACCOUNTMANAGEMENT CSP](/windows/client-management/mdm/accountmanagement-csp).
 
 ## <a name="before-your-begin"></a>Před začátkem
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 09ab90a67a9a1e722d1417b356ab9a54d464501e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997976"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910617"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -52,7 +52,7 @@ Zásady ochrany aplikací lze konfigurovat pro aplikace běžící na zařízen�
 - **Není zaregistrované v žádném řešení pro správu mobilních zařízení:** Tato zařízení jsou obvykle zařízení vlastněná zaměstnanci, která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
 
 > [!IMPORTANT]
-> Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Přístup k místním poštovním schránkám systému Exchange můžete chránit také vytvořením zásad ochrany aplikací Intune pro Outlook pro iOS/iPadOS a Androidem s povoleným hybridním moderním ověřováním. Před použitím této funkce se ujistěte, že splňujete [požadavky na Outlook pro iOS/iPadOS a Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zásady ochrany aplikací se nepodporují pro jiné aplikace, které se připojují k místním službám Exchange nebo SharePoint.
+> Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Přístup k místním poštovním schránkám systému Exchange můžete chránit také vytvořením zásad ochrany aplikací Intune pro Outlook pro iOS/iPadOS a Androidem s povoleným hybridním moderním ověřováním. Před použitím této funkce se ujistěte, že splňujete [požadavky na Outlook pro iOS/iPadOS a Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019). Zásady ochrany aplikací se nepodporují pro jiné aplikace, které se připojují k místním službám Exchange nebo SharePoint.
 
 ## <a name="benefits-of-using-app-protection-policies"></a>Výhody používání zásad ochrany aplikací
 
@@ -107,7 +107,7 @@ Pokud se aplikace používají bez omezení, můžou se osobní a firemní data 
 ### <a name="data-protection-with-app-protection-policies-app"></a>Ochrana dat pomocí zásad ochrany aplikací (aplikace)
 
 Pomocí zásad ochrany aplikací můžete zabránit ukládání firemních dat do místního úložiště zařízení (viz obrázek níže). Můžete také zamezit přesunu dat do jiných aplikací, které nejsou chráněné zásadami ochrany aplikací. Mezi nastavení zásad ochrany aplikací patří:
-- Zásady přemístění dat, jako jsou **ukládání kopií org data**, a **omezení vyjmutí, kopírování a vložení**.
+- Zásady přemístění dat, jako jsou  **ukládání kopií org data**, a **omezení vyjmutí, kopírování a vložení**.
 - Nastavení zásad přístupu, jako jsou **Vyžadovat pro přístup jednoduchý PIN kód** a **Blokovat spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem**.
 
 ![Koncepční bitová kopie, která zobrazuje firemní data chráněná zásadami](./media/app-protection-policy/apps-with-protection-policies.png)
@@ -149,7 +149,7 @@ Všechny aplikace, které jsou integrované se sadou [Intune SDK](../developer/a
 
 Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS/iPadOS (obj-C, SWIFT), Xamarin a Xamarin. Forms. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
-[Sada Intune SDK](../developer/app-sdk.md) používá některé pokročilé možnosti moderního ověřování z[knihoven Azure Active Directory Authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) Library (ADAL) pro obě strany sady SDK a verze třetích stran. [Knihovna Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) ale nefunguje dobře s mnoha našimi základními scénáři, jako je například ověřování do služby Intune App Protection a podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, [Intune SDK](../developer/app-sdk.md) bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
+[Sada Intune SDK](../developer/app-sdk.md) používá některé pokročilé možnosti moderního ověřování z[knihoven Azure Active Directory Authentication](/azure/active-directory/develop/active-directory-authentication-libraries) Library (ADAL) pro obě strany sady SDK a verze třetích stran. [Knihovna Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) (MSAL) ale nefunguje dobře s mnoha našimi základními scénáři, jako je například ověřování do služby Intune App Protection a podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, [Intune SDK](../developer/app-sdk.md) bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Požadavky koncových uživatelů na používání zásad ochrany aplikací
 
@@ -174,7 +174,7 @@ Další požadavky na používání [mobilní aplikace Outlooku](https://product
 - Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
 
   >[!NOTE]
-  > Mobilní aplikace Outlook aktuálně podporuje pouze Intune App Protection pro Microsoft Exchange Online a [Exchange Server s hybridním moderním ověřováním](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) a nepodporuje Exchange v Office 365 Dedicated.
+  > Mobilní aplikace Outlook aktuálně podporuje pouze Intune App Protection pro Microsoft Exchange Online a [Exchange Server s hybridním moderním ověřováním](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) a nepodporuje Exchange v Office 365 Dedicated.
 
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel a PowerPoint
 Mezi další požadavky na používání aplikací pro [Word, Excel a PowerPoint](https://products.office.com/business/office) patří následující:

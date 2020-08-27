@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a385b990dfb3c81ea10454b2134f92dec5a2f073
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331007"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907663"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Další zdroje informací pro plánování nasazení Intune
 
@@ -46,11 +46,11 @@ Tady je seznam šablon tabulek pro každý oddíl.
 | | zásady dodržování předpisů | |
 | | Zásady podmíněného přístupu|-|
 
-## <a name="further-reading"></a>Další čtení
+## <a name="further-reading"></a>Další materiály
 
 Další informace, které mohou být užitečné při plánování nasazení řešení Intune, jeho návrhu a implementaci, najdete v těchto zdrojích.
 
-- [Dokumentace k Microsoft Intune](https://docs.microsoft.com/intune/) – kompletní sada dokumentace k Intune.
+- [Dokumentace k Microsoft Intune](/intune/) – kompletní sada dokumentace k Intune.
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
 

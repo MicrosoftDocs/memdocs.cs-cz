@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986099"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908611"
 ---
 # <a name="categorize-devices-into-groups"></a>Zařazení zařízení do skupin
 
@@ -55,7 +55,7 @@ Název kategorie zařízení použijete při vytváření skupin zabezpečení A
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>Krok 2: Vytvoření skupin zabezpečení Azure Active Directory
 V tomto kroku vytvoříte na webu Azure Portal dynamické skupiny na základě kategorie zařízení a názvu kategorie zařízení.
 
-Pokud chcete pokračovat, přečtěte si v dokumentaci služby Azure AD téma [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects).
+Pokud chcete pokračovat, přečtěte si v dokumentaci služby Azure AD téma [Vytváření rozšířených pravidel pomocí atributů](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects).
 
 S využitím informací v tomto oddílu můžete vytvořit skupinu zařízení s rozšířeným pravidlem využívajícím atribut **deviceCategory**. Příklad: **device.deviceCategory -eq** "*název kategorie zařízení, který jste získali z portálu Azure Portal*"
 

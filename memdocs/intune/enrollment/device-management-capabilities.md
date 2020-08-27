@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43d412fda772fd36710895496087e97d782b8dba
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 950df650466966d7de1c360263b4f6a2c3b0824c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502625"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911654"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Možnosti správy zaregistrovaných zařízení v Microsoft Intune
 
@@ -44,7 +44,7 @@ Uživatelé získají přístup k portálu společnosti, odkud můžou instalova
 |Zásady konfigurace<br><br>Vlastní zásady| Umožňují spravovat množství nastavení a funkcí na mobilních zařízeních ve vaší organizaci. Můžete třeba vyžadovat heslo, omezit počet neúspěšných pokusů o přihlášení, určit dobu, po které se uzamkne obrazovka zařízení, nastavit dobu platnosti hesla a zabránit nastavení už použitých hesel. Můžete také řídit použití funkcí hardwaru a softwaru, jako je třeba fotoaparát zařízení nebo webový prohlížeč.<br><br>Vlastní zásady použijte v případě, že zásady konfigurace neobsahují nastavení, které požadujete. Pro zařízení s iOS/iPadOS můžete importovat nastavení, která jste exportovali z nástroje Apple Configuratoru. Pro další zařízení můžete pomocí nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) nakonfigurovat nastavení a funkce v zařízení.|[Správa nastavení a funkcí na zařízeních pomocí zásad Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Vzdálené vymazání, Vzdálené uzamčení a Resetování hesla|V případě ztráty nebo odcizení zařízení je možné vymazat citlivá data. Zařízení můžete třeba vzdáleně uzamknout, obnovit do továrního nastavení nebo vymazat jenom firemní data.<br><br>Můžete resetovat hesla, když uživatelé ztratí přístup ke svým zařízením, uzamknout ztracená nebo odcizená zařízení nebo z takových zařízení dokonce vymazat data.|Chraňte svá zařízení pomocí [vzdáleného zámku](../remote-actions/device-remote-lock.md) a [resetování hesla](../remote-actions/device-passcode-reset.md) .|
 |Celoobrazovkový režim|Umožňuje uzamknout určité funkce mobilních zařízení, třeba snímek obrazovky a vypínač. Umožňuje taky omezit zařízení tak, aby v nich mohla běžet jenom jedna vámi určená aplikace. |[Nastavení zásad konfigurace pro iOS v Microsoft Intune](../configuration/device-restrictions-ios.md)|
-|Obnovení nastavení AutoPilot|Odešle úlohu na zařízení, aby se proces resetování spouštěl vzdáleně, aby nemuseli pracovníci IT nebo jiní správci navštěvovat jednotlivé počítače, aby mohli tento proces spustit. Když se na zařízení používá resetování autopilotního projektu, primární uživatel zařízení se odebere. Další uživatel, který se přihlásí po obnovení, se nastaví jako primární uživatel.|[Resetování vzdáleného Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
+|Obnovení nastavení AutoPilot|Odešle úlohu na zařízení, aby se proces resetování spouštěl vzdáleně, aby nemuseli pracovníci IT nebo jiní správci navštěvovat jednotlivé počítače, aby mohli tento proces spustit. Když se na zařízení používá resetování autopilotního projektu, primární uživatel zařízení se odebere. Další uživatel, který se přihlásí po obnovení, se nastaví jako primární uživatel.|[Resetování vzdáleného Windows autopilotu](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Správa aplikací
 

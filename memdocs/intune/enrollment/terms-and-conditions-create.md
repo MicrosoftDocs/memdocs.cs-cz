@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b3d0ae7f0ec42cef3ba792b5c0bf3c913bb9e63e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988991"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906850"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
 
@@ -39,7 +39,7 @@ Můžete vytvořit více sad podmínek a přiřadit je různým skupinám, abyst
 
 Existují dva způsoby, jak vytvořit podmínky a ujednání společnosti:
 - Můžete použít Intune spolu s postupem, který je popsaný v tomto článku.
-- pomocí [funkce Azure Active Directory podmínek použití](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou)
+- pomocí [funkce Azure Active Directory podmínek použití](/azure/active-directory/governance/active-directory-tou)
 
 Pokud chcete zjistit, která metoda je pro vás nejvhodnější, přečtěte si [Výběr správného pojmu řešení pro váš Blogový příspěvek vaší organizace](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
 
@@ -47,7 +47,7 @@ Pokud chcete zjistit, která metoda je pro vás nejvhodnější, přečtěte si 
 Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazovaný název a popis jsou určené pro správu, zatímco vlastnosti podmínek se zobrazují uživatelům na Portálu společnosti.
 
 1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte podmínky a ujednání **pro správu tenanta**  >  **Terms and Conditions**.
-2. Zvolte **Vytvořit**.
+2. Vyberte **vytvořit**.
 3. Na stránce **základy** zadejte následující informace:
 
    - **Name**(název): název podmínek v Azure Portal. Tento název se uživatelům nezobrazuje.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 220a57b3e668d47d3f6fd12dde8fd54e240dd0da
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076114"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911569"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci pro iOS/iPadOS
 
@@ -68,9 +68,9 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="find-out-more"></a>Další informace
 
-- [Další informace o úplné synchronizaci místních školních dat se službou Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Další informace o úplné synchronizaci místních školních dat se službou Azure AD](/azure/active-directory/connect/active-directory-aadconnect)
 - [Další informace o službě Microsoft SDS (School Data Sync](https://sds.microsoft.com/)
-- [Další informace o licencování ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Další informace o licencování ve službě Azure Active Directory](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Krok 2 – Vytvoření a přiřazení vzdělávacího profilu pro iOS/iPadOS v Intune
 
@@ -83,7 +83,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 6. V podokně **vytvořit profil** zadejte **název** a **Popis** vzdělávacího profilu pro iOS/iPadOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9. Vyberte **Nastavení** > **Konfigurovat**.
+9. Vyberte **Nastavení**  >  **Konfigurovat**.
 
 
 Teď si vytvoříte certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.

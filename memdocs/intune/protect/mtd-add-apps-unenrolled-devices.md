@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972027"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912147"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Přidání aplikací ochrany před mobilními hrozbami do neregistrovaných zařízení
 
@@ -49,7 +50,7 @@ Pokud používáte zásady ochrany aplikací Intune s ochranou před mobilními 
 Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřednictvím Portál společnosti Intune, přečtěte si pokyny, [jak přidat aplikace z obchodu pro iOS do Microsoft Intune](../apps/store-apps-ios.md). Použijte tuto [adresu URL obchodu s aplikacemi Microsoft Authenticator-iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) při dokončování části **Konfigurace informací o aplikaci** . Nezapomeňte v posledním kroku [přiřadit aplikaci do skupin s Intune](../apps/apps-deploy.md) .
 
 > [!NOTE]
-> U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Portál společnosti Intune funguje jako zprostředkovatel na zařízeních s Androidem, aby uživatelé mohli své identity zkontrolovat pomocí Azure AD.
+> U zařízení se systémem iOS je potřeba [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Portál společnosti Intune funguje jako zprostředkovatel na zařízeních s Androidem, aby uživatelé mohli své identity zkontrolovat pomocí Azure AD.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Zpřístupnění aplikací ochrany před mobilními hrozbami přes Intune (volitelné)
 

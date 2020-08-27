@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 6c9ca334dd4fc55ebb037c5e18790d1ec138a7d3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145976"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912657"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS a iPadOS v Microsoft Intune
 
@@ -64,15 +64,15 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
 - **SSL**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace SSL (Secure Sockets Layer).
 - **OAuth**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace OAuth (Open Authorization). Pokud server OAuth používá ověřování certifikátem, u možnosti **Metoda ověřování** zvolte **Certifikát** a zahrňte do profilu příslušný certifikát. V opačném případě u možnosti **Metoda ověřování** zvolte **Uživatelské jméno a heslo**. Při použití OAuth mějte na paměti tyto skutečnosti:
 
-  - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. Místní Exchange se dá nakonfigurovat pro moderní ověřování. Další informace najdete v tématu [Přehled hybridního moderního ověřování a požadavky na místní Skype pro firmy a servery Exchange](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+  - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. Místní Exchange se dá nakonfigurovat pro moderní ověřování. Další informace najdete v tématu [Přehled hybridního moderního ověřování a požadavky na místní Skype pro firmy a servery Exchange](/office365/enterprise/hybrid-modern-auth-overview).
 
     Pokud e-mailový profil používá Oauth a e-mailová služba ho nepodporuje, bude se možnost **Zadejte heslo znovu** jevit jako nefunkční. Když například uživatel vybere možnost **Zadejte heslo znovu** v nastavení zařízení Apple, nic se nestane.
 
   - Když je povolený protokol OAuth, koncoví uživatelé mají jiné e-mailové přihlašovací prostředí pro moderní ověřování, které podporuje vícefaktorové ověřování (MFA). 
 
-  - Některé organizace zakazují, aby koncoví uživatelé [měli možnost Samoobslužný přístup k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). V tomto scénáři může přihlášení k modernímu ověřování selhat, dokud správce nevytvoří podnikovou aplikaci účty iOS a udělí uživatelům přístup k aplikaci v Azure AD.
+  - Některé organizace zakazují, aby koncoví uživatelé [měli možnost Samoobslužný přístup k aplikacím](/azure/active-directory/manage-apps/manage-self-service-access). V tomto scénáři může přihlášení k modernímu ověřování selhat, dokud správce nevytvoří podnikovou aplikaci účty iOS a udělí uživatelům přístup k aplikaci v Azure AD.
 
-    Výchozí akcí je přidání aplikace pomocí [přístupového panelu aplikace](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Přidat funkci aplikace** **bez schválení od firmy**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    Výchozí akcí je přidání aplikace pomocí [přístupového panelu aplikace](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Přidat funkci aplikace** **bez schválení od firmy**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > Když povolíte OAuth, stane se následující:  

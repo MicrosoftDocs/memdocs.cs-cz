@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fce643469ec2cf60db78a299580af679bc442316
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085739"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911345"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Nápovědu k instalaci Intune na zařízení najdete v tématu [použití spravovaných zařízení k tomu, abyste mohli provádět práce](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) a [využití šířky pásma Intune](network-bandwidth-use.md).
+Nápovědu k instalaci Intune na zařízení najdete v tématu [použití spravovaných zařízení k tomu, abyste mohli provádět práce](../user-help/use-managed-devices-to-get-work-done.md) a [využití šířky pásma Intune](network-bandwidth-use.md).
 
-Další informace o podpoře poskytovatele konfigurační služby najdete v referenčních informacích o [poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Další informace o podpoře poskytovatele konfigurační služby najdete v referenčních informacích o [poskytovateli služby konfigurace](/windows/client-management/mdm/configuration-service-provider-reference).
 
 > [!NOTE]
 > Intune teď pro aplikace a zařízení vyžaduje Android 5. x (Lupa) nebo vyšší. pro přístup k prostředkům společnosti prostřednictvím aplikace Portál společnosti pro Android a sady Intune App SDK pro Android. Tento požadavek neplatí pro Polycomch týmů založených na Androidu se systémem 4,4. Tato zařízení budou nadále podporována. 
@@ -109,8 +109,8 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu služby Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [portál Azure](https://portal.azure.com/)
+- [Centrum pro správu Microsoftu 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:
 
@@ -122,7 +122,7 @@ Portály podporují následující prohlížeče:
 
 ### <a name="intune-classic-portal"></a>Klasický portál Intune
 
-Klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského softwaru Intune pro počítače (https://manage.microsoft.com). Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
+Klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského softwaru Intune pro počítače ( https://manage.microsoft.com) . Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
 
 Konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
 
@@ -131,6 +131,6 @@ Konzolu Intune podporují následující prohlížeče vybavené technologií Si
 - Mozilla Firefox s povoleným programem Silverlight (verze starší než verze 56)
 
 > [!Note]
-> Klasický portál Intune nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).
+> Klasický portál Intune nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95)).
 
 K tomuto portálu se můžou přihlásit jen uživatelé, kteří mají oprávnění správce služeb nebo jsou správcem tenanta s rolí globálního správce. Abyste získali přístup ke konzole pro správu, musí mít váš účet licenci k používání Intune a stav registrace **Povoleno**.

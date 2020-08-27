@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 398f1cd789d0ea2e2c15349e943c8e29545733e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81681972"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912317"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
@@ -345,7 +345,7 @@ __Firefox už nebude podporovat Silverlight__ <!--VSO TBA-->
 Mozilla ve verzi 52 [prohlížeče Firefox](https://www.mozilla.org/firefox) přestává podporovat Silverlight s účinností od března 2017. V důsledku toho se už pomocí Firefoxu ve verzi vyšší než 51 nebudete moct přihlásit ke stávající konzole Intune. Doporučujeme pro přístup ke konzole pro správce používat Internet Explorer 10 nebo 11 nebo [verzi Firefoxu starší než 52](https://ftp.mozilla.org/pub/firefox/releases/). Přechod Intune na Azure Portal umožní podporu celé řady [moderních prohlížečů](/azure/azure-preview-portal-supported-browsers-devices) bez závislosti na Silverlightu.
 
 __Odebrání zásad poštovní schránky mobilních zařízení Exchange Online__ <!--770687-->
-Od prosince už správci nebudou moct zobrazit nebo nakonfigurovat zásady poštovní schránky mobilních zařízení Exchange Online (EAS) v konzole Intune. Tato změna se bude pro všechny tenanty Intune zavádět v průběhu prosince a ledna. Všechny stávající zásady zůstanou tak, jak jsou nakonfigurované. Ke konfiguraci nových zásad použijte prostředí Exchange Management Shell. Další informace o tom najdete [tady](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+Od prosince už správci nebudou moct zobrazit nebo nakonfigurovat zásady poštovní schránky mobilních zařízení Exchange Online (EAS) v konzole Intune. Tato změna se bude pro všechny tenanty Intune zavádět v průběhu prosince a ledna. Všechny stávající zásady zůstanou tak, jak jsou nakonfigurované. Ke konfiguraci nových zásad použijte prostředí Exchange Management Shell. Další informace o tom najdete [tady](/exchange/mobile-device-mailbox-policies-exchange-2013-help).
 
 __Aplikace Intune AV Player, Image Viewer a PDF Viewer se už v Androidu nepodporují.__ <!--747553-->
 Od poloviny prosince 2016 už uživatelé nebudou moct dál používat aplikace Intune AV Player, Image Viewer a PDF Viewer. Tyto aplikace nahrazuje aplikace Azure Information Protection. Další informace o aplikaci Azure Information Protection najdete [tady](/information-protection/rms-client/mobile-app-faq).

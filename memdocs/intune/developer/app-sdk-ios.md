@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 823e29d1944b4957a24996620bb5467f234544cd
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912409"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908951"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -33,7 +33,7 @@ ms.locfileid: "87912409"
 
 Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.12.6 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
 
@@ -172,7 +172,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    |---------------|--------------------------------|
    |- i |  `<Path to the input plist>` |
    |- e | `<Path to the entitlements file>` |
-   |- o |  Volitelné`<Path to the output plist>` |
+   |- o |  Volitelné `<Path to the output plist>` |
 
 Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj je idempotentní a po provedení změn souboru Info.plist dané aplikace nebo nároků by se měl spustit znovu. Nejnovější verzi tohoto nástroje byste měli stáhnout a spustit také při aktualizaci Intune SDK, pokud se v nejnovější verzi změnily požadavky na konfiguraci souboru Info.plist.
 
@@ -657,7 +657,7 @@ Správci Intune můžou konfigurační data zacílit a nasadit prostřednictvím
 
 * U objektu `IntuneMAMAppConfig` je potřeba volat odpovídající selektor. Pokud je například klíčem aplikace řetězec, měli byste použít `stringValueForKey` nebo `allStringsForKey`. Podrobný popis návratových hodnot a chybových stavů najdete v souboru `IntuneMAMAppConfig.h`.
 
-Další informace možnostech rozhraní Graph API najdete v [referenčních informacích k rozhraní Graph API](https://developer.microsoft.com/graph/docs/concepts/overview).
+Další informace možnostech rozhraní Graph API najdete v [referenčních informacích k rozhraní Graph API](/graph/overview).
 
 Další informace o tom, jak vytvořit zásady konfigurace cílené aplikace v MAM v iOS, najdete v části v tématu Konfigurace cílené aplikace MAM v článku [Jak používat Microsoft Intune zásady konfigurace aplikací pro iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
@@ -778,7 +778,7 @@ Rozhraní API sady Intune App SDK jsou v cíli-C a nepodporují **nativní** SWI
 
 ### <a name="do-all-users-of-my-application-need-to-be-registered-with-the-app-we-service"></a>Musí být všichni uživatelé mojí aplikace zaregistrovaní ve službě APP-WE?
 
-Ne. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
+No. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
 
 ### <a name="what-about-users-that-have-already-signed-in-to-the-application-do-they-need-to-be-enrolled"></a>A co uživatelé, kteří se už do aplikace přihlásili? Musí se zaregistrovat?
 
@@ -811,11 +811,11 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Je k dispozici ukázková aplikace, která demonstruje integraci sady SDK?
 
-Ano. Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
+Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Jak můžu řešit potíže s aplikací?
 
-Intune SDK pro iOS 9.0.3 + podporuje možnost Přidat diagnostické konzole v mobilní aplikaci pro testování zásad a chyb protokolování. `IntuneMAMDiagnosticConsole.h`definuje `IntuneMAMDiagnosticConsole` rozhraní třídy, které můžou vývojáři použít k zobrazení diagnostické konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům během testování shromažďovat a sdílet protokoly Intune, které vám pomůžou diagnostikovat případné potíže. Toto rozhraní API je volitelné pro integrátory.
+Intune SDK pro iOS 9.0.3 + podporuje možnost Přidat diagnostické konzole v mobilní aplikaci pro testování zásad a chyb protokolování. `IntuneMAMDiagnosticConsole.h` definuje `IntuneMAMDiagnosticConsole` rozhraní třídy, které můžou vývojáři použít k zobrazení diagnostické konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům během testování shromažďovat a sdílet protokoly Intune, které vám pomůžou diagnostikovat případné potíže. Toto rozhraní API je volitelné pro integrátory.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 

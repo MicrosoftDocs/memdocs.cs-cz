@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820387"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915989"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -40,7 +40,7 @@ Než budete pokračovat, ujistěte se, že jste [vytvořili a nasadili profil *d
 
 Následující místní infrastruktura musí běžet na serverech, které jsou připojené k doméně služby Active Directory, s výjimkou proxy serveru webových aplikací.
 
-- **Certifikační autorita** – použijte certifikační autoritu rozlehlé sítě služby Microsoft Active Directory Certificate Services (CA), která je spuštěna v edici Enterprise systému Windows Server 2008 R2 s aktualizací Service Pack 1 nebo novější. Verze systému Windows Server, kterou používáte, musí zůstat v rámci podpory společnosti Microsoft. Samostatná certifikační autorita není podporovaná. Další informace najdete v tématu [instalace certifikační autority](https://technet.microsoft.com/library/jj125375.aspx). Pokud vaše certifikační autorita používá Windows Server 2008 R2 SP1, musíte [nainstalovat opravu hotfix z KB2483564](https://support.microsoft.com/kb/2483564/).
+- **Certifikační autorita** – použijte certifikační autoritu rozlehlé sítě služby Microsoft Active Directory Certificate Services (CA), která je spuštěna v edici Enterprise systému Windows Server 2008 R2 s aktualizací Service Pack 1 nebo novější. Verze systému Windows Server, kterou používáte, musí zůstat v rámci podpory společnosti Microsoft. Samostatná certifikační autorita není podporovaná. Další informace najdete v tématu [instalace certifikační autority](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)). Pokud vaše certifikační autorita používá Windows Server 2008 R2 SP1, musíte [nainstalovat opravu hotfix z KB2483564](https://support.microsoft.com/kb/2483564/).
 
 - **Role serveru NDES** – je nutné nakonfigurovat roli serveru služby zápisu síťových zařízení (NDES) v systému Windows Server 2012 R2 nebo novějším. V pozdější části tohoto článku Vás provedeme [instalací NDES](#set-up-ndes).
 
@@ -48,7 +48,7 @@ Následující místní infrastruktura musí běžet na serverech, které jsou p
   - Nemůžete použít NDES, který je nainstalovaný na serveru, který hostuje certifikační autoritu organizace.
   - Microsoft Intune Certificate Connector nainstalujete na stejný server, který je hostitelem NDES.
 
-  Další informace o NDES najdete v tématu [pokyny ke službě zápisu síťových zařízení](https://technet.microsoft.com/library/hh831498.aspx) v dokumentaci k Windows serveru a [používání modulu zásad se službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
+  Další informace o NDES najdete v tématu [pokyny ke službě zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) v dokumentaci k Windows serveru a [používání modulu zásad se službou zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)).
 
 - **Microsoft Intune Certificate Connector** – k používání profilů certifikátů SCEP s Intune se vyžaduje Microsoft Intune Certificate Connector. Tento článek vás provede [instalací tohoto konektoru](#install-the-intune-certificate-connector).
 
@@ -56,21 +56,21 @@ Následující místní infrastruktura musí běžet na serverech, které jsou p
   - Konektor má stejné požadavky na síť jako [spravovaná zařízení](../fundamentals/intune-endpoints.md#access-for-managed-devices).
   - Konektor musí běžet na stejném serveru jako role serveru NDES a na serveru se systémem Windows Server 2012 R2 nebo novějším.
   - Konektor vyžaduje rozhraní .NET 4,5 a je automaticky zahrnutý v systému Windows Server 2012 R2.
-  - Konfigurace rozšířeného zabezpečení aplikace Internet Explorer [musí být zakázána na serveru, který je hostitelem NDES](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) a Microsoft Intune Certificate Connector.
+  - Konfigurace rozšířeného zabezpečení aplikace Internet Explorer [musí být zakázána na serveru, který je hostitelem NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) a Microsoft Intune Certificate Connector.
 
 Následující místní infrastruktura je volitelná:
 
 Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publikovat adresu URL služby NDES mimo vaši podnikovou síť. Můžete použít buď Azure Proxy aplikací služby AD, proxy server webové aplikace, nebo jiný reverzní proxy server.
 
-- **Azure proxy aplikací služby AD** (volitelné) – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [Jak poskytnout zabezpečený vzdálený přístup k místním aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure proxy aplikací služby AD** (volitelné) – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [Jak poskytnout zabezpečený vzdálený přístup k místním aplikacím](/azure/active-directory/manage-apps/application-proxy).
 
 - **Proxy server webových aplikací** (volitelné) – pomocí serveru se systémem Windows Server 2012 R2 nebo novějším jako serveru proxy webové aplikace (WAP) PUBLIKUJTE adresu URL služby NDES na Internet.  To umožňuje intranetové i internetové zařízení získat certifikáty.
 
-  Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](https://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](https://support.microsoft.com/kb/3011135).
+  Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](https://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](https://support.microsoft.com/kb/3011135).
 
   Server WAP musí mít certifikát SSL, který odpovídá názvu publikovanému na externích klientech, a důvěřovat certifikátu SSL, který se používá v počítači, který je hostitelem služby NDES. Tyto certifikáty umožňují serveru WAP ukončit připojení SSL od klientů a vytvořit nové připojení SSL ke službě NDES.
 
-  Další informace najdete v [plánování certifikátů pro WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) a [obecných informacích o serverech WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Další informace najdete v [plánování certifikátů pro WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) a [obecných informacích o serverech WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Účty
 
@@ -82,7 +82,7 @@ Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publiko
   - **Přihlášení jako služba**
   - **Přihlášení jako dávková úloha**
 
-  Další informace najdete v tématu [Vytvoření doménového uživatelského účtu, který bude fungovat jako účet služby NDES](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
+  Další informace najdete v tématu [Vytvoření doménového uživatelského účtu, který bude fungovat jako účet služby NDES](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
 
 - **Přístup k počítači, který je hostitelem služby NDES** – budete potřebovat účet uživatele domény s oprávněními k instalaci a konfiguraci rolí Windows serveru na serveru, na který instalujete NDES.
 
@@ -90,7 +90,7 @@ Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publiko
 
 ### <a name="network-requirements"></a>Síťové požadavky
 
-Službu NDES doporučujeme publikovat prostřednictvím reverzního proxy serveru, jako je například [proxy aplikace služby Azure AD, Web Access proxy server](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)nebo proxy třetí strany. Pokud nepoužíváte reverzní proxy server, povolte provoz TCP na portu 443 od všech hostitelů a IP adres na internetu ke službě NDES.
+Službu NDES doporučujeme publikovat prostřednictvím reverzního proxy serveru, jako je například [proxy aplikace služby Azure AD, Web Access proxy server](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)nebo proxy třetí strany. Pokud nepoužíváte reverzní proxy server, povolte provoz TCP na portu 443 od všech hostitelů a IP adres na internetu ke službě NDES.
 
 Povolí všechny porty a protokoly, které jsou nezbytné pro komunikaci mezi službou NDES a jakoukoli podpůrnou infrastrukturou ve vašem prostředí. Například počítač, který je hostitelem služby NDES, musí komunikovat s certifikační autoritou, servery DNS, řadiči domény a případně dalšími službami nebo servery ve vašem prostředí, jako je Configuration Manager.
 
@@ -234,11 +234,11 @@ Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně,
 
 ## <a name="set-up-ndes"></a>Nastavení NDES
 
-Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových zařízení (NDES) pro použití s Intune. Další informace o NDES najdete v tématu [pokyny pro službu zápisu síťových zařízení](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11)).
+Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových zařízení (NDES) pro použití s Intune. Další informace o NDES najdete v tématu [pokyny pro službu zápisu síťových zařízení](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
 ### <a name="install-the-ndes-service"></a>Instalace služby NDES
 
-1. Na serveru, který bude hostovat službu NDES, se přihlaste jako **správce podnikové sítě**a potom pomocí [Průvodce přidáním rolí a funkcí](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) nainstalujte NDES:
+1. Na serveru, který bude hostovat službu NDES, se přihlaste jako **správce podnikové sítě**a potom pomocí [Průvodce přidáním rolí a funkcí](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) nainstalujte NDES:
 
    1. V průvodci vyberte možnost **Služba AD CS (Active Directory Certificate Services)** , abyste získali přístup ke službám rolí ve službě AD CS. Vyberte **Služba zápisu síťových zařízení**, zrušte zaškrtnutí políčka **certifikační autorita**a pak dokončete průvodce.
 

@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881588"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909087"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Odebrání zařízení s Windows ze systému správy
 
@@ -57,7 +57,7 @@ Provedením následujících kroků odeberete zařízení s Windows 10 ze systé
 
     ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, domovská stránka, zvýrazněná část Moje zařízení](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. Kliknutím pravým tlačítkem nebo stisknutím a podržením zařízení otevřete jeho [kontextovou nabídku](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+2. Kliknutím pravým tlačítkem nebo stisknutím a podržením zařízení otevřete jeho [kontextovou nabídku](//windows/uwp/design/controls-and-patterns/menus).  
 
 3. Vyberte **Odebrat**.  
 

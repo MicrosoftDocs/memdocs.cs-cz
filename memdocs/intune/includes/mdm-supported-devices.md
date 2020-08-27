@@ -1,5 +1,3 @@
-
-
 ### <a name="apple"></a>Apple
 - Apple iOS 11,0 a novější
 - Apple iPadOS 13,0 a novější
@@ -15,7 +13,7 @@
 - Windows 10 (verze Home, S, Pro, Education a Enterprise)
 - Windows 10 Enterprise 2019 LTSC
 
-  Další informace o správě zařízení s Windows 10 2019 LTSC najdete v článku [Novinky ve Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019)
+  Další informace o správě zařízení s Windows 10 2019 LTSC najdete v článku [Novinky ve Windows 10 Enterprise 2019 LTSC](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
@@ -26,13 +24,12 @@
 
 - Windows 10 Teams (Surface Hub)
 
-   Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) .
+   Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub) .
 - Windows 10 1709 (RS3) a novější Windows 8.1 RT, počítače se systémem Windows 8.1 (režim udržování)
 
 > [!NOTE]
-> Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.
+> Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.
 
 Zákazníci s Enterprise Management + Security (EMS) můžou [k registraci zařízení s Windows 10 používat taky Azure Active Directory (Azure AD)](/intune/windows-enroll).
 
 Pokyny k používání virtuálních počítačů s Windows 10 s Intune najdete v tématu [používání virtuálních počítačů s Windows 10](../fundamentals/windows-10-virtual-machines.md).
-

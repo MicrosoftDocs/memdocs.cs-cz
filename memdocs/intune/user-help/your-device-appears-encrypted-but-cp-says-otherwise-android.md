@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a6984f4e6eafee1f81340f483dc557fdb6091ec9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882270"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910753"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Šifrované zařízení, ale aplikace říkají jinak
 
@@ -51,7 +51,7 @@ Tato část se týká pouze aplikace Portál společnosti. Pokud vaše zařízen
 
 Některá zařízení s Androidem verze 7,0 a novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tyto metody šifrování převedou informace o zařízení v nebezpečí. V důsledku toho tato zařízení nejsou podporována.
 
-Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory.
+Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory.
 
 > [!Note]
 > Microsoft spolupracuje s výrobci, aby vyřešil případné problémy, které při testování vyhledáme, nebo jestli si uživatelé nahlásí. Tento článek aktualizujeme vždy, když jsou k dispozici nové informace.
@@ -62,4 +62,4 @@ Pokud jste zařízení neaktualizovali na nejnovější verzi Androidu, přejdet
 
 ## <a name="next-steps"></a>Další kroky
 
-Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  
+Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908550"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Principy omezení limitu počtu zařízení v Intune a Azure AD
 
@@ -39,7 +39,7 @@ Omezení limitu počtu zařízení v Intune nastaví maximální počet zaříze
 
 ## <a name="azure-device-limit-restriction"></a>Omezení limitu počtu zařízení Azure
 
-Omezení limitu počtu zařízení Azure nastaví maximální počet zařízení, která jsou buď připojená k Azure AD nebo v registrech Azure AD. Pokud chcete nastavit **maximální počet zařízení na uživatele**, použijte Azure Portal > **Azure Active Directory**  >  **zařízení**. Další informace najdete v tématu [Konfigurace nastavení zařízení](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
+Omezení limitu počtu zařízení Azure nastaví maximální počet zařízení, která jsou buď připojená k Azure AD nebo v registrech Azure AD. Pokud chcete nastavit **maximální počet zařízení na uživatele**, použijte Azure Portal > **Azure Active Directory**  >  **zařízení**. Další informace najdete v tématu [Konfigurace nastavení zařízení](/azure/active-directory/devices/device-management-azure-portal) .
 
 ## <a name="settings-applied-based-on-user-affinity"></a>Nastavení použité na základě přidružení uživatele
 
@@ -114,6 +114,6 @@ Pro omezení limitu počtu zařízení v Azure se **maximální počet zařízen
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Vytvořte omezení limitu počtu zařízení v Azure.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Vytvořte omezení limitu počtu zařízení v Azure.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Nakonfigurujte nastavení zařízení v Azure.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Přečtěte si další informace o registraci a připojených doménách.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Přečtěte si další informace o registraci a připojených doménách.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

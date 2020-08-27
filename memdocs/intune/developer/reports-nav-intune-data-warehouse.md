@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdfa6a47bb96f40ea51802a06028afab2548c8b3
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d9fefbdac81f04cbbe3e3580d9bff6cf72ae60da
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165664"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911705"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Rozhraní API datového skladu Microsoft Intune
 
@@ -66,8 +66,8 @@ OData definuje abstraktní datový model a protokol, který umožní jakémukoli
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o práci s Azure AD najdete v článku o [scénářích ověřování pro Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+Další informace o práci s Azure AD najdete v článku o [scénářích ověřování pro Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 Prostředky OData najdete na [odata.org](https://www.odata.org).
   
-Podívejte se na standard OData verze 4.0 na [OData verze 4.0] (https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html).  
+Podívejte se na standard OData verze 4.0 na [OData verze 4.0] (https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html).

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6a37b94ee0e474e9e3da6aae359ba1b315212910
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093627"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911926"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
 
@@ -41,7 +41,7 @@ Další informace o funkci veřejného terminálu Windows v Intune najdete v té
   1. Vytvořte tento profil veřejného terminálu pro spuštění zařízení v celoobrazovkovém režimu.
   2. Umožňuje vytvořit [profil omezení zařízení](device-restrictions-windows-10.md#microsoft-edge-browser)a nakonfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge.
 
-- Ujistěte se, že jsou všechny soubory, skripty a zástupci v místním systému. Další informace, včetně dalších požadavků na Windows, najdete v tématu [přizpůsobení a export počátečního rozložení](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
+- Ujistěte se, že jsou všechny soubory, skripty a zástupci v místním systému. Další informace, včetně dalších požadavků na Windows, najdete v tématu [přizpůsobení a export počátečního rozložení](/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Ujistěte se, že tento profil pro terminál přiřadíte ke stejným zařízením jako váš [profil Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -54,17 +54,17 @@ Spustí na zařízení jenom jednu aplikaci.
 
 - **Typ přihlášení uživatele**: Vyberte typ účtu, ve kterém se aplikace spouští. Možnosti:
 
-  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Používejte veřejné terminály ve veřejných prostředích, která nevyžadují, aby se uživatel přihlásil, podobně jako účet Guest. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Používejte veřejné terminály ve veřejných prostředích, která nevyžadují, aby se uživatel přihlásil, podobně jako účet Guest. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](/windows/client-management/mdm/assignedaccess-csp).
   - **Účet místního uživatele**: Zadejte účet místního uživatele (v zařízení). Účet, který zadáte, se přihlaste k veřejnému terminálu.
 
 - **Typ aplikace**: Vyberte typ aplikace. Možnosti:
 
   - **Přidat prohlížeč Microsoft Edge**: vyberte **prohlížeč Microsoft**Edge a zvolte **typ celoobrazovkového režimu Microsoft Edge**:
 
-    - **Digitální/interaktivní podpis**: otevře stránku URL na celé obrazovce a zobrazí pouze obsah na tomto webu. [Nastavení digitální znaménka](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+    - **Digitální/interaktivní podpis**: otevře stránku URL na celé obrazovce a zobrazí pouze obsah na tomto webu. [Nastavení digitální znaménka](/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
     - **Veřejné procházení (InPrivate)**: spouští omezené víceúrovňové verze Microsoft Edge. Uživatelé můžou procházet veřejně nebo ukončit jejich relaci procházení.
 
-    Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+    Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
     > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil omezení zařízení (**Devices**  >  **Konfigurace zařízení profily**  >  **vytvořit profil**  >  **Windows 10** pro platformu > **omezení zařízení**  >  **prohlížeč Microsoft Edge**). Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
@@ -96,7 +96,7 @@ Spustí na zařízení jenom jednu aplikaci.
       `office.com`
 
     > [!NOTE]
-    > Veřejné terminály s Windows 10 s povoleným přihlašováním pomocí prohlížeče veřejného terminálu Microsoftu musí používat licenci offline od Microsoft Store pro firmy. Důvodem je to, že automatické přihlašování používá místní uživatelský účet bez přihlašovacích údajů Azure Active Directory (AD). Licence Online proto nejde vyhodnotit. Další informace najdete v tématu [distribuce offline aplikací](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+    > Veřejné terminály s Windows 10 s povoleným přihlašováním pomocí prohlížeče veřejného terminálu Microsoftu musí používat licenci offline od Microsoft Store pro firmy. Důvodem je to, že automatické přihlašování používá místní uživatelský účet bez přihlašovacích údajů Azure Active Directory (AD). Licence Online proto nejde vyhodnotit. Další informace najdete v tématu [distribuce offline aplikací](/microsoft-store/distribute-offline-apps).
 
   - **Přidat aplikaci pro Store**: vyberte **Přidat aplikaci ze Storu**a zvolte aplikaci ze seznamu.
 
@@ -112,7 +112,7 @@ Spustí na zařízení jenom jednu aplikaci.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [CSP ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [CSP ApplicationManagement/ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosk"></a>Veřejný terminál s více aplikacemi
 
@@ -126,10 +126,10 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 - **Typ přihlášení uživatele**: Vyberte typ účtu, ve kterém se budou aplikace spouštět. Možnosti:
 
-  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Používejte veřejné terminály ve veřejných prostředích, která nevyžadují, aby se uživatel přihlásil, podobně jako účet Guest. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Automatické přihlašování (Windows 10 verze 1803 a novější)**: Používejte veřejné terminály ve veřejných prostředích, která nevyžadují, aby se uživatel přihlásil, podobně jako účet Guest. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](/windows/client-management/mdm/assignedaccess-csp).
   - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Účet, který zadáte, se přihlaste k veřejnému terminálu.
   - **Uživatel nebo skupina Azure AD (Windows 10 verze 1803 a novější)**: vyberte **Přidat**a v seznamu zvolte uživatele nebo skupiny Azure AD. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
-  - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Prohlížeč a aplikace**: Přidejte aplikace, které se mají spustit v celoobrazovkovém zařízení. Nezapomeňte, že můžete přidat několik aplikací.
 
@@ -142,7 +142,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
       - **Normální režim (plná verze Microsoft Edge)**: spustí plnou verzi Microsoft Edge se všemi funkcemi pro procházení. Data a stav uživatele jsou ukládána mezi relacemi.
       - **Veřejné procházení (InPrivate)**: spouští vícevrstvou verzi Microsoft Edge InPrivate s přizpůsobeným prostředím pro veřejné terminály, které běží v režimu celé obrazovky.
 
-      Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+      Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
       > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil omezení zařízení (**Devices**  >  **profily konfigurace**zařízení  >  **vytvořit profil** > > **Windows 10** pro platformu > **zařízení omezení**  >   **prohlížeče Microsoft Edge**). Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
@@ -166,7 +166,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
         Pokud chcete povolit konkrétní weby, nahrajte soubor CSV, který obsahuje seznam povolených webů. Pokud soubor CSV nepřidáte, budou povolené všechny weby.
 
       > [!NOTE]
-      > Veřejné terminály s Windows 10 s povoleným přihlašováním pomocí prohlížeče veřejného terminálu Microsoftu musí používat licenci offline od Microsoft Store pro firmy. Důvodem je to, že automatické přihlašování používá místní uživatelský účet bez přihlašovacích údajů Azure Active Directory (AD). Licence Online proto nejde vyhodnotit. Další informace najdete v tématu [distribuce offline aplikací](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+      > Veřejné terminály s Windows 10 s povoleným přihlašováním pomocí prohlížeče veřejného terminálu Microsoftu musí používat licenci offline od Microsoft Store pro firmy. Důvodem je to, že automatické přihlašování používá místní uživatelský účet bez přihlašovacích údajů Azure Active Directory (AD). Licence Online proto nejde vyhodnotit. Další informace najdete v tématu [distribuce offline aplikací](/microsoft-store/distribute-offline-apps).
 
   - **Aplikace**
 
@@ -176,12 +176,12 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
       - **Název aplikace**: Povinné. Zadejte název aplikace.
       - **Místní cesta ke spustitelnému souboru aplikace**: povinné. Zadejte cestu ke spustitelnému souboru, například `C:\Program Files (x86)\Microsoft VS Code\Code.exe` nebo `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-      - **ID modelu uživatele aplikace (AUMID) pro aplikaci Win32**: Zadejte ID modelu uživatele aplikace (AUMID) aplikace Win32. Toto nastavení určuje rozložení nabídky Start na dlaždici na ploše. Pokud chcete získat toto ID, přečtěte si téma [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+      - **ID modelu uživatele aplikace (AUMID) pro aplikaci Win32**: Zadejte ID modelu uživatele aplikace (AUMID) aplikace Win32. Toto nastavení určuje rozložení nabídky Start na dlaždici na ploše. Pokud chcete získat toto ID, přečtěte si téma [Get-StartApps](/powershell/module/startlayout/get-startapps?view=win10-ps).
 
     - **Přidat podle AUMID**: Tuto možnost použijte pro přidání aplikací pro Windows, například Poznámkového bloku nebo Kalkulačky. Zadejte tyto vlastnosti:
 
       - **Název aplikace**: Povinné. Zadejte název aplikace.
-      - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+      - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
     - **AUTOLAUNCH**: volitelné. Po přidání aplikací a prohlížeče vyberte jednu aplikaci nebo prohlížeč, které se automaticky otevřou, když se uživatel přihlásí. Spustit se dá jenom jedna aplikace nebo prohlížeč.
     - **Velikost dlaždice**: Povinné. Po přidání aplikací vyberte malou, střední, širokou nebo velkou velikost dlaždice aplikace.
@@ -191,7 +191,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
   > [!TIP]
   > Po přidání všech aplikací můžete změnit pořadí zobrazování tak, že na aplikace v seznamu kliknete a pomocí myši je přetáhnete, kam potřebujete.  
 
-- **Použít alternativní počáteční rozložení**: vyberte **Ano** , pokud chcete zadat soubor XML, který popisuje, jak se aplikace objeví v nabídce Start, včetně pořadí aplikací. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. [Upravit a exportovat úvodní rozložení](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) obsahuje doprovodné materiály a ukázkové XML.
+- **Použít alternativní počáteční rozložení**: vyberte **Ano** , pokud chcete zadat soubor XML, který popisuje, jak se aplikace objeví v nabídce Start, včetně pořadí aplikací. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. [Upravit a exportovat úvodní rozložení](/windows/configuration/customize-and-export-start-layout) obsahuje doprovodné materiály a ukázkové XML.
 
 - **Hlavní panel Windows**: U hlavního panelu si můžete vybrat, zda se má **zobrazit** nebo **skrýt**. Ve výchozím nastavení se hlavní panel nezobrazuje. Ikony, jako je ikona sítě Wi-Fi, se zobrazí, ale koncoví uživatelé je nemůžou změnit.
 
@@ -207,7 +207,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  [CSP ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [CSP ApplicationManagement/ScheduleForceRestartForUpdateFailures](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -215,4 +215,4 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#device-experience)a [Windows holografickým pro firmy](kiosk-settings-holographic.md) .
 
-Viz také [Nastavení veřejného terminálu pro jednu aplikaci](https://docs.microsoft.com/windows/configuration/kiosk-single-app) nebo [Nastavení veřejného terminálu s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) v doprovodné příručce k Windows.
+Viz také [Nastavení veřejného terminálu pro jednu aplikaci](/windows/configuration/kiosk-single-app) nebo [Nastavení veřejného terminálu s více aplikacemi](/windows/configuration/lock-down-windows-10-to-specific-apps) v doprovodné příručce k Windows.

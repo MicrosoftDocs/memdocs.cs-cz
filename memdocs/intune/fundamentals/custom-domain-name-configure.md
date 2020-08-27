@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 97bdbdfa43ca8aae1de6a74f3a9f3be82c855bf0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988007"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909801"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurace názvu vlastní domény
 
@@ -32,10 +32,10 @@ Pokud si vaše organizace zaregistruje cloudovou službu Microsoftu, třeba Intu
 
 Než vytvoříte uživatelské účty nebo synchronizujete místní službu Active Directory, důrazně doporučujeme, abyste se rozhodli, jestli chcete používat jenom doménu .onmicrosoft.com, nebo jestli chcete přidat jeden nebo více názvů vlastních domén. Pokud nastavíte vlastní doménu před přidáním uživatelů, správa uživatelů se zjednoduší. Když nastavíte doménu zákazníka, umožníte uživatelům přihlásit se pomocí přihlašovacích údajů, které používají pro přístup k jiným prostředkům domény.
 
-Když se přihlásíte k odběru cloudové služby od Microsoftu, stane se instance této služby [tenantem služby Microsoft Azure AD](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant), která bude vašim cloudovým službám poskytovat identitu a adresářové služby. Vzhledem k tomu, že postup konfigurace Intune pro používání vlastního názvu domény vaší organizace je stejný jako u jiných tenantů Azure AD, můžete použít informace a postupy uvedené v tématu [Přidání domény](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Když se přihlásíte k odběru cloudové služby od Microsoftu, stane se instance této služby [tenantem služby Microsoft Azure AD](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant), která bude vašim cloudovým službám poskytovat identitu a adresářové služby. Vzhledem k tomu, že postup konfigurace Intune pro používání vlastního názvu domény vaší organizace je stejný jako u jiných tenantů Azure AD, můžete použít informace a postupy uvedené v tématu [Přidání domény](/azure/active-directory/fundamentals/add-custom-domain).
 
 > [!TIP]
-> Další informace o vlastních doménách najdete v části [Přehled pojmů k vlastním názvům domén v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
+> Další informace o vlastních doménách najdete v části [Přehled pojmů k vlastním názvům domén v Azure Active Directory](/azure/active-directory/users-groups-roles/domains-manage).
 
 Tento počáteční název domény onmicrosoft.com nelze přejmenovat ani odebrat. Můžete přidat, ověřit nebo odebrat vlastní názvy domén používané v Intune, abyste zachovali, že vaše obchodní identita bude jasná.
 
@@ -52,7 +52,7 @@ Tento počáteční název domény onmicrosoft.com nelze přejmenovat ani odebra
     - **Uživatelé Register.com:** Postupujte podle [podrobných pokynů](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) k vytvoření záznamu TXT.
 5. [Možná budete muset vytvořit další záznamy DNS pro registrace v Intune](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium).
 
-Postup pro přidání a ověření vlastní domény může být také [proveden v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Postup pro přidání a ověření vlastní domény může být také [proveden v Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
 Další informace najdete v článku [Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).
 

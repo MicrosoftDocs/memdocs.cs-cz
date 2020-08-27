@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2d19b03253725bde7b0ee27f3c94b42adb5917
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f4a1929749c5921714078ec54ac687f4cefe1474
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990126"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915870"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Použití WDAC a prostředí Windows PowerShell k povolení nebo blokování aplikací na zařízeních HoloLens 2 pomocí Microsoft Intune
 
-Zařízení Microsoft HoloLens 2 podporují [zprostředkovatele CSP pro řízení aplikací (WDAC) v programu Windows Defender](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp), který nahrazuje [poskytovatele AppLockeru](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp).
+Zařízení Microsoft HoloLens 2 podporují [zprostředkovatele CSP pro řízení aplikací (WDAC) v programu Windows Defender](/windows/client-management/mdm/applicationcontrol-csp), který nahrazuje [poskytovatele AppLockeru](/windows/client-management/mdm/applocker-csp).
 
 Pomocí Windows PowerShellu a Microsoft Intune můžete použít CSP WDAC k povolení nebo blokování otevírání určitých aplikací na zařízeních Microsoft HoloLens 2. Například můžete chtít, aby aplikace Cortana ve vaší organizaci otevřela nebo zabránila otevření v zařízeních HoloLens 2.
 
@@ -33,7 +33,7 @@ Tato funkce platí pro:
 
 - Zařízení HoloLens 2 s Windows holografickým pro firmy
 
-WDAC CSP vychází z [funkce řízení aplikací (WDAC) v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). Můžete také [použít více zásad WDAC](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
+WDAC CSP vychází z [funkce řízení aplikací (WDAC) v programu Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). Můžete také [použít více zásad WDAC](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
 V tomto článku se dozvíte, jak:
 
@@ -45,7 +45,7 @@ V Intune je potřeba vytvořit vlastní konfigurační profil pro použití zpro
 
 Kroky v tomto článku použijte jako šablonu a umožněte nebo zamítnout otevírání určitých aplikací na zařízeních HoloLens 2.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Seznámení s prostředím Windows PowerShell.
 - Přihlaste se k Intune jako člen:
@@ -124,13 +124,13 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
     $rule += New-CIPolicyRule -Package $package<2..n>  -Deny
     ```
 
-5. Převeďte zásady WDAC na **newPolicy. XML**:
+5. Převeďte zásady WDAC na **newPolicy.xml**:
 
     ```powershell
     New-CIPolicy -rules $rule -f .\newPolicy.xml -UserPEs
     ```
 
-    Chcete-li cílit na všechny verze aplikace, v newPolicy. XML se ujistěte, že `PackageVersion="65535.65535.65535.65535"` je v uzlu odepřít:
+    Chcete-li cílit na všechny verze aplikace, v newPolicy.xml se ujistěte, že `PackageVersion="65535.65535.65535.65535"` je v uzlu odepřít:
 
     ```xml
     <Deny ID="ID_DENY_D_1" FriendlyName="Microsoft.WindowsStore_8wekyb3d8bbwe FileRule" PackageFamilyName="Microsoft.WindowsStore_8wekyb3d8bbwe" PackageVersion="65535.65535.65535.65535" />
@@ -141,27 +141,27 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
     - **Allow**: ENTER `PackageVersion, 0.0.0.0` , což znamená "povolí tuto verzi a vyšší".
     - **Deny**: zadejte `PackageVersion, 65535.65535.65535.65535` , což znamená "odmítnutí této verze a nižší".
 
-6. Slučte **newPolicy. XML** výchozími zásadami, které jsou na stolním počítači. Tento krok vytvoří **soubor mergedPolicy. XML**. Můžete například pro běh použít ovladače podepsané Windows, WHQL a ukládat podepsané aplikace:
+6. Sloučení **newPolicy.xml** s výchozími zásadami, které jsou na stolním počítači. Tento krok vytvoří **mergedPolicy.xml**. Můžete například pro běh použít ovladače podepsané Windows, WHQL a ukládat podepsané aplikace:
 
     ```powershell
     Merge-CIPolicy -PolicyPaths .\newPolicy.xml,C:\Windows\Schemas\codeintegrity\examplepolicies\DefaultWindows_Audit.xml -o mergedPolicy.xml
     ```
 
-7. Zakažte pravidlo **režimu auditu** v **souboru mergedPolicy. XML**. Při sloučení se režim auditování automaticky zapne:
+7. Zakáže pravidlo **režimu auditu** v **mergedPolicy.xml**. Při sloučení se režim auditování automaticky zapne:
 
     ```powershell
     Set-RuleOption -o 3 -Delete .\mergedPolicy.xml
     ```
 
-8. V **souboru mergedPolicy. XML**povolte **InvalidateEAs na pravidlo restartování** :
+8. Povolit **InvalidateEAs pro pravidlo restartování** v **mergedPolicy.xml**:
 
     ```powershell
     Set-RuleOption -o 15 .\mergedPolicy.xml
     ```
 
-    Další informace o těchto pravidlech najdete v tématu [Principy pravidel zásad WDAC a pravidel souborů](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
+    Další informace o těchto pravidlech najdete v tématu [Principy pravidel zásad WDAC a pravidel souborů](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
-9. Převede **mergedPolicy. XML** do binárního formátu. Tento krok vytvoří **compiledPolicy. bin**. Tento binární soubor **compiledPolicy. bin** přidáte do Intune.
+9. Převést **mergedPolicy.xml** do binárního formátu. Tento krok vytvoří **compiledPolicy. bin**. Tento binární soubor **compiledPolicy. bin** přidáte do Intune.
 
     ```powershell
     ConvertFrom-CIPolicy .\mergedPolicy.xml .\compiledPolicy.bin
@@ -175,11 +175,11 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
 
     2. Když vytváříte profil, zadejte následující nastavení:
 
-      - **OMA-URI:** Zadejte `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>`. Nahraďte `<PolicyGUID>` uzlem PolicyTypeID v souboru **mergedPolicy. XML** , který jste vytvořili v kroku 6.
+      - **OMA-URI:** Zadejte `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>`. Nahraďte `<PolicyGUID>` uzlem PolicyTypeID v souboru **mergedPolicy.xml** , který jste vytvořili v kroku 6.
 
         V našem příkladu zadejte `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076` .
 
-        Identifikátor GUID zásad se **musí shodovat** s uzlem PolicyTypeID v souboru **mergedPolicy. XML** (vytvořeným v kroku 6).
+        Identifikátor GUID zásad se **musí shodovat** s uzlem PolicyTypeID v souboru **mergedPolicy.xml** (vytvořený v kroku 6).
 
       - **Datový typ**: nastavte na **soubor Base64**. Soubor automaticky převede z přihrádky na base64.
       - **Soubor certifikátu**: Nahrajte binární soubor **compiledPolicy. bin** (vytvořený v kroku 9).

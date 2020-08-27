@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 226416c896a3d21ad8e2d11868433353c6965c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989634"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910872"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Přidání nastavení ochrany koncových bodů v Intune
 
 Pomocí služby Intune můžete pomocí profilů konfigurace zařízení spravovat běžné funkce zabezpečení služby Endpoint Protection na zařízeních, včetně těchto:
 
-- Brána firewall
+- Firewall
 - BitLocker
 - Povolení a blokování aplikací
 - Microsoft Defender a šifrování
@@ -91,7 +91,7 @@ Při plánování profilů s vlastními pravidly brány firewall Vezměte v úva
 
 - Pokud se pravidlo nepovede použít, všechna pravidla v profilu se nahlásí jako neúspěšná. Intune nemůže zjistit, které individuální pravidlo selhalo.  
 
-Pravidla brány firewall, která může Intune spravovat, jsou podrobně popsaná v části [poskytovatel konfiguračních služeb brány Windows Firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP). Seznam vlastních nastavení brány firewall pro zařízení s Windows 10, která Intune podporuje, najdete v tématu [vlastní pravidla brány firewall](endpoint-protection-windows-10.md#firewall-rules).
+Pravidla brány firewall, která může Intune spravovat, jsou podrobně popsaná v části [poskytovatel konfiguračních služeb brány Windows Firewall](/windows/client-management/mdm/firewall-csp) (CSP). Seznam vlastních nastavení brány firewall pro zařízení s Windows 10, která Intune podporuje, najdete v tématu [vlastní pravidla brány firewall](endpoint-protection-windows-10.md#firewall-rules).
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Přidání vlastních pravidel brány firewall do profilu Endpoint Protection
 

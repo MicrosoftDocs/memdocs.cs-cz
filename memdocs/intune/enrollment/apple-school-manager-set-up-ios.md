@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e919ac336532e8b641908b02c0e282ae9e1711e7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 6afd1cf0e25fe4476c8fbe72f1fa56a3557e6ac0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093985"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910005"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení se systémem iOS/iPadOS pomocí Apple School Manageru
 
@@ -33,12 +33,12 @@ Můžete nastavit Intune pro registraci zařízení se systémem iOS/iPadOS zako
 
 Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte profily zápisu automatizovaného zápisu zařízení (ADE), které obsahují nastavení, která se v zařízeních při registraci používala.
 
-Registraci Apple School Manageru nejde použít s [automatickým zápisem zařízení](device-enrollment-program-enroll-ios.md) (DEP) společnosti Apple ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+Registraci Apple School Manageru nejde použít s [automatickým zápisem zařízení ](device-enrollment-program-enroll-ios.md) (DEP) společnosti Apple ani se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
 
 **Požadavky**
 - [Nabízený certifikát pro správu mobilních zařízení Apple (MDM)](apple-mdm-push-certificate-get.md)
 - [Autorita MDM](../fundamentals/mdm-authority-set.md)
-- Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+- Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Přečtěte si další informace](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 - Zařízení zakoupená z programu [Apple School Management](http://school.apple.com)
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Získání tokenu Apple a přiřazení zařízení
@@ -74,7 +74,7 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/apple-school-manager-set-up-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Krok 4. Nahrajte token.
+### <a name="step-4-upload-your-token"></a>Krok 4: Nahrajte token.
 V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. Pomocí nabízeného certifikátu může Intune registrovat a spravovat zařízení s iOS/iPadOS tím, že zapisuje zásady do zaregistrovaných mobilních zařízení. Intune automaticky synchronizuje vaše zařízení Apple School Manageru z portálu společnosti Apple.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
@@ -83,12 +83,12 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení**  >  **iOS/iPadOS**  >  **iOS/iPadOS**  >  **tokeny programu registrace**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
-3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Název a popis profilu](./media/apple-school-manager-set-up-ios/image05.png)
 
 4. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
-    - **Zaregistrovat s přidružením uživatele** – Tuto možnost zvolte pro zařízení, která patří uživatelům a chtějí pro služby, jako je instalace aplikací, používat portál společnosti. Tato možnost také umožňuje uživatelům ověřovat svoje zařízení pomocí portálu společnosti. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Přečtěte si další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
+    - **Zaregistrovat s přidružením uživatele** – Tuto možnost zvolte pro zařízení, která patří uživatelům a chtějí pro služby, jako je instalace aplikací, používat portál společnosti. Tato možnost také umožňuje uživatelům ověřovat svoje zařízení pomocí portálu společnosti. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Přečtěte si další informace](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).   Režim Sdílený iPad programu Apple School Manager vyžaduje registraci uživatele bez přidružení uživatele.
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem, například sdílená zařízení. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 

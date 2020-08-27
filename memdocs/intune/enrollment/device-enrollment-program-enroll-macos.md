@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7afe3897c040673ad869584e1e8e8f55f4fc08ff
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210375"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911892"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatická registrace zařízení macOS pomocí Apple Business Manageru nebo Apple School Manageru
 
@@ -44,7 +44,7 @@ Pomocí [správce registrace zařízení](device-enrollment-manager-enroll.md)ne
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo v programu [automatizované registrace zařízení společnosti Apple](http://deploy.apple.com)
 - Seznam sériových čísel nebo čísel nákupních objednávek
@@ -109,7 +109,7 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
@@ -118,7 +118,7 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 5. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení správy** .
 
 6. V části **Přidružení uživatele** vyberte, jestli zařízení s tímto profilem musí mít při registraci přiřazeného uživatele.
-    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí aplikaci Portál společnosti používat pro služby, jako je instalace aplikací. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](https://technet.microsoft.com/library/adfs2-help-endpoints). [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) Vícefaktorové ověřování se nepodporuje u zařízení macOS ADE s přidružením uživatele.
+    - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí aplikaci Portál společnosti používat pro služby, jako je instalace aplikací. Při použití ADFS vyžaduje přidružení uživatelů [koncový bod WS-Trust 1.3 Username/Mixed](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Další informace](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) Vícefaktorové ověřování se nepodporuje u zařízení macOS ADE s přidružením uživatele.
 
     - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Použijte ji pro zařízení určená k plnění úkolů, u kterých není potřeba přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 

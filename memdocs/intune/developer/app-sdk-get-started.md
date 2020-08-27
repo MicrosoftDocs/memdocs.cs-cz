@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383219"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911841"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -94,9 +94,9 @@ Budete potřebovat jednu z následujících příruček pro vývojáře, která 
 
 Kromě možnosti Povolit aplikaci pro zásady ochrany aplikací je potřeba, aby aplikace správně fungovala s podmíněným přístupem na základě aplikace Azure Active Directory (AAD):
 
-* Aplikace je vytvořená pomocí [Azure Active Directory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) a má povolené ověřování zprostředkovatele AAD.
+* Aplikace je vytvořená pomocí [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) a má povolené ověřování zprostředkovatele AAD.
 
-* [ID klienta AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) pro vaši aplikaci musí být v rámci platforem Android a iOS jedinečné.
+* [ID klienta AAD](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) pro vaši aplikaci musí být v rámci platforem Android a iOS jedinečné.
 
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurace telemetrie pro vaši aplikaci
 
@@ -108,7 +108,7 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
 * **Sada Intune App SDK pro Android**: Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace Portál společnosti ve výchozím nastavení protokoluje telemetrická data. Tato data se odešlou do Microsoft Intune. V souladu se zásadami Microsoftu neshromažďujeme žádné identifikovatelné osobní údaje. 
 
-  * Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## <a name="line-of-business-app-version-numbers"></a>Čísla verzí obchodních aplikací
 
@@ -132,7 +132,7 @@ Android i iOS používají pro aplikace jak čísla verzí, tak buildů. V obou 
 
 Když vyvíjíte obchodní aplikaci pro použití v Intune, nezapomeňte použít jak číslo verze, tak i číslo buildu. Funkce správy aplikací Intune vyžadují smysluplné číslo **CFBundleVersion** (iOS) a **PackageVersionCode** (Android). Tato čísla jsou součástí manifestu aplikace. 
 
-Intune|iOS|Android|Description|
+Intune|iOS|Android|Popis|
 |---|---|---|---|
 Číslo verze|CFBundleShortVersionString|PackageVersionName |Toto číslo označuje konkrétní vydanou verzi aplikace pro koncové uživatele.|
 Číslo buildu|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|

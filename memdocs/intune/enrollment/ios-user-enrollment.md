@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907731"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Nastavení zápisu pro iOS/iPadOS a iPadOS uživatele (Preview)
 
@@ -34,7 +34,7 @@ Další informace o možnostech, které jsou k dispozici pro zápis uživatele, 
 > [!NOTE]
 > Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
 
@@ -46,7 +46,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
     ![Vytvořit registrační profil Apple](./media/ios-user-enrollment/create-profile.png)
 
-2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Stránka základy](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
     - **Registrace zařízení**: všichni uživatelé v tomto profilu budou používat registraci zařízení.
     - **Zápis uživatele**: všichni uživatelé v tomto profilu použijí zápis uživatele.
-    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)**, které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)**, které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS/iPadOS k prostředkům společnosti](../user-help/enroll-your-device-in-intune-macos-cp.md).
     
 5. Vyberte **Další**.
 
@@ -81,5 +81,3 @@ Po vytvoření více než jednoho profilu typu registrace můžete změnit pořa
 2. Profily v seznamu můžete přetáhnout v pořadí, v jakém se mají použít.
 
 V případě konfliktů mezi profily pro každého uživatele se pro uživatele použije profil s vyšší prioritou.
-
-

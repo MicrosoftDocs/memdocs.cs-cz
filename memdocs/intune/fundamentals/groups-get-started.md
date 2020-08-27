@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075383"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909784"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Skupiny Microsoft Intune Classic na portálu Azure Portal
 
@@ -47,9 +47,9 @@ Některé možnosti skupin Intune, které jste dříve možná používali, nejs
 ## <a name="how-to-get-started"></a>Jak začít?
 
 - Přečtěte si následující témata, kde najdete další informace o skupinách zabezpečení služby Azure AD a jak fungují:
-  - [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Správa skupin v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Vytváření rozšířených pravidel pomocí atributů](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
+  - [Správa přístupu k prostředkům pomocí skupin Azure Active Directory](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Správa skupin v Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Vytváření rozšířených pravidel pomocí atributů](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 - Všechny správce, kteří potřebují vytvářet skupiny, je potřeba přidat do role Azure AD **Správce služby Intune**. Role správce služby Azure AD nemá oprávnění **Spravovat skupinu**.
 - Pokud vaše skupiny Intune použily možnost **Vyloučit konkrétní členy**, rozhodněte se, jestli chcete tyto skupiny znovu vytvořit bez vyloučení nebo jestli potřebujete rozšířená pravidla, abyste vyhověli potřebám firmy.
 

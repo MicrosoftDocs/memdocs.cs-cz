@@ -16,23 +16,23 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329287"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909104"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení s Windows 10 pro povolení Windows Hello pro firmy v Intune
 
 Tento článek obsahuje seznam a popis nastavení Windows Hello pro firmy, která můžete řídit na zařízeních s Windows 10 v Intune. Jako správce služby Intune můžete nakonfigurovat a přiřadit tato nastavení zařízením s Windows 10 jako součást řešení správy mobilních zařízení (MDM). 
 
-Další informace o těchto nastaveních najdete v části [Konfigurace nastavení zásad Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)v dokumentaci k Windows Hello.
+Další informace o těchto nastaveních najdete v části [Konfigurace nastavení zásad Windows Hello pro firmy](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)v dokumentaci k Windows Hello.
 
 
 Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu [Konfigurace identity Protection](identity-protection-configure.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte konfigurační profil](identity-protection-configure.md#create-the-device-profile).
 
@@ -72,7 +72,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
     - **Požadováno** – uživatelé musí v PIN kódu použít aspoň jedno velké písmeno. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
 
   - **Speciální znaky v PIN kódu**  
-    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat speciální znaky. Mezi speciální znaky patří:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
+    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat speciální znaky. Mezi speciální znaky patří: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
     Možnosti:
     - **Nepovoleno** – zablokuje uživatelům používání speciálních znaků v PIN kódu. K tomuto chování dochází také v případě, že nastavení není nakonfigurováno.
@@ -125,7 +125,7 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
   - **Certifikát pro místní prostředky**  
 
     - **Povolit** – umožní Windows Hello pro firmy používat certifikáty k ověřování pro místní prostředky.
-    - **Nenakonfigurováno** – zabrání Windows Hello pro firmy v používání certifikátů k ověřování pro místní prostředky. Místo toho zařízení používají výchozí chování *místního ověřování důvěryhodného klíče*. Další informace najdete v tématu [uživatelský certifikát pro místní ověřování](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) v dokumentaci k Windows Hello.  
+    - **Nenakonfigurováno** – zabrání Windows Hello pro firmy v používání certifikátů k ověřování pro místní prostředky. Místo toho zařízení používají výchozí chování *místního ověřování důvěryhodného klíče*. Další informace najdete v tématu [uživatelský certifikát pro místní ověřování](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) v dokumentaci k Windows Hello.  
 
   **Výchozí**: Nenakonfigurováno
 

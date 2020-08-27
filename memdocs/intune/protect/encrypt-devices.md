@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 2ebde13c0ab2b190b51d4e776bad79fd0322f2b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334619"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911093"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Správa zásad BitLockeru pro Windows 10 v Intune
 
@@ -156,7 +156,7 @@ Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na por
 
    Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nenašel žádný klíč BitLockeru*.
 
-Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.
+Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>Otočit obnovovací klíče BitLockeru
 

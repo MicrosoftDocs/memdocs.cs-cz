@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: fd2f930cc1df1ebed6609c5871fb25001dfb735f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820659"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907468"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. V dalších jazycích je k dispozici podpora po telefonu a online podpora k fakturaci.
 
-Jako správce Intune můžete použít možnost **pomoc a podpora** k zavedení lístku online podpory pro Intune z Azure Portal. Pokud chcete vytvořit a spravovat incident podpory, musí mít váš účet roli Azure Active Directory (Azure AD), která zahrnuje *akci* **Microsoft. Office 365. supportTickets**. Informace o rolích a oprávněních služby Azure AD, které jsou nutné k vytvoření lístku podpory, najdete v tématu [role správců v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+Jako správce Intune můžete použít možnost **pomoc a podpora** k zavedení lístku online podpory pro Intune z Azure Portal. Pokud chcete vytvořit a spravovat incident podpory, musí mít váš účet roli Azure Active Directory (Azure AD), která zahrnuje *akci* **Microsoft. Office 365. supportTickets**. Informace o rolích a oprávněních služby Azure AD, které jsou nutné k vytvoření lístku podpory, najdete v tématu [role správců v Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > Pokud potřebujete technickou podporu k produktům třetích stran, které fungují s Intune (jako je Saaswedo, Cisco nebo Lookout), obraťte se nejdřív na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, zkontrolujte, jestli máte produkt správně nakonfigurovaný.

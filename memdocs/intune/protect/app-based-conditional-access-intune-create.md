@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989796"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909427"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
@@ -32,7 +32,7 @@ Nastavte zásady podmíněného přístupu na základě aplikací pro aplikace, 
 Než budete moct používat zásady podmíněného přístupu na základě aplikace, musíte mít ve svých aplikacích použité [Zásady ochrany aplikací Intune](../apps/app-protection-policies.md) .
 
 > [!IMPORTANT]
-> Tento článek vás provede jednotlivými kroky přidání jednoduchých zásad podmíněného přístupu na základě aplikace. Stejný postup můžete použít pro jiné cloudové aplikace. Další informace najdete v tématu [Plánování nasazení podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access) .
+> Tento článek vás provede jednotlivými kroky přidání jednoduchých zásad podmíněného přístupu na základě aplikace. Stejný postup můžete použít pro jiné cloudové aplikace. Další informace najdete v tématu [Plánování nasazení podmíněného přístupu](/azure/active-directory/conditional-access/plan-conditional-access) .
 
 ## <a name="create-app-based-conditional-access-policies"></a>Vytvoření zásad podmíněného přístupu na základě aplikace
 
@@ -72,4 +72,4 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 ## <a name="see-also"></a>Viz také
 
 [Ochrana dat aplikací pomocí zásad](../apps/app-protection-policies.md) 
- ochrany aplikací [Podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+ ochrany aplikací [Podmíněný přístup v Azure Active Directory](/azure/active-directory/active-directory-conditional-access)

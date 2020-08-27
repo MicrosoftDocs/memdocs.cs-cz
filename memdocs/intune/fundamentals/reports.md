@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165987"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912470"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
 Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
@@ -103,7 +103,7 @@ Sestavu **trendů** můžete zobrazit pomocí následujících kroků:
     ![Sestava trendů Intune](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Sestavy Azure Monitor Integration (specialista)
-Můžete přizpůsobit vlastní sestavy a získat požadovaná data. Data v sestavách budou volitelně k dispozici prostřednictvím [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/overview) v [sešitech](reports.md#workbooks) [Log Analytics](reports.md#log-analytics) a Azure monitor. Tato řešení umožňují vytvářet vlastní dotazy, konfigurovat výstrahy a vytvářet řídicí panely tak, aby se data o dodržování předpisů zařízením zobrazovala způsobem, který chcete. Kromě toho můžete uchovávat protokoly aktivit v účtu služby Azure Storage, integrovat se sestavami pomocí [nástrojů pro správu událostí a informací o zabezpečení (Siem)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)a korelovat sestavy do protokolů aktivit služby Azure AD. K importu řídicích panelů pro potřeby vlastních sestav můžete použít také sešity Azure Monitor.
+Můžete přizpůsobit vlastní sestavy a získat požadovaná data. Data v sestavách budou volitelně k dispozici prostřednictvím [Azure monitor](/azure/azure-monitor/overview) v [sešitech](reports.md#workbooks) [Log Analytics](reports.md#log-analytics) a Azure monitor. Tato řešení umožňují vytvářet vlastní dotazy, konfigurovat výstrahy a vytvářet řídicí panely tak, aby se data o dodržování předpisů zařízením zobrazovala způsobem, který chcete. Kromě toho můžete uchovávat protokoly aktivit v účtu služby Azure Storage, integrovat se sestavami pomocí [nástrojů pro správu událostí a informací o zabezpečení (Siem)](/microsoft-365/security/office-365-security/siem-server-integration)a korelovat sestavy do protokolů aktivit služby Azure AD. K importu řídicích panelů pro potřeby vlastních sestav můžete použít také sešity Azure Monitor.
 
 > [!NOTE]
 > Komplexní funkce vytváření sestav vyžadují předplatné Azure.
@@ -141,21 +141,21 @@ Každý prostředek Azure vyžaduje vlastní nastavení diagnostiky. Nastavení 
 
 Jedno diagnostické nastavení může definovat jedno ze všech cílů. Pokud chcete odesílat data do více než jednoho konkrétního cílového typu (například dvou různých Log Analytics pracovních prostorů), vytvořte více nastavení. Každý prostředek může mít až 5 nastavení diagnostiky.
 
-Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nastavení diagnostiky pro shromažďování protokolů a metrik platforem v Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
+Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nastavení diagnostiky pro shromažďování protokolů a metrik platforem v Azure](/azure/azure-monitor/platform/diagnostic-settings).
 
 ### <a name="log-analytics"></a>Log Analytics
-Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
+Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](/azure/azure-monitor/log-query/log-query-overview). 
 
 ### <a name="workbooks"></a>Workbooks
-Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
+Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Další kroky 
 
 Přečtěte si další informace o těchto technologiích:
 - [Blogový Microsoft Intune – rozhraní pro vytváření sestav](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
-- [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Co je služba Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Dotazy na protokoly](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Začínáme s Log Analytics v Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Azure Monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [Nástroje pro správu událostí a informací o zabezpečení (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)
+- [Azure Monitor](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [Co je služba Log Analytics?](/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Dotazy na protokoly](/azure/azure-monitor/log-query/log-query-overview)
+- [Začínáme s Log Analytics v Azure Monitor](/azure/azure-monitor/log-query/get-started-portal)
+- [Azure Monitor sešity](/azure/azure-monitor/app/usage-workbooks)
+- [nástroje pro správu událostí a informací o zabezpečení (SIEM)](/microsoft-365/security/office-365-security/siem-server-integration)

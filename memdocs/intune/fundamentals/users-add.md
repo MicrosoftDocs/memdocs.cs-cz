@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10b3e8d25f32277b3aa96e5e008d1f6611b7e46c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5c5452f77362f48ab299de1b423d2458f96cd538
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988149"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915904"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
@@ -44,7 +44,7 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
 4. Uveďte následující údaje o uživateli:
    - **Jméno**
    - **Příjmení**
-   - **Zobrazované jméno**
+   - **Zobrazovaný název**
    - **Uživatelské jméno** – hlavní název uživatele (UPN) uložený v Azure Active Directory a používaný pro přístup ke službě
    - **Umístění**
    - **Kontaktní informace** (nepovinné)
@@ -60,7 +60,7 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé**  >  **Všichni uživatelé**.
 2. V Centru pro správu vyberte **Nový uživatel**.
 3. Uveďte následující údaje o uživateli:
-   - **Název**
+   - **Name**
    - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](./media/users-add/intune-add-user-info.png) Pokračujte výběrem **OK**.
 4. Volitelně můžete zadat následující vlastnosti uživatele:
    - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
@@ -115,11 +115,11 @@ Pokud chcete získat přístup k centru pro správu Microsoft 365, váš účet 
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Synchronizace služby Active Directory a přidání uživatelů do Intune
 
-Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní služby Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
+Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní služby Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](/azure/active-directory/hybrid/whatis-hybrid-identity) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
 
 Jediný nástroj potřebný k synchronizaci uživatelských účtů s Azure AD je [Průvodce Azure AD Connectem](https://www.microsoft.com/download/details.aspx?id=47594). Průvodce Azure AD Connectem je nástroj, který vás zjednodušeně provede připojením místní infrastruktury identit ke cloudu. Vyberte topologii a potřeby (jeden nebo více adresářů, synchronizaci hodnoty hash, předávací ověřování nebo federaci). Průvodce nasadí a nakonfiguruje všechny komponenty potřebné ke zprovoznění a spuštění vašeho připojení. Včetně služeb synchronizace, Active Directory Federation Services (AD FS) a modulu Azure AD PowerShell.
 
 > [!TIP]
-> Azure AD Connect zahrnuje funkce, které byly dříve vydány jako DirSync a Azure AD Sync. Přečtěte si další informace o [integraci adresáře](https://technet.microsoft.com/library/jj573653.aspx). Informace o synchronizaci uživatelských účtů z místního adresáře do Azure AD najdete v tématu [Podobnosti mezi službou Active Directory a Azure AD](https://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect zahrnuje funkce, které byly dříve vydány jako DirSync a Azure AD Sync. Přečtěte si další informace o [integraci adresáře](/previous-versions/azure/azure-services/jj573653(v=azure.100)). Informace o synchronizaci uživatelských účtů z místního adresáře do Azure AD najdete v tématu [Podobnosti mezi službou Active Directory a Azure AD](/previous-versions/azure/azure-services/dn518177(v=azure.100)).

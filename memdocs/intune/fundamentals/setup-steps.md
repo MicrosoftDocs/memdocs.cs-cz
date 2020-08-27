@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 631b2f0fdf0d5cdd79eee9a3645b5769b756d71b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c0a71ba59a1704e0f6369f611a2922212a2aa8c6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990708"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911333"
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
 
@@ -30,12 +30,12 @@ Tento postup nastavení vám umožní povolit správu mobilních zařízení (MD
 
 Některé kroky, například nastavení předplatného Intune a nastavení autority pro správu mobilních zařízení, jsou ve většině situací povinné. Jiné kroky, například konfigurace vlastní domény nebo přidání aplikací, jsou nepovinné a závisejí na potřebách vaší firmy.
 
-Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Endpoint Configuration Manager, můžete [Configuration Manager pomocí spolusprávy připojit k cloudu](https://docs.microsoft.com/configmgr/comanage/overview).
+Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Endpoint Configuration Manager, můžete [Configuration Manager pomocí spolusprávy připojit k cloudu](/configmgr/comanage/overview).
 
 >[!TIP]
->Pokud zakoupíte aspoň 150 licencí v rámci opravňujícího plánu Intune, můžete využít *zvýhodnění centra FastTrack*. Tato služba vám poskytne spolupráci se specialisty Microsoftu na připravení prostředí pro službu Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>Pokud zakoupíte aspoň 150 licencí v rámci opravňujícího plánu Intune, můžete využít *zvýhodnění centra FastTrack*. Tato služba vám poskytne spolupráci se specialisty Microsoftu na připravení prostředí pro službu Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
-| Kroky | Status  |
+| Postup | Status  |
 |---|---|
 |   1   | [Podporované konfigurace](supported-devices-browsers.md) – všechno, co potřebujete vědět, než začnete. Sem patří podporované konfigurace a požadavky na síť.|
 |   2   |  [Přihlášení do Intune](account-sign-up.md) – přihlaste se ke zkušebnímu předplatnému nebo si vytvořte nové předplatné Intune. |

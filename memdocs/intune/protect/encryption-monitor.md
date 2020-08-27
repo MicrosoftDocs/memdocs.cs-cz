@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460463"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910974"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
 
@@ -59,7 +59,7 @@ Podokno sestava šifrování zobrazuje seznam zařízení, která spravujete, s 
     - Verze 1709 nebo novější, *obchodní*, *podnikové*, *vzdělávací*nebo verze 1809 nebo novější *pro*
     - Zařízení musí mít čip TPM.
 
-    Další informace najdete v dokumentaci k Windows v dokumentaci k [poskytovateli služby BitLocker Configuration Service Provider (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) .
+    Další informace najdete v dokumentaci k Windows v dokumentaci k [poskytovateli služby BitLocker Configuration Service Provider (CSP)](/windows/client-management/mdm/bitlocker-csp) .
 
   - **Nepřipraveno**: zařízení nemá úplné možnosti šifrování, ale pořád podporuje šifrování. Například zařízení s Windows může být zašifrováno ručně uživatelem nebo prostřednictvím Zásady skupiny, které lze nastavit tak, aby povolovalo šifrování bez čipu TPM.
   - **Nelze použít**: pro klasifikaci tohoto zařízení není k dispozici dostatek informací.
@@ -124,7 +124,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
     *Zvažte: počínaje verzí macOS 10,15 (Catalina) může nastavení registrace schválená uživatelem způsobit požadavek, aby uživatelé ručně schválili šifrování trezoru. Další informace najdete v dokumentaci k [registraci schválené uživatelem](../enrollment/macos-enroll.md) v dokumentaci k Intune*.
 
-  - Neznámý.
+  - Neznámý
 
     *Vezměte v úvahu: možnou příčinou neznámého stavu je to, že zařízení je uzamčené a Intune nemůže spustit v úschově nebo proces šifrování. Po odemknutí zařízení může pokračovat průběh*.
 

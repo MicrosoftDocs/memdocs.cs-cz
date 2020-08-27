@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 09aa4bf48b459b4df04c7c7b5706902010a8fde2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663340"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911280"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Konfigurace přístupu k místnímu Exchangi pro Intune
 
@@ -34,7 +34,7 @@ Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestl
 > [!IMPORTANT]
 > Informace v tomto článku se vztahují na zákazníky, kteří jsou podporováni pro použití konektoru Exchange.
 >
-> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+> Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA).  Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
 >
 > Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
 
@@ -86,16 +86,16 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
   4. Na **platformě**vyberte **Android Enterprise** a v **typ profilu**vyberte **e-mail** .
 
-  5. Nakonfigurujte [Nastavení e-mailového profilu](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+  5. Nakonfigurujte [Nastavení e-mailového profilu](/intune/configuration/email-settings-android-enterprise#android-enterprise).
 
   6. Až budete hotovi, vyberte **OK**  >  **Create** a uložte změny.
 
-  7. Po vytvoření e-mailového profilu [ho přiřaďte do skupin](https://docs.microsoft.com/intune/device-profile-assign).
+  7. Po vytvoření e-mailového profilu [ho přiřaďte do skupin](/intune/device-profile-assign).
 
-  8. Nastavte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+  8. Nastavte [podmíněný přístup na základě zařízení](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
-> Microsoft Outlook pro Android a iOS/iPadOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS/iPadOS a Androidem pro vaše místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování s Outlookem pro iOS/iPadOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook pro Android a iOS/iPadOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS/iPadOS a Androidem pro vaše místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování s Outlookem pro iOS/iPadOS a Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Podpora počítačů
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 2466e18d5cf2567f85c59fe1f85bd1436c2da0a4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088373"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915836"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Přehled k produktu Microsoft Endpoint Manager
 
@@ -42,40 +42,40 @@ Správce koncových bodů zahrnuje následující služby:
 
   Pokud máte místní infrastrukturu, jako je Exchange nebo Active Directory, jsou k dispozici také konektory Intune:
 
-  - **Konektor Intune pro Active Directory** přidává položky do místní domény služby Active Directory pro počítače, které se registrují pomocí automatického pilotního projektu Windows. Další informace najdete v tématu [nasazení hybridních zařízení připojených k Azure AD](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune Certificate Connector** zpracovává žádosti o certifikát ze zařízení, která používají certifikáty k ověřování a šifrování S/MIME e-mailu. Další informace najdete v tématu [použití certifikátů k ověřování](/mem/intune/protect/certificates-configure).
+  - **Konektor Intune pro Active Directory** přidává položky do místní domény služby Active Directory pro počítače, které se registrují pomocí automatického pilotního projektu Windows. Další informace najdete v tématu [nasazení hybridních zařízení připojených k Azure AD](./autopilot/windows-autopilot-hybrid.md).
+  - **Intune Certificate Connector** zpracovává žádosti o certifikát ze zařízení, která používají certifikáty k ověřování a šifrování S/MIME e-mailu. Další informace najdete v tématu [použití certifikátů k ověřování](./intune/protect/certificates-configure.md).
 
   Jako součást Správce koncových bodů můžete pomocí Intune vytvářet a kontrolovat dodržování předpisů a nasazovat aplikace, funkce a nastavení do zařízení pomocí cloudu.
 
-  Další informace najdete v tématu [co je Microsoft Intune](https://docs.microsoft.com/intune/fundamentals/what-is-intune).
+  Další informace najdete v tématu [co je Microsoft Intune](/intune/fundamentals/what-is-intune).
 
 - **Configuration Manager**: Configuration Manager je místní řešení pro správu, ve kterém můžete spravovat stolní počítače, servery a přenosné počítače, které jsou ve vaší síti nebo na internetu. V cloudu můžete povolit integraci s Intune, Azure Active Directory (AD), ATP Microsoft Defender a dalšími Cloud Services. Pomocí Configuration Manager můžete nasazovat aplikace, aktualizace softwaru a operační systémy. Můžete také monitorovat dodržování předpisů, dotazování a působit na klienty v reálném čase a mnohem víc.
 
-  Jako součást Správce koncových bodů můžete dál používat Configuration Manager, jak budete mít vždycky. Pokud jste připraveni přesunout některé úkoly do cloudu, zvažte spolupráci v rámci [spolusprávy](https://docs.microsoft.com/configmgr/comanage/).
+  Jako součást Správce koncových bodů můžete dál používat Configuration Manager, jak budete mít vždycky. Pokud jste připraveni přesunout některé úkoly do cloudu, zvažte spolupráci v rámci [spolusprávy](/configmgr/comanage/).
 
-  Další informace najdete v tématu [co je Configuration Manager?](https://docs.microsoft.com/configmgr/core/understand/introduction).
+  Další informace najdete v tématu [co je Configuration Manager?](/configmgr/core/understand/introduction).
 
 - **Spoluspráva**: spoluspráva kombinuje vaše stávající místní Configuration Manager investice do cloudu s využitím Intune a dalších cloudových služeb Microsoft 365. Zvolíte, jestli Configuration Manager nebo Intune je autorita pro správu pro sedm různých skupin úloh.
 
   V rámci správce koncových bodů používá společná Správa funkce cloudu, včetně podmíněného přístupu. Některé úkoly se udržují v místním prostředí a při spouštění dalších úloh v cloudu s Intune.
 
-  Další informace najdete v tématu [co je spoluspráva?](https://docs.microsoft.com/configmgr/comanage/overview).
+  Další informace najdete v tématu [co je spoluspráva?](/configmgr/comanage/overview).
 
 - **Plocha Analytics**: Desktop Analytics je cloudová služba, která se integruje s Configuration Manager. Poskytuje přehled a inteligentní informace, které vám pomohou při rozhodování o připravenosti na aktualizace svých klientů s Windows. Služba kombinuje data z vaší organizace s daty agregovanými z milionů zařízení připojených ke cloudu Microsoftu. Poskytuje informace o aktualizacích zabezpečení, aplikacích a zařízeních ve vaší organizaci a identifikuje problémy s kompatibilitou aplikací a ovladačů. Vytvoření pilotního projektu pro zařízení s největší pravděpodobně poskytuje nejlepší přehledy pro prostředky v rámci vaší organizace.
 
   Jako součást Správce koncových bodů můžete využívat přehledy cloudových analýz na ploše, které udržují zařízení s Windows 10 aktuální.
 
-  Další informace najdete v tématu [co je Desktop Analytics?](https://docs.microsoft.com/configmgr/desktop-analytics/overview).
+  Další informace najdete v tématu [co je Desktop Analytics?](/configmgr/desktop-analytics/overview).
 
 - **Windows autopilot**: Windows autopilot nastaví a předem nakonfiguruje nová zařízení, která se připravují k použití. Je navržený tak, aby zjednodušil životní cyklus zařízení s Windows, a to i pro koncové uživatele, od počátečního nasazení po skončení životnosti.
 
   Jako součást Správce koncových bodů použijte k předkonfigurování zařízení a automatické registraci zařízení v Intune nástroj autopilot. Můžete také integrovat autopilot pomocí Configuration Manager a spolusprávy pro složitější konfigurace zařízení (ve verzi Preview).
 
-  Další informace najdete v tématu [Přehled Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) a [registrace zařízení s Windows v Intune](/mem/intune/enrollment/enrollment-autopilot).
+  Další informace najdete v tématu [Přehled Windows autopilotu](/windows/deployment/windows-autopilot/windows-autopilot) a [registrace zařízení s Windows v Intune](./autopilot/enrollment-autopilot.md).
 
 - **Azure Active Directory (AD)**: služba Endpoint Manager používá službu Azure AD k identifikaci zařízení, uživatelů, skupin a služby Multi-Factor Authentication (MFA). **Azure AD Premium**, což může být dodatečné náklady, obsahuje [Další funkce](https://azure.microsoft.com/pricing/details/active-directory/) , které vám pomůžou chránit zařízení, aplikace a data, včetně dynamických skupin, automatického zápisu a podmíněného přístupu.
 
-  Další informace najdete v tématech [Přidání uživatelů](/mem/intune/fundamentals/users-add), [Nastavení automatického zápisu](/mem/intune/enrollment/windows-enroll)a [o podmíněném přístupu](/mem/intune/protect/conditional-access).
+  Další informace najdete v tématech [Přidání uživatelů](./intune/fundamentals/users-add.md), [Nastavení automatického zápisu](./intune/enrollment/windows-enroll.md)a [o podmíněném přístupu](./intune/protect/conditional-access.md).
 
 - **Centrum pro správu Správce koncových bodů**: [Centrum pro správu](https://go.microsoft.com/fwlink/?linkid=2109431) je jedním zastaveným webem, který umožňuje vytvářet zásady a spravovat vaše zařízení. Připojuje se k jiným klíčovým službám pro správu zařízení, včetně skupin, zabezpečení, podmíněného přístupu a vytváření sestav. Toto centrum pro správu také zobrazuje zařízení spravovaná pomocí Configuration Manager a Intune (ve verzi Preview).
 
@@ -115,4 +115,4 @@ Ve většině scénářů může být Microsoft 365 nejlepší volbou, protože 
 
 [Kurz: Seznámení se se službou Intune v Microsoft Endpoint Manageru](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 
-[Co je Microsoft 365? naučit se modul](https://docs.microsoft.com/learn/modules/what-is-m365/index)
+[Co je Microsoft 365? naučit se modul](/learn/modules/what-is-m365/index)
