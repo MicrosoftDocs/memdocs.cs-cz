@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83da63ef78d8b97cad47b811fee0cc3fde8a5502
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5d25aec032483c496d2cf01cc253ea1e3024ca83
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907451"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970528"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -267,7 +267,12 @@ Tato funkce platí pro:
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete rozšíření aplikace zakázat, přepněte typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
-  - **Microsoft Azure AD**: používá modul plug-in Microsoft Enterprise SSO, což je rozšíření aplikace jednotného přihlašování typu přesměrování. Tento modul plug-in poskytuje jednotné přihlašování pro účty služby Active Directory napříč všemi macOS aplikacemi, které podporují funkci [podnikového jednotného přihlašování od společnosti Apple](https://developer.apple.com/documentation/authenticationservices) . Tento typ rozšíření aplikace jednotného přihlašování použijte k povolení jednotného přihlašování v aplikacích Microsoftu, organizačních aplikacích a websites, které se ověřují pomocí Azure AD.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > Rozšíření jednotného přihlašování Microsoft Azure AD se pořád vyvíjí. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
+
+    Používá modul plug-in Microsoft Enterprise SSO, což je rozšíření aplikace jednotného přihlašování typu přesměrování. Tento modul plug-in poskytuje jednotné přihlašování pro účty služby Active Directory napříč všemi macOS aplikacemi, které podporují funkci [podnikového jednotného přihlašování od společnosti Apple](https://developer.apple.com/documentation/authenticationservices) . Tento typ rozšíření aplikace jednotného přihlašování použijte k povolení jednotného přihlašování v aplikacích Microsoftu, organizačních aplikacích a websites, které se ověřují pomocí Azure AD.
 
     Modul plug-in jednotného přihlašování funguje jako zprostředkovatel pokročilého ověřování, který nabízí vylepšení zabezpečení a uživatelského prostředí.
 

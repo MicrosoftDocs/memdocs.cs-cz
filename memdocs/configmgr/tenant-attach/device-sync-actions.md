@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700401"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970460"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Připojení tenanta Microsoft Endpoint Manageru: synchronizace zařízení a akce zařízení
 <!--3555758 live 3/4/2020-->
@@ -39,6 +39,8 @@ Configuration Manager počínaje verzí 2002 můžete do cloudové služby nahr�
 ## <a name="internet-endpoints"></a>Internetové koncové body
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
+
+Spojovací bod služby zajišťuje dlouhé umístění odchozího připojení k těmto koncovým bodům. Ověřte, že proxy server, který se používá pro spojovací bod služby, nezobrazuje příliš rychle časový limit odchozích připojení. Pro odchozí připojení k těmto internetovým koncovým bodům doporučujeme 3 minuty. <!--7820969-->
 
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> Povolit nahrávání zařízení, když už je spoluspráva povolená
 

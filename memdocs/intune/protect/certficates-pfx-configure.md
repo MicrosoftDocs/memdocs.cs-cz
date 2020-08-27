@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84dfb93480095c1045c73e08b536b9f1ba0aaab5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913626"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970494"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -121,9 +121,9 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 6. Ve **Vyřízení žádosti** vyberte **Umožnit export soukromého klíče**.
     
     > [!NOTE]
-    > V rozporu s protokolem SCEP se ve formátu PKCS vygeneruje privátní klíč certifikátu na serveru, na kterém je konektor nainstalovaný, a ne na zařízení. Je nutné, aby šablona certifikátu mohla exportovat soukromý klíč, aby mohl konektor Certificate Connector exportovat certifikát PFX a odeslat ho do zařízení. 
+    > V rozporu s protokolem SCEP se ve formátu PKCS vygeneruje privátní klíč certifikátu na serveru, na kterém je konektor nainstalovaný, a ne na zařízení. Je nutné, aby šablona certifikátu mohla exportovat soukromý klíč, aby konektor Certificate Connector mohl exportovat certifikát PFX a odeslat ho do zařízení. 
     >
-    > Upozorňujeme však, že při instalaci certifikátů do samotného zařízení nebude privátní klíč označený jako exportovatelný.
+    > Upozorňujeme ale, že certifikáty se nainstalují do samotného zařízení s tímto privátním klíčem, který je označený jako exportovatelný.
     
 7. V **Kryptografii** zkontrolujte, že je **Minimální velikost klíče** nastavená na hodnotu 2048.
 8. V **Názvu subjektu** zvolte **Dodat v žádosti**.

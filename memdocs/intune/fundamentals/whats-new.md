@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34c69a8263a76b83f81470c214e05a5e02dc873c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f768b34b1516dda5ed23debf554bb2685b96503c
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88916057"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970562"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -94,6 +94,10 @@ Platí pro:
 - Windows 10 a novější
 
 #### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>Konfigurace modulu plug-in macOS Microsoft Enterprise SSO<!-- 5627576  idstaged -->
+
+> [!IMPORTANT]
+> Rozšíření jednotného přihlašování Microsoft Azure AD se pořád vyvíjí. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
+
 Tým Microsoft Azure AD vytvořil rozšíření aplikace jednotného přihlašování (SSO) pro přesměrování, které macOS uživatelům 10.15 + + umožňuje získat přístup k aplikacím, organizacím a webům Microsoftu, které podporují funkci jednotného přihlašování a ověřování pomocí Azure AD, s jedním přihlašováním. Ve verzi modulu plug-in Microsoft Enterprise SSO můžete nakonfigurovat rozšíření jednotného přihlašování pomocí nového typu rozšíření aplikace Microsoft Azure AD (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **MacOS** pro **funkce** platformy > zařízení pro profil > typ rozšíření **aplikace jednotného přihlašování** > > **Microsoft Azure AD**).
 
 K zajištění jednotného přihlašování s typem rozšíření aplikace Microsoft Azure AD jednotného přihlašování musí uživatelé na svých zařízeních s macOS instalovat aplikaci Portál společnosti a přihlásit se k ní. 
