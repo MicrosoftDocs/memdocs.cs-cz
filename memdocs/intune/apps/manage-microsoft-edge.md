@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 155d205c819924869da235f64042bcd118728629
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915819"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995139"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -34,7 +34,7 @@ Hraniční podpora pro iOS je podporovaná v iOS 12,0 a novějších. Na Android
 > [!NOTE]
 > Edge pro iOS a Android nespotřebovává nastavení, která uživatelé nastavili pro nativní prohlížeč na svých zařízeních, protože Edge pro iOS a Android nemá k těmto nastavením přístup.
 
-V případě, že se přihlásíte k odběru Enterprise Mobility + Security sady, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup, jsou k dispozici bohatší a nejširší funkce ochrany pro data Office 365. Přinejmenším budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení pouze k hraničním prostředkům pro iOS a Android z mobilních zařízení a zásad ochrany aplikací Intune, které zajistí ochranu prostředí pro procházení.
+Dostupné a nejširší možnosti ochrany pro Microsoft 365 data jsou k dispozici při přihlášení k odběru sady Enterprise Mobility + Security, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup. Přinejmenším budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení pouze k hraničním prostředkům pro iOS a Android z mobilních zařízení a zásad ochrany aplikací Intune, které zajistí ochranu prostředí pro procházení.
 
 > [!NOTE]
 > Nové webové klipy (připnuté webové aplikace) na zařízeních se systémem iOS se otevřou v Edge pro iOS a Android místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. U starších webových klipů pro iOS je nutné tyto webové klipy znovu zaměřit, aby se místo Managed Browser otevíraly v hraničních zařízeních pro iOS a Android.
@@ -45,7 +45,7 @@ Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, a
 1. Postupujte podle [scénáře 2: aplikace prohlížeče vyžadují schválené aplikace se zásadami ochrany aplikací](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), které umožňují hraniční instalaci pro iOS a Android, ale blokuje další webové prohlížeče mobilních zařízení z připojení k koncovým bodům Office 365.
 
    >[!NOTE]
-   > Tato zásada zajišťuje, že mobilní uživatelé mají přístup ke všem koncovým bodům Office 365 z hraničního prostředí pro iOS a Android. Tato zásada taky zabrání uživatelům v používání služby InPrivate pro přístup k koncovým bodům Office 365.
+   > Tato zásada zajišťuje, že mobilní uživatelé mají přístup ke všem koncovým bodům Microsoft 365 z hraničních prostředí pro iOS a Android. Tato zásada taky zabrání uživatelům v používání služby InPrivate pro přístup k koncovým bodům Microsoft 365.
 
 Pomocí podmíněného přístupu můžete taky cílit na místní weby, které jste nastavili externím uživatelům prostřednictvím [Azure proxy aplikací služby AD](/azure/active-directory/active-directory-application-proxy-get-started).
 

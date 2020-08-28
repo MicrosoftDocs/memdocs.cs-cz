@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90bbc3bfbe4f7e6120359f86ad9cb1c55b2ed500
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907782"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996533"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>Správa přístupu k zasílání zpráv pomocí Outlooku pro iOS a Android s Microsoft Intune
 
 Aplikace Outlook pro iOS a Android je navržená tak, aby uživatelům ve vaší organizaci umožnila více z jejich mobilních zařízení, a to prostřednictvím e-mailu, kalendáře, kontaktů a dalších souborů.
 
-V případě, že se přihlásíte k odběru Enterprise Mobility + Security sady, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup, jsou k dispozici bohatší a nejširší funkce ochrany pro data Office 365. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k aplikaci Outlook pro iOS a Android z mobilních zařízení a zásady ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
+Dostupné a nejširší možnosti ochrany pro Microsoft 365 data jsou k dispozici při přihlášení k odběru sady Enterprise Mobility + Security, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k aplikaci Outlook pro iOS a Android z mobilních zařízení a zásady ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
 
 ## <a name="apply-conditional-access"></a>Použití podmíněného přístupu
 Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, že uživatelé budou mít přístup k pracovnímu nebo školnímu obsahu jenom přes Outlook pro iOS a Android. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat zásady ochrany aplikací pro cloudovou aplikaci přístup s podmíněným přístupem](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
@@ -41,7 +41,7 @@ Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, �
 
    Výše uvedené zásady využívají řízení udělení [vyžaduje zásadu ochrany aplikací](/azure/active-directory/active-directory-conditional-access-technical-reference), která zajišťuje, aby se pro přidružený účet v Outlooku pro iOS a Android před udělením přístupu používala zásada Intune App Protection. Pokud uživatel nemá přiřazenou zásadu Intune App Protection, nemá licenci pro Intune nebo není tato aplikace zahrnutá v zásadách Intune App Protection, pak mu zásada brání v získání přístupového tokenu a získání přístupu k datům zasílání zpráv.
 
-3. Nakonec Sledujte [Postup: blokování staršího ověřování do služby Azure AD s podmíněným přístupem](/azure/active-directory/conditional-access/block-legacy-authentication) k blokování staršího ověřování pro jiné protokoly Exchange na zařízeních s iOS a Androidem. Tato zásada by měla cílit jenom na platformy Office 365 Exchange Online Cloud App a iOS a Android. Tím se zajistí, že se mobilní aplikace používající protokoly Exchange Web Services, IMAP4 nebo POP3 se základním ověřováním nemůžou připojit k Exchangi Online.
+3. Nakonec Sledujte [Postup: blokování staršího ověřování do služby Azure AD s podmíněným přístupem](/azure/active-directory/conditional-access/block-legacy-authentication) k blokování staršího ověřování pro jiné protokoly Exchange na zařízeních s iOS a Androidem. Tato zásada by se měla zaměřit jenom na platformy Microsoft Exchange Online Cloud App a iOS a Android. Tím se zajistí, že se mobilní aplikace používající protokoly Exchange Web Services, IMAP4 nebo POP3 se základním ověřováním nemůžou připojit k Exchangi Online.
 
 ## <a name="create-intune-app-protection-policies"></a>Vytvoření zásad ochrany aplikací Intune
 

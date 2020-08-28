@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692634"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995003"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1806 Configuration Manager Current Branch
 
@@ -235,7 +235,7 @@ Následující úlohy teď můžou po povolení spolusprávy přejít z Configur
 
 - **Konfigurace zařízení**<!--1357903-->: Pomocí služby Intune můžete nasadit zásady MDM a přitom dál používat Configuration Manager pro nasazení aplikací.  
 
-- **Office 365**<!--1357841-->: Zařízení neinstalují nasazení Office 365 z Configuration Manager.  
+- **Office 365**<!--1357841-->: Zařízení neinstalují Microsoft 365 nasazení z Configuration Manager.  
 
 - **Mobilní aplikace**<!--1357892-->: Všechny dostupné aplikace nasazené z Intune jsou k dispozici v Portál společnosti. Aplikace, které nasazujete z Configuration Manager, jsou k dispozici v centru softwaru. Tato funkce je předběžnou [verzí funkce](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Další informace najdete v tématu [vytváření aplikací pro Windows](../../.
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Integrace nástrojů pro přizpůsobení Office s instalačním programem Office 365
 <!--1358149-->
-Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním programem sady Office 365 v konzole Configuration Manager. Při vytváření nasazení pro Office 365 je možné dynamicky konfigurovat nejnovější nastavení spravovatelnosti Office. Společnost Microsoft aktualizuje Nástroj pro přizpůsobení Office při vydání nových sestavení sady Office 365. Tato integrace vám umožní využít nové nastavení spravovatelnosti v Office 365, jakmile budou k dispozici. 
+Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním programem sady Office 365 v konzole Configuration Manager. Když vytváříte nasazení pro Microsoft 365, dynamicky nakonfigurujte nejnovější nastavení spravovatelnosti Office. Po vydání nových sestavení Microsoft 365 Microsoft aktualizuje Nástroj pro přizpůsobení Office. Tato integrace vám umožní využít nové nastavení spravovatelnosti v Microsoft 365, jakmile budou k dispozici. 
 
-Další informace najdete v tématu [nasazení aplikací Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Další informace najdete v tématu [nasazení aplikací Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Podpora pro nové formáty balíčků aplikací pro Windows
@@ -493,7 +493,7 @@ Další informace najdete v tématu [Údržba aktualizací softwaru](../../../su
 
 
 
-## <a name="reporting"></a>Vytváření sestav
+## <a name="reporting"></a>Přehledy
 
 ### <a name="new-software-updates-compliance-report"></a>Nová sestava dodržování předpisů pro aktualizace softwaru
 <!--1357775-->

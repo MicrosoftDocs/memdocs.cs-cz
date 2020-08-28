@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d3c42683e1c9a9d67f6fadd51878ebf2da3e0cac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820030"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996601"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
@@ -41,7 +41,7 @@ Následující tabulka uvádí přidanou vlastnost pro entitu [zařízení](../d
 |    Kolekce                          |    Změnit     |    Informace o popisu                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Přidáno    |    Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Přidáno    |    Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Přidáno    |    Verze Microsoft 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
 
 V následující tabulce je uvedena přidaná vlastnost k entitě [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) v datovém skladu Intune.
 
@@ -80,7 +80,7 @@ Následující tabulka obsahuje seznam přidaných vlastností k entitě **zař�
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Přidáno    |    Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                                                                                                                                                     |
 |    model    |    Přidáno    |    Model zařízení.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Přidáno    |    Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Přidáno    |    Verze Microsoft 365, která je na zařízení nainstalovaná.                                                                                                                                                                                                                                                                     |
 
 Následující tabulka obsahuje seznam přidaných vlastností k entitě **devicePropertyHistory** v datovém skladu Intune.
 

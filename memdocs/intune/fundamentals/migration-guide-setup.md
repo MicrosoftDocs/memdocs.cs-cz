@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 864f1367125a495c932eeaf5ce7f5db14a79bd44
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992704"
 ---
 # <a name="basic-setup"></a>Základní nastavení
 
@@ -31,7 +31,7 @@ Po vyhodnocení prostředí je čas nastavit Microsoft Intune.
 
 ### <a name="identity"></a>Identita
 
-Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD). Přečtěte si další informace:
+Intune vyžaduje jako poskytovatele seskupení identity a uživatele Azure Active Directory (Azure AD). Přečtěte si další informace:
 
 - [Požadavky na identitu](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
@@ -43,7 +43,7 @@ Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba A
 
 - [Vytváření skupin uživatelů a zařízení](groups-get-started.md)
 
-Pokud už používá organizace Office 365, musí služba Intune používat stejné prostředí Azure Active Directory.
+Pokud vaše organizace už používá Microsoft 365, musí Intune používat stejné Azure Active Directory prostředí.
 
 ### <a name="pki-optional"></a>PKI (volitelné)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2f930cc1df1ebed6609c5871fb25001dfb735f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907468"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994340"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -50,7 +50,7 @@ Při použití nově vytvořeného tenanta pro Intune je možné, že se nepoved
 
 Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další.
 
-K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.com portálu nebo na **portálu Office 365** na adrese https://portal.office.com . Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě, nebo navštivte stránku https://portal.office.com a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
+K tomuto problému dochází, když jste svůj nový účet tenanta neověřili prostřednictvím **centra pro správu Microsoft 365** na https://admin.microsoft.com portálu nebo na **portálu Office 365** na adrese https://portal.office.com . Pokud chcete tento problém vyřešit, vyberte odkaz pro *Microsoft 365 centrum pro správu* ve zprávě, nebo navštivte stránku https://portal.office.com a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
 
 **Přístup k nápovědě a podpoře**:
 

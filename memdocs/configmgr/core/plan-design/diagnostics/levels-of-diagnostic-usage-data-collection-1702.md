@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c3859d77726b49973257da47233fedde28f705a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128776"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994816"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1702 Configuration Manager
 
@@ -340,7 +340,7 @@ Pro Configuration Manager verze 1702 Tato úroveň zahrnuje následující:
 
     - Konfigurace, které se používají pro aktivní plány údržby Windows 10  
 
-    - Počet nasazených aktualizací služeb Office 365  
+    - Počet nasazených aktualizací Microsoft 365  
 
     - Počet skupin aktualizací a přiřazení  
 

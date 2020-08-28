@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663255"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996346"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -37,7 +37,7 @@ Požadavky samotné služby Intune:
 
 - Předplatné Enterprise Mobility + Security (EMS) předplatné služby Intune
 
-- Předplatné Office 365 (pro aplikace Office a aplikace spravované zásadou ochrany aplikací)
+- Předplatné Microsoft 365 (pro aplikace Office a aplikace spravované zásadami ochrany aplikací)
 
 - Certifikát Apple APNs (pro povolení správy platforem zařízení s iOS/iPadOS)
 
@@ -60,11 +60,11 @@ Jak je uvedeno v části s požadavky pro Intune výše, potřebujete předplatn
 
 - Další informace o [nákupu Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing).
 
-### <a name="task-2-add-office-365-subscription"></a>2. úkol: Přidání předplatného Office 365
+### <a name="task-2-add-microsoft-365-subscription"></a>Úkol 2: přidání předplatného Microsoft 365
 
-Tento krok je volitelný. Pokud plánujete používat Exchange Online a spravovat mobilní aplikace Office pomocí zásad ochrany aplikací, potřebujete předplatné Office 365. Pokud organizace nemá předplatné Office 365, obraťte se na Microsoft nebo na tým, který se stará o účty Microsoft, a informujte je, že se zajímáte o nákup Office 365.
+Tento krok je volitelný. Pokud plánujete používat Exchange Online a spravovat mobilní aplikace Office pomocí zásad ochrany aplikací, potřebujete předplatné Microsoft 365. Pokud vaše organizace nemá předplatné Microsoft 365, obraťte se na společnost Microsoft nebo tým účet Microsoft o vašem zájmu při nákupu Microsoft 365.
 
-- Další informace o [nákupu Office 365](https://products.office.com/business/compare-office-365-for-business-plans).
+- Přečtěte si další informace o [tom, jak koupit Microsoft 365](https://products.office.com/business/compare-office-365-for-business-plans).
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>3. úkol: Přidání skupin uživatelů do Azure AD
 
@@ -74,9 +74,9 @@ Na základě scénáře použití a požadavků na nasazení Intune možná bude
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>4. úkol: Přiřazení uživatelských licencí Intune a Office 365
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>Úloha 4: přiřazení uživatelských licencí Intune a Microsoft 365
 
-Všichni uživatelé, u kterých budete zavádět EMS/Intune a Office 365, musí mít přiřazenou licenci. Licence EMS/Intune a Office 365 můžete přiřadit v centru pro správu Microsoft 365.
+Pro všechny uživatele, pro které cílíte na EMS/Intune a Microsoft 365 uvedení, je potřeba mít přiřazenou licenci. Licence EMS/Intune a Microsoft 365 můžete přiřadit v centru pro správu Microsoft 365.
 
 - Další informace o [přiřazení licencí Intune](licenses-assign.md).
 
@@ -130,7 +130,7 @@ Intune podporuje podmíněný přístup pro Exchange Online, místní Exchange, 
 
 ### <a name="task-13-enroll-devices"></a>13. úkol: Registrace zařízení
 
-Intune podporuje platformy zařízení s iOS/iPadOS, Mac OS, Androidem a Windows Desktop. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje platformy zařízení s iOS/iPadOS, macOS, Androidem a Windows Desktop. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
 
 - Další informace o [registraci zařízení](../enrollment/device-enrollment.md).
 

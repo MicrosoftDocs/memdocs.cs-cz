@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700561"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993331"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -312,13 +312,13 @@ Configuration Manager nyní zjistí, zda je aktualizace cestou nadřazené (Serv
 
 Další informace najdete v tématu [Plánování aktualizací softwaru](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Aktualizace Office 365 pro odpojené body aktualizace softwaru
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Microsoft 365 aktualizace pro nepřipojené body aktualizace softwaru
 
 <!-- 4065163 -->
 
-Pomocí nového nástroje můžete importovat aktualizace Office 365 ze serveru WSUS připojeného k Internetu do odpojeného Configuration Managerho prostředí. Dříve, když jste exportovali a importovali metadata pro software aktualizovaný v odpojených prostředích, nemůžete nasadit aktualizace Office 365. Aktualizace Office 365 vyžadují další metadata stažená z rozhraní Office API a CDN Office, což není u odpojených prostředí možné.
+Pomocí nového nástroje můžete importovat Microsoft 365 aktualizace ze serveru WSUS připojeného k Internetu do odpojeného Configuration Manager prostředí. Dříve, když jste exportovali a importovali metadata pro software aktualizovaný v odpojených prostředích, nemohly být nasazeny Microsoft 365 aktualizace. Aktualizace Microsoft 365 vyžadují další metadata stažená z rozhraní Office API a CDN pro Office, které není možné použít pro odpojená prostředí.
 
-Další informace najdete v tématu [synchronizace aktualizací Office 365 z odpojeného bodu aktualizace softwaru](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Další informace najdete v tématu [synchronizace aktualizací Microsoft 365ch z odpojeného bodu aktualizace softwaru](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

@@ -2,7 +2,7 @@
 title: Zabránění únikům dat na nespravovaných zařízeních
 titleSuffix: Microsoft Intune
 description: Pomocí Microsoft Intune můžete povolit přístup k firemním datům na zařízeních a zapnout ochranu před úniky dat.
-keywords: ochrana dat zabránit úniku informací zařízení O365 Office 365
+keywords: Ochrana dat zabraňuje únikům M365 zařízení Microsoft 365
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d51b1ded77ac9d7e1a619c56cb87501c70a9447e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c979d6cf35611a419c4e27605b696c6ad3d85cd9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913082"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996176"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zabránění únikům dat na nespravovaných zařízeních pomocí Microsoft Intune
 
-Pokud povolíte přístup k firemním datům hostovaným v Office 365, můžete řídit, jak je uživatelé sdílejí a ukládají, abyste předešli riziku úmyslného nebo náhodného úniku. Microsoft Intune poskytuje zásady ochrany aplikací, jejichž nastavením zabezpečíte firemní data na zařízeních vlastněných uživateli. Zařízení není třeba registrovat ve službě Intune. 
+Pokud povolíte přístup k firemním datům hostovaným pomocí Microsoft 365, můžete řídit, jak budou uživatelé sdílet data a ukládat je, aniž by došlo k riziku úmyslného nebo náhodného úniku dat. Microsoft Intune poskytuje zásady ochrany aplikací, jejichž nastavením zabezpečíte firemní data na zařízeních vlastněných uživateli. Zařízení není třeba registrovat ve službě Intune. 
 
 Zásady ochrany aplikací nastavené v Intune platí i pro zařízení spravovaná pomocí řešení pro správu zařízení od jiných výrobců než Microsoftu. Osobní data na zařízeních nejsou nijak dotčena – oddělení IT spravuje jenom firemní data. 
 
@@ -40,7 +40,7 @@ Zásady ochrany aplikací Intune fungují nezávisle na správě zařízení. Z�
 Následující akční plán je možné provést při splnění následujících požadavků:
 
 * Vaše společnost je připravena na zabezpečený přechod do cloudu.
-* Vaše společnost používá Office 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
+* Vaše společnost používá Microsoft 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
 * Vaše společnost má licence na Microsoft 365, Enterprise Mobility + Security (EMS) nebo Azure Information Protection.
 * Vaše společnost umožňuje uživatelům přístup k podnikovým datům ze zařízení s Windows, iOS/iPadOS nebo Androidem vlastněných společností, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
 * Vaše společnost nechce vyžadovat registraci zařízení patřících uživatelům ve službě pro správu zařízení.
@@ -68,4 +68,4 @@ Podle potřeby nasdílejte následující odkazy na další informace:
 
 ## <a name="next-steps"></a>Další kroky
 
-Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Chcete pomáhat s povolením tohoto nebo jiných scénářů EMS nebo Microsoft 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

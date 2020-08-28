@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995241"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1902 Configuration Manager Current Branch
 
@@ -351,27 +351,27 @@ Pomocí Configuration Manager můžete přesunout známé složky Windows na One
 
 Další informace o této funkci OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](/onedrive/redirect-known-folders).
 
-Nejdřív [Najděte ID tenanta Office 365](/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](/onedrive/deploy-on-windows).  
+Nejdřív [vyhledejte ID tenanta Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 Profil OneDrivu pro firmy vytvoříte a nasadíte tak, že v konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Rozbalte **Nastavení dodržování předpisů**a vyberte uzel **profily OneDrivu pro firmy** .  
 
 Další informace najdete v části přesměrování známých složek Windows na OneDrive v článku [profily OneDrivu pro firmy](../../../compliance/deploy-use/onedrive-profile.md) .
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Integrace pro Office 365 ProPlus Readiness
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Integrace pro aplikace Microsoft 365 pro podnikovou připravenost
 
 <!--3735402-->
-Použijte Configuration Manager k identifikaci zařízení s vysokou jistotou, která je připravená k upgradu na Office 365 ProPlus. Integrace poskytuje přehledy o potenciálních potížích s kompatibilitou s Doplňky Office a makry používanými ve vašem prostředí. Pak použijte Configuration Manager k nasazení Office do připravených zařízení.
+Použijte Configuration Manager k identifikaci zařízení s vysokou jistotou, která je připravená k upgradu na Microsoft 365 aplikace pro podnik. Integrace poskytuje přehledy o potenciálních potížích s kompatibilitou s Doplňky Office a makry používanými ve vašem prostředí. Pak použijte Configuration Manager k nasazení Office do připravených zařízení.
 
-Stávající řídicí panel pro správu klientů Office 365 teď obsahuje novou dlaždici, **sadu Office 365 ProPlus upgrade Readiness**.
+Existující řídicí panel pro správu klientů Microsoft 365 nyní obsahuje novou dlaždici **upgrade Readiness Office 365 ProPlus**.
 
-Další informace najdete v tématu [řídicí panel pro správu klientů Office 365](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) .
+Další informace najdete v tématu [Microsoft 365 řídicího panelu pro správu klientů](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness) .
 
-### <a name="additional-languages-for-office-365-updates"></a>Další jazyky pro aktualizace Office 365
+### <a name="additional-languages-for-microsoft-365-updates"></a>Další jazyky pro aktualizace Microsoft 365
 
 <!--3555955-->
-Configuration Manager teď podporuje všechny podporované jazyky pro aktualizace klientů Office 365. Pracovní postup aktualizace teď odděluje jazyky 38 pro **web Windows Update** z mnoha jazyků pro **aktualizaci klienta Office 365**.
+Configuration Manager teď podporuje všechny podporované jazyky pro Microsoft 365 aktualizace klientů. Pracovní postup aktualizace teď odděluje jazyky 38 pro **web Windows Update** z mnoha jazyků pro **aktualizaci klienta Office 365**.
 
-Další informace najdete v tématu [Správa aktualizací Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang) .
+Další informace najdete v tématu [Správa aktualizací Microsoft 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang) .
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Produkty Office na řídicím panelu životní cyklus
 

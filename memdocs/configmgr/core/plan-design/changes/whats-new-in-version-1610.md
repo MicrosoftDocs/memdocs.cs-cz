@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904804"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993552"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1610 Configuration Manager
 
@@ -28,7 +28,7 @@ Aktualizace 1610 pro Configuration Manager aktuální větev je k dispozici jako
 > [!TIP]  
 > Chcete-li nainstalovat novou lokalitu, je nutné použít základní verzi Configuration Manager.  
 >
-> Další informace:    
+> Přečtěte si další informace:    
 > - [Instalace nových lokalit](../../servers/deploy/install/installing-sites.md)  
 > - [Instalace aktualizací v lokalitách](../../servers/manage/updates.md)  
 > - [Základní a aktualizační verze](../../servers/manage/updates.md#bkmk_Baselines)
@@ -183,12 +183,12 @@ Chcete-li nakonfigurovat pole **Velikost obsahu (KB)** , proveďte jednu z násl
 - Počet klientů Office 365
 - Verze klientů Office 365
 - Jazyky klienta Office 365
-- Klientské kanály pro Office 365     
+- Klientské kanály pro Office 365
 
-Podrobnosti najdete v tématu [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Podrobnosti najdete v tématu [Správa aktualizací Microsoft 365Ch aplikací](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>Kroky pořadí úloh pro správu převodu systému BIOS na UEFI
-Nyní můžete přizpůsobit pořadí úloh nasazení operačního systému novou proměnnou, TSUEFIDrive, aby krok **restartovat počítač** PŘIPRAVIL oddíl FAT32 na pevném disku pro přechod do rozhraní UEFI. Následující postup popisuje, jak můžete vytvořit kroky pořadí úloh k přípravě pevného disku pro převod systému BIOS na rozhraní UEFI. Podrobnosti najdete v tématu věnovaném [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
+Nyní můžete přizpůsobit pořadí úloh nasazení operačního systému novou proměnnou, TSUEFIDrive, aby krok **restartovat počítač** PŘIPRAVIL oddíl FAT32 na pevném disku pro přechod do rozhraní UEFI. Následující postup popisuje, jak můžete vytvořit kroky pořadí úloh k přípravě pevného disku pro převod systému BIOS na rozhraní UEFI. Podrobnosti najdete v tématu věnovaném  [krokům pořadí úkolů ke správě převodu systému BIOS na rozhraní UEFI](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Vylepšení kroku pořadí úloh: Příprava klienta nástroje ConfigMgr pro zaznamenání  
 Krok připravit klienta nástroje ConfigMgr teď zcela odebere klienta Configuration Manager, místo aby se odebraly jenom informace o klíči. Když pořadí úkolů nasadí zachycenou bitovou kopii operačního systému, nainstaluje novou Configuration Manager klienta pokaždé, když bude. Podrobnosti najdete v tématu [kroky pořadí úkolů](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).

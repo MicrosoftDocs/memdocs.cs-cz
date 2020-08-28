@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698567"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993620"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1602 Configuration Manager
 
@@ -98,8 +98,8 @@ Tyto aplikace se nacházejí v uzlu **aplikace** konzoly Configuration Manager.
 
 ## <a name="software-updates"></a>Aktualizace softwaru  
 
-### <a name="manage-office-365-client-updates"></a>Správa aktualizací klienta Office 365  
- Configuration Manager má možnost spravovat aktualizace klientů Office 365 pomocí pracovního postupu správy softwarových aktualizací. Další informace najdete v tématu [Správa aktualizací Office 365 ProPlus pomocí Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
+### <a name="manage-microsoft-365-client-updates"></a>Správa aktualizací Microsoft 365 klienta  
+ Configuration Manager má schopnost spravovat Microsoft 365 aktualizace klientů pomocí pracovního postupu správy softwarových aktualizací. Další informace najdete v tématu [Správa aktualizací pro aplikace Office 365 pomocí Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## <a name="compliance-settings"></a>Nastavení dodržování předpisů  
 
@@ -119,7 +119,7 @@ Tyto aplikace se nacházejí v uzlu **aplikace** konzoly Configuration Manager.
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Omezení přístupu na základě stavu zařízení  
- Nyní můžete omezit přístup k e-mailu a službám Office 365 na základě stavu zařízení, jak je uvedeno ve službě Health Attestation. Zařízení spravovaná pomocí Intune jsou navíc obsažená v sestavách stavu zařízení.  
+ Nyní můžete omezit přístup k e-mailovým a Microsoft 365m službám na základě stavu zařízení, jak je uvedeno ve službě Health Attestation. Zařízení spravovaná pomocí Intune jsou navíc obsažená v sestavách stavu zařízení.  
 
  Konzola Configuration Manager obsahuje nové pravidlo dodržování předpisů, které umožňuje určit, jestli se mají zařízení povolit nebo zablokovat přístup na základě jejich stavu. Podrobnosti o službě ověření stavu a o tom, jak se v Intune hlásí stav zařízení, najdete v tématu [ověření stavu pro Configuration Manager](../../../core/servers/manage/health-attestation.md).  
 

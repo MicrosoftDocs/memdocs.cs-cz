@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d9fb986285186ce531a43283b002eb88eb9595a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994714"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1802 Configuration Manager
 
@@ -144,7 +144,7 @@ Pro Configuration Manager verze 1802 Tato úroveň zahrnuje následující data:
 
 - Počet různých brandingů pro katalog aplikací
 
-- Počet aplikací Office 365 vytvořených pomocí řídicího panelu
+- Počet aplikací Microsoft 365 vytvořených pomocí řídicího panelu
 
 - Počet balíčků podle typu  
 
@@ -387,7 +387,7 @@ Pro Configuration Manager verze 1802 Tato úroveň zahrnuje následující data:
 
 - Konfigurace, které se používají pro aktivní plány údržby Windows 10  
 
-- Počet nasazených aktualizací služeb Office 365  
+- Počet nasazených aktualizací Microsoft 365  
 
 - Počet synchronizovaných ovladačů Microsoft Surface
 

@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700295"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993467"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1910 Configuration Manager Current Branch
 
@@ -134,7 +134,7 @@ Další informace najdete v tématu věnovaném [mezipaměti připojené k Micro
 
 Nyní můžete přidat hodnocení vlastních standardních hodnot konfigurace jako pravidla pro vyhodnocení zásad dodržování předpisů. Když vytváříte nebo upravujete standardní hodnoty konfigurace, můžete nyní použít možnost **vyhodnotit tuto standardní hodnotu jako součást hodnocení zásad dodržování předpisů** . Když přidáte nebo upravíte pravidlo zásad dodržování předpisů, budete mít v vyhodnocení zásad dodržování předpisů k dispozici podmínky s názvem **Zahrnout nakonfigurované směrné plány**.
 
-Pro spoluspravovaná zařízení a když nakonfigurujete Intune tak, aby byly výsledky vyhodnocení dodržování předpisů Configuration Manager v rámci celkového stavu dodržování předpisů, odesílají se tyto informace na Azure Active Directory. Pak ji můžete použít pro podmíněný přístup k prostředkům sady Office 365.
+Pro spoluspravovaná zařízení a když nakonfigurujete Intune tak, aby byly výsledky vyhodnocení dodržování předpisů Configuration Manager v rámci celkového stavu dodržování předpisů, odesílají se tyto informace na Azure Active Directory. Pak ji můžete použít pro podmíněný přístup k prostředkům Microsoft 365.
 
 Další informace najdete v tématu [Zahrnutí vlastních standardních hodnot konfigurace jako součásti posouzení zásad dodržování předpisů](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

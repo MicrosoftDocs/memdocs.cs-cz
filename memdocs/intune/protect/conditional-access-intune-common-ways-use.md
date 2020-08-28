@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6b341965516e79d99b0b253151cf5a1e7d4e71e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911127"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992938"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
@@ -35,11 +35,11 @@ Informace v tomto článku vám pomohou pochopit, jak používat možnosti dodr�
 
 ## <a name="device-based-conditional-access"></a>Podmíněný přístup podle zařízení
 
-Intune a Azure Active Directory spolupracují, aby se zajistilo, že přístup k e-mailu, službám Office 365, aplikacím softwaru jako služby (SaaS) a místním [aplikacím](/azure/active-directory/active-directory-application-proxy-get-started)mají jenom spravovaná a vyhovující zařízení. Kromě toho můžete nastavit zásadu v Azure Active Directory tak, aby povolovala přístup ke službám Office 365 jenom počítačům připojeným k doméně nebo mobilním zařízením, která jsou zaregistrovaná v Intune.
+Intune a Azure Active Directory spolupracují, aby se zajistilo, že přístup k e-mailu, službám Microsoft 365, aplikacím SaaS (software jako služba) a místním [aplikacím](/azure/active-directory/active-directory-application-proxy-get-started)mají jenom spravovaná a vyhovující zařízení. Kromě toho můžete nastavit zásadu v Azure Active Directory tak, aby povolovala přístup k Microsoft 365 službám jenom počítačům připojeným k doméně nebo mobilním zařízením, která jsou zaregistrovaná v Intune.
 
 Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje Azure Active Directory, který ho používá k vymáhání zásad podmíněného přístupu vytvořených v Azure Active Directory, když se uživatel pokusí získat přístup k prostředkům společnosti.
 
-Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím [Azure Portal](../fundamentals/what-is-intune.md).
+Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další Microsoft 365 produkty jsou konfigurovány prostřednictvím [Azure Portal](../fundamentals/what-is-intune.md).
 
 - Přečtěte si další informace o [vyžadování spravovaných zařízení s podmíněným přístupem v Azure Active Directory](/azure/active-directory/conditional-access/require-managed-devices).
 
@@ -52,7 +52,7 @@ Zásady podmíněného přístupu na základě zařízení pro Exchange Online a
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
 > 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
-> 4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.
+> 4. V prohlížeči Chrome se odhlaste z Microsoft 365 a restartujte Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
@@ -92,7 +92,7 @@ Další informace o [správě zařízení najdete v Azure Active Directory](/azu
 
 ## <a name="app-based-conditional-access"></a>Podmíněný přístup založený na aplikacích
 
-Intune a Azure Active Directory společně zajišťují, aby přístup k podnikovému e-mailu nebo jiným službám Office 365 měly jenom spravované aplikace.
+Intune a Azure Active Directory spolupracují, aby se zajistilo, že budou mít přístup k podnikovému e-mailu nebo jiným službám Microsoft 365 jenom spravované aplikace.
 
 - Přečtěte si další informace o [podmíněném přístupu založeném na aplikacích s Intune](app-based-conditional-access-intune.md).
 

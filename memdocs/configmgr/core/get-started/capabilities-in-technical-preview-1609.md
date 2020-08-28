@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695677"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995530"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1609 pro Configuration Manager
 
@@ -347,36 +347,36 @@ Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Ř�
 - Verze klientů Office 365
 - Jazyky klienta Office 365
 - Klientské kanály pro Office 365     
-Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](/deployoffice/overview-update-channels).
+Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Pravidla automatického nasazení, která mají klienta Office 365 vybranou v sadě dostupných produktů.
 
 Na řídicím panelu můžete provádět následující akce:
 - V horní části řídicího panelu pomocí rozevíracího seznamu **kolekce** můžete data řídicího panelu filtrovat podle členů určité kolekce.
-- V pravém horním rohu řídicího panelu klikněte na **instalační program sady office 365** a spusťte Průvodce instalací klienta sady Office 365 a nasaďte aplikace Office 365 pro klienty. Podrobnosti najdete v tématu [nasazení aplikací Office 365 na klienty](#deploy-office-365-apps-to-clients).
-- V pravé prostřední straně řídicího panelu klikněte na **vytvořit** pravidlo automatického nasazení a otevřete Průvodce vytvořením nového pravidla automatického nasazení (ADR). Chcete-li vytvořit pravidla automatického nasazení pro aplikace Office 365, vyberte možnost **klient Office 365** při výběru produktu. Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- V pravém horním rohu řídicího panelu klikněte na **instalační program office 365** a spusťte Průvodce instalací klienta sady Office 365 a nasaďte Microsoft 365 aplikace do klientů. Podrobnosti najdete v tématu [nasazení aplikací Microsoft 365 do klientů](#deploy-microsoft-365-apps-to-clients).
+- V pravé prostřední straně řídicího panelu klikněte na **vytvořit** pravidlo automatického nasazení a otevřete Průvodce vytvořením nového pravidla automatického nasazení (ADR). Při vytváření pravidla automatického nasazení pro Microsoft 365 aplikace vyberte **klienta Office 365** při výběru produktu. Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - V pravé dolní části řídicího panelu klikněte na **vytvořit nastavení klientského agenta** a otevřete nastavení agenta klienta. Další informace najdete v tématu [informace o nastavení klienta](../clients/deploy/about-client-settings.md).
 
 
 
-Další informace o aktualizacích Office 365 ProPlus najdete v tématu [Správa aktualizací office 365 ProPlus pomocí Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Další informace o Microsoft 365 aplikací pro podnikové aktualizace najdete v tématu [Správa aktualizací Microsoft 365 aplikací pomocí Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-## <a name="deploy-office-365-apps-to-clients"></a>Nasazení aplikací Office 365 na klienty
-V této verzi můžete z řídicího panelu pro správu klientů Office 365 spustit instalační program Office 365, který umožňuje konfigurovat nastavení instalace 365 Office, stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Nasazení aplikací Microsoft 365 do klientů
+V této verzi můžete z řídicího panelu pro správu klientů Office 365 spustit instalační program Office 365, který vám umožní nakonfigurovat Microsoft 365 nastavení instalace, stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager.
 
-### <a name="limitations-of-office-365-deployment"></a>Omezení nasazení Office 365
+### <a name="limitations-of-microsoft-365-deployment"></a>Omezení nasazení Microsoft 365
 - Při pokusu o Import existujícího nastavení klienta (XML) v Průvodci instalací aplikace sady Office 365 mohou nastat problémy. Můžete ručně nakonfigurovat nastavení klienta bez problému.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>Nasazení aplikací Office 365 na klienty
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Nasazení aplikací Microsoft 365 do klientů
 1. V konzole Configuration Manager přejděte do části Přehled **knihovny softwaru**  >  **Overview**  >  **Office 365 Správa klientů**.
 2. V pravém horním podokně klikněte na **instalační program Office 365** . Otevře se Průvodce instalací klienta sady Office 365.
 3. Na stránce **nastavení aplikace** zadejte název a popis aplikace, zadejte umístění pro stažení souborů a potom klikněte na tlačítko **Další**. Všimněte si, že umístění musí být zadáno ve formě &#92;&#92;&#92;*sdílené složky* *serveru* .
-4. Na stránce **importovat nastavení klienta** vyberte, zda chcete importovat nastavení klienta Office 365 z existujícího konfiguračního souboru XML, nebo ručně zadat nastavení, a poté klikněte na tlačítko **Další**.
+4. Na stránce **importovat nastavení klienta** vyberte, zda chcete importovat nastavení Microsoft 365 klienta z existujícího konfiguračního souboru XML nebo ručně zadat nastavení, a poté klikněte na tlačítko **Další**.
 Pokud máte existující konfigurační soubor, zadejte umístění souboru a přejděte ke kroku 7. Všimněte si, že umístění musí být zadáno ve formuláři &#92;&#92;*server*&#92;*sdílet*&#92;*filename*. XML.
 
     > [!IMPORTANT]
     >Pokud se pokusíte importovat existující nastavení klienta (XML) v této verzi Technical Preview, může dojít k problémům.
 
-5. Na stránce **klientské produkty** vyberte sadu Office 365, kterou používáte, vyberte aplikace, které chcete zahrnout, vyberte všechny další produkty Office, které by měly být zahrnuty, a poté klikněte na tlačítko **Další**.
+5. Na stránce **klientské produkty** vyberte Microsoft 365 sadu, kterou chcete použít, vyberte aplikace, které chcete zahrnout, vyberte všechny další produkty Office, které by měly být zahrnuty, a poté klikněte na tlačítko **Další**.
 6. Na stránce **nastavení klienta** vyberte nastavení, které chcete zahrnout, a potom klikněte na tlačítko **Další**.
 7. Na stránce **nasazení** vyberte, zda chcete aplikaci nasadit, a poté klikněte na tlačítko **Další**.
 Pokud se rozhodnete nenasadit balíček v průvodci, přejděte ke kroku 9.
@@ -385,7 +385,7 @@ Pokud se rozhodnete nenasadit balíček v průvodci, přejděte ke kroku 9.
 10. Aplikaci můžete nasadit nebo upravit stejně jako jakoukoli jinou aplikaci v Configuration Manager z **knihovny softwaru**  >  **Přehled**  >  **aplikací pro správu aplikací**  >  **Applications**.
 
 >[!NOTE]
->Po nasazení aplikací Office 365 můžete vytvořit pravidla automatického nasazení, která budou aplikace spravovat. Pokud chcete vytvořit pravidla automatického nasazení pro aplikace Office 365, klikněte na **vytvořit pravidlo automatického**nasazení a při výběru produktu vyberte **klienta Office 365** . Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../sum/deploy-use/automatically-deploy-software-updates.md).
+>Po nasazení aplikací Microsoft 365 můžete vytvořit pravidla automatického nasazení, která budou aplikace spravovat. Pokud chcete vytvořit pravidlo automatického nasazení pro Microsoft 365 aplikace, klikněte na **vytvořit pravidlo automatického**nasazení a při výběru produktu vyberte **klienta Office 365** . Další informace najdete v tématu [automatické nasazení aktualizací softwaru](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>Vylepšení převodu systému BIOS na rozhraní UEFI
 Nyní můžete přizpůsobit pořadí úloh nasazení operačního systému novou proměnnou, TSUEFIDrive, aby krok restartovat počítač připravil oddíl FAT32 na pevném disku pro přechod do rozhraní UEFI. Následující postup popisuje, jak můžete vytvořit kroky pořadí úloh k přípravě pevného disku pro převod systému BIOS na rozhraní UEFI.

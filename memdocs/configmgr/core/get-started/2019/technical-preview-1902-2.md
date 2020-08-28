@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 60f451d8688af4d650cc5cd63e88a7a4b0dd3894
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 49756be4d4e0f7eaf263c1fb69e54ad2e45439c1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81716975"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995859"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-19022"></a>Funkce v Configuration Manager Technical Preview verze 1902,2
 
@@ -41,9 +41,9 @@ Před instalací této aktualizace si přečtěte článek [Technical Preview](.
 **Následující části popisují nové funkce, které je možné v této verzi vyzkoušet:**  
 
 
-[!INCLUDE [Additional languages for Office 365 updates](includes/1902-2/3555955.md)]
+[!INCLUDE [Additional languages for Microsoft 365 updates](includes/1902-2/3555955.md)]
 
-[!INCLUDE [Integration with analytics for Office 365 ProPlus readiness](includes/1902-2/3735402.md)]
+[!INCLUDE [Integration with analytics for Microsoft 365 Apps for enterprise readiness](includes/1902-2/3735402.md)]
 
 [!INCLUDE [Improvement to phased deployment success criteria](includes/1902-2/3555946.md)]
 

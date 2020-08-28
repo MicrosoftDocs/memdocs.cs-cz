@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 394ffa75b6f272024d440fad56d68727c27531da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252805"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996448"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -56,8 +56,8 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | aplikace pro iOS/iPadOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Spravované aplikace Google Play | Aplikace pro Store  | Jako **Typ aplikace**vyberte **spravovaná Google Play** , vyhledejte aplikaci a vyberte aplikaci v Intune. |
-| Aplikace Office 365 pro Windows 10  | Aplikace pro Store (Office 365) | V části **Microsoft 365 aplikace** jako **Typ aplikace**vyberte **Windows 10** a pak vyberte aplikaci Office 365, kterou chcete nainstalovat.  |
-| Aplikace Office 365 pro macOS | Aplikace pro Store (Office 365) | V části **Microsoft 365 aplikace** jako **Typ aplikace**vyberte **MacOS** a pak vyberte sadu aplikací Office 365. |
+| Aplikace Microsoft 365 pro Windows 10  | Aplikace pro Store (Microsoft 365) | V části **Microsoft 365 aplikace** jako **Typ aplikace**vyberte **Windows 10** a pak vyberte aplikaci Microsoft 365, kterou chcete nainstalovat.  |
+| Microsoft 365 aplikací pro macOS | Aplikace pro Store (Microsoft 365) | V části **Microsoft 365 aplikace** jako **Typ aplikace**vyberte **macOS** a pak vyberte sadu Microsoft 365 App Suite. |
 | Microsoft Edge, verze 77 a novější pro Windows 10 | Aplikace pro Store | V části Microsoft Edge vyberte **Windows 10** **, verze 77 a novější** jako **Typ aplikace**. |
 | Microsoft Edge, verze 77 a novější pro macOS | Aplikace pro Store | Jako **Typ aplikace**vyberte **MacOS** v části **Microsoft Edge, verze 77 a novější** . |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **Typ aplikace**vyberte **obchodní** aplikaci, vyberte **soubor balíčku aplikace**a pak zadejte instalační soubor pro Android s příponou **. apk**.  |
@@ -221,8 +221,8 @@ Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najde
 - [Webové aplikace (pro všechny platformy)](web-app.md)
 - [Aplikace pro Microsoft Store](store-apps-windows.md)
 - [Obchodní aplikace pro Windows](lob-apps-windows.md)
-- [Aplikace Office 365 pro Windows 10](apps-add-office365.md)
-- [Aplikace Office 365 pro macOS](apps-add-office365-macos.md)
+- [Aplikace Microsoft 365 pro Windows 10](apps-add-office365.md)
+- [Microsoft 365 aplikací pro macOS](apps-add-office365-macos.md)
 - [Spravované aplikace Google Play](apps-add-android-for-work.md)
 - [Microsoft Edge pro Windows 10](apps-windows-edge.md)
 - [Microsoft Edge pro macOS](apps-edge-macos.md)

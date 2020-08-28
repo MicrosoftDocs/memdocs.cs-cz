@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1daad2fb9f681c0372bfd0848e2162175c8dd771
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915666"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995173"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -130,7 +130,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 **Problém**: V konzole pro správu se objeví výstraha **Uložení pravidel přístupu do systému Exchange se nezdařilo**  .
 
-Pokud vytvoříte zásady v pracovním prostoru zásady pro místní Exchange (konzola pro správu), ale používáte Office 365, nakonfigurovaná nastavení zásad se neuplatňují v Intune. Ve výstraze si poznamenejte zdroj zásad. V pracovním prostoru zásady pro místní Exchange odstraňte starší pravidla. Starší pravidla jsou globální pravidla Exchange v rámci Intune pro místní Exchange a nevztahují se na Office 365. Pak vytvořte nové zásady pro Office 365.
+Pokud vytvoříte zásady v pracovním prostoru zásady pro místní Exchange (konzola pro správu), ale používáte Microsoft 365, pak se nakonfigurovaná nastavení zásad neuplatní v Intune. Ve výstraze si poznamenejte zdroj zásad. V pracovním prostoru zásady pro místní Exchange odstraňte starší pravidla. Starší pravidla jsou globální pravidla Exchange v rámci Intune pro místní Exchange a nevztahují se Microsoft 365. Pak vytvořte nové zásady pro Microsoft 365.
 
 [Řešení potíží s místním Exchange Connectorem Intune](../protect/troubleshoot-exchange-connector.md) může být dobrým prostředkem.
 

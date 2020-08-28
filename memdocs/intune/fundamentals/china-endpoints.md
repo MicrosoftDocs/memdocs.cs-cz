@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5551e537716ed12a0a5b5de19b747ffc7c4dcac
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: fd52b34b70b71874a42486cbdc87cd3d7d2f9037
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347334"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994238"
 ---
 # <a name="china-endpoints-for-microsoft-intune"></a>Čínské koncové body pro Microsoft Intune
 
@@ -42,14 +42,14 @@ Další informace o automatické registraci Windows 10 a registraci zařízení 
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
-|**Služba**|**IP adresa**|
+|**Koncový bod**|**IP adresa**|
 |---------------------|-----------|
 |*. manage.microsoft.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
 
 
 ## <a name="intune-customer-designated-endpoints-in-china"></a>Zákazníkem určené koncové body v Číně pro Intune
 - Azure Portal: https: \/ /Portal.Azure.cn/
-- Office 365: https: \/ /Portal.partner.microsoftonline.cn/
+- Microsoft 365: https: \/ /Portal.partner.microsoftonline.cn/
 - Portál společnosti Intune: https: \/ /Portal.manage.microsoftonline.cn/
 - Centrum pro správu Microsoft Endpoint Manageru: https: \/ /Endpoint.microsoftonline.cn/
 

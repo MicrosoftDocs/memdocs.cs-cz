@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695592"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995462"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1606 pro Configuration Manager
 
@@ -179,7 +179,7 @@ Nezapomeňte zkopírovat ID předplatného přidruženého k certifikátu pro sp
 
 1. V konzole Configuration Manager klikněte na **správa > Cloud Services > cloudová proxy služba**.
 2. Klikněte na **vytvořit cloudovou proxy službu**.
-3. V Průvodci vytvořením cloudové proxy služby zadejte ID předplatného Azure (zkopírované na portálu pro správu Azure), klikněte na Procházet a vyberte soubor certifikátu, který jste použili k nahrání jako certifikát pro správu Azure. Klikněte na **Další**. Chvíli počkejte, než se konzola připojí k Azure.
+3. V Průvodci vytvořením cloudové proxy služby zadejte ID předplatného Azure (zkopírované na portálu pro správu Azure), klikněte na Procházet a vyberte soubor certifikátu, který jste použili k nahrání jako certifikát pro správu Azure. Klikněte na **Next** (Další). Chvíli počkejte, než se konzola připojí k Azure.
 4. Vyplňte další podrobnosti v průvodci:
     - Zadejte privátní klíč (soubor. pfx), který jste exportovali z vlastního certifikátu SSL.
     - Zadejte kořenový certifikát exportovaný z klientského certifikátu.
@@ -215,11 +215,11 @@ Po dokončení konfigurace služby a rolí obdrží interní klienti umístění
 
 Jakmile klienti mají nové informace o umístění pro cloudovou službu proxy, zkuste zkontrolovat stav klientů, kteří už nejsou v interní privátní síti, ale mají přístup k Internetu. Provoz na cloudové proxy službě můžete také monitorovat tak, že v podokně se seznamem **> Cloud Services > cloudovou službu proxy serveru**, vyberete službu a zobrazíte informace o přenosech v podokně podrobností.   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Správa klientského agenta Office 365 v Configuration Manageru  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Správa klientského agenta Microsoft 365 v Configuration Manager  
 
-Od verze Technical Preview 1606 můžete místo zásad skupiny použít Configuration Managerho klientského agenta, aby klienti Office 365 mohli dostávat aktualizace z Configuration Manager. Po nakonfigurování tohoto nastavení a nasazení aktualizací Office 365 komunikuje klientský Agent Configuration Manager s agentem klienta Office 365 ke stažení aktualizací Office 365 z distribučního bodu a jejich instalaci. Configuration Manager také převezme inventář nastavení agenta klienta.
+Od verze Technical Preview 1606 můžete použít Configuration Manager nastavení klientského agenta místo zásad skupiny, aby klienti Microsoft 365 mohli přijímat aktualizace od Configuration Manager. Po nakonfigurování tohoto nastavení a nasazení Microsoft 365 aktualizace komunikuje klientský Agent Configuration Manager s Microsoft 365 klientským agentem ke stahování aktualizací Microsoft 365 z distribučního bodu a jejich instalaci. Configuration Manager také převezme inventář nastavení agenta klienta.
 
-Další informace najdete v tématu [Správa aktualizací Office 365 ProPlus](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Další informace najdete v tématu [Správa aplikací Microsoft 365 pro podnikové aktualizace](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Nastavení Configuration Manager klienta pro správu klientského agenta Office 365
 1.  V konzole Configuration Manager klikněte na **Správa**  >  **Přehled**  >  **nastavení klienta**.

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c72e7966c57e9a84c1085ddb1194d5f62d6afcf
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88916074"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996244"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -144,7 +144,7 @@ Až se přiblížíme k odchodu Intune Managed Browser, provedli jsme změny v z
 - Microsoft Edge
 - Nespravovaný prohlížeč 
 
-Když vyberete **Microsoft Edge**, koncovým uživatelům se zobrazí zpráva podmíněného přístupu s upozorněním, že pro spravované scénáře procházení se vyžaduje Microsoft Edge. Budou se vám zobrazovat výzvy ke stažení a přihlášení k Microsoft Edge pomocí svých účtů AAD, pokud se ještě neudělaly.  Tato možnost bude ekvivalentní s tím, že cílí na vaše aplikace s podporou MAM s nastavením konfigurace aplikace `com.microsoft.intune.useEdge` nastavenou na **hodnotu true**. Existující zásady ochrany aplikací, které používaly nastavení **prohlížeče spravované pomocí zásad** , budou teď **Intune Managed Browser** vybrané a v chování se zobrazí žádná změna. To znamená, že uživatelé uvidí zprávy o používání Microsoft Edge, pokud jste nastavili nastavení konfigurace aplikace **useEdge** na **hodnotu true**. Pro všechny zákazníky, kteří využívají spravované scénáře procházení, doporučujeme aktualizovat zásady ochrany aplikací tak, aby **omezili přenos webového obsahu s jinými aplikacemi** , aby uživatelům viděli správné pokyny k přechodu na Microsoft Edge bez ohledu na to, ze které aplikace spouští odkazy. 
+Když vyberete **Microsoft Edge**, koncovým uživatelům se zobrazí zpráva podmíněného přístupu s upozorněním, že pro spravované scénáře procházení se vyžaduje Microsoft Edge. Budou se vám zobrazovat výzvy ke stažení a přihlášení k Microsoft Edge pomocí svých účtů Azure AD, pokud je ještě neudělalo.  Tato možnost bude ekvivalentní s tím, že cílí na vaše aplikace s podporou MAM s nastavením konfigurace aplikace `com.microsoft.intune.useEdge` nastavenou na **hodnotu true**. Existující zásady ochrany aplikací, které používaly nastavení **prohlížeče spravované pomocí zásad** , budou teď **Intune Managed Browser** vybrané a v chování se zobrazí žádná změna. To znamená, že uživatelé uvidí zprávy o používání Microsoft Edge, pokud jste nastavili nastavení konfigurace aplikace **useEdge** na **hodnotu true**. Pro všechny zákazníky, kteří využívají spravované scénáře procházení, doporučujeme aktualizovat zásady ochrany aplikací tak, aby **omezili přenos webového obsahu s jinými aplikacemi** , aby uživatelům viděli správné pokyny k přechodu na Microsoft Edge bez ohledu na to, ze které aplikace spouští odkazy. 
 
 #### <a name="configure-app-notification-content-for-organization-accounts---2576686----"></a>Konfigurace obsahu oznámení aplikace pro účty organizace<!-- 2576686  -->
 Zásady ochrany aplikací Intune (aplikace) na zařízeních s Androidem a iOS umožňují řídit obsah oznámení aplikací pro účty org. Můžete vybrat možnost (povolení, blokování dat organizace nebo blokované) a určit, jak se budou zobrazovat oznámení pro účty organizace pro vybranou aplikaci. Tato funkce vyžaduje podporu aplikací a nemusí být k dispozici pro všechny aplikace s podporou aplikací. Toto nastavení bude podporovat Outlook pro iOS verze 4.15.0 (nebo novější) a Outlook pro Android 4.83.0 (nebo novější). Nastavení je k dispozici v konzole nástroje, ale funkce začnou platit až od 16. prosince 2019. Další informace o aplikaci najdete v tématu [co jsou zásady ochrany aplikací?](../apps/app-protection-policy.md).
@@ -163,7 +163,7 @@ V rámci zásad ochrany aplikací můžete určit nastavení [**schválených kl
 Šablony ADMX v Microsoft Intune můžete použít k řízení a správě nastavení pro Microsoft Edge, Office a Windows. Šablony pro správu v Intune provedli následující aktualizace nastavení zásad:
 
 - Přidání podpory pro Microsoft Edge verze 78 a 79.
-- Obsahuje 11. listopadu 2019 soubory ADMX v [souborech šablon pro správu (ADMX/ADML) a nástroji pro přizpůsobení sady Office pro office 365 ProPlus, office 2019 a office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
+- Obsahuje 11. listopadu 2019 soubory ADMX v [souborech šablon pro správu (ADMX/ADML) a nástroji pro přizpůsobení sady Office pro aplikace Microsoft 365 pro podniky, Office 2019 a office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
 
 Další informace o šablonách ADMX v Intune najdete v tématu [použití šablon Windows 10 ke konfiguraci nastavení zásad skupiny v Microsoft Intune](../configuration/administrative-templates-windows.md).
 
@@ -1054,10 +1054,10 @@ Přístup k aplikaci zásad zařízení s Androidem můžete získat z obrazovky
 #### <a name="ios-company-portal-updates---3902931---"></a>aktualizace pro iOS Portál společnosti<!-- 3902931 -->
 Název vaší společnosti při výzvě ke správě aplikací pro iOS nahradí aktuální text "i.manage.microsoft.com". V případě, že se uživatel pokusí nainstalovat aplikaci pro iOS z Portál společnosti nebo když uživatelé povolí správu aplikace, uvidí například název společnosti namísto "i.manage.microsoft.com". Tato akce bude zahrnuta pro všechny zákazníky za několik následujících dní.
 
-#### <a name="aad-and-app-on-android-enterprise-devices---3574267---"></a>AAD a aplikace na zařízeních s Androidem Enterprise<!-- 3574267 -->
-Při připojování plně spravovaných zařízení s Androidem Enterprise se uživatelé teď při počátečním nastavení nového zařízení nebo obnovení továrního nastavení registrují s Azure Active Directory (AAD). Předtím, než se pro plně spravované zařízení dokončí, musí uživatel ručně spustit aplikaci Microsoft Intune a spustit registraci AAD. Když se teď uživatel při počátečním nastavení zaregistruje na domovské stránce zařízení, zařízení se zaregistruje i zaregistruje.
+#### <a name="azure-ad-and-app-on-android-enterprise-devices---3574267---"></a>Azure AD a aplikace na zařízeních s Androidem Enterprise<!-- 3574267 -->
+Při připojování plně spravovaných zařízení s Androidem Enterprise se uživatelé teď při počátečním nastavování nového zařízení nebo obnovení továrního nastavení registrují ve službě Azure Active Directory (Azure AD). Předtím, než se pro plně spravované zařízení dokončí, musí uživatel ručně spustit aplikaci Microsoft Intune, aby mohla spustit registraci služby Azure AD. Když se teď uživatel při počátečním nastavení zaregistruje na domovské stránce zařízení, zařízení se zaregistruje i zaregistruje.
 
-Kromě aktualizací AAD se teď podporují zásady ochrany aplikací Intune (aplikace) na plně spravovaných podnikových zařízeních s Androidem. Tato funkce bude k dispozici, jakmile ji nasadíme. Další informace najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](../apps/apps-add-android-for-work.md).
+Kromě aktualizací Azure AD se teď podporují zásady ochrany aplikací Intune (aplikace) na plně spravovaných podnikových zařízeních s Androidem. Tato funkce bude k dispozici, jakmile ji nasadíme. Další informace najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](../apps/apps-add-android-for-work.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -1557,7 +1557,7 @@ Další informace o této verzi Preview najdete v našem blogu [Microsoft Intune
 
 #### <a name="use-compliance-manager-to-create-assessments-for-microsoft-intune---4404750---"></a>Použití Správce dodržování předpisů k vytváření posouzení pro Microsoft Intune<!-- 4404750 -->
 
-[Správce dodržování předpisů](https://servicetrust.microsoft.com/ComplianceManager) (otevře další web společnosti Microsoft) je nástroj pro vyhodnocení rizik na základě pracovního postupu na portálu Microsoft Trust Service. Umožňuje sledovat, přiřazovat a ověřovat aktivity dodržování předpisů právními předpisy vaší organizace týkající se služeb Microsoftu. Můžete si vytvořit vlastní posouzení dodržování předpisů pomocí služeb Office 365, Azure, Dynamics, Professional Services a Intune. V Intune jsou k dispozici dvě posouzení – FFIEC a GDPR.
+[Správce dodržování předpisů](https://servicetrust.microsoft.com/ComplianceManager) (otevře další web společnosti Microsoft) je nástroj pro vyhodnocení rizik na základě pracovního postupu na portálu Microsoft Trust Service. Umožňuje sledovat, přiřazovat a ověřovat aktivity dodržování předpisů právními předpisy vaší organizace týkající se služeb Microsoftu. Můžete si vytvořit vlastní posouzení dodržování předpisů pomocí Microsoft 365, služeb Azure, Dynamics, Professional Services a Intune. V Intune jsou k dispozici dvě posouzení – FFIEC a GDPR.
 
 Správce dodržování předpisů vám pomůže zaměřit se na vaše úsilí tím, že rozbalí ovládací prvky spravované společností Microsoft a řídí ovládací prvky spravované vaší organizací. Posouzení můžete dokončit a pak vyexportovat a vytisknout posouzení.
 
@@ -1617,7 +1617,7 @@ Nyní můžete přidat značky oboru do tokenů programu Apple VPP. K tokenu App
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
 #### <a name="deploy-microsoft-visio-and-microsoft-project---3725386----"></a>Nasazení aplikace Microsoft Visio a aplikace Microsoft Project<!-- 3725386  -->
-V případě, že vlastníte licence pro tyto aplikace, teď můžete nasadit Microsoft Visio pro pro Office 365 a desktopový klient Microsoft Project Online jako nezávislé aplikace na zařízení s Windows 10 pomocí Microsoft Intune. V Intune vyberte aplikace **klientské aplikace**  >  **Apps**  >  **Přidat** . zobrazí se okno **Přidat aplikaci** . V okně **Přidat aplikaci** vyberte jako **Typ aplikace**možnost **Windows 10** . Pak vyberte **Konfigurovat sadu aplikací** a vyberte aplikace, které chcete nainstalovat. Další informace o aplikacích Office 365 pro zařízení s Windows 10 najdete v článku [přiřazení aplikací office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
+V případě, že vlastníte licence pro tyto aplikace, teď můžete nasadit aplikaci Microsoft Visio pro pro Microsoft 365 a klienta Microsoft Project Online Desktop jako nezávislé aplikace na Microsoft Intune zařízení s Windows 10. V Intune vyberte aplikace **klientské aplikace**  >  **Apps**  >  **Přidat** . zobrazí se okno **Přidat aplikaci** . V okně **Přidat aplikaci** vyberte jako **Typ aplikace**možnost **Windows 10** . Pak vyberte **Konfigurovat sadu aplikací** a vyberte aplikace, které chcete nainstalovat. Další informace o Microsoft 365 aplikací pro zařízení s Windows 10 najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
 
 #### <a name="microsoft-visio-pro-for-office-365-product-name-change---3593653----"></a>Změna názvu produktu Microsoft Visio pro pro Office 365<!-- 3593653  -->
 **Microsoft Visio pro for Office 365** se teď označuje jako **Microsoft Visio Online Plan 2**.  Další informace o aplikaci Microsoft Visio najdete v tématu [plán 2 pro Visio online](https://products.office.com/visio/visio-online-plan-2). Další informace o aplikacích Office 365 pro zařízení s Windows 10 najdete v článku [přiřazení aplikací office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
@@ -1625,8 +1625,8 @@ V případě, že vlastníte licence pro tyto aplikace, teď můžete nasadit Mi
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Nastavení limitu počtu znaků v zásadách ochrany aplikací Intune (APP)<!-- 3291302  -->
 Správci Intune můžou zadat výjimku pro aplikaci Intune omezit nastavení zásad  **vyjmutí, kopírování a vložení s jinými aplikacemi** .  Jako správce můžete zadat počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace. Toto nastavení umožní sdílet zadaný počet znaků do libovolné aplikace bez ohledu na nastavení omezit vyjmutí, kopírování a vložení s jinými aplikacemi. Všimněte si, že verze Portál společnosti Intune aplikace pro Android vyžaduje verzi 5.0.4364.0 nebo novější. Další informace najdete v tématech [Ochrana dat iOS](../apps/app-protection-policy-settings-ios.md#data-protection), [Ochrana dat Android](../apps/app-protection-policy-settings-android.md#data-protection)a [Kontrola protokolů ochrany klientských aplikací](../apps/app-protection-policy-settings-log.md).
 
-#### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>Office Deployment Tool (ODT) XML pro nasazení Office ProPlus<!-- 3192477   -->
-Při vytváření instance Office pro plus v konzole pro správu Intune budete moct zadat XML nástroje pro nasazení Office (ODT). To umožní větší úpravou, pokud existující možnosti uživatelského rozhraní Intune nevyhovují vašim potřebám. Další informace najdete v tématu [přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md) a [možností konfigurace pro nástroj pro nasazení Office](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+#### <a name="office-deployment-tool-odt-xml-for-microsoft-365-apps-for-enterprise-deployment---3192477-----"></a>XML Nástroj pro nasazení Office (ODT) pro aplikace Microsoft 365 pro podnikové nasazení<!-- 3192477   -->
+Při vytváření instance Microsoft 365ch aplikací pro podnikové nasazení v konzole pro správu Intune budete moct zadat XML pro Office Deployment Tool (ODT). To umožní větší úpravou, pokud existující možnosti uživatelského rozhraní Intune nevyhovují vašim potřebám. Další informace najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md) a [možností konfigurace pro nástroj pro nasazení Office](/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 #### <a name="app-icons-will-now-be-displayed-with-an-automatically-generated-background---1429026----"></a>Ikony aplikací se nyní zobrazí s automaticky generovaným pozadím<!-- 1429026  -->
 V aplikaci pro Windows Portál společnosti se teď ikony aplikací zobrazí s automaticky generovaným pozadím na základě dominantní barvy ikony (Pokud se dá detekovat). V případě potřeby bude toto pozadí nahrazovat šedé ohraničení, které bylo dříve viditelné na dlaždicích aplikace. Uživatelům se tato změna projeví ve verzích Portál společnosti novějších než 10.3.3451.0.
@@ -1635,7 +1635,7 @@ V aplikaci pro Windows Portál společnosti se teď ikony aplikací zobrazí s a
 Zařízení s Windows, která jsou registrovaná v Intune pomocí [hromadné registrace Windows](../enrollment/windows-bulk-enroll.md) (zřizovací balíčky), budou moct používat aplikaci Portál společnosti k instalaci dostupných aplikací. Další informace o aplikaci Portál společnosti najdete v tématu [Ruční přidání portál společnosti Windows 10](../apps/store-apps-company-portal-app.md) a [postup konfigurace aplikace Microsoft Intune portál společnosti](../apps/company-portal-app.md).
 
 #### <a name="the-microsoft-teams-app-can-be-selected-as-part-of-the-office-app-suite---3828932----"></a>Aplikace Microsoft Teams se dá vybrat jako součást sady Office App Suite.<!-- 3828932  -->
-Aplikace Microsoft Teams se dá zahrnout nebo vyloučit jako součást instalace sady Office pro plus a sady aplikací. Tato funkce funguje pro sadu Office pro plus číslo buildu 16.0.11328.20116 +. Uživatel se musí odhlásit a pak přihlásit k zařízení, aby se instalace dokončila. V Intune vyberte aplikace **klientské aplikace**  >  **Apps**  >  **Přidat**. Vyberte jednu z typů aplikace **sady Office 365** a potom vyberte možnost **Konfigurovat sadu aplikací**.
+Aplikace Microsoft Teams se dá zahrnout nebo vyloučit jako součást Microsoft 365 aplikací pro instalaci sady aplikací Enterprise Deployment App Suite. Tato funkce funguje pro aplikace Microsoft 365 pro číslo buildu nasazení Enterprise 16.0.11328.20116 +. Uživatel se musí odhlásit a pak přihlásit k zařízení, aby se instalace dokončila. V Intune vyberte aplikace **klientské aplikace**  >  **Apps**  >  **Přidat**. Vyberte jednu z typů aplikace **sady Office 365** a potom vyberte možnost **Konfigurovat sadu aplikací**.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -1782,7 +1782,7 @@ Platí pro:
 - macOS
 
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Aktualizace uživatelského rozhraní pro podmíněný přístup v Intune<!-- 2432313   -->
-Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Mezi ně patří:
+Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Zde jsou některé z nich:
 - Okno *podmíněného přístupu* v Intune se nahradilo oknem z Azure Active Directory. Tím zajistíte, že v konzole Intune budete mít přístup k celé škále nastavení a konfigurací pro [podmíněný přístup](../protect/conditional-access.md) (což zůstává technologie Azure AD). 
 - Přejmenovali jsme *místní okno přístupu* na přístup k *Exchangi*a přejmenovali jste nastavení *konektoru Exchange Service Connector* na toto přejmenované okno.  Tato změna slučuje, kde [konfigurujete a sledujete podrobnosti týkající se Exchange Online a místního](../protect/exchange-connector-install.md)prostředí.  
 
@@ -1914,7 +1914,7 @@ Výchozí nastavení a počet nastavení zůstávají stejné, ale tato změna u
 V Intune teď můžete nakonfigurovat následující další nastavení pro Outlook pro iOS a Android:
 
 - Povoluje použití pracovních nebo školních účtů v Outlooku v iOS a Androidu.
-- Nasazení moderního ověřování pro Office 365 a hybridních moderních ověřování v místních účtech
+- Nasazení moderního ověřování pro Microsoft 365 a hybridních moderních ověřování v místních účtech
 - Použijte `SAMAccountName` pro pole username v e-mailovém profilu, když je vybraný základní ověřování.
 - Povoluje uložení kontaktů.
 - Konfigurace externích příjemců s upozorněním na upozornění
@@ -2130,7 +2130,7 @@ Můžete vytvořit značky oboru pro omezení přístupu k rolím a aplikacím. 
 
 #### <a name="updates-for-application-transport-security---748318---"></a>Aktualizace pro zabezpečení přenosu aplikace<!-- 748318 -->
 
-Microsoft Intune podporuje zabezpečení TLS (Transport Layer Security) 1.2 +, aby bylo zajištěno, že služba Intune je ve výchozím nastavení bezpečnější a že se bude v souladu s dalšími službami společnosti Microsoft, jako je systém Microsoft Office 365. Aby bylo možné tento požadavek splnit, portál společnosti pro iOS a macOS vynutilí aktualizované požadavky na ATS (Application Transport Security) společnosti Apple, které budou také vyžadovat protokol TLS 1.2 +. ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS a macOS. Další informace najdete v [blogu podpory pro Intune](https://aka.ms/compportalats).
+Microsoft Intune podporuje zabezpečení TLS (Transport Layer Security) 1.2 +, aby bylo zajištěno, že služba Intune je ve výchozím nastavení bezpečnější a že se bude v souladu s dalšími službami společnosti Microsoft, jako je například Microsoft 365. Aby bylo možné tento požadavek splnit, portál společnosti pro iOS a macOS vynutilí aktualizované požadavky na ATS (Application Transport Security) společnosti Apple, které budou také vyžadovat protokol TLS 1.2 +. ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS a macOS. Další informace najdete v [blogu podpory pro Intune](https://aka.ms/compportalats).
 
 #### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys---1832174---"></a>Sada Intune App SDK bude podporovat 256 bitů šifrovacích klíčů.<!-- 1832174 -->
 Intune App SDK pro Android teď používá 256 šifrovacích klíčů, pokud je šifrování povolené zásadami ochrany aplikací. Sada SDK bude nadále poskytovat podporu 128 bitových klíčů pro kompatibilitu s obsahem a aplikacemi, které používají starší verze sady SDK.
@@ -2270,8 +2270,8 @@ Jako správce Microsoft Intune můžete řídit, které uživatelské účty se 
 #### <a name="outlook-ios-and-android-app-configuration-policy--1828527---"></a>Zásada konfigurace aplikace Outlook pro iOS a Android <!--1828527 -->
 Teď můžete vytvořit zásadu konfigurace aplikace Outlook pro iOS a Android pro místní uživatele, kteří využívají základní ověřování pomocí protokolu ActiveSync. Další nastavení konfigurace se přidají po jejich povolení pro Outlook pro iOS a Android.
 
-#### <a name="office-365-pro-plus-language-packs---1833450---"></a>Jazykové sady Office 365 Pro Plus <!-- 1833450 -->
-Jako správce Intune budete moct nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **Client apps**  >  **aplikace**klienta aplikace  >  **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**.
+#### <a name="microsoft-365-apps-for-enterprise-language-packs---1833450---"></a>Microsoft 365 aplikace pro jazykové sady pro podniky<!-- 1833450 -->
+Jako správce Intune budete moct nasazovat další jazyky pro aplikace Microsoft 365 pro podnikové aplikace spravované přes Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **Client apps**  >  **aplikace**klienta aplikace  >  **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**.
 
 #### <a name="windows-line-of-business-lob-apps-file-extensions---1884873---"></a>Přípony souborů obchodních aplikací pro Windows <!-- 1884873 -->
 Přípony souborů pro obchodní aplikace Windows teď budou zahrnovat soubory *. msi*, *. appx*, *. appxbundle*, *. msix*a *. msixbundle*. Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace klientské aplikace**  >  **Apps**  >  **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Pro obchodní aplikace pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
@@ -2386,8 +2386,8 @@ Platí pro: iOS
 #### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile---1818139---"></a>Odebrání e-mailového profilu ze zařízení, i když je na zařízení jenom jen jeden takový profil <!-- 1818139 -->
 Dříve nebylo možné ze zařízení odebrat e-mailový profil, *pokud* jich tam nebylo více. S touto aktualizací se toto chování změní. Teď můžete e-mailový profil odebrat, i když na zařízení není žádný další. Podrobnosti najdete v tématu [Přidání e-mailového nastavení na zařízení pomocí Intune](../configuration/email-settings-configure.md).
 
-#### <a name="powershell-scripts-and-aad---2309469---"></a>Powershellové skripty a AAD <!-- 2309469 -->
-Cílem powershellových skriptů v Intune mohou být skupiny zabezpečení zařízení služby AAD.
+#### <a name="powershell-scripts-and-azure-ad---2309469---"></a>PowerShellové skripty a Azure AD<!-- 2309469 -->
+Skripty PowerShellu v Intune můžou být cílené na skupiny zabezpečení zařízení Azure AD.
 
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nové výchozí nastavení Požadovaný typ hesla pro Android, Android Enterprise <!-- 2649963 -->
 Když vytváříte nové zásady dodržování předpisů (**Intune**  >  **zásady dodržování předpisů zařízením**v Intune  >  **Policies**  >  **vytvoří zásady**pro  >  **Android** zabezpečení Platform > System), výchozí hodnota pro **požadované změny typu hesla** : **Android enterprise**
@@ -2463,7 +2463,7 @@ Služba Intune zvýšila maximální velikost balíčku u obchodních aplikací 
 Správce služby Microsoft Intune může nahrát obrázek vlastní značky, který se v aplikaci Portál společnosti pro iOS zobrazí jako pozadí stránky s profilem uživatele. Další informace o konfiguraci aplikace Portál společnosti najdete v tématu [Konfigurace aplikace Portál společnosti služby Microsoft Intune](../apps/company-portal-app.md).
 
 #### <a name="intune-will-maintain-the-office-localized-language-when-updating-office-on-end-users-machines---2971030---"></a>Intune bude udržovat lokalizovaný jazyk Office při aktualizaci Office na počítačích koncových uživatelů <!-- 2971030 -->
-Když Intune nainstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. Další informace najdete v článku [Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
+Když Intune nainstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. Další informace najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](../apps/apps-add-office365.md).
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
@@ -2527,8 +2527,8 @@ Pokud používáte profily VPN pro jednotlivé aplikace pro iOS, můžete použ�
 V Intune > **Software Updates**  >  **zásady aktualizací softwaru pro iOS**můžete nakonfigurovat dny a časy, kdy nechcete, aby zařízení instalovala aktualizace. V budoucí aktualizaci budete moct odložit čas, kdy se aktualizace softwaru viditelně zobrazí v zařízení, o 1–90 dní. 
 Aktuální nastavení jsou uvedena v části [Konfigurace zásad aktualizace iOS v Microsoft Intune](../protect/software-updates-ios.md).
 
-#### <a name="office-365-proplus-version---2213968---"></a>Verze Office 365 ProPlus <!-- 2213968 -->
-Při přiřazování aplikací Office 365 ProPlus k zařízením s Windows 10 pomocí Intune si můžete vybrat verzi Office. V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **Přidat aplikaci**. Potom z rozevíracího seznamu **Typ** vyberte **Office 365 ProPlus Suite (Windows 10)**. Volbou **Nastavení sady aplikací** otevřete související okno. V části **Aktualizační kanál** nastavte požadovanou hodnotu, například **Měsíčně**. Volitelně můžete odebrat ze zařízení koncových uživatelů jiné verze Office (msi) tak, že vyberete **Ano**. Vyberte **Konkrétní** a nainstalujte tak pro vybraný kanál na zařízeních koncových uživatelů konkrétní verzi Office. V tomto okamžiku můžete vybrat **konkrétní verzi** Office, která se má použít. Dostupné verze se budou v průběhu času měnit. Při vytváření nového nasazení tedy můžou být dostupné novější verze a některé starší verze nemusí být k dispozici. Aktuální nasazení budou dál nasazovat starší verzi, ale seznam verzí se bude průběžně aktualizovat podle kanálu. Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
+#### <a name="microsoft-365-apps-for-enterprise-version---2213968---"></a>Aplikace Microsoft 365 pro podnikovou verzi<!-- 2213968 -->
+Když přiřadíte aplikace Microsoft 365 pro podnikové aplikace do zařízení s Windows 10 pomocí Intune, budete moct vybrat verzi Office. V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **Přidat aplikaci**. Potom z rozevíracího seznamu **Typ** vyberte **Office 365 ProPlus Suite (Windows 10)**. Volbou **Nastavení sady aplikací** otevřete související okno. V části **Aktualizační kanál** nastavte požadovanou hodnotu, například **Měsíčně**. Volitelně můžete odebrat ze zařízení koncových uživatelů jiné verze Office (msi) tak, že vyberete **Ano**. Vyberte **Konkrétní** a nainstalujte tak pro vybraný kanál na zařízeních koncových uživatelů konkrétní verzi Office. V tomto okamžiku můžete vybrat **konkrétní verzi** Office, která se má použít. Dostupné verze se budou v průběhu času měnit. Při vytváření nového nasazení tedy můžou být dostupné novější verze a některé starší verze nemusí být k dispozici. Aktuální nasazení budou dál nasazovat starší verzi, ale seznam verzí se bude průběžně aktualizovat podle kanálu. Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
 #### <a name="support-for-register-dns-setting-for-windows-10-vpn---2282852---"></a>Podpora nastavení Registrovat pomocí DNS pro VPN ve Windows 10 <!-- 2282852 -->
 Od této aktualizace můžete profily sítě VPN ve Windows 10 nakonfigurovat tak, aby dynamicky registrovaly IP adresy přiřazené k rozhraní sítě VPN pomocí interní služby DNS bez nutnosti používat vlastní profily.
@@ -2673,8 +2673,8 @@ Microsoft Intune umožňuje nasazovat obchodní aplikace pro macOS jako **povinn
 #### <a name="ios-built-in-app-support-for-kiosk-mode---2051098---"></a>Podpora integrovaných iOS aplikací v celoobrazovkovém režimu <!-- 2051098 -->
 Kromě aplikací ze Storu a spravovaných aplikací můžete nyní vybrat i integrovanou aplikaci (jako je Safari), která poběží na zařízení s iOSem v celoobrazovkovém režimu.
 
-#### <a name="edit-your-office-365-pro-plus-app-deployments---2150145---"></a>Úpravy nasazení aplikací Office 365 Pro Plus <!-- 2150145 -->
-Jako správce Microsoft Intune máte širší možnosti úpravy nasazování aplikací Office 365 Pro Plus. Navíc už nemusíte odstraňovat nasazení, aby se změnily jakékoli vlastnosti sady. V Azure Portal vyberte **Microsoft Intune**  >  **Client apps**  >  **aplikace**klienta aplikace. V seznamu aplikací vyberte vaši sadu Office 365 Pro Plus.  
+#### <a name="edit-your-microsoft-365-apps-for-enterprise-app-deployments---2150145---"></a>Úprava aplikací Microsoft 365 pro nasazení podnikových aplikací<!-- 2150145 -->
+Jako správce Microsoft Intune máte větší možnost upravovat aplikace Microsoft 365 pro nasazení podnikových aplikací. Navíc už nemusíte odstraňovat nasazení, aby se změnily jakékoli vlastnosti sady. V Azure Portal vyberte **Microsoft Intune**  >  **Client apps**  >  **aplikace**klienta aplikace. V seznamu aplikací vyberte své aplikace Microsoft 365 pro sadu Enterprise Suite.  
 
 #### <a name="updated-intune-app-sdk-for-android-is-now-available---2744271--"></a>K dispozici je aktualizovaná sada Intune App SDK pro Android <!-- 2744271-->
 K dispozici je aktualizovaná verze sady Intune App SDK pro Android, která podporuje vydanou verzi Android P. Pokud jste vývojáři aplikací a používáte sadu Intune SDK pro Android, musíte si nainstalovat aktualizovanou verzi sady Intune App SDK. Tím zajistíte, že funkce Intune budou v aplikacích pro Android fungovat očekávaným způsobem, a to i na zařízeních s Androidem P. Tato verze sady Intune App SDK nabízí integrovaný plug-in, který aktualizuje sadu SDK, Nemusíte přepisovat veškerý stávající kód, který je integrovaný. Podrobné informace najdete v tématu o [sadě Intune SDK pro Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android). Pokud používáte staré označení Intune, doporučujeme použít ikonu aktovky. Podrobné informace najdete v [tomto úložišti GitHub](https://github.com/msintuneappsdk/intune-app-partner-badge).
@@ -3502,8 +3502,8 @@ Pro daný token VPP můžete odvolat licenci všech aplikací pro iOS koupených
 #### <a name="revoking-ios-volume-purchase-program-apps----820863---"></a>Odvolání aplikací pro iOS koupených přes Volume Purchase Program  <!-- 820863 -->
 Pro dané zařízení, které má jednu nebo více aplikací pro iOS koupených přes Volume Purchase Program (VPP), můžete odvolat licenci aplikace přidruženou na základě zařízení. Odvoláním licence aplikace se příslušná aplikace VPP neodinstaluje ze zařízení. Pokud chcete odinstalovat aplikaci VPP, musíte nastavit akci přiřazení na **Odinstalovat**. Další informace najdete v tématu [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune](../apps/vpp-apps-ios.md).
 
-#### <a name="assign-office-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type---1332318---"></a>Přiřazení mobilních aplikací Office 365 k zařízením s iOSem a Androidem pomocí integrovaného typu aplikace <!-- 1332318 -->
-**Integrovaný** typ aplikace usnadňuje vytvoření aplikací Office 365 a jejich přiřazení k zařízením s iOSem a Androidem, která spravujete. Mezi tyto aplikace O365 se řadí například Word, Excel, PowerPoint a OneDrive. K typu aplikace můžete přiřadit konkrétní aplikace a pak upravit konfiguraci informací o aplikaci.
+#### <a name="assign-microsoft-365-mobile-apps-to-ios-and-android-devices-using-built-in-app-type---1332318---"></a>Přiřazení Microsoft 365 mobilních aplikací k zařízením s iOS a Androidem pomocí integrovaného typu aplikace<!-- 1332318 -->
+**Integrovaný** typ aplikace usnadňuje vytváření a přiřazování Microsoft 365 aplikací pro zařízení s iOS a Androidem, která spravujete. Mezi tyto aplikace patří Microsoft 365é aplikace, jako je Word, Excel, PowerPoint a OneDrive. K typu aplikace můžete přiřadit konkrétní aplikace a pak upravit konfiguraci informací o aplikaci.
 
 #### <a name="including-and-excluding-app-assignment-based-on-groups---1406920---"></a>Zahrnutí a vyloučení přiřazení aplikací na základě skupin <!-- 1406920 -->
 
@@ -3575,10 +3575,10 @@ Každý konektor NDES si vyžádá žádosti o certifikát z Intune.  Pokud jede
 
 #### <a name="customer-subject-name-can-use-aad_device_id-variable----1468599---"></a>Použití proměnné AAD_DEVICE_ID v názvu subjektu  <!-- 1468599 -->
 
-Když v Intune vytvoříte profil certifikátu SCEP, můžete k vytvoření vlastního názvu subjektu použít proměnnou AAD_DEVICE_ID.   Pokud k vyžádání certifikátu použijete tento profil SCEP, nahradí se proměnná identifikátorem zařízení AAD, které požádalo o certifikát.
+Když v Intune vytvoříte profil certifikátu SCEP, můžete k vytvoření vlastního názvu subjektu použít proměnnou AAD_DEVICE_ID.   Když se certifikát vyžádá pomocí tohoto profilu SCEP, nahradí se tato proměnná ID zařízení Azure AD zařízení, které žádost o certifikát vydává.
 
 #### <a name="manage-jamf-enrolled-macos-devices-with-intunes-device-compliance-engine---1592747---"></a>Správa zařízení macOS zaregistrovaných v Jamf s modulem dodržování předpisů zařízení Intune <!-- 1592747 -->
-K odeslání informací o stavu zařízení s macOS do Intune teď můžete použít i řešení Jamf, které je vyhodnotí na základě zásad dodržování předpisů definovaných v konzole Intune. V závislosti na stavu dodržování předpisů zařízením a dalších podmínkách (například umístění, riziko pro uživatele atd.) bude podmíněný přístup vymáhat dodržování předpisů pro zařízení macOS s přístupem k cloudovým a místním aplikacím připojeným k Azure AD, včetně Office 365. Další informace o [nastavení integrace řešení Jamf](../protect/conditional-access-integrate-jamf.md) a [dodržování předpisů u zařízení spravovaných v řešení Jamf](../protect/conditional-access-assign-jamf.md).
+K odeslání informací o stavu zařízení s macOS do Intune teď můžete použít i řešení Jamf, které je vyhodnotí na základě zásad dodržování předpisů definovaných v konzole Intune. V závislosti na stavu dodržování předpisů zařízením a dalších podmínkách (například umístění, riziko uživatele atd.) vynutil podmíněný přístup dodržování předpisů pro zařízení macOS, která přistupují k cloudovým a místním aplikacím připojeným k Azure AD, včetně Microsoft 365. Další informace o [nastavení integrace řešení Jamf](../protect/conditional-access-integrate-jamf.md) a [dodržování předpisů u zařízení spravovaných v řešení Jamf](../protect/conditional-access-assign-jamf.md).
 
 #### <a name="new-ios-device-action-----1424701---"></a>Nová akce pro zařízení s iOSem    <!-- 1424701 -->
 
@@ -4335,9 +4335,9 @@ Dříve služba Intune obsahovala řadu integrovaných aplikací, které jste mo
 Pokud jste už ale nějaké integrované aplikace přiřadili, budou se v seznamu aplikací dál zobrazovat. Tyto aplikace můžete dál přiřazovat podle potřeby.
 V pozdější verzi plánujeme přidat jednodušší způsob výběru a přiřazování integrovaných aplikací z Azure Portalu.
 
-#### <a name="easier-installation-of-office-365-apps---1121362---"></a>Snadnější instalace aplikací Office 365 <!-- 1121362 -->
-Nový typ aplikace **Office 365 ProPlus** vám usnadní přiřazování aplikací Office 365 ProPlus 2016 na vámi spravovaná zařízení, na kterých běží nejnovější verze Windows 10. Pokud vlastníte příslušné licence, můžete si také nainstalovat Microsoft Project a Microsoft Visio. Požadované aplikace jsou spojeny dohromady a v seznamu aplikací v konzole Intune se zobrazují jako jedna aplikace.
-Další informace najdete v tématu [Jak přidat aplikace Office 365 pro Windows 10](../apps/apps-add-office365.md).
+#### <a name="easier-installation-of-microsoft-365-apps---1121362---"></a>Jednodušší instalace aplikací Microsoft 365<!-- 1121362 -->
+Nové **aplikace Microsoft 365 pro podnikový** typ aplikace usnadňují přiřazování Microsoft 365 aplikací pro podnikové aplikace do zařízení, která spravujete, na kterých běží nejnovější verze Windows 10. Pokud vlastníte příslušné licence, můžete si také nainstalovat Microsoft Project a Microsoft Visio. Požadované aplikace jsou spojeny dohromady a v seznamu aplikací v konzole Intune se zobrazují jako jedna aplikace.
+Další informace najdete v tématu [Postup přidání Microsoft 365 aplikací pro Windows 10](../apps/apps-add-office365.md).
 
 
 #### <a name="support-for-offline-apps-from-the-microsoft-store-for-business---777044---"></a>Podpora pro offline aplikace z Microsoft Storu pro firmy <!-- 777044 -->
@@ -4364,7 +4364,7 @@ V této verzi jsme přidali nová nastavení pro profil omezení zařízení s�
 - Mobilní síť a připojení
 - Prostředí zamknuté obrazovky
 - Ochrana osobních údajů
-- Hledat
+- Search
 - Windows Spotlight
 - Prohlížeč Microsoft Edge
 

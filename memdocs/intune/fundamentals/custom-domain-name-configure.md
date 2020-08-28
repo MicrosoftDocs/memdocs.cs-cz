@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97bdbdfa43ca8aae1de6a74f3a9f3be82c855bf0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909801"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994102"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurace názvu vlastní domény
 
@@ -54,6 +54,6 @@ Tento počáteční název domény onmicrosoft.com nelze přejmenovat ani odebra
 
 Postup pro přidání a ověření vlastní domény může být také [proveden v Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
 
-Další informace najdete v článku [Informace o vaší počáteční doméně onmicrosoft.com v Office 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).
+Další informace [o vaší počáteční doméně onmicrosoft.com najdete v Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)
 
 Další informace o tom, jak [zjednodušit registraci Windows bez Azure AD Premium](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) vytvořením DNS CNAME, který přesměruje registraci na servery Intune.

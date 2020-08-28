@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53d267ec6b97579d256b11744768e6bdb7344328
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910141"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992799"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -136,6 +136,6 @@ V těchto šablonách jsou k dispozici tisíce nastavení. Aby bylo snazší naj
 
 Šablona je vytvořena, ale nemusí se ještě nic dělat. Dále [přiřaďte šablonu (označuje se také jako profil)](device-profile-assign.md) a [sledujte její stav](device-profile-monitor.md).
 
-Aktualizujte [Office 365 pomocí šablon pro správu](administrative-templates-update-office.md).
+Aktualizujte [Microsoft 365 pomocí šablon pro správu](administrative-templates-update-office.md).
 
 [Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

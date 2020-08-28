@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d4826936245790c951b40c38fde6e0a90f51e23
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 676e7a4db54558eaea87ad2fa8efbe8af546f035
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996567"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -36,9 +36,9 @@ Možné konfigurace:
 
 - **Spoluspráva Intune** – integrace cloudového řešení Intune s Configuration Manager pro zařízení s Windows 10. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Konfigurace automatického zápisu zařízení do Intune](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune) 
 
-- **Základní mobilita a zabezpečení pro Office 365** – Pokud máte tuto konfiguraci aktivovanou, uvidíte autoritu MDM nastavenou na "Office 365". Pokud chcete začít používat Intune, budete si muset koupit licence Intune.
+- **Základní mobilita a zabezpečení pro Microsoft 365** – Pokud máte tuto konfiguraci aktivovanou, uvidíte autoritu MDM nastavenou na "Office 365". Pokud chcete začít používat Intune, budete si muset koupit licence Intune.
 
-- **Základní mobilita a zabezpečení pro office 365 [koexistence](#coexistence) ** – službu Intune můžete přidat do svého tenanta, pokud už používáte základní mobilitu a zabezpečení pro Office 365 a pro každého uživatele nastavíte autoritu pro správu na Intune nebo základní mobilitu a zabezpečení pro Office 365 pro každého uživatele, aby se nastavila služba, která se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu každého uživatele je definovaná na základě licence přiřazené uživateli: Pokud má uživatel jenom licenci na Microsoft 365 Basic nebo Standard, budou jejich zařízení spravovaná základní mobilitou a zabezpečením pro Office 365. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáte licenci entitling Intune k uživateli, který dřív spravovala základní mobilita a zabezpečení pro Office 365, budou se jejich zařízení přepínat na správu Intune. Nezapomeňte mít konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradili základní mobilitu a zabezpečení pro Office 365. jinak jejich zařízení ztratí základní mobilitu a zabezpečení pro konfiguraci sady Office 365 a nezíská žádné náhrady z Intune.
+- **Základní mobilita a zabezpečení pro Microsoft 365 [koexistence](#coexistence) ** – službu Intune můžete přidat do svého tenanta, pokud už používáte základní mobilitu a zabezpečení pro Microsoft 365 a nastavili autoritu pro správu na Intune nebo základní mobilitu a zabezpečení pro Microsoft 365 pro každého uživatele, aby využívali, která služba se bude používat ke správě zařízení zaregistrovaných v MDM. Autorita pro správu jednotlivých uživatelů je definována na základě licence přiřazené uživateli: Pokud má uživatel pouze licenci pro Microsoft 365 Basic nebo Standard, budou jejich zařízení spravována základní mobilitou a zabezpečením Microsoft 365. Pokud má uživatel licenci entitling Intune, jejich zařízení se budou spravovat přes Intune. Pokud přidáváte licenci entitling Intune pro uživatele, který dřív spravovala základní mobilita a zabezpečení pro Microsoft 365, budou se jejich zařízení přepínat na správu Intune. Nezapomeňte mít konfigurace Intune přiřazené uživatelům, aby před přepnutím uživatelů do Intune nahradili základní mobilitu a zabezpečení pro Microsoft 365. jinak budou jejich zařízení přijít o základní mobilitu a zabezpečení pro Microsoft 365 konfiguraci a neobdrží žádné náhrady z Intune.
 
 ## <a name="set-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
@@ -109,7 +109,7 @@ Certifikát MDM se obnovuje automaticky, když mobilní zařízení komunikují 
 
 ## <a name="remove-mdm-authority"></a>Odebrání autority MDM
 
-Autoritu MDM nemůžete změnit zpátky na neznámou. Autoritu MDM používá služba k určení, která zařízení zaregistrovaná na portálu se hlásí (Microsoft Intune nebo základní mobilita a zabezpečení pro Office 365).
+Autoritu MDM nemůžete změnit zpátky na neznámou. Autorita pro správu mobilních zařízení používá službu k určení, která zařízení zaregistrovaná na portálu (Microsoft Intune nebo základní mobilita a zabezpečení Microsoft 365).
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Co očekávat po změně autority MDM
 

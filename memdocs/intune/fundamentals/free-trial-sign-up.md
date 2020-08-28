@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778937ed360a2271c342c55bdd03e33ddb5bdb25
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: f6ce7aeb5d7a64d98ec27fe3882c256120358d3c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217555"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994153"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune
 
@@ -121,7 +121,7 @@ Jak je uvedeno výše, pokud má vaše organizace vlastní doménu, kterou chcet
    ![Snímek obrazovky centra pro správu Microsoft 365 – ověření domény](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > Podrobné informace o ověření záznamu TXT najdete v článku [Vytvoření záznamů DNS pro Office 365 u libovolného poskytovatele hostingu DNS](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
+   > Podrobnosti o ověření záznamu TXT najdete v tématu [Vytvoření záznamů DNS u libovolného poskytovatele hostingu DNS pro Microsoft 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
 
 ## <a name="admin-experiences"></a>Prostředí pro správu
 

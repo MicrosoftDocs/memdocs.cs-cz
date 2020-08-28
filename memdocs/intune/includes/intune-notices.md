@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c201136acd842fa0ba8ca3f38e40483cea5cea81
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820052"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996213"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -76,15 +76,6 @@ Tato zařízení nebudou mít vliv, pokud jsou některá z následujících:
 
 ![Snímek obrazovky videa stránky zásad dodržování předpisů pro Android](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Další dopady na základě verze operačního systému Android
-
-**Android 10**: pro všechna zařízení spravovaná správcem zařízení (včetně Samsung) se systémem Android 10 nebo novějším má Google možnost agenti správy zařízení, jako je portál společnosti získat přístup k informacím o identifikátoru zařízení. Toto omezení má vliv na následující funkce Intune po aktualizaci zařízení na Android 10 nebo novější:
-- Řízení přístupu k síti pro VPN už nebude fungovat.
-- Označení zařízení jako vlastněných společností pomocí IMEI nebo sériového čísla nebudou automaticky označovat zařízení jako ve vlastnictví firmy.
-- IMEI a sériové číslo se už nebudou zobrazovat správcům IT v Intune.
-
-**Android 11**: v současnosti testujeme podporu Androidu 11 na nejnovější verzi beta verze pro vývojáře, která vám pomůže vyhodnotit, jestli to způsobí dopad na zařízení spravovaná správcem zařízení.
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Uživatelské prostředí s ovlivněným nastavením na ovlivněných zařízeních
 
 Ovlivněná nastavení konfigurace:
@@ -95,6 +86,9 @@ Ovlivněná nastavení dodržování předpisů:
 - U již zaregistrovaných zařízení, která už nastavení používala, se ovlivněná nastavení dodržování předpisů budou dál zobrazovat jako důvody pro nedodržování předpisů na stránce aktualizovat nastavení zařízení, že zařízení nedodržuje předpisy a požadavky na heslo budou v aplikaci nastavení i nadále vyplněny.
 - U nově zaregistrovaných zařízení, nově přiřazených nastavení a aktualizovaných nastavení se ovlivněná nastavení dodržování předpisů budou dál zobrazovat jako důvody pro nedodržování předpisů na stránce aktualizovat nastavení zařízení a zařízení nedodržuje předpisy, ale přísnější požadavky na heslo se v aplikaci nastavení neuplatní.
 
+Další změna uživatelského prostředí pro profily sítě Wi-Fi
+- Uživatelé budou muset přijmout další oprávnění a explicitně přijmout konfigurace Wi-Fi při jejich nasazení. Konfigurace Wi-Fi se nezobrazí v seznamu známých sítí Wi-Fi, ale automaticky se připojí, když jsou v dosahu. U stávajících profilů Wi-Fi neexistují žádné změny v chování. V centru pro správu Správce koncových bodů nejsou žádné změny v prostředí pro správu.  
+
 #### <a name="cause-of-impact"></a>Příčina dopadu 
 Na zařízení bude mít vliv v říjnu 2020. V tomto okamžiku bude k dispozici Portál společnosti aktualizace aplikace, která zvýší cílení rozhraní Portál společnosti API z úrovně 28 na úroveň 29 ([podle požadavku Google](https://www.blog.google/products/android-enterprise/da-migration/)). 
 
@@ -102,10 +96,28 @@ V tomto okamžiku bude mít vliv na zařízení spravovaná správcem zařízen�
 - Aktualizace pro Android 10 nebo novější.
 - Aktualizuje aplikaci Portál společnosti na verzi, která cílí na úroveň rozhraní API 29.
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Další dopady na základě verze operačního systému Android 
+**Android 10**: u všech zařízení spravovaných správcem zařízení (včetně Samsung) se systémem Android 10 nebo novějším má Google omezenou schopnost agentům správy zařízení, jako je portál společnosti získat přístup k informacím o identifikátoru zařízení. Toto omezení má vliv na následující funkce Intune po aktualizaci zařízení na Android 10 nebo novější: 
+- Řízení přístupu k síti pro VPN už nebude fungovat. 
+- Označení zařízení jako vlastněných společností pomocí IMEI nebo sériového čísla nebudou automaticky označovat zařízení jako ve vlastnictví firmy. 
+- IMEI a sériové číslo se už nebudou zobrazovat správcům IT v Intune. 
+
+**Android 11**: budeme i nadále testovat nejnovější verzi Androidu 11 Beta, abyste mohli vyhodnotit dopad na zařízení spravovaná správcem zařízení. Tady je seznam toho, co jsme našli: 
+- Pro zařízení Správce zařízení (s výjimkou Samsung) se systémem Android 11 a novějším společnost Google odebrala možnost pro agenty pro správu, jako je Portál společnosti k vykonání blokující kamery, a to i před vydáním aktualizace Portál společnosti aplikace v říjnu. Zásady blokující kameru, které se použijí na zařízení před aktualizací Androidu 11, se budou dál uplatňovat.  
+- V systému Android 11 již nelze důvěryhodné kořenové certifikáty nasadit do zařízení zaregistrovaných u Správce zařízení (s výjimkou zařízení Samsung). Uživatelé musí na zařízení ručně nainstalovat důvěryhodný kořenový certifikát. Po ruční instalaci důvěryhodného kořenového certifikátu na zařízení můžete pomocí protokolu SCEP zřídit certifikáty pro zařízení. V tomto scénáři musíte pořád vytvořit a nasadit zásady důvěryhodných certifikátů na zařízení a propojit tyto zásady s profilem certifikátu SCEP. 
+    - Pokud je důvěryhodný kořenový certifikát na zařízení, profil certifikátu SCEP se nainstaluje úspěšně.  
+    - Pokud se důvěryhodný certifikát nenajde, profil certifikátu SCEP selže. 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Abyste se vyhnuli omezení funkčnosti nacházejícím se v říjnu 2020, doporučujeme následující:
 - **Nové registrace**: připojení nových zařízení do správy [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) Management (Pokud je k dispozici) nebo [zásad ochrany aplikací](../apps/app-protection-policies.md). Nepoužívejte registraci nových zařízení do správy Správce zařízení. 
 - **Dřív zaregistrovaná zařízení**: Pokud na zařízení spravovaném správcem zařízení běží Android 10 nebo novější nebo se může aktualizovat na Android 10 nebo novější (obzvláště pokud se nejedná o zařízení Samsung), přesuňte ho od správy zařízení k [Androidu Enterprise](../enrollment/connect-intune-android-enterprise.md) managementu a/nebo [zásadám ochrany aplikací](../apps/app-protection-policies.md). Pomocí zjednodušeného toku můžete [zařízení s Androidem přesunout ze Správce zařízení do správy pracovního profilu](../enrollment/android-move-device-admin-work-profile.md).
+- **Konfigurace složitosti hesla**: u ovlivněných zařízení se systémem Android 10 nebo novějším je budoucí nastavení s názvem složitost hesla možné pokračovat ve vynucování omezení a dodržování předpisů pro hesla. Složitosti hesla je míra síly hesla, která je v faktorech v typu hesla, délce a kvalitě.
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>Co když mám jiná zařízení než Samsung, která se nedají přesunout do Androidu Enterprise? 
+Některá zařízení nemůžou přesunout od správce zařízení do Enterprise managementu v Androidu. Například Google nezpřístupňuje [na některých trzích Android Enterprise](https://support.google.com/work/android/answer/6270910?hl=en). Intune můžete dál používat ke správě zařízení nevyužívajících Samsung se správcem zařízení, ale budou platit změny funkcí, které jsou uvedené v tomto příspěvku. Pokyny ke správě zařízení v případě, že není k dispozici Android Enterprise, najdete v tématu [Jak používat Intune v prostředích bez Google Mobile Services](../apps/manage-without-gms.md). 
+
 
 #### <a name="additional-information"></a>Další informace
 - [Přesunutí zařízení s Androidem ze Správce zařízení do správy pracovního profilu](../enrollment/android-move-device-admin-work-profile.md)

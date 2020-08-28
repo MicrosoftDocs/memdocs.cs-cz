@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f768b34b1516dda5ed23debf554bb2685b96503c
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: 77546387a5443e6f46ad0ab45d80d8038d53e64a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970562"
+ms.locfileid: "88996214"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -371,7 +371,7 @@ Tyto role zobrazíte tak, že přejdete do centra pro správu [služby Microsoft
 #### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Další vlastnosti datového skladu v 1.0<!-- 6125732  -->
 Další vlastnosti jsou k dispozici pomocí datového skladu Intune v 1.0. Následující vlastnosti jsou nyní zpřístupněny prostřednictvím entity [zařízení](../developer/reports-ref-devices.md#devices) :
 - `ethernetMacAddress` – Jedinečný identifikátor sítě tohoto zařízení.
-- `office365Version` – Verze Office 365, která je na zařízení nainstalovaná.
+- `office365Version` – Verze Microsoft 365, která je v zařízení nainstalovaná.
 
 Následující vlastnosti jsou nyní zpřístupněny prostřednictvím entity [devicePropertyHistories](../developer/reports-ref-devices.md#devicepropertyhistories) :
 - `physicalMemoryInBytes` – Fyzická paměť v bajtech.
@@ -879,8 +879,8 @@ Zásady konfigurace aplikací můžete použít ke správě nastavení S/MIME pr
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Předběžné vydání testování pro spravované aplikace Google Play<!-- 2681933  -->
 Organizace, které používají [ukončené zkušební běhy Google Play pro testování předběžných verzí aplikací](https://support.google.com/googleplay/android-developer/answer/3131213) , můžou tyto stopy spravovat pomocí Intune. Můžete selektivně přiřadit aplikace, které jsou publikovány do předprodukčních běhů Google Play do pilotních skupin, aby bylo možné provádět testování. V Intune se můžete podívat, jestli aplikace obsahuje předprodukční zkušební záznam buildu, který se do něj publikuje, a může jim přiřadit tuto stopu ke skupinám uživatelů nebo zařízení Azure AD. Tato funkce je k dispozici pro všechny aktuálně podporované podnikové scénáře Androidu (pracovní profil, plně spravované a vyhrazené). V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete přidat spravovanou aplikaci Google Play tak, že vyberete **aplikace**  >  **Android**  >  **Add**. Další informace najdete v tématu [práce se spravovanými Google Play uzavřených testovacích běhů](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
-#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams je teď součástí sady Office 365 pro macOS<!-- 5903936  -->
-Uživatelé, kteří jsou přiřazeni systém Microsoft Office pro macOS ve službě Microsoft Endpoint Manager, teď budou kromě stávajících aplikací systém Microsoft Office (Word, Excel, PowerPoint, Outlook a OneNote) dostávat i týmy Microsoftu. Intune rozpozná existující zařízení Mac, na kterých je nainstalovaný jiný Office pro aplikace macOS, a pokusí se nainstalovat Microsoft Teams při příštím ověření zařízení v Intune. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete najít **sadu Office 365 Suite** pro MacOS tak, že vyberete **aplikace**  >  **MacOS**  >  **Přidat**. Další informace najdete v tématu [přiřazení Office 365 k MacOS zařízením pomocí Microsoft Intune](../apps/apps-add-office365-macos.md).
+#### <a name="microsoft-teams-is-now-included-in-microsoft-365-for-macos---5903936----"></a>Microsoft Teams je teď součástí Microsoft 365 pro macOS<!-- 5903936  -->
+Uživatelé, kteří jsou přiřazeni Microsoft 365 pro macOS ve službě Microsoft Endpoint Manager, teď budou kromě stávajících aplikací Microsoft 365 (Word, Excel, PowerPoint, Outlook a OneNote) dostávat i týmy Microsoftu. Intune rozpozná existující zařízení Mac, na kterých je nainstalovaný jiný Office pro aplikace macOS, a pokusí se nainstalovat Microsoft Teams při příštím ověření zařízení v Intune. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete najít **sadu Office 365 Suite** pro MacOS tak, že vyberete **aplikace**  >  **MacOS**  >  **Přidat**. Další informace najdete v tématu [přiřazení Office 365 k MacOS zařízením pomocí Microsoft Intune](../apps/apps-add-office365-macos.md).
 
 #### <a name="update-to-android-app-configuration-policies---6113334----"></a>Aktualizace zásad konfigurace aplikací pro Android<!-- 6113334  -->
 Zásady konfigurace aplikací pro Android se aktualizovaly, aby správci před vytvořením konfiguračního profilu aplikace mohli vybrat typ registrace zařízení. Tato funkce je přidávána do účtu pro profily certifikátů, které jsou založeny na typu registrace (pracovní profil nebo vlastník zařízení).  Tato aktualizace poskytuje následující:
@@ -1202,7 +1202,7 @@ Datový sklad Intune poskytuje v entitě adresu MAC jako novou vlastnost ( `Ethe
 Další vlastnosti inventáře zařízení jsou k dispozici v datovém skladu Intune. Následující vlastnosti jsou nyní zpřístupněny prostřednictvím kolekce beta [zařízení](../developer/reports-ref-devices.md#devices) :
 - `ethernetMacAddress` – Jedinečný identifikátor sítě tohoto zařízení.
 - `model` – Model zařízení.
-- `office365Version` – Verze Office 365, která je na zařízení nainstalovaná.
+- `office365Version` – Verze Microsoft 365, která je v zařízení nainstalovaná.
 - `windowsOsEdition` – Verze operačního systému.
 
 Následující vlastnosti jsou nyní zpřístupněny prostřednictvím kolekce [devicePropertyHistory](../developer/reports-ref-devices.md#devicepropertyhistories) beta:

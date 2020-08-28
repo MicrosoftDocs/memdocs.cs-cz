@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befbbeee928b9eda6edb42d58e9caed9b4abd600
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b1531de9ceab57b26bc9af5faac08673b8b758b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910277"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993094"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Správa přístupu k týmové spolupráci pomocí týmů pro iOS a Android s využitím Microsoft Intune
 
 Microsoft Teams je centrum pro týmovou spolupráci v Microsoft 365, které integruje osoby, obsah a nástroje, které váš tým potřebuje k zajištění vyšší efektivity.
 
-V případě, že se přihlásíte k odběru Enterprise Mobility + Security sady, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup, jsou k dispozici bohatší a nejširší funkce ochrany pro data Office 365. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k týmům pro iOS a Android z mobilních zařízení a zásad ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
+Dostupné a nejširší možnosti ochrany pro Microsoft 365 data jsou k dispozici při přihlášení k odběru sady Enterprise Mobility + Security, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k týmům pro iOS a Android z mobilních zařízení a zásad ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
 
 ## <a name="apply-conditional-access"></a>Použití podmíněného přístupu
 Organizace můžou použít zásady podmíněného přístupu Azure AD a zajistit tak, že uživatelé budou mít přístup k pracovnímu nebo školnímu obsahu jenom pomocí týmů pro iOS a Android. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat zásady ochrany aplikací pro cloudovou aplikaci přístup s podmíněným přístupem](/azure/active-directory/conditional-access/app-protection-based-conditional-access).

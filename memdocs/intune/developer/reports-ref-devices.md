@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 223d3aa55365241983c197d0aa80e82087465d48
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907697"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996380"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -65,7 +65,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 | 10 |IPod |Zařízení iPod |
 | 11 |Android |Zařízení Android spravované pomocí Správce zařízení |
 | 12 |ISocConsumer |Zařízení iSoc Consumer |
-| 14 |MacMDM |Zařízení se systémem Mac OS X spravované pomocí integrovaného agenta MDM |
+| 14 |MacMDM |Zařízení OS X spravované pomocí integrovaného agenta MDM |
 | 15 |HoloLens |Zařízení HoloLens |
 | 16 |SurfaceHub |Zařízení Surface Hub |
 | 17 |AndroidForWork |Zařízení Android spravované pomocí vlastníka profilu Androidu |
@@ -118,7 +118,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámý                         | Neznámou chybu.                                                                                                |
-| Authentication                  | Ověření se nezdařilo.                                                                                        |
+| Ověřování                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
@@ -266,7 +266,7 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 | windowsOsEdition           | Edice operačního systému Windows.                                                                                                                             |
 | ethernetMacAddress           | Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                        |
 | model                      | Model zařízení.                                                                                                                                                                      |
-| office365Version           | Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                             |
+| office365Version           | Verze Microsoft 365, která je na zařízení nainstalovaná.                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories

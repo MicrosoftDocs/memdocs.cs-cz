@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c4b82bba24eccf9be5f410b5d2854d782230a72
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 41465fe916ef985ec0e33596be23f16910149a7a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994595"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>Data o diagnostice a použití pro verzi 1906
 
@@ -156,7 +156,7 @@ Pro Configuration Manager verze 1906 Tato úroveň zahrnuje následující data:
 
 - Počet různých brandingů pro katalog aplikací  
 
-- Počet aplikací Office 365 vytvořených pomocí řídicího panelu  
+- Počet aplikací Microsoft 365 vytvořených pomocí řídicího panelu  
 
 - Počet balíčků podle typu  
 
@@ -206,7 +206,7 @@ Pro Configuration Manager verze 1906 Tato úroveň zahrnuje následující data:
 
 - ***[Nové]*** Agregované statistiky používání skupin aplikací
 
-- ***[Nové]*** Agregované statistiky o doplňcích pro Office, použití sady nástrojů Readiness Toolkit pro Office a počty klientů s Office 365 ProPlus
+- ***[Nové]*** Agregované statistiky pro Doplňky Office, použití sady nástrojů Readiness Toolkit pro Office a počty klientů s Microsoft 365 aplikacemi pro podniky
 
 ### <a name="client"></a>Klient  
 
@@ -440,7 +440,7 @@ Pro Configuration Manager verze 1906 Tato úroveň zahrnuje následující data:
 
 - Konfigurace, které se používají pro aktivní plány údržby Windows 10  
 
-- Počet nasazených aktualizací služeb Office 365  
+- Počet nasazených aktualizací Microsoft 365  
 
 - Počet synchronizovaných ovladačů Microsoft Surface  
 

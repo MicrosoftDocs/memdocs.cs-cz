@@ -2,7 +2,7 @@
 title: Zabránění neoprávněnému přístupu k podnikovým datům
 titleSuffix: Microsoft Intune
 description: Microsoft Intune vám umožňuje zabránit neoprávněnému přístupu k firemním datům, když je sdílíte mimo podnikovou síť.
-keywords: Office 365 O365 Azure Information Protection ochrana firemních dat mimo vaši firemní síť
+keywords: Microsoft 365 M365 Azure Information Protection data chránit mimo síť firemních dat
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d11f3d38923e50492992586bfb263a530e6da9e3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 24d0ed7b9111e54c4912cf23cd5b52072253c931
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915530"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996142"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
-Dokumenty Office 365 a e-maily můžete klasifikovat, označovat a chránit, aby k nim měli přístup jen oprávnění uživatelé. Když správci IT nebo uživatelé nastaví pravidla a podmínky, začne se toto nastavení spravovat automaticky. Nebo může IT tým poskytnout doporučené nastavení, kterého by se uživatelé měli držet. Správci a uživatelé můžou také odvolat přístup k datům, která se už sdílejí, aniž by museli požádat o pomoc jinou autoritu. Díky těmto funkcím máte možnost řídit, kdo smí otevřít nebo aktualizovat chráněná data, i když opustí firemní síť. 
+Můžete klasifikovat, označovat a chránit Microsoft 365 dokumentů a e-mailů, takže k datům mají přístup jenom autorizovaní uživatelé. Když správci IT nebo uživatelé nastaví pravidla a podmínky, začne se toto nastavení spravovat automaticky. Nebo může IT tým poskytnout doporučené nastavení, kterého by se uživatelé měli držet. Správci a uživatelé můžou také odvolat přístup k datům, která se už sdílejí, aniž by museli požádat o pomoc jinou autoritu. Díky těmto funkcím máte možnost řídit, kdo smí otevřít nebo aktualizovat chráněná data, i když opustí firemní síť. 
 
 ## <a name="before-you-begin"></a>Než začnete
 
 Následující akční plán je možné provést při splnění následujících požadavků:
 * Vaše společnost je připravena na zabezpečený přechod do cloudu.
-* Vaše společnost používá Office 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
+* Vaše společnost používá Microsoft 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
 * Vaše společnost má licence na Microsoft 365, Enterprise Mobility + Security (EMS) nebo Azure Information Protection.
 * Vaše společnost pracuje se zařízeními se systémem Windows 7 Service Pack 1 nebo novějším.
 * Vaše společnost používá Microsoft 365 aplikace s aplikacemi 2016 nebo 2013, Office Professional Plus 2016, Office Professional Plus 2013 s aktualizací Service Pack 1 nebo Office Professional Plus 2010.

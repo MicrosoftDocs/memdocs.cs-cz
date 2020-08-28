@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680400"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996686"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -176,7 +176,7 @@ Tato funkce platí pro:
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení schválená uživatelem, automatický zápis zařízení
 
 - **Aplikace a procesy**: **přidejte** aplikace nebo procesy pro konfiguraci přístupu. Dále zadejte:
-  - **Název**: zadejte název vaší aplikace nebo procesu. Zadejte například `Microsoft Remote Desktop` nebo `Microsoft Office 365`.
+  - **Název**: zadejte název vaší aplikace nebo procesu. Zadejte například `Microsoft Remote Desktop` nebo `Microsoft 365`.
   
   - **Typ identifikátoru**: vaše možnosti:
     - **ID sady**: tuto možnost vyberte pro aplikace.

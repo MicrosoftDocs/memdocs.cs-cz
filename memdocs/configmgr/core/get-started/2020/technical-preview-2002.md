@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9dc5da7340e1b1051c6881e71c1f5638a95fab39
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: e54548e4e6bdb596027ec62add48d2bdfe3d52c4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85382998"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995703"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2002"></a>Funkce v Configuration Manager Technical Preview verze 2002
 
@@ -31,7 +31,7 @@ Následující části popisují nové funkce, které je možné v této verzi v
 <!-- [!INCLUDE [Example feature name](includes/2002/1234567.md)] -->
 
 [!INCLUDE [Evaluate software updates after a servicing stack update](includes/2002/4639943.md)]
-[!INCLUDE [Office 365 updates for disconnected software update points](includes/2002/4065163.md)]
+[!INCLUDE [Microsoft 365 updates for disconnected software update points](includes/2002/4065163.md)]
 [!INCLUDE [Improvements to Orchestration Groups](includes/2002/3098816.md)]
 [!INCLUDE [Improvements to Microsoft Edge management](includes/2002/4561024.md)]
 [!INCLUDE [Proxy support for Azure AD discovery and group sync](includes/2002/5913817.md)]

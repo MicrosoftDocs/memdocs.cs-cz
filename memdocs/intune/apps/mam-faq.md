@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46a9fedc230dd730d4161b719825fa68a356d8d1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 20d217246be59a612c1a022251f89559ad940894
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907417"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996431"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -66,13 +66,13 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 **Jaké jsou základní požadavky na používání zásad ochrany aplikací v aplikaci spravované přes Intune?**
 
-- Koncový uživatel musí mít účet Azure Active Directory (AAD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../fundamentals/users-add.md).
+- Koncový uživatel musí mít účet Azure Active Directory (Azure AD). Pokud se chcete dozvědět, jak se vytvářejí uživatelé Intune v Azure Active Directory, přečtěte si [Přidání uživatelů a udělení oprávnění pro správu v Intune](../fundamentals/users-add.md).
 
 - Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](../fundamentals/licenses-assign.md).
 
 - Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Skupiny zabezpečení se teď dají vytvořit v [centru pro správu Microsoft 365](https://admin.microsoft.com).
 
-- Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
+- Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu služby Azure AD.
 
 **Co když chci povolit aplikaci s Intune App Protection, ale nepoužíváte podporovanou platformu pro vývoj aplikací?**
 
@@ -85,14 +85,14 @@ Sada Intune App SDK může pro své scénáře ověřování a podmíněného sp
 
 - Koncový uživatel musí mít v zařízení nainstalovanou mobilní aplikaci Outlook.
 
-- Koncový uživatel musí mít poštovní schránku [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
+- Koncový uživatel musí mít Microsoft 365 poštovní schránku [Exchange Online](https://products.office.com/exchange/exchange-online) a licenci propojenou se svým účtem Azure Active Directory.
 
   >[!NOTE]
   > Mobilní aplikace Outlook aktuálně podporuje pouze Intune App Protection pro Microsoft Exchange Online a [Exchange Server s hybridním moderním ověřováním](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) a nepodporuje Exchange v Office 365 Dedicated.
 
 **Jaké jsou další požadavky na používání aplikací [Word, Excel a PowerPoint](https://products.office.com/business/office)?**
 
-- Koncový uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s jejich Azure Active Directorym účtem. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Koncový uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s jejich Azure Active Directorym účtem. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence Microsoft 365 lze přiřadit v centru pro [správu Microsoft 365](https://admin.microsoft.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikací Uložit kopie org data. Pokud je spravovaným umístěním například OneDrive, aplikace [OneDrive](https://onedrive.live.com/about/) by měla být nakonfigurovaná v aplikaci Word, Excel nebo PowerPoint koncového uživatele.
 
@@ -105,7 +105,7 @@ Sada Intune App SDK může pro své scénáře ověřování a podmíněného sp
 Intune označuje veškerá data v aplikaci jako podniková (firemní) nebo osobní. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy).
 
 **Jaké jsou další požadavky na používání Skypu pro firmy?**<br></br>
-Viz licenční požadavky [Skypu pro firmy](https://products.office.com/skype-for-business/it-pros). Informace o hybridních a místních konfiguracích Skypu pro firmy najdete v článcích [Hybridní moderní ověřování pro Skype pro firmy a Exchange bude všeobecně dostupné](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) a [Moderní ověřování pro Skype pro firmy v místním prostředí s AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
+Viz licenční požadavky [Skypu pro firmy](https://products.office.com/skype-for-business/it-pros). V případě hybridních a premch konfigurací SfB (Skype pro firmy) si přečtěte téma [hybridního moderního ověřování pro SFB a Exchange bude GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) a [moderní ověřování pro SFB ONPREM s Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
 
 ## <a name="app-protection-features"></a>Funkce ochrany aplikací
 

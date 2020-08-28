@@ -1,6 +1,6 @@
 ---
-title: Aktualizace Office 365 pomocí šablon pro správu v Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí šablon pro správu v nástroji Microsoft Intune aktualizujte aplikace Office 365 na nejnovější verzi a vyberte, jak často sada Office kontroluje aktualizace. Podívejte se na klíče registru zařízení, které se aktualizují při použití zásad Intune pro Office Update.
+title: Aktualizace Microsoft 365 pomocí šablon pro správu v Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí šablon pro správu v Microsoft Intune aktualizujte Microsoft 365 aplikace na nejnovější verzi a vyberte, jak často sada Office kontroluje aktualizace. Podívejte se na klíče registru zařízení, které se aktualizují při použití zásad Intune pro Office Update.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef1fb20ffffb3b24be45846638d1a05150ef7307
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 3fdda53fa4127137d21db64140262204d0afd11f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910328"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993484"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Office 365 pomocí Microsoft Intune Šablony pro správu
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Microsoft 365 Microsoft Intune Šablony pro správu
 
-V Intune můžete [ke konfiguraci nastavení zásad skupiny použít šablony Windows 10](administrative-templates-windows.md). V tomto článku se dozvíte, jak aktualizovat Office 365 pomocí šablony pro správu v Intune. Poskytuje taky pokyny k tomu, abyste potvrdili, že se zásady úspěšně použijí. Tyto informace také pomáhají při řešení problémů.
+V Intune můžete [ke konfiguraci nastavení zásad skupiny použít šablony Windows 10](administrative-templates-windows.md). V tomto článku se dozvíte, jak aktualizovat Microsoft 365 pomocí šablony pro správu v Intune. Poskytuje taky pokyny k tomu, abyste potvrdili, že se zásady úspěšně použijí. Tyto informace také pomáhají při řešení problémů.
 
-V tomto scénáři vytvoříte v Intune šablonu pro správu, která aktualizuje Office 365 na vašich zařízeních.
+V tomto scénáři vytvoříte v Intune šablonu pro správu, která aktualizuje Microsoft 365 na vašich zařízeních.
 
 Další informace o šablonách pro správu najdete v tématu [šablony Windows 10 pro konfiguraci nastavení zásad skupiny](administrative-templates-windows.md).
 
 Platí pro:
 
 - Windows 10 a novější
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>Předpoklady
 
@@ -97,7 +97,7 @@ V tomto okamžiku se zásady Intune na zařízení úspěšně nastavily.
     Zobrazí se následující klíče registru:
 
     - `UpdateChannel`: Dynamický klíč, který se mění v závislosti na nakonfigurovaných nastaveních.
-    - `CDNBaseUrl`: Nastaví se, když se na zařízení nainstaluje Office 365.
+    - `CDNBaseUrl`: Nastavte, když se na zařízení Microsoft 365 nainstaluje.
 
 3. Podívejte se na `UpdateChannel` hodnotu. Hodnota určuje, jak často se Office aktualizuje. [Spravujte Microsoft 365 aplikace pomocí Configuration Manager](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zobrazí seznam hodnot a jejich nastavení.
 
@@ -134,7 +134,7 @@ K otestování zásad můžete na zařízení vynutit nastavení zásad. Násled
 
     Měla by se aktualizovat hodnotou nastavenou v zásadě. V našem příkladu by měla být hodnota nastavena na `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` .
 
-V tuto chvíli se kanál aktualizací Office v zařízení úspěšně změnil. Můžete otevřít aplikaci Office 365 pro uživatele, který obdrží tuto aktualizaci, aby zkontroloval stav.
+V tuto chvíli se kanál aktualizací Office v zařízení úspěšně změnil. Můžete otevřít aplikaci Microsoft 365 pro uživatele, který obdrží tuto aktualizaci, aby zkontroloval stav.
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>Vynutit aktualizaci informací o účtu v synchronizaci sady Office  
 
@@ -181,7 +181,7 @@ Zvažte použití těchto kroků k otestování zásad před nasazením zásad v
 
 ## <a name="next-steps"></a>Další kroky
 
-[Aktualizace hodnot kanálu pro klienty Office 365](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Aktualizace hodnot kanálu pro klienty Microsoft 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Přehled služby cloudové zásady Office pro aplikace Microsoft 365](/deployoffice/overview-office-cloud-policy-service)
 

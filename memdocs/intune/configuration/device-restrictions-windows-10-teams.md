@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4dafeacb2aabd4d2d2241a26ce52e55c08ce04
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915734"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993314"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Nastavení Windows 10 Team pro povolení nebo omezení funkcí v zařízeních Surface Hub s využitím Intune
 
@@ -43,7 +43,7 @@ Tato nastavení používají [zprostředkovatele CSP pro SurfaceHub](/windows/cl
 - **Adresa URL obrázku pozadí úvodní obrazovky**: zadejte adresu URL obrázku. png, který chcete mít na **úvodní** obrazovce na zařízeních s Windows 10 Team, jako vlastní pozadí. Obrázek musí být ve formátu PNG a adresa URL musí začínat na `https://` .
 - **Automaticky spustit připojení**: **blok** zabraňuje automatickému otevírání aplikace Connect při spuštění projekce. Pokud je blokované, uživatelé můžou ručně spustit aplikaci připojit z nastavení centra. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Návrhy přihlašování**: **blok** zakáže automatické vyplňování přihlašovacího dialogu pomocí pozvánek z plánovaných schůzek. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
-- **Moje schůzky a soubory**: **blok** zakáže funkci **Moje schůzky a soubory** v nabídce Start. Tato funkce zobrazuje schůzky a soubory přihlášeného uživatele z Office 365. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Moje schůzky a soubory**: **blok** zakáže funkci **Moje schůzky a soubory** v nabídce Start. Tato funkce zobrazuje schůzky a soubory přihlášeného uživatele od Microsoft 365. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 

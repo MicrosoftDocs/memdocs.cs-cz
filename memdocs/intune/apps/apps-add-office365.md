@@ -1,7 +1,7 @@
 ---
-title: Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
+title: Přidání aplikací Microsoft 365 do zařízení s Windows 10 pomocí Microsoft Intune
 titleSuffix: ''
-description: Naučte se, jak můžete pomocí Microsoft Intune instalovat aplikace Office 365 na zařízeních s Windows 10.
+description: Naučte se, jak můžete pomocí Microsoft Intune instalovat aplikace Microsoft 365 na zařízeních s Windows 10.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 468e62fe9f9eb1b10469ed664ae6aa380d9114c7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2242f8570a5f0ff625855bb3d31029fb4e13e3a8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996516"
 ---
-# <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
+# <a name="add-microsoft-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Microsoft 365 do zařízení s Windows 10 pomocí Microsoft Intune
 
-Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](apps-add.md#app-types-in-microsoft-intune) jsou aplikace Office 365 pro zařízení s Windows 10. Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat aplikace Office 365 na zařízení, která spravujete pomocí Windows 10. Můžete také přiřadit a nainstalovat aplikace pro klienta Microsoft Project Online Desktop a Microsoft Visio Online Plan 2, pokud vlastníte jejich licence. Dostupné aplikace Office 365 se zobrazují jako jedna položka v seznamu aplikací v konzole Intune v rámci Azure.
+Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](apps-add.md#app-types-in-microsoft-intune) je Microsoft 365 aplikací pro zařízení s Windows 10. Když vyberete tento typ aplikace v Intune, můžete přiřazovat a instalovat aplikace Microsoft 365 do zařízení, která spravujete, na kterých běží Windows 10. Můžete také přiřadit a nainstalovat aplikace pro klienta Microsoft Project Online Desktop a Microsoft Visio Online Plan 2, pokud vlastníte jejich licence. Dostupné aplikace Microsoft 365 se zobrazují jako jedna položka v seznamu aplikací v konzole Intune v rámci Azure.
 
 > [!NOTE]
 > Systém Microsoft Office 365-plus bylo přejmenováno na **Microsoft 365 aplikace pro podniky**. V naší dokumentaci na ni běžně odkazujeme jako na **Microsoft 365 aplikace**.
@@ -37,15 +37,15 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 ## <a name="before-you-start"></a>Než začnete
 
 > [!IMPORTANT]
-> Pokud se na zařízení koncového uživatele nacházejí aplikace Office MSI, je nutné tyto aplikace bezpečně odinstalovat pomocí funkce pro **odebrání MSI**. Jinak se instalace aplikací Office 365 doručených pomocí Intune nezdaří.
+> Pokud se na zařízení koncového uživatele nacházejí aplikace Office MSI, je nutné tyto aplikace bezpečně odinstalovat pomocí funkce pro **odebrání MSI**. V opačném případě se instalace Intune Doručená Microsoft 365 aplikace nepůjde nainstalovat.
 
 - Zařízení, na která chcete tyto aplikace nasadit, musí mít aktualizaci Windows 10 Creators Update nebo novější.
 - Intune podporuje přidávání aplikací Office jenom ze sady Microsoft 365 Apps.
 - Pokud jsou spuštěné nějaké aplikace Office, když Intune instaluje sadu aplikací, může instalace selhat a uživatelé můžou přijít o data z neuložených souborů.
 - Tato metoda instalace není podporovaná v zařízeních Windows Home, Windows Team, Windows Holografick nebo Windows holografických pro firmy.
-- Intune nepodporuje instalaci desktopových aplikací Office 365 z Microsoft Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 pomocí Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
+- Intune nepodporuje instalaci Microsoft 365 desktopových aplikací z Microsoft Store (označovaných jako aplikace Office Centennial) na zařízení, na které jste už nasadili Microsoft 365 aplikace s Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
 - V případě vícenásobného přiřazení požadovaných nebo dostupných aplikací nemá novější přiřazení aditivní účinek. Novější přiřazení aplikací přepíše dříve existující přiřazení nainstalovaných aplikací. Pokud například první sada aplikací Office obsahuje Word a novější sada ho neobsahuje, Word se odinstaluje. To se netýká aplikací Visio a Project.
-- Více nasazení sady Office 365 není aktuálně podporováno. Do zařízení se doručí jenom jedno nasazení.
+- V současné době není podporováno více nasazení Microsoft 365. Do zařízení se doručí jenom jedno nasazení.
 - **Verze Office** – vyberte, jestli chcete přiřadit 32 nebo 64 verzi systému Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
 - **Odebrat MSI ze zařízení koncových uživatelů**: Vyberte, jestli chcete ze zařízení koncových uživatelů odebrat dřívější aplikace Office .MSI. Instalace se nezdaří, pokud již existuje. Aplikace MSI na zařízeních koncových uživatelů. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v tématu [odebrání stávajících verzí Office MSI při upgradu aplikací toMicrosoft 365](/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI.
 
@@ -92,7 +92,7 @@ Když zvolíte **Configuration Designer** , změní se podokno **Přidat aplikac
    - **Vyberte aplikace Office**: v rozevíracím seznamu vyberte aplikace, které chcete přiřadit k zařízením, a vyberte standardní aplikace Office, které chcete přiřadit k zařízením.
    - **Vybrat jiné aplikace Office (vyžaduje se licence)**: vyberte další aplikace Office, které chcete přiřadit k zařízením a k jejichž licencím máte licence, a to tak, že vyberete aplikace v rozevíracím seznamu. Mezi tyto aplikace patří licencované aplikace, jako je Microsoft Project Online Desktop Client a Microsoft Visio Online Plan 2.
    - **Architektura**: vyberte, jestli chcete přiřadit **32** nebo **64** verzi Microsoft 365 aplikací. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-    - **Kanál aktualizací**: Zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
+    - **Kanál aktualizací**: Zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365 pro podniky](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
         - **Měsíčně**
         - **Měsíční (cílený)**
         - **Půlroční**
@@ -111,7 +111,7 @@ Když zvolíte **Configuration Designer** , změní se podokno **Přidat aplikac
     - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v tématu [Přehled aktivace sdíleného počítače pro aplikace Microsoft 365](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
     - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
-        Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **všechny aplikace**  >  **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Pro Microsoft 365 aplikace spravované přes Intune můžete nasadit další jazyky. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune**  >  **aplikace**  >  **všechny aplikace**  >  **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části **Microsoft 365 aplikace**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu [Přehled nasazení jazyků v aplikacích Microsoft 365](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Krok 2 – (**možnost 2**) konfigurace sady aplikací s využitím dat XML 
@@ -161,25 +161,25 @@ V adresáři *systém Microsoft Office 15* jsou uloženy instalační soubory n�
 
 ![Kliknutím spustíte instalační soubory instalačního programu.](./media/apps-add-office365/clicktorun-files.png)
 
-Instalace bude v tichém režimu, pokud je přiřazení sady O365 nakonfigurované podle požadavků. Po úspěšném dokončení instalace budou stažené instalační soubory odstraněny. Pokud je přiřazení nakonfigurované jako **dostupné**, aplikace Office se zobrazí v aplikaci Portál společnosti, takže koncoví uživatelé můžou instalaci aktivovat ručně.
+Instalace bude v tichém režimu, pokud je přiřazení Microsoft 365 nakonfigurované podle požadavků. Po úspěšném dokončení instalace budou stažené instalační soubory odstraněny. Pokud je přiřazení nakonfigurované jako **dostupné**, aplikace Office se zobrazí v aplikaci Portál společnosti, takže koncoví uživatelé můžou instalaci aktivovat ručně.
 
-## <a name="troubleshooting"></a>Poradce při potížích
+## <a name="troubleshooting"></a>Řešení potíží
 Intune používá [Nástroj pro nasazení Office](/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus do klientských počítačů pomocí [sady Office 365 CDN](/office365/enterprise/content-delivery-networks). Na základě doporučených postupů uvedených v článku [Správa koncových bodů Office 365](/office365/enterprise/managing-office-365-endpoints) můžete zajistit, aby vaše síťová konfigurace mohla klientům přistupovat přímo k CDN místo směrování provozu prostřednictvím centrálních proxy serverů, aby nedocházelo k zbytečnému zavlečení latence.
 
-Pokud narazíte na problémy s instalací nebo v době běhu, spusťte [průvodce podpora Microsoftu a obnovení pro Office 365](https://diagnostics.office.com) na cílovém zařízení.
+Pokud narazíte na problémy s instalací nebo v době běhu, spusťte [průvodce podpora Microsoftu a obnovením Microsoft 365](https://diagnostics.office.com) na cílovém zařízení.
 
 ### <a name="additional-troubleshooting-details"></a>Další podrobnosti o řešení potíží
 
-Nemůžete-li nainstalovat aplikace O365 do zařízení, je nutné zjistit, zda se jedná o problém s intunem nebo s operačním systémem nebo Office. Pokud vidíte dvě složky *systém Microsoft Office* a v adresáři *Program Files* v zařízení se zobrazí *systém Microsoft Office 15* , můžete potvrdit, že Intune úspěšně iniciovalo nasazení. Pokud se tyto dvě složky nezobrazují v části *programové soubory*, měli byste potvrdit následující případy:
+Když nemůžete nainstalovat Microsoft 365 aplikace do zařízení, je nutné zjistit, jestli se jedná o problém s intunem nebo s operačním systémem nebo Office. Pokud vidíte dvě složky *systém Microsoft Office* a v adresáři *Program Files* v zařízení se zobrazí *systém Microsoft Office 15* , můžete potvrdit, že Intune úspěšně iniciovalo nasazení. Pokud se tyto dvě složky nezobrazují v části *programové soubory*, měli byste potvrdit následující případy:
 
 - Zařízení je správně zaregistrované do Microsoft Intune. 
 - V zařízení je aktivní síťové připojení. Pokud je zařízení v režimu v letadle, je vypnuté nebo se nachází v umístění bez služby, zásada se nepoužije, dokud nebude navázáno připojení k síti.
-- Jsou splněné požadavky na síť Intune i Office 365 a související rozsahy IP adres jsou dostupné v závislosti na následujících článcích:
+- Jsou splněné požadavky Intune a Microsoft 365 sítě a související rozsahy IP adres jsou dostupné v závislosti na následujících článcích:
 
   - [Požadavky na konfiguraci a šířka pásma sítě pro Intune](/intune/network-bandwidth-use)
   - [Adresy URL a rozsahy IP adres pro Office 365](/office365/enterprise/urls-and-ip-address-ranges)
 
-- Této sadě aplikací O365 byly přiřazeny správné skupiny. 
+- Microsoft 365 sadě aplikací byly přiřazeny správné skupiny. 
 
 Kromě toho Sledujte velikost adresáře *C:\Program Files\Microsoft Office\Updates\Download*. Instalační balíček stažený z cloudu Intune se uloží do tohoto umístění. Pokud se velikost nezvětšuje nebo se zvětšuje jenom velmi pomalu, doporučuje se, abyste provedli připojení k síti a šířku pásma.
 

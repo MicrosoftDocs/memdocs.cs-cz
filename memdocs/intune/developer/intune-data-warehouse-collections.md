@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ea7c06df8fec4b5961d9f89be156119fc90ff26
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915615"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993095"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -69,7 +69,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 | 3         | Aplikace z obchodu pro iOS                   | Aplikace z obchodu pro iOS                                 |
 | 4         | Obchodní aplikace pro iOS                     | Obchodní aplikace pro iOS                      |
 | 5         | Spravovaná aplikace obchodu pro iOS (MAM)     | Aplikace z obchodu pro iOS s povolenou správou       |
-| 6         | Sada O365 Pro Plus             | Aplikace Microsoft 365 pro Windows 10     |
+| 6         | Aplikace Microsoft 365 pro podniky        | Aplikace Microsoft 365 pro Windows 10     |
 | 7         | Webová aplikace                         | Webová aplikace                                        |
 | 8         | Aplikace pro Windows Phone 8.1 Store     | Aplikace pro Windows Phone 8.1 Store                    |
 | 9         | Aplikace pro Windows Store               | Aplikace pro Windows Store                              |
@@ -235,7 +235,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | DeviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
 | DeviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
 | ComplianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
-| office365Version           | Verze Office 365, která je na zařízení nainstalovaná.                                                                                                                             |
+| office365Version           | Verze Microsoft 365, která je na zařízení nainstalovaná.                                                                                                                             |
 | OSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
 | EasDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 | 11           | Android           | Zařízení Android spravované pomocí Správce zařízení   |
 | 12           | ISocConsumer      | Zařízení iSoc Consumer                                |
 | 13           | Unix              | Zařízení se systémem Unix                                         |
-| 14           | MacMDM            | Zařízení se systémem Mac OS X spravované pomocí integrovaného agenta MDM |
+| 14           | MacMDM            | Zařízení OS X spravované pomocí integrovaného agenta MDM |
 | 15           | HoloLens          | Zařízení HoloLens                                       |
 | 16           | SurfaceHub        | Zařízení Surface Hub                                  |
 | 17           | AndroidForWork    | Zařízení Android spravované pomocí vlastníka profilu Androidu  |
@@ -365,7 +365,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámý                         | Neznámou chybu.                                                                                                |
-| Authentication                  | Ověření se nezdařilo.                                                                                        |
+| Ověřování                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |

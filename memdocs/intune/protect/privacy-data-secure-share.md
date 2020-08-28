@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90ff1f6380e16fa5c970557ca1409fd5e4a8d035
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 439c217099179414ca9732dd4f57775ab2649a5f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914935"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995751"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
@@ -46,7 +46,7 @@ V rámci dodržení principu „Data protection by default“ využívá Intune 
 
 ### <a name="data-breach-reporting"></a>Ohlašování úniků dat
 
-Při zjištění bezpečnostního incidentu ohlašovaného zákazníkům (CRSI) se zákazníkům zasílá oznámení. Součástí tohoto procesu je spolupráce s týmem Microsoft O365, aby oznámení o úniku dat obdrželi všichni zákazníci Office 365 využívající Intune.
+Při zjištění bezpečnostního incidentu ohlašovaného zákazníkům (CRSI) se zákazníkům zasílá oznámení. Tento proces zahrnuje práci s Microsoft 365 týmem ke sdělení oznámení o porušení pro všechny Microsoft 365 zákazníky pomocí Intune.
 
 ## <a name="data-sharing"></a>Sdílení údajů
 

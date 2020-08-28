@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 60d08d04e2b2cb37dc7751fee0673fa8703d1865
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698918"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994442"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>Podporované konfigurace pro větev dlouhodobé údržby System Center Configuration Manager
 
@@ -268,7 +268,7 @@ Následující verze jsou podporovány pomocí uvedeného souboru. tar.
 -   Exchange Server 2013  
 
 > [!NOTE]
-> LTSB nepodporuje správu zařízení, která se připojují prostřednictvím online služby, jako je Exchange Online (Office 365).
+> LTSB nepodporuje správu zařízení, která se připojují prostřednictvím online služby, jako je Exchange Online (Microsoft 365).
 
 
 ## <a name="configuration-manager-console"></a>Konzola nástroje Configuration Manager

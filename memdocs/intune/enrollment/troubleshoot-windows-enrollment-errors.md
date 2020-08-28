@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80d3a0d66821037fba53813b8ae7b1e415e4f29a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915445"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994221"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -133,7 +133,7 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>Vypadá to, že koncový bod podmínek použití MDM není správně nakonfigurovaný.
 
 **Příčina:** Platí jedna z následujících podmínek: 
- - Pro Office 365 a Intune na tenantovi používáte správu mobilních zařízení (MDM) a uživatel, který se pokusí zaregistrovat zařízení, nemá platnou licenci Intune nebo licenci na Office 365.     
+ - Pro Microsoft 365 a Intune v tenantovi používáte správu mobilních zařízení (MDM) a uživatel, který se pokusí zaregistrovat zařízení, nemá platnou licenci Intune nebo licenci na Office 365.     
 - Podmínky a ujednání MDM ve službě Azure AD jsou prázdné nebo neobsahují správnou adresu URL.    
 
 #### <a name="resolution"></a>Řešení
@@ -141,7 +141,7 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 Chcete-li tento problém vyřešit, použijte jednu z následujících metod: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Přiřadit uživateli platnou licenci
-Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a přiřaďte uživateli buď licenci Intune, nebo Office 365.
+Otevřete centrum pro [správu Microsoft 365](https://admin.microsoft.com)a přiřaďte uživateli buď Intune, nebo Microsoft 365 licenci.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>Opravte adresu URL podmínek použití MDM.
   1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.    

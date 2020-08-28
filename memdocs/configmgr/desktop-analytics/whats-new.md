@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819724"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993142"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Co je nového v Desktop Analytics
 
@@ -72,7 +72,7 @@ Portál pro Desktop Analytics teď může zobrazovat bannery s oznámením. Tato
 
 ### <a name="improvement-to-prerequisites"></a>Vylepšení požadavků
 
-Pro Desktop Analytics už nemusíte nasazovat službu Office 365 ve svém tenantovi Azure Active Directory (Azure AD). Aplikace pro **správu klientů Office 365** ve službě Azure AD je teď aplikací pro **desktopovou analýzu** , která umožňuje Configuration Manager načítání informací a stavu ze služby.
+Desktop Analytics už nevyžaduje nasazení Microsoft 365 služby v tenantovi Azure Active Directory (Azure AD). Aplikace pro **správu klientů Office 365** ve službě Azure AD je teď aplikací pro **desktopovou analýzu** , která umožňuje Configuration Manager načítání informací a stavu ze služby.
 
 ## <a name="may-2020"></a>Květen 2020
 

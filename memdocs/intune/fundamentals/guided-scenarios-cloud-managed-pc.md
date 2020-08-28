@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1bb0f7a00fb8cf1055488f2ae0d3bd9094ce982
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911535"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993847"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -62,7 +62,7 @@ V tomto scénáři s asistencí je nutné dodat testovací zařízení a testova
 
 Vyberte uživatele, kterého chcete na zařízení nastavit. Tato osoba bude primárním uživatelem zařízení.
 
-Pokud chcete do této konfigurace přidat další uživatele nebo zařízení, stačí přidat uživatele a zařízení do skupin zabezpečení AAD generovaných průvodcem. Na rozdíl od jiných scénářů s asistencí nemusíte spustit Průvodce více než jednou, protože konfigurace není přizpůsobitelná. Stačí přidat další uživatele a zařízení do vytvořených skupin AAD. Po dokončení průvodce budete moct zobrazit skupinu vygenerovanou doporučenými nasazenými policejními.
+Pokud chcete do této konfigurace přidat další uživatele nebo zařízení, stačí přidat uživatele a zařízení do skupin zabezpečení Azure AD generovaných průvodcem. Na rozdíl od jiných scénářů s asistencí nemusíte spustit Průvodce více než jednou, protože konfigurace není přizpůsobitelná. Stačí přidat další uživatele a zařízení do vytvořených skupin Azure AD. Po dokončení průvodce budete moct zobrazit skupinu vygenerovanou doporučenými nasazenými policejními.
 
 ## <a name="step-3---device"></a>Krok 3 – zařízení
 
@@ -90,7 +90,7 @@ Poslední krok vám umožní zkontrolovat souhrn nastavení, která jste nakonfi
         - Nastavte na **vše** pro aplikaci **Microsoft Intune** nebo,
         - Nastavte na **nějaké**. Přidejte také skupinu uživatelů vytvořenou tímto scénářem s asistencí.
 2. Ověřte, jestli je vybraný uživatel schopný připojit zařízení k Azure Active Directory.
-    - Ujistěte se, že je připojení AAD:
+    - Zajistěte, aby připojení k Azure AD:
         - Nastavte na **vše** nebo,
         - Nastavte na **nějaké**. Přidejte také skupinu uživatelů vytvořenou tímto scénářem s asistencí.
 3. Postupujte podle příslušných kroků v zařízení a připojte je k Azure AD na základě následujících kroků:
@@ -122,7 +122,7 @@ Ve scénáři s asistencí se uživatel přiřadí k vybranému zařízení auto
 
 Jakmile uživatel připojí zařízení k Azure Active Directory, na zařízení se použijí následující konfigurace:
 
-1. Microsoft 365 aplikace se automaticky nainstalují na počítač spravovaný v cloudu. Zahrnuje aplikace, se kterými jste obeznámeni, včetně přístupu, Excelu, OneNotu, Outlooku, PowerPointu, vydavatele, Skypu pro firmy a Wordu. Tyto aplikace můžete použít pro připojení ke službám Office 365, jako je SharePoint Online, Exchange Online a Online Skype pro firmy. Microsoft 365 aplikace se pravidelně aktualizují s novými funkcemi, na rozdíl od verzí Office, které nejsou předplatné. Seznam nových funkcí najdete v tématu Co je nového v Office 365.
+1. Microsoft 365 aplikace se automaticky nainstalují na počítač spravovaný v cloudu. Zahrnuje aplikace, se kterými jste obeznámeni, včetně přístupu, Excelu, OneNotu, Outlooku, PowerPointu, vydavatele, Skypu pro firmy a Wordu. Tyto aplikace můžete použít pro připojení ke službám Microsoft 365, jako jsou SharePoint Online, Exchange Online a Skype pro firmy online. Microsoft 365 aplikace se pravidelně aktualizují s novými funkcemi, na rozdíl od verzí Office, které nejsou předplatné. Seznam nových funkcí najdete v tématu Co je nového v Microsoft 365.
 2. Do počítače spravovaného v cloudu se nainstalují standardní hodnoty zabezpečení systému Windows. Pokud jste nastavili rozšířenou ochranu před internetovými útoky v programu Microsoft Defender, ve scénáři s asistencí se také nakonfigurují základní nastavení pro Defender. Program Defender Advanced Threat Protection poskytuje novou vrstvu ochrany před porušením zásobníku pro Windows 10 Security. Díky kombinaci technologie klienta integrované do systému Windows 10 a robustní cloudové služby vám pomůže detekovat hrozby, které provedly v minulosti po jiné obrany. 
 
 ## <a name="next-steps"></a>Další kroky

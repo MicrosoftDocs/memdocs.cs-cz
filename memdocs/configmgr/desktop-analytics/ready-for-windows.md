@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700765"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995190"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Nejčastější dotazy k vyřazení moderních desktopových prostředí
 
@@ -45,11 +45,11 @@ Možné kategorie:
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Co se stalo s připraveným pro web Windows?
 
-Mnohé zákazníky mají problémy s načtením a aktuálností v systému Windows 10 a Office 365 ProPlus. Primární výzvou testuje aplikace, protože tento proces je obvykle ruční. Pro správce IT a vlastníky aplikací je časově náročné, aby mohli průběžně analyzovat stávající aplikace a následně opravit problémy, které vznikají.
+Mnohé zákazníky mají problémy s tím, že budou mít k dispozici Windows 10 a aplikace Microsoft 365 pro podniky aktuální. Primární výzvou testuje aplikace, protože tento proces je obvykle ruční. Pro správce IT a vlastníky aplikací je časově náročné, aby mohli průběžně analyzovat stávající aplikace a následně opravit problémy, které vznikají.
 
-*Připravený pro moderní adresář desktopových* řešení, která jsou podporovaná a používána na komerčních zařízeních s Windows 10 a Office 365 ProPlus. Tento adresář pomáhá vedoucím IT, kteří berou v úvahy o nejnovějších verzích Windows 10 a Office 365 pro jejich nasazení.
+*Připravený pro moderní adresář desktopových* řešení, která jsou podporovaná a používána na komerčních zařízeních s Windows 10 a Microsoft 365 aplikacemi pro podniky. Tento adresář pomáhá správcům IT, kteří berou v úvahách nejnovější verze Windows 10, a Microsoft 365 pro jejich nasazení.
 
-Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [připravenosti sady Office 365 proplus](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager můžete plánovat a spravovat projekty Windows 10 a Office 365 ProPlus upgrade. 
+Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager naplánujte a spravujte aplikace pro Windows 10 a Microsoft 365 pro projekty upgradu na podnik. 
 
 > [!Note]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
@@ -100,11 +100,11 @@ Desktop Analytics nabízí inventář [zařízení a jejich nainstalovaných apl
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>Můžu v nástroji Desktop Analytics dál uvést řešení softwaru?
 
-Publikujte příkaz podpory, který váš produkt pracuje s 32-bit nebo 64 Windows 10 nebo Office 365 ProPlus. Pokud chcete prezentovat vaše řešení v Desktop Analytics, obraťte se na kontakt Microsoftu.
+Publikování příkazu podpory, který váš produkt spolupracuje s 32 nebo 64 aplikací pro Windows 10 nebo Microsoft 365 pro podniky. Pokud chcete prezentovat vaše řešení v Desktop Analytics, obraťte se na kontakt Microsoftu.
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>Jak mám v seznamu využít moje řešení?
 
-Tisíc správců IT spravuje miliony zařízení s Configuration Manager a desktopovou analýzou. Používají tyto nástroje k bezproblémovému naplánování a upgradu svých organizací na nejnovější verzi Windows 10 a Office 365 ProPlus. Používají je také k rozhodování o nákupu pro softwarová řešení.
+Tisíc správců IT spravuje miliony zařízení s Configuration Manager a desktopovou analýzou. Používají tyto nástroje k bezproblémovému naplánování a upgradu svých organizací na nejnovější verzi Windows 10 a Microsoft 365 aplikací pro podniky. Používají je také k rozhodování o nákupu pro softwarová řešení.
 
 Společnost Microsoft integruje příkazy podpory od dodavatelů softwaru s informacemi o přijetí, které obdrží z komerčních zařízení. Organizace po celém světě pak používají tato data v Desktop Analytics a nástrojích připravenosti Office. 
 
@@ -118,8 +118,8 @@ Vyhodnoťte výkon svých řešení pomocí sestav stavů a metrik prostřednict
 - [Plocha](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Doplňky pro Office](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Jak můžu vyvíjet kompatibilní prostředky pro Windows 10 a Office 365 ProPlus?
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>Jak můžu vyvíjet kompatibilní prostředky pro Windows 10 a Microsoft 365 aplikace pro Enterprise?
 
 Ujistěte se, že vaše desktopové aplikace jsou teď kompatibilní a jsou v budoucnu kompatibilní s Windows 10. Další informace najdete v tématu [Kompatibilita aplikací pro vývojáře](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Pokud vyvíjíte řešení pro Office 365 ProPlus, přečtěte si téma [osvědčené postupy vývoje pro Doplňky COM, VSTO a VBA v Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Pokud vyvíjíte řešení pro Microsoft 365 aplikací pro podniky, přečtěte si téma [osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

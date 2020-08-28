@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 02b1eb010cc874e75b733b567ce4f41e59eab82e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 471fb5a73191029e1a12f58fa779347843183c12
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994850"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1610 Configuration Manager
 
@@ -336,7 +336,7 @@ Pro Configuration Manager verze 1610 Tato úroveň zahrnuje následující:
 
     -   Statistiky použití dílčích oprav clusteru  
 
-    -   Počet nasazených aktualizací služeb Office 365  
+    -   Počet nasazených aktualizací Microsoft 365  
 
     -   Klasifikace synchronizované bodem aktualizace softwaru
 

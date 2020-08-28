@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2466e18d5cf2567f85c59fe1f85bd1436c2da0a4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0d638cb382aa7abe8859648192837601c86f22ce
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915836"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996550"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Přehled k produktu Microsoft Endpoint Manager
 
@@ -105,7 +105,7 @@ Microsoft Endpoint Manager je platforma řešení, která sjednocuje několik te
 
 Pokud v tuto chvíli používáte Configuration Manager, získáte také Microsoft Intune ke společné správě zařízení s Windows. Pro jiné platformy, jako je iOS/iPadOS a Android, budete potřebovat samostatnou licenci Intune.
 
-Ve většině scénářů může být Microsoft 365 nejlepší volbou, protože poskytuje správce koncových bodů a Office 365. Další informace najdete v tématu [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+Ve většině scénářů může být Microsoft 365 nejlepší volbou, protože vám nabízí správce koncových bodů a Office. Další informace najdete v tématu [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Další kroky
 

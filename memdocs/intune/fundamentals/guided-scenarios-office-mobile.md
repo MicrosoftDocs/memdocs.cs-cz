@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217496"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993898"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace
 
@@ -52,7 +52,7 @@ Pomocí zásad ochrany aplikací můžete uživatelům zabránit v ukládání p
 - Zásady přemístění dat, jako jsou **ukládání kopií org data**, a **omezení vyjmutí, kopírování a vložení**.
 - Nastavení zásad přístupu, které vyžaduje pro přístup jednoduchý kód PIN a zablokuje spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem.
 
-Podmíněný přístup založený na aplikaci a správa klientských aplikací přidávají další vrstvu zabezpečení. Zajišťují, aby přístup k Exchangi Online a dalším službám Office 365 měly jenom klientské aplikace, které podporují řešení Intune s jeho zásadami ochrany aplikací.
+Podmíněný přístup na základě aplikace a Správa klientských aplikací přidávají vrstvu zabezpečení tím, že budou mít přístup k Exchangi Online a dalším službám Microsoft 365 jenom klientské aplikace, které podporují zásady ochrany aplikací Intune.
 
 Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete blokovat aplikace, které nemají zásady ochrany aplikací Intune použité pro přístup k SharePointu Online.
 

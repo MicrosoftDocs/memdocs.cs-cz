@@ -1,7 +1,7 @@
 ---
-title: Instalace aplikací Office 365 do zařízení macOS pomocí Microsoft Intune
+title: Instalace aplikací Microsoft 365 do zařízení macOS pomocí Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak můžete využít Microsoft Intune k instalaci aplikací Office 365 na zařízení s macOS.
+description: Naučte se, jak můžete pomocí Microsoft Intune instalovat aplikace Microsoft 365 na zařízeních macOS.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989519"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996482"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Office 365 zařízením s macOS v Microsoft Intune
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Microsoft 365 zařízením s macOS pomocí Microsoft Intune
 
-Tento typ aplikace usnadňuje přiřazení aplikací Office 365 2016 zařízením s macOS. Pomocí tohoto typu aplikace můžete nainstalovat Word, Excel, PowerPoint, Outlook, OneNote a Teams. Tyto aplikace jsou dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
+Tento typ aplikace vám usnadní přiřazování aplikací Microsoft 365 zařízením macOS. Pomocí tohoto typu aplikace můžete nainstalovat Word, Excel, PowerPoint, Outlook, OneNote a Teams. Tyto aplikace jsou dodávané prostřednictvím funkce Microsoft AutoUpdate (MAU). Je to kvůli jejich zabezpečení a aktuálnosti. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna aplikace.
 
 > [!NOTE]
 > Systém Microsoft Office 365-plus bylo přejmenováno na **Microsoft 365 aplikace pro podniky**. V naší dokumentaci na ni běžně odkazujeme jako na **Microsoft 365 aplikace**.
 
 ## <a name="before-you-start"></a>Než začnete
 
-Než začnete přidávat aplikace Office 365 do zařízení macOS, pochopte následující podrobnosti:
+Než začnete přidávat Microsoft 365 aplikace do zařízení macOS, pochopte následující podrobnosti:
 
 - Zařízení, na která tyto aplikace budete nasazovat, musí mít macOS 10.10 nebo novější.
 - Intune umožňuje přidat jenom aplikace Office, které jsou součástí sady Office 2016 pro Mac.
@@ -89,5 +89,5 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 
 ## <a name="next-steps"></a>Další kroky
 
-- Další informace o přidání aplikací Office 365 do zařízení s Windows 10 najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](apps-add-office365.md).
+- Další informace o přidání aplikací Microsoft 365 do zařízení s Windows 10 najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](apps-add-office365.md).
 - Informace o zahrnutí a vyloučení přiřazení aplikací ze skupin uživatelů najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).

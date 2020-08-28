@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9c4cc5fc662e27badcb0c1c1ae478ab700fce70e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217112"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996465"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
-*Integrovaný* typ aplikace usnadňuje přiřazování spravovaných aplikací, jako jsou aplikace Office 365, zařízením se systémem iOS/IPadOS a Androidem. Pro tento typ aplikace můžete přiřadit konkrétní aplikace, jako jsou například Excel, OneDrive, Outlook, Skype a další. Po přidání aplikace se zobrazí typ aplikace jako *Integrovaná aplikace pro iOS* nebo *Integrovaná aplikace pro Android*. Když použijete integrovaný typ aplikace, můžete vybrat, které z těchto aplikací chcete publikovat do zařízení uživatelů.
+*Integrovaný* typ aplikace usnadňuje přiřazování spravovaných aplikací, jako jsou Microsoft 365 aplikace, do zařízení s iOS/IPadOS a Androidem. Pro tento typ aplikace můžete přiřadit konkrétní aplikace, jako jsou například Excel, OneDrive, Outlook, Skype a další. Po přidání aplikace se zobrazí typ aplikace jako *Integrovaná aplikace pro iOS* nebo *Integrovaná aplikace pro Android*. Když použijete integrovaný typ aplikace, můžete vybrat, které z těchto aplikací chcete publikovat do zařízení uživatelů.
 
-Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravovaných aplikací Office 365, jako je Outlook a OneDrive. Typ aplikace se u těchto spravovaných aplikací označoval jako *Spravovaná aplikace z obchodu pro iOS* nebo *Spravovaná aplikace z obchodu pro Android*. Místo těchto aplikací doporučujeme použít integrovaný typ aplikace. Tyto aplikace poskytují větší flexibilitu pro úpravy a odstraňování aplikací Office 365.
+V dřívějších verzích konzoly Intune poskytoval Intune několik výchozích spravovaných aplikací Microsoft 365, jako je například Outlook a OneDrive. Typ aplikace se u těchto spravovaných aplikací označoval jako *Spravovaná aplikace z obchodu pro iOS* nebo *Spravovaná aplikace z obchodu pro Android*. Místo těchto aplikací doporučujeme použít integrovaný typ aplikace. Pomocí integrovaného typu aplikace máte větší flexibilitu při úpravách a odstraňování Microsoft 365ch aplikací.
 
 >[!NOTE]
->Výchozí aplikace Office 365, které jsou označené jako *spravované úložiště pro iOS* a *spravovaná aplikace pro Android* , se ze seznamu aplikací odeberou, když se odstraní všechna přiřazení.
+>Výchozí Microsoft 365 aplikace, které jsou označené jako *spravované úložiště pro iOS* a *spravovaná aplikace pro Android* , se ze seznamu aplikací odeberou, když se odstraní všechna přiřazení.
 
 ## <a name="add-a-built-in-app"></a>Přidání integrované aplikace
 

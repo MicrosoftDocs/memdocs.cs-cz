@@ -1,8 +1,8 @@
 ---
 title: Exchange bez správy zařízení
 titleSuffix: Microsoft Intune
-description: Použijte Microsoft Intune, abyste zaměstnancům poskytli přístup k e-mailu Office 365 Exchange Online bez zavedení systému pro správu zařízení.
-keywords: Přístup k e-mailu Office 365 Exchange
+description: Pomocí Microsoft Intune můžete zaměstnancům udělit přístup Microsoft 365 k e-mailu v Exchange Online bez nastavení systému pro správu zařízení.
+keywords: Přístup k e-mailu Microsoft 365 Exchange
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41782c13e3e1cfb8b0c9952a52a60e2ee0baf7ca
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8491d716751a4d370003583059546f17b689657e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909155"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996125"
 ---
-# <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
+# <a name="protect-microsoft-365-exchange-online-without-requiring-device-management"></a>Ochrana Microsoft 365 Exchange Online bez nutnosti správy zařízení
 
-Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Office 365 Exchange Online je možné poskytnout prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporované zařízení s iOS/iPadOS nebo Androidem](../fundamentals/supported-devices-browsers.md). 
+Pokud chcete zaměstnancům umožnit přístup k pracovnímu e-mailu a nezabývat se přitom zavedením systému pro správu zařízení, můžete. Přístup k Microsoft 365 Exchange Online můžete udělit prostřednictvím Intune. Před provedením potřebných kroků ověřte, že máte licence na Microsoft 365 nebo Azure Active Directory (Premium) a Intune. Zaměstnanci musí mít [podporované zařízení s iOS/iPadOS nebo Androidem](../fundamentals/supported-devices-browsers.md). 
 
 Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ ochrany aplikací funguje nezávisle na správě zařízení. 
 
@@ -52,4 +52,4 @@ Pro zvýšení zabezpečení firemních dat jste použili podmíněný přístup
 * Nastavení zásad ochrany aplikací, které pomáhají chránit firemní data před úmyslným nebo neúmyslným únikem informací 
 * Využití služby Azure Information Protection k ochraně firemních dat mimo vaši síť 
 
-Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Chcete pomáhat s povolením tohoto nebo jiných scénářů EMS nebo Microsoft 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

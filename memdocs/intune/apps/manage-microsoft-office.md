@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a33555043a742f923e5cf181d0e79991e380a05d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 06d53789bb80475528bd413d14015e30d09fca64
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913218"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996652"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Spravujte prostředí pro spolupráci pomocí Office pro iOS a Android s Microsoft Intune
 
@@ -32,7 +32,7 @@ Office pro iOS a Android nabízí několik klíčových výhod, jako jsou:
 - Integrací technologie Office Lens k odemknutí síly kamery díky funkcím, jako je převod obrázků do upravitelných dokumentů Wordu a Excelu, skenování souborů PDF a zachytávání tabulí s automatickými digitálními vylepšeními, které usnadňují čtení obsahu.
 - Přidávají se nové funkce pro běžné úkoly, ke kterým často dochází při práci na telefonu – věci, jako je vytváření rychlých poznámek, podepisování souborů PDF, skenování kódů QR a přenos souborů mezi zařízeními.
 
-V případě, že se přihlásíte k odběru Enterprise Mobility + Security sady, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup, jsou k dispozici bohatší a nejširší funkce ochrany pro data Office 365. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k Office pro iOS a Android z mobilních zařízení a zásady ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
+Dostupné a nejširší možnosti ochrany pro Microsoft 365 data jsou k dispozici při přihlášení k odběru sady Enterprise Mobility + Security, která zahrnuje Microsoft Intune a Azure Active Directory Premium funkce, jako je například podmíněný přístup. Minimálně budete chtít nasadit zásadu podmíněného přístupu, která umožňuje připojení k Office pro iOS a Android z mobilních zařízení a zásady ochrany aplikací Intune, které zajistí ochranu prostředí pro spolupráci.
 
 ## <a name="apply-conditional-access"></a>Použití podmíněného přístupu
 Organizace můžou pomocí zásad podmíněného přístupu Azure AD zajistit, že uživatelé budou mít přístup k pracovnímu nebo školnímu obsahu jenom pomocí Office pro iOS a Android. K tomu budete potřebovat zásadu podmíněného přístupu, která cílí na všechny potenciální uživatele. Podrobnosti o vytvoření této zásady najdete v v [vyžadovat zásady ochrany aplikací pro cloudovou aplikaci přístup s podmíněným přístupem](/azure/active-directory/conditional-access/app-protection-based-conditional-access).

@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5347837a45c40ebc3ec551d2d962b156a38235b4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909393"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992755"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
 [Zásady ochrany aplikací Intune](../apps/app-protection-policy.md) pomáhají chránit vaše firemní data na zařízeních, která jsou zaregistrovaná v Intune. Zásady ochrany aplikací můžete použít také u zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune. V takovém případě potřebujete mít pořád jistotu, že jsou vaše firemní data a prostředky chráněné, i když tato zařízení vaše společnost nespravuje.
 
-Podmíněný přístup na základě aplikace a Správa klientských aplikací přidávají vrstvu zabezpečení tím, že zajistí, že budou mít přístup k Exchangi Online a dalším službám Office 365 jenom klientské aplikace, které podporují zásady ochrany aplikací Intune.
+Podmíněný přístup na základě aplikace a Správa klientských aplikací přidávají vrstvu zabezpečení tím, že budou mít přístup k Exchangi Online a dalším službám Microsoft 365 jenom klientské aplikace, které podporují zásady ochrany aplikací Intune.
 
 > [!NOTE]
 > Spravovaná aplikace je taková aplikace, která využívá zásady ochrany aplikací a která lze spravovat pomocí Intune.
@@ -49,7 +49,7 @@ Další informace najdete v tématu [ceny pro Enterprise mobility](https://www.m
 
 Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [dokumentaci technické Reference k podmíněnému přístupu Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-technical-reference)
 
-Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace (LOB)](app-modern-authentication-block.md), ale tyto aplikace potřebují používat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
+Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace (LOB)](app-modern-authentication-block.md), ale tyto aplikace potřebují použít [Microsoft 365 moderní ověřování](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
 ## <a name="how-app-based-conditional-access-works"></a>Způsob fungování podmíněného přístupu na základě aplikace
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 508741d0cdb88e19bc5b2f27942e9e797f501356
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914459"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995989"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -73,7 +73,7 @@ Když zařízení **vyřadíte**, Intune odebere poskytnutá data, jako jsou fir
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Odstranění tenanta z Microsoft Intune
 
-Pokud zákazník, který používá tenanta Intune, zruší svůj účet Intune, odstraní se všechna data tenanta do 180 dnů od zavření účtu Intune zákazníkem. Pokud má tenant AAD přidružené jiné podnikové předplatné Microsoftu (třeba Azure nebo Ofice 365), odstraní se jenom data zákazníka Intune. Tenant AAD se zachová, aby ho mohla využívat jiná předplatná. Pokud má tenant AAD přidružené jenom předplatné účtu Intune, bude odstraněn tenant, všechny prostředky i zákazníkova data.
+Pokud zákazník, který používá tenanta Intune, zruší svůj účet Intune, odstraní se všechna data tenanta do 180 dnů od zavření účtu Intune zákazníkem. Pokud je tenant služby Azure AD přidružený k jiným předplatným Microsoft Enterprise (Azure, Microsoft 365), odstraní se jenom zákaznická data Intune. Prostředek tenanta Azure AD se uchovává pro použití v jiných předplatných. Pokud je účet Intune jediným předplatným přidruženým k tenantovi Azure AD, tenant se odstraní a všechny prostředky a zákaznická data se také odstraní.
 
 ## <a name="next-steps"></a>Další kroky
 

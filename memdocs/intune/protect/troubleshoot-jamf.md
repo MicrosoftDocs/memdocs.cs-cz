@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f8d2439b1a3c6255a6b63c35cd09801da4ca5d0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914714"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993057"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Řešení potíží s integrací Jamf pro s Microsoft Intune
 
@@ -38,7 +38,7 @@ Než začnete s odstraňováním potíží, shromážděte některé základní 
 - V závislosti na tom, jak nakonfigurujete integraci Jamf pro s Intune, si přečtěte požadavky z následujících článků:
   - [Integrace Jamf pro s Intune pomocí cloudového konektoru Jamf](conditional-access-jamf-cloud-connector.md)
   - [Integrace Jamf pro s Intune](conditional-access-integrate-jamf.md#prerequisites)
-- Všichni uživatelé musí mít licence Microsoft Intune a Microsoft AAD Premium P1.
+- Všichni uživatelé musí mít licence Microsoft Intune a Microsoft Azure AD Premium P1.
 - V konzole Jamf pro musíte mít uživatelský účet, který má oprávnění Microsoft Intune Integration.
 - Musíte mít uživatelský účet, který má v Azure oprávnění globálního správce.
 
@@ -85,7 +85,7 @@ Po označení *zařízení jako nereagující* Jamf pro se musí zaregistrovaný
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>Zařízení Mac – při otevření aplikace se zobrazí výzva pro přihlášení k řetězci klíčů  
 
-Když nakonfigurujete integraci Intune a Jamf pro a nasadíte zásady podmíněného přístupu, zobrazí se uživatelům zařízení spravovaných pomocí Jamf pro heslo při otevírání aplikací systém Microsoft Office 365, jako jsou týmy, Outlook a další aplikace, které vyžadují ověřování Azure AD. 
+Když nakonfigurujete integraci Intune a Jamf pro a nasadíte zásady podmíněného přístupu, zobrazí se uživatelům zařízení spravovaných pomocí Jamf pro heslo při otevírání aplikací Microsoft 365, jako jsou týmy, Outlook a další aplikace, které vyžadují ověřování Azure AD. 
 
 Například při otevření Microsoft Teams se zobrazí výzva s textem podobným následujícímu příkladu:
 

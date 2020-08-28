@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2b7deb7d3c09a41a16b1ebf3da26075f0cc70eb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915343"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996193"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
@@ -52,7 +52,7 @@ S Intune můžete spravovat víc zařízení na osobu a na různých platformác
 **[Typické scénáře](common-scenarios.md)** jsou výborným zdrojem informací o tom, jak se v Intune řeší běžné situace při práci s mobilními zařízeními. Najdete zde scénáře pro tyto oblasti:  
 
 - Ochrana e-mailu pomocí místního Exchange
-- Bezpečný přístup k Office 365
+- Zabezpečený a bezpečný přístup k Microsoft 365
 - Použití osobních zařízení pro přístup k prostředkům organizace
 
 Další informace o Intune najdete v tématu [co je Intune](what-is-intune.md).
@@ -111,7 +111,7 @@ V centru pro správu správy zařízení můžete:
 - [Azure Active Directory](/azure/active-directory)  
 - [Správa uživatelů](/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Správa skupin a členů](/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Odstraňování potíží](help-desk-operators.md)
+- [Řešení potíží](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Další kroky
 

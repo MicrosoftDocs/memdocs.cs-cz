@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b73a8322b0eb96e6dc22c806a7029213a162c5e8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906867"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992568"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -104,7 +104,7 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
 5. Konektor certifikátu PFX pro Microsoft Intune se po instalaci otevře na kartě **Zápis**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce pro Azure nebo s oprávněním správce pro Intune.
 
    > [!WARNING]
-   > Ve výchozím nastavení je **Konfigurace rozšířeného zabezpečení** Windows serveru IE nastavená na **zapnuto** , což může způsobit problémy s přihlášením k Office 365.
+   > Ve výchozím nastavení je **Konfigurace rozšířeného zabezpečení** Windows serveru IE nastavená na **zapnuto** , což může způsobit problémy s přihlášením Microsoft 365.
 
 6. Zavřete okno.
 
@@ -210,7 +210,7 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 
 8. Pokud chcete ověřit, že se certifikát naimportoval, spusťte `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.  Osvědčeným postupem je vyčistit mezipaměť tokenu AAD, aniž byste čekali, až vyprší její platnost, spusťte `Remove-IntuneAuthenticationToken`
+9.  Osvědčeným postupem je vyčistit mezipaměť tokenů Azure AD, aniž byste čekali, až vyprší její platnost, spuštěním `Remove-IntuneAuthenticationToken`
 
 Další informace o dalších dostupných příkazech najdete v souboru Readme v [projektu PFXImport PowerShellu na GitHubu](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165545"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992955"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -45,7 +45,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 | applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
 | revision |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | title |Název aplikace |Excel |
-| vydavatel |Vydavatel aplikace |Microsoft |
+| vydavatel |Vydavatel aplikace |Partnerský vztah Microsoftu |
 | uploadState |Stav nahrávání aplikace |1 |
 | appTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
 | vppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
@@ -69,7 +69,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 ### <a name="example"></a>Příklad
 
-| AppTypeID  | Name | Popis |
+| AppTypeID  | Název | Popis |
 |---------|------------|--------|
 | 0 |Aplikace z obchodu pro Android | Aplikace z obchodu pro Android |
 | 1 |Obchodní aplikace pro Android | Obchodní aplikace pro Android |
@@ -77,7 +77,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 | 3 |Aplikace z obchodu pro iOS | Aplikace z obchodu pro iOS |
 | 4 |Obchodní aplikace pro iOS | Obchodní aplikace pro iOS |
 | 5 |Spravovaná aplikace obchodu pro iOS (MAM) | Aplikace z obchodu pro iOS s povolenou správou |
-| 6 |Sada O365 Pro Plus | Aplikace Microsoft 365 pro Windows 10 |
+| 6 |Aplikace Microsoft 365 pro podniky | Aplikace Microsoft 365 pro Windows 10 |
 | 7 |Webová aplikace | Webová aplikace |
 | 8 |Aplikace pro Windows Phone 8.1 Store | Aplikace pro Windows Phone 8.1 Store |
 | 9 |Aplikace pro Windows Store | Aplikace pro Windows Store |
@@ -98,9 +98,9 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 ### <a name="example"></a>Příklad
 
-| VppProgramID  | Name | Popis |
+| VppProgramID  | Název | Popis |
 |---------|------------|--------|
-| 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Program VPP společnosti Microsoft |
+| 3DDA2474-470B-4503-9830-2665C21C1945 | Partnerský vztah Microsoftu | Program VPP společnosti Microsoft |
 | 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Program VPP společnosti Apple |
 

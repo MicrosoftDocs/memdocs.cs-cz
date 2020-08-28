@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692974"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995411"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1707 pro Configuration Manager
 
@@ -54,9 +54,9 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Podpora souborů Expresní instalace v klientu sdílené mezipaměti pro Windows 10 a Office 365
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Podpora souborů Expresní instalace v klientu sdílené mezipaměti pro Windows 10 a Microsoft 365
 <!-- 1352486 -->
-Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní instalace obsahu pro Windows 10 a souborů aktualizací pro Office 365. Nevyžadují se žádné další konfigurace.
+Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní instalace obsahu pro Windows 10 a souborů aktualizací pro Microsoft 365. Nevyžadují se žádné další konfigurace.
 
 ## <a name="surface-device-dashboard"></a>Řídicí panel zařízení Surface
 <!--1355788-->
@@ -70,7 +70,7 @@ Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní ins
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Konfigurace a nasazení zásad ochrany Application Guard v programu Windows Defender
 <!-- 1351960 -->
 
-[Ochrana Application Guard v programu Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) je nová funkce systému Windows, která pomáhá chránit uživatele otevřením nedůvěryhodných webů v zabezpečeném izolovaném kontejneru, který není přístupný jiným součástem operačního systému. V této verzi Technical Preview jsme přidali podporu pro konfiguraci této funkce pomocí Configuration Manager nastavení dodržování předpisů, která nakonfigurujete a následně nasadíte do kolekce. Tato funkce bude vydávána ve verzi Preview verze 64 aktualizace pro tvůrce (kódový název: RS3) ve Windows 10. Pokud chcete tuto funkci nyní otestovat, musíte použít verzi Preview této aktualizace.
+[Ochrana Application Guard v programu Windows Defender](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) je nová funkce systému Windows, která pomáhá chránit uživatele otevřením nedůvěryhodných webů v zabezpečeném izolovaném kontejneru, který není přístupný jiným součástem operačního systému. V této verzi Technical Preview jsme přidali podporu pro konfiguraci této funkce pomocí Configuration Manager nastavení dodržování předpisů, která nakonfigurujete a následně nasadíte do kolekce. Tato funkce bude vydávána ve verzi Preview verze 64 aktualizace pro tvůrce v systému Windows 10 (název kódu: RS3). Pokud chcete tuto funkci nyní otestovat, musíte použít verzi Preview této aktualizace.
 
 ### <a name="before-you-start"></a>Než začnete
 

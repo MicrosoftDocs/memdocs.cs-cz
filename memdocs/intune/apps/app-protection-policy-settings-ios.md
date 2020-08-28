@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 721855a344985424cfaa312bb3a5d620fd0b3635
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8c9b016a5eeb58f638e3410e05241aa4d9882cf7
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915326"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996737"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -123,6 +123,6 @@ Výchozí nastavení obsahuje předem nakonfigurované hodnoty a akce. Některé
 
 ### <a name="learn-more"></a>Další informace
 - Přečtěte si o [informacích a funkcích LinkedIn v aplikacích Microsoft](https://go.microsoft.com/fwlink/?linkid=850740).
-- Přečtěte si o možnosti připojení účtů LinkedIn na [stránce roadmapy Office 365](https://products.office.com/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
+- Přečtěte si informace o připojeních k účtu LinkedIn – vydání na [stránce průvodce Microsoft 365](https://products.office.com/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc). 
 - Přečtěte si o [konfiguraci připojení účtů LinkedIn](/azure/active-directory/linkedin-integration).
 - Další informace o datech, která jsou sdílená mezi uživateli LinkedIn a pracovními nebo školními účty uživatelů, najdete [v tématu LinkedIn v aplikacích Microsoftu ve vaší práci nebo ve škole](https://www.linkedin.com/help/linkedin/answer/84077).

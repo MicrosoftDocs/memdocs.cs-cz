@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698710"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995105"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1906 Configuration Manager Current Branch
 
@@ -505,7 +505,7 @@ Hypertextový odkaz **požadovaný zobrazení** je k dispozici v následujícíc
    - **Softwarová knihovna**  >  **Údržba**  >  Windows 10 **Všechny aktualizace Windows 10**
    - **Softwarová knihovna**  >  Správa klientů Office **365**  >  **Aktualizace Office 365**
 
-Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Další informace najdete v tématech [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Správa Windows jako služby](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)a [Správa aktualizací Microsoft 365ch aplikací](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Správa Office
@@ -514,7 +514,7 @@ Další informace najdete v tématech [monitorování aktualizací softwaru](../
 
 <!--4021125-->
 
-Abychom vám pomohli určit, která zařízení jsou připravená k upgradu na Office 365 ProPlus, je k dispozici nový řídicí panel připravenosti. Zahrnuje dlaždici **připravenosti na upgrade sady Office 365** , která byla vydaná ve Configuration Manager aktuální verze větve 1902. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **správa klientů Office 365**a vyberte uzel **Office 365 ProPlus upgrade Readiness** .
+Abychom vám pomohli určit, která zařízení jsou připravená k upgradu na Microsoft 365 aplikací pro podniky, je k dispozici nový řídicí panel připravenosti. Zahrnuje dlaždici **připravenosti na upgrade sady Office 365** , která byla vydaná ve Configuration Manager aktuální verze větve 1902. V konzole Configuration Manager otevřete pracovní prostor **Knihovna softwaru** , rozbalte položku **správa klientů Office 365**a vyberte uzel **Office 365 ProPlus upgrade Readiness** .
 
 Další informace o řídicím panelu, požadavcích a používání těchto dat najdete v tématu [integrace pro Office 365 ProPlus Readiness](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692787"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993501"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1702 Configuration Manager
 
@@ -220,11 +220,11 @@ Od této verze, když upgradujete verzi Windows ADK a pak pomocí aktualizace a 
 
 ## <a name="software-updates"></a>Aktualizace softwaru
 
-### <a name="deploy-office-365-apps-to-clients"></a>Nasazení aplikací Office 365 na klienty
-Počínaje verzí 1702 na řídicím panelu pro správu klientů Office 365 můžete spustit instalační program sady Office 365, který vám umožní nakonfigurovat nastavení instalace systému Office 365, stahovat soubory ze sítí Office Content Delivery Network (sítě CDN) a nasazovat soubory jako aplikace v Configuration Manager. Podrobnosti najdete v tématu [Správa aktualizací Office 365 ProPlus](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Nasazení aplikací Microsoft 365 do klientů
+Počínaje verzí 1702 na řídicím panelu pro správu klientů Office 365 můžete spustit instalační program sady Office 365, který vám umožní konfigurovat nastavení instalace, stahovat soubory ze sítí pro doručování obsahu (sítě CDN) pro Office a nasazovat soubory jako aplikaci v Configuration Manager. Podrobnosti najdete v tématu [Správa aktualizací Microsoft 365Ch aplikací](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
-> Aplikaci Office 365, kterou vytvoříte a nasadíte pomocí Průvodce aplikací Office 365 v Configuration Manager není automaticky spravovaná pomocí Configuration Manager, dokud nepovolíte možnost **Povolit správu klienta aktualizace softwaru pro klienta sady office 365 znovu** . Podrobnosti najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md).
+> Aplikace Microsoft 365, kterou vytvoříte a nasadíte pomocí Průvodce aplikací Office 365 v Configuration Manager, není automaticky spravovaná pomocí Configuration Manager, dokud nepovolíte možnost **Povolit správu klienta office 365 znovu** Nastav agenta klienta aktualizace softwaru. Podrobnosti najdete v tématu [informace o nastavení klienta](../../clients/deploy/about-client-settings.md).
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>Správa souborů expresní instalace pro aktualizace Windows 10
 Počínaje verzí 1702 Configuration Manager podporuje soubory Expresní instalace pro aktualizace Windows 10. Pokud používáte podporovanou verzi Windows 10, můžete použít nastavení Configuration Manager ke stažení jenom změn mezi kumulativní aktualizací Windows 10 aktuálního měsíce a aktualizací z předchozího měsíce. Bez souborů Expresní instalace Configuration Manager stáhne každý měsíc úplnou kumulativní aktualizaci Windows 10 (včetně všech aktualizací z předchozích měsíců). Použití souborů Expresní instalace poskytuje menší soubory ke stažení a rychlejší instalaci u klientů. Podrobnosti najdete v tématu [Správa souborů Expresní instalace pro aktualizace Windows 10](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).

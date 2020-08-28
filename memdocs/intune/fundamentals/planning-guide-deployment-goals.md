@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079225"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992637"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Vymezení cílů, úkolů a problémů při nasazení
 
@@ -33,9 +33,9 @@ Dobrý plán nasazení začíná prvním určením cílů a cílů nasazení va�
 
 Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v organizaci dosáhnout. Tady je několik příkladů takových cílů, včetně jejich popisu a obchodní hodnoty.
 
-- **Integrace s Office 365 a podpora použití mobilních aplikací Office**
+- **Integrace s Microsoft 365 a podpora používání mobilních aplikací Office**
 
-  - **Popis:** Zajištění úzké integrace Office 365 a použití mobilních aplikací Office, včetně jejich ochrany.
+  - **Popis:** Zajištění těsné integrace s Microsoft 365 a používání mobilních aplikací Office s ochranou aplikací.
 
   - **Obchodní hodnota:** Zabezpečené a vylepšené uživatelské prostředí, které umožňuje uživatelům používat známé a oblíbené aplikace.
 

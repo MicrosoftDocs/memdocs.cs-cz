@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 279b9fc91d26827dbca7eeb294023d2be29e7580
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993813"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
 
 Pomocí Intune a podmíněného přístupu můžete chránit přístup ke službám, jako jsou:
-- Služby Office 365, jako je Exchange Online, SharePoint Online a Online Skype pro firmy
+
+- Služby Microsoft 365, jako je Exchange Online, SharePoint Online a Online Skype pro firmy
 - Místní Exchange
 - Různé další služby
 
@@ -77,11 +78,11 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 - Zařízení s Androidem, které je zaregistrované a kompatibilní, může být i nadále blokované a při prvním pokusu o přístup k podnikovým prostředkům dostávat karanténní oznámení. Pokud k tomu dojde, zajistěte, aby aplikace Portál společnosti neběžela, a potom vyberte odkaz **Začínáme nyní** v e-mailu o karanténě pro aktivaci vyhodnocení. Toto by mělo být potřeba udělat jenom při prvním povolení podmíněného přístupu.
 
-- Zařízení s Androidem, které je zaregistrováno, může uživateli zobrazit výzvu bez nalezených certifikátů a nebude jim udělen přístup k prostředkům O365. Uživatel musí na zaregistrovaném zařízení povolit možnost *Povolit přístup z prohlížeče* následujícím způsobem:
+- Zařízení s Androidem, které je zaregistrováno, může uživateli zobrazit výzvu bez nalezených certifikátů a nebude jim udělen přístup k prostředkům Microsoft 365. Uživatel musí na zaregistrovaném zařízení povolit možnost *Povolit přístup z prohlížeče* následujícím způsobem:
   1. Otevřete aplikaci Portál společnosti.
   2. Přejděte na stránku Nastavení prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
   3. Vyberte tlačítko *Povolit přístup z prohlížeče* .
-  4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.  
+  4. V prohlížeči Chrome se odhlaste z Microsoft 365 a restartujte Chrome.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Zařízení jsou blokovaná, ale žádný e-mail o karanténě nepřišel

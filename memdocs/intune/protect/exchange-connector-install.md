@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91f7b3ecad15c9663aa7467fa60843b33123a6e5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 27d123629baa925756f842d13212f9801da13f55
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909325"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996159"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
 
@@ -154,7 +154,7 @@ Pomocí těchto kroků nainstalujete Intune Exchange Connector. Pokud máte víc
 
    U hostovaného serveru Exchange zadejte adresu serveru Exchange. Adresu URL hostovaného serveru Exchange najdete takto:
 
-   1. Otevřete Outlook pro Office 365.
+   1. Otevřete Outlook pro Microsoft 365.
 
    2. Vyberte **?** v levém horním rohu a pak vyberte **o**.
 

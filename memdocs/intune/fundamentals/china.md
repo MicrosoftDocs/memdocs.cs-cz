@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d652bea6e60417654ac06ebc1d0baa300f229a05
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915377"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994204"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Intune provozovaný společností 21Vianet v Číně  
 
@@ -55,13 +55,13 @@ Vzhledem k tomu, že čínské služby provozuje partner z Číny v Číně, exi
 
 ## <a name="you-control-customer-data"></a>Můžete kontrolovat zákaznická data
 
-V Microsoft Azure, Intune, Office 365 a Power BI provozovaných společností 21Vianet máte plnou kontrolu nad daty:
+V Microsoft Azure, Intune, Microsoft 365 a Power BI provozovaných společností 21Vianet máte plnou kontrolu nad daty:
 - Víte, kde se nacházejí zákaznická data.
 - Můžete řídit přístup k zákaznickým datům.
 - Pokud službu opustíte, budete mít kontrolu nad Zákaznickými daty.
 - Máte možnost řídit zabezpečení zákaznických dat.
 
-Pomocí Microsoft Azure, Intune, Office 365 a Power BI provozovaných společností 21Vianet jste vlastníkem vašich dat:
+Díky Microsoft Azure, Intune, Microsoft 365 a Power BI, které provozuje 21Vianet, jste vlastníkem svých dat:
 - 21Vianet nepoužívá zákaznická data pro reklamu.
 - Vy řídíte, kdo má přístup k zákaznickým datům.
 - K oddělení dat jednotlivých zákazníků používáme logickou izolaci.

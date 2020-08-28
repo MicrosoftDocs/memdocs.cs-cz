@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694419"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995394"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1806 pro Configuration Manager
 
@@ -176,14 +176,15 @@ Když v této verzi [přepnete úlohu spolusprávy](../../comanage/how-to-switch
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Přechod úloh Office 365 do Intune pomocí spolusprávy
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>Přechod úloh Microsoft 365 do Intune pomocí spolusprávy
 <!--1357841-->
-Nyní můžete převést úlohu Office 365 z Configuration Manager na Microsoft Intune poté, co povolíte spolusprávu. Chcete-li převést tuto úlohu, přejděte na stránku vlastností spolusprávy a přesuňte posuvník z Configuration Manager na pilotní nebo všechny. Další informace najdete v tématu [společná správa zařízení s Windows 10](../../comanage/overview.md).
+Nyní můžete převést úlohu Microsoft 365 z Configuration Manager na Microsoft Intune poté, co povolíte spolusprávu. Chcete-li převést tuto úlohu, přejděte na stránku vlastností spolusprávy a přesuňte posuvník z Configuration Manager na pilotní nebo všechny. Další informace najdete v tématu [společná správa zařízení s Windows 10](../../comanage/overview.md).
 
-K dispozici je také nová globální podmínka, jedná **se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek pro nové aplikace Office 365. Když přecházíte na tuto úlohu, spoluspravované klienty nesplňují požadavky na aplikaci, proto neinstalujte sadu Office 365 nasazenou prostřednictvím Configuration Manager.
+K dispozici je také nová globální podmínka, jedná **se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek na nové aplikace Microsoft 365. Když provedete přechod na tuto úlohu, spoluspravované klienty nesplňují požadavky na aplikaci, proto Neinstalujte Microsoft 365 nasazené prostřednictvím Configuration Manager.
 
 ### <a name="known-issue"></a>Známý problém
-- Tento přechod úlohy se v současné době týká jenom nasazení Office 365. Configuration Manager nadále spravuje aktualizace Office 365.<!--510876--> Další informace, včetně možného alternativního řešení, najdete v poznámce Configuration Manager k verzi 1802 verze [Změna nastavení klienta Office 365 neplatí](../servers/deploy/install/release-notes.md).
+
+- Tento přechod úlohy se v současné době týká jenom nasazení Microsoft 365. Configuration Manager nadále spravuje aktualizace Microsoft 365.<!--510876--> Další informace, včetně možného alternativního řešení, najdete v poznámce k verzi Configuration Manager verze 1802 [Microsoft 365 nastavení klienta neplatí](../servers/deploy/install/release-notes.md).
 
 
 
@@ -240,7 +241,7 @@ Nástroj pro přizpůsobení sady Office je nyní integrovaný s instalačním p
  Zkuste úkoly dokončit. Potom vám pošleme [názor](capabilities-in-technical-preview-1804.md#bkmk_feedback) , abychom věděli, jak pracovali.
 
 1. V konzole Configuration Manager otevřete pracovní prostor **softwarová knihovna** a vyberte uzel **správa klientů Office 365** .
-2. Kliknutím na dlaždici **instalační program office 365** na řídicím panelu spusťte Průvodce instalací klienta sady Office 365. Další informace najdete v tématu [nasazení aplikací Office 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+2. Kliknutím na dlaždici **instalační program office 365** na řídicím panelu spusťte Průvodce instalací klienta sady Office 365. Další informace najdete v tématu [nasazení aplikací Microsoft 365](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. Na stránce **Nastavení Office** klikněte na **Přejít na webovou stránku Office**. Pomocí online nástroje pro přizpůsobení Office určete nastavení pro toto nasazení. 
 4. Až se dokončí, klikněte na **Odeslat** v pravém horním rohu. Dokončete Průvodce instalací klienta Office 365.
 

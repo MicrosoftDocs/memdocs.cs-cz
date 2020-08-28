@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698584"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993603"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1606 Configuration Manager
 
@@ -126,10 +126,10 @@ Ve vlastnostech aplikace nebo balíčku je nyní odkaz, který vás přesměruje
 
 ## <a name="software-updates"></a>Aktualizace softwaru
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Nastavení klienta pro správu agenta klienta Office 365
-Nyní můžete použít nastavení klienta Configuration Manager ke správě klientského agenta Office 365. Po nastavení a nasazení aktualizací Office 365 funguje agent Configuration Manager klienta s agentem klienta Office 365 ke stažení a instalaci aktualizací Office 365 z distribučního bodu.
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>Nastavení klienta pro správu agenta Microsoft 365 klienta
+Nyní můžete použít nastavení klienta Configuration Manager ke správě Microsoft 365 klientského agenta. Po nastavení a nasazení aktualizací Microsoft 365 se agent klienta Configuration Manager spolupracuje se službou Microsoft 365 Client Agent ke stažení a instalaci Microsoft 365 aktualizací z distribučního bodu.
 
-Podrobnosti najdete v tématu [Správa aktualizací Office 365 ProPlus pomocí Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Podrobnosti najdete v tématu [Správa aktualizací Microsoft 365 aplikací pomocí Configuration Manager](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>Ruční přepnutí klientů na nový bod aktualizace softwaru
 Nyní můžete povolit možnost, která umožňuje klientům Configuration Manager přepnout na nový bod aktualizace softwaru v případě problémů s aktivním bodem aktualizace softwaru. Jakmile je možnost povolená, klienti budou během příštího vyhledávání hledat jiný bod aktualizace softwaru.

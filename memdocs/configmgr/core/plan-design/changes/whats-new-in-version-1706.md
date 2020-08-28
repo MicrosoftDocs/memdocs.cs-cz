@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692821"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993382"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Co&#39;s novinkou ve verzi 1706 Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Infrastruktura webu
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Podpora souborů Expresní instalace v klientu sdílené mezipaměti pro Windows 10 a Office 365  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Podpora souborů Expresní instalace v klientu sdílené mezipaměti pro Windows 10 a Microsoft 365  
 <!-- 1352486 -->
-Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní instalace obsahu pro Windows 10 a souborů aktualizací pro Office 365. Pro podporu této změny nejsou potřeba žádné další konfigurace.
+Od této verze sdílená mezipaměť podporuje distribuci souborů Expresní instalace obsahu pro Windows 10 a souborů aktualizací pro Microsoft 365. Pro podporu této změny nejsou potřeba žádné další konfigurace.
 
 ### <a name="updates-for-the-data-warehouse"></a>Aktualizace datového skladu
 <!-- 1277922 -->
@@ -227,10 +227,10 @@ Teď můžete nakonfigurovat zásady odložení pro aktualizace funkcí Windows 
 
 Podrobnosti najdete v tématu [integrace s web Windows Update pro firmy ve Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
-V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro aktualizace Office 365](../../../sum/deploy-use/manage-office-365-proplus-updates.md) .
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Microsoft 365
+Bylo provedeno vylepšení, které vám umožní využít uživatelské prostředí pro Office Klikni a spusť, když klient nainstaluje aktualizaci Microsoft 365. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Další informace najdete v tématu [chování při restartování a oznámení klientů pro Microsoft 365 aktualizace](../../../sum/deploy-use/manage-office-365-proplus-updates.md) .
 
-## <a name="reporting"></a>Vytváření sestav
+## <a name="reporting"></a>Přehledy
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Použití Windows Analytics s Configuration Manager
 <!-- 1318608 -->

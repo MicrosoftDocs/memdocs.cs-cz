@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694368"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995309"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Funkce v Configuration Manager Technical Preview verze 1807 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Známé problémy 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Problémy s aktualizacemi softwaru Office 365
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Problémy s Microsoft 365 aktualizace softwaru
 <!--521365-->
-Pokud ke správě aktualizací Office 365 používáte verzi Technical Preview, verze 1806 a 1806,2, instalace na klienty se nemusí zdařit. 
+Pokud spravujete Microsoft 365 aktualizace pomocí verze Technical Preview větví 1806 a 1806,2, instalace na klienty se nemusí zdařit. 
 
 #### <a name="workaround"></a>Alternativní řešení
-- Odstraňte existující balíčky pro nasazení a skupiny aktualizací softwaru pro sadu Office 365.  
+- Odstraňte existující balíčky pro nasazení a skupiny aktualizací softwaru pro Microsoft 365.  
 
-- Od 31. července 2018 synchronizujte aktualizace softwaru Office 365 a nasaďte pouze nejnovější aktualizace.  
+- Od 31. července 2018 synchronizuje Microsoft 365 aktualizace softwaru a nasadí jenom nejnovější aktualizace.  
 
 
 

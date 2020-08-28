@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 587e89078d0fc8eaca327017407cc81f4f4719c8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914493"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996363"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -134,7 +134,7 @@ V následující části podrobněji prozkoumáme tyto běžné externí závisl
 
 ### <a name="identity"></a>Identita
 
-Identita představuje způsob identifikace uživatelů, kteří patří do organizace a zaregistrují si zařízení. Intune vyžaduje, aby identitu uživatelů poskytovala služba Azure Active Directory (Azure AD). Pokud tuto službu už používáte, můžete použít svou existující identitu, kterou už máte v cloudu. Doporučeným nástrojem k synchronizaci místních identit uživatelů s cloudovými službami Microsoftu je Azure AD Connect. Pokud vaše organizace už používá Office 365, je důležité, aby služba Intune používala stejné prostředí Azure AD.
+Identita představuje způsob identifikace uživatelů, kteří patří do organizace a zaregistrují si zařízení. Intune vyžaduje, aby identitu uživatelů poskytovala služba Azure Active Directory (Azure AD). Pokud tuto službu už používáte, můžete použít svou existující identitu, kterou už máte v cloudu. Doporučeným nástrojem k synchronizaci místních identit uživatelů s cloudovými službami Microsoftu je Azure AD Connect. Pokud už vaše organizace používá Microsoft 365, je důležité, aby služba Intune používala stejné prostředí Azure AD.
 
 Přečtěte si další informace o následujících požadavcích na identitu Intune:
 

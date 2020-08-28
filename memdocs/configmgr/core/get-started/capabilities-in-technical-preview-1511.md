@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694504"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995479"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1511 pro Configuration Manager
 
@@ -50,24 +50,24 @@ Pro počítače připojené přes WUfB nebude Configuration Manager moci ohlási
 
 5.  Počítače, které jsou spravovány přes WUfB, budou ve stavu dodržování předpisů zobrazovat **Neznámý** a nebudou se počítat jako součást celkového procenta dodržování předpisů.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Správa aktualizace klienta Office 365 ProPlus pomocí Configuration Manager  
- Configuration Manager teď má možnost spravovat aktualizace desktopových klientů Office 365 pomocí pracovního postupu Configuration Manager Software Update Management.    
-Když společnost Microsoft publikuje novou aktualizaci klienta Office 365 pro stolní počítače do služby Windows Server Update Services (WSUS), Configuration Manager bude moci synchronizovat aktualizaci do katalogu, pokud je aktualizace Office 365 nakonfigurovaná tak, aby byla součástí synchronizace katalogu.  Server lokality Configuration Manager stáhne aktualizace klienta Office 365 a distribuuje balíček do Configuration Manager distribučních bodů.  Klient Configuration Manager pak bude informovat klienty pro stolní počítače Office 365, kde mají získat aktualizace a kdy se má spustit proces instalace aktualizace.  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Správa Microsoft 365 aplikací pro podnikové aktualizace klientů prostřednictvím Configuration Manager  
+Configuration Manager teď má možnost spravovat Microsoft 365 aktualizace klientů pro stolní počítače pomocí pracovního postupu Configuration Manager Software Update Management.
+Když společnost Microsoft publikuje novou Microsoft 365 aktualizaci klienta pro stolní počítače do služby Windows Server Update Services (WSUS), Configuration Manager bude moci synchronizovat aktualizaci do katalogu, pokud je Microsoft 365 aktualizace nakonfigurována jako součást synchronizace katalogu.  Server lokality Configuration Manager stáhne aktualizace klienta Microsoft 365 a distribuuje balíček do Configuration Manager distribučních bodů.  Klient Configuration Manager pak bude informovat Microsoft 365 desktopových klientů, kde získá aktualizace a kdy se má spustit proces instalace aktualizace.  
 
 **Předpoklady pro tento scénář:**  
 
 ### <a name="try-it-out"></a>Určitě to udělejte!  
  Zkuste dokončit následující úlohu a pak použijte informace o zpětné vazbě v horní části tohoto tématu a sdělte nám, jak se pracovalo:  
 
-1. Aktualizace sady Office 365 můžete synchronizovat se serverem lokality Configuration Manager a zobrazit je v konzole Configuration Manager.  
+1. Microsoft 365 aktualizace můžete synchronizovat s Configuration Manager serverem lokality a zobrazit je v konzole Configuration Manager.  
 
-2. Aktualizace Office 365 můžete schvalovat a úspěšně nasazovat.  
+2. Microsoft 365 aktualizace můžete schvalovat a úspěšně nasazovat.  
 
-3. Aktualizace Office 365 můžete stáhnout a úspěšně aktualizovat pro klienty.  
+3. Aktualizace klientů můžete stáhnout a úspěšně Microsoft 365.  
 
-4. Dodržování předpisů pro aktualizace Office 365 můžete ověřit pomocí v konzole monitorování nebo sestavy.  
+4. Dodržování předpisů pro Microsoft 365 aktualizace můžete ověřit pomocí konzolového monitorování nebo sestav.  
 
-   Podrobný postup najdete v tématu [Správa aktualizací klientů Office 365 pomocí Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Podrobný postup najdete v tématu [správa Microsoft 365 aktualizací klientů pomocí Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Podpora SQL Server AlwaysOn pro vysoce dostupné databáze  
  Configuration Manager teď podporuje používání skupin dostupnosti SQL Server AlwaysOn k hostování databáze lokality.  Když nainstalujete novou lokalitu, můžete nastavit, aby se místo normální instance SQL Server používala Skupina dostupnosti.  

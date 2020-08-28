@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 15c4ff7a6164517d0193c1830c8e9649f0009d64
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915853"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996618"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Řešení potíží s nasazením zásad ochrany aplikací v Intune
 
@@ -57,7 +57,7 @@ I když můžete používat zásady ochrany aplikací Intune nezávisle na řeš
 - Uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikací. Stejné zásady ochrany aplikací musí cílit na konkrétní aplikaci, která se používá.
 - Pro zařízení s Androidem je Portál společnosti aplikace nutná pro příjem zásad ochrany aplikací.
 - Pokud používáte aplikace [Word, Excel nebo PowerPoint](https://products.office.com/business/office) , musí být splněny následující další požadavky:
-    - Uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s účtem uživatele Azure Active Directory (Azure AD). Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit v [centru pro správu Microsoft 365](https://admin.microsoft.com) pomocí následujících [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+    - Uživatel musí mít licenci pro [aplikace Microsoft 365 pro firmy nebo podnik](https://products.office.com/business/compare-more-office-365-for-business-plans) propojený s účtem uživatele Azure Active Directory (Azure AD). Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence Microsoft 365 lze přiřadit v centru pro [správu Microsoft 365](https://admin.microsoft.com) pomocí následujících [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
     - Uživatel musí mít spravované umístění, které je nakonfigurováno pomocí podrobné funkce **Uložit jako** . Tento příkaz je umístěný v nastavení zásady ochrany aplikací pro **ukládání kopií dat organizace** . Pokud je spravovaným umístěním například [OneDrive](https://onedrive.live.com/about/), měla by být aplikace OneDrive nakonfigurovaná v aplikaci Word, Excel nebo PowerPointu daného uživatele.
     - Pokud je spravovaným umístěním OneDrive, musí být aplikace cílem zásady ochrany aplikací, které jsou pro uživatele nasazené.
 
@@ -74,7 +74,7 @@ Další informace o tom, jak povolit HMA pro hybridní a místní konfiguraci Sk
 [Hybridní moderní ověřování pro SfB a Exchange dosáhne GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **On-premises (místní)** <br>
-[Moderní ověřování pro SfB OnPrem s AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Moderní ověřování pro SfB OnPrem s Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Zkontroluje stav zásad ochrany aplikací.
 
@@ -83,7 +83,7 @@ Chcete-li zjistit stav ochrany aplikace, postupujte podle následujících krok�
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace**  >  **monitor**  >  **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** .
 3. Na stránce **vytváření sestav aplikací** vyberte **Vybrat uživatele** a zobrazte seznam uživatelů a skupin.
-4. Vyhledejte a vyberte ze seznamu jednoho ze všech ovlivněných uživatelů a pak vyberte **Vybrat uživatele**. V horní části podokna vytváření sestav aplikace uvidíte, jestli má uživatel licenci pro ochranu aplikací a má licenci pro O365. Můžete také zobrazit stav aplikace pro všechna zařízení uživatele.
+4. Vyhledejte a vyberte ze seznamu jednoho ze všech ovlivněných uživatelů a pak vyberte **Vybrat uživatele**. V horní části podokna vytváření sestav aplikace uvidíte, jestli má uživatel licenci pro ochranu aplikací a že má licenci pro Microsoft 365. Můžete také zobrazit stav aplikace pro všechna zařízení uživatele.
 5. Tyto důležité informace si poznamenejte jako cílené aplikace, typy zařízení, zásady, stav vrácení se změnami zařízení a čas poslední synchronizace.
 
 > [!NOTE]
@@ -194,7 +194,7 @@ Další informace o tom, jak přijímat a sdílet data aplikací, najdete v tém
 
 Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](../apps/data-transfer-between-apps-manage-ios.md).
 
-## <a name="references"></a>Reference
+## <a name="references"></a>Odkazy
 
 Pokud pořád hledáte řešení souvisejícího s nějakým problémem nebo pokud chcete získat další informace o Intune, vystavte si na našem [Microsoft Intune fóru](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)dotaz. Řada techniků podpory, MVP a členů našeho vývojového týmu navštíví fóra. Proto je velmi pravděpodobné, že můžete najít někoho, kdo má informace, které potřebujete.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692923"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995445"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1705 pro Configuration Manager
 
@@ -136,20 +136,20 @@ Chcete-li lokalitu zastavit, můžete použít [Nástroj Hierarchy Maintenance](
 Zastavení webu je ekvivalentem zastavení služby Správce součástí lokality (Sitecomp) a služby SMS_Executive, na serveru lokality.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Office 365
-V případě, že klient nainstaluje aktualizaci Office 365, provedli jsme vylepšení využití uživatelského prostředí Klikni a spusť pro Office. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Před touto verzí se po odeslání aktualizace sady Office 365 klientovi automaticky zavřely aplikace Office, které byly otevřeny bez upozornění. Po této aktualizaci už nebudou neočekávaně ukončeny aplikace Office.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Microsoft 365
+Bylo provedeno vylepšení, které vám umožní využít uživatelské prostředí pro Office Klikni a spusť, když klient nainstaluje aktualizaci Microsoft 365. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Před touto verzí byla při odeslání Microsoft 365 aktualizace klientovi automaticky zavřeny aplikace sady Office, které byly otevřeny bez upozornění. Po této aktualizaci už nebudou neočekávaně ukončeny aplikace Office.
 
 ### <a name="prerequisites"></a>Předpoklady
-Tato aktualizace se týká klientů Office 365 ProPlus.
+Tato aktualizace se vztahuje na Microsoft 365 aplikací pro klienty v podnicích.
 
 ### <a name="known-issues"></a>Známé problémy
-Když klient vyhodnotí přiřazení aktualizace Office 365 poprvé a aktualizace má konečný termín naplánovaný v minulosti, naplánovalo se okamžitě nebo plánuje do 30 minut, uživatelské prostředí Office 365 může být nekonzistentní. Klient může například obdržet dialog pro odpočítávání na 30 minut, ale skutečné vynucení může začít ještě před koncem odpočítávání. Chcete-li se tomuto chování vyhnout, vezměte v úvahu následující skutečnosti:
-- Nasaďte aktualizaci Office 365 s konečným termínem, který je naplánován na více než 60 minut před aktuálním časem.
+Když klient vyhodnotí Microsoft 365 přiřazení aktualizace poprvé a aktualizace má konečný termín naplánovaný v minulosti, naplánovalo se okamžitě nebo plánuje do 30 minut, uživatelské prostředí Microsoft 365 může být nekonzistentní. Klient může například obdržet dialog pro odpočítávání na 30 minut, ale skutečné vynucení může začít ještě před koncem odpočítávání. Chcete-li se tomuto chování vyhnout, vezměte v úvahu následující skutečnosti:
+- Nasaďte aktualizaci Microsoft 365 s konečným termínem, který je naplánován na více než 60 minut před aktuálním časem.
 - Nakonfigurujte časové období údržby během nepracovních hodin v kolekci nebo nakonfigurujte dobu odkladu vynucení v nasazení.
 
 ### <a name="try-it-out"></a>Určitě to udělejte!
 Zkuste provést následující úkoly a pak nám poslat **zpětnou vazbu** z karty **Domů** na pásu karet a sdělte nám, jak se pracovalo:
-- Nasazení na klienta aktualizace Office 365 s konečným termínem nastaveným na čas nejméně 60 minut před aktuálním časem. Sledujte nové chování klienta.
+- Nasazení do klienta Microsoft 365 aktualizace s konečným termínem nastaveným na čas alespoň 60 minut před aktuálním časem. Sledujte nové chování klienta.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Konfigurace a nasazení zásad ochrany Application Guard v programu Windows Defender

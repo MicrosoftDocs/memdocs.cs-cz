@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694861"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995224"
 ---
 # <a name="co-management-workloads"></a>Úlohy spolusprávy
 
@@ -110,9 +110,9 @@ Toto zatížení spravuje Microsoft 365 aplikace na spoluspravovaných zařízen
 
 - Aktualizace Office může trvat přibližně 24 hodin, než se v klientovi zobrazí, pokud se zařízení nerestartují.  
 
-- Je k dispozici nová globální podmínka, **jedná se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek pro nové aplikace Office 365. Při přechodu na tuto úlohu nesplňuje spoluspravovaná klienti požadavek na aplikaci. Pak neinstalují Office 365 nasazené prostřednictvím Configuration Manager.  
+- Je k dispozici nová globální podmínka, **jedná se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek na nové aplikace Microsoft 365. Při přechodu na tuto úlohu nesplňuje spoluspravovaná klienti požadavek na aplikaci. Pak se neinstalují Microsoft 365 nasazené prostřednictvím Configuration Manager.  
 
-Další informace o funkci Intune najdete v článku [přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune](/intune/apps-add-office365).
+Další informace o funkci Intune najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Klientské aplikace
 

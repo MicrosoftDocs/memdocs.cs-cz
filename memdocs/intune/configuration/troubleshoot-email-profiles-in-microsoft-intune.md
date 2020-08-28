@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565712"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995122"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Běžné problémy a řešení v e-mailových profilech v Microsoft Intune
 
@@ -51,7 +51,7 @@ V těchto scénářích se rozhodujete, jestli je pro používání skupin zař�
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Zařízení už má nainstalovaný e-mailový profil
 
-Pokud uživatelé vytvoří e-mailový profil před registrací v Intune nebo Office 365 MDM, e-mailový profil nasazený službou Intune nemusí fungovat podle očekávání:
+Pokud uživatelé vytvoří e-mailový profil před registrací v Intune nebo Microsoft 365 MDM, e-mailový profil nasazený službou Intune nemusí fungovat podle očekávání:
 
 - **iOS/iPadOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Uživatelem vytvořený e-mailový profil zablokuje nasazení profilu vytvořeného v Intune. Tento scénář je běžným problémem, protože uživatelé iOS/iPadOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti aplikace uvádí, že uživatel není kompatibilní, a může uživateli požádat o odebrání e-mailového profilu.
 

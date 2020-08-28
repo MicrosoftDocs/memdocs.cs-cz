@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2a634c70d9c182982240d63ac9d6955c56308430
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 476a22c9eae3688174dba1cd68e25a4d79f2c8ea
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128759"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994782"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-configuration-manager"></a>Úrovně shromažďování diagnostických dat o využití pro verzi 1706 Configuration Manager
 
@@ -137,7 +137,7 @@ Pro Configuration Manager verze 1706 Tato úroveň zahrnuje následující:
 
    - ***[Nové]*** Počet různých brandingů pro katalog aplikací
 
-   - ***[Nové]*** Počet aplikací Office 365 vytvořených pomocí řídicího panelu
+   - ***[Nové]*** Počet aplikací Microsoft 365 vytvořených pomocí řídicího panelu
 
    - Počet balíčků podle typu  
 
@@ -370,7 +370,7 @@ Pro Configuration Manager verze 1706 Tato úroveň zahrnuje následující:
 
     - Konfigurace, které se používají pro aktivní plány údržby Windows 10  
 
-    - Počet nasazených aktualizací služeb Office 365  
+    - Počet nasazených aktualizací Microsoft 365  
 
     - ***[Nové]*** Počet synchronizovaných ovladačů Microsoft Surface
 

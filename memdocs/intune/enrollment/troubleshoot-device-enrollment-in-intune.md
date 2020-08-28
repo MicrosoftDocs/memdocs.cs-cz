@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e700af4ef48f231f55fe515dadc2e852734d9ad3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993518"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -121,7 +121,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 **Problém:** Když do AD FS přidáte druhou ověřenou doménu, můžou se vyskytnout potíže. Uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény nemusí být schopni přihlásit se na portály nebo zaregistrovat zařízení.
 
 
-<strong>Řešení:</strong> Zákazníci s předplatným Microsoft Office 365 musí pro každou příponu nasadit samostatnou instanci federační služby AD FS 2.0, pokud:
+<strong>Řešení:</strong> Microsoft 365 zákazníkům je nutné nasadit samostatnou instanci AD FS 2,0 služba FS (Federation Service) pro každou příponu, pokud:
 - používají jednotné přihlašování (SSO) prostřednictvím služby AD FS 2.0 a
 - mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com).
 

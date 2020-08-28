@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080126"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996329"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Určení požadavků na scénáře použití
 
@@ -39,7 +39,7 @@ Tady je několik příkladů požadavků na případy použití organizace, kter
 |:---:|:---:|:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                          
 | Firemní | Vedení | Personalistika, finance | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
-| Firemní | Kiosk | Maloobchod | Android | Nastavení zařízení, profily, aplikace |
+| Firemní | Kiosk | Retail | Android | Nastavení zařízení, profily, aplikace |
 | BYOD | Informatik | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
 | BYOD | Vedení | Marketing, prodej | iOS/iPadOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
 
@@ -64,7 +64,7 @@ Tady jsou další příklady požadavků, které můžete použít ve sloupci Po
   - E-mail (Windows 10 Mobile)
 
 - **Aplikace**
-  - Office 365 se zásadami ochrany aplikace
+  - Microsoft 365 se zásadami ochrany aplikací
   - Obchodní aplikace se zásadami ochrany
 
 ## <a name="next-steps"></a>Další kroky

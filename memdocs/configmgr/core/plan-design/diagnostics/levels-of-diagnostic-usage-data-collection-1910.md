@@ -10,12 +10,12 @@ ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 316cd4b532c248027def1f1cac4dfbe71476b0a4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e1bd8667a1b6a808b0e0cdd645562fafdd24ad95
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128599"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994510"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>Data o diagnostice a použití pro verzi 1910
 
@@ -158,7 +158,7 @@ Pro Configuration Manager verze 1910 Tato úroveň zahrnuje následující data:
 
 - Počet různých brandingů pro katalog aplikací  
 
-- Počet aplikací Office 365 vytvořených pomocí řídicího panelu  
+- Počet aplikací Microsoft 365 vytvořených pomocí řídicího panelu  
 
 - Počet balíčků podle typu  
 
@@ -208,7 +208,7 @@ Pro Configuration Manager verze 1910 Tato úroveň zahrnuje následující data:
 
 - Agregované statistiky používání skupin aplikací
 
-- Agregované statistiky o doplňcích pro Office, použití sady nástrojů Readiness Toolkit pro Office a počty klientů s Office 365 ProPlus
+- Agregované statistiky pro Doplňky Office, použití sady nástrojů Readiness Toolkit pro Office a počty klientů s Microsoft 365 aplikacemi pro podniky
 
 - ***[Nové]*** Agregované statistiky o stavu doplňku pro Office
 
@@ -446,7 +446,7 @@ Pro Configuration Manager verze 1910 Tato úroveň zahrnuje následující data:
 
 - Konfigurace, které se používají pro aktivní plány údržby Windows 10  
 
-- Počet nasazených aktualizací služeb Office 365  
+- Počet nasazených aktualizací Microsoft 365  
 
 - Počet synchronizovaných ovladačů Microsoft Surface  
 
