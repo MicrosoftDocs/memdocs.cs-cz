@@ -1,11 +1,11 @@
 ---
-title: Požadavky na heslo pro zařízení v Portál společnosti Intune | Microsoft Docs
-description: Tento článek popisuje běžné požadavky na heslo, které vaše organizace může vyhovět.
+title: Požadavky na heslo pro zařízení zaregistrovaná v Intune | Microsoft Docs
+description: Tento článek popisuje, jak splňovat požadavky na heslo vaší organizace, abyste měli přístup k síti.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,38 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: b9bdada31e280c7fdc8a5d7a5a0a4a7ab7d36ae3
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047968"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057283"
 ---
-# <a name="device-password-requirements-for-enrolled-devices"></a>Požadavky na heslo zařízení pro zaregistrovaná zařízení
+# <a name="device-password-requirements"></a>Požadavky na heslo zařízení  
 
-Vaše organizace může vyžadovat, abyste před tím, než povolíte přístup k pracovním nebo školním prostředkům, vytvořili bezpečnější heslo. Tento článek popisuje běžné požadavky na heslo pro zařízení s Windows 10, iOS, macOS a Androidem. Vaše organizace nemusí vyhovět všem těmto požadavkům.  
+Pokud vaše heslo zařízení nesplňuje požadavky na zabezpečení vaší organizace, zobrazí se zpráva od Portál společnosti. Požadavky na heslo jsou zavedeny k ochraně dat vaší organizace před neoprávněným přístupem. Dokud nevytvoříte bezpečnější heslo, může být zablokován přístup k síti vaší organizace.  
 
+Portál společnosti pošle jednu zprávu na požadavek na heslo, takže se může najednou zobrazit víc než jedna zpráva. Klepnutím na libovolnou zprávu zobrazíte další podrobnosti (pokud jsou k dispozici).  
 
-Když heslo nebo heslo už nesplňují požadavek, obdržíte zprávu od Portál společnosti. Popíše změny, které je třeba provést. Pokud zpráva neobsahuje žádné podrobnosti, použijte tento článek jako referenci pro porovnání s vaším aktuálním heslem.  
+V tomto článku jsou uvedené všechny zprávy týkající se hesla, které byste mohli získat, a další podrobnosti o jednotlivých požadavcích, které jsou na platformě operačního systému k dispozici.     
+
+## <a name="change-password-passcode-pin"></a>Změnit heslo, heslo, PIN  
+
+Obecně platí, že pokud chcete získat přístup k nastavení hesla, můžete na zařízení otevřít aplikaci nastavení a vyhledat *zamykací obrazovku* nebo *nastavení zabezpečení*.  
+
+Následující články popisují, jak aktualizovat heslo zařízení podle platformy operačního systému. Pokud chcete získat nejaktuálnější pokyny pro konkrétní zařízení, přečtěte si dokumentaci od výrobce zařízení.  
+
+- [Nastavení hesla zařízení s Windows 10](set-or-change-your-password-windows.md)  
+- [Nastavení hesla pro zařízení s iOS](set-or-change-your-passcode-ios.md)  
+- [Nastavení PIN kódu nebo hesla zařízení s Androidem](set-your-pin-or-password-android.md)  
+
 
 > [!IMPORTANT]
 > Pokud jste změnili heslo tak, aby splňovalo požadavky, ale stále probíhá příjem oznámení, restartujte zařízení.  
 
-Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší organizace, obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) .  
+Konkrétní otázky týkající se požadavků na heslo vaší organizace vám poskytne pracovník podpory IT.  
 
 ## <a name="windows-10-password-requirements"></a>Požadavky na heslo pro Windows 10
 
@@ -55,7 +67,7 @@ Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší orga
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Heslo je povinné.| Nastavte heslo. Vaše organizace vyžaduje, abyste zadali heslo k odemknutí zařízení. |
 | Heslo je příliš jednoduché. |  Ujistěte se, že heslo neobsahuje sekvenční ani opakující se čísla, například 1234 nebo 1111. |
-| Heslo je příliš krátké. | Aktualizujte nebo nastavte heslo s více znaky. Vaše organizace vyžaduje, aby váš přístupový kód měl určitou délku. To, co se ve skutečnosti zvolí, se liší, ale minimální délka, kterou může vyžadovat, je 4 znaky a maximální hodnota je 14. Když změníte heslo, může se zobrazit výzva od společnosti Apple, která oznamuje, že chcete zadat 6 nebo více znaků. Tato zpráva je doporučení systému Apple. Pokud vaše organizace vyžaduje jenom heslo, které má 4 nebo 5 znaků, nemusíte zadávat heslo s číslicí 6.|  
+| Heslo je příliš krátké. | Aktualizujte nebo nastavte heslo s více znaky. Vaše organizace vyžaduje, aby váš přístupový kód měl určitou délku. To, co se ve skutečnosti zvolí, se liší, ale minimální délka, kterou může vyžadovat, je 4 znaky a maximální hodnota je 14. Když změníte heslo, může se zobrazit výzva od společnosti Apple, která oznamuje, že chcete zadat 6 nebo více znaků. Tato zpráva je jenom doporučení systému Apple. Pokud vaše organizace vyžaduje jenom heslo, které má 4 nebo 5 znaků, nemusíte zadávat heslo s 6 číslicemi.|  
 | Heslo musí obsahovat jenom číslice. | Nastavte heslo, které obsahuje pouze čísla.|
 | Heslo může obsahovat jenom alfanumerické znaky.| Nastavte heslo, které obsahuje kombinaci čísel a písmen.|
 | Heslo musí obsahovat jiné než alfanumerické znaky. | Přidejte speciální znaky, jako například `&` , `!` , `$` , `%` a `#` . Vaše organizace vyžaduje kombinaci písmen, číslic a jiných než alfanumerických znaků, aby ji ostatní mohli uhodnout a heslo.|
@@ -89,16 +101,9 @@ Pokud potřebujete další pomoc nebo zjistit konkrétní požadavky vaší orga
 | Platnost hesla vypršela. | Nastavte nové heslo. Vaše organizace vyžaduje, abyste po určitém počtu dnů změnili heslo. |
 | Heslo bylo použito v nedávné době. | Vyberte heslo, které jste předtím nepoužili. Vaše organizace vyžaduje, abyste před opětovným použitím hesla prošli určitou dobu. |
 
-## <a name="update-password-passcode-pin"></a>Aktualizovat heslo, heslo, PIN kód
-
-V následujících článcích se naučíte, jak změnit heslo, heslo nebo PIN kód zařízení. Nejaktuálnější pokyny najdete v dokumentaci k zařízení od výrobce zařízení. 
-
-- [Nastavení hesla zařízení s Windows 10](set-or-change-your-password-windows.md)  
-- [Nastavení hesla pro zařízení s iOS](set-or-change-your-passcode-ios.md)  
-- [Nastavení PIN kódu nebo hesla zařízení s Androidem](set-your-pin-or-password-android.md)  
-
 ## <a name="next-steps"></a>Další kroky
+Pokud jste si aktualizovali heslo a pořád budete dostávat zprávy týkající se hesla, zkuste zařízení restartovat. 
 
-Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

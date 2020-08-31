@@ -1,5 +1,5 @@
 ---
-title: Aplikace v Portál společnosti
+title: Aplikace v Portálu společnosti
 titleSuffix: Configuration Manager
 description: Poskytněte konzistentní uživatelské prostředí pro spoluspravovaná zařízení, která budou používat aplikaci Portál společnosti.
 ms.date: 08/20/2020
@@ -10,14 +10,14 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700898"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068102"
 ---
-# <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití Portál společnosti aplikace na spoluspravovaných zařízeních
+# <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití aplikace Portál společnosti na spoluspravovaných zařízeních
 
 *Platí pro: Configuration Manager (Current Branch)*
 
@@ -48,9 +48,11 @@ Další informace najdete v následujících článcích:
 
 - [Postup přepnutí úloh Configuration Manager do Intune](how-to-switch-workloads.md)
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Configuration Manager aktuální větev verze 2006 nebo novější
+
+- Portál společnosti verze aplikace 11.0.8980.0 nebo novější
 
 - Windows 10 verze 1803 nebo novější:
 
@@ -119,11 +121,11 @@ Pokud chcete pomoct řešit problémy s instalací aplikací Configuration Manag
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Podporuje Portál společnosti aplikace nasazené jako aktualizace softwaru z Configuration Manager?
 
-Ano. Pokud nasadíte aplikaci pomocí funkce aktualizace softwaru, klient je považuje za shodný s tím, že se uživatelské prostředí Portál společnosti nebo centra softwaru.
+Yes. Pokud nasadíte aplikaci pomocí funkce aktualizace softwaru, klient je považuje za shodný s tím, že se uživatelské prostředí Portál společnosti nebo centra softwaru.
 
 ### <a name="can-users-repair-uninstall-and-update-configuration-manager-apps-in-company-portal"></a>Můžou uživatelé opravovat, odinstalovat a aktualizovat aplikace Configuration Manager v Portál společnosti?
 
-Ano. Pokud nakonfigurujete aplikaci Configuration Manager tak, aby podporovala tyto další akce, Portál společnosti podporuje opravu, odinstalaci a aktualizaci.
+Yes. Pokud nakonfigurujete aplikaci Configuration Manager tak, aby podporovala tyto další akce, Portál společnosti podporuje opravu, odinstalaci a aktualizaci.
 
 ## <a name="known-issues"></a>Známé problémy
 

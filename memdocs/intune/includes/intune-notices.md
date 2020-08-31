@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: c201136acd842fa0ba8ca3f38e40483cea5cea81
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9c1f201bc8e9ea170125443c305d5543a515ef89
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996213"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068183"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Aktualizované prostředí koncových uživatelů pro profily Wi-Fi Správce zařízení s Androidem<!-- 7662680  -->
+Z důvodu změny provedené společností Google se prostředí koncových uživatelů pro nové profily sítě Wi-Fi výrazně liší od vydání aplikace Portál společnosti v říjnu. Uživatelé budou muset přijmout další oprávnění a explicitně přijmout konfigurace Wi-Fi při jejich nasazení. Konfigurace Wi-Fi se nezobrazí v seznamu známých sítí Wi-Fi, ale automaticky se připojí, když jsou v dosahu. U stávajících profilů Wi-Fi neexistují žádné změny v chování. V centru pro správu Správce koncových bodů nejsou žádné změny v prostředí pro správu.
+
+Platí pro:
+- Správce zařízení s Androidem, Android 10 a novější
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune ukončí podporu pro Windows Phone 8,1 a Windows 10 Mobile.<!-- 3544938, 3544909 -->
 Hlavní podpora společnosti Microsoft pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Kromě toho Microsoft Intune od 20. února 2020 pro Windows Phone 8,1 skončila podpora. 

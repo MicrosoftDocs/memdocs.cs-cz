@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 41220354f28671ae62b6f2c788dbe21790c2fa77
-  ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
+  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86210250"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89067983"
 landingContent:
 - title: O připojení tenanta
   linkLists:

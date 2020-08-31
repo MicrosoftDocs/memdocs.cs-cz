@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 73201375c9416b3a30181062d310a1d9bd60756d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914612"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057310"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 
@@ -53,7 +53,7 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
 > [!IMPORTANT]
 > Pokud se požadovaná aplikace nedokáže nainstalovat a vaše organizace ji zpřístupní pro ruční instalaci, vyberte **Opakovat**. Zobrazení aktualizovaného stavu může trvat až deset minut. Pokud při této době vyberete znovu možnost **Opakovat** a zobrazí se chyba, je to v pořádku. Nadále čekat na aktualizovaný stav deset minut.   
 
-V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v článku [Instalace Office 365 na zařízení s Windows](./install-office-windows.md).
+V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v tématu [instalace Microsoft 365 na zařízení s Windows](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Sdílení aplikací  
 Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. Následující kroky popisují, jak sdílet odkaz přímo z Portálu společnosti.

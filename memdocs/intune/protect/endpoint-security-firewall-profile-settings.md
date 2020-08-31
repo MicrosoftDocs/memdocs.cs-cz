@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 49be1ae762e50ade9e2881137a97b379ad380f7a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915020"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068129"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad brány firewall pro zabezpečení koncového bodu v Intune
 
@@ -37,7 +37,7 @@ Podporované platformy a profily:
 
 ## <a name="macos-firewall-profile"></a>Profil brány firewall macOS
 
-### <a name="firewall"></a>Firewall
+### <a name="firewall"></a>Brána firewall
 
 Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení koncového bodu pro MacOS brány firewall](../protect/endpoint-security-firewall-policy.md) .
 
@@ -193,8 +193,8 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 - **Typ sítě**  
   Zadejte typ sítě, ke kterému pravidlo patří. Můžete vybrat jednu nebo více z následujících možností. Pokud nevyberete možnost, bude pravidlo platit pro všechny typy sítí.
   - **Doména**
-  - **Soukromá**
-  - **Veřejná**
+  - **Hlášen**
+  - **Republik**
   - **Není nakonfigurováno**
 
 - **Název rodiny balíčků**  
@@ -239,7 +239,12 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 - **Rozsahy místních adres**  
   CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Přidejte jednu nebo více adres jako čárkami oddělený seznam místních adres, na které se vztahuje pravidlo. Platné položky (tokeny) obsahují následující možnosti:
+  Umožňuje spravovat místní rozsah adres pro toto pravidlo. Další možnosti:
+  - **Přidejte** jednu nebo více adres jako čárkami oddělený seznam místních adres, na které se vztahuje pravidlo.
+  - **Importujte** soubor. csv, který obsahuje seznam adres, které se mají použít jako rozsahy místních adres.
+  - **Exportujte** aktuální seznam místních rozsahů adres jako soubor. csv.
+
+  Platné položky (tokeny) obsahují následující možnosti:
   - **Hvězdička** – hvězdička ( \* ) označuje libovolnou místní adresu. Pokud je k dispozici, hvězdička musí být jediným tokenem, který je součástí.
   - **Podsíť** – zadejte podsítě pomocí masky podsítě nebo zápisu předpony sítě. Pokud není Zadaná maska podsítě nebo předpona sítě, použije se výchozí maska podsítě 255.255.255.255.
   - **Platná IPv6 adresa**
@@ -255,7 +260,12 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 - **Vzdálené rozsahy adres**  
   CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Přidejte jednu nebo více adres jako čárkami oddělený seznam vzdálených adres, na které se vztahuje pravidlo. Platné položky (tokeny) zahrnují následující a bez rozlišení velkých a malých písmen:
+  Umožňuje spravovat vzdálené rozsahy adres pro toto pravidlo. Další možnosti:
+  - **Přidejte** jednu nebo více adres jako čárkami oddělený seznam vzdálených adres, na které se vztahuje pravidlo.
+  - **Importujte** soubor. csv, který obsahuje seznam adres, které se mají použít jako rozsahy vzdálených adres.
+  - **Exportujte** aktuální seznam rozsahů vzdálených adres jako soubor. csv.
+
+  Platné položky (tokeny) zahrnují následující a bez rozlišení velkých a malých písmen:
   - **Hvězdička** – hvězdička ( \* ) označuje jakoukoli vzdálenou adresu. Pokud je k dispozici, hvězdička musí být jediným tokenem, který je součástí.
   - **Defaultgateway**
   - **DHCP**

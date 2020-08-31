@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c175d9bba142c9126552a71f1d942e5a7b975b11
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907582"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057266"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
@@ -67,7 +67,7 @@ Na Portálu společnosti se podporují i jiné verze Windows, například [Windo
 * [Aktualizace mého zařízení s Windows](you-need-to-update-your-windows-device.md)
 * [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
 * [Odeslání protokolů z aplikace Nastavení zařízení](send-logs-to-your-it-admin-settings-windows.md)
-* [Instalace Office 365 na moje zařízení s Windows 10](install-office-windows.md)
+* [Nainstalovat Office na zařízení s Windows 10](install-office-windows.md)
 * [Moje zařízení je třeba zašifrovat](you-need-to-enable-windows-encryption.md)
 * [Získání antimalwarového softwaru](your-device-needs-antimalware-software.md)
 * [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)

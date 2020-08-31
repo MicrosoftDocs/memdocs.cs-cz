@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713699"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068034"
 ---
 # <a name="monitor-the-hierarchy"></a>Monitorování hierarchie
 
@@ -52,7 +52,7 @@ Pokud sledujete lokality, vyhledejte projevy, které indikují problémy vyžadu
 Pokud úlohy monitorování odhalí jakékoli známky problémů, prozkoumejte zdroj problému. Pak ji rychle opravte, abyste minimalizovali riziko selhání lokality.  
 
 
-## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a>Monitorování běžných úloh správy
+## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a> Monitorování běžných úloh správy
 
 Configuration Manager poskytuje integrované monitorování v konzole Configuration Manager.
 
@@ -99,13 +99,9 @@ Další informace najdete v tématu [monitorování využití aplikací pomocí 
 Další informace najdete v tématu [monitorování aktualizací softwaru](../../../sum/deploy-use/monitor-software-updates.md).  
 
 
-## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a>Monitorování hierarchie lokality
+## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> Monitorování hierarchie lokality
 
-Uzel **hierarchie lokality** pracovního prostoru **sledování** poskytuje přehled vaší hierarchie Configuration Manager a propojení mezi lokalitami. Můžete použít dvoje zobrazení:  
-
-- **Diagram hierarchie**: zobrazí vaši hierarchii jako zjednodušenou topologickou mapu, která zobrazuje jenom důležité informace. Další informace najdete v tématu [Diagram hierarchie](#hierarchy-diagram).  
-
-- **Zeměpisné zobrazení**: zobrazí vaše weby na zeměpisné mapě znázorňující umístění webů, která nakonfigurujete. Další informace najdete v tématu [zeměpisné zobrazení](#geographical-view).  
+Uzel **hierarchie lokality** pracovního prostoru **sledování** poskytuje přehled vaší hierarchie Configuration Manager a propojení mezi lokalitami. 
 
 K monitorování stavu jednotlivých lokalit použijte uzel **hierarchie lokality** . Také Sledujte odkazy replikace mezi lokalitami a jejich vztah k vnějším faktorům, jako je například zeměpisné umístění.  
 
@@ -123,13 +119,16 @@ Následující možnosti pozměňují diagram hierarchie:
 
 #### <a name="groups"></a>Skupiny
 
-Nakonfigurujte počet primárních lokalit a sekundárních lokalit, které aktivují změnu v diagramu hierarchie. Tato změna v zobrazení kombinuje lokality do jednoho objektu. Pak uvidíte celkový počet lokalit a kumulativní souhrn stavových zpráv a stavu lokality na vysoké úrovni. Konfigurace skupiny neovlivní zeměpisné zobrazení.  
+Nakonfigurujte počet primárních lokalit a sekundárních lokalit, které aktivují změnu v diagramu hierarchie. Tato změna v zobrazení kombinuje lokality do jednoho objektu. Pak uvidíte celkový počet lokalit a kumulativní souhrn stavových zpráv a stavu lokality na vysoké úrovni.
 
 #### <a name="favorite-sites"></a>Oblíbené weby
 
 Zadejte jednotlivé lokality, které mají být v oblíbených lokalitách. Oblíbené lokality jsou v diagramu hierarchie označené ikonou s hvězdičkou. Oblíbené weby nejsou v kombinaci s ostatními lokalitami při používání skupin. Vždycky se zobrazují jednotlivě.  
 
 ### <a name="geographical-view"></a>Zeměpisné zobrazení
+
+> [!IMPORTANT]
+> Od srpna 2020 se tato funkce už nepoužívá. Použijte možnost **Diagram hierarchie** .<!--8116777-->
 
 Zeměpisné zobrazení ukazuje umístění jednotlivých lokalit na zeměpisné mapě. Zobrazuje jenom weby, které nakonfigurujete v umístění. Když v tomto zobrazení vyberete lokalitu, zobrazí se odkazy replikace na nadřazené nebo podřízené lokality. Na rozdíl od zobrazení diagramu hierarchie není v tomto zobrazení možné zobrazit podrobnosti o stavových zprávách nebo odkazech replikace.  
 

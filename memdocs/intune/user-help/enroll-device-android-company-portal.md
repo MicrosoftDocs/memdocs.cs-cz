@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,11 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022309"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057466"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrace zařízení pomocí Portál společnosti  
 Pokud chcete získat zabezpečený přístup k firemnímu e-mailu, aplikacím a datům, zaregistrujte své osobní nebo firemní zařízení s Androidem. Portál společnosti podporuje zařízení s Androidem, včetně Samsung KNOX, se systémem Android 4,4 a novějším.  
@@ -31,11 +32,24 @@ Pokud chcete získat zabezpečený přístup k firemnímu e-mailu, aplikacím a 
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX je typ zabezpečení, který některá zařízení Samsung využívají k další ochraně mimo rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, > přejít na **Nastavení**  >  **o zařízení**. Pokud se tam uvedená **verze Knox** nezobrazuje, máte nativní zařízení s Androidem.
+> Samsung KNOX je typ zabezpečení, který některá zařízení Samsung využívají k další ochraně mimo rámec toho, co poskytuje nativní Android. Pokud chcete zjistit, jestli máte zařízení Samsung KNOX, > přejít na **Nastavení**  >  **o zařízení**. Pokud se tam uvedená **verze Knox** nezobrazuje, máte nativní zařízení s Androidem.  
+
+## <a name="install-company-portal-app"></a>Instalace aplikace Portál společnosti  
+Nainstalujte aplikaci Portál společnosti Intune [z Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Seznam obchodů, které nabízejí aplikaci v Čínské lidové republice, najdete v tématu [instalace portál společnosti aplikace v Čínské lidové republice](install-company-portal-android-china.md) .
+
+1. Klepněte na **Domovská**  >  **Obchod Play**.
+
+2. Vyhledejte **portál společnosti Intune**. Pak klepněte na aplikaci a otevřete ji. 
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. Klepněte na **instalovat**.
+
+5. Po zobrazení výzvy k zadání oprávnění aplikace klepněte na **přijmout**.  
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>Registrace zařízení  
-Nezapomeňte nainstalovat aplikaci Portál společnosti Intune [z Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). Seznam obchodů, které nabízejí aplikaci v Čínské lidové republice, najdete v tématu [instalace portál společnosti aplikace v Čínské lidové republice](install-company-portal-android-china.md) .
-
 Během registrace můžete být požádáni, abyste zvolili kategorii, která nejlépe popisuje způsob používání zařízení. Vaše firemní podpora používá vaši odpověď ke kontrole aplikací, ke kterým máte přístup.  
 
 1. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.  

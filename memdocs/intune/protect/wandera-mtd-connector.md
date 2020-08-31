@@ -15,11 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972168"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057517"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Konektor ochrany před mobilními hrozbami Wandera s Intune  
 
@@ -37,7 +38,7 @@ Mobilní aplikace Wandera se bez problémů nainstaluje pomocí Microsoft Intune
 
 Zásady dodržování předpisů v Intune obsahují pravidlo pro MTD na základě posouzení rizik Wandera. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
-U zařízení, která nedodržují předpisy, může být přístup k prostředkům, jako je Office 365, blokovaný. Uživatelům blokovaných zařízení se dostanou pokyny z aplikace Wandera, aby problém vyřešili a znovu získali přístup.
+U zařízení, která nedodržují předpisy, je možné zablokovat přístup k prostředkům, jako je Microsoft 365. Uživatelům blokovaných zařízení se dostanou pokyny z aplikace Wandera, aby problém vyřešili a znovu získali přístup.
 
 Wandera aktualizuje Intune při každé změně nejnovější úrovně hrozby zařízení (Secure, nízká, střední nebo vysoká). Tato úroveň hrozby se neustále přepočítává v cloudu zabezpečení Wandera a je založená na stavu zařízení, aktivitě sítě a mnoha kanálech pro analýzu mobilních hrozeb napříč různými kategoriemi hrozeb.
 

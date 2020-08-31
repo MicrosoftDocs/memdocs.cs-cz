@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699785"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068051"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Další informace o ochraně osobních údajů pro Configuration Manager
 
@@ -88,6 +88,9 @@ Další informace najdete v tématu [Endpoint Protection](../../../protect/deplo
 
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Hierarchie webu – Zeměpisné zobrazení na mapách Bing Maps
+
+> [!IMPORTANT]
+> Od srpna 2020 se tato funkce už nepoužívá. Použijte možnost **Diagram hierarchie** .<!--8116777-->
 
 V konzole Configuration Manager přejděte do pracovního prostoru **monitorování** , vyberte uzel **hierarchie lokality** a přepněte do **geografického zobrazení**. Toto zobrazení vám umožní používat mapy, které Microsoft Bing Maps poskytuje k zobrazení Configuration Manager topologie fyzického serveru. Chcete-li povolit tuto funkci, informace o umístění, které poskytnete, budou odesílány z vašeho serveru do webové služby Bing Maps.
 

@@ -1,6 +1,6 @@
 ---
-title: Instalace Office 365 na zařízení s Windows 10 | Microsoft Docs
-description: ''
+title: Instalace Office na zařízení s Windows 10 | Microsoft Docs
+description: Přečtěte si o způsobech, kterými můžete nainstalovat sadu Office na zařízení s Windows 10. Podívejte se na další dostupné možnosti podpory vaší společnosti.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,14 +19,14 @@ ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a49d5de1ce0dd91ff9dacb07d50970bc9ef2e90d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ea5c59c27939fbef454d372c0a18e4b51feee
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882157"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057381"
 ---
-# <a name="installing-office-365-on-your-windows-10-device"></a>Instalace Office 365 na zařízení s Windows 10
+# <a name="install-office-on-your-windows-10-device"></a>Instalace Office na zařízení s Windows 10
 
 Sadu Office lze na zařízení s Windows 10 nainstalovat mnoha způsoby. V závislosti na velikosti vaší společnosti může být na Portálu společnosti dostupných více verzí Office ke stažení.
 

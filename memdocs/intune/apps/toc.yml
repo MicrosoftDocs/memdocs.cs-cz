@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: Spravované aplikace Google Play
               href: apps-add-android-for-work.md
-        - name: Office 365 Suite
+        - name: Sada Microsoft 365
           items:
-            - name: Aplikace Office 365 pro Windows 10
+            - name: Microsoft 365 Apps pro Windows 10
               href: apps-add-office365.md
-            - name: Aplikace Office 365 pro macOS
+            - name: Microsoft 365 Apps pro macOS
               href: apps-add-office365-macos.md
         - name: Systémové aplikace typu Android Enterprise
           href: apps-ae-system.md

@@ -1,11 +1,11 @@
 ---
 title: Nastavení nebo změna hesla zařízení | Microsoft Docs
-description: ''
+description: Vytvořte nebo změňte heslo na mobilním zařízení s Windows 10 nebo na stolním počítači.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2018
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,35 +17,30 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0c4922bfa179436d30d73c4314662ee0cd7aa815
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ec3fdfb5015cd1b0c0c43e94f9cf55762e4bf559
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881909"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057449"
 ---
-# <a name="make-your-device-safer-with-the-right-password"></a>Zlepšení zabezpečení zařízení pomocí správného hesla
+# <a name="set-a-device-password-on-windows-10-device"></a>Nastavení hesla zařízení v zařízení s Windows 10
+Vytvořte nebo změňte heslo na mobilním zařízení s Windows 10 nebo na stolním počítači. 
 
-Uživatelé potřebují každý den přistupovat ze svých zařízení se systémem Windows k podnikovým prostředkům, například k e-mailům a dokumentům. Organizace chtějí zajistit, aby byl přístup z těchto zařízení bezpečný. Jedním ze způsobů, jak zajistit bezpečný přístup zařízení k těmto prostředkům, je vyžadování použití hesla. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
+Na mobilním zařízení:
 
-Pokud zařízení s Windows nevyhovuje zásadám definovaným firemní podporou, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co potřebujete udělat, aby heslo splňovalo požadavky.
+1. Přejděte do nabídky **Start** > **Nastavení**.
+2. Nastavení systému je otevřené. Vyberte **Accounts**  >  **Možnosti přihlášení k**účtům.
+3. Vyberte **Password**  >  **změnu**hesla.
+4. Podle pokynů na obrazovce nastavte nové heslo.  
 
-> [!Note]
-> Firemní podpora může pro heslo nastavit více požadavků. Může například požadovat, aby heslo mělo určitý počet znaků, které představují kombinaci číslic a písmen. Vzhledem k tomu, že může být nastaveno více požadavků, vysvětlují tyto pokyny jenom to, jak heslo nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků.
+Na stolním zařízení:  
+1. Na klávesnici stiskněte **kombinaci kláves CTRL** + **ALT** + **del** .   
+2. Vyberte **změnit heslo**.
+3. Podle pokynů na obrazovce nastavte nové heslo.  
 
-## <a name="to-change-your-password-on-windows-phone-81"></a>Změna hesla ve Windows Phone 8.1
+Další nápovědu: 
+ 
+* Pro pomoc s požadavky na heslo, Portál společnosti nebo problémy s přístupem k síti se obraťte na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Další informace o dalších možnostech přihlašování ve Windows 10 najdete v tématu [Možnosti přihlášení k Windows 10 a ochrana účtů](https://support.microsoft.com/help/4468253/windows-10-sign-in-options-and-privacy).  
 
-1. Na **domovské obrazovce** zvolte **Nastavení** a pak zvolte **Zamykací obrazovka**.
-2. Posuňte se dolů na **Heslo** a zvolte **Změnit heslo**.
-3. Do pole **Aktuální heslo** zadejte aktuální heslo.
-4. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrdit heslo**.
-4. Zvolte **Hotovo**.
-
-## <a name="to-set-your-password-on-windows-phone-81"></a>Nastavení hesla ve Windows Phone 8.1
-
-1. Na **domovské obrazovce** zvolte **Nastavení** a pak zvolte **Zamykací obrazovka**.
-2. Přejděte dolů na **Heslo** a přesuňte ovladač pro **Heslo** do polohy **Zapnuto**.
-3. Do pole **Nové heslo** zadejte nové heslo a potvrďte ho v poli **Potvrdit heslo**.
-4. Zvolte **Hotovo**.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

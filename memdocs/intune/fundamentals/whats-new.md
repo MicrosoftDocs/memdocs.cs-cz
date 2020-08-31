@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77546387a5443e6f46ad0ab45d80d8038d53e64a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 4d77221208567253445307739fe193a58836e936
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996214"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068214"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -151,6 +151,20 @@ Změny jsou následující:
   Vyloučení, která můžete konfigurovat, zahrnují *procesy*programu Defender, *přípony souborů*a *soubory* a *složky* , které nechcete v programu Microsoft Defender kontrolovat.
 
 - **Sloučení zásad** – Intune teď sloučí seznam vyloučení, která jste definovali v samostatných profilech, do jednoho seznamu vyloučení, který se má použít u každého zařízení nebo uživatele. Pokud například zacílíte na uživatele se třemi samostatnými zásadami, seznamy vyloučení z těchto tří zásad se sloučí do jedné nadmnožiny *vyloučení antivirové ochrany v programu Microsoft Defender*, které se pak vztahují na tohoto uživatele.
+
+#### <a name="import-and-export-lists-of-address-ranges-for-windows-firewall-rules---8125400----"></a>Import a Export seznamů rozsahů adres pro pravidla brány Windows Firewall<!-- 8125400  -->
+
+Přidali jsme podporu pro **Import** nebo **Export** seznamu rozsahů adres pomocí souborů. CSV do profilu pravidel firewallu Microsoft Defenderu v zásadách brány firewall pro zabezpečení koncového bodu. Následující nastavení pravidla brány Windows Firewall teď podporují import a export:
+
+- **Rozsahy místních adres**
+- **Vzdálené rozsahy adres**
+
+Vylepšili jsme také ověřování položky místního rozsahu a vzdálených adres, aby bylo možné zabránit duplicitním nebo neplatným položkám.
+
+Další informace o těchto nastaveních najdete v tématu nastavení pro [pravidla firewallu v programu Microsoft Defender](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules).
+
+
+
 
 
 <!-- ########################## -->
@@ -386,7 +400,7 @@ Další informace najdete v tématu [Microsoft Intune rozhraní API datového sk
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Aktualizace ikon zařízení v Portál společnosti a aplikacích Intune v Androidu<!-- 6057023 -->
-Na zařízeních s Androidem jsme aktualizovali ikony zařízení v aplikacích Portál společnosti a Intune, aby bylo možné vytvořit pokročilejší vzhled a atmosféru a sjednotit se s návrhovým systémem Microsoft Fluent. Související informace najdete v tématu [aktualizace ikon v aplikaci Portál společnosti App pro iOS/iPadOS a MacOS](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+Na zařízeních s Androidem jsme aktualizovali ikony zařízení v aplikacích Portál společnosti a Intune, aby bylo možné vytvořit pokročilejší vzhled a atmosféru a sjednotit se s návrhovým systémem Microsoft Fluent. Související informace najdete v tématu [aktualizace ikon v aplikaci Portál společnosti App pro iOS/iPadOS a MacOS](whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Registrace zařízení
@@ -836,7 +850,7 @@ Další informace o této podpoře najdete v tématu [citlivostní označování
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="device-reports-ui-update---6269408---"></a>Aktualizace uživatelského rozhraní sestav zařízení<!-- 6269408 -->
-Podokno přehled sestav nyní obsahuje **Souhrn** a kartu **sestavy** . V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **sestavy**a potom vyberte kartu **sestavy** , abyste viděli dostupné typy sestav. Související informace najdete v tématu [sestavy Intune](../fundamentals/reports.md).
+Podokno přehled sestav nyní obsahuje **Souhrn** a kartu **sestavy** . V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **sestavy**a potom vyberte kartu **sestavy** , abyste viděli dostupné typy sestav. Související informace najdete v tématu [sestavy Intune](reports.md).
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1153,7 +1167,7 @@ Nové možnosti organizace jsou ty, které jsou k dispozici pro základní profi
 Aktualizovali jsme [prostředí pro uživatele](../configuration/device-profile-create.md) v centru pro správu správy koncových**Devices**bodů (  >  **konfigurační profily**zařízení  >  **vytvořit profil**) pro vytváření a úpravu následujících typů profilů. Nové prostředí prezentuje stejné nastavení jako předtím, ale používá i průvodce, který nepotřebuje tolik horizontální posouvání. Pro nové prostředí nebudete muset měnit existující konfigurace.
 
 - Odvozené přihlašovací údaje
-- E-mailu
+- E-mail
 - Certifikát PKCS
 - Importovaný certifikát PKCS
 - Certifikát SCEP
@@ -1212,7 +1226,7 @@ Následující vlastnosti jsou nyní zpřístupněny prostřednictvím kolekce [
 Další informace najdete v tématu [Microsoft Intune rozhraní API datového skladu](../developer/reports-nav-intune-data-warehouse.md).
 
 #### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>Aktualizace pracovního postupu pomoc a podpora pro podporu dalších služeb<!-- 5654170   -->
-Aktualizovali jsme stránku pomoc a podpora v centru pro správu Microsoft Endpoint Manageru, kde teď [zvolíte typ správy, který používáte](../fundamentals/get-support.md#options-to-access-help-and-support). Tato změna vám umožní vybrat z následujících typů správy:
+Aktualizovali jsme stránku pomoc a podpora v centru pro správu Microsoft Endpoint Manageru, kde teď [zvolíte typ správy, který používáte](get-support.md#options-to-access-help-and-support). Tato změna vám umožní vybrat z následujících typů správy:
 
 - Configuration Manager (zahrnuje analýzu stolního počítače)
 - Intune

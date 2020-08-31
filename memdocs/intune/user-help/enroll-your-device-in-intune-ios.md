@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: fd7807d332e02e5511dd3555ccc596d6f1bd7923
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914646"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057398"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -56,9 +56,9 @@ Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení 
 
 Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisties"></a>Prerequisties  
+## <a name="prerequisites"></a>Požadavky    
 
-* Pokud si chcete stáhnout a nainstalovat [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) do svého zařízení, přejdete do obchodu App Store. 
+* Nainstalujte aplikaci Portál společnosti [z App Storu](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Udržujte připojení Wi-Fi, dokud se nedokončí všechny kroky.
 * Mít přístup k webovému prohlížeči Safari na vašem zařízení.
 

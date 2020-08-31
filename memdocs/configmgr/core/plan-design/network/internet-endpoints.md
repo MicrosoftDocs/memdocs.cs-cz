@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a71fcd23977cc105a8d64f59edc45333cbd8c451
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692672"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068231"
 ---
 # <a name="internet-access-requirements"></a>Požadavky na přístup k internetu
 
@@ -265,12 +265,6 @@ Další informace o této funkci najdete v tématu [komunitní centrum](../../se
 
 - `https://communityhub.microsoft.com`
 
-### <a name="monitoring-workspace-site-hierarchy-node"></a>Pracovní prostor monitorování, uzel hierarchie lokality
-
-Pokud používáte **zeměpisné zobrazení**, povolte přístup k následujícímu koncovému bodu:
-
-- `http://maps.bing.com`
-
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Další informace najdete v tématu [Povolení sdílení dat](../../../desktop-analytics/enable-data-sharing.md#endpoints).
@@ -301,7 +295,7 @@ Pokud používáte funkci [Asset Intelligence](../../clients/manage/asset-intell
 
 Další informace o rozsahu IP adres společnosti Microsoft najdete v tématu věnovaném [veřejné IP adrese Microsoftu](https://www.microsoft.com/download/details.aspx?id=53602). Tyto adresy se pravidelně aktualizují. Služba nenabízí žádnou členitost, proto by mohla být použita jakákoli IP adresa v těchto rozsahech.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Porty používané v Configuration Manager](../hierarchy/ports.md)
 

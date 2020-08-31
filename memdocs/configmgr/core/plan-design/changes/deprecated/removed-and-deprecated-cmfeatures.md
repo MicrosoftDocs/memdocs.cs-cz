@@ -2,7 +2,7 @@
 title: 'Zastaralé funkce:'
 titleSuffix: Configuration Manager
 description: Přečtěte si o funkcích, které Configuration Manager už nepodporují.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694250"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068085"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Odebrané a zastaralé funkce pro Configuration Manager
 
@@ -31,6 +31,7 @@ Následující funkce jsou zastaralé. Můžete je dál používat teď, ale Mic
 
 |Funkce|Zastarání poprvé oznámeno|Podpora &nbsp; odebrána|
 |-----------|---|--------------|
+|Zeměpisné zobrazení v uzlu **hierarchie lokality** v pracovním prostoru **monitorování** v konzole nástroje Configuration Manager.<!--8116777-->|Srpen 2020|Bude doplněno|
 |Implementace pro sdílení obsahu z Azure se změnila. Použijte bránu pro správu cloudu s podporou obsahu. V budoucnu nebudete moci vytvořit tradiční distribuční bod cloudu.|Únor 2019|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 |Nasazení klasické služby do Azure pro bránu pro správu cloudu a distribuční bod cloudu. Další informace najdete v tématu [plánování pro CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|Listopad 2018|TBD –<sup>[Poznámka 1](#bkmk_note1)</sup>|
 
@@ -82,7 +83,7 @@ Configuration Manager odebrala podporu pro NAP (Network Access Protection). Tato
 
 Alternativy ochrany síťového přístupu najdete v části *Deprecated functionality* (Zastaralé funkce) v článku [Network Policy and Access Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) (Přehled služeb síťových zásad a přístupu).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Odebrané a zastaralé](removed-and-deprecated.md)
 - [Životní cyklus podpora Microsoftu](https://support.microsoft.com/lifecycle)

@@ -2,11 +2,11 @@
 
 ## [Co je registrace zařízení?](use-managed-devices-to-get-work-done.md)
 
-## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [Jaké informace vidí naše organizace?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Požadavky na heslo zařízení](password-does-not-meet-it-administrator-requirements.md)
 
-## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)  
+## [Jak získat přístup k Portálu společnosti](sign-in-to-the-company-portal.md)  
 
 ## [Instalace aplikace Mobile Threat Defense](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### Registrace pomocí odvozených přihlašovacích údajů
 ##### [Registrace pomocí Entrust Datacard](enroll-android-device-entrust-datacard.md)
 ##### [Registrace pomocí Intercede](enroll-android-device-intercede.md)
-##### [Registrace pomocí Disa Purebred](enroll-android-device-disa-purebred.md)
+##### [Registrace pomocí DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Přechod do nastavení správy nového zařízení](move-to-new-device-management-setup.md)
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 ### [Zašifrování zařízení](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [Používání zařízení s iOSem](using-your-iOS-device-with-intune.md)
 ### [Účinky obnovení továrního nastavení zařízení s iOSem](effects-of-device-reset-company-portal-ios.md)
-### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Registrovat zařízení
 #### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
 #### [Registrace zařízení s iOSem poskytnutého organizací](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
 #### [Odeslání protokolů z aplikace Nastavení zařízení](send-logs-to-your-it-admin-settings-windows.md)
 #### [Moje verze Windows není podporovaná](your-windows-version-isnt-yet-supported.md)
-#### [Instalace Office 365 na moje zařízení s Windows 10](install-office-windows.md)
+#### [Instalace Office na moje zařízení s Windows 10](install-office-windows.md)
 #### [Moje zařízení je třeba zašifrovat](you-need-to-enable-windows-encryption.md)
 #### [Moje zařízení potřebuje antimalwarový software](your-device-needs-antimalware-software.md)
 #### [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)

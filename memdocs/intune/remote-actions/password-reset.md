@@ -15,12 +15,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb73653684251be46789104a6c98b627fa4a529e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4769cad7538b780ca8f501a74f3d9984f46269ec
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914289"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057500"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Snížení nákladů na helpdesk pomocí samoobslužného resetování hesla
 
@@ -44,4 +44,4 @@ Přečtěte si další informace v těchto článcích:
 * [Osvědčené postupy pro hesla](/azure/active-directory/active-directory-secure-passwords) 
 * [Licencování samoobslužného resetování hesla](/azure/active-directory/active-directory-secure-passwords)
 
-Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
+Chcete pomáhat s povolením tohoto nebo jiných scénářů EMS nebo Microsoft 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).
