@@ -2,7 +2,7 @@
 title: Kontrolní seznam pro 2006
 titleSuffix: Configuration Manager
 description: Přečtěte si o akcích, které je potřeba provést před aktualizací na verzi Configuration Manager 2006.
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696459"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244991"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 2006 pro Configuration Manager
 
@@ -68,36 +68,38 @@ Při prvním použití konzoly Configuration Manager po dokončení aktualizace 
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+Od 31. srpna 2020 je verze 2006 k dispozici pro všechny zákazníky, kteří chtějí instalovat. Pokud jste se dříve přihlásili k okruhu brzké aktualizace, Sledujte aktualizaci této aktuální verze větve.
 
-V tuto chvíli je pro kanál prvotní aktualizace vydaná verze 2006. Pokud chcete nainstalovat tuto aktualizaci, musíte se přihlásit. Následující skript PowerShellu přidá vaši hierarchii nebo samostatnou primární lokalitu do okruhu na začátku aktualizace pro verzi 2006:
+<!--
+At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[Skript pro výslovný souhlas verze 2006](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-Společnost Microsoft digitálně podepíše skript a zabalí ho do podepsaného samorozbalovacího spustitelného souboru.
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> Aktualizace verze 2006 se vztahuje pouze na lokality, na kterých běží verze 1810 nebo novější.
+> The version 2006 update is only applicable to sites running version 1810 or later.
 
-Pokud se chcete přihlásit k okruhu prvotní aktualizace, postupujte takto:
+To opt-in to the early update ring:
 
-1. Otevřete relaci Windows PowerShellu verze 5 **jako správce** .
+1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager aktuální větev v současné době nepodporuje PowerShell verze 7. Pokud jste už nainstalovali PowerShell verze 7, můžete i nadále používat prostředí PowerShell verze 5. Další informace najdete v tématu [použití PowerShellu 7 vedle sebe s Windows powershell 5,1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-1. Spusťte skript **EnableEarlyUpdateRing2006.ps1** pomocí následující syntaxe:
+1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Kde `SiteServer` se odkazuje na lokalitu centrální správy nebo na samostatný primární webový server. Například `EnableEarlyUpdateRing2006.ps1 cmprimary01`.
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2006.ps1 cmprimary01`
 
-1. Kontrolovat aktualizace Další informace najdete v tématu [Získání dostupných aktualizací](install-in-console-updates.md#get-available-updates).
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-V konzole nástroje by teď měla být dostupná aktualizace verze 2006.
+The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
-> Tento skript přidá web do počátečního okruhu aktualizace pro verzi 2006. Nejedná se o trvalou změnu.
+> This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## <a name="checklist"></a>Kontrolní seznam
 

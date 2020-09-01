@@ -2,7 +2,7 @@
 title: Novinky ve verzi 2006
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2006 Configuration Manager aktuální větve.
-ms.date: 08/20/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c507879a77e57a0a06fe9528417394bcbf643608
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819673"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89244992"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -131,7 +131,7 @@ Chcete-li lépe zarovnávat požadavky na analýzu plochy pro diagnostická data
 
 | Verze 2006 a novější | Verze 2002 a starší |
 |---------|---------|
-| Požadováno | Základní |
+| Vyžadováno | Základní |
 | Volitelné (omezené) | Rozšířené (omezené) |
 | – | Rozšířené |
 | Volitelné | Do bloku |
@@ -363,9 +363,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Další kroky
 
-V tuto chvíli je pro kanál prvotní aktualizace vydaná verze 2006. Pokud chcete nainstalovat tuto aktualizaci, musíte se přihlásit. Další informace najdete v tématu [počáteční aktualizační kanál](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring).
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+Od 31. srpna 2020 je verze 2006 k dispozici pro všechny zákazníky, kteří chtějí instalovat.
 
 Až budete připraveni k instalaci této verze, přečtěte si téma [instalace aktualizací pro Configuration Manager](../../servers/manage/updates.md) a [Kontrolní seznam pro instalaci aktualizace 2006](../../servers/manage/checklist-for-installing-update-2006.md).
 
