@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271003"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281196"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -35,7 +35,7 @@ ms.locfileid: "84271003"
 > [!IMPORTANT]
 > Při nasazování aplikací Win32 zvažte výhradně použití přístupu [rozšíření správy Intune](../apps/intune-management-extension.md) , zejména v případě, že máte k dispozici instalační program aplikace pro více souborů Win32. Pokud během registrace automatického pilotního nasazení kombinujete instalaci aplikací Win32 a obchodních aplikací, může instalace aplikace selhat. Rozšíření pro správu Intune se nainstaluje automaticky, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete používat správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
 
@@ -85,7 +85,7 @@ Při generování souboru *. intunewin* uložte všechny soubory, které potřeb
 **Zdrojová složka instalačního programu:** *c:\testapp\v1.0*<br>
 **Soubor s licencí:** *c:\testapp\v1.0\licenses\license.txt*
 
-Informace o souboru *License. txt* najdete pomocí relativní cesty *licenses\license.txt*.
+Odkaz na soubor *license.txt* pomocí relativní cesty *licenses\license.txt*.
 
 ## <a name="create-assign-and-monitor-a-win32-app"></a>Vytvoření, přiřazení a monitorování aplikace Win32
 
@@ -240,7 +240,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
                 ![Snímek obrazovky s podoknem pravidla detekce – existence složky](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **Registr**: Umožňuje provést ověření na základě verze, řetězce, celého čísla nebo verze.
-            - **Cesta ke klíči**: Úplná cesta k položce registru obsahující hodnotu, která se má zjistit.
+            - **Cesta ke klíči**: Úplná cesta k položce registru obsahující hodnotu, která se má zjistit. Platná syntaxe je HKEY_LOCAL_MACHINE \Software\WinRAR nebo HKLM\Software\WinRAR..
             - **Název hodnoty**: Název hodnoty registru, která se má zjistit. Pokud je tato hodnota prázdná, provede se zjišťování u klíče. Hodnota klíče (výchozí) se použije jako hodnota zjišťování v případě, že se metoda zjišťování liší od metody zjišťování existence souboru nebo složky.
             - **Metoda zjišťování**: Vyberte typ metody zjišťování použité k ověření přítomnosti aplikace.
             - **Přidruženo k 32bitové aplikaci na 64bitových klientech**: Vyberte **Ano**, pokud chcete vyhledat 32bitový registr na 64bitových klientech. Výchozí možnost **Ne** vyberte, pokud chcete vyhledat 64bitový registr na 64bitových klientech. 32bitoví klienti budou vždy vyhledávat 32bitový registr.

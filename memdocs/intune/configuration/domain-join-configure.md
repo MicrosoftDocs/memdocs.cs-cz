@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84833be4e0a2fdca553d05114ff01690021ca667
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 8285b15a3fd7d473641ce9480fe1e6522b54e814
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193925"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281094"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Nastavení připojení k doméně konfigurace pro zařízení připojená k hybridní službě Azure AD v Microsoft Intune
 

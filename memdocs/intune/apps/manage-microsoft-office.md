@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d53789bb80475528bd413d14015e30d09fca64
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996652"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281077"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Spravujte prostředí pro spolupráci pomocí Office pro iOS a Android s Microsoft Intune
 
@@ -74,6 +74,7 @@ Office pro iOS a Android podporuje nastavení aplikace, která umožňují sjedn
 Konfigurace aplikace se dá doručit buď prostřednictvím kanálu operačního systému správy mobilních zařízení (MDM) v zaregistrovaných zařízeních ([Konfigurace kanálu konfigurace spravovaných aplikací](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) pro iOS nebo [Android v podnikovém](https://developer.android.com/work/managed-configurations) kanálu pro Android), nebo přes kanál Intune App Protection Policy (App). Office pro iOS a Android podporuje následující scénáře konfigurace:
 
 - Povolí jenom pracovní nebo školní účty.
+- Obecná konfigurace aplikace
 - Nastavení pro ochranu dat
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ Tento scénář konfigurace funguje jenom se zaregistrovanými zařízeními. Ni
 
 > [!NOTE]
 > V tuto chvíli podporuje režim účtů org, ale jenom Office pro Android.
+
+## <a name="general-app-configuration-scenarios"></a>Obecné scénáře konfigurace aplikací
+
+Office pro iOS a Android nabízí správcům možnost přizpůsobit výchozí konfiguraci pro několik nastavení v aplikaci.  Tato možnost se nabízí pro zaregistrovaná zařízení prostřednictvím libovolného poskytovatele UEM a u zařízení, která nejsou zaregistrovaná, pokud má Office pro iOS a Android nastavenou zásadu Intune App Protection.
+
+> [!NOTE]
+> Pokud jsou zásady ochrany aplikací cílené na uživatele, doporučujeme, abyste nasadili Obecné nastavení konfigurace aplikací v modelu registrace **spravovaných aplikací** . Tím se zajistí, že se zásady konfigurace aplikace nasadí do zaregistrovaných zařízení i do neregistrovaných zařízení. 
+
+Sada Office podporuje následující nastavení konfigurace:
+
+- Správa vytváření Rychlé poznámky
+
+### <a name="manage-the-creation-of-sticky-notes"></a>Správa vytváření Rychlé poznámky
+
+Ve výchozím nastavení Office pro iOS a Android umožňuje uživatelům vytvářet Rychlé poznámky. Pro uživatele s poštovními schránkami Exchange Online jsou poznámky synchronizovány do poštovní schránky uživatele. Pro uživatele s místními poštovními schránkami se tyto poznámky ukládají jenom na místní zařízení.
+
+|    Klíč    |    Hodnota    |
+|-------------------------------------------------------------------|-------------|
+|    com. Microsoft. Office. NotesCreationEnabled    |    **true** (výchozí) povolí vytváření rychlé poznámky pro pracovní nebo školní účet.<br>**false** zakáže vytváření rychlé poznámky pro pracovní nebo školní účet.    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Scénáře konfigurace aplikace pro ochranu dat
 

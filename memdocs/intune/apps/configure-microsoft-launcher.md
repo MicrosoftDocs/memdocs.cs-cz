@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ea15ac202e19ee6a0e3a75ebfc97d5a6f9b6503
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 7d9fe4c3a48cbf333fffd83d013b6a2d5fcf4ed9
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996669"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281128"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurace Microsoft Launcheru
 
@@ -219,7 +219,7 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
         }, 
         {
             "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueBool": "http://www.contoso.com/wallpaper.png"
+            "valueString": "http://www.contoso.com/wallpaper.png"
         }, 
         {
             "key": "com.microsoft.launcher.HomeScreen.GridSize", 

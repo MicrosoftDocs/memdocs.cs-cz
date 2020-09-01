@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8aa7d201a4f7e66a4275adae9a92b0808ea95fcd
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0279a85d0eb3bac7d222c27ce15203f58fd4ede6
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915360"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281162"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace aplikace pro domovskou obrazovku spravované Microsoftem pro Android Enterprise
 
@@ -382,7 +382,7 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
 Aplikace spravované domovské obrazovky teď poskytuje přístup k aplikaci zásad zařízení s Androidem. Spravovaná aplikace pro domovskou obrazovku je vlastní spouštěč používaný pro zařízení zaregistrovaná v Intune jako vyhrazená zařízení Android Enterprise (AE) pomocí celoobrazovkového režimu s více aplikacemi. K aplikaci zásad pro zařízení s Androidem můžete získat přístup, nebo se uživatelé k aplikaci zásad zařízení s Androidem pořídit pro účely podpory a ladění. Tato funkce je k dispozici v době, kdy se zařízení zaregistruje a zamkne do spravované domovské obrazovky. K použití této funkce nejsou potřeba žádné další instalace.
 
 ## <a name="managed-home-screen-debug-screen"></a>Obrazovka pro ladění spravované domovské obrazovky
-Kliknutím na tlačítko **zpět** můžete získat přístup k obrazovce ladění spravované domovské obrazovky (klikněte na **tlačítko zpět a** prodloužit). Z této obrazovky pro ladění můžete spustit aplikaci zásad zařízení s Androidem, zobrazit a nahrát protokoly nebo dočasně pozastavit beznabídkový režim, aby bylo možné zařízení aktualizovat. Další informace o pozastavení celoobrazovkového režimu najdete v části **opuštění celoobrazovkového režimu** v [nastavení zařízení](../configuration/device-restrictions-android-for-work.md#device-experience)v systému Android Enterprise vyhrazené. Pokud chcete snadnější přístup ke spravované obrazovce pro ladění na domovské obrazovce, můžete nastavit možnost **Povolit ladění snadného přístupu** pro `True` použití zásad konfigurací aplikací. 
+Kliknutím na tlačítko **zpět** můžete získat přístup k obrazovce ladění spravované domovské obrazovky (klikněte na **tlačítko zpět a** prodloužit). Z této obrazovky pro ladění můžete spustit aplikaci zásad zařízení s Androidem, zobrazit a nahrát protokoly nebo dočasně pozastavit beznabídkový režim, aby bylo možné zařízení aktualizovat. Další informace o pozastavení celoobrazovkového režimu najdete v části **opuštění celoobrazovkového režimu** v [nastavení zařízení](../configuration/device-restrictions-android-for-work.md#device-experience)v systému Android Enterprise vyhrazené. Pokud chcete snadnější přístup k obrazovce ladění spravované domovské obrazovky, můžete nastavit, aby se v **nabídce Povolit ladění snadného přístupu** `True` používaly zásady konfigurace aplikací. 
 
 ## <a name="next-steps"></a>Další kroky
 

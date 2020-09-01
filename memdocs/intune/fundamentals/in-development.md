@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a755b3ecdf2564139bc4aaf2992921fb5acdf2e
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 04aa66572aa3362f6540624266d89308dd4b20ba
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068184"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281145"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -192,7 +192,7 @@ Platí pro:
 Zavádíme několik změn nastavení hesla pro zásady *omezení zařízení* a *dodržování předpisů* pro *Správce zařízení s Androidem*. (**Zařízení**  >  **Konfigurační profily**  >  **Vytvořit profil**  >  **Omezení zařízení** a **Devices**  >  **zásady dodržování předpisů**pro zařízení  >  **vytvořit zásadu**) tyto změny vám pomůžou Intune přizpůsobit změny v Androidu 10 a novějším, aby se zajistilo, že se nastavení hesel v zařízeních i nadále vztahují na zařízení podle očekávání.
  
 Změny zahrnují:
-- Odebrání možnosti LOP na úrovni **hesla**  
+- Odebrání možnosti na nejvyšší úrovni pro **heslo**  
 - Nastavení budou znovu uspořádána do oddílů, které jsou založeny na tom, na která zařízení se vztahují.
 - **Minimální délka hesla** se zakáže pro použití, pokud není **typ hesla** nakonfigurovaný na hodnotu, na které se vztahuje délka hesla.
 - Další aktualizace popisků a příkladů textu

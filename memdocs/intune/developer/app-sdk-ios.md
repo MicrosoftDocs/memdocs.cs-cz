@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 823e29d1944b4957a24996620bb5467f234544cd
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908951"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281179"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -753,14 +753,30 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
     Tato metoda se volá z vlákna na pozadí. Aplikace by neměly vracet hodnotu, dokud se neodeberou všechna data uživatele (s výjimkou souborů, u kterých aplikace vrací hodnotu FALSE).
 
 ## <a name="siri-intents"></a>Siri záměry
+
 Pokud se vaše aplikace integruje s Siri záměry, nezapomeňte si přečíst poznámky pro v tématu `areSiriIntentsAllowed` , `IntuneMAMPolicy.h` kde najdete pokyny k podpoře tohoto scénáře. 
     
 ## <a name="notifications"></a>Oznámení
+
 Pokud vaše aplikace obdrží oznámení, nezapomeňte si přečíst poznámky pro v tématu, `notificationPolicy` `IntuneMAMPolicy.h` kde najdete pokyny k podpoře tohoto scénáře.  Doporučuje se, aby se aplikace registrovaly na `IntuneMAMPolicyDidChangeNotification` popsanou v tématu `IntuneMAMPolicyManager.h` a komunikovaly s ní `UNNotificationServiceExtension` prostřednictvím řetězce klíčů.
-## <a name="displaying-web-content-within-application"></a>Zobrazení webového obsahu v rámci aplikace
-Pokud má vaše aplikace možnost zobrazovat weby v rámci webového zobrazení a zobrazované webové stránky mají možnost přejít na libovolné weby, je aplikace zodpovědná za nastavení aktuální identity tak, aby se spravovaná data nedala prostřednictvím webového zobrazení úniková. Příklady tohoto příkladu jsou webové stránky navrhnout funkci nebo zpětná vazba, které mají buď přímé nebo nepřímé odkazy na vyhledávací web.
-Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla zavolat setUIPolicyIdentity na předání v aktuální identitě.
-Aplikace s jednou identitou by měly volat IntuneMAMPolicyManager setCurrentThreadIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla volat setCurrentThreadIdentity předání v Nil.
+
+## <a name="displaying-web-content-within-an-application"></a>Zobrazení webového obsahu v rámci aplikace
+
+Pokud má vaše aplikace možnost zobrazit webové stránky ve webovém zobrazení, může být nutné přidat logiku, aby se zabránilo úniku dat, v závislosti na konkrétním scénáři.
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webová zobrazení, která zobrazují jenom nefiremní obsah nebo weby
+
+Pokud vaše aplikace nezobrazuje žádná firemní data ve webovém zobrazení a uživatelé mají možnost přejít na libovolné weby, kde by mohly kopírovat a vkládat spravovaná data z jiných částí aplikace do veřejného fóra, aplikace zodpovídá za nastavení aktuální identity, aby se spravovaná data nedala přerušit přes webové zobrazení. Příklady tohoto příkladu jsou webové stránky funkce nebo zpětné vazby, které mají buď přímé nebo nepřímé odkazy na vyhledávací web. Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity a před zobrazením WebView před ním předat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat setUIPolicyIdentity, která předává aktuální identitu. Aplikace s jedinou identitou by měly volat IntuneMAMPolicyManager setCurrentThreadIdentity a před zobrazením WebView před ním předávat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat setCurrentThreadIdentity, která předává Nil. Tím se zajistí, že Intune SDK bude považovat webzobrazení za nespravované a že neumožní vložení spravovaných dat z jiných částí aplikace do zobrazení WebView, pokud je zásada nakonfigurovaná jako taková. 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webová zobrazení, která zobrazují jenom firemní obsah a weby
+
+Pokud vaše aplikace zobrazuje pouze podniková data ve webovém zobrazení a uživatelé nemohou procházet na libovolné weby, nejsou vyžadovány žádné změny.
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webové zobrazení, která mohou zobrazovat firemní i nefiremní obsah nebo weby
+
+V tomto scénáři je podporována pouze WKWebView. Aplikace, které používají starší verze UIWebView, by měly přejít na WKWebView. Pokud vaše aplikace zobrazuje podnikový obsah v rámci WKWebView a uživatelé mohou také přistupovat k nefiremnímu obsahu nebo webům, což by mohlo vést k úniku dat, musí aplikace implementovat metodu isExternalURL: Delegate definovanou v IntuneMAMPolicyDelegate. h. Aplikace by měly určit, jestli adresa URL předaná metodě delegáta představuje podnikový web, na kterém můžou být spravovaná data vložená nebo nepodniková webová stránka, která by mohla způsobit nevracení firemních dat. 
+
+Vrácení NO v isExternalURL oznámí sadě Intune SDK, kterou načtený web představuje podnikové umístění, ve kterém se můžou spravovat spravovaná data. Pokud se vrátí Ano, sada Intune SDK otevře tuto adresu URL v Edge, nikoli WKWebView, pokud to nastavení zásad vyžaduje. Tím se zajistí, že se žádná spravovaná data v rámci aplikace nevrátí na externí Web.
 
 ## <a name="ios-best-practices"></a>Doporučené postupy pro iOS
 
@@ -778,7 +794,7 @@ Rozhraní API sady Intune App SDK jsou v cíli-C a nepodporují **nativní** SWI
 
 ### <a name="do-all-users-of-my-application-need-to-be-registered-with-the-app-we-service"></a>Musí být všichni uživatelé mojí aplikace zaregistrovaní ve službě APP-WE?
 
-No. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
+Ne. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
 
 ### <a name="what-about-users-that-have-already-signed-in-to-the-application-do-they-need-to-be-enrolled"></a>A co uživatelé, kteří se už do aplikace přihlásili? Musí se zaregistrovat?
 
