@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 9ac83ce840d4a43de98791d6b116bb373a018a7d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914187"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193908"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
@@ -124,9 +124,9 @@ Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál
 
 ### <a name="share-app-logs-with-it-support"></a>Sdílení protokolů aplikace s podporou IT  
 Můžete také odeslat protokoly aplikací vaší osobě podpory IT a poskytnout jim další kontext o nezdařené instalaci.  
-* Uživatelé Androidu: [nahrání a odeslání e-mailů protokolů](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) z portál společnosti.   
+* Uživatelé Androidu: [nahrání a odeslání e-mailů protokolů](./send-logs-to-your-it-admin-by-email-android.md) z portál společnosti.   
 
-* Uživatelé zařízení s iOS: [načítají a odesílají protokoly](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) z Microsoft Edge pro iOS.  
+* Uživatelé zařízení s iOS: [načítají a odesílají protokoly](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) z Microsoft Edge pro iOS.  
 
 
 ## <a name="next-steps"></a>Další kroky  
@@ -137,4 +137,3 @@ V následujících článcích najdete další informace o tom, jak spravované 
 * [Použití spravovaných aplikací na zařízení s iOSem](use-managed-apps-on-your-device-ios.md)  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
-

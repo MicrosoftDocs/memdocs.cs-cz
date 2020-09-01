@@ -10,12 +10,12 @@ ms.assetid: 50f8e206-a2af-469a-9f1b-0f7a87166f48
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a17d6fb437f83ae14895e8dd6d081ee4b6bd80fb
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a2862812145e33a992ceaa346e138606eee5fad0
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827021"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194215"
 ---
 # <a name="tenant-attach-onboard-configuration-manager-clients-to-microsoft-defender-atp-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Připojení tenanta: zprovoznění klientů Configuration Manager do služby Microsoft Defender ATP z centra pro správu (Preview)
 <!--5691658-->
@@ -29,7 +29,7 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 ## <a name="prerequisites"></a>Předpoklady
 
 - Přístup k [centru pro správu služby Microsoft Endpoint Manager](https://endpoint.microsoft.com/).
-- Licence E5 pro [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- Licence E5 pro [ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - Prostředí, které je [klientovi připojené k nahraným zařízením](device-sync-actions.md).
 - Minimálně verze Configuration Manager 2006 a odpovídající verze nainstalované konzoly.
    - Upgradujte cílová zařízení na nejnovější verzi klienta Configuration Manager.
@@ -51,7 +51,7 @@ Když povolíte shromažďování zařízení pro práci se zásadami zabezpeče
    - Platforma: **Windows 10 a Windows Server (ConfigMgr)**
    - Profil: **detekce a odpověď koncového bodu (ConfigMgr)**
 
-1. Vyberte **Vytvořit**.
+1. Vyberte **Create** (Vytvořit).
 
 1. Na stránce **základy** zadejte název a popis profilu a pak klikněte na tlačítko **Další**.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d77221208567253445307739fe193a58836e936
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068214"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193779"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -96,7 +96,7 @@ Platí pro:
 #### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>Konfigurace modulu plug-in macOS Microsoft Enterprise SSO<!-- 5627576  idstaged -->
 
 > [!IMPORTANT]
-> Rozšíření jednotného přihlašování Microsoft Azure AD se pořád vyvíjí. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
+> V macOS se stále vyvíjí rozšíření jednotného přihlašování (SSO) Microsoft Azure AD. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. V macOS Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
 
 Tým Microsoft Azure AD vytvořil rozšíření aplikace jednotného přihlašování (SSO) pro přesměrování, které macOS uživatelům 10.15 + + umožňuje získat přístup k aplikacím, organizacím a webům Microsoftu, které podporují funkci jednotného přihlašování a ověřování pomocí Azure AD, s jedním přihlašováním. Ve verzi modulu plug-in Microsoft Enterprise SSO můžete nakonfigurovat rozšíření jednotného přihlašování pomocí nového typu rozšíření aplikace Microsoft Azure AD (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **MacOS** pro **funkce** platformy > zařízení pro profil > typ rozšíření **aplikace jednotného přihlašování** > > **Microsoft Azure AD**).
 
@@ -116,7 +116,7 @@ Platí pro:
 - Pracovní profil Android Enterprise
 
 #### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Použití rozšíření aplikace jednotného přihlašování na dalších aplikacích pro iOS/iPadOS s modulem plug-in Microsoft Enterprise SSO<!-- 7369991  -->
-[Modul plug-in Microsoft Enterprise SSO pro zařízení Apple](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) se dá použít se všemi aplikacemi, které podporují rozšíření aplikace jednotného přihlašování. Tato funkce v Intune znamená, že modul plug-in funguje s mobilními aplikacemi pro iOS/iPadOS, které nepoužívají knihovnu Microsoft Authentication Library (MSAL) pro zařízení Apple. Aplikace nepotřebují používat MSAL, ale je potřeba je ověřit pomocí koncových bodů Azure AD.
+[Modul plug-in Microsoft Enterprise SSO pro zařízení Apple](/azure/active-directory/develop/apple-sso-plugin) se dá použít se všemi aplikacemi, které podporují rozšíření aplikace jednotného přihlašování. Tato funkce v Intune znamená, že modul plug-in funguje s mobilními aplikacemi pro iOS/iPadOS, které nepoužívají knihovnu Microsoft Authentication Library (MSAL) pro zařízení Apple. Aplikace nepotřebují používat MSAL, ale je potřeba je ověřit pomocí koncových bodů Azure AD.
 
 Pokud chcete nakonfigurovat aplikace pro iOS/iPadOS, aby používaly jednotné přihlašování s modulem plug-in, přidejte identifikátory sady prostředků aplikace do konfiguračního profilu iOS/iPadOS (konfigurace**zařízení**  >  **profily**  >  **vytvořit profil**  >  **iOS/iPadOS** pro **funkce** platformy > zařízení pro profil > **rozšíření aplikace jednotného přihlašování**  >  **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování > **identifikátory sady prostředků aplikace**).
 
@@ -179,7 +179,7 @@ Jako správce Microsoft Intune můžete nahrát vlastní image značky do Intune
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
-Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](/mem/configmgr/comanage/company-portal). 
+Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../configmgr/comanage/company-portal.md). 
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
@@ -634,7 +634,7 @@ Další informace o této podpoře najdete v tématu [citlivostní označování
 Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-noncompliance.md#create-a-notification-message-template) pro odesílání e-mailových oznámení o nedodržení předpisů, použijte nové nastavení **portál společnosti odkaz na web** , který automaticky zahrne odkaz na portál společnosti Web. Když je tato možnost nastavená na *Povolit*, můžou uživatelé s nekompatibilními zařízeními, kteří přijímají e-mail na základě této šablony, použít odkaz k otevření webu, kde se dozvíte víc o tom, proč jejich zařízení nedodržuje předpisy. 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="licensing"></a>Licensing
+### <a name="licensing"></a>Licencování
 
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
 Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 

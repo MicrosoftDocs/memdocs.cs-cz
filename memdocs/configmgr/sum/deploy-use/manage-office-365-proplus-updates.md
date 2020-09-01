@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d850e582b43e08743e5a61b17e6958ddc6084af1
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819792"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194136"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Správa aplikací Microsoft 365 s využitím Configuration Manager
 
@@ -248,7 +248,7 @@ Další informace o tom, jak upravit pravidla automatického nasazení, najdete 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Pokud povolíte klientům Microsoft 365 aplikací příjem aktualizací z Configuration Manager, změňte kanál pro aktualizaci.
 
-Po nasazení Microsoft 365 aplikací můžete změnit kanál aktualizace pomocí Zásady skupiny nebo nástroje pro nasazení Office (ODT). Můžete například přesunout zařízení z pololetního kanálu na půlroční kanál (cílený). Při změně kanálu se Office aktualizuje automaticky bez nutnosti přeinstalovat nebo stáhnout plnou verzi. Další informace najdete v tématu [Změna kanálu aktualizace Microsoft 365 Apps pro zařízení ve vaší organizaci](https://docs.microsoft.com/deployoffice/change-update-channels).
+Po nasazení Microsoft 365 aplikací můžete změnit kanál aktualizace pomocí Zásady skupiny nebo nástroje pro nasazení Office (ODT). Můžete například přesunout zařízení z pololetního kanálu na půlroční kanál (cílený). Při změně kanálu se Office aktualizuje automaticky bez nutnosti přeinstalovat nebo stáhnout plnou verzi. Další informace najdete v tématu [Změna kanálu aktualizace Microsoft 365 Apps pro zařízení ve vaší organizaci](/deployoffice/change-update-channels).
 
 ## <a name="next-steps"></a>Další kroky
 

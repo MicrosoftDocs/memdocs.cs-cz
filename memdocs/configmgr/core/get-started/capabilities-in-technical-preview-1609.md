@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995530"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193745"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1609 pro Configuration Manager
 
@@ -347,7 +347,7 @@ Configuration Manager 1609 Technical Preview zavádí nový řídicí panel. Ř�
 - Verze klientů Office 365
 - Jazyky klienta Office 365
 - Klientské kanály pro Office 365     
-Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](https://docs.microsoft.com/deployoffice/overview-update-channels).
+Další informace najdete v tématu [Přehled kanálů aktualizací pro aplikace Microsoft 365](/deployoffice/overview-update-channels).
 - Pravidla automatického nasazení, která mají klienta Office 365 vybranou v sadě dostupných produktů.
 
 Na řídicím panelu můžete provádět následující akce:

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ebde13c0ab2b190b51d4e776bad79fd0322f2b5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911093"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193959"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Správa zásad BitLockeru pro Windows 10 v Intune
 
@@ -97,7 +97,7 @@ Použijte jeden z následujících postupů k vytvoření typu zásad, které d�
    1. **Platforma**: Windows 10 a novější
    2. **Typ profilu**: Endpoint Protection
 
-   ![Vyberte profil BitLockeru.](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Vybrat profil](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Vyberte **Nastavení**  >  **šifrování systému Windows**.
 
@@ -123,7 +123,8 @@ Můžete nakonfigurovat zásady BitLockeru, které automaticky a tiše povolí B
 
 Zařízení musí splňovat následující podmínky, aby bylo možné tiše povolit nástroj BitLocker:
 
-- Zařízení musí používat Windows 10 verze 1809 nebo novější.
+- Pokud se koncoví uživatelé přihlásí k zařízením jako správci, musí zařízení používat Windows 10 verze 1803 nebo novější.
+- Pokud se koncoví uživatelé přihlašují k zařízením jako standardní uživatelé, musí zařízení používat Windows 10 verze 1809 nebo novější.
 - Zařízení musí být připojené ke službě Azure AD.  
 
 **Konfigurace zásad BitLockeru**:

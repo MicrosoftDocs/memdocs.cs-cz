@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db1ad3250d04f79abd000a23f9f2064862b1dbd7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915088"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194242"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Zásady antivirové ochrany pro zabezpečení koncového bodu v Intune
 
@@ -77,7 +77,7 @@ Pro zařízení, která spravujete pomocí Intune, jsou podporovány následují
 
     *Antivirový profil Microsoft Defenderu* je samostatná instance nastavení antivirové ochrany, která se nachází v *profilu omezení zařízení* pro zásady konfigurace zařízení.
   
-    Na rozdíl od nastavení antivirového programu v *profilu omezení zařízení*můžete použít tato nastavení u zařízení, která jsou společně spravovaná. Chcete-li použít tato nastavení, musí být [posuvník úlohy spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) pro Endpoint Protection nastaven na Intune.
+    Na rozdíl od nastavení antivirového programu v *profilu omezení zařízení*můžete použít tato nastavení u zařízení, která jsou společně spravovaná. Chcete-li použít tato nastavení, musí být [posuvník úlohy spolusprávy](/configmgr/comanage/how-to-switch-workloads) pro Endpoint Protection nastaven na Intune.
 
   - Profil: **vyloučení antivirové ochrany v programu Microsoft Defender** – umožňuje spravovat nastavení zásad jenom pro [vyloučení antivirové ochrany](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
   
@@ -127,7 +127,7 @@ V sestavách zásad antivirové ochrany se zobrazí podrobnosti o stavu vašich 
 
 Pokud si chcete zobrazit sestavy, v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), navštivte Endpoint Security a vyberte **antivirová ochrana**. Výběrem antivirového programu otevřete stránku Shrnutí. Další zobrazení sestav a stavů jsou k dispozici jako další stránky.
 
-### <a name="summary"></a>Shrnutí
+### <a name="summary"></a>Souhrn
 
 Na stránce **Souhrn** můžete [vytvořit nové zásady](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) a zobrazit seznam dříve vytvořených zásad. Seznam obsahuje podrobné informace o profilu, který zásada zahrnuje (typ zásady), a informace o tom, jestli je zásada přiřazená.
 

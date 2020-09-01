@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcde0881cc35bd4ba0943ff6b24e8999f3c9beaf
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970511"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194084"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS, iPadOS nebo macOS v Intune
 
@@ -156,7 +156,7 @@ Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření aplika
 - Typ přesměrování je navržený pro moderní ověřovací protokoly, jako jsou OpenID Connect, OAuth a typu Saml2. Můžete si vybrat mezi Microsoft Azure AD příponou SSO ([modul plug-in Microsoft Enterprise SSO](/azure/active-directory/develop/apple-sso-plugin)) a obecným rozšířením pro přesměrování.
 
   > [!IMPORTANT]
-  > Rozšíření jednotného přihlašování Microsoft Azure AD se pořád vyvíjí. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
+  > V macOS se stále vyvíjí rozšíření jednotného přihlašování (SSO) Microsoft Azure AD. Je uvedená v uživatelském rozhraní Intune, ale nefunguje podle očekávání. V macOS Nepoužívejte **Microsoft Azure AD** pro typ rozšíření aplikace jednotného přihlašování.
 
 - Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat rozšíření přihlašovací údaje specifické pro protokol Kerberos poskytované společností Apple a obecné rozšíření přihlašovacích údajů.
 
@@ -220,7 +220,7 @@ Platí pro:
 
     - **Profil**: vyberte **funkce zařízení**.
 
-4. Vyberte **Vytvořit**.
+4. Vyberte **Create** (Vytvořit).
 5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **MacOS: konfiguruje přihlašovací obrazovku**.

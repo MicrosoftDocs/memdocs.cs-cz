@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9203c3654671680eaeaa8e73597912783c0cdf1f
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: cea8981b9fdd16e0d8da9dd36445b8fbdfe3d53f
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896062"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193942"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Řešení běžných chyb pro Intune Exchange Connector
 
@@ -145,4 +145,4 @@ Následující článek vám může pomáhat vyřešit konkrétní chyby:
 
 Vyhledejte pomoc od podpory nebo komunity Intune.
 - V tématu [získání podpory](../fundamentals/get-support.md) pro používání konzoly Intune můžete pomoct s řešením problému nebo otevřít případ podpory s Microsoftem. 
-- Vystavte svůj problém ve [fórech Microsoft Intune](https://docs.microsoft.com/answers/products/mem).  
+- Vystavte svůj problém ve [fórech Microsoft Intune](/answers/products/mem).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819605"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194102"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 
   > [!NOTE]
-  > Plně spravovaná, vyhrazená a podnikově vlastněná zařízení pracovních profilů nebudou vyzváni k nastavení hesla. Nastavení se vynutilo a budete muset heslo nastavit ručně. Zásady, které vynucují tuto zásadu, budou hlásit jako neúspěšné, dokud nenastavíte heslo, které vyhovuje vašim požadavkům.
+  > Plně spravovaná, vyhrazená a podnikově vlastněná zařízení pracovního profilu nejsou vyzváni k nastavení hesla. Nastavení je povinné, ale uživatelé nemusí být upozorňováni. Uživatelé musí heslo nastavit ručně. Zásady se nezdařily, dokud uživatel nezadá heslo, které vyhovuje vašim požadavkům.
 
 ### <a name="power-settings"></a>Nastavení napájení
 

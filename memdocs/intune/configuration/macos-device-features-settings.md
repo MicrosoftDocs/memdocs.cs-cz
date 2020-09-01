@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d25aec032483c496d2cf01cc253ea1e3024ca83
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970528"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194194"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -349,7 +349,7 @@ Tato funkce platí pro:
 
   Pokud je nastaveno na **Ano**, všechny existující uživatelské účty se ze zařízení vymažou. Aby nedošlo ke ztrátě dat, nebo chcete zabránit obnovení továrního nastavení, ujistěte se, že rozumíte tomu, jak toto nastavení mění vaše zařízení.
 
-  Další informace o režimu sdílených zařízení najdete v tématu [Přehled režimu sdíleného zařízení](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+  Další informace o režimu sdílených zařízení najdete v tématu [Přehled režimu sdíleného zařízení](/azure/active-directory/develop/msal-shared-devices).
 
 - **ID sady prostředků aplikace** (Microsoft Azure AD, Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos a ověřovacímu lístku. Aplikace také ověřují uživatele pro služby, kterým má oprávnění k přístupu.
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.

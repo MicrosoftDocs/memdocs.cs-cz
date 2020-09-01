@@ -10,12 +10,12 @@ ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d09b519bfc116afd397d455c6a03a8748f9303cd
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 214a1ebc6b943edac194f27ee4aa539001026aaf
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827017"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194208"
 ---
 # <a name="tenant-attach-create-and-deploy-endpoint-security-antivirus-policy-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Připojení tenanta: vytvoření a nasazení zásady ochrany koncového bodu Endpoint Security z centra pro správu (Preview)
 <!--5691658-->
@@ -30,7 +30,7 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 ## <a name="prerequisites"></a>Předpoklady
 
 - Přístup k [centru pro správu služby Microsoft Endpoint Manager](https://endpoint.microsoft.com/).
-- Licence E5 pro [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
+- Licence E5 pro [ATP v programu Microsoft Defender](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).
 - Prostředí, které je [klientovi připojené k nahraným zařízením](device-sync-actions.md).
 - Minimálně verze Configuration Manager 2006 a odpovídající verze nainstalované konzoly.
    - Upgradujte cílová zařízení na nejnovější verzi klienta Configuration Manager.

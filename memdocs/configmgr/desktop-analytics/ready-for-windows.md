@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995190"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193678"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Nejčastější dotazy k vyřazení moderních desktopových prostředí
 
@@ -49,7 +49,7 @@ Mnohé zákazníky mají problémy s tím, že budou mít k dispozici Windows 10
 
 *Připravený pro moderní adresář desktopových* řešení, která jsou podporovaná a používána na komerčních zařízeních s Windows 10 a Microsoft 365 aplikacemi pro podniky. Tento adresář pomáhá správcům IT, kteří berou v úvahách nejnovější verze Windows 10, a Microsoft 365 pro jejich nasazení.
 
-Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [Microsoft 365 Apps](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager naplánujte a spravujte aplikace pro Windows 10 a Microsoft 365 pro projekty upgradu na podnik. 
+Zpětná vazba od správců IT je, že chtějí tyto přehledy integrovat s nástroji, které už používají k naplánování plánů nasazení. Pomocí funkcí [Desktop Analytics](https://aka.ms/dadocs) a [Microsoft 365 Apps](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) v Configuration Manager naplánujte a spravujte aplikace pro Windows 10 a Microsoft 365 pro projekty upgradu na podnik. 
 
 > [!Note]
 > Od 21. dubna 2020 se sada Office 365 ProPlus přejmenovává na **Microsoft 365 aplikace pro podniky**. Další informace najdete v tématu [Změna názvu pro Office 365 ProPlus](/deployoffice/name-change). V konzole Configuration Manager se pořád zobrazují odkazy na starý název a podpůrná dokumentace, zatímco se konzola aktualizuje.
@@ -122,4 +122,4 @@ Vyhodnoťte výkon svých řešení pomocí sestav stavů a metrik prostřednict
 
 Ujistěte se, že vaše desktopové aplikace jsou teď kompatibilní a jsou v budoucnu kompatibilní s Windows 10. Další informace najdete v tématu [Kompatibilita aplikací pro vývojáře](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Pokud vyvíjíte řešení pro Microsoft 365 aplikací pro podniky, přečtěte si téma [osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Pokud vyvíjíte řešení pro Microsoft 365 aplikací pro podniky, přečtěte si téma [osvědčené postupy vývoje pro Doplňky modelu COM, VSTO a VBA v Office](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

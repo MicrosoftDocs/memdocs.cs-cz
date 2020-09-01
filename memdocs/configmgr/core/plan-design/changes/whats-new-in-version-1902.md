@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995241"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193823"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1902 Configuration Manager Current Branch
 
@@ -351,7 +351,7 @@ Pomocí Configuration Manager můžete přesunout známé složky Windows na One
 
 Další informace o této funkci OneDrivu pro firmy najdete v tématu [přesměrování a přesunutí známých složek Windows na OneDrive](/onedrive/redirect-known-folders).
 
-Nejdřív [vyhledejte ID tenanta Microsoft 365](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+Nejdřív [vyhledejte ID tenanta Microsoft 365](/onedrive/find-your-office-365-tenant-id). Pak nasaďte synchronizačního klienta OneDrivu verze 18.111.0603.0004 nebo novější. Další informace najdete v tématu [nasazení aplikací OneDrive pomocí Configuration Manager](/onedrive/deploy-on-windows).  
 
 Profil OneDrivu pro firmy vytvoříte a nasadíte tak, že v konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Rozbalte **Nastavení dodržování předpisů**a vyberte uzel **profily OneDrivu pro firmy** .  
 

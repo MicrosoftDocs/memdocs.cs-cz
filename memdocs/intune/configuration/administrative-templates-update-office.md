@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fdda53fa4127137d21db64140262204d0afd11f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993484"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193840"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Microsoft 365 Microsoft Intune Šablony pro správu
 
@@ -181,7 +181,7 @@ Zvažte použití těchto kroků k otestování zásad před nasazením zásad v
 
 ## <a name="next-steps"></a>Další kroky
 
-[Aktualizace hodnot kanálu pro klienty Microsoft 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Aktualizace hodnot kanálu pro klienty Microsoft 365](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Přehled služby cloudové zásady Office pro aplikace Microsoft 365](/deployoffice/overview-office-cloud-policy-service)
 

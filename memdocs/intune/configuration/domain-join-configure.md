@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2472354c4f1c6b704f1e681c3e839f9903d4d079
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 84833be4e0a2fdca553d05114ff01690021ca667
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912759"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193925"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Nastavení připojení k doméně konfigurace pro zařízení připojená k hybridní službě Azure AD v Microsoft Intune
 
@@ -45,7 +45,7 @@ V tomto článku se dozvíte, jak vytvořit profil připojení k doméně pro na
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Profil**: vyberte **připojení k doméně (Preview)**.
 
-4. Vyberte **Vytvořit**.
+4. Vyberte **Create** (Vytvořit).
 5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **Windows 10: Profil připojení k doméně, který obsahuje informace o místní doméně k registraci zařízení připojených k hybridní službě AD pomocí automatického pilotního projektu Windows**.
@@ -66,7 +66,9 @@ V tomto článku se dozvíte, jak vytvořit profil připojení k doméně pro na
 
     Vyberte **Další**.
 
-10. V části **přiřazení**vyberte uživatele nebo skupinu uživatelů, kteří obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+10. V části **přiřazení**vyberte skupiny zařízení, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](device-profile-assign.md).
+
+    Pokud potřebujete připojit zařízení k různým doménám nebo organizačním jednotkám, vytvořte různé skupiny zařízení.
 
     Vyberte **Další**.
 

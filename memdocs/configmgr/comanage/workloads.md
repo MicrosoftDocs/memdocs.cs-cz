@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 08261c51170e110dff40ebaaf7699c631ceda7e7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995224"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193711"
 ---
 # <a name="co-management-workloads"></a>Úlohy spolusprávy
 
@@ -112,7 +112,7 @@ Toto zatížení spravuje Microsoft 365 aplikace na spoluspravovaných zařízen
 
 - Je k dispozici nová globální podmínka, **jedná se o aplikace Office 365 spravované přes Intune na zařízení**. Tato podmínka se ve výchozím nastavení přidá jako požadavek na nové aplikace Microsoft 365. Při přechodu na tuto úlohu nesplňuje spoluspravovaná klienti požadavek na aplikaci. Pak se neinstalují Microsoft 365 nasazené prostřednictvím Configuration Manager.  
 
-Další informace o funkci Intune najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365).
+Další informace o funkci Intune najdete v tématu [přiřazení Microsoft 365 aplikací k zařízením s Windows 10 pomocí Microsoft Intune](/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>Klientské aplikace
 

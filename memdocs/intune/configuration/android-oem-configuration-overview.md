@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 8bc0bdaec4d8eb194619176a4130737752d36c06
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262808"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194177"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -62,7 +62,7 @@ Při používání OEMConfig si pamatujte na následující informace:
 
   Model OEMConfig na zařízeních, která nejsou Zebra, podporuje jenom jednu zásadu na každé zařízení. Pokud je ke stejnému zařízení přiřazeno několik profilů, může se zobrazit nekonzistentní chování.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pokud chcete na svých zařízeních používat OEMConfig, ujistěte se, že máte následující požadavky:
 
@@ -89,7 +89,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
     - **Platforma**: vyberte **Android Enterprise**.
     - **Profil**: vyberte **OEMConfig**.
 
-4. Vyberte **Vytvořit**.
+4. Vyberte **Create** (Vytvořit).
 5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
@@ -151,7 +151,7 @@ Až zařízení příště zkontroluje aktualizace konfigurace, nakonfigurované
 
 ## <a name="supported-oemconfig-apps"></a>Podporované aplikace OEMConfig
 
-V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují oprávnění spravovaných konfigurací udělená společností Google, aby podporovala složitější schémata a funkce. Výrobci OEM musí své aplikace OEMConfig zaregistrovat pomocí Google. Pokud se nezaregistrujete, tyto funkce nemusí fungovat podle očekávání. Intune aktuálně podporuje tyto aplikace OEMConfig:
+V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují oprávnění spravovaných konfigurací udělená společností Google, aby podporovala složitější schémata a funkce. Výrobci OEM musí [své aplikace OEMConfig zaregistrovat pomocí Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform). Pokud se nezaregistrujete, tyto funkce nemusí fungovat podle očekávání. Intune aktuálně podporuje tyto aplikace OEMConfig:
 
 -----------------
 
@@ -183,12 +183,12 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 
 -----------------
 
-Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, e-mail `IntuneOEMConfig@microsoft.com` .
+Pokud zastupujete výrobcem OEM a aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, požádejte `IntuneOEMConfig@microsoft.com` o nápovědu k registraci. Výrobci OEM musí také [registrovat své aplikace OEMConfig pomocí Google](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform).
 
 > [!NOTE]
-> Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění služby Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.
+> Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění Google a Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.
 >
-> Pokud se setkáte s nesprávným chováním aplikace OEMConfig, obraťte se na vývojáře aplikace OEMConfig. Intune nezodpovídá za technické problémy s jednotlivými OEMConfig aplikacemi.
+> Pokud se nastavení v rámci aplikace OEMConfig chová nesprávně, obraťte se na vývojáře aplikace OEMConfig. Intune nezodpovídá za technické problémy s jednotlivými OEMConfig aplikacemi.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3bb1d4806271ab40c60f0ad419e4e708d36bbc97
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823442"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194119"
 ---
 # <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Nastavení pro zásady antivirové ochrany v programu Microsoft Defender pro zařízení připojená klientovi v Microsoft Intune
 
@@ -30,7 +30,7 @@ Umožňuje zobrazit nastavení antivirové ochrany v programu Microsoft Defender
 ## <a name="cloud-protection"></a>Ochrana cloudu
 
 - **Zapnutí ochrany poskytované cloudem**  
-  CSP: [AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Ve výchozím nastavení Defender v zařízeních s Windows 10 Desktop odesílá společnosti Microsoft informace o případných problémech, které najde. Microsoft analyzuje tyto informace, aby se dozvěděly Další informace o problémech, které se týkají vás a dalších zákazníků, a nabízí Vylepšená řešení.
 
@@ -39,7 +39,7 @@ Umožňuje zobrazit nastavení antivirové ochrany v programu Microsoft Defender
   - **Povolené.**  Zapne služba Microsoft Active Protection Service.
 
 - **Úroveň ochrany v cloudu**  
-  CSP: [CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Nakonfigurujte, jak agresivní antivirová antivirová ochrana blokuje a kontroluje podezřelé soubory.
   - **Nenakonfigurováno** (*výchozí*) – výchozí úroveň blokování v programu Defender.
@@ -48,7 +48,7 @@ Umožňuje zobrazit nastavení antivirové ochrany v programu Microsoft Defender
   - **Nulová tolerance** – zablokuje všechny neznámé spustitelné soubory.
 
 - **Rozšířený časový limit pro Cloud Defenderu v sekundách**  
-  CSP: [CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Antivirová ochrana automaticky blokuje podezřelé soubory po dobu 10 sekund, takže může zkontrolovat soubory v cloudu a ujistit se, že jsou bezpečné. Pomocí tohoto nastavení můžete tomuto časovému limitu přidat až 50 dalších sekund.
 
@@ -57,24 +57,24 @@ Umožňuje zobrazit nastavení antivirové ochrany v programu Microsoft Defender
 Pro každé nastavení v této skupině můžete rozbalit nastavení, vybrat **Přidat**a zadat hodnotu vyloučení.
 
 - **Procesy v programu Defender k vyloučení**  
-  CSP: [ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Určuje seznam souborů otevřených procesy, které se mají ignorovat během kontroly. Samotný proces není při kontrole vyloučený.
 
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Zadejte seznam přípon typu souboru, které mají být při kontrole ignorovány.
 
 - **Soubory a složky Defenderu k vyloučení**  
-  CSP: [ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Zadejte seznam souborů a cest k adresářům, které se mají ignorovat během kontroly.
 
 ## <a name="real-time-protection"></a>Ochrana v reálném čase
 
 - **Zapnout ochranu v reálném čase**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   K použití funkcí monitorování v reálném čase vyžaduje program Defender na zařízeních s Windows 10 Desktop.
   - **Nenakonfigurováno** (*výchozí*) – nastavení se obnoví do výchozího nastavení systému.

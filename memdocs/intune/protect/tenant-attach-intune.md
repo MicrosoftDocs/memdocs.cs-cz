@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823431"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193661"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>Konfigurace připojení tenanta pro podporu zásad zabezpečení koncového bodu služby Intune
 
@@ -187,4 +187,4 @@ Až nakonfigurujete kolekce, které se mají synchronizovat s centrem pro správ
 
 - [Nakonfigurujte zásady zabezpečení koncového bodu](endpoint-security-policy.md#create-an-endpoint-security-policy) pro *antivirovou* a *detekci a odpověď koncového bodu*.
 
-- Přečtěte si další informace o [detekci a odezvě koncových bodů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) v dokumentaci ke službě Microsoft Defender atp.
+- Přečtěte si další informace o [detekci a odezvě koncových bodů](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) v dokumentaci ke službě Microsoft Defender atp.

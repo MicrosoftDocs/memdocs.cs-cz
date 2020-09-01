@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995479"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193634"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1511 pro Configuration Manager
 
@@ -67,7 +67,7 @@ Když společnost Microsoft publikuje novou Microsoft 365 aktualizaci klienta pr
 
 4. Dodržování předpisů pro Microsoft 365 aktualizace můžete ověřit pomocí konzolového monitorování nebo sestav.  
 
-   Podrobný postup najdete v tématu [správa Microsoft 365 aktualizací klientů pomocí Configuration Manager Technical Preview](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Podrobný postup najdete v tématu [správa Microsoft 365 aktualizací klientů pomocí Configuration Manager Technical Preview](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Podpora SQL Server AlwaysOn pro vysoce dostupné databáze  
  Configuration Manager teď podporuje používání skupin dostupnosti SQL Server AlwaysOn k hostování databáze lokality.  Když nainstalujete novou lokalitu, můžete nastavit, aby se místo normální instance SQL Server používala Skupina dostupnosti.  
