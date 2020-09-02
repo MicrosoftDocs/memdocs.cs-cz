@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546822"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286199"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Konfigurace zabezpečení pracovního profilu Android Enterprise
 
@@ -90,7 +90,9 @@ Pro zařízení pracovních profilů vlastněných osobně jsou k dispozici dvě
 | Nastavení pracovního profilu | Omezená platnost hesla (ve dnech) | Nenakonfigurováno | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |
 | Nastavení pracovního profilu | Vyžadovaný typ hesla | Číselné komplexní ||
 | Nastavení pracovního profilu | Zakázat opakované použití předchozích hesel | Nenakonfigurováno | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel.|
+| Nastavení pracovního profilu | Odemknutí obličeje | Nenakonfigurováno ||
 | Nastavení pracovního profilu | Odemknutí pomocí otisků prstů | Nenakonfigurováno ||
+| Nastavení pracovního profilu | Odemknutí Iris | Nenakonfigurováno ||
 | Nastavení pracovního profilu | Smart Lock a jiní agenti pro určování důvěryhodnosti | Nenakonfigurováno |||
 | Heslo zařízení | Minimální délka hesla | 6 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |
 | Heslo zařízení | Maximální počet minut nečinnosti, po které se zamkne obrazovka | 5 | Organizace možná budou muset aktualizovat toto nastavení tak, aby odpovídalo zásadám hesel. |

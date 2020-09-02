@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04aa66572aa3362f6540624266d89308dd4b20ba
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281145"
+ms.locfileid: "89286233"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -205,7 +205,7 @@ Tyto změny se vztahují na uživatelské rozhraní pro nastavení a neovlivní 
 ### <a name="ending-support-for-ios-11--7327321---"></a>Koncová podpora pro iOS 11<!--7327321 -->
 Po vydání iOS 14 budou registrace Intune a aplikace Portál společnosti podporovat iOS verze 12 a novější. Starší verze se nepodporují, ale budou dál dostávat zásady.
 
-### <a name="ending-support-for-macos-1012--7327321---"></a>Koncová podpora pro macOS 10,12<!--7327321 -->
+### <a name="ending-support-for-macos-1012--7327326---"></a>Koncová podpora pro macOS 10,12<!--7327326 -->
 Po vydání verze macOS 11 bude registrace Intune a Portál společnosti podporovat macOS verze 10,13 a novější. Starší verze se nepodporují.
 
 

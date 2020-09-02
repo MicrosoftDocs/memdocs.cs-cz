@@ -2,7 +2,7 @@
 title: Zabezpečení a sdílení údajů v Intune
 titleSuffix: Microsoft Intune
 description: Přečtěte si informace o zabezpečení a sdílení osobních údajů v Intune.
-keywords: ''
+keywords: Ochrana osobních údajů, data
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 439c217099179414ca9732dd4f57775ab2649a5f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995751"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286250"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
@@ -36,14 +36,6 @@ Microsoft Intune se řídí stejnými technickými a organizačními opatřením
 
 Další informace najdete na portálu [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Služba Intune využívá metody minimalizace dat, jako je:
-
-- Agregace
-- Volitelné shromažďování dat u některých funkcí
-- Snižování přesnosti nebo citlivosti dat
-
-V rámci dodržení principu „Data protection by default“ využívá Intune u incidentů podpory také techniky, jako je řízení správy na základě rolí a zabezpečení za běhu. 
-
 ### <a name="data-breach-reporting"></a>Ohlašování úniků dat
 
 Při zjištění bezpečnostního incidentu ohlašovaného zákazníkům (CRSI) se zákazníkům zasílá oznámení. Tento proces zahrnuje práci s Microsoft 365 týmem ke sdělení oznámení o porušení pro všechny Microsoft 365 zákazníky pomocí Intune.
@@ -55,7 +47,7 @@ Když správci tenantů povolí některou z funkcí (například Program registr
 - Třetí strany fungují jako zástupci Microsoftu.
 - Třetí strany nefungují jako zástupci Microsoftu, ale jenom když oprávnění k tomu udělí správci tenanta explicitně.
 
-Všechny třetí strany, které jednají jako agenti Microsoftu, jsou uvedeny v [seznamu subdodavatelů online služeb](https://aka.ms/Online_Serv_Subcontractor_List).
+Všechny třetí strany fungující jako Microsoft agenti jsou součástí [seznamu subdodavatelů služeb Online Services](https://aka.ms/Online_Serv_Subcontractor_List).
 
 Účelem sdílení dat s těmito entitami je pomáhat zákaznické a technické podpoře, údržbě služeb a dalším operacím.
 

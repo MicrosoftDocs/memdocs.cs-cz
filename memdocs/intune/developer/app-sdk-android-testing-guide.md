@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262043"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286267"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Průvodce testováním sady Microsoft Intune App SDK pro vývojáře v Androidu
 
@@ -33,7 +33,7 @@ Pokud ještě nemáte tenanta s vaší společností, můžete vytvořit ukázko
 1. Přejděte na [web pro vytvoření tenanta Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) a vytvořte tenanta Microsoft 365 Enterprise.
 2. [Nastavte Intune](../fundamentals/setup-steps.md) pro povolení správy mobilních zařízení (MDM).
 3. [Vytvořte uživatele](../fundamentals/users-add.md).
-4. [Vytvořte skupiny](../fundamentals/groups-add.md).
+4. [Vytvořit skupiny].. /Fundamentals/(skupiny – přidat. MD).
 5. [Přiřaďte licence](../fundamentals/licenses-assign.md) podle potřeby pro vaše testování.
 
 
@@ -97,7 +97,7 @@ Systémovou schránku můžete omezit na spravované aplikace následujícím zp
     - Kopírování textu z aplikace do nespravované aplikace (například zprávy) je zablokované.
 
 ### <a name="prevent-save"></a>Zabránit uložení
-Pokud vaše aplikace vyžaduje [Integrované ovládací prvky Uložit jako](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations), můžete řídit funkci **Uložit jako** , a to následujícím způsobem:
+Pokud vaše aplikace vyžaduje integrované ovládací prvky Uložit jako, můžete řídit funkci **Uložit jako** , a to následujícím způsobem:
 
 1. Nastavte možnost **zakázat možnost Uložit jako** na **hodnotu Ano**.
 2. Potvrďte následující podmínky:

@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -15,14 +15,14 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic, has-adal-ref
+ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 366cb0bbdb20a118013e49073c6c1c76722cf26c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 62ab2050052294291a93a646a245e493e2e1f574
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907434"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286283"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -71,18 +71,15 @@ Příklad, jak integrovat se sadou Intune App SDK správně, je k dispozici na [
 
 Intune App SDK je standardní knihovna pro Android, která nemá žádné externí závislosti. Soubor **Microsoft.Intune.MAM.SDK.aar** obsahuje jak rozhraní nutná pro povolení zásad ochrany aplikací, tak kód, který je podmínkou interoperability s Portálem společnosti Microsoft Intune.
 
-Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. To provede otevřením projektu aplikace v nástroji Android Studio, kliknutím na **File (Soubor) > New (Nový) > New module (Nový modul)** a výběrem možnosti **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)**. Pak vyberte náš archivní balíček pro Android Microsoft. Intune. MAM. SDK. AAR a vytvořte modul pro. AAR. Klikněte pravým tlačítkem na modul nebo moduly obsahující kód vaší aplikace a přejděte na karta **nastavení modulu**  >  **závislosti**a vedle  >  **ikony**  >  >**modulu** mam SDK AAR, kterou jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
+Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. To provede otevřením projektu aplikace v nástroji Android Studio, kliknutím na **File (Soubor) > New (Nový) > New module (Nový modul)** a výběrem možnosti **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)**. Pak vyberte náš archivní balíček pro Android Microsoft. Intune. MAM. SDK. AAR a vytvořte modul pro *. * Typ souboru AAR Klikněte pravým tlačítkem na modul nebo moduly obsahující kód vaší aplikace a přejděte na kartu závislosti **nastavení modulu**.  >  **Dependencies tab**  >  **+ icon**  >  **Module dependency** > vyberte modul mam SDK AAR, který jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
 
 Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty Intune odpovídajících knihoven `android.support.XXX`. Nejsou součástí souboru Microsoft.Intune.MAM.SDK.aar pro případ, že není nutné, aby aplikace závisela na knihovnách podpory.
 
 #### <a name="proguard"></a>ProGuard
 
-Pokud je jako krok sestavení použitý [ProGuard](https://www.guardsquare.com/en/products/proguard) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. AAR v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
+Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí *. AAR* v sestavení jsou naše pravidla automaticky integrována do kroku ProGuard a jsou zachovány potřebné soubory třídy.
 
-[Knihovna Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) může mít vlastní omezení ProGuard. Pokud vaše aplikace integruje MSAL, musíte postupovat podle těchto omezení v dokumentaci MSAL.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+Knihovna ADAL (Azure Active Directory Authentication Libraries) může mít vlastní omezení pro ProGuard. Pokud je součástí vaší aplikace, informujte se o těchto omezeních v dokumentaci pro ADAL.
 
 ### <a name="policy-enforcement"></a>Vynucování zásad
 Sada Intune App SDK je knihovna Androidu, která umožňuje vaší aplikaci podporovat zásady Intune a podílet se na jejich vynucení. 
@@ -95,7 +92,7 @@ Pro zásady, které se automaticky vynutily, se vyžadují, aby se aplikace nahr
 ### <a name="build-tooling"></a>Nástroje sestavení
 Sada SDK poskytuje nástroje pro sestavení (modul plug-in pro Gradle buildy a nástroj příkazového řádku pro sestavení bez Gradle), které provádějí MAM ekvivalentní náhrady automaticky. Tyto nástroje transformují soubory tříd vygenerované při kompilaci Java a nezmění původní zdrojový kód.
 
-Nástroje provádějí pouze [přímé náhrady](#class-and-method-replacements) . Neprovádí žádné složitější integrace sady SDK, jako je například [zásada Save-as](#enable-features-that-require-app-participation), [multi-identity](#multi-identity-optional), [Registrace aplikací](#app-protection-policy-without-device-enrollment)nebo souboru AndroidManifest, takže je třeba tyto [změny](#manifest-replacements)dokončit, aby byla vaše aplikace plně Intune zapnutá. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
+Nástroje provádějí pouze [přímé náhrady](#class-and-method-replacements) . Nástroje neprovádí žádné složitější integrace SDK, jako jsou [zásady uložení jako](#enable-features-that-require-app-participation), [použití více identit](#multi-identity-optional), [registrace App-WE](#app-protection-policy-without-device-enrollment), [změny souboru AndroidManifest](#manifest-replacements) nebo [konfigurace ADAL](#configure-azure-active-directory-authentication-library-adal), a proto je třeba tyto kroky provést dříve, než u aplikace povolíte plnou podporu Intune. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
 
 > [!NOTE]
 > Tyto nástroje můžete spustit u projektu, u kterého jste již provedli částečnou nebo úplnou integraci sady SDK MAM prostřednictvím ručních nahrazení. Váš projekt musí i nadále uvádět sadu SDK MAM jako závislost.
@@ -230,7 +227,7 @@ Nástroj příkazového řádku je k dispozici ve složce `BuildTool` sady SDK. 
 
 #### <a name="using-the-command-line-tool"></a>Použití nástroje příkazového řádku
 
-Nástroj příkazového řádku lze vyvolat pomocí zadaných skriptů pomocných rutin, které se nacházejí v adresáři `BuildTool\bin`.
+Nástroj příkazového řádku lze vyvolat pomocí poskytovaných pomocných skriptů umístěných v `BuildTool\bin` adresáři.
 
 Nástroj očekává následující parametry.
 
@@ -238,7 +235,7 @@ Nástroj očekává následující parametry.
 | -- | -- |
 | `--input` | Seznam středníkem oddělených souborů JAR a adresářů souborů tříd, které se mají změnit. Seznam by měl obsahovat všechny soubory JAR a adresáře, které máte v úmyslu přepsat. |
 | `--output` | Seznam středníkem oddělených souborů JAR a adresářů, do kterých se budou ukládat změněné třídy. Pro jednu výstupní položku by měla existovat jedna vstupní položka a položky by měly být uvedeny v pořadí. |
-| `--classpath` | Cesta ke třídě sestavení. Může obsahovat jak soubory JAR, tak i adresáře tříd. |
+| `--classpath` | Cesta ke třídě sestavení. To může obsahovat adresáře jar i třídy. |
 | `--excludeClasses`| Seznam středníkem oddělených názvů tříd, které chcete z přepsání vyloučit. |
 
 Všechny parametry jsou povinné s výjimkou parametru `--excludeClasses`, který je volitelný.
@@ -246,7 +243,7 @@ Všechny parametry jsou povinné s výjimkou parametru `--excludeClasses`, kter�
 > [!NOTE]
 > V případě systémů se systémem UNIX je středníkem příkazu oddělovač příkazů. Chcete-li zabránit prostředí v rozdělování příkazů, nezapomeňte každý středník označit středníkem \' nebo zabalte úplný parametr v uvozovkách.
 
-#### <a name="example-command-line-tool-invocation"></a>Ukázka vyvolání nástroje příkazového řádku
+#### <a name="example-command-line-tool-invocation"></a>Příklad vyvolání nástroje příkazového řádku
 
 ``` batch
 > BuildTool\bin\BuildTool.bat --input build\product-foo-project;libs\bar.jar --output mam-build\product-foo-project;mam-build\libs\bar.jar --classpath build\zap.jar;libs\Microsoft.Intune.MAM.SDK\classes.jar;%ANDROID_SDK_ROOT%\platforms\android-27\android.jar --excludeClasses com.contoso.SplashActivity
@@ -422,12 +419,9 @@ Intune App SDK vyžaduje tři [oprávnění pro systém Android](https://develop
 
 * `android.permission.USE_CREDENTIALS`
 
-Azure Active Directory Authentication Library ([ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
+Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) vyžaduje tato oprávnění ke zprostředkovanému ověřování. Pokud nejsou tato oprávnění udělená aplikaci nebo je uživatel odvolá, zakážou se toky ověřování, které vyžadují zprostředkovatele (aplikace Portál společnosti).
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
-## <a name="logging"></a>protokolování
+## <a name="logging"></a>Protokolování
 
 Abyste ze zaprotokolovaných dat získali co nejvíce, měli byste protokolování zahájit brzy. Nejlepším místem k zahájení protokolování je obvykle `Application.onMAMCreate()`.
 
@@ -468,7 +462,7 @@ Toto je volitelná funkce, která může pomoci při ladění.
 Pokud na zařízení není nainstalovaná Portál společnosti, zobrazí se dialogové okno s výzvou, aby uživatel informoval, že tyto informace nejsou aktuálně k dispozici. Když se aplikace spravují pomocí zásad MAM, zobrazí se podrobnosti nastavení zásad MAM.
 
 ## <a name="mam-strict-mode"></a>MAM striktní režim
-MAM striktní režim poskytuje mechanismus pro detekci "pachy" v použití aplikace MAM API nebo rozhraní API platformy s omezeným přístupem MAM. Po StrictModeu Androidu se bude volně vycházet a spustí sadu kontrol, které vyvolávají chyby, když selžou. V produkčních sestavách není tato možnost ponechána, ale je *velmi doporučována* pro použití v interním vývoji, ladění nebo testování sestavení vaší aplikace.
+MAM striktní režim poskytuje mechanismus pro detekci "pachy" v použití aplikace MAM API nebo rozhraní API platformy s omezeným přístupem MAM. Po StrictModeu Androidu se bude volně vycházet a spustí sadu kontrol, které vyvolávají chyby, když selžou. V produkčních sestavách není tato možnost ponechána, ale je *velmi doporučována* , abyste ji používali v interním vývoji, ladění a/nebo interní vydání sestavení vaší aplikace.
 
 Chcete-li povolit, zavolejte
 
@@ -892,12 +886,9 @@ Jakmile se příjemce vaší aplikace vrátí, už nebude mít přístup k šifr
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
 Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
-Sada SDK spoléhá na [knihovnu ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
+Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
 
 Když chcete konfigurovat svoji aplikaci a povolit správné ověření, přidejte do uzlu aplikace v souboru AndroidManifest.xml následující kód. Některé z těchto konfigurací jsou potřeba, jen když vaše aplikace používá ADAL pro ověřování obecně; v takovém případě budete potřebovat konkrétní hodnoty, které vaše aplikace používá k registraci v AAD. To slouží k zajištění, že koncovému uživateli se nezobrazí výzva k ověření dvakrát kvůli tomu, že AAD rozpozná hodnoty dvou samostatných registrací: jedné z aplikace a jedné ze sady SDK.
 
@@ -952,8 +943,8 @@ Metadata ADAL **nesmí** být v manifestu přítomna.
 V případě potřeby může být určena autorita.
 
 Aplikaci musíte zaregistrovat v Azure AD a dát aplikaci přístup ke službě zásady ochrany aplikací:
-* Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-* Zajistěte, aby byla dodržena oprávnění aplikace pro Android ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)". 
+* Informace o registraci aplikace v Azure AD najdete v tématu [rychlý Start: registrace aplikace na platformě Microsoft Identity](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) .
+* Zajistěte, aby byla dodržena oprávnění aplikace pro Android ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](../developer/app-sdk-get-started.md#next-steps-after-integration) v části "poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)". 
 
 Podívejte se také na požadavky pro [podmíněný přístup](#conditional-access), které najdete níže.
 
@@ -969,18 +960,18 @@ V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD. [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
+Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD. [Správci Intune mohou definovat pravidla podmíněného přístupu](../protect/conditional-access.md), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
 
 1. Postupujte podle [pokynů k integraci ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Zvláštní pozornost věnujte kroku 11, který se týká použití zprostředkovatele.
 2. [Zaregistrujte si aplikaci ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
    Identifikátor URI pro přesměrování najdete v pokynech k integraci ADAL uvedených výše.
 3. Nastavte parametry metadat manifestu pro jednotlivé [běžné konfigurace ADAL](#common-adal-configurations), položka 2 výše.
-4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
-    - Při přihlášení k aplikaci se zobrazí výzva k instalaci registraci Portálu společnosti Intune.
+4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](../protect/conditional-access-intune-common-ways-use.md) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
+    - Při přihlášení k aplikaci se zobrazí výzva k instalaci a registraci Portálu společnosti Intune.
     - Po registraci se přihlášení k aplikaci úspěšně dokončí.
 5. Jakmile vaše aplikace dokončí integraci Intune APP SDK, kontaktujte, msintuneappsdk@microsoft.com aby se přidal do seznamu schválených aplikací pro [podmíněný přístup na základě aplikace](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access) .
-6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
+6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](../protect/app-based-conditional-access-intune-create.md) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zásady ochrany aplikací bez registrace zařízení
 
@@ -997,9 +988,6 @@ Jakmile aplikace vytvoří nový uživatelský účet, měla by ho zaregistrovat
 Aplikace se také může sady Intune App SDK dotazovat na stav zaregistrovaného uživatele, pokud potřebuje určit, jestli by měl být takovému uživateli zablokován přístup k podnikovému obsahu. Ke správě je možné zaregistrovat více účtů, ale aktivní registrace ke službě APP-WE je aktuálně možná vždy jen pro jeden účet. To znamená, že zásady ochrany aplikací se nemůžou vztahovat na více účtů aplikace současně.
 
 Aplikace musí provést zpětné volání, aby mohla jménem sady SDK získat z knihovny ADAL příslušné přístupové tokeny. Předpokládá se, že aplikace už pro ověřování uživatelů ADAL využívá a získává vlastní přístupové tokeny.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Pokud aplikace zcela odebere účet, měla by ho také odregistrovat a tím aplikaci sdělit, že se na tohoto uživatele už nemají vztahovat zásady. Pokud byl uživatel zaregistrován ke službě MAM, dojde ke zrušení jeho registrace a vymazání aplikace.
 
@@ -1076,9 +1064,6 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. Aby bylo možné povolit sadě SDK žádat token ADAL pro daného uživatele a ID prostředku, musí aplikace implementovat rozhraní `MAMServiceAuthenticationCallback`. Voláním metody `registerAuthenticationCallback()` musí být rozhraní `MAMEnrollmentManager` poskytnutá instance zpětného volání. V brzké fázi životního cyklu aplikace může být token potřeba k pokusům o registraci nebo ohlášení aktualizací zásad ochrany aplikací, takže zpětné volání je nejlepší zaregistrovat v metodě `onMAMCreate()` podtřídy `MAMApplication` aplikace.
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
 2. Metoda `acquireToken()` by měla získat přístupový token pro požadované ID prostředku daného uživatele. Pokud ho získat nedokáže, měla by vrátit hodnotu null.
 
     > [!NOTE]
@@ -1111,12 +1096,9 @@ Result getRegisteredAccountStatus(String upn);
 
 1. Aby bylo možné zaregistrovat účet ke správě, měla by aplikace provést volání metody `registerAccountForMAM()`. Uživatelský účet definuje jeho hlavní název uživatele a ID uživatele služby AAD. K přidružení dat zápisu ke klientovi AAD příslušného uživatele je také potřeba ID klienta. Může být taky poskytnutá autorita uživatele, která umožňuje registraci pro konkrétní cloudy svrchovaného prostředí. Další informace najdete v části [svrchovaná registrace do cloudu](#sovereign-cloud-registration).  Sada SDK se může pokusit zaregistrovat aplikaci pro daného uživatele ve službě MAM. Pokud se registrace nezdaří, bude pokusy o registraci pravidelně opakovat až do doby, než dojde ke zrušení registrace účtu. Časový interval mezi jednotlivými pokusy je obvykle 12 až 24 hodin. Sada SDK informuje o stavu pokusů o registraci asynchronně prostřednictvím oznámení.
 
-2. Vzhledem k tomu, že je vyžadováno ověřování AAD, je nejlepší čas k registraci uživatelského účtu po přihlášení uživatele k aplikaci a úspěšném ověření pomocí ADAL. ID AAD a ID tenanta uživatele se vrátí z ověřovacího volání ADAL jako součást [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) objektu.
+2. Vzhledem k tomu, že ověřování AAD je povinné, bude nejlepší zaregistrovat uživatelský účet po jeho přihlášení k aplikaci a úspěšném ověření pomocí ADAL. ID AAD a ID tenanta uživatele se vrátí z ověřovacího volání ADAL jako součást [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) objektu.
     * ID klienta pochází z metody `AuthenticationResult.getTenantID()`.
     * Informace o uživateli se nachází v podobjektu typu `UserInfo`, který pochází z `AuthenticationResult.getUserInfo()`, a ID uživatele AAD se získává z tohoto objektu voláním metody `UserInfo.getUserId()`.
-
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 3. Pokud chcete zrušit registraci účtu ve správě Intune, měla by aplikace provést volání metody `unregisterAccountForMAM()`. Pokud byl účet úspěšně zaregistrován a je spravován, sada SDK zruší jeho registraci a vymaže jeho data. Kromě toho se zastaví pravidelné pokusy o registraci. Sada SDK poskytuje asynchronní stav žádosti o zrušení registrace prostřednictvím oznámení.
 
@@ -1154,12 +1136,9 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Důležité poznámky k implementaci
 
-#### <a name="authentication"></a>Authentication
+#### <a name="authentication"></a>Ověřování
 
 * Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získala svůj vlastní token z knihovny ADAL před registrací účtu za účelem urychlení získání požadovaného tokenu. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 * V případě, že aplikace nevrátí platný token AAD, konečný výsledek pokusu o registraci bude `AUTHORIZATION_NEEDED`. Pokud aplikace obdrží tento výsledek prostřednictvím oznámení, důrazně se doporučuje urychlit proces registrace tím, že získá token pro uživatele a prostředek, který si dřív požadoval, `acquireToken()` a zavolá `updateToken()` metodu pro zahájení procesu registrace znovu.
 
@@ -1184,7 +1163,7 @@ Po registraci se účet nachází ve stavu `PENDING`, který značí, že prvotn
 | `AUTHORIZATION_NEEDED` | Tento výsledek indikuje, že se token neposkytl registrovanou `MAMServiceAuthenticationCallback` instancí aplikace, nebo poskytnutý token je neplatný.  Aplikace by měla získat platný token a pokud možno provést volání `updateToken()`. |
 | `NOT_LICENSED` | Uživatel nemá licenci na službu Intune, nebo byl pokus o spojení se službou Intune MAM neúspěšný.  Aplikace by měla dál běžet v nespravovaném (normálním) stavu a uživatel by neměl být zablokovaný.  Pro případ, že by uživatel v budoucnu licenci získal, budou pravidelně probíhat pokusy o registraci. |
 | `ENROLLMENT_SUCCEEDED` | Pokus o registraci proběhl úspěšně nebo už je uživatel zaregistrovaný.  V případě úspěšné registrace se ještě před tímto oznámením zašle oznámení o aktualizaci zásad.  Uživatel by měl mít povolený přístup k podnikovým datům. |
-| `ENROLLMENT_FAILED` | Pokus o registraci selhal.  Další podrobnosti najdete v protokolech zařízení.  Aplikace by neměla umožňovat přístup k podnikovým datům v tomto stavu, protože dříve bylo zjištěno, že uživatel má licenci pro Intune. Všechny aplikace by měly zajistit, aby přístup k podnikovým datům byl neautorizovaný, dokud vaše aplikace nezíská enrollment_succeeded.|
+| `ENROLLMENT_FAILED` | Pokus o registraci selhal.  Další podrobnosti najdete v protokolech zařízení.  Aplikace by neměla umožňovat přístup k podnikovým datům v tomto stavu, protože dříve bylo zjištěno, že uživatel má licenci pro Intune.|
 | `WRONG_USER` | Ke službě MAM může aplikaci zaregistrovat jen jeden uživatel na dané zařízení. Tento výsledek indikuje, že uživatel, pro kterého se tento výsledek doručí (druhý uživatel), cílí na zásady MAM, ale už je zaregistrovaný jiný uživatel. Vzhledem k tomu, že zásady MAM nejde pro druhého uživatele vyhovět, musí vaše aplikace neumožňovat přístup k datům tohoto uživatele (případně odebráním uživatele z vaší aplikace), pokud není registrace pro tohoto uživatele v pozdějším čase úspěšná. Při současném doručování tohoto `WRONG_USER` výsledku se mam vyzve s možností odebrat existující účet. Pokud uživatel obdrží odpověď lidského uživatele na zjištěnou hodnotu, bude to opravdu možné později zaregistrovat druhého uživatele. Dokud se druhý uživatel zaregistruje, MAM se bude pravidelně pokoušet o registraci. |
 | `UNENROLLMENT_SUCCEEDED` | Zrušení registrace bylo úspěšné.|
 | `UNENROLLMENT_FAILED` | Žádost o zrušení registrace selhala.  Další podrobnosti najdete v protokolech zařízení. Obecně platí, že k této chybě nedojde, dokud aplikace předá hlavní název uživatele (UPN) (bez hodnoty null nebo prázdné). Neexistuje žádná přímá a spolehlivá náprava, kterou může aplikace trvat. Pokud se tato hodnota obdrží při zrušení registrace platného hlavního názvu uživatele (UPN), ohlaste ji prosím týmu Intune MAM jako chybu.|
@@ -1225,9 +1204,6 @@ Knihovna ADAL má nový kód chyby, který informuje aplikaci o tom, že selhán
 
 > [!NOTE]
 > Tento nový kód chyby a další podpora pro certifikační autoritu aplikací pomocí zásad správy vyžaduje verzi 1.15.0 (nebo vyšší) knihovny ADAL.
-
-> [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -1302,7 +1278,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 | PENDING | Pokus o nápravu dodržování předpisů se nezdařil, protože při překročení časového limitu nebyla od služby přijata odpověď na stav. Aplikace by se měla znovu pokusit o získání tokenu později. |
 | COMPANY_PORTAL_REQUIRED | Aby bylo možné úspěšně provést nápravu dodržování předpisů, musí být na zařízení nainstalovaná Portál společnosti.  Pokud je už Portál společnosti na zařízení nainstalovaná, je potřeba restartovat aplikaci.  V takovém případě se zobrazí dialogové okno s výzvou, aby uživatel aplikaci restartoval. |
 
-Pokud je stav dodržování předpisů `MAMCAComplianceStatus.COMPLIANT` , aplikace by měla znovu iniciovat původní pořízení tokenu (pro svůj vlastní prostředek). Pokud se pokus o nápravu kompatibility nezdařil `getComplianceErrorTitle()` , `getComplianceErrorMessage()` metody a vrátí lokalizované řetězce, které může aplikace zobrazit koncovému uživateli, pokud se rozhodne.  Většina chybových případů není aplikací remediable, takže v případě obecného případu může být nejlepším řešením selhání při vytváření nebo přihlašování účtů a umožnit uživateli opakovat akci později.  Pokud je chyba trvalá, může vám protokol MAM určit příčinu.  Koncový uživatel může protokoly odeslat pomocí pokynů, které najdete [tady](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "Posílání protokolů e-mailem firemní podpoře").
+Pokud je stav dodržování předpisů `MAMCAComplianceStatus.COMPLIANT` , aplikace by měla znovu iniciovat původní pořízení tokenu (pro svůj vlastní prostředek). Pokud se pokus o nápravu kompatibility nezdařil `getComplianceErrorTitle()` , `getComplianceErrorMessage()` metody a vrátí lokalizované řetězce, které může aplikace zobrazit koncovému uživateli, pokud se rozhodne.  Většina chybových případů není aplikací remediable, takže v případě obecného případu může být nejlepším řešením selhání při vytváření nebo přihlašování účtů a umožnit uživateli opakovat akci později.  Pokud je chyba trvalá, může vám protokol MAM určit příčinu.  Koncový uživatel může protokoly odeslat. Další informace najdete v tématu [nahrávání a e-mailové protokoly](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 Vzhledem `MAMComplianceNotification` `MAMUserNotification` k tomu, že služba rozšiřuje, je k dispozici také identita uživatele, pro kterého došlo k pokusu o nápravu.
 
@@ -1415,7 +1391,7 @@ Implementace třídy BackupAgentHelper je jednodušší než implementace tříd
 |FileBackupHelper | MAMFileBackupHelper
 |SharedPreferencesBackupHelper| MAMSharedPreferencesBackupHelper|
 
-Pokud se budete držet těchto pokynů, dosáhněte úspěšného zálohování a obnovy více identit.
+Podle těchto pokynů povedete k úspěšnému zálohování a obnovení více identit.
 
 ### <a name="backupagent"></a>BackupAgent
 
@@ -1458,7 +1434,7 @@ Jakmile uživatel zařízení nebo aplikaci zaregistruje, zaregistruje tuto iden
 > [!NOTE]
 > V současné době je podporována jen jedna spravovaná identita Intune pro každé zařízení.
 
-Identita se definuje jako řetězec. Identity rozlišují **malá**a velká písmena a požadavky na sadu SDK pro identitu nemusí vracet stejnou velikost písmen, která byla původně použita při nastavování identity.
+Identita se definuje jako řetězec. Identity rozlišují malá a velká písmena a požadavky na sadu SDK pro identitu nemusí vracet stejnou velikost písmen, která byla původně použita při nastavování identity.
 
 Pokud chce aplikace změnit aktivní identitu, musí informovat sadu *SDK*. V některých případech SDK také upozorní aplikaci, že je nutná změna identity. Ve většině případů však správa MAM nemůže vědět, jaká data se zobrazují v uživatelském rozhraní nebo používají u vlákna v daném okamžiku, a spoléhá na to, že aplikace nastaví správnou identitu, která zabrání úniku dat. V následujících částech najdete některé konkrétní scénáře, které vyžadují akci aplikace.
 
@@ -1913,7 +1889,7 @@ Výchozí selektivní vymazání ukončí aplikaci řádným způsobem, dokonču
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Povolení konfigurace určené pro správu mobilních aplikací pro Android (nepovinné)
-Páry klíč-hodnota specifické pro aplikaci můžou být nakonfigurované v konzole Intune pro [mam](/intune/app-configuration-policies-managed-app) a [Android Enterprise](/intune/app-configuration-policies-use-android).
+Páry klíč-hodnota specifické pro aplikaci můžou být nakonfigurované v konzole Intune pro [mam](../apps/app-configuration-policies-managed-app.md) a [Android Enterprise](../apps/app-configuration-policies-use-android.md).
 Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale předávají se do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
 
 > [!NOTE] 
@@ -2022,10 +1998,10 @@ Long barValue = appConfig.getIntegerForKey("bar", MAMAppConfig.NumberQueryType.M
 Konfigurace aplikace přidá nový typ oznámení:
 * **REFRESH_APP_CONFIG**: Toto oznámení se odesílá v rámci `MAMUserNotification` a do aplikace posílá informace, že jsou k dispozici nová konfigurační data aplikace.
 
-### <a name="further-reading"></a>Další materiály
-Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](/intune/app-configuration-policies-managed-app).
+### <a name="further-reading"></a>Další čtení
+Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](../apps/app-configuration-policies-managed-app.md).
 
-Konfiguraci aplikace je také možné nakonfigurovat pomocí Graph API. Informace najdete v tématu [Graph API docs pro cílenou konfiguraci mam](/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
+Konfiguraci aplikace je také možné nakonfigurovat pomocí Graph API. Informace najdete v tématu [Graph API docs pro cílenou konfiguraci mam](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration).
 
 ## <a name="custom-themes-optional"></a>Vlastní motivy (volitelné)
 Vlastní motiv se dá poskytnout sadě SDK MAM, která se použije pro všechny obrazovky a dialogy MAM. Pokud není zadán motiv, bude použit výchozí motiv MAM.
@@ -2091,9 +2067,6 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 Pomocí následujících kroků povolte výchozí registraci:
 
 1. Pokud vaše aplikace integruje ADAL nebo potřebujete povolit jednotné přihlašování, [nakonfigurujte knihovnu ADAL](#configure-azure-active-directory-authentication-library-adal) po [běžné konfiguraci #2 konfigurace ADAL](#common-adal-configurations) . V takovém případě tento krok můžete přeskočit.
-
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) a Azure AD Graph API budou zastaralé. Další informace najdete v tématu [aktualizace aplikací pro použití knihovny Microsoft Authentication Library (MSAL) a rozhraní Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
    
 2. Povolte výchozí registraci přidáním následující hodnoty do manifestu pod `<application>` značku:
 
@@ -2169,7 +2142,7 @@ Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikac
 
 ## <a name="recommended-android-best-practices"></a>Doporučené osvědčené postupy pro Android
 
-* Všechny projekty knihovny by měly sdílet stejný balíček android:package, kde je to možné. Protože je to čistě problém v době vytváření buildu, nedojde k selhání za běhu. Novější verze sady Intune App SDK odeberou některé z redundancí.
+* Kde je to možné, všechny projekty knihovny by měly sdílet stejný balíček `android:package`. Protože je to čistě problém v době vytváření buildu, nedojde k selhání za běhu. Novější verze sady Intune App SDK odeberou některé z redundancí.
 
 * Použijte nejnovější nástroje pro vytváření buildů sady SDK pro Android.
 
