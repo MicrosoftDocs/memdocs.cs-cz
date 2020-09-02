@@ -2,7 +2,7 @@
 title: Novinky ve verzi 2006
 titleSuffix: Configuration Manager
 description: Získejte podrobnosti o změnách a nových funkcích zavedených ve verzi 2006 Configuration Manager aktuální větve.
-ms.date: 08/31/2020
+ms.date: 09/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c507879a77e57a0a06fe9528417394bcbf643608
-ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
+ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244992"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385358"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -340,8 +340,7 @@ Další informace o změnách rutin prostředí Windows PowerShell pro Configura
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_2006).
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 2006](https://support.microsoft.com/help/4578830).
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
