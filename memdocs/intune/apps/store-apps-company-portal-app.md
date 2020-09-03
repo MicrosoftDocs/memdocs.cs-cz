@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910260"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390768"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Přidání aplikace Portál společnosti s Windows 10 pomocí Microsoft Intune
 
@@ -33,6 +33,9 @@ Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Mic
 
  > [!IMPORTANT]
  > Pokud si stáhnete aplikaci Portál společnosti, možnost popsanou v tomto článku vyžaduje, abyste při každém vydání aktualizace aplikace přiřadili ruční aktualizace. Postup nasazení Portál společnosti aplikace pro zařízení s autopilotem s Windows 10, která se zřídí, najdete v tématu [Přidání zařízení s Windows 10 portál společnosti autopilotování aplikací](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> Portál společnosti podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato nová verze Portál společnosti zobrazí Configuration Manager nasazených aplikací pro všechny spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](/mem/configmgr/comanage/company-portal).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Konfigurace nastavení k zobrazení offline aplikací
 1. Přihlaste se k [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) pomocí svého účtu správce.

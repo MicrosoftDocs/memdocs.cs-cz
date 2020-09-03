@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 63aa08565d4c1d5a064300d1a914963509af92a5
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193779"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390581"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -179,7 +179,7 @@ Jako správce Microsoft Intune můžete nahrát vlastní image značky do Intune
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Portál společnosti přidává podporu aplikací Configuration Manager<!-- 4297660 -->
-Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../configmgr/comanage/company-portal.md). 
+Portál společnosti teď podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato nová verze Portál společnosti zobrazí Configuration Manager nasazených aplikací pro všechny spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../configmgr/comanage/company-portal.md). 
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 

@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: d955d0250076f29dd0f7742c6748784dbbeca348
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057398"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390887"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -54,9 +54,9 @@ Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolov
 ### <a name="setting-notifications"></a>Nastavení oznámení  
 Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení (například vícefaktorové ověřování), aplikace Portál společnosti vás o něm informuje. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
 
-Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](/mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisites"></a>Požadavky    
+## <a name="prerequisites"></a>Předpoklady    
 
 * Nainstalujte aplikaci Portál společnosti [z App Storu](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Udržujte připojení Wi-Fi, dokud se nedokončí všechny kroky.

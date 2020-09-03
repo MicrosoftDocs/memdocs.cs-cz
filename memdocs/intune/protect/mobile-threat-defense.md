@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906884"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390785"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
 
@@ -80,13 +80,15 @@ Přístup se udělí, když je zařízení opravené:
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Ukázkové scénáře neregistrovaných zařízení pomocí zásad ochrany aplikací Intune
 
 Pokud řešení Mobile Threat Defense považuje zařízení za nakažené:<br>
-![Obrázek znázorňující nakažené zařízení s ochranou pomocí služby Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-3.png)
+![Obrázek, který zobrazuje zařízení infikované antivirovou ochranou před mobilními hrozbami](./media/mobile-threat-defense/MTD-image-3.png)
 
 Přístup se udělí, když je zařízení opravené:<br>
 ![Obrázek znázorňující udělený přístup ochrany před mobilními hrozbami](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> Můžete použít více dodavatelů mobilní ochrany s jedním klientem Intune. Pokud jsou však pro stejnou platformu nakonfigurovány dva nebo více dodavatelů, všechna zařízení, která tuto platformu spouštějí, musí nainstalovat každou aplikaci MTD a vyhledat hrozby. Nepovedlo se odeslat kontrolu z nenakonfigurovaných výsledků aplikace v zařízení, které je označené jako nedodržující předpisy. 
+> Doporučujeme použít jeden dodavatel ochrany před mobilními hrozbami na každého tenanta na platformu. 
+> 
+> V případě dodržování předpisů zařízením můžete použít více dodavatelů mobilní ochrany s jedním klientem Intune. Pokud jsou však pro stejnou platformu nakonfigurovány dva nebo více dodavatelů, všechna zařízení, která tuto platformu spouštějí, musí nainstalovat každou aplikaci MTD a vyhledat hrozby. Nepovedlo se odeslat kontrolu z nenakonfigurovaných výsledků aplikace v zařízení, které je označené jako nedodržující předpisy. 
 
 ## <a name="mobile-threat-defense-partners"></a>Partneři Mobile Threat Defense
 

@@ -6,7 +6,7 @@ keywords: Ochrana osobních údajů, GDPR, osobní údaje
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cf808f814a4bb26531c15110946cac50492ad0e
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 987804ae6a1b0d1048f199ea3e5048ca62750776
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068068"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390751"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Ochrana soukromí a osobní údaje v Intune
 

@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057310"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390853"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 
@@ -58,7 +58,7 @@ V závislosti na velikosti vaší společnosti můžete na Portálu společnosti
 ## <a name="share-apps"></a>Sdílení aplikací  
 Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. Následující kroky popisují, jak sdílet odkaz přímo z Portálu společnosti.
 
-1. Na Portálu společnosti klikněte pravým tlačítkem myši na některou aplikaci (nebo ji stiskněte a podržte), aby se otevřela její [kontextová nabídka](//windows/uwp/design/controls-and-patterns/menus).  
+1. Na Portálu společnosti klikněte pravým tlačítkem myši na některou aplikaci (nebo ji stiskněte a podržte), aby se otevřela její [kontextová nabídka](/windows/uwp/design/controls-and-patterns/menus).  
 
     ![Aplikace Portál společnosti pro Windows 10, úvodní stránka se zobrazeným seznamem aplikací a zařízení Místní nabídka Sdílet, na kterou jde kliknout, je zobrazená v horní části ikony ukázkové aplikace. ](./media/1808_ShareContext_CP_Windows.png)  
 

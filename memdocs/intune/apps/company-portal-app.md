@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194225"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390805"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
 Aplikace Portál společnosti, Portál společnosti web a Intune v Androidu jsou místo, kde uživatelé přistupují k podnikovým datům a můžou provádět běžné úkoly. Běžný úkol může zahrnovat registraci zařízení, instalaci aplikací a hledání informací (například pomoc z vašeho oddělení IT). Kromě toho umožňují uživatelům zabezpečený přístup k prostředkům společnosti. Činnost koncového uživatele poskytuje několik různých stránek, jako jsou domů, aplikace, podrobnosti o aplikaci, zařízení a podrobnosti o zařízení. K rychlému vyhledání aplikací v rámci Portál společnosti můžete aplikace filtrovat na stránce aplikace.
+
+> [!NOTE]
+> Portál společnosti podporuje Configuration Manager aplikace. Tato funkce umožňuje koncovým uživatelům zobrazit Configuration Manager i aplikace nasazené v Intune v Portál společnosti pro spoluspravované zákazníky. Tato nová verze Portál společnosti zobrazí Configuration Manager nasazených aplikací pro všechny spoluspravované zákazníky. Tato podpora pomůže správcům konsolidovat různé prostředí portálu pro koncové uživatele. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](/mem/configmgr/comanage/company-portal).
 
 ## <a name="customizing-the-user-experience"></a>Přizpůsobení uživatelského prostředí
 
@@ -111,8 +114,8 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro zápis:
 |    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
-|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    Ne    |    Ne    |    Ano    |    Ano    |
-|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    Ne    |    Ne    |    Ne    |    Ne    |
+|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Ano    |    Ano    |
+|    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Ochrana osobních údajů
 
@@ -211,7 +214,7 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Kontrola přístupu | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Instalace | Ctrl+I |
-| Zařízení | K dispozici. | Ctrl+D |
+| Zařízení | K dispozici | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
@@ -239,8 +242,8 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 | Akce | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici. | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici. | K dispozici<sup>(5)</sup><sup>(9)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(9)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup><sup>(9)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Sync | K dispozici | K dispozici | K dispozici | K dispozici |
 | Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |

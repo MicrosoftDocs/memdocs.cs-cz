@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 16b4ef2eaff377a06bdf9ac95be76665cdc88ab1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996244"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390811"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -479,7 +479,7 @@ Aktualizovali jsme prostředí uživatelského rozhraní pro [vytváření](../p
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>Nastavení připraveného restartování se z web Windows Updatech okruhů odeberou.<!--  4464404      -->
 Jak už bylo oznámeno, aktualizační kanály Windows 10 v Intune teď [podporují nastavení pro konečné termíny](../protect/windows-update-settings.md) a už nepodporují *restart*. Nastavení pro probíhající *restart* již není k dispozici při konfiguraci nebo správě aktualizačních kroužků v Intune.  
 
-Tato změna se zarovnává s posledními [změnami údržby Windows](//windows/whats-new/whats-new-windows-10-version-1903#servicing) a na zařízeních s Windows 10 1903 nebo novějším, přičemž *termíny* nahrazují konfigurace pro *následné restartování*.
+Tato změna se zarovnává s posledními [změnami údržby Windows](/windows/whats-new/whats-new-windows-10-version-1903#servicing) a na zařízeních s Windows 10 1903 nebo novějším, přičemž *termíny* nahrazují konfigurace pro *následné restartování*.
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Zabránit instalaci aplikací z neznámých zdrojů na zařízeních s pracovními profily Android Enterprise<!-- 4760025   -->
 Na zařízeních s pracovním profilem Android Enterprise uživatelé nemůžou instalovat aplikace z neznámých zdrojů. V této aktualizaci se nachází nové nastavení – **Zakázat instalaci aplikací z neznámých zdrojů v osobním profilu**. Ve výchozím nastavení toto nastavení brání uživatelům v nasazování aplikací z neznámých zdrojů do osobního profilu na zařízení.
@@ -2918,7 +2918,7 @@ U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k 
 Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) teď podporuje zásady ochrany aplikací Microsoft Intune. Uživatelé zařízení s iOS a Androidem, kteří se přihlásí pomocí podnikových účtů Azure AD v aplikaci Microsoft Edge, budou chráněni službou Intune. Na zařízeních s iOSem umožní zásada **Vyžadovat spravovaný prohlížeč pro webový obsah** uživatelům otevírat odkazy v Microsoft Edgi, pokud je spravovaný.
 
 <!-- ########################## -->
-## <a name="may-2018"></a>May 2018
+## <a name="may-2018"></a>Květen 2018
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -3618,7 +3618,7 @@ Správci mohou nakonfigurovat následující nastavení:
 
     Používá se pouze v případě nezdařeného automatického zjišťování.
 
-  - **E-mailu**
+  - **E-mail**
 
     E-mailová adresu účtu zdroje nebo zařízení.
 
