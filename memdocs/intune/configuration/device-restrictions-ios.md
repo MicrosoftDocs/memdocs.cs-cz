@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303432"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423879"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -70,8 +70,9 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   Chcete-li použít toto nastavení, nastavte nastavení **zachycení obrazovky** na **blokovat**.
 
   Tato funkce platí pro:  
-  - iOS 9,3 a novější
-  - iPadOS 13,0 a novější
+  - iOS 9,3 – iOS 12. x: vyžaduje zařízení pod dohledem
+  - iOS 13,0 a novější: nevyžaduje zařízení pod dohledem
+  - iPadOS 13,0 a novější: zařízení musí být zaregistrovaná pomocí zápisu zařízení nebo automatického zápisu zařízení (ADE).
 
 - **Sledování obrazovky s nezodpovězenými obrazovkami podle aplikace učebny**: **Povolit** umožní učitelům tiše sledovat obrazovky iOS/iPadOS v studentech pomocí aplikace učebny bez vědomí studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit této funkci.
 

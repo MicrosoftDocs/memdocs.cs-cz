@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915564"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423760"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Přehled s/MIME k podepsání a šifrování e-mailu v Intune
 
@@ -45,7 +45,11 @@ Pokud chcete používat podpisové certifikáty, vytvořte šablonu v certifika�
 
 Podpisové certifikáty v Intune používají certifikáty PKCS. [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md) popisuje, jak certifikát PKCS v prostředí Intune nasadit a používat. Tyto kroky zahrnují:
 
-- Stažení a instalace nástroje Microsoft Intune Certificate Connector, který podporuje žádosti o certifikát PKCS. Konektor má stejné požadavky na síť jako [spravovaná zařízení](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Stáhněte a nainstalujte Certificate Connector PFX pro podporu požadavků certifikátů PKCS. Konektor má stejné požadavky na síť jako [spravovaná zařízení](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  > [!IMPORTANT]
+  > Počínaje verzí Certificate Connector verze 6.2008.60.607 (vydané v srpnu 2020) Tento konektor podporuje nasazení certifikátů pro PCKS #12 žádosti o certifikát a zpracovává žádosti o soubory PFX importované do Intune pro šifrování e-mailů S/MIME pro konkrétního uživatele. Při používání profilů certifikátů PKCS už nemusíte používat konektor Microsoft Intune.
+  > 
+  > Další informace najdete v tématu [konektory certifikátů](certificate-connectors.md) .
 - Vytvoření profilu důvěryhodných kořenových certifikátů pro vaše zařízení. Tento krok zahrnuje použití důvěryhodných kořenových a zprostředkujících certifikátů ve vaší certifikační autoritě a následné nasazení tohoto profilu do zařízení.
 - Vytvoření profilu certifikátu PKCS pomocí šablony certifikátu, kterou jste vytvořili. Tento profil bude zařízením vystavovat podpisové certifikáty a nasadí do nich profil certifikátu PKCS.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9391be828452cbda25dd6c4f4ed75cffa2ef687c
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995139"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423743"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Správa webového přístupu pomocí Edge pro iOS a Android s využitím Microsoft Intune
 
@@ -310,7 +310,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
 
 - Při zadávání adres URL do seznamu se ujistěte, že jste zadali předponu všechny adresy URL pomocí **http://** nebo **https://** .
 - \*V souladu s pravidly v následujícím seznamu povolených vzorů můžete použít zástupný znak ().
-- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` není podporován. **not**
+- Zástupný znak může odpovídat jenom části (například `news-contoso.com` ) nebo celé součásti názvu hostitele (například `host.contoso.com` ) nebo celé části cesty, pokud jsou oddělené lomítkem ( `www.contoso.com/images` ).
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
   - Port 80 pro protokol HTTP
   - Port 443 pro protokol HTTPS
@@ -321,11 +321,11 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    Odpovídá všem adresám URL začínajícím na `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Vyhledá všechny subdomény pod `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Odpovídá všem subdoménám končícím na `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Vyhledá všechny subdomény pod `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
+    |    `http://*contoso.com/*`    |    Odpovídá všem subdoménám končícím na `contoso.com/`    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
     `http://www.contoso.com/images`    |    Odpovídá jediné složce    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    Odpovídá jedné stránce s použitím čísla portu    |    `http://www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    Odpovídá jediné zabezpečené stránce    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
+    |    `http://www.contoso.com:80`    |    Odpovídá jedné stránce s použitím čísla portu    |    `www.contoso.com:80`    |         |
+    |    `https://www.contoso.com`    |    Odpovídá jediné zabezpečené stránce    |    `www.contoso.com`    |    `www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Odpovídá jediné složce a všem podsložkám    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Tady jsou uvedené příklady některých vstupů, které nemůžete zadat:
@@ -337,7 +337,6 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - IP adresy
   - `https://*`
   - `http://*`
-  - `https://*contoso.com`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 

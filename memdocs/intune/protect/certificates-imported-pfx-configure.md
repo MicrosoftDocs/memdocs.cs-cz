@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 89da26da402648d95a3a1e91482c1cbe7ad415e4
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992568"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423780"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -89,13 +89,15 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>Stažení, instalace a konfigurace konektoru certifikátů PFX pro Microsoft Intune
 
+Než začnete, [Zkontrolujte požadavky konektoru](certificate-connectors.md) a ujistěte se, že vaše prostředí a Windows Server jsou připravené k podpoře konektoru.
+
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost konektory **správy tenanta**  >  **a tokeny**  >  **certifikátů**  >  **Přidat**.
+2. Vyberte možnost konektory **pro správu tenanta**  >  **a tokeny**  >  **Certificate Connectors**  >  **+ Add**.
 
-   ![Konektor certifikátu PFX pro stažení Microsoft Intune](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. Klikněte na *Stáhnout software Certificate Connector* pro konektor pro PKCS #12 a uložte soubor do umístění, ke kterému máte přístup ze serveru, na který budete konektor instalovat.
 
-3. Postupujte podle pokynů ke stažení *Certificate Connectoru PFX pro Microsoft Intune* do umístění, které je přístupné ze serveru, na který budete konektor instalovat.
+   ![Stažení konektoru Microsoft Intune](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. Po dokončení stahování se přihlaste k serveru a spusťte instalační program (PfxCertificateConnectorBootstrapper.exe).  
    - Když přijmete výchozí umístění instalace, konektor se nainstaluje do `Program Files\Microsoft Intune\PFXCertificateConnector` .

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b4ef2eaff377a06bdf9ac95be76665cdc88ab1
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390811"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423930"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -447,7 +447,7 @@ Intune teď poskytuje scénáře s asistencí, které vám pomůžou dokončit k
 Další informace najdete v článku [Přehled scénářů s asistencí pro Intune](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Je dostupná další konfigurační proměnná aplikace.<!-- 4969237   -->
-Při vytváření zásad konfigurace aplikací můžete zahrnout `AAD Device ID` konfigurační proměnnou jako součást nastavení konfigurace. V Intune vyberte **klientské aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**. Zadejte podrobnosti zásady konfigurace a vyberte **nastavení konfigurace** . zobrazí se okno **nastavení konfigurace** . Další informace najdete v tématu [zásady konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise – použijte návrháře konfigurace](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Při vytváření zásad konfigurace aplikací můžete zahrnout `AAD_Device_ID` konfigurační proměnnou jako součást nastavení konfigurace. V Intune vyberte **klientské aplikace**  >  **zásady konfigurace aplikace**  >  **Přidat**. Zadejte podrobnosti zásady konfigurace a vyberte **nastavení konfigurace** . zobrazí se okno **nastavení konfigurace** . Další informace najdete v tématu [zásady konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise – použijte návrháře konfigurace](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Vytvoření skupin objektů pro správu nazývaných sady zásad<!-- 3762880  -->
 Sady zásad umožňují vytvořit sadu odkazů na již existující entity správy, které je třeba identifikovat, cílit a monitorovat jako jednu koncepční jednotku. Sady zásad nenahrazují existující koncepty ani objekty. V Intune můžete dál přiřazovat jednotlivé objekty a v rámci sady zásad můžete odkazovat na jednotlivé objekty. Proto se v sadě zásad projeví všechny změny těchto jednotlivých objektů.  V Intune vyberete **sady zásad**  >  **vytvořit** pro vytvoření nové sady zásad.
@@ -1346,7 +1346,7 @@ Správci uvidí tyto čtyři aplikace automaticky přidané do jejich seznamu ap
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>Aktualizovaný konektor certifikátu PFX pro Microsoft Intune<!-- 1533038 -->
-Vydali jsme aktualizaci [konektoru PFX Certificate Connector pro Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) , která řeší problém, kdy se stávající certifikáty PFX budou dál zpracovávat, což způsobí, že konektor přestane zpracovávat nové požadavky.
+Vydali jsme aktualizaci [konektoru PFX Certificate Connector pro Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) , která řeší problém, kdy se stávající certifikáty PFX budou dál zpracovávat, což způsobí, že konektor přestane zpracovávat nové požadavky.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Úkoly zabezpečení Intune pro program Defender ATP (ve verzi Public Preview)<!-- 3208597 -->
 Ve verzi Public Preview můžete pomocí Intune spravovat [úlohy zabezpečení pro Microsoft Defender Advanced Threat Protection (ATP)](../protect/atp-manage-vulnerabilities.md). Tato integrace s ATP a přináší přístup založený na riziku pro zjišťování, stanovení priorit a nápravu chyb zabezpečení koncových bodů a chybných konfigurací a zároveň zkracuje dobu mezi zjišťováním a omezením jejich zmírnění.
@@ -1400,7 +1400,7 @@ Dostupná nastavení zobrazíte tak, že přejdete na [Konfigurace nastavení s�
 Platí pro: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>Aktualizovaný konektor certifikátu PFX pro Microsoft Intune<!-- doc-vso 1521237  -->  
-Vydali jsme aktualizaci [konektoru certifikátů PFX pro Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) , který předává interval dotazování od 5 minut do 30 sekund.
+Vydali jsme aktualizaci [konektoru certifikátů PFX pro Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) , který předává interval dotazování od 5 minut do 30 sekund.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ Podpora zásad ochrany aplikací Intune pro nastavení **klávesnice třetích s
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Aktualizované konektory certifikátů<!-- ICM 113304612 -->
-Pro Microsoft Intune jsme vydali aktualizace pro [Intune Certificate Connector i pro Certificate connectory PFX](../protect/certficates-pfx-configure.md#whats-new-for-connectors). Nové verze opraví několik známých problémů.
+Pro Microsoft Intune jsme vydali aktualizace pro [Intune Certificate Connector i pro Certificate connectory PFX](../protect/certificate-connectors.md#whats-new-for-connectors). Nové verze opraví několik známých problémů.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>Nastavení přihlašovacích nastavení a řízení možností restartování na zařízeních macOS<!-- 1210083  -->
 Na zařízeních MacOS můžete vytvořit konfigurační profil zařízení (**Konfigurace zařízení**  >  **profily**  >  **vytvořit profil** > zvolit **MacOS** pro **funkce zařízení** > pro typ profilu). Tato aktualizace zahrnuje nové nastavení přihlašovacího okna, jako je například zobrazení vlastního nápisu, výběr způsobu přihlášení uživatelů, zobrazení nebo skrytí nastavení napájení a další.

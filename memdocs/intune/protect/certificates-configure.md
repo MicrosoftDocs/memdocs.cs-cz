@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251968"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423811"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -44,11 +44,13 @@ Každý profil každého jednotlivého certifikátu, který vytvoříte, podporu
 
 Když použijete certifikační autoritu (CA) Microsoftu:
 
-- Pokud chcete používat profily certifikátů SCEP, musíte [nastavit server služby zápisu síťových zařízení (NDES)](certificates-scep-configure.md#set-up-ndes) pro použití s Intune.
-- Chcete-li použít následující typy profilů certifikátů, je nutné [nainstalovat Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - Profil certifikace SCEP
-  - Profil certifikátu PKCS
+- Používání profilů certifikátů SCEP:
+  - [Nastavte server služby zápisu síťových zařízení (NDES)](certificates-scep-configure.md#set-up-ndes) pro použití s Intune.
+  - [Nainstalujte Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
 
+- Používání profilů certifikátů PKCS:
+  - [Instalace Certificate Connectoru PFX pro Microsoft Intune] (Imported-Certificates-PFX-configure.
+  
 - Použití importovaných certifikátů PKCS:
   - [Nainstalujte Certificate Connector PFX pro Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Exportujte certifikáty od certifikační autority a pak je importujte do Microsoft Intune. Viz [projekt prostředí PowerShell pro PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -80,9 +82,9 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 | Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
 |--|--|--|--|---|
 | Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)|
-| Android Enterprise <br> – Pracovní profil ve vlastnictví firmy   | ![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  |
+| Android Enterprise <br> – Pracovní profil ve vlastnictví firmy   | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
@@ -172,3 +174,5 @@ Pro každou platformu, kterou chcete použít, vytvořte profily certifikátů i
 - [Konfigurace infrastruktury pro podporu certifikátů SCEP pomocí Intune](certificates-scep-configure.md)  
 - [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
 - [Vytvoření importovaného profilu certifikátu PKCS](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+Další informace o [konektorech certifikátů](certificate-connectors.md)

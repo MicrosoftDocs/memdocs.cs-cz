@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63aa08565d4c1d5a064300d1a914963509af92a5
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: 2aded484ff9116049e35e9df3a09a3bbd207df2a
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390581"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423896"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,26 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-31-2020"></a>Týden od 31. srpna 2020
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>Nová verze konektoru certifikátů PFX a změny pro podporu profilu certifikátu PKCS <!--  4839686  -->
+
+Vydali jsme novou verzi konektoru certifikátů PFX verze **6.2008.60.607**. Tato nová verze konektoru:
+
+- Podporuje profily certifikátů PKCS na všech podporovaných platformách kromě Windows 8.1
+ 
+  V konektoru certifikátů PFX jsme konsolidují veškerou podporu PCKS.  To znamená, že pokud ve svém prostředí nepoužíváte protokol SCEP a nepoužíváte službu NDES pro jiné záměry, můžete odebrat konektor Microsoft Certificate Connector a odinstalovat NDES z vašeho prostředí. 
+ 
+- Vzhledem k tomu, že se funkce Microsoft Certificate Connector neodebrala, můžete je dál používat k podpoře profilů certifikátů PKCS.
+- Podporuje odvolání certifikátů pro Outlook S/MIME
+- Vyžaduje .NET Framework 4.7.2
+
+Další informace o konektorech certifikátů, včetně seznamu verzí konektoru pro oba konektory certifikátů, najdete v tématu [konektory certifikátů](../protect/certificate-connectors.md) .
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>Týden z 24. srpna 2020 (2008 Service Release)
