@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240350"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468307"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Import konfiguračních dat pomocí Configuration Manager
 
@@ -28,8 +28,6 @@ Kromě vytváření standardních hodnot konfigurace a položek konfigurace v ko
 - Konfigurační data, která byla exportována z verze System Center 2012 Configuration Manager a novější.  
 
 - Konfigurační data, která byla externě vytvořená a která odpovídají schématu SML.  
-
-  Příklad konfiguračního balíčku, který pomáhá zajistit dodržování předpisů pro role serveru lokality System Center 2012 Configuration Manager najdete v tématu [System Center 2012 Configuration Manager Configuration Pack](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Když importujete standardní hodnoty konfigurace, některé nebo všechny položky konfigurace, které jsou odkazované ve standardních hodnotách konfigurace, můžou být i součástí souboru CAB. Během procesu importu Configuration Manager ověřuje, že všechny položky konfigurace, které jsou odkazovány ve standardních hodnotách konfigurace, jsou buď zahrnuty v souboru CAB, nebo již existují v Configuration Manager lokalitě. Proces importu se nezdaří, pokud se pokusíte importovat standardní hodnoty konfigurace, které odkazují na konfigurační data, která Configuration Manager nelze najít.  
 
