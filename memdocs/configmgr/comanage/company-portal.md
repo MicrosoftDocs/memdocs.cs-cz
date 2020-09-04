@@ -2,7 +2,7 @@
 title: Aplikace v Portálu společnosti
 titleSuffix: Configuration Manager
 description: Poskytněte konzistentní uživatelské prostředí pro spoluspravovaná zařízení, která budou používat aplikaci Portál společnosti.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068102"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432553"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Použití aplikace Portál společnosti na spoluspravovaných zařízeních
 
@@ -50,7 +50,7 @@ Další informace najdete v následujících článcích:
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Configuration Manager aktuální větev verze 2006 nebo novější
+- Configuration Manager aktuální větve verze 2006 nebo novější <sup>([Viz časté otázky](#bkmk_ver-prereq))</sup>
 
 - Portál společnosti verze aplikace 11.0.8980.0 nebo novější
 
@@ -118,6 +118,10 @@ Pokud změníte nastavení klienta pro Portál společnosti, když uživatel vyb
 Pokud chcete pomoct řešit problémy s instalací aplikací Configuration Manager, přečtěte si část **podpora &** v tématu portál společnosti. Když použijete možnost **získat nápovědu** , můžete v rámci žádosti odeslat soubory protokolu Configuration Manager.
 
 ## <a name="frequently-asked-questions-faq"></a>Nejčastější dotazy
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Používám Configuration Manager verze 2002, proč je nové Portál společnosti zobrazuje Configuration Manager aplikace?
+
+Portál společnosti verze 11.0.8980.0 nebo novější zobrazuje Configuration Manager nasazené aplikace pro všechny spoluspravované klienty, kteří je používají. Předpokladem je Configuration Manager verze 2006, protože přidává nastavení klienta pro řízení oznámení. Pokud nainstalujete Portál společnosti do spoluspravovaného zařízení starší verze nebo nenakonfigurujete nastavení klienta, uživatelé uvidí oznámení z obou portálů. Toto prostředí může být matoucí pro uživatele.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Podporuje Portál společnosti aplikace nasazené jako aktualizace softwaru z Configuration Manager?
 

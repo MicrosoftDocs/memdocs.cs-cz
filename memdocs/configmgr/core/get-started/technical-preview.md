@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129116"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432570"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -30,9 +30,9 @@ Tyto informace se vztahují na všechny verze větve Configuration Manager Techn
 Informace o novinkách v *aktuální větvi* Configuration Manager najdete v tématu [novinky v Configuration Manager přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md).
 
 > [!Tip]
-> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS:`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
+> Pokud chcete dostávat upozornění na aktualizaci této stránky, zkopírujte a vložte následující adresu URL do čtečky informačních kanálů RSS: `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a>Požadavky a omezení
+## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a> Požadavky a omezení
 
 > [!IMPORTANT]
 > Verze Technical Preview je licencovaná jenom pro použití v testovacím prostředí. Společnost Microsoft nemusí poskytovat služby podpory a některé funkce nemusí být k dispozici v technických náhledech. Kromě toho software Technical Preview může mít nižší nebo jiné standardy zabezpečení, ochrany osobních údajů, usnadnění přístupu, dostupnosti a spolehlivosti, které se vztahují k komerčně poskytovanému softwaru.
@@ -76,7 +76,7 @@ Větev Technical Preview Configuration Manager podporuje následující produkty
 > [!Note]
 > Zahrnutí těchto produktů do tohoto obsahu neznamená rozšíření podpory verze, která přesahuje životní cyklus podpory. Configuration Manager nepodporuje produkty, které přesahují životní cyklus podpory. Další informace najdete v tématu [Zásady životního cyklu Microsoftu](https://support.microsoft.com/lifecycle).
 
-## <a name="install-and-update"></a><a name="bkmk_install"></a>Nainstalovat a aktualizovat
+## <a name="install-and-update"></a><a name="bkmk_install"></a> Nainstalovat a aktualizovat
 
 Větev Configuration Manager Technical Preview pro použití v testovacím prostředí je odlišná od Configuration Manager aktuální větve pro produkční použití.
 
@@ -97,7 +97,7 @@ Nainstalujte základní verzi po dobu až jednoho roku po jejím vydání. Při 
 
 Stáhněte si základní verzi z [centra hodnocení](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
 
-## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Poskytnutí zpětné vazby
+## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> Poskytnutí zpětné vazby
 
 Rádi uslyšíme váš názor na nové funkce ve verzi Technical Preview. Další informace najdete v tématu o [zpětné vazbě produktu](../understand/find-help.md#product-feedback).
 
@@ -110,7 +110,7 @@ Pokud máte nějaké nápady k novým funkcím, které byste chtěli zobrazit, d
 Enable this section if needed to include any broad change to the tech preview branch
 -->
 
-## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a>Funkce v nejnovější verzi
+## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a> Funkce v nejnovější verzi
 
 <!-- (explanatory comment)
 This is the full list of new features in the latest TP release
@@ -166,11 +166,8 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 | Příznak        | Verze Technical Preview |
 |----------------|---------------------------|
-| Použití Portál společnosti aplikace na spoluspravovaných zařízeních <!--3601237--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | Vylepšení dostupných aplikací prostřednictvím CMG <!--7033501--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Připojení tenanta: vylepšení Configuration Manager akcí v centru pro správu Microsoft Endpoint Manageru <!--7518897--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Připojení tenanta: časová osa zařízení v centru pro správu <!--7141381--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Připojení tenanta: instalace aplikace z centra pro správu <!--6024389--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Připojení tenanta: CMPivot z centra pro správu <!--6024392--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Připojení tenanta: spuštění skriptů z centra pro správu <!--6234688--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Vylepšení rutin brány pro správu cloudu <!--6978300--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

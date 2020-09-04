@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699581"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432536"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Integrace se Serverem sestav Power BI
 
@@ -27,7 +27,7 @@ Počínaje verzí 2002 můžete integrovat [server sestav Power BI](/power-bi/re
 
 Uložit Power BI Desktop soubory sestav (. PBIX) a nasaďte je do Server sestav Power BI. Tento postup je podobný jako u SQL Server Reporting Servicesch souborů sestav (. RDL). Sestavy můžete také spustit v prohlížeči přímo z konzoly Configuration Manager.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Server sestav Power BI licence Další informace najdete v tématu věnovaném [licencování server sestav Power BI](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
@@ -103,9 +103,15 @@ Tento proces použijte pouze v případě, že v lokalitě ještě nemáte bod s
 
 1. Až bude sestava připravena k uložení, přejděte do nabídky **soubor** , vyberte **Uložit jako**a pak zvolte **server sestav Power BI**.
 
-1. V okně **výběr server sestav Power BI** jako **novou adresu serveru sestav**zadejte adresu URL bodu služby Reporting Services. Například, `https://rsp.contoso.com/Reports`.
+1. V okně **výběr server sestav Power BI** jako **novou adresu serveru sestav**zadejte adresu URL bodu služby Reporting Services. Například, `https://rsp.contoso.com/Reports`. Vyberte **OK**.
 
-V konzole Configuration Manager se v seznamu Power BI sestav zobrazí nová sestava.
+1. V okně **Uložit sestavu** dvakrát klikněte na `ConfigMgr_<SiteCode>` složku. Například `ConfigMgr_PS1` , kde `PS1` je kód lokality nástroje ConfigMgr. Volitelně můžete zvolit nebo vytvořit (ze serveru sestav) dílčí složku, do které se má uložit.
+    > [!TIP]
+    > Sestavy a složky sestav s Power BI sestavami se musí nacházet ve `ConfigMgr_<SiteCode>` složce na serveru sestav nebo se nebudou zobrazovat v konzole Configuration Manager.
+
+1. Do pole **název souboru**zadejte název sestavy.
+
+V konzole Configuration Manager se v seznamu Power BI sestav zobrazí nová sestava. Pokud nevidíte své sestavy, ověřte, že jste sestavy uložili do `ConfigMgr_<SiteCode>` složky.
 
 ## <a name="next-steps"></a>Další kroky
 

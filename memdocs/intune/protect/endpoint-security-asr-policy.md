@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913490"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432519"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Zásady omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -58,6 +58,9 @@ Zobrazit [nastavení pro omezení profilů útoků na plochu](../protect/endpoin
 - **Řízení aplikací** – nastavení řízení aplikací může pomáhat zmírnit bezpečnostní hrozby tím, že omezí aplikace, které můžou uživatelé spouštět, a kód, který běží v jádru systému (jádro). Spravujte nastavení, které může blokovat nepodepsané skripty a MSIs, a omezit prostředí Windows PowerShell tak, aby běželo v režimu omezeného jazyka.
 
   Další informace najdete v tématu [řízení aplikací](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) v dokumentaci ke službě Microsoft Defender atp.
+  
+    > [!NOTE]
+    > Použijete-li toto nastavení, chování CSP nástroje AppLocker aktuálně vyzve koncového uživatele k restartování počítače, když je nasazena zásada.
 
 - **Pravidla pro omezení možností útoku** – nakonfigurujte nastavení pro pravidla pro omezení možností útoku, která cílí na chování, která malwarová a škodlivá aplikace obvykle používají pro nainfikování počítačů, včetně těchto:
   - Spustitelné soubory a skripty používané v aplikacích Office nebo ve webové poště, které se pokoušejí stáhnout nebo spustit soubory
