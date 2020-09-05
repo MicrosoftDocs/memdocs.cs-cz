@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62edeaaf84bbbefac1a862b5c346f07e8e2731c9
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423848"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479344"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -58,13 +58,13 @@ Následující místní infrastruktura musí běžet na serverech, které jsou p
   - Konektor vyžaduje rozhraní .NET 4,5 a je automaticky zahrnutý v systému Windows Server 2012 R2.
   - Konfigurace rozšířeného zabezpečení aplikace Internet Explorer [musí být zakázána na serveru, který je hostitelem NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) a konektoru Microsoft Microsoft Intune.
 
-Následující místní infrastruktura je volitelná:
+#### <a name="support-for-ndes-on-the-internet"></a>Podpora NDES na internetu
 
-Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publikovat adresu URL služby NDES mimo vaši podnikovou síť. Můžete použít buď Azure Proxy aplikací služby AD, proxy server webové aplikace, nebo jiný reverzní proxy server.
+Pokud chcete zařízením na internetu dovolit, aby získali certifikáty, musíte publikovat adresu URL služby NDES mimo vaši podnikovou síť. K tomu můžete použít buď *Azure proxy aplikací služby AD* , nebo *webový ApplicationProxy Server*. Můžete také použít jiný reverzní proxy server, který si vyberete.
 
-- **Azure proxy aplikací služby AD** (volitelné) – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [Jak poskytnout zabezpečený vzdálený přístup k místním aplikacím](/azure/active-directory/manage-apps/application-proxy).
+- **Azure proxy aplikací služby AD** – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [integrace s Azure proxy aplikací služby AD na serveru služby zápisu síťových zařízení (NDES)](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
-- **Proxy server webových aplikací** (volitelné) – pomocí serveru se systémem Windows Server 2012 R2 nebo novějším jako serveru proxy webové aplikace (WAP) PUBLIKUJTE adresu URL služby NDES na Internet.  To umožňuje intranetové i internetové zařízení získat certifikáty.
+- **Server proxy webových aplikací** – pomocí serveru se systémem Windows Server 2012 R2 nebo novějším jako serveru proxy webové aplikace (WAP) PUBLIKUJTE adresu URL služby NDES na Internet.  To umožňuje intranetové i internetové zařízení získat certifikáty.
 
   Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](https://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](https://support.microsoft.com/kb/3011135).
 

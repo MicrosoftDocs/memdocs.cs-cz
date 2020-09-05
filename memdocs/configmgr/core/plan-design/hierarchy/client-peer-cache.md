@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4d0bd136278053ded38d0d6ed4cfe4059ffe3037
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110181"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479310"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Sdílená mezipaměť pro klienty Configuration Manager
 
@@ -54,7 +54,7 @@ Sdílená mezipaměť nenahrazuje použití jiných řešení, jako je Windows B
 
 Pro povolení sdílené mezipaměti nasaďte [nastavení klienta](#bkmk_settings) do kolekce. Pak členové této kolekce fungují jako zdroj sdílené mezipaměti pro ostatní klienty ve stejné skupině hranic.  
 
-- Klient, který pracuje jako zdroj obsahu rovnocenného obsahu, odesílá do svého bodu správy seznam dostupného obsahu uložený v mezipaměti pomocí stavových zpráv.
+- Klient, který pracuje jako zdroj obsahu rovnocenného obsahu, odesílá do svého bodu správy seznam dostupného obsahu uložený v mezipaměti pomocí stavových zpráv. Klient zdroje obsahu s partnerským obsahem také pošle stavovou zprávu do bodu správy, když odebírá obsah z místní mezipaměti.
 
    > [!NOTE]
    > V [Configuration Manager se v seznamu stavových zpráv](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map) zobrazí seznam platných zpráv o stavu partnerského obsahu s ID 7200, 7201, 7202 a 7203.
@@ -116,7 +116,7 @@ Když zdroj sdílené mezipaměti odmítne požadavek na obsah, klient sdílené
 
 
 
-## <a name="peer-cache-client-settings"></a><a name="bkmk_settings"></a>Nastavení klienta sdílené mezipaměti
+## <a name="peer-cache-client-settings"></a><a name="bkmk_settings"></a> Nastavení klienta sdílené mezipaměti
 
 Další informace o nastavení klienta sdílené mezipaměti najdete v tématu [nastavení mezipaměti klienta](../../clients/deploy/about-client-settings.md#client-cache-settings). 
 
@@ -126,7 +126,7 @@ U klientů s povolenými partnerskými mezipaměť, kteří používají bránu 
 
 
 
-## <a name="partial-download-support"></a><a name="bkmk_parts"></a>Částečná podpora stahování
+## <a name="partial-download-support"></a><a name="bkmk_parts"></a> Částečná podpora stahování
 <!--1357346-->
 Od verze 1806 mohou zdroje sdílené mezipaměti klienta dělit obsah do částí. Tyto části minimalizují přenos v síti, aby se snížilo využití sítě WAN. Bod správy poskytuje podrobnější sledování částí obsahu. Pokusí se odstranit více než jedno stažení stejného obsahu pro jednu skupinu hranic. 
 
