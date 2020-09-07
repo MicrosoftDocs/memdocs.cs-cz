@@ -214,6 +214,8 @@
       items:
         - name: Ověřování pomocí certifikátů
           href: certificates-configure.md
+        - name: Konektory certifikátů
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: Infrastruktura SCEP
