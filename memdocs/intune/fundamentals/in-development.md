@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 014ad6a1d1dd6fa0d7401ef033d476192eac395e
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286233"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516286"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -275,11 +275,11 @@ V části **zařízení**  >  **Zásady skupiny Analytics (Preview)** můžete i
 Platí pro:
 - Windows 10 a novější
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Nová sestava aktualizace funkcí Windows 10<!-- 6473121   -->
-Zpráva o **chybách aktualizace funkcí** poskytne podrobnosti o selhání u zařízení, na která cílí zásada **aktualizace funkcí Windows 10** , a pokusy o aktualizaci. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberete **zařízení**  >  **monitorování**  >  **Selhání aktualizací funkcí** k zobrazení této sestavy.
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Nová sestava aktualizace funkcí Windows 10<!-- 6473128  -->
 Sestava **aktualizací funkcí Windows** poskytne celkový přehled o dodržování předpisů pro zařízení, na která cílí zásada **aktualizace funkcí Windows 10** . V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberete **Reports**  >  pro zobrazení souhrnu této sestavy zprávy o selhání aktualizace funkcí**Windows Updates (Preview)**  >  **Feature update failures** . Chcete-li zobrazit sestavy pro konkrétní zásady, vyberte kartu **sestavy** a otevřete **sestavu aktualizace funkcí systému Windows**. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Nová sestava aktualizace chyb funkcí Windows 10<!-- 6473121   -->
+Zpráva o **chybách aktualizace funkcí** poskytne podrobnosti o selhání u zařízení, na která cílí zásada **aktualizace funkcí Windows 10** , a pokusy o aktualizaci. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberete **zařízení**  >  **monitorování**  >  **Selhání aktualizací funkcí** k zobrazení této sestavy.
 
 <!-- ***********************************************-->
 <!--

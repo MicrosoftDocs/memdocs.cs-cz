@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2aded484ff9116049e35e9df3a09a3bbd207df2a
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: a55a320fc5c3b2a6169be9d46b22b86d0265da33
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423896"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516313"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -659,6 +659,9 @@ Když [nakonfigurujete šablonu zprávy s oznámením](../protect/actions-for-no
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Správci už nepotřebují licenci Intune pro přístup ke konzole pro správu Microsoft Endpoint Manageru.<!--1335430 -->
 Teď můžete nastavit přepínač na úrovni tenanta, který odebere licenční požadavek Intune pro správce pro přístup k konzole správce paměti a rozhraní API pro grafy dotazů. Po odebrání licenčního požadavku ho nikdy nemůžete obnovit. 
 
+
+> [!Note]
+> Některé akce, včetně toku konektoru pro TeamViewer, ještě vyžadují licenci na Intune.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

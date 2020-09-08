@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 3276b7d483bf0fc3f94ce12245304ad9ad2ebad3
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912402"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516269"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -69,10 +69,6 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
 |fef.amsua0602.manage.microsoft.com|52.161.28.64|
-|fef.amsua0102.manage.microsoft.com|52.242.211.0|
-|fef.amsua0702.manage.microsoft.com|52.232.225.75|
-|fef.amsub0502.manage.microsoft.com|40.67.219.144|
-|fef.msud01.manage.microsoft.com|20.40.178.139|
 |Admin.manage.microsoft.com|52.224.221.227<br>52.161.162.117<br>52.178.44.195<br>52.138.206.56<br>52.230.21.208<br>13.75.125.10|
 |wip.mam.manage.microsoft.com|52.187.76.84<br>13.76.5.121<br>52.165.160.237<br>40.86.82.163<br>52.233.168.142<br>168.63.101.57<br>52.187.196.98<br>52.237.196.51|
 |mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180<br>52.187.196.173<br>52.156.162.48|
