@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7295e6f74764b378be8315599357424cbf6ead73
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 631a2fc3cb7df01eed1a5a6af80dd87f84455bdc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820404"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606332"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Správa a sledování postupných nasazení
 
@@ -52,7 +52,7 @@ Když vyberete toto nastavení, **ručně zahájíte druhou fázi nasazení**, l
 
     ![Nabídka kliknutí pravým tlačítkem myši zobrazující akce při dvoufázovém nasazení](media/Suspend-phased-deployment.PNG)
 
-Od verze 2002 použijte následující rutinu prostředí Windows PowerShell pro tuto úlohu: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext?view=sccm-ps).
+Od verze 2002 použijte následující rutinu prostředí Windows PowerShell pro tuto úlohu: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext).
 
 ## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a> Fáze pozastavení a obnovení
 
@@ -82,8 +82,8 @@ Postupné nasazení můžete ručně pozastavit nebo obnovit. Můžete napříkl
 
 Počínaje verzí 2002 použijte pro tuto úlohu tyto rutiny Windows PowerShellu:
 
-- [Pozastavit – CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment?view=sccm-ps)
-- [Pokračovat – CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment?view=sccm-ps)
+- [Pozastavit – CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment)
+- [Pokračovat – CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment)
 
 ## <a name="monitor"></a><a name="bkmk_monitor"></a> Sledován
 <!--1358577-->
@@ -118,7 +118,7 @@ Cíl fáze je stejný jako **Procento úspěšnosti nasazení** v nastavení fá
 
 1. V tomto softwaru přejdete na objekt postupného nasazení a otevřete vlastnosti postupného nasazení.  
 
-2. Přepněte na kartu **fáze** . Vyberte **fáze 2** a klikněte na **Zobrazit**.  
+2. Přepněte na kartu **fáze** . Vyberte **fáze 2** a klikněte na tlačítko **Zobrazit**.  
 
 3. Ve fázi okno Vlastnosti přepněte na kartu **nastavení fáze** .  
 
@@ -134,41 +134,41 @@ Ke správě postupného nasazení použijte následující rutiny Windows PowerS
 
 ### <a name="automatically-create-phased-deployments"></a>Automaticky vytvářet dvoufázové nasazení
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ### <a name="manually-create-phased-deployments"></a>Ruční vytváření fází nasazení
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 ### <a name="get-existing-phased-deployment-objects"></a>Získat existující objekty postupného nasazení
 
-- [Get-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/get-cmapplicationphaseddeployment?view=sccm-ps)
-- [Get-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/get-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Get-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/get-cmtasksequencephaseddeployment?view=sccm-ps)
-- [Get-CMPhase](/powershell/module/configurationmanager/get-cmphase?view=sccm-ps)
+- [Get-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/get-cmapplicationphaseddeployment)
+- [Get-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/get-cmsoftwareupdatephaseddeployment)
+- [Get-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/get-cmtasksequencephaseddeployment)
+- [Get-CMPhase](/powershell/module/configurationmanager/get-cmphase)
 
 ### <a name="monitor-phased-deployment-status"></a>Monitorování stavu postupného nasazení
 
-- [Get-CMPhasedDeploymentStatus](/powershell/module/configurationmanager/get-cmphaseddeploymentstatus?view=sccm-ps)
+- [Get-CMPhasedDeploymentStatus](/powershell/module/configurationmanager/get-cmphaseddeploymentstatus)
 
 ### <a name="manage-existing-phased-deployments"></a>Spravovat existující dvoufázové nasazení
 
-- [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext?view=sccm-ps)
-- [Pokračovat – CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment?view=sccm-ps)
-- [Pozastavit – CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment?view=sccm-ps)
+- [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext)
+- [Pokračovat – CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment)
+- [Pozastavit – CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment)
 
 ### <a name="modify-existing-phased-deployments"></a>Upravit existující dvoufázové nasazení
 
-- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase?view=sccm-ps)
-- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment?view=sccm-ps)
-- [Remove-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/remove-cmapplicationphaseddeployment?view=sccm-ps)
-- [Remove-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/remove-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Remove-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/remove-cmtasksequencephaseddeployment?view=sccm-ps)
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment)
+- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment)
+- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment)
+- [Remove-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/remove-cmapplicationphaseddeployment)
+- [Remove-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/remove-cmsoftwareupdatephaseddeployment)
+- [Remove-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/remove-cmtasksequencephaseddeployment)

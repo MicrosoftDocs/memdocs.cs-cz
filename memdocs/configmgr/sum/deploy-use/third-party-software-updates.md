@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696884"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607993"
 ---
 # <a name="enable-third-party-updates"></a>Povolení aktualizací třetích stran 
 
@@ -27,7 +27,7 @@ Od verze 1806 se uzel **katalogů aktualizací softwaru třetích stran** v konz
 > Configuration Manager ve výchozím nastavení tuto funkci nepovolí. Než ho použijete, povolte volitelnou funkci **Povolení podpory aktualizací třetích stran na klientech**. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
-## <a name="prerequisites"></a>Předpoklady 
+## <a name="prerequisites"></a>Požadavky 
 - Dostatek místa na disku ve složce WSUSContent bodu aktualizace softwaru na nejvyšší úrovni pro ukládání zdrojového binárního obsahu pro aktualizace softwaru třetích stran.
     - Velikost požadovaného úložiště se liší v závislosti na dodavateli, typech aktualizací a konkrétních aktualizacích, které publikujete pro nasazení.
     - Pokud potřebujete přesunout složku WSUSContent na jinou jednotku s větším množstvím volného místa, přečtěte si téma [Postup změny umístění, kde služba WSUS ukládá aktualizace místně](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) .
@@ -80,7 +80,7 @@ Pokud nemáte požadavek na používání certifikátů PKI, můžete se rozhodn
 
 1. V konzole Configuration Manager otevřete pracovní prostor **Správa** . Rozbalte položku **Konfigurace lokality**a vyberte uzel **weby** .
 2. Vyberte lokalitu nejvyšší úrovně v hierarchii. Na pásu karet klikněte na položku **Konfigurovat součásti webu**a vyberte možnost **bod aktualizace softwaru**.
-3. Přepněte na kartu **aktualizace třetích stran** . vyberte možnost **Configuration Manager spravuje certifikát**. 
+3. Přepněte na kartu **aktualizace třetích stran** . Vyberte možnost **Configuration Manager spravuje certifikát**. 
 4. V uzlu **certifikáty** v části **zabezpečení** v pracovním prostoru **Správa** se vytvoří nový certifikát typu **podepisování služby WSUS třetí strany** .  
 
 ### <a name="manually-manage-the-wsus-signing-certificate"></a>Ruční správa podpisového certifikátu služby WSUS
@@ -125,7 +125,7 @@ Když se přihlásíte k odběru katalogu třetích stran v konzole Configuratio
 
 1. V konzole Configuration Manager otevřete pracovní prostor **softwarová knihovna** . Rozbalte možnost **aktualizace softwaru** a vyberte uzel **katalogy aktualizací softwaru třetích stran** .  
 2. Vyberte katalog, který se má přihlásit k odběru, a klikněte na pásu karet na **přihlásit k odběru katalogu** . 
-    ![Aktualizace třetích stran přidat vlastní katalog](media/third-party-updates-subscribe.png)
+    ![Aktualizace třetích stran se přihlásí k odběru katalogu](media/third-party-updates-subscribe.png)
 3. Zkontrolujte a schvalte certifikát katalogu.  
    > [!NOTE]
    > 

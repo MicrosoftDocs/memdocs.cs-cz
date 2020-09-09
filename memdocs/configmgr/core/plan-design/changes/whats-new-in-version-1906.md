@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d28d3ed697097b177ef9e2849fbcd6003505594c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995105"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607798"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1906 Configuration Manager Current Branch
 
@@ -622,7 +622,7 @@ Od této verze již nejsou k dispozici následující funkce předběžného vyd
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1906](https://support.microsoft.com/help/4514258).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1906](/powershell/sccm/1906-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1906](/powershell/sccm/1906-release-notes).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4517869) od 1. října 2019: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1906](https://support.microsoft.com/help/4517869).
 

@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bfed31b820ac1f09b240122207b5bf27e432b10a
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699700"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607525"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Úvod do vytváření sestav v Configuration Manager
 
@@ -39,7 +39,7 @@ Configuration Manager používá SQL Server Reporting Services jako své primár
 
 - Exportuje sestavy do různých druhů oblíbených formátů.  
 
-Další informace najdete v tématu [co je SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Další informace najdete v tématu [co je SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
 ## <a name="power-bi-report-server"></a>Server sestav Power BI
 
@@ -93,7 +93,7 @@ Při spuštění sestavy výzva vyžádá hodnotu požadovaného parametru. Na z
 
 Odkazy na sestavy v Configuration Manager se používají ve zdrojové sestavě pro zajištění snadného přístupu k dalším datům. Například může odkazovat na podrobnější informace o jednotlivých položkách ve zdrojové sestavě. Pokud cílová sestava vyžaduje spuštění jedné nebo více výzev, zdrojová sestava musí obsahovat sloupec s příslušnými hodnotami pro jednotlivé výzvy.
 
-Odkaz musí zadat číslo sloupce s hodnotou pro příkazový řádek. Příklad:
+Odkaz musí zadat číslo sloupce s hodnotou pro příkazový řádek. Například:
 
 - K dispozici je jedna sestava obsahující seznam počítačů, které lokalita nedávno zjistila.
 - Propojíte je s jinou sestavou, která obsahuje poslední zprávy, které lokalita obdrží pro určitý počítač.

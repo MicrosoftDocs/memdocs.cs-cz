@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 950146c694addc5be0b351278a381ff4839e7bca
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193823"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607787"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1902 Configuration Manager Current Branch
 
@@ -479,7 +479,7 @@ Při instalaci nebo aktualizaci serveru lokality zkopírují tyto instalační s
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1902](https://support.microsoft.com/help/4498910).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1902](/powershell/sccm/1902-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1902](/powershell/sccm/1902-release-notes).
 
 Následující kumulativní aktualizace (4500571) je k dispozici v konzole od 17. června 2019: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1902](https://support.microsoft.com/help/4500571).
 

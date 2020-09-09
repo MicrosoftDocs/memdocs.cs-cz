@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697632"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606307"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Správa spouštěcích imagí pomocí Configuration Manager
 
@@ -206,7 +206,7 @@ Na kartě **Vlastní nastavení** vyberte některé z následujících nastaven�
 - **Nastavení výchozího rozložení klávesnice v prostředí WinPE**: <!--4910348-->Počínaje verzí 1910 nakonfigurujte výchozí rozložení klávesnice pro spouštěcí bitovou kopii. Pokud vyberete jiný jazyk než en-US, Configuration Manager dál obsahuje en-US v dostupných vstupních národních prostředích. V zařízení je počáteční rozložení klávesnice vybraným národním prostředím, ale pokud to bude potřeba, může uživatel zařízení v případě potřeby přepnout na en-US.
 
 > [!Tip]
-> Pomocí rutiny PowerShellu [set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) můžete nakonfigurovat tato nastavení ze skriptu.
+> Pomocí rutiny PowerShellu [set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) můžete nakonfigurovat tato nastavení ze skriptu.
 
 #### <a name="optional-components"></a>Volitelné součásti
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074499"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607926"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1512 pro Configuration Manager
 
@@ -26,7 +26,7 @@ V tomto článku se seznámíte s funkcemi, které jsou k dispozici v Technical 
 
  V následující části najdete nové funkce, které můžete s touto verzí vyzkoušet.  
 
-##  <a name="device-health-attestation"></a><a name="bkmk_devicehealth"></a>Ověření stavu zařízení  
+##  <a name="device-health-attestation"></a><a name="bkmk_devicehealth"></a> Ověření stavu zařízení  
  Od verze Technical Preview 1512 mohou správci zobrazit stav Windows 10 Ověření stavu zařízení v konzole Configuration Manager.  Tato funkce je k dispozici pro Configuration Manager a Configuration Manager s Microsoft Intune. Ověření stavu zařízení umožňuje správcům zajistit, že klientské počítače mají důvěryhodné konfigurace systému BIOS, čipu TPM a spouštěcího softwaru. Aby bylo možné podporovat ověření stavu zařízení, musí být na klientských zařízeních spuštěná Win10 s povoleným čipem TPM 2. Funkce ověření stavu zařízení zobrazí počet zařízení povolených pro každou z následujících možností:  
 
 -   Antimalware s raným spuštěním  
@@ -41,20 +41,20 @@ V konzole se zobrazí také nejčastější chybějící nastavení ověření s
 
 Pokud si chcete prohlédnout zobrazení ověření stavu zařízení, v konzole Configuration Manager přejděte do pracovního prostoru **monitorování** , klikněte na uzel **zabezpečení** a pak klikněte na **ověření stavu**.  
 
-##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a>Monitorování podmínek a ujednání v konzole  
+##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Monitorování podmínek a ujednání v konzole  
 Od verze Technical Preview 1512 se při integraci Configuration Manager s Microsoft Intune můžete pomocí konzoly pro Configuration Manager zobrazit, kteří uživatelé přijali podmínky a ujednání nakonfigurované vaším IT oddělením a kteří uživatelé ne.  
 
 **Zobrazení souhrnných informací:**  
 
--   V konzole Configuration Manager přejít na **monitorování** > **Přehled** > **nasazení** a vyberte nasazení podmínek a ujednání, které chcete zobrazit.  
+-   V konzole Configuration Manager přejít na **monitorování**  >  **Přehled**  >  **nasazení** a vyberte nasazení podmínek a ujednání, které chcete zobrazit.  
 
 **Zobrazení podrobných informací:**  
 
-1.  V konzole Configuration Manager přejít na **prostředky a kompatibilita** > **Přehled** > **Nastavení** > dodržování předpisů**podmínky a ujednání**a potom vyberte podmínky a ujednání, které chcete zobrazit.  
+1.  V konzole Configuration Manager přejít na **prostředky a kompatibilita**  >  **Přehled**  >  **Nastavení dodržování předpisů**  >  **podmínky a ujednání**a potom vyberte podmínky a ujednání, které chcete zobrazit.  
 
 2.  V dolní části konzoly vyberte kartu **nasazení** , vyberte nasazení a klikněte na **Zobrazit stav.**  
 
-##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a>Vylepšení nastavení zásad Endpoint Protection  
+##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Vylepšení nastavení zásad Endpoint Protection  
 Ve verzi 1512 Technical Preview jsme do Endpoint Protection antimalwarových zásad přidali Tato nová nastavení:  
 
 -   Ochrana v reálném čase: **blokování potenciálně nežádoucích aplikací při stažení a před instalací**  
@@ -81,7 +81,7 @@ Ve verzi 1512 Technical Preview jsme do Endpoint Protection antimalwarových zá
 
          Následující příklad ukazuje nastavení programu Windows Defender ve Windows 10 nastavené správcem jako povolené a uživatel ho nemůže změnit:  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender – Automatické odesílání vzorků](../../core/get-started/media/TechRef_WinDefender.png)  
 
     Kromě toho je vylepšeno nastavení **vyloučit soubory a složky** v antimalwarových zásadách služby Endpoint Protection v části "nastavení vyloučení", což umožňuje vyloučit zařízení. Například teď můžete zadat následující vyloučení: **\device\mvfs** (pro systém souborů MVFS). Tato zásada neověřuje cestu k zařízení. Zásady ochrany koncových bodů se poskytují antimalwarovým modulům v klientovi, který musí být schopný interpretovat řetězec zařízení.  
 

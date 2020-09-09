@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
-ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
+ms.openlocfilehash: 0f69d0df62b4ec08bfb65bb9643c37f915c8b419
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89244991"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608196"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Kontrolní seznam pro instalaci aktualizace 2006 pro Configuration Manager
 
@@ -85,7 +85,7 @@ To opt-in to the early update ring:
 1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
 1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0ca0509893ecadc4c54d06ca98c18531959fb941
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129419"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608409"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Ikony používané pro aktualizace softwaru v Configuration Manager
 
@@ -27,7 +27,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
  Synchronizované aktualizace softwaru jsou reprezentované pomocí jedné z následujících ikon.  
 
 ### <a name="normal-icon"></a>Ikona Normální  
- ![ikona](../media/Normal.jpg "Ikona normální") Ikona se zelenou šipkou představuje normální aktualizaci softwaru.  
+ ![Ikona normální](../media/Normal.jpg) Ikona se zelenou šipkou představuje normální aktualizace softwaru.  
 
  **Popis:**  
 
@@ -38,7 +38,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
  Neexistují žádné provozní otázky.  
 
 ### <a name="expired-icon"></a>Ikona Konec platnosti  
- ![ikona](../media/Expired.jpg "Ikona vypršení platnosti") Ikona s černým symbolem X představuje aktualizaci softwaru s vypršenou platností. Aktualizace softwaru s vypršenou platností můžete také zjistit zobrazením sloupce **vypršení platnosti** pro aktualizaci softwaru, když se zobrazí v konzole Configuration Manager.  
+ ![Ikona s vypršenou platnost ](../media/Expired.jpg) ikona s černou symbolem X představuje aktualizaci softwaru s vypršenou platností. Aktualizace softwaru s vypršenou platností můžete také zjistit zobrazením sloupce **vypršení platnosti** pro aktualizaci softwaru, když se zobrazí v konzole Configuration Manager.  
 
  **Popis:**  
 
@@ -49,7 +49,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
  Neexistují žádné provozní otázky.
 
 ### <a name="superseded-icon"></a>Ikona Nahrazeno  
- ![ikona](../media/Superseded.jpg "Ikona nahrazeno") Ikona se žlutou hvězdičkou představuje nahrazenou aktualizaci softwaru. Nahrazené aktualizace softwaru můžete také identifikovat zobrazením **nahrazeného** sloupce aktualizace softwaru, když se zobrazí v konzole Configuration Manager.  
+ ![Nahrazená ikona ](../media/Superseded.jpg) ikona se žlutou hvězdičkou představuje nahrazenou aktualizaci softwaru. Nahrazené aktualizace softwaru můžete také identifikovat zobrazením **nahrazeného** sloupce aktualizace softwaru, když se zobrazí v konzole Configuration Manager.  
 
  **Popis:**  
 
@@ -68,7 +68,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
   Pokud je to možné, nasaďte nahrazující aktualizaci softwaru do klientských počítačů namísto nahrazené softwarové aktualizace. Seznam aktualizací softwaru, které nahrazují aktualizace softwaru můžete zobrazit na kartě **Informace o nahrazení** ve vlastnostech aktualizací softwaru.  
 
 ### <a name="invalid-icon"></a>Ikona Neplatné  
- ![ikona](../media/Invalid.jpg "Neplatná ikona") Ikona s červeným symbolem X představuje neplatnou aktualizaci softwaru.  
+ ![Neplatná ikona](../media/Invalid.jpg) Ikona s černým symbolem X představuje neplatnou aktualizaci softwaru.  
 
  **Popis:**  
 
@@ -83,7 +83,7 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
   Pokud pro aktualizaci softwaru chybí obsah, klienti ji nebudou moct nainstalovat, dokud nebude obsah v distribučním bodě opět k dispozici. Obsah můžete znovu distribuovat do distribučních bodů pomocí akce **Znovu distribuovat** . Pokud chybí obsah pro aktualizaci softwaru v nasazení vytvořeném v nadřazené lokalitě, je třeba aktualizaci softwaru replikovat nebo distribuovat do podřízené lokality. Další informace o redistribuci obsahu najdete v tématu [Správa obsahu, který jste distribuujei](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Ikona Pouze metadata
- ![ikona](../media/MetadataOnly.png "Ikona jenom s metadaty") Ikona s modrou šipkou představuje aktualizaci softwaru pouze s metadaty.
+ ![Ikona jenom s metadaty](../media/MetadataOnly.png) Ikona s modrou šipkou představuje aktualizace softwaru obsahující jenom metadata.
 
  **Popis:**  
 
@@ -97,28 +97,28 @@ Synchronizované aktualizace softwaru se zobrazují v konzole Configuration Mana
  Skupiny aktualizací softwaru jsou reprezentované pomocí jedné z následujících ikon.  
 
 ### <a name="normal-icon"></a>Ikona Normální  
- ![ikona](../media/Normal.jpg "Ikona normální") Ikona se zelenou šipkou představuje skupinu aktualizací softwaru, která obsahuje pouze normální aktualizace softwaru.  
+ ![Skupiny aktualizací softwaru – ikona normální](../media/Normal.jpg) Ikona s zelenou šipku představuje skupinu, která obsahuje jenom normální softwarové aktualizace.  
 
  **Provozní otázky:**  
 
  Neexistují žádné provozní otázky.  
 
 ### <a name="expired-icon"></a>Ikona Konec platnosti  
- ![ikona](../media/Expired.jpg "Ikona vypršení platnosti") Ikona s černým symbolem X představuje skupinu aktualizací softwaru, která obsahuje jednu nebo více aktualizací softwaru s vypršenou platností.  
+ ![Ikona neplatných skupin aktualizací softwaru](../media/Expired.jpg) Ikona s černým symbolem X představuje skupinu, která obsahuje jednu nebo několik softwarových aktualizací s ukončenou platností.  
 
  **Provozní otázky:**  
 
  Nahraďte aktualizace softwaru s vypršenou platností, pokud je to možné.  
 
 ### <a name="superseded-icon"></a>Ikona Nahrazeno  
- ![ikona](../media/Superseded.jpg "Ikona nahrazeno") Ikona se žlutou hvězdičkou představuje skupinu aktualizací softwaru, která obsahuje jednu nebo více nahrazených aktualizací softwaru.  
+ ![Skupiny aktualizací softwaru-ikona nahrazeno](../media/Superseded.jpg) Ikona s černým symbolem X představuje skupinu, která obsahuje jednu nebo několik softwarových aktualizací s ukončenou platností.  
 
  **Provozní otázky:**  
 
  Pokud je to možné, nahraďte nahrazené softwarové aktualizace ve skupině nahrazující aktualizací.  
 
 ### <a name="invalid-icon"></a>Ikona Neplatné  
- ![ikona](../media/Invalid.jpg "Neplatná ikona") Ikona s červeným symbolem X představuje skupinu aktualizací softwaru, která obsahuje jednu nebo více neplatných softwarových aktualizací.  
+ ![Skupiny aktualizací softwaru-neplatná ikona](../media/Invalid.jpg) Ikona s červeným symbolem X představuje skupinu, která obsahuje jednu nebo několik neplatných softwarových aktualizací.  
 
  **Provozní otázky:**  
 

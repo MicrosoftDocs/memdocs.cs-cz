@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Další odkazy na dokumentaci pro Configuration Manager nápovědu
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819690"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607815"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Online dokumentace pro Configuration Manager
 

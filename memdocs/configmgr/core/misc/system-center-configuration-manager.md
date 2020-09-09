@@ -9,12 +9,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Zástupný soubor pro dokumentaci Configuration Manager
+ms.openlocfilehash: 610b63659ece4bd270f52006171750cc604bd600
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695473"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607762"
 ---
 # <a name="configuration-manager"></a>Configuration Manager
 
@@ -22,4 +23,4 @@ ms.locfileid: "88695473"
 
 Vítá vás Configuration Manager. Configuration Manager poskytuje efektivnější služby IT, protože umožňuje bezpečné a škálovatelné nasazování softwaru, správu nastavení dodržování předpisů a komplexní správu prostředků serverů, stolních počítačů a mobilních zařízení.  
 
-Nejaktuálnější obsah pro tuto verzi Configuration Manager můžete najít online v následujícím umístění: [Online dokumentace pro Configuration Manager](/configmgr).
+Nejaktuálnější obsah pro tuto verzi Configuration Manager můžete najít online v následujícím umístění: [Online dokumentace pro Configuration Manager](/mem/configmgr).

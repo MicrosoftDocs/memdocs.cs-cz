@@ -1,7 +1,7 @@
 ---
 title: Import profilů certifikátů PFX
 titleSuffix: Configuration Manager
-description: Naučte se používat soubory PFX v Configuration Manager ke generování certifikátů specifických pro uživatele, které podporují výměnu šifrovaných dat.
+description: Naučte se importovat soubory PFX v Configuration Manager, abyste mohli vygenerovat certifikáty specifické pro uživatele, které podporují výměnu šifrovaných dat.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700493"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608436"
 ---
 # <a name="import-pfx-certificate-profiles"></a>Import profilů certifikátů PFX
 
@@ -70,9 +70,9 @@ Přiřaďte cílové uživatele jako primární uživatele na zařízeních s Wi
 
 Pokud chcete importovat certifikát PFX, použijte následující rutiny Configuration Manager PowerShellu ke zřízení skriptu PFX:
 
-- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [Import – CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [Get-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [Import – CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [Remove-CMClientCertificatePfx](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>Ukázkový skript
 
@@ -96,7 +96,7 @@ $pfxfile = "c:\p1.pfx"
 Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (ConvertTo-SecureString -String $password -AsPlainText -Force) -CertificateProfilePfx (Get-CMCertificateProfilePfx -Fast -Name $PfxProfileDisplayName) -Path $pfxfile
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vytvoření nového profilu certifikátu](../../protect/deploy-use/create-certificate-profiles.md)
 

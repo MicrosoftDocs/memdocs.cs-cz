@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693008"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607944"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1702 pro Configuration Manager
 
@@ -186,11 +186,11 @@ Následující postup slouží k nastavení pořadí úkolů jako vysokého dopa
 
    Řekněme, že ve vlastnostech nakonfigurujete následující vlastní oznámení.
 
-   ![Vlastní oznámení pro pořadí úkolů](./media/user-notification.png)
+   ![Vlastní oznámení pro vlastnosti pořadí úloh](./media/user-notification.png)
 
    Když koncový uživatel otevře instalaci z centra softwaru, zobrazí se následující zpráva s oznámením.
 
-   ![Vlastní oznámení pro pořadí úkolů](./media/user-notification-enduser.png)
+   ![Vlastní oznámení pro pořadí úkolů – Centrum softwaru](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>Konfigurace vlastností centra softwaru
 Pomocí následujícího postupu můžete nakonfigurovat podrobnosti o pořadí úloh zobrazeném v centru softwaru. Tyto podrobnosti jsou pouze pro informace.  

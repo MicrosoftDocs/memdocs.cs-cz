@@ -9,12 +9,13 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: K instalaci nové lokality použijte Průvodce instalací Configuration Manager.
+ms.openlocfilehash: a0956e53af0d8ca4dd182dd3c2be944d3a0a703d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700697"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606187"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>Instalace Configuration Manager lokalit pomocí Průvodce instalací
 
@@ -36,7 +37,7 @@ Do konzoly Configuration Manager nainstalujte sekundární lokalitu. Sekundárn�
 > - **Stáhnout klienty pro další operační systémy**: <!-- https://go.microsoft.com/fwlink/p/?LinkId=626550 -->
 >   - [Klient Microsoft Endpoint Configuration Manager – macOS (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [Klienti pro systémy UNIX a Linux](https://www.microsoft.com/download/details.aspx?id=47719)
-> - [**Zpráva k vydání verze**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
+> - [**Poznámky k verzi**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
 > - [**Přečíst dokumentaci**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **Získat pomoc s instalací**: [fóra TechNet: Configuration Manager (Current Branch) – nasazení lokality a klienta](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager komunita**: [komunita System Center: jak se zúčastnit](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->

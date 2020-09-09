@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193634"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607905"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1511 pro Configuration Manager
 
@@ -110,7 +110,7 @@ Zkuste provést následující úkoly a pak použijte informace o zpětné vazb�
  Pomocí následujících postupů nejprve vytvořte a nakonfigurujte skupinu dostupnosti a pak nainstalujte novou Configuration Manager lokalitu, která používá skupinu dostupnosti.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>Vytvoření skupiny dostupnosti SQL Server AlwaysOn  
-Proces [Vytvoření skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
+Proces [Vytvoření skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) je popsán v knihovně dokumentace SQL Server.  Při vytváření skupiny dostupnosti zajistěte splnění následujících požadavků pro použití s Configuration Manager:  
 
 -   Maximálně tři členy:  
 

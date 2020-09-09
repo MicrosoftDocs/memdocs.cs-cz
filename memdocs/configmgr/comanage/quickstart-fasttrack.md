@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711508"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606800"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>Získat pomoc od FastTrack pro spolusprávu
 
@@ -25,7 +25,7 @@ V následujícím videu by měl vedoucí program Manager McSweeney a marketingov
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-Pokud chcete vytvořit žádost o pomoc z FastTrack, nejprve [pro Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)přejít na FastTrack. Vyberte **Přihlásit**se a zadejte ID vaší organizace. Po ověření přejděte na řídicí panel a podle pokynů vyhledejte formulář **žádosti o pomoc** .
+Pokud chcete vytvořit žádost o pomoc z FastTrack, nejprve [pro Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security)přejít na FastTrack. Vyberte **Přihlásit**se a zadejte ID vaší organizace. Po ověření přejděte na řídicí panel a podle pokynů vyhledejte formulář **žádosti o pomoc** .
 
 Vaše odeslání je přezkoumáno a směrováno na příslušný FastTrack tým. Budou řešit vaše nároky a specifické potřeby. 
 
@@ -34,7 +34,7 @@ FastTrack for Microsoft 365 obsahuje taky specialisty, doporučení, nástroje a
 
 ### <a name="make-a-fasttrack-request"></a>Vytvořit požadavek FastTrack:
 
-1. Přihlaste se k [FastTrack pro Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) pomocí ID a hesla vaší organizace.  
+1. Přihlaste se k [FastTrack pro Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) pomocí ID a hesla vaší organizace.  
 
 2. V části Vítá vás FastTrack vyberte **požádat o pomoc FastTrack**.  
 

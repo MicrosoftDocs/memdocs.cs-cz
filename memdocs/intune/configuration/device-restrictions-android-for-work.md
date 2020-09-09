@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194102"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606954"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -35,13 +35,13 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
 
 Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune řídí celé zařízení, jako jsou zařízení se systémem Android Enterprise plně spravovaná, vyhrazená a firemní pracovní profil.
 
-Některá nastavení nejsou podporovaná všemi typy registrace. Pokud chcete zjistit, která nastavení jsou podporovaná typy registrace, přečtěte si téma uživatelské rozhraní. Každé nastavení je pod hlavičkou, která určuje, které typy zápisu můžou toto nastavení použít.
+Některá nastavení nejsou podporovaná všemi typy registrace. Pokud chcete zjistit, která nastavení jsou podporovaná typy registrace, přečtěte si téma uživatelské rozhraní. Každé nastavení je pod hlavičkou, která označuje typy registrace, které můžou toto nastavení použít.
 
-![Nastavení hlaviček.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Podívejte se na záhlaví nastavení uživatelé a účty pro Android Enterprise a na typy registrace, které se vztahují na Microsoft Intune a správce koncových bodů.":::
 
 Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení vlastněná společností s pracovním profilem. Tato nastavení stále platí pro plně spravovaná a vyhrazená zařízení, která jsou v plném rozsahu. Tato nastavení jsou v uživatelském rozhraní označena popisovačem na *úrovni pracovního profilu* .
 
-![Nastavení hlaviček.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Podívejte se na nastavení Android Enterprise Applications, která se vztahují na úrovni pracovního profilu v Microsoft Intune a ve Správci koncových bodů.":::
 
 
 ### <a name="general"></a>Obecné
@@ -239,7 +239,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 - **Plně spravovaná**: konfiguruje aplikaci spouštěče Microsoft na plně spravovaných zařízeních.
 
   - **Nastavit jako výchozí spouštěč spouštěč Microsoftu**: **Povolit** nastaví jako výchozí spouštěč na domovské obrazovce Microsoft Launcher. Pokud nastavíte jako výchozí spouštěč, uživatelé nemůžou použít jiný spouštěč. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení není spouštěč Microsoftu vynucený jako výchozí spouštěč.
-  - **Konfigurace vlastní tapety**: **možnost Povolit** umožňuje použít vlastní obrázek jako tapetu domovské obrazovky a vybrat, jestli uživatelé můžou obrázek změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení zařízení udržuje aktuální tapetu.
+  - **Konfigurace vlastní tapety**: v aplikaci spouštěče Microsoft můžete **Povolit** použít vlastní obrázek jako tapetu na domovské obrazovce a vybrat, jestli uživatelé můžou obrázek změnit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení zařízení udržuje aktuální tapetu.
     - **Zadejte adresu URL obrázku tapety**: zadejte adresu URL obrázku tapety. Tento obrázek se zobrazí na domovské obrazovce zařízení. Zadejte například `http://www.contoso.com/image.jpg`. 
     - **Povolit uživateli změnit tapetu**: **možnost Povolit** umožňuje uživatelům změnit obrázek tapety. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se uživatelům brání ve změně tapety.
   - **Povolit kanál spouštěče**: **možnost Povolit** zapne spouštěcí kanál, který zobrazuje kalendáře, dokumenty a nedávné aktivity. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se tento informační kanál nezobrazuje.

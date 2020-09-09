@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699479"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606780"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Upgrade místní infrastruktury, která podporuje Configuration Manager
 
@@ -242,15 +242,15 @@ Pro identifikaci úrovně kompatibility odhadu SQL Server mohutnosti, která se 
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-Další informace o úrovních kompatibility SQL CE a o tom, jak je nastavit, najdete v tématu [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+Další informace o úrovních kompatibility SQL CE a o tom, jak je nastavit, najdete v tématu [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 Další informace o upgradu SQL Server najdete v následujících článcích SQL Server:  
 
 - [Upgradovat na SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [Upgradovat na SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [Upgradovat na SQL Server 2016](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [Upgrade na SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [Upgrade na SQL Server 2014](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Upgrade SQL Serveru na serveru databáze lokality  
 

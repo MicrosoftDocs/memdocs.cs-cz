@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068017"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606359"
 ---
 # <a name="create-stand-alone-media"></a>Vytvoření samostatného média
 
@@ -151,7 +151,7 @@ Před spuštěním Průvodce vytvořením média pořadí úloh pro vytvoření 
         >
         > Na samostatném médiu zašifruje pouze kroky pořadí úloh a jejich proměnné. Nešifruje zbývající obsah média. Do skriptů pořadí úloh nezahrnujte žádné citlivé informace. Ukládání a implementace všech citlivých informací pomocí proměnných pořadí úkolů.  
 
-    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Standardně je toto nastavení zakázané. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) prostředí PowerShell.  
+    - **Vyberte platný rozsah kalendářních dat pro toto samostatné médium**: nastavte volitelná data začátku a konce platnosti média. Standardně je toto nastavení zakázané. Data jsou porovnána se systémovým časem v počítači před spuštěním samostatného média. Pokud je systémový čas dřívější než čas spuštění nebo pozdější než čas vypršení platnosti, nespustí se samostatné médium. Tyto možnosti jsou dostupné taky pomocí rutiny [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) prostředí PowerShell.  
 
 6. Na stránce **samostatný disk CD/DVD** vyberte pořadí úloh, které NASADÍ operační systém. Můžete vybrat jenom ta pořadí úloh, která jsou přidružená ke spouštěcí imagi. Ověřte seznam obsahu, na který odkazuje pořadí úkolů.  
 

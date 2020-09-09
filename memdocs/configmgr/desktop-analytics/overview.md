@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc214422f273a854db913538c082897aa63c4388
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700786"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606650"
 ---
 # <a name="what-is-desktop-analytics"></a>Co je Desktop Analytics?
 
@@ -63,7 +63,7 @@ Desktop Analytics nabízí následující výhody:
 
 - **Configuration Manager Integration**: Cloud služby – umožňuje vaši stávající místní infrastrukturu. Tato data a analýza použijte k nasazení a správě Windows na svých zařízeních.  
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí splňuje následující požadavky.
 
@@ -72,7 +72,7 @@ Pokud chcete použít desktopovou analýzu, ujistěte se, že vaše prostředí 
 - Aktivní globální předplatné Azure s oprávněními [globálního správce](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) . [Účty Microsoft](/windows/security/identity-protection/access-control/microsoft-accounts) se nepodporují.  
 
     > [!IMPORTANT]
-    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Zatímco Desktop Analytics je globální služba Azure, která je k dispozici pro zákazníky ze státní správy USA, nesplňuje žádné atributy [(RSZ) pro státní správu USA (Community)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](/microsoft-365/compliance/offering-home?view=o365-worldwide). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
+    > Desktop Analytics je služba systému Windows hostovaná v Azure Global, která využívá diagnostická data Windows. Zatímco Desktop Analytics je globální služba Azure, která je k dispozici pro zákazníky ze státní správy USA, nesplňuje žádné atributy [(RSZ) pro státní správu USA (Community)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) . Seznam nabídek dodržování předpisů pro produkty a služby společnosti Microsoft najdete na [webu Microsoft Trust Center](/microsoft-365/compliance/offering-home). Desktop Analytics není k dispozici pro zákazníky v oblasti RSZ vysoké nebo USA. Používání předplatných Azure Government pro pracovní prostory pro hostování Desktop Analytics se nepodporuje.
 
     - Oprávnění **vlastníka pracovního prostoru** k **Nastavení pracovního prostoru**a následujících rolí:  
 

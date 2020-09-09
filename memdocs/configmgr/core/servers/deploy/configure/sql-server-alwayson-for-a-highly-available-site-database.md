@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699224"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607550"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -45,7 +45,7 @@ Následující scénáře jsou podporovány pro používání skupin dostupnosti
 - [Přesun databáze lokality ze skupiny dostupnosti do výchozí nebo pojmenované instance samostatného SQL Server](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Následující požadavky platí pro všechny scénáře. Pokud se další předpoklady vztahují na konkrétní scénář, jsou v tomto scénáři podrobně popsané.
 
@@ -85,7 +85,7 @@ Každá instance SQL Server může běžet pod účtem uživatele domény (**ú�
 - Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
-### <a name="database"></a>Databáze
+### <a name="database"></a>databáze
 
 #### <a name="configure-the-database-on-a-new-replica"></a>Konfigurace databáze na nové replice
 
@@ -315,7 +315,7 @@ Následující omezení platí pro všechny scénáře.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Nepodporované možnosti a konfigurace SQL Server
 
-- **Základní skupiny dostupnosti**: představené se systémem SQL Server 2016 Standard Edition. základní skupiny dostupnosti nepodporují přístup pro čtení sekundárních replik. Konfigurace vyžaduje tento přístup. Další informace najdete v tématu [základní skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Základní skupiny dostupnosti**: představené se systémem SQL Server 2016 Standard Edition. základní skupiny dostupnosti nepodporují přístup pro čtení sekundárních replik. Konfigurace vyžaduje tento přístup. Další informace najdete v tématu [základní skupiny dostupnosti SQL Server](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups).  
 
 - **Instance clusteru s podporou převzetí služeb při**selhání: instance clusteru s podporou převzetí služeb při selhání Configuration Manager se nepodporují pro repliku Další informace najdete v tématu [SQL Server vždy na instancích clusteru s podporou převzetí služeb při selhání](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 

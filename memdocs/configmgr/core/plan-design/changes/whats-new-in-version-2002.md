@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993331"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607698"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2002 Configuration Manager Current Branch
 
@@ -426,7 +426,7 @@ Od této verze již nejsou k dispozici následující [funkce:](../../servers/ma
 - [CMPivot samostatná](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Klientské aplikace pro spoluspravovaná zařízení](../../../comanage/workloads.md#client-apps) (dříve označovaná jako *mobilní aplikace pro spoluspravovaná zařízení*)<!-- 1357892/3600959 -->
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2002](/powershell/sccm/2002-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 2002](/powershell/sccm/2002-release-notes).
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_2002).
 

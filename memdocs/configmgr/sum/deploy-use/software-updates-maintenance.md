@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1b11d0e54305b148a2f73a3a3af9f0497fe8e557
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696901"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608042"
 ---
 # <a name="software-updates-maintenance"></a>Údržba aktualizací softwaru
 
@@ -130,11 +130,11 @@ Přidání neclusterovaných indexů zvyšuje výkon vyčištění služby WSUS,
 
 Pokud je databáze WSUS na vzdáleném SQL serveru, možná budete muset přidat oprávnění v SQL a vytvořit indexy. Účet použitý pro připojení k databázi WSUS a vytváření indexů se může lišit. Pokud [ve vlastnostech bodu aktualizace softwaru zadáte účet pro připojení k serveru WSUS](../get-started/install-a-software-update-point.md#wsus-server-connection-account), ujistěte se, že účet pro připojení má oprávnění SQL. Pokud nezadáte účet pro připojení k serveru WSUS, účet počítače serveru lokality potřebuje oprávnění SQL.
 
-- Vytvoření indexu vyžaduje `ALTER` oprávnění pro tabulku nebo zobrazení. Účet musí být členem `sysadmin` pevné role serveru nebo s `db_ddladmin` `db_owner` pevnými databázovými rolemi. Další informace o vytváření a indexování a oprávněních najdete v tématu [Create index (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- `CONNECT SQL`Účtu musí být uděleno oprávnění serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Vytvoření indexu vyžaduje `ALTER` oprávnění pro tabulku nebo zobrazení. Účet musí být členem `sysadmin` pevné role serveru nebo s `db_ddladmin` `db_owner` pevnými databázovými rolemi. Další informace o vytváření a indexování a oprávněních najdete v tématu [Create index (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
+- `CONNECT SQL`Účtu musí být uděleno oprávnění serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  Pokud je databáze služby WSUS na vzdáleném serveru SQL Server pomocí jiného než výchozího portu, indexy pravděpodobně nebudou přidány. Pro tento scénář můžete vytvořit [alias serveru pomocí SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) . Po přidání aliasu a Configuration Manager může vytvořit připojení k databázi WSUS, budou přidány indexy.
+>  Pokud je databáze služby WSUS na vzdáleném serveru SQL Server pomocí jiného než výchozího portu, indexy pravděpodobně nebudou přidány. Pro tento scénář můžete vytvořit [alias serveru pomocí SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) . Po přidání aliasu a Configuration Manager může vytvořit připojení k databázi WSUS, budou přidány indexy.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Odebrat zastaralé aktualizace z databáze WSUS
 
@@ -150,8 +150,8 @@ Zastaralé aktualizace jsou nepoužívané aktualizace a revize aktualizací v d
 
 Pokud je databáze WSUS na vzdáleném SQL serveru, účet počítače serveru lokality potřebuje následující oprávnění SQL:
 
-- `db_datareader` `db_datawriter` Pevné databázové role a. Další informace najdete v tématu [role na úrovni databáze](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- `CONNECT SQL`Oprávnění serveru musí být uděleno účtu počítače webového serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- `db_datareader` `db_datawriter` Pevné databázové role a. Další informace najdete v tématu [role na úrovni databáze](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+- `CONNECT SQL`Oprávnění serveru musí být uděleno účtu počítače webového serveru. Další informace najdete v tématu [udělení oprávnění serveru (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 #### <a name="wsus-cleanup-wizard"></a>Průvodce vyčištěním služby WSUS
 

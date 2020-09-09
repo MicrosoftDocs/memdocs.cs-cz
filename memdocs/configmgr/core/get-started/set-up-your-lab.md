@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696493"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607879"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Nastavení testovacího prostředí Configuration Manager
 
@@ -45,7 +45,7 @@ Podle pokynů v tomto tématu vám umožní nastavit testovací prostředí pro 
 
     -   **SQL_Latin1_General_CP1_CI_AS** jako třída **řazení SQL** .  
 
-    -   **ověřování systému Windows**[namísto ověřování SQL](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15) is required.  
+    -   **ověřování systému Windows**[namísto ověřování SQL](/sql/relational-databases/security/choose-an-authentication-mode) is required.  
 
     -   Je požadována vyhrazená **instance SQL Server** .  
 
@@ -367,7 +367,7 @@ Každá lokalita Configuration Manager zveřejňuje do kontejneru System Managem
 
 3.  Vyberte **Zjišťování lokalit a podsítí v doménových strukturách služby Active Directory** a klikněte na **Vlastnosti**.  
 
-4.  V dialogovém okně **Vlastnosti** vyberte **Povolit zjišťování doménové struktury služby Active Directory**. Po aktivaci vyberte **Automaticky vytvářet meze lokality služby Active Directory při jejich zjištění**. Zobrazí se dialogové okno s oznámením **Chcete co nejdříve spustit plné zjišťování?** Klikněte na tlačítko **Ano**.  
+4.  V dialogovém okně **Vlastnosti** vyberte **Povolit zjišťování doménové struktury služby Active Directory**. Po aktivaci vyberte **Automaticky vytvářet meze lokality služby Active Directory při jejich zjištění**. Zobrazí se dialogové okno s oznámením **Chcete co nejdříve spustit plné zjišťování?** Klikněte na **Ano**.  
 
 5.  Ve skupině **Metoda zjišťování** v horní části obrazovky klikněte na tlačítko **Spustit zjišťování lokalit a podsítí v doménových strukturách ihned**a pak na bočním panelu přejděte na **Doménové struktury služby Active Directory** . Doménové struktury služby Active Directory by se měly zobrazit v seznamu zjištěných doménových struktur.  
 

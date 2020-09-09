@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613943"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607977"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Řídicí panel zařízení Surface v Configuration Manager
 
@@ -52,7 +52,7 @@ Počínaje verzí 1802 řídicí panel zařízení Surface nabízí informace o 
 
 - **Pět hlavních verzí firmwaru**– zobrazuje graf s nejvyšším pěti modely firmwaru ve vašem prostředí. 
   - Najetí myší na část grafu vám poskytne počet zařízení Surface, která jsou vybrána ve verzi firmwaru. Od verze Configuration Manager 1806 se kliknutím na oddíl grafu zobrazí seznam relevantních zařízení. <!--1358654-->
-     ![Seznam zařízení s modelem Surface](media/Surface-Firmware-Hover.PNG)
+     ![Popis nástroje firmware Surface](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Další informace

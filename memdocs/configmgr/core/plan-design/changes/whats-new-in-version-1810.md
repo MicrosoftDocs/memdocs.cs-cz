@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699836"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607752"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1810 Configuration Manager Current Branch
 
@@ -427,7 +427,7 @@ Pro nové nasazení už není potřeba místní požadavek na správu mobilních
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1810](https://support.microsoft.com/help/4482169).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1810](/powershell/sccm/1810-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1810](/powershell/sccm/1810-release-notes).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4488598) od 25. března 2019: [kumulativní aktualizace 2 pro Configuration Manager aktuální větev, verze 1810](https://support.microsoft.com/help/4488598). Tato náhrada nahrazuje předchozí kumulativní aktualizaci KB 4486457.
 

@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717703"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608373"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Správa publikací v nástroji Updates Publisher
 
@@ -36,7 +36,7 @@ Chcete-li přejmenovat publikaci, vyberte publikaci v **pracovním prostoru publ
 ## <a name="change-the-publication-type-of-updates-in-a-publication"></a>Změna typu publikace aktualizací v publikaci
 V **pracovním prostoru publikace**můžete upravit **Typ publikace** aktualizace a sady, které jsou přiřazeny k publikaci.
 
-1. Vyberte publikaci obsahující aktualizace, které chcete upravit, a potom vyberte jednu nebo více aktualizací nebo sad ze seznamu **všechny &lt;názvy publikování> aktualizace členů** .
+1. Vyberte publikaci obsahující aktualizace, které chcete upravit, a potom vyberte jednu nebo více aktualizací nebo sad ze seznamu **všechny &lt; názvy publikování> aktualizace členů** .
 
 2. Potom na kartě **Domů** vyberte jednu z následujících možností. Možnosti, které jsou k dispozici, závisí na typu publikace vybraných aktualizací.
 
@@ -59,7 +59,7 @@ Po odebrání aktualizací z publikace zůstanou v úložišti Publisher Updates
 ## <a name="publish-publications"></a>Publikování publikací
 Když publikujete aktualizace a sady, vydavatel aktualizací přidá informace o těchto aktualizacích a prostředcích (metadata) a případně binárních souborech aktualizací (úplný obsah) na server aktualizací pro nasazení do zařízení.
 
-Než budete mít možnost publikovat, je nutné nakonfigurovat možnost [server aktualizací](updates-publisher-options.md#update-server) pro aplikaci Updates Publisher. Tuto možnost konfigurace otevřete tak, že přejdete na &gt; **Přehled** **pracovního prostoru aktualizace** a vyberete **Konfigurace služby WSUS a podpisového certifikátu.** Můžete také přejít na stránku server aktualizací v možnosti Vydavatel aktualizace.
+Než budete mít možnost publikovat, je nutné nakonfigurovat možnost [server aktualizací](updates-publisher-options.md#update-server) pro aplikaci Updates Publisher. Tuto možnost konfigurace otevřete tak, že přejdete na přehled **pracovního prostoru aktualizace** &gt; **Overview** a vyberete **Konfigurace služby WSUS a podpisového certifikátu.** Můžete také přejít na stránku server aktualizací v možnosti Vydavatel aktualizace.
 
 > [!NOTE]   
 > Aktualizace Publisher může publikovat pouze aktualizace 375 megabajtů (MB) a jejich méně.
@@ -82,9 +82,6 @@ Chcete-li exportovat publikaci, otevřete **pracovní prostor publikace** a vybe
 Když je vybraná publikace, na kartě **Domů** na pásu karet vyberte **exportovat** a potom zadejte cestu a název souboru pro export katalogu.
 
 Máte také možnost exportovat (zahrnout) závislé aktualizace softwaru jako součást exportu.
-
-## <a name="rename-a-publication"></a>Přejmenování publikace
-Chcete-li přejmenovat publikaci, vyberte publikaci **pracovního prostoru**publikace a pak na pásu karet klikněte na tlačítko **Upravit** na kartě **publikace** .
 
 ## <a name="delete-a-publication"></a>Odstranění publikace
 Chcete-li odstranit publikaci, vyberte publikaci **pracovního prostoru**publikace a pak zvolte možnost **Odstranit** na kartě **publikace** na pásu karet.

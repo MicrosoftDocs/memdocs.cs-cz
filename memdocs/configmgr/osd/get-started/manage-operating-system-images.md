@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 961a7d5a1f4b000d60baf036411bc2fb2f456b78
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697649"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606327"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Správa imagí operačního systému pomocí Configuration Manager
 
@@ -89,7 +89,7 @@ Než budete moci použít bitovou kopii operačního systému, přidejte ji do C
 
 5. Dokončete průvodce.  
 
-Ekvivalent rutiny prostředí PowerShell pro tento Průvodce konzolou najdete v části [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Ekvivalent rutiny prostředí PowerShell pro tento Průvodce konzolou najdete v části [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage).
 
 Dále distribuujte bitovou kopii operačního systému do distribučních bodů.  
 

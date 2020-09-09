@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995445"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607885"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Funkce ve verzi Technical Preview 1705 pro Configuration Manager
 
@@ -57,7 +57,7 @@ Tento nástroj můžete použít i v případě, že konzolová aktualizace ješ
 
 Když nástroj spustíte, spustí se s aktualizací, kterou určíte. Ve výchozím nastavení Nástroj neodstraní úspěšně nainstalované nebo stažené aktualizace.  
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 Účet, který použijete ke spuštění nástroje, vyžaduje následující oprávnění:
 -   Oprávnění **ke čtení** a **zápisu** do databáze lokality centrální správy a každé primární lokality ve vaší hierarchii. Chcete-li nastavit tato oprávnění, můžete přidat uživatelský účet jako člena **db_datawriter** a **db_datareader** [pevné databázové role](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) v databázi Configuration Manager jednotlivých lokalit. Nástroj nekomunikuje se sekundárními lokalitami.
 -   **Místní správce** v lokalitě nejvyšší úrovně ve vaší hierarchii.
@@ -121,12 +121,12 @@ V této verzi teď můžete používat repliky asynchronního potvrzení ve skup
 
 - Tato verze nepodporuje převzetí služeb při selhání pro použití repliky asynchronního potvrzení jako databáze lokality.
   > [!CAUTION]  
-  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
+  > Vzhledem k tomu, že Configuration Manager neověřuje stav asynchronního svěření repliky, aby bylo možné potvrdit, že je aktuální a [že by taková replika mohla být nesynchronizovaná](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), použití repliky asynchronního potvrzení jako databáze lokality může mít za následek ohrožení integrity vašeho webu a dat.  
 
 - V rámci skupiny dostupnosti můžete použít stejný počet a typ replik, které jsou podporované podle používané verze SQL Server.   (Předchozí podpora byla omezená na dvě repliky synchronního potvrzení.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Konfigurace repliky asynchronního potvrzování
-Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Další informace najdete v tématu [Přidání sekundární repliky do skupiny dostupnosti](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+Pokud chcete přidat asynchronní repliku do [skupiny dostupnosti, kterou používáte s Configuration Manager](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md), nemusíte spouštět konfigurační skripty potřebné ke konfiguraci synchronní repliky. (Je to proto, že neexistuje žádná podpora k použití této asynchronní repliky jako databáze lokality.) Další informace najdete v tématu [Přidání sekundární repliky do skupiny dostupnosti](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Obnovení lokality pomocí asynchronní repliky
 Před použitím asynchronní repliky k obnovení databáze lokality je nutné zastavit aktivní primární lokalitu, aby se zabránilo dalším zápisům do databáze lokality. Po zastavení lokality můžete použít asynchronní repliku místo použití [ručně obnovené databáze](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
@@ -139,7 +139,7 @@ Zastavení webu je ekvivalentem zastavení služby Správce součástí lokality
 ## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Vylepšená uživatelská oznámení pro aktualizace Microsoft 365
 Bylo provedeno vylepšení, které vám umožní využít uživatelské prostředí pro Office Klikni a spusť, když klient nainstaluje aktualizaci Microsoft 365. To zahrnuje automaticky otevíraná okna a oznámení v aplikaci a možnosti odpočítávání. Před touto verzí byla při odeslání Microsoft 365 aktualizace klientovi automaticky zavřeny aplikace sady Office, které byly otevřeny bez upozornění. Po této aktualizaci už nebudou neočekávaně ukončeny aplikace Office.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 Tato aktualizace se vztahuje na Microsoft 365 aplikací pro klienty v podnicích.
 
 ### <a name="known-issues"></a>Známé problémy
@@ -175,7 +175,7 @@ Chcete-li vytvořit zásadu a vyhledat dostupná nastavení:
 4.  Pomocí příspěvku na blogu jako reference můžete vyhledat a nakonfigurovat dostupná nastavení, abyste mohli tuto funkci vyzkoušet.
 5.  Až skončíte, dokončete průvodce a Nasaďte zásadu na jedno nebo více zařízení s Windows 10.
 
-### <a name="further-reading"></a>Další materiály
+### <a name="further-reading"></a>Další čtení
 
 Další informace o ochraně Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku]( https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97).
 Další informace o samostatném režimu ochrany Application Guard v programu Windows Defender najdete v [tomto blogovém příspěvku](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903).

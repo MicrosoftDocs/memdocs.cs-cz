@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695337"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606585"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Schvalování aplikací v Configuration Manager
 
@@ -49,7 +49,7 @@ Po schválení aplikace k instalaci můžete žádost **odmítnout** v konzole C
 
 Pokud ve verzi 1906 schválíte žádost o aplikaci v konzole a pak ji odepřete, můžete ji teď schválit znovu. Aplikace se po schválení znovu nainstaluje na klienta.  <!-- 4224910 -->
 
-Automatizujte proces schvalování pomocí rutiny CMApprovalRequest prostředí PowerShell pro [schválení](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) . Počínaje verzí 1902 Tato rutina zahrnuje parametr **InstallActionBehavior** . Pomocí tohoto parametru můžete určit, jestli se má aplikace nainstalovat hned, nebo během nepracovních hodin.<!-- SCCMDocs-pr issue #3418 -->
+Automatizujte proces schvalování pomocí rutiny CMApprovalRequest prostředí PowerShell pro [schválení](/powershell/module/configurationmanager/approve-cmapprovalrequest) . Počínaje verzí 1902 Tato rutina zahrnuje parametr **InstallActionBehavior** . Pomocí tohoto parametru můžete určit, jestli se má aplikace nainstalovat hned, nebo během nepracovních hodin.<!-- SCCMDocs-pr issue #3418 -->
 
 Od 1906 se můžete podívat, která nasazení vyžadují schválení. Vyberte aplikaci v uzlu **aplikace** . V podokně podrobností přepněte na kartu **nasazení** . Ve výchozím nastavení se zobrazuje nový sloupec, **vyžaduje schválení**.
 
@@ -99,7 +99,7 @@ Pokud je k dispozici více než jedna výstraha, můžete určit, která výstra
 
 Uživatelé můžou do žádosti přidat komentář z centra softwaru. Tento komentář se zobrazuje na žádost aplikace v konzole Configuration Manager. Počínaje verzí 1902 se tento komentář zobrazuje i v e-mailu. Zahrnutím tohoto komentáře do e-mailu můžou schvalovatelé učinit lepší rozhodnutí o schválení nebo zamítnutí žádosti.<!--3594063-->
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>Odeslání e-mailových oznámení a provedení akce v interní síti
 
@@ -128,7 +128,7 @@ S těmito požadavky obdrží příjemci e-mail s oznámením o žádosti. Pokud
 
 U těchto dalších volitelných požadavků můžou příjemci žádost schválit nebo odepřít odkudkoli, kde mají přístup k Internetu.
 
-- Povolte službu pro správu poskytovatele služby SMS přes bránu pro správu cloudu. V konzole Configuration Manager klikněte na pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a vyberte uzel **servery a role systému lokality** . Vyberte server s rolí poskytovatele služby SMS. V podokně podrobností vyberte roli **poskytovatele služby SMS** a v pásu karet na kartě role webového serveru vyberte možnost **vlastnosti** . Vyberte možnost, která **povolí Configuration Manager provoz brány pro správu cloudu pro službu správy**.  
+- Povolte službu pro správu poskytovatele služby SMS přes bránu pro správu cloudu. V konzole Configuration Manager klikněte na pracovní prostor **Správa** , rozbalte položku **Konfigurace lokality**a vyberte uzel **servery a role systému lokality** . Vyberte server s rolí poskytovatele služby SMS. V podokně podrobností vyberte roli **poskytovatele služby SMS** a v pásu karet na kartě role webového serveru vyberte možnost **vlastnosti** . Vyberte možnost **povolující Configuration Manager provoz brány pro správu cloudu pro službu správy**.  
 
 - Poskytovatel serveru SMS vyžaduje **rozhraní .NET 4.5.2** nebo novější.  
 
@@ -150,7 +150,7 @@ U těchto dalších volitelných požadavků můžou příjemci žádost schvál
 
         1. Nahraďte `<CMG FQDN>` plně kvalifikovaným názvem domény (FQDN) vaší služby brány pro správu cloudu (CMG). Například GraniteFalls.Contoso.com.  
 
-        1. Pak vyberte **Uložit**.  
+        1. Potom vyberte **Uložit**.  
 
     1. V nabídce **Správa** vyberte možnost **manifest**.  
 

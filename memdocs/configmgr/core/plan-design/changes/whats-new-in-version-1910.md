@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 86ee63564654d41b965cfc411eede273eeca4ef4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993467"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607712"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1910 Configuration Manager Current Branch
 
@@ -346,7 +346,7 @@ Tato verze zahrnuje následující vylepšení vyhledávání v konzole Configur
 
 ## <a name="other-updates"></a>Další aktualizace
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1910](/powershell/sccm/1910-release-notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell verze 1910](/powershell/sccm/1910-release-notes).
 
 Další informace o změnách REST API služby správy najdete v tématu poznámky k [verzi služby správy](../../../develop/adminservice/release-notes.md#bkmk_1910).
 

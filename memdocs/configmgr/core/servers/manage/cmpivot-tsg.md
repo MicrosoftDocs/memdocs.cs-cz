@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7302262c0da5f48bae83f5194ce41206055ae94d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128269"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608339"
 ---
 # <a name="troubleshoot-cmpivot"></a>Řešení potíží s CMPivot
 
@@ -23,7 +23,7 @@ CMPivot je nástroj, který poskytuje přístup ke stavu zařízení ve vašem p
 
 V některých případech může být nutné vyřešit potíže s CMPivot. Pokud je například stavová zpráva z klienta na CMPivot poškozená, server lokality nemůže zprávu zpracovat. Tento článek vám pomůže pochopit tok informací pro CMPivot.
 
-## <a name="troubleshoot-cmpivot-in-version-1902-and-later"></a><a name="bkmk_CMPivot-1902"></a>Řešení potíží s CMPivot ve verzi 1902 a novější
+## <a name="troubleshoot-cmpivot-in-version-1902-and-later"></a><a name="bkmk_CMPivot-1902"></a> Řešení potíží s CMPivot ve verzi 1902 a novější
 
 V Configuration Manager verzích 1902 a novějších můžete spustit CMPivot z lokality centrální správy (CAS) v hierarchii. Primární lokalita stále zpracovává komunikaci s klientem.
 
@@ -45,11 +45,11 @@ Vyhledejte `smsprov.log` tyto řádky:
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14`je identifikátor GUID skriptu pro CMPivot. Tento identifikátor GUID můžete zobrazit také ve [zprávách o stavu auditů CMPivot](cmpivot-changes.md#cmpivot-audit-status-messages).
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` je identifikátor GUID skriptu pro CMPivot. Tento identifikátor GUID můžete zobrazit také ve [zprávách o stavu auditů CMPivot](cmpivot-changes.md#cmpivot-audit-status-messages).
 
 V dalším kroku vyhledejte ID v okně CMPivot. Toto ID je `ClientOperationID` .
 
-![Okno CMPivot se zvýrazněným ClientOperationID](media/cmpivot-client-operationid-1902.png)
+![Okno CMPivot se zvýrazněným ClientOperationID verze 1902](media/cmpivot-client-operationid-1902.png)
 
 Vyhledejte `TaskID` z tabulky ClientAction. `TaskID`Odpovídá `UniqueID` v tabulce ClientAction.
 
@@ -84,7 +84,7 @@ Result are sent for ScriptGuid: 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 and <b>Task
 
 ### <a name="review-messages-on-the-site-server"></a>Zkontrolovat zprávy na serveru lokality
 
-Pokud je v bodu správy povoleno [podrobné protokolování](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client) , můžete zjistit, jak jsou zpracovávány příchozí zprávy klienta. V nástroji `MP_RelayMsgMgr.log` vyhledejte `TaskID` .
+Pokud je v bodu správy povoleno [podrobné protokolování](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client) , můžete zjistit, jak jsou zpracovávány příchozí zprávy klienta. V nástroji   `MP_RelayMsgMgr.log` vyhledejte `TaskID` .
 
 V tomto `MP_RelayMsgMgr.log` příkladu vidíte ID klienta `(GUID:83F67728-2E6D-4E4F-8075-ED035C31B783)` a `Task ID {9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0}` . ID zprávy se před odesláním do modulu zpracování zprávy přiřadí k odpovědi klienta:
 
@@ -121,7 +121,7 @@ select * from vSMS_CMPivotStatus where TaskID='{9A4E59D2-2F5B-4067-A9FA-B99602A3
 
 [![CMPivot dotazy SQL pro řešení potíží ve verzi 1902](media/cmpivot-sql-queries-1902.png)](media/cmpivot-sql-queries-1902.png#lightbox)
 
-## <a name="troubleshoot-cmpivot-in-1810-and-earlier"></a><a name="bkmk_CMPivot-1810"></a>Řešení potíží s CMPivot v 1810 a dřívějších verzích
+## <a name="troubleshoot-cmpivot-in-1810-and-earlier"></a><a name="bkmk_CMPivot-1810"></a> Řešení potíží s CMPivot v 1810 a dřívějších verzích
 
 V Configuration Manager verze 1810 a starší Server vaše lokalita zpracovává komunikaci s klientem.
 

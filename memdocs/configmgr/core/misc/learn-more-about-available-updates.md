@@ -1,6 +1,7 @@
 ---
 title: Další informace o aktualizacích
 titleSuffix: Configuration Manager
+description: Další informace o dostupných aktualizacích
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
@@ -10,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 33c383484e79032e6b86035013538b1990322d27
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 9122ddc0a8674e5e126b4e70720e79c49c87d7a6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268007"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607856"
 ---
 # <a name="learn-more-about-available-updates-for-configuration-manager"></a>Další informace o dostupných aktualizacích pro Configuration Manager
 

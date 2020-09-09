@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127239"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608001"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Oznámení o restartování zařízení v Configuration Manager
 
@@ -51,7 +51,7 @@ Centrum softwaru zobrazuje oznámení s možností odložení a zbývající ča
 
 Centrum softwaru zobrazí toto konečné oznámení o odpočítávání, které uživatel nemůže zavřít nebo odložit.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Oznámení o konečném odpočítávání centra softwaru":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Odpočítávání konečného restartování centra softwaru":::
 
 Počínaje verzí 1906 se uživateli v oznámení o restartu nezobrazuje indikátor průběhu, dokud nebude čekat na restartování před méně než 24 hodinami.
 
@@ -237,11 +237,11 @@ Pokud uživatel po instalaci nerestartoval své zařízení, obdrží oznámení
 
 - Dočasné oznámení při použití dialogového okna Centrum softwaru, nikoli informační zprávy:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Čeká na restartování oznámení centra softwaru s tlačítkem pro odložení":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Čeká na restartování oznámení centra softwaru s tlačítkem pro odložení ve verzi 1902":::
 
 Pokud se uživatel po dočasném oznámení nerestartuje, bude mu přiděleno konečné oznámení o odpočítávání, které nepůjde zavřít. Čas, kdy se zobrazí konečné oznámení, je založen na nastavení klienta: **zobrazí dialogové okno, které uživatel nemůže zavřít, který zobrazí interval odpočítávání před odhlášením uživatele nebo restartování počítače (minuty)**. Pokud je například nastavení 60, pak hodina před restartováním, zobrazí se konečné oznámení uživateli:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Oznámení o konečném odpočítávání centra softwaru":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Konečné odpočítávání oznámení centra softwaru ve verzi 1902":::
 
 Následující nastavení musí být kratší než v době trvání, než má nejkratší [okno údržby](../manage/collections/use-maintenance-windows.md) , které se pro počítač použije:
 
@@ -251,7 +251,7 @@ Následující nastavení musí být kratší než v době trvání, než má ne
 > [!IMPORTANT]
 > V Configuration Manager 1902 se za určitých okolností dialogová okna nebudou nahrazena informačními oznámeními. Pokud chcete tento problém vyřešit, nainstalujte [kumulativní aktualizaci pro Configuration Manager verze 1902](https://support.microsoft.com/help/4500571/update-rollup-for-configuration-manager-current-branch-1902). <!--4404715-->
 
-## <a name="log-files"></a>Soubory protokolu
+## <a name="log-files"></a>Soubory protokolů
 
 Pokud chcete řešit potíže s restartováním zařízení, použijte soubory **RebootCoordinator. log** a **SCNotify. log** v klientovi. Na základě konkrétního typu nasazení budete možná muset použít i další [soubory protokolů](../../plan-design/hierarchy/log-files.md)klienta.
 

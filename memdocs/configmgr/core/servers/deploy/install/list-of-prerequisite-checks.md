@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698952"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608067"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Seznam kontrol požadovaných součástí pro Configuration Manager
 
@@ -741,7 +741,7 @@ Balíčky nemají v názvu sdílené složky neplatné znaky, třeba `#` .
 
 Počínaje verzí 1810 ověřte, zda má databáze lokality nevyřízené položky dat sledování změn SQL.<!--SCCMDocs-pr issue 3023-->  
 
-Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>` .
+Tuto kontrolu ověřte ručně spuštěním diagnostické uložené procedury v databázi lokality. Nejdřív vytvořte [diagnostické připojení](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) k vaší databázi lokality. Nejjednodušším způsobem je použít Editor dotazů databázového stroje SQL Server Management Studio a připojit se k `admin:<instance name>` .
 
 V okně dotazu na vyhrazené připojení správce spusťte následující příkazy:
 

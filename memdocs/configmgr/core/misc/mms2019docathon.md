@@ -4,17 +4,18 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: Informace a pravidla pro MMS 2019 docathon
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695575"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607838"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 

@@ -19,19 +19,18 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: ce421c40d3a4b1e8a92df139bb18fce22f6231eb
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048000"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606088"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Instalace aplikace Portál společnosti do Čínské lidové republiky
 
 Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních nebo pracovních prostředků ze zařízení s Androidem. Aplikace je dostupná v Číně v Čínské lidové republice a je možné ji nainstalovat z následujících obchodů s aplikacemi: 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (není k dispozici všude)
-* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
@@ -40,8 +39,8 @@ Nainstalujte aplikaci Portál společnosti Intune pro přístup do školních ne
 Portál společnosti je také k dispozici v [obchodě s aplikacemi Baidu](https://go.microsoft.com/fwlink/?linkid=2133565). Vyhledání:  
  
    1. Přejít do [obchodu s aplikacemi Baidu](https://go.microsoft.com/fwlink/?linkid=2133565)  
-   2. Na panelu hledání zadejte**公司门户**a vyhledejte aplikaci Portál společnosti.  
-   3. Vyberte výpis s Portál společnosti ![Ikona Portál společnosti](./media/company-portal-logo-small-2006.png) .  
+   2. Na panelu hledání zadejte **公司门户** a vyhledejte aplikaci Portál společnosti.  
+   3. Vyberte výpis s Portál společnosti ![Ikona Portál společnosti](./media/company-portal-logo-small-2006.png) hamburgeru.  
 
 
 ## <a name="next-steps"></a>Další kroky  

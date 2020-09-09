@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 70ef4ba22be8668053929639f951769f1aa2fe7d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699428"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608324"
 ---
 # <a name="support-center-for-configuration-manager"></a>Support Center pro Configuration Manager
 
@@ -50,12 +50,12 @@ Support Center zahrnuje moderní prohlížeč protokolů. Tento nástroj nahrazu
 <!--3555962-->
 Počínaje verzí 1906 je **OneTrace** nový prohlížeč protokolů s nástrojem Support Center. Funguje podobně jako CMTrace, s vylepšeními. Další informace najdete v tématu [Support Center OneTrace](support-center-onetrace.md).
 
-### <a name="powershell-cmdlets"></a>Rutiny PowerShellu
+### <a name="powershell-cmdlets"></a>Rutiny prostředí PowerShell
 
-Support Center zahrnuje také [rutiny PowerShellu](/powershell/sccm/overview?view=sccm-ps). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
+Support Center zahrnuje také [rutiny PowerShellu](/powershell/sccm/overview). Pomocí těchto rutin můžete vytvořit vzdálené připojení k jinému Configuration Manager klientovi, nakonfigurovat možnosti shromažďování dat a spustit shromažďování dat.
 
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Do serveru nebo klientského počítače, na který nainstalujete Support Center, nainstalujte následující komponenty:
 

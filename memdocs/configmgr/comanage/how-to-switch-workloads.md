@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776952"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606818"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Postup přepnutí úloh Configuration Manager do Intune
 
@@ -43,7 +43,7 @@ Počínaje verzí 1906 můžete nakonfigurovat různé pilotní kolekce pro kaž
 
 4. Pokud je to potřeba, přejděte na kartu **fázování** a v případě potřeby změňte **pilotní kolekci** pro jakékoli úlohy.
   
-   ![Obrazovka karty úlohy na stránce vlastností spolusprávy](media/3555750-co-management-staging-tab.png)
+   ![Snímek obrazovky s kartou přípravy na stránce vlastností spolusprávy](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Než přepnete všechny úlohy, ujistěte se, že jste správně nakonfigurovali a nasadili odpovídající úlohy v Intune. Ujistěte se, že úlohy jsou vždycky spravované jedním z nástrojů pro správu vašich zařízení.
@@ -60,7 +60,7 @@ Počínaje verzí 1906 můžete nakonfigurovat různé pilotní kolekce pro kaž
 
 3. Přepněte na kartu **úlohy** . Ve výchozím nastavení jsou všechny úlohy nastavené na nastavení **Configuration Manager** . Chcete-li přepnout úlohu, přesuňte ovládací prvek posuvníku pro tuto úlohu na požadované nastavení.  
 
-    ![Obrazovka karty úlohy na stránce vlastností spolusprávy](media/properties-workloads.png)
+    ![Obrazovka karty úlohy na stránce vlastností spolusprávy verze 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager nadále spravuje tuto úlohu.  
 

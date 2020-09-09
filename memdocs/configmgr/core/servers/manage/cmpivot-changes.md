@@ -10,18 +10,18 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129628"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608239"
 ---
 # <a name="changes-to-cmpivot"></a>Změny CMPivot
 
 Pomocí následujících informací se dozvíte o změnách provedených v [CMPivot](cmpivot.md) mezi verzemi Configuration Manager:
 
-## <a name="cmpivot-changes-for-version-2006"></a><a name="bkmk_2006"></a>CMPivot změny verze 2006
+## <a name="cmpivot-changes-for-version-2006"></a><a name="bkmk_2006"></a> CMPivot změny verze 2006
 <!--6518631-->
 
 Počínaje verzí 2006 byly pro CMPivot provedeny následující vylepšení:
@@ -42,14 +42,14 @@ Počínaje verzí 2006 byly pro CMPivot provedeny následující vylepšení:
 ![Pivot zařízení pro více zařízení pomocí CMPivot](./media/6518631-cmpivot-multi-select.png)
 
 
-## <a name="cmpivot-changes-for-version-2002"></a><a name="bkmk_2002"></a>CMPivot změny verze 2002
+## <a name="cmpivot-changes-for-version-2002"></a><a name="bkmk_2002"></a> CMPivot změny verze 2002
 <!--5870934-->
 Usnadnili jsme navigaci CMPivot entit. Od verze Configuration Manager 2002 můžete hledat entity CMPivot. Přidaly se také nové ikony, které usnadňují odlišení entit a typů objektů entit.
 
 ![Hledání entit CMPivot](./media/5870934-search-cmpivot-entities.png)
 
 
-## <a name="cmpivot-changes-for-version-1910"></a><a name="bkmk_cmpivot1910"></a>CMPivot změny verze 1910
+## <a name="cmpivot-changes-for-version-1910"></a><a name="bkmk_cmpivot1910"></a> CMPivot změny verze 1910
 <!--5410930, 3197353-->
 Počínaje verzí 1910 se CMPivot významně optimalizuje za účelem snížení síťového provozu a zatížení vašich serverů. Kromě toho se pro pomoc při řešení potíží a lovu přidalo několik entit a vylepšení entit. Pro CMPivot ve verzi 1910 byly představeny tyto změny:
 
@@ -64,7 +64,7 @@ Počínaje verzí 1910 se CMPivot významně optimalizuje za účelem snížení
 - [Další vylepšení pro CMPivot](#bkmk_Other)
 
 
-### <a name="optimizations-to-the-cmpivot-engine"></a><a name="bkmk_optimization"></a>Optimalizace modulu CMPivot
+### <a name="optimizations-to-the-cmpivot-engine"></a><a name="bkmk_optimization"></a> Optimalizace modulu CMPivot
 <!--3197353-->
 Pro snížení síťového provozu a zatížení serverů byl CMPivot optimalizovaný v 1910. Mnoho operací dotazů se teď provádí přímo na klientovi, nikoli na serverech. Tato změna také znamená, že některé operace CMPivot vracejí minimální data z prvního dotazu. Pokud se rozhodnete přejít na data a získat další informace, může se spustit nový dotaz, který načte další data z klienta. V případě, že jste spustili dotaz "souhrnně počítané", dříve byla na server vrácena například Velká sada dat.  I když vrátíte velkou datovou sadu, která nabízí okamžitý přechod k podrobnostem, kolikrát bylo potřeba jenom souhrnný počet. V 1910 Pokud se rozhodnete přejít na konkrétního klienta, dojde k další kolekci dat, která vrátí další požadovaná data. Tato změna přináší lepší výkon a škálovatelnost pro dotazy na velký počet klientů. <!--3197353, 5458337-->
 
@@ -90,7 +90,7 @@ Optimalizace CMPivot významně omezují zatížení sítě a procesoru serveru 
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a>WinEvent ( \<logname> , [ \<timespan> ])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent ( \<logname> , [ \<timespan> ])
 
 Tato entita se používá k získání událostí z protokolů událostí a souborů protokolu trasování událostí. Entita získává data z protokolů událostí generovaných technologií protokolu událostí systému Windows. Entita také získává události v protokolových souborech generovaných trasováním událostí pro Windows (ETW). WinEvent vyhledá události, ke kterým došlo během posledních 24 hodin, ve výchozím nastavení. Nicméně výchozí 24hodinový parametr lze přepsat zahrnutím TimeSpan.
 
@@ -100,7 +100,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a>Obsah ( \<filename> )
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a> Obsah ( \<filename> )
 
 Obsah souboru se používá k získání obsahu textového souboru.
 
@@ -110,7 +110,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a>ProcessModule ( \<processname> )  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule ( \<processname> )  
 
 Tato entita se používá k vytvoření výčtu modulů (DLL) zavedených daným procesem. ProcessModule je užitečné při lovu malwaru, který se skrývá v legitimních procesech.  
 
@@ -120,7 +120,7 @@ ProcessModule('powershell')
 | order by count_ desc
 ```
 
-### <a name="aadstatus"></a><a name="bkmk_AadStatus"></a>AadStatus
+### <a name="aadstatus"></a><a name="bkmk_AadStatus"></a> AadStatus
 
 Tato entita se dá použít k získání aktuálních Azure Active Directory informací o identitě ze zařízení.
 
@@ -131,7 +131,7 @@ AadStatus
 | render piechart
 ```
 
-### <a name="epstatus"></a><a name="bkmk_EPStatus"></a>EPStatus
+### <a name="epstatus"></a><a name="bkmk_EPStatus"></a> EPStatus
 
 EPStatus slouží k získání stavu antimalwarového softwaru nainstalovaného v počítači.
 
@@ -143,7 +143,7 @@ EPStatus
 | render barchart
 ```
 
-### <a name="local-device-query-evaluation-using-cmpivot-standalone"></a><a name="bkmk_local-eval"></a>Vyhodnocení dotazů na místní zařízení pomocí samostatného CMPivot
+### <a name="local-device-query-evaluation-using-cmpivot-standalone"></a><a name="bkmk_local-eval"></a> Vyhodnocení dotazů na místní zařízení pomocí samostatného CMPivot
 <!--3197353-->
 Pokud používáte CMPivot mimo konzolu Configuration Manager, můžete dotazovat jenom na místní zařízení bez nutnosti infrastruktury Configuration Manager. Teď můžete využít CMPivot dotazy Azure Log Analytics k rychlému zobrazení informací o rozhraní WMI na místním zařízení. Tím se také umožní ověřování a vylepšení dotazů CMPivot před jejich spuštěním ve větším prostředí. CMPivot Standalone je k dispozici pouze v angličtině. Další informace o samostatném CMPivot naleznete v tématu [CMPivot Standalone](#bkmk_standalone).
 
@@ -153,7 +153,7 @@ Pokud používáte CMPivot mimo konzolu Configuration Manager, můžete dotazova
 - Pokud na **tomto počítači**Vydáte dotaz na entity jiného typu než WMI, zobrazí se **neplatný obor názvů** nebo dvojznačná výjimka.
 - Spusťte CMPivot Standalone z zástupce nabídky Start, nikoli přímo z cesty ke spustitelnému souboru. <!--5787962-->
 
-### <a name="other-enhancements"></a><a name="bkmk_Other"></a>Další vylepšení
+### <a name="other-enhancements"></a><a name="bkmk_Other"></a> Další vylepšení
 
 - Dotazy typu regulárních výrazů můžete provádět pomocí `like` operátoru new. Například:<!--3056858-->
   
@@ -206,7 +206,7 @@ Pokud používáte CMPivot mimo konzolu Configuration Manager, můžete dotazova
   - Každý klient je omezený na 128 KB dat na jeden dotaz.
   - Výsledky mohou být zkráceny v případě, že výsledky dotazu překračují 128 KB.
 
-## <a name="cmpivot-changes-for-version-1906"></a><a name="bkmk_cmpivot1906"></a>CMPivot změny verze 1906
+## <a name="cmpivot-changes-for-version-1906"></a><a name="bkmk_cmpivot1906"></a> CMPivot změny verze 1906
 
 Počínaje verzí 1906 byly do CMPivot přidány následující položky:
 
@@ -214,7 +214,7 @@ Počínaje verzí 1906 byly do CMPivot přidány následující položky:
 - [Přidání oprávnění CMPivot do role správce zabezpečení](#bkmk_cmpivot_secadmin1906)
 - [CMPivot samostatná](#bkmk_standalone)
 
-### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a><a name="bkmk_cmpivot_joins"></a>Přidání spojení, dalších operátorů a agregátorů v CMPivot
+### <a name="add-joins-additional-operators-and-aggregators-in-cmpivot"></a><a name="bkmk_cmpivot_joins"></a> Přidání spojení, dalších operátorů a agregátorů v CMPivot
 <!--4054074-->
 Nyní máte další aritmetické operátory, agregátory a možnost Přidat spojení dotazů, jako je například použití registru a souboru dohromady. Byly přidány následující položky:
 
@@ -262,7 +262,7 @@ Operátor vykreslení již v CMPivot existuje. Byla přidána podpora pro více 
 | substring() | Extrahuje podřetězec ze zdrojového řetězce počínaje z nějakého indexu na konec řetězce. |
 | tostring() | Převede vstup na operaci řetězce. |
 
-#### <a name="examples"></a><a name="bkmk_cmpivot_examples1906"></a>4.6
+#### <a name="examples"></a><a name="bkmk_cmpivot_examples1906"></a> 4.6
 
 - Zobrazit zařízení, výrobce, model a OSVersion:
 
@@ -284,7 +284,7 @@ Operátor vykreslení již v CMPivot existuje. Byla přidána podpora pro více 
 
    ![Skládaný pruhový graf zobrazující časy spouštění zařízení v MS](./media/4054074-render-using-with-statement.png)
 
-### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a>Přidání oprávnění CMPivot do role správce zabezpečení
+### <a name="added-cmpivot-permissions-to-the-security-administrator-role"></a><a name="bkmk_cmpivot_secadmin1906"></a> Přidání oprávnění CMPivot do role správce zabezpečení
 <!--4683130-->
 
 Počínaje verzí 1906 byla do předdefinované role **Správce zabezpečení** Configuration Manager přidána následující oprávnění:
@@ -296,11 +296,11 @@ Počínaje verzí 1906 byla do předdefinované role **Správce zabezpečení** 
 >[!NOTE]
 > **Spouštění skriptů** je nadmnožinou oprávnění **Run CMPivot** .
 
-### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a>CMPivot samostatná
+### <a name="cmpivot-standalone"></a><a name="bkmk_standalone"></a> CMPivot samostatná
 
 [!INCLUDE [CMPivot standalone](includes/cmpivot-standalone.md)] 
 
-## <a name="cmpivot-changes-for-version-1902"></a><a name="bkmk_cmpivot1902"></a>CMPivot změny verze 1902
+## <a name="cmpivot-changes-for-version-1902"></a><a name="bkmk_cmpivot1902"></a> CMPivot změny verze 1902
 <!--3610960-->
 Od verze Configuration Manager 1902 můžete spustit CMPivot z lokality centrální správy (CAS) v hierarchii. Primární lokalita stále zpracovává komunikaci s klientem. Při spuštění CMPivot z lokality centrální správy komunikuje s primární lokalitou prostřednictvím vysokorychlostního kanálu pro odběr zpráv. Tato komunikace nespoléhá na standardní replikaci SQL mezi lokalitami.
 
@@ -359,12 +359,12 @@ Pokud chcete, aby CMPivot pracoval na certifikačních autoritách v takovém sc
       1. Vyberte možnost **použít pouze protokol Kerberos**.
       1. Přidejte službu SQL Server pro každou primární lokalitu s portem a instancí.
       1. Ujistěte se, že tyto změny odpovídají zásadám zabezpečení vaší společnosti!
-1. Ujistěte se, že [je Hlavní](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs) název služby (SPN) publikovaný pro název NASLOUCHACÍHO procesu SQL CAS a každý primární název NASLOUCHACÍHO procesu SQL.
+1. Ujistěte se, že [je Hlavní](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs) název služby (SPN) publikovaný pro název NASLOUCHACÍHO procesu SQL CAS a každý primární název NASLOUCHACÍHO procesu SQL.
 1. Restartujte primární SQL Server.
 1. Restartujte server lokality CAS a servery SQL CAS.
 
 
-## <a name="cmpivot-changes-for-version-1810"></a><a name="bkmk_cmpivot"></a>CMPivot změny verze 1810
+## <a name="cmpivot-changes-for-version-1810"></a><a name="bkmk_cmpivot"></a> CMPivot změny verze 1810
 <!--1359068, 3607759-->
 
 CMPivot zahrnuje následující vylepšení od Configuration Manager verze 1810:
@@ -377,7 +377,7 @@ CMPivot zahrnuje následující vylepšení od Configuration Manager verze 1810:
 - [Souhrn dotazů](#bkmk_cmpivot-summary)  
 - [Auditní stavové zprávy](#cmpivot-audit-status-messages)
 
-### <a name="cmpivot-utility-and-performance"></a><a name="bkmk_cmpivot-perf"></a>Nástroj CMPivot a výkon
+### <a name="cmpivot-utility-and-performance"></a><a name="bkmk_cmpivot-perf"></a> Nástroj CMPivot a výkon
 
 - CMPivot bude vracet až 100 000 buněk, ale ne 20 000 řádků.
   - Pokud má entita 5 vlastností, což znamená 5 sloupců, zobrazí se až 20 000 řádků.
@@ -393,7 +393,7 @@ CMPivot zahrnuje následující vylepšení od Configuration Manager verze 1810:
   - Pokud je výstup skriptu nebo dotazu větší než 80 KB, klient odesílá data prostřednictvím stavové zprávy.
   - Pokud klient není aktualizován na verzi klienta 1810, bude nadále používat stavové zprávy.
 
-- Při spuštění CMPivot se může zobrazit následující chyba: **CMPivot teď nejde použít v důsledku nekompatibilní verze skriptu. K tomuto problému může dojít proto, že se hierarchie právě provádí při upgradu lokality. Počkejte, než se upgrade dokončí, a pak to zkuste znovu.**
+- Při spuštění CMPivot se může zobrazit následující chyba:  **CMPivot teď nejde použít v důsledku nekompatibilní verze skriptu. K tomuto problému může dojít proto, že se hierarchie právě provádí při upgradu lokality. Počkejte, než se upgrade dokončí, a pak to zkuste znovu.**
 
   - Pokud se zobrazí tato zpráva, může to znamenat:
     - Obor zabezpečení není správně nastavený.
@@ -401,7 +401,7 @@ CMPivot zahrnuje následující vylepšení od Configuration Manager verze 1810:
     - Podkladový skript CMPivot je nekompatibilní.
 
 
-### <a name="scalar-functions"></a><a name="bkmk_cmpivot-functions"></a>Skalární funkce
+### <a name="scalar-functions"></a><a name="bkmk_cmpivot-functions"></a> Skalární funkce
 CMPivot podporuje následující skalární funkce:
 - **před ()**: odečte zadaný časový rozsah TimeSpan od aktuálního času UTC.  
 - **datetime_diff ()**: vypočítá rozdíl kalendáře mezi dvěma hodnotami DateTime  
@@ -409,7 +409,7 @@ CMPivot podporuje následující skalární funkce:
 - **bin ()**: zaokrouhlí hodnoty dolů na celočíselný násobek dané velikosti přihrádky.  
 
 > [!Note]  
-> Datový typ DateTime představuje okamžitý čas, obvykle vyjádřený jako datum a denní dobu. Hodnoty času se měří v jednotkách s 1 sekundou. Hodnota DateTime je vždy v časovém pásmu UTC. Ve formátu ISO 8601 vždy vyjadřují literály data a času, například`yyyy-mm-dd HH:MM:ss`  
+> Datový typ DateTime představuje okamžitý čas, obvykle vyjádřený jako datum a denní dobu. Hodnoty času se měří v jednotkách s 1 sekundou. Hodnota DateTime je vždy v časovém pásmu UTC. Ve formátu ISO 8601 vždy vyjadřují literály data a času, například `yyyy-mm-dd HH:MM:ss`  
 
 #### <a name="examples"></a>Příklady
 - `datetime(2015-12-31 23:59:59.9)`: Určitý literál data A času   
@@ -417,7 +417,7 @@ CMPivot podporuje následující skalární funkce:
 - `ago(1d)`: Aktuální čas minus jeden den  
 
 
-### <a name="rendering-visualizations"></a><a name="bkmk_cmpivot-charts"></a>Vykreslování vizualizací
+### <a name="rendering-visualizations"></a><a name="bkmk_cmpivot-charts"></a> Vykreslování vizualizací
 
 CMPivot nyní obsahuje základní podporu pro [operátor vykreslování](https://docs.microsoft.com/azure/kusto/query/renderoperator)KQL. Tato podpora zahrnuje následující typy:  
 - **BarChart**: první sloupec má osu x a může to být text, DateTime nebo numeric. Druhý sloupec musí být numerický a zobrazený jako vodorovný pruh.  
@@ -461,7 +461,7 @@ OperatingSystem
 ![Příklad vizualizace výsečového grafu CMPivot](media/1359068-cmpivot-piechart.png)
 
 
-### <a name="hardware-inventory"></a><a name="bkmk_cmpivot-hinv"></a>Inventář hardwaru
+### <a name="hardware-inventory"></a><a name="bkmk_cmpivot-hinv"></a> Inventář hardwaru
 Použijte CMPivot k dotazování libovolné třídy inventáře hardwaru. Tyto třídy zahrnují všechna vlastní rozšíření, která provedete v inventáři hardwaru. CMPivot okamžitě vrátí výsledky uložené v mezipaměti z poslední kontroly inventáře hardwaru uložené v databázi lokality. Ve stejnou dobu aktualizuje výsledky v případě potřeby s živými daty z libovolného online klienta.
 
 Sytost barev dat v tabulce výsledků nebo grafu označuje, zda jsou data uložena v reálném čase nebo v mezipaměti. Například tmavě modrá je data v reálném čase z online klienta. Světle modrá je data uložená v mezipaměti.
@@ -486,7 +486,7 @@ LogicalDisk
 - Předdefinované entity nemůžete přepsat vytvořením entity inventáře se stejným názvem.  
 
 
-### <a name="scalar-operators"></a><a name="bkmk_cmpivot-operators"></a>Skalární operátory
+### <a name="scalar-operators"></a><a name="bkmk_cmpivot-operators"></a> Skalární operátory
 CMPivot zahrnuje následující skalární operátory:  
 
 > [!Note]  
@@ -508,7 +508,7 @@ CMPivot zahrnuje následující skalární operátory:
 |! EndsWith|ZAROVNÁNÍ INDIREKCE RHS není uzavírací podsekvence LHS.|`"Fabrikam" !endswith "brik"`|
 
 
-### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a>Souhrn dotazů
+### <a name="query-summary"></a><a name="bkmk_cmpivot-summary"></a> Souhrn dotazů
 
 V dolní části okna CMPivot vyberte kartu **Souhrn dotazu** . Tento stav vám pomůže identifikovat klienty, kteří jsou offline, nebo řešit chyby, ke kterým může dojít. Výběrem hodnoty ve sloupci počet otevřete seznam konkrétních zařízení s tímto stavem. 
 

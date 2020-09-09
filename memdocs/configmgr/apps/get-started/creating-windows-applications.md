@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8fa21a226dff8e9e4a729908a218ab81cb5b4a73
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819622"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606773"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Vytváření aplikací pro Windows v Configuration Manager
 
@@ -130,8 +130,8 @@ Když přidáte tento typ nasazení do aplikace, nakonfigurujte jeho vlastnosti 
 
 Počínaje verzí 2006 použijte následující rutiny Windows PowerShellu k přidání a konfiguraci typu nasazení pořadí úloh:
 
-- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
-- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>Předpoklady pro typ nasazení pořadí úloh
 

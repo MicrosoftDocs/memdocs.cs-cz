@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3e16e605bde9224d641647ed8ad5ae58a9bfcf1e
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695286"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606518"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Vytváření aplikací v Configuration Manager
 
@@ -651,7 +651,7 @@ Nakonfigurujte další možnosti, které jsou jedinečné pro typy nasazení pro
 
 3. Ve vlastnostech aplikace přepněte na kartu **typy nasazení** . Vyberte typ nasazení App-V a vyberte **Upravit**.  
 
-4. Ve vlastnostech typu nasazení přepněte na kartu **obsah** . podle potřeby nakonfigurujte následující možnosti:  
+4. Ve vlastnostech typu nasazení přepněte na kartu **obsah** . Podle potřeby nakonfigurujte následující možnosti:  
 
     - **Zachovat obsah v mezipaměti klienta**: klient Configuration Manager neodstraní obsah pro tento typ nasazení z mezipaměti.  
 
@@ -688,7 +688,7 @@ K importu aplikace do Configuration Manager použijte následující postup:
 Nová aplikace se zobrazí v uzlu **Aplikace**.  
 
 > [!TIP]  
-> Rutina Windows PowerShellu **Import-CMApplication** má stejnou funkci jako tento postup. Další informace najdete v tématu [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> Rutina Windows PowerShellu **Import-CMApplication** má stejnou funkci jako tento postup. Další informace najdete v tématu [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication).  
 
 Další informace o exportu aplikace najdete v tématu [úlohy správy pro aplikace](management-tasks-applications.md).
 

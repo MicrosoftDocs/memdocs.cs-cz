@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995003"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607740"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Co je nového ve verzi 1806 Configuration Manager Current Branch
 
@@ -493,7 +493,7 @@ Další informace najdete v tématu [Údržba aktualizací softwaru](../../../su
 
 
 
-## <a name="reporting"></a>Přehledy
+## <a name="reporting"></a>Vytváření sestav
 
 ### <a name="new-software-updates-compliance-report"></a>Nová sestava dodržování předpisů pro aktualizace softwaru
 <!--1357775-->
@@ -584,7 +584,7 @@ Další informace najdete v tématu [vylepšení konzoly ve verzi 1806](../../se
 
 Kromě nových funkcí obsahuje tato verze také další změny, jako jsou opravy chyb. Další informace najdete v tématu [Souhrn změn v Configuration Manager aktuální větvi, verze 1806](https://support.microsoft.com/help/4459701).
 
-Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell 1806](/powershell/sccm/1806_release_notes?view=sccm-ps).
+Další informace o změnách rutin prostředí Windows PowerShell pro Configuration Manager najdete v [poznámkách k verzi PowerShell 1806](/powershell/sccm/1806_release_notes).
 
 V konzole nástroje je k dispozici následující kumulativní aktualizace (4462978) od 24. října 2018: [kumulativní aktualizace pro Configuration Manager aktuální větev, verze 1806](https://support.microsoft.com/help/4462978).
 

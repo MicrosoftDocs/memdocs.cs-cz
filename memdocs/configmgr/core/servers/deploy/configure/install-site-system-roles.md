@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 8cb16b6fd703142e0c3c6400403207976b4208f5
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700527"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607557"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Nainstalovat role systému lokality pro Configuration Manager
 
@@ -56,7 +56,7 @@ Pro instalaci rolí používá Configuration Manager **účet instalace systému
 1. Dokončete průvodce. Pro konkrétní role se můžou zobrazit další stránky. Další informace najdete v tématu [Možnosti konfigurace pro role systému lokality](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> Instalovat role na nový server systému lokality
 
@@ -76,7 +76,7 @@ Pro instalaci rolí používá Configuration Manager **účet instalace systému
 1. Dokončete průvodce. Pro konkrétní role se můžou zobrazit další stránky. Další informace najdete v tématu [Možnosti konfigurace pro role systému lokality](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
-> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps).
+> Rutina **New-CMSiteSystemServer**prostředí Windows PowerShell provádí stejnou funkci jako tento postup. Další informace najdete v tématu [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819928"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606931"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -118,7 +118,7 @@ Chcete-li změnit nastavení existující zásady, vyberte ji v seznamu a vybert
 
 Když vytvoříte více než jednu zásadu, můžete nakonfigurovat jejich relativní prioritu. Pokud nasadíte do klienta více zásad, použije se k určení jeho nastavení hodnota priority.
 
-Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## <a name="deploy-a-policy"></a>Nasazení zásady
 
@@ -137,7 +137,7 @@ Můžete vytvořit více nasazení stejné zásady. Chcete-li zobrazit další i
 > [!IMPORTANT]
 > Klient MBAM nespustí nástroj BitLocker Drive Encryption akce, pokud je aktivní připojení pomocí protokolu vzdálené plochy. Všechna připojení vzdálené konzoly se musí zavřít a uživatel musí být přihlášený k fyzické relaci konzoly, než začne nástroj BitLocker Drive Encryption.
 
-Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+Počínaje verzí 2006 můžete pro tuto úlohu použít rutiny prostředí Windows PowerShell. Další informace najdete v tématu [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## <a name="monitor"></a>Monitorování
 

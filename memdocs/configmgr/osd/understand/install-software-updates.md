@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 855351fc7fe28b40f23e1e01767fd62a782bc1e0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697496"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606982"
 ---
 # <a name="install-software-updates"></a>Instalovat aktualizace softwaru
 
@@ -107,7 +107,7 @@ Další informace najdete v tématu [použití aktualizací softwaru pro obráze
 - Podporuje pouze aktualizace založené na modelu CBS. Nejde použít aktualizace Microsoft 365 Apps.
 
 > [!Tip]  
-> Výběr aktualizací softwaru můžete automatizovat pomocí prostředí PowerShell. Seznam aktualizací získáte pomocí rutiny [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) . Pak pomocí rutiny [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) vytvořte plán údržby offline. Následující příklad ukazuje jednu metodu pro automatizaci této akce:
+> Výběr aktualizací softwaru můžete automatizovat pomocí prostředí PowerShell. Seznam aktualizací získáte pomocí rutiny [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) . Pak pomocí rutiny [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) vytvořte plán údržby offline. Následující příklad ukazuje jednu metodu pro automatizaci této akce:
 >
 > ```PowerShell
 > # Get the OS image
@@ -207,7 +207,7 @@ Následující zdroje informací a další informace vám pomůžou při řešen
 
 - Pomoc při odstraňování potíží s procesem správy aktualizací softwaru najdete v tématu [řešení potíží se softwarem Update Management](https://support.microsoft.com/help/10680/software-update-management-troubleshooting-in-configuration-manager).  
 
-- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Příklad:  
+- Chcete-li zvýšit celkový výkon, zmenšete velikost katalogu aktualizací softwaru. Například:  
 
     - Odeberte zbytečné klasifikace, produkty a jazyky. Další informace najdete v tématu [Konfigurace klasifikací a produktů k synchronizaci](../../sum/get-started/configure-classifications-and-products.md).  
 

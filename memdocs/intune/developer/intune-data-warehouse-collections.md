@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993095"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608090"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -34,30 +34,30 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
 |          Vlastnost          |                                      Popis                                      |                Příklad               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | Jedinečný identifikátor aplikace                                                         | 123                                  |
-| ApplicationId              | Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený.        | b66bc706-ffff-7437-0340-032819502773 |
-| Revize                   | Verze, kterou uvedl správce během nahrávání binárního souboru.                   | 2                                    |
-| Nadpis                      | Název aplikace                                                                     | Excel                                |
-| Publisher                  | Vydavatel aplikace                                                                 | Partnerský vztah Microsoftu                            |
-| UploadState                | Stav nahrávání aplikace                                                              | 1                                    |
-| AppTypeKey                 | Odkaz na entitu AppType, která je popsaná v následujícím oddílu.                            | 1                                    |
-| VppProgramTypeKey          | Odkaz na entitu VppProgramType, která je popsaná níže.                                        | 30876                                |
-| CreationTime               | Čas vytvoření této revize                                            | 23. 11. 2016 0:00                      |
-| ModifiedTime               | Čas poslední změny nějakého prvku, který s touto revizí souvisí.                            | 23. 11. 2016 0:00                      |
-| Velikost                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
-| StartDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila.      | 23. 11. 2016 0:00                      |
-| EndDateExclusiveUTC        | Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá                        | 23. 11. 2016 0:00                      |
-| IsCurrent                  | Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální.         | Pravda/nepravda                           |
-| RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila. | 23. 11. 2016 0:00                      |
+| appKey                     | Jedinečný identifikátor aplikace                                                         | 123                                  |
+| applicationId              | Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený.        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | Verze, kterou uvedl správce během nahrávání binárního souboru.                   | 2                                    |
+| title                      | Název aplikace                                                                     | Excel                                |
+| vydavatel                  | Vydavatel aplikace                                                                 | Partnerský vztah Microsoftu                            |
+| uploadState                | Stav nahrávání aplikace                                                              | 1                                    |
+| appTypeKey                 | Odkaz na entitu AppType, která je popsaná v následujícím oddílu.                            | 1                                    |
+| vppProgramTypeKey          | Odkaz na entitu VppProgramType, která je popsaná níže.                                        | 30876                                |
+| creationTime               | Čas vytvoření této revize                                            | 23. 11. 2016 0:00                      |
+| modifiedTime               | Čas poslední změny nějakého prvku, který s touto revizí souvisí.                            | 23. 11. 2016 0:00                      |
+| velikost                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
+| startDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila.      | 23. 11. 2016 0:00                      |
+| endDateExclusiveUTC        | Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá                        | 23. 11. 2016 0:00                      |
+| Aktuální                  | Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální.         | Pravda/nepravda                           |
+| rowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila. | 23. 11. 2016 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
 Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 |   Vlastnost  |        Popis        |
 |-------------|---------------------------|
-| AppTypeID   | ID pro daný typ           |
-| AppTypeKey  | Náhradní klíč pro daný klíč |
-| AppTypeName | Typ aplikace                  |
+| appTypeID   | ID pro daný typ           |
+| appTypeKey  | Náhradní klíč pro daný klíč |
+| appTypeName | Typ aplikace                  |
 
 ### <a name="example"></a>Příklad
 
@@ -82,28 +82,28 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 
 |    Vlastnost   |                                                                                      Popis                                                                                     |  Příklad |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161204 |
+| dateKey       | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161204 |
 | Neznámý       | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 5        |
-| NotApplicable | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 201      |
-| Odpovídající     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
+| notApplicable | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 201      |
+| kompatibilní     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
 | V období odkladu | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 57       |
-| NonCompliant  | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 43       |
-|    Chyba      |    Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                          |    3     |
+| nekompatibilních  | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 43       |
+|    error      |    Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů k zařízením pro jednotlivé zásady a pro jednotlivé typy zásad. Uvádí počet zařízení nacházejících se v jednotlivých stavech shody pro všechny přiřazené zásady dodržování předpisů.
 
 |      Vlastnost     |                                                                                      Popis                                                                                     |  Příklad |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161219 |
-| PolicyKey         | Klíč pro zásady dodržování předpisů, pro který se vytvořil souhrn.                                                                                                                   | 10178    |
-| PolicyPlatformKey | Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn.                                                                                            | 5        |
+| dateKey           | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161219 |
+| policyKey         | Klíč pro zásady dodržování předpisů, pro který se vytvořil souhrn.                                                                                                                   | 10178    |
+| policyPlatformKey | Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn.                                                                                            | 5        |
 | Neznámý           | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 13       |
-| NotApplicable     | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 3        |
-| Odpovídající         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
+| notApplicable     | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 3        |
+| kompatibilní         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
 | V období odkladu     | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 3        |
-| NonCompliant      | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 7        |
-| Chyba             | Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                             | 3        |
+| nekompatibilních      | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 7        |
+| error             | Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      Vlastnost      |                       Popis                      |
@@ -129,24 +129,24 @@ Entita **date** zastupuje kalendářní data, na která odkazují různé entity
 
 |     Vlastnost    |                       Popis                      |    Příklad    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
-| FullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
-| DayOfWeek       | Den týdne                                            | 1             |
-| DayOfMonth      | Den měsíce                                           | 3             |
-| DayOfYear       | Den roku                                            | 185           |
-| WeekOfYear      | Týden roku                                           | 28            |
-| MonthOfYear     | Měsíc roku                                      | 7             |
-| CalendarQuarter | Kalendářní čtvrtletí                                       | 3             |
-| CalendarYear    | Kalendářní rok                                          | 2016          |
-| DateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
-| FullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
-| DayOfWeek       | Den týdne                                            | 1             |
-| DayOfMonth      | Den měsíce                                           | 3             |
-| DayOfYear       | Den roku                                            | 185           |
-| WeekOfYear      | Týden roku                                           | 28            |
-| MonthOfYear     | Měsíc roku                                      | 7             |
-| CalendarQuarter | Kalendářní čtvrtletí                                       | 3             |
-| CalendarYear    | Kalendářní rok                                          | 2016          |
+| dateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
+| fullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
+| dayOfWeek       | Den týdne                                            | 1             |
+| dayOfMonth      | Den měsíce                                           | 3             |
+| dayOfYear       | Den roku                                            | 185           |
+| weekOfYear      | Týden roku                                           | 28            |
+| monthOfYear     | Měsíc roku                                      | 7             |
+| calendarQuarter | Kalendářní čtvrtletí                                       | 3             |
+| calendarYear    | Kalendářní rok                                          | 2016          |
+| dateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
+| fullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
+| dayOfWeek       | Den týdne                                            | 1             |
+| dayOfMonth      | Den měsíce                                           | 3             |
+| dayOfYear       | Den roku                                            | 185           |
+| weekOfYear      | Týden roku                                           | 28            |
+| monthOfYear     | Měsíc roku                                      | 7             |
+| calendarQuarter | Kalendářní čtvrtletí                                       | 3             |
+| calendarYear    | Kalendářní rok                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ Entita **DeviceConfigurationProfileDeviceActivity** obsahuje počet zařízení 
 
 |  Vlastnost |                                          Popis                                          |  Příklad |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703 |
-| Čekající   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123      |
-| Úspěšný | Počet jedinečných zařízení v úspěšném stavu                                                    | 12       |
-| Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10       |
-| Neúspěšný    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2        |
+| dateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703 |
+| pending   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123      |
+| succeeded | Počet jedinečných zařízení v úspěšném stavu                                                    | 12       |
+| error     | Počet jedinečných zařízení v chybovém stavu                                                      | 10       |
+| failed    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 Entita **DeviceConfigurationProfileUserActivity** obsahuje počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Pokud se například uživatel nachází v úspěšném stavu pro všechny své přiřazené zásady, posune čítač úspěšných uživatelů pro daný den o jedna nahoru. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu. Entita **DeviceConfigurationProfileUserActivity** uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní. 
 
 | Vlastnost  | Popis  | Příklad  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo  | 20160703  |
-| Čekající  | Počet jedinečných uživatelů v čekajícím stavu  | 123  |
-| Úspěšný  | Počet jedinečných uživatelů v úspěšném stavu  | 12  |
-| Chyba  | Počet jedinečných uživatelů v chybovém stavu  | 10  |
-| Neúspěšný  | Počet jedinečných uživatelů v neúspěšném stavu  | 2  |
+| dateKey  | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo  | 20160703  |
+| pending  | Počet jedinečných uživatelů v čekajícím stavu  | 123  |
+| succeeded  | Počet jedinečných uživatelů v úspěšném stavu  | 12  |
+| error  | Počet jedinečných uživatelů v chybovém stavu  | 10  |
+| failed  | Počet jedinečných uživatelů v neúspěšném stavu  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          Vlastnost          |                                                                                      Popis                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
-| DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |
-| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
-| DeviceRegistrationStateKey | Klíč atributu stavu registrace zařízení pro toto zařízení                                                                                                                    |
-| OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                  |
-| ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
-| AzureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
-| ComplianceStateKey         | Klíč k vlastnosti ComplianceState                                                                                                                                                            |
-| OSVersion                  | Verze operačního systému.                                                                                                                                                                          |
-| JailBroken                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
-| DeviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení                                                                                                                                    |
+| dateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
+| deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |
+| deviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| deviceRegistrationStateKey | Klíč atributu stavu registrace zařízení pro toto zařízení                                                                                                                    |
+| ownerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                  |
+| managementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
+| azureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
+| complianceStateKey         | Klíč k vlastnosti ComplianceState                                                                                                                                                            |
+| oSVersion                  | Verze operačního systému.                                                                                                                                                                          |
+| Jailbreak                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
+| deviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení                                                                                                                                    |
 | physicalMemoryInBytes      | Fyzická paměť v bajtech.                                                                                                                                    |
 | totalStorageSpaceInBytes      | Celková kapacita úložiště v bajtech                                                                                                                                    |
 
@@ -205,13 +205,13 @@ Entita **DeviceRegistrationState** zastupuje typ registrace, na který odkazují
 | deviceRegistrationStateID   | Jedinečný identifikátor stavu registrace                                            |
 | deviceRegistrationStateKey  | Jedinečný identifikátor stavu registrace v datovém skladu – náhradní klíč |
 | deviceRegistrationStateName | Stav registrace                                                                  |
-|    NotRegistered                     |    Nezaregistrováno                                                                                                                                                                  |
-|    Registrované                        |       Registrované                                                                                                                                                                   |
-|    Odvoláno                           |       Tento stav znamená, že správce IT daného klienta zablokoval a že je možné tohoto klienta odblokovat. Zařízení může mít také stav Odvoláno poté, co se vymaže nebo vyřadí z provozu.        |
-|    KeyConflict                       |    Konflikt klíčů                                                                                                                                                                    |
-|    ApprovalPending                   |    Čekající schválení                                                                                                                                                                |
-|    CertificateReset                  |    Resetovat certifikát                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    Nezaregistrováno, nevyřízená registrace                                                                                                                                               |
+|    notRegistered                     |    Nezaregistrováno                                                                                                                                                                  |
+|    registrovat                        |       Registrované                                                                                                                                                                   |
+|    odvolán                           |       Tento stav znamená, že správce IT daného klienta zablokoval a že je možné tohoto klienta odblokovat. Zařízení může mít také stav Odvoláno poté, co se vymaže nebo vyřadí z provozu.        |
+|    Konflikt pro zprávy                       |    Konflikt klíčů                                                                                                                                                                    |
+|    approvalPending                   |    Čekající schválení                                                                                                                                                                |
+|    certificateReset                  |    Resetovat certifikát                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    Nezaregistrováno, nevyřízená registrace                                                                                                                                               |
 |    Neznámý                           |    Neznámý stav                                                                                                                                                                   |
 
 ## <a name="devices"></a>zařízení
@@ -219,42 +219,42 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 
 |          Vlastnost          |                                                                                       Popis                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
-| DeviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
-| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
-| DeviceTypeKey              | Klíč atributu typu zařízení pro toto zařízení                                                                                                                                    |
-| DeviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
-| OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
-| EnrolledDateTime           | Datum a čas, kdy se zařízení zaregistrovalo.                                                                                                                                         |
+| deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
+| deviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
+| deviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| deviceTypeKey              | Klíč atributu typu zařízení pro toto zařízení                                                                                                                                    |
+| deviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
+| ownerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
+| enrolledDateTime           | Datum a čas, kdy se zařízení zaregistrovalo.                                                                                                                                         |
 | ethernetMacAddress           | Jedinečný identifikátor sítě tohoto zařízení.                                                                                                                                         |
-| LastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
-| ManagementAgentKey         | Klíč agenta správy, který je k tomuto zařízení přidružený.                                                                                                                             |
-| ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
-| AzureADDeviceId            | ID zařízení Azure pro toto zařízení                                                                                                                                                  |
-| AzureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
-| DeviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
-| DeviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
-| ComplianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
+| lastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
+| managementAgentKey         | Klíč agenta správy, který je k tomuto zařízení přidružený.                                                                                                                             |
+| managementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
+| azureADDeviceId            | ID zařízení Azure pro toto zařízení                                                                                                                                                  |
+| azureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
+| deviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
+| deviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
+| complianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
 | office365Version           | Verze Microsoft 365, která je na zařízení nainstalovaná.                                                                                                                             |
-| OSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
-| EasDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
-| RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
-| Manufacturer               | Výrobce zařízení                                                                                                                                                             |
-| Model                      | Model zařízení                                                                                                                                                                    |
-| OperatingSystem            | Operační systém zařízení Windows, iOS/iPadOS atd.                                                                                                                                   |
+| oSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
+| easDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
+| rowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
+| manufacturer               | Výrobce zařízení                                                                                                                                                             |
+| model                      | Model zařízení                                                                                                                                                                    |
+| operatingSystem            | Operační systém zařízení Windows, iOS/iPadOS atd.                                                                                                                                   |
 | IsDeleted                  | Binární soubor zobrazující, zda se zařízení odstranilo nebo ne.                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| androidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | Stav dohledu zařízení                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | Volné úložiště v bajtech                                                                                                                                                                 |
-| EncryptionState            | Stav šifrování zařízení                                                                                                                                                      |
-| SubscriberCarrier          | Poskytovatel předplatného na zařízení                                                                                                                                                       |
-| PhoneNumber                | Telefonní číslo zařízení                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | Mobilní technologie zařízení.                                                                                                                                                    |
-| WiFiMacAddress             | Síť MAC Wi-Fi.                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | Volné úložiště v bajtech                                                                                                                                                                 |
+| encryptionState            | Stav šifrování zařízení                                                                                                                                                      |
+| subscriberCarrier          | Poskytovatel předplatného na zařízení                                                                                                                                                       |
+| phoneNumber                | Telefonní číslo zařízení                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | Mobilní technologie zařízení.                                                                                                                                                    |
+| wiFiMacAddress             | Síť MAC Wi-Fi.                                                                                                                                                                              |
 | windowsOsEdition             | Edice operačního systému Windows.                                                                                                                                                                              |
 
 
@@ -263,16 +263,16 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 
 |    Vlastnost    |                                  Popis                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | Jedinečný identifikátor typu zařízení                                       |
-| DeviceTypeKey  | Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
-| DeviceTypeName | Typ zařízení                                                                |
+| deviceTypeID   | Jedinečný identifikátor typu zařízení                                       |
+| deviceTypeKey  | Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
+| deviceTypeName | Typ zařízení                                                                |
 
 ### <a name="example"></a>Příklad
 
 | deviceTypeID |        Název       |                      Popis                      |
 |--------------|-------------------|-------------------------------------------------------|
 | -1           | Není k dispozici   | Tento typ zařízení není k dispozici.                     |
-| 0            | Plocha           | Zařízení se systémem Windows                              |
+| 0            | Aplikace klasické pracovní plochy           | Zařízení se systémem Windows                              |
 | 1            | Windows           | Zařízení s Windows                                      |
 | 2            | WinMO6            | Zařízení se systémem Windows Mobile 6.0                           |
 | 3            | Nokia             | Zařízení Nokia                                        |
@@ -365,7 +365,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 | Neuvedeno                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámý                         | Neznámou chybu.                                                                                                |
-| Ověřování                  | Ověření se nezdařilo.                                                                                        |
+| Authentication                  | Ověření se nezdařilo.                                                                                        |
 | Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
@@ -412,27 +412,27 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 
 |       Vlastnost      |                          Popis                          | Příklad |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | Jedinečný identifikátor data                                | 123     |
-| TenantKey           | Jedinečný identifikátor tenanta                              | 456     |
-| DeviceKey           | Jedinečný identifikátor zařízení                              | 789     |
-| ExtensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
-| ExtensionStateKey   | Jedinečný identifikátor stavu                            | 2       |
+| dateKey             | Jedinečný identifikátor data                                | 123     |
+| tenantKey           | Jedinečný identifikátor tenanta                              | 456     |
+| deviceKey           | Jedinečný identifikátor zařízení                              | 789     |
+| extensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
+| extensionStateKey   | Jedinečný identifikátor stavu                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 **IntuneManagementExtensionHealthState** uvádí seznam všech možných stavů **IntuneManagementExtension**.
 
 |      Vlastnost     |                   Popis                  | Příklad |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | Jedinečný identifikátor stavu           | 2       |
-| ExtensionState    | Stav IntuneManagementExtension | V pořádku |
+| extensionStateKey | Jedinečný identifikátor stavu           | 2       |
+| extensionState    | Stav IntuneManagementExtension | V pořádku |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 Entita **IntuneManagementExtensionVersion** uvádí seznam všech verzí, které **IntuneManagementExtension** používá.
 
 |       Vlastnost      |                          Popis                          | Příklad |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
-| ExtensionVersion    | Číslo verze tvořené 4 číslicemi                                   | 1.0.2.0 |
+| extensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
+| extensionVersion    | Číslo verze tvořené 4 číslicemi                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -444,9 +444,9 @@ Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spr
 | mamApplicationName |Název aplikace MAM |Příklad názvu aplikace MAM |
 | mamApplicationId |ID aplikace MAM | 123 |
 | IsDeleted |Určuje, jestli je tento záznam aplikace MAM aktualizovaný. <br>True – aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto aplikaci MAM. |Pravda/nepravda |
-| StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
-| DeletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
-| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+| startDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
+| deletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
+| rowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes 
 
 |          Vlastnost          |                                                                                                  Popis                                                                                                  |               Příklad                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
-|           UserId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   Vlastnosti applicationinstancekey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
+|           userId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | ID aplikace mam, pro kterou se vytvořila tato instance aplikace mam   | 23.11.2016 12:00:00   |
-|     ApplicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
-|          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2,2                  |
-|         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
+|     applicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
+|        createdDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
+|          platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
+|      platformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2,2                  |
+|         sdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
 | mamDeviceId | ID zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 | mamDeviceType | Typ zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 | mamDeviceName | Název zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 |         IsDeleted          | Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |              Pravda/nepravda              |
-|   StartDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
-|       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
-| RowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
+|   startDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
+|       deletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
+| rowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ Entita **MamCheckin** představuje data shromážděná v době, kdy se instance
 
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
-| DateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
-| ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
-| UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
+| dateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
+| Vlastnosti applicationinstancekey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
+| userKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
 | mamApplicationKey |Aplikační klíč aplikace přidružený k vrácení aplikace MAM se změnami | 432 |
-| DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
-| PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
-| LastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
+| Vlastnosti devicehealthkey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
+| Vlastnosti platformkey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
+| lastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ Entita **MamDeviceHealth** představuje zařízení, na kterých jsou nasazené 
 
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
-| DeviceHealthKey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |123 |
-| DeviceHealth |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-FFFF-7777-0340-032819502773 |
-| DeviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
-| RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
+| Vlastnosti devicehealthkey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |123 |
+| Přidružený |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-FFFF-7777-0340-032819502773 |
+| deviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
+| rowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 
 |          Vlastnost          |                                    Popis                                    |                         Příklad                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
-|          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
-| RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
+|        Vlastnosti platformkey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
+|          platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
+|        platformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
+| rowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 Entita **managementAgentType** představuje agenty používané ke správě zařízení.
 
 |         Vlastnost        |                                       Popis                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | Jedinečný identifikátor typu agenta správy.                                         |
-| ManagementAgentTypeKey  | Jedinečný identifikátor typu agenta správy v datovém skladu – náhradní klíč |
-| ManagementAgentTypeName | Určuje typ agenta, který se používá ke správě zařízení.                              |
+| managementAgentTypeID   | Jedinečný identifikátor typu agenta správy.                                         |
+| managementAgentTypeKey  | Jedinečný identifikátor typu agenta správy v datovém skladu – náhradní klíč |
+| managementAgentTypeName | Určuje typ agenta, který se používá ke správě zařízení.                              |
 
 ### <a name="example"></a>Příklad
 
@@ -569,21 +569,21 @@ Entita MobileAppInstallState představuje stav instalace mobilní aplikace po je
 
 |       Vlastnost      |                        Popis                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | Jedinečné ID stavu instalace aplikace pro váš účet |
-| AppInstallState     | Hodnota výčtu stavu instalace aplikace                     |
-| AppInstallStateName | Název stavu instalace aplikace                           |
+| appInstallStateKey  | Jedinečné ID stavu instalace aplikace pro váš účet |
+| appInstallState     | Hodnota výčtu stavu instalace aplikace                     |
+| appInstallStateName | Název stavu instalace aplikace                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Představuje stav instalace mobilní aplikace pomocí správy mobilních aplikací pro daný typ cílového zařízení prostřednictvím Microsoft Intune.
 
 |      Vlastnost      |                                                          Popis                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | Klíč data záznamu stavu instalace aplikace                                                                     |
-| AppKey             | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision.                                                          |
-| DeviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
-| AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
-| ErrorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
-| Počet              | Celkový počet                                                                                                                  |
+| dateKey            | Klíč data záznamu stavu instalace aplikace                                                                     |
+| appKey             | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision.                                                          |
+| deviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
+| appInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
+| errorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
+| count              | Celkový počet                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastnictví nebo neznámé.
@@ -602,67 +602,67 @@ Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfigu
 
 |          Vlastnost          |                                                                       Popis                                                                      |                Příklad               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | Jedinečný klíč reprezentující zásady v datovém skladu                                                                                              | 123                                  |
-| PolicyId                   | Jedinečný identifikátor zásad v datovém skladu                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | Název zásad                                                                                                                                    | „Směrný plán Windows 10“                |
-| PolicyVersion              | Verze zásad Když dojde k úpravě nebo změně zásad, vytvoří se novější verze.                                                             | 1, 2, 3                              |
+| policyKey                  | Jedinečný klíč reprezentující zásady v datovém skladu                                                                                              | 123                                  |
+| policyId                   | Jedinečný identifikátor zásad v datovém skladu                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | Název zásad                                                                                                                                    | „Směrný plán Windows 10“                |
+| policyVersion              | Verze zásad Když dojde k úpravě nebo změně zásad, vytvoří se novější verze.                                                             | 1, 2, 3                              |
 | IsDeleted                  | Určuje, jestli je záznam zásad aktualizovaný.  True – zásada má nový záznam s aktualizovanými poli.  False – jedná se o nejnovější záznam pro zásady. | Pravda/nepravda                           |
-| StartDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu vytvořily.                                                                              | 23. 11. 2016 0:00                      |
-| DeletedDateUTC             | Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                                                   | 23. 11. 2016 0:00                      |
-| RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu naposledy změnily.                                                                        | 23. 11. 2016 0:00                      |
+| startDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu vytvořily.                                                                              | 23. 11. 2016 0:00                      |
+| deletedDateUTC             | Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                                                   | 23. 11. 2016 0:00                      |
+| rowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tyto zásady v datovém skladu naposledy změnily.                                                                        | 23. 11. 2016 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 Následující tabulka uvádí počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží data pro jednotlivé profily typu zásad. Pokud se například zařízení nachází v úspěšném stavu pro všechny své přiřazené zásady, zvýší čítač úspěšných zařízení pro daný den o jedno. Pokud má zařízení přiřazené dva profily, jeden je v úspěšném stavu a druhý v chybovém stavu, entita zvýší čítač úspěšných zařízení o jedno a umístí zařízení do chybového stavu. Entita **policyDeviceActivity** uvádí, kolik zařízení je v jakém stavu v daném dni za posledních 30 dní.
 
 |  Vlastnost |                                           Popis                                           |        Příklad        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703              |
-| Čekající   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                   |
-| Úspěšný | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                    |
-| PolicyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                  | Směrný plán Windows 10 |
-| Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                    |
-| Neúspěšný    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                     |
+| dateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703              |
+| pending   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                   |
+| succeeded | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                    |
+| policyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                  | Směrný plán Windows 10 |
+| error     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                    |
+| failed    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        Vlastnost        |                      Popis                      |     Příklad    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | Jedinečný klíč pro typ platformy zásad        | 20170519       |
-| PolicyPlatformTypeId   | Jedinečný identifikátor pro typ platformy zásad | 1              |
-| PolicyPlatformTypeName | Název typu platformy zásad              | AndroidForWork |
+| policyPlatformTypeKey  | Jedinečný klíč pro typ platformy zásad        | 20170519       |
+| policyPlatformTypeId   | Jedinečný identifikátor pro typ platformy zásad | 1              |
+| policyPlatformTypeName | Název typu platformy zásad              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 Entita **PolicyTypeActivity** obsahuje kumulativní počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu. Zobrazí tyto stavy s ohledem na konfigurační profil zařízení, konfigurační profil aplikace nebo zásady dodržování předpisů na den.
 
 |    Vlastnost   |                                          Popis                                          |           Příklad           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703                    |
-| PolicyKey     | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10         |
-| PolicyTypeKey | Typ klíče zásad, který jde připojit k typu zásad a získat tak název typu zásad.             | Zásady dodržování předpisů Windows 10 |
-| Čekající       | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                         |
-| Úspěšný     | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                          |
-| Chyba         | Počet jedinečných zařízení v chybovém stavu                                                      | 10                          |
-| Neúspěšný        | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                           |
+| dateKey       | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703                    |
+| policyKey     | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10         |
+| policyTypeKey | Typ klíče zásad, který jde připojit k typu zásad a získat tak název typu zásad.             | Zásady dodržování předpisů Windows 10 |
+| pending       | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                         |
+| succeeded     | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                          |
+| error         | Počet jedinečných zařízení v chybovém stavu                                                      | 10                          |
+| failed        | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 Entita **PolicyType** obsahuje seznam typů konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.
 
 |    Vlastnost    |                       Popis                      |            Příklad            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | Jedinečný identifikátor zásad ve zdrojovém systému  | 123                           |
-| PolicyTypeKey  | Jedinečný identifikátor zásad v datovém skladu | 1                             |
-| PolicyTypeName | Název typu zásad                               | Zásady dodržování předpisů Windows 10 |
+| policyTypeId   | Jedinečný identifikátor zásad ve zdrojovém systému  | 123                           |
+| policyTypeKey  | Jedinečný identifikátor zásad v datovém skladu | 1                             |
+| policyTypeName | Název typu zásad                               | Zásady dodržování předpisů Windows 10 |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 Následující tabulka uvádí počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží data pro jednotlivé profily typu zásad. Pokud se například uživatel nachází v úspěšném stavu pro všechny své přiřazené zásady, posune čítač úspěšných uživatelů pro daný den o jedna nahoru. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu. Entita **PolicyUserActivity** uvádí, kolik uživatelů se v daném dni během posledních 30 dnů zobrazuje.
 
 |  Vlastnost |                                          Popis                                          |       Příklad       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703            |
-| Čekající   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                 |
-| Úspěšný | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                  |
-| PolicyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10 |
-| Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                  |
+| dateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703            |
+| pending   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                 |
+| succeeded | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                  |
+| policyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10 |
+| error     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 Entita **termsAndConditions** představuje metadata a obsah daných zásad podmínek a ujednání. Obsah zásad podmínek a ujednání se uživatelům zobrazí při jejich prvním pokusu o registraci do Intune a následně při úpravách, u kterých správce vyžaduje opětovné přijetí. Umožňuje správcům předat ustanovení, která musí uživatel odsouhlasit, aby mohl zařízení do Intune zaregistrovat.
@@ -677,7 +677,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
 |    termsAndConditionsBodyText    |    Text těchto podmínek a ujednání       |    *Šifrování zařízení* Vynucení šestimístného číselného kódu PIN    |
-|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    Ne    |
+|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    Nepravda    |
 |    startDateInclusiveUTC    |    Počáteční datum těchto podmínek a ujednání.     |    23. 8. 2018 4:01:34    |
 |    endDateEclusiveUTC    |    Koncové datum těchto podmínek a ujednání.     |    31. 12. 9999 12:00:00    |
 
@@ -686,11 +686,11 @@ Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů 
 
 |        Název        |                                             Popis                                            |     Příklad     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | Jedinečný identifikátor uživatele v datovém skladu   (náhradní klíč)                            | 123             |
-| DeviceKey          | Jedinečný identifikátor zařízení v datovém skladu                                             | 123             |
-| CreatedDateTimeUTC | Datum a čas, kdy se přidružení zařízení uživatele vytvořilo. Používá formát UTC.                     | 23. 11. 2016 0:00 |
+| userKey            | Jedinečný identifikátor uživatele v datovém skladu   (náhradní klíč)                            | 123             |
+| deviceKey          | Jedinečný identifikátor zařízení v datovém skladu                                             | 123             |
+| createdDateTimeUTC | Datum a čas, kdy se přidružení zařízení uživatele vytvořilo. Používá formát UTC.                     | 23. 11. 2016 0:00 |
 | IsDeleted          | Udává, že uživatel registraci zařízení zrušil a že přidružení už není aktuální. | Pravda/nepravda      |
-| EndedDateTimeUTC   | Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                               | 23. 6. 2017 0:00  |
+| endedDateTimeUTC   | Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                               | 23. 6. 2017 0:00  |
 
 ## <a name="users"></a>uživatelé
 Entita **user** obsahuje seznam všech uživatelů Azure Active Directory (Azure AD) s přiřazenými licencemi ve vaší společnosti.
@@ -699,14 +699,14 @@ Kolekce entit **uživatele** obsahuje uživatelská data. Tyto záznamy zahrnuj�
 
 |          Vlastnost          |                                                                                                           Popis                                                                                                          |                Příklad               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč                                                                                                                                                         | 123                                  |
-| UserId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč                                                                                                                                                         | 123                                  |
+| userId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName (Hlavní název uživatele)                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | John                                 |
-| IntuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | Pravda/nepravda                           |
+| displayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | John                                 |
+| intuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | Pravda/nepravda                           |
 | IsDeleted                  | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. | Pravda/nepravda                           |
-| RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil                                                                                                                                                 | 23. 11. 2016 0:00                      |
+| rowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil                                                                                                                                                 | 23. 11. 2016 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 Entita **userTermsAndConditionsAcceptance** představuje stav přijetí daných zásad podmínek a ujednání daným uživatelem. Uživatelé musí přijmout nejaktuálnější verzi podmínek, aby se jim přístup k portálu společnosti zachoval.
@@ -724,9 +724,9 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 |      Vlastnost      |          Popis         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | ID pro daný typ           |
-| VppProgramTypeKey  | Náhradní klíč pro daný klíč |
-| VppProgramTypeName | Typ programu VPP          |
+| vppProgramTypeID   | ID pro daný typ           |
+| vppProgramTypeKey  | Náhradní klíč pro daný klíč |
+| vppProgramTypeName | Typ programu VPP          |
 
 ### <a name="example"></a>Příklad
 

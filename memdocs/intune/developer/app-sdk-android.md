@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ab2050052294291a93a646a245e493e2e1f574
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: e5b29043956a86934f7b1be18606d0b78f25dc50
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286283"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608444"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -184,7 +184,7 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 | Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
 | Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
 
-#### <a name="reporting"></a>Přehledy
+#### <a name="reporting"></a>Vytváření sestav
 Modul plug-in sestavení může vygenerovat sestavu HTML změn, které dělá. Chcete-li vyžádat generování této sestavy, zadejte `report = true` v `intunemam` konfiguračním bloku. Pokud je tato sestava vygenerována, bude `outputs/logs` v adresáři buildu zapsána.
 
 ```groovy
@@ -886,6 +886,10 @@ Jakmile se příjemce vaší aplikace vrátí, už nebude mít přístup k šifr
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
+> [!NOTE]
+> Od 30. června 2020 už nebudeme přidávat nové funkce do Active Directory Authentication Library (ADAL). Budeme dál poskytovat technickou podporu a aktualizace zabezpečení, ale nebudeme už poskytovat aktualizaci funkcí. Aplikace bude nutné upgradovat na Microsoft Authentication Library (MSAL) a Microsoft Graph. Další informace najdete v [příručce k migraci ADAL pro MSAL pro dokument Android](https://docs.microsoft.com/azure/active-directory/develop/migrate-android-adal-msal) .
+
+
 Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
@@ -1136,7 +1140,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Důležité poznámky k implementaci
 
-#### <a name="authentication"></a>Ověřování
+#### <a name="authentication"></a>Authentication
 
 * Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získala svůj vlastní token z knihovny ADAL před registrací účtu za účelem urychlení získání požadovaného tokenu. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
 
@@ -1465,7 +1469,7 @@ Pokud vaše aplikace používá `Service` kontext ke spouštění, použití př
 Chcete-li zpracovat zvláštní případy při aktualizaci identity uživatelského rozhraní pomocí `setUIPolicyIdentity` nebo `switchMAMIdentity` , lze obě metody předat sadu `IdentitySwitchOption` hodnot.
 
 * `IGNORE_INTENT`: Použijte, pokud požadujete přepínač identity, který by měl ignorovat záměr přidružený k aktuální aktivitě.
-  Příklad:
+  Například:
 
   1. Vaše aplikace obdrží záměr ze spravované identity obsahující spravovaného dokumentu a aplikace zobrazí dokument.
   2. Uživatel přepne na svou osobní identitu, takže vaše aplikace si vyžádá přepínač identity uživatelského rozhraní. V osobní identitě už aplikace nezobrazuje dokument, takže ho použijete `IGNORE_INTENT` při žádosti o přepínač identity.
@@ -1634,7 +1638,7 @@ Ty je nutné použít, pokud asynchronní operace může zapisovat podniková da
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
+Chcete-li použít `MAMAsyncTask` , jednoduše dědit z něj namísto `AsyncTask` a nahraďte `doInBackground` a `onPreExecute` v `doInBackgroundMAM` a v `onPreExecuteMAM` . Konstruktor `MAMAsyncTask` převezme kontext aktivity. Například:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {

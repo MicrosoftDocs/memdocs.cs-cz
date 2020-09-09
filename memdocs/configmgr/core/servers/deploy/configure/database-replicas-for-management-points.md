@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: db1e0d78263d264c66eed7258db800397baad735
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696425"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607585"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Repliky databáze pro body správy pro Configuration Manager
 
@@ -57,7 +57,7 @@ Configuration Manager primárních lokalitách může pomocí repliky databáze 
 
     -   Databáze lokality musí repliku databáze **publikovat** a každý vzdálený server repliky databáze musí publikovaná data **odebírat** .  
 
-    -   SQL Server, který je hostitelem databáze lokality, i ten, který je hostitelem repliky databáze, musí být nakonfigurované, aby podporovaly velikost **Max Text Repl Size** 2 GB. Ukázkové konfigurování pro systém SQL Server 2012 je uvedeno v části [Konfigurování možnosti Max Text Repl Size konfigurace serveru](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
+    -   SQL Server, který je hostitelem databáze lokality, i ten, který je hostitelem repliky databáze, musí být nakonfigurované, aby podporovaly velikost **Max Text Repl Size** 2 GB. Ukázkové konfigurování pro systém SQL Server 2012 je uvedeno v části [Konfigurování možnosti Max Text Repl Size konfigurace serveru](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
 
 -   **Certifikát podepsaný svým držitelem:** Chcete-li nakonfigurovat repliku databáze, je nutné na serveru repliky databáze vytvořit certifikát podepsaný svým držitelem a tento certifikát zpřístupnit všem bodům správy, které budou používat server repliky databáze.  
 
@@ -174,7 +174,7 @@ Použijte následující postup s ukázkovým konfigurováním serveru repliky d
         -   Jestliže agent SQL Server běží za použití jiného účtu, vyberte **Spustit pod následujícím účtem systému Windows** a pak tento účet nakonfigurujte. Můžete zadat účet systému Windows nebo účet SQL Serveru.  
 
         > [!IMPORTANT]  
-        >  Účtu, který spouští agenta distribuce, musíte přidělit oprávnění vůči vydavateli jako vyžádané odběry. Informace o konfiguraci těchto oprávnění najdete v tématu [zabezpečení agenta distribuce](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
+        >  Účtu, který spouští agenta distribuce, musíte přidělit oprávnění vůči vydavateli jako vyžádané odběry. Informace o konfiguraci těchto oprávnění najdete v tématu [zabezpečení agenta distribuce](/sql/relational-databases/replication/distribution-agent-security).  
 
       - Pro položku **Připojit k distributorovi**vyberte **Zosobněním účtu procesu**.  
 
@@ -459,7 +459,7 @@ Chcete-li u repliky databáze v bodu správy podporovat klientské oznámení, j
 -   U každé další repliky databáze, kterou pomocí tohohle skriptu nakonfigurujete, aktualizujte popisný název certifikátu.  Provedete to tak, že upravíte řádek **$Enrollment. CertificateFriendlyName = "certifikát pro identifikaci nástroje ConfigMgr SQL Server** a nahraďte **SQL Server identifikační certifikát nástroje ConfigMgr** novým názvem, například  **ConfigMgr SQL Server Identification Certificate1**.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Správa konfigurací repliky databáze  
- Při použití repliky databáze v lokalitě použijte informace v následujících částech k doplnění procesu odinstalace repliky databáze, odinstalace lokality používající repliku databáze nebo přesunu databáze lokality do nové instalace SQL Serveru. Pokud použijete informace z následujících částí k odstranění publikací, použijte návod na odstranění transakční replikace pro verzi serveru SQL Server používanou pro repliku databáze. Další informace najdete v tématu [Odstranění publikace](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
+ Při použití repliky databáze v lokalitě použijte informace v následujících částech k doplnění procesu odinstalace repliky databáze, odinstalace lokality používající repliku databáze nebo přesunu databáze lokality do nové instalace SQL Serveru. Pokud použijete informace z následujících částí k odstranění publikací, použijte návod na odstranění transakční replikace pro verzi serveru SQL Server používanou pro repliku databáze. Další informace najdete v tématu [Odstranění publikace](/sql/relational-databases/replication/publish/delete-a-publication).  
 
 > [!NOTE]  
 >  Než bude po obnovení databáze lokality nakonfigurované pro repliky databází možné použít repliky databáze, je nutné překonfigurovat jednotlivé repliky databáze a znovu vytvořit publikace i odběry.  
