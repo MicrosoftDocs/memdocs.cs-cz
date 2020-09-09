@@ -10,12 +10,12 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4c535cc41e1351b334e8eb7bb942de04ebbd00a2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2cd158a920d1a088b2bc1380ae8618be461b647b
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700432"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564077"
 ---
 # <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a> Připojení tenanta: instalace aplikace z centra pro správu (Preview)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
@@ -28,7 +28,7 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Aplikace v centru pro správu Microsoft Endpoint Manager" lightbox="media/6024389-tenant-attach-application-list.png":::
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Všechny předpoklady pro [připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr](client-details.md#prerequisites).
 - [Kumulativní aktualizace pro Microsoft Endpoint Configuration Manager verze 2002](https://support.microsoft.com/help/4560496/) a odpovídající verze nainstalované konzoly
@@ -38,7 +38,7 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 
 Kromě toho budete potřebovat následující pro instalaci [cílových aplikací pro uživatele](#bkmk_user):<!--7518897-->
 
-- Configuration Manager verze 2006 a je nainstalována odpovídající verze konzoly.
+- Minimálně verze Configuration Manager 2006 a odpovídající verze nainstalované konzoly.
 
 
 ## <a name="permissions"></a>Oprávnění

@@ -1,8 +1,8 @@
 ---
-title: CMPivot – přehled připojených klientů
+title: CMPivot využití připojené k tenantovi
 titleSuffix: Configuration Manager
-description: CMPivot přehled pro zařízení připojená ke klientovi Microsoft Endpoint Manager.
-ms.date: 08/17/2020
+description: Přehled využití CMPivot pro zařízení připojená ke klientovi Microsoft Endpoint Manager.
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,19 +10,19 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 529cf0c27793262abb2902477ceab11201212b1e
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 8967957883a1c8d397377c30409cb94139014214
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614715"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564069"
 ---
-# <a name="tenant-attach-cmpivot-overview"></a>Připojení tenanta: Přehled CMPivot
+# <a name="tenant-attach-cmpivot-preview-usage-overview"></a>Připojení tenanta: Přehled využití CMPivot (Preview)
 
-*Platí pro: Configuration Manager (větev Technical Preview)*
+*Platí pro: Configuration Manager (Current Branch)*
 
 > [!Important]
-> Tento článek se týká větve Technical Preview pro Configuration Manager. Další informace najdete v tématu [Configuration Manager Technical Preview verze 2005](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
+> - Tyto informace se vztahují k funkci ve verzi Preview, která se podstatně změnila předtím, než se komerční verze uvolní. Microsoft neposkytuje žádné záruky, výslovné ani předpokládané, týkající se zde uváděných informací.
 
 CMPivot vám umožňuje rychle vyhodnotit stav zařízení ve vašem prostředí a provést akci. Když zadáte dotaz, CMPivot spustí dotaz v reálném čase v aktuálně připojeném zařízení. Vrácená data je pak možné filtrovat, seskupovat a zdokonalovat, aby odpovídala obchodním otázkám, řešení problémů ve vašem prostředí nebo reagovat na bezpečnostní hrozby. Další informace o použití CMPivot najdete v tématu [použití CMPivot](../core/servers/manage/cmpivot.md).
 
@@ -44,4 +44,4 @@ Pokud používáte CMPivot z konzoly pro správu Microsoft Endpoint Manageru, uj
 
 ## <a name="next-steps"></a>Další kroky
 
-Další ukázkové skripty najdete v článku [připojení tenanta Microsoft Endpoint Manageru: Ukázky skriptů CMPivot](cmpivot-samples-attached.md).
+Další informace najdete v tématu [spuštění CMPivot (Preview) v centru pro správu](cmpivot-start.md) . Další ukázkové skripty najdete v článku [připojení tenanta Microsoft Endpoint Manageru: Ukázky skriptů CMPivot](cmpivot-samples-attached.md).

@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432570"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564206"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -164,11 +164,9 @@ With each CB release, review and remove from this list for anything that's now a
 
 Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview. Tyto funkce zůstanou dostupné v novějších verzích, ale ještě nejsou k dispozici v aktuální větvi.
 
-| Příznak        | Verze Technical Preview |
+| Funkce        | Verze Technical Preview |
 |----------------|---------------------------|
 | Vylepšení dostupných aplikací prostřednictvím CMG <!--7033501--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Připojení tenanta: časová osa zařízení v centru pro správu <!--7141381--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Připojení tenanta: CMPivot z centra pro správu <!--6024392--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Připojení tenanta: spuštění skriptů z centra pro správu <!--6234688--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Vylepšení rutin brány pro správu cloudu <!--6978300--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Nahlášení selhání při instalaci a upgradu do Microsoftu <!--5622909--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

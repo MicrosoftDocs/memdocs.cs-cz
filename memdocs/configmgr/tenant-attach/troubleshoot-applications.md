@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7e02c642c95952c8751f03a8e1cb8838feff1155
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700377"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564039"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Řešení potíží s instalací aplikace pro zařízení odeslaná do centra pro správu (Preview)
 <!--6374854, 6521921-->
@@ -88,7 +88,7 @@ Neočekávané chyby jsou obvykle způsobeny buď [spojovacím bodem služby](..
 **Chybová zpráva:** Informace o lokalitě ještě nejsou synchronizované z Configuration Manager do centra pro správu Microsoft Endpoint Manageru. Po připojení lokality k vašemu tenantovi Azure počkejte až 15 minut.
 
 **Možné příčiny:**
-- K této chybě obvykle dochází při připojování nového připojení ke klientovi. Počkejte 15 minut, než se informace synchronizují.
+- K této chybě obvykle dochází při připojování nového připojení ke klientovi. Počkat až hodinu, než se informace synchronizují.
 - Tato chyba se může zobrazit také v případě, že lokalita centrální správy byla upgradována na novou verzi Configuration Manager, ale některé podřízené primární lokality ještě nebyly upgradovány.
 
 ### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> Aplikace se zobrazí jako nainstalovaná po vytvoření nového nasazení.

@@ -5,26 +5,14 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 08/14/2020
-ms.openlocfilehash: 13a5b771f712420939f87073854faab3c38270c9
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8d456185e39df8d76b949baf26de755970a9a89b
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252470"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89563994"
 ---
 <!--Don't apply H2 in this include file since they are context driven by article-->
-
-### <a name="when-the-sms-provider-is-remote-from-the-cas-you-may-encounter-an-internal-server-error-from-the-admin-console"></a><a name="bkmk_dblhop"></a> Když je poskytovatel serveru SMS vzdálený od certifikačních autorit, může dojít k vnitřní chybě serveru z konzoly pro správu.
-
-**Chybová zpráva:** Kód chyby on-Prem: 500 interní chyba serveru
-
-**Scénář 1:** Pokud používáte Configuration Manager verze 2002 a pro certifikační autority existuje vzdálený poskytovatel, může dojít k vnitřní chybě serveru z konzoly pro správu.
-
-**Scénář 2:** Při spuštění Configuration Manager verze 2006 se tato chyba může zobrazit i v případě, že spojovacímu bodu služby se nepovede připojit k poskytovateli v primární lokalitě a vrátit se k poskytovateli pro certifikační autority. 
-
-**Scénář 3:** Pokud byly certifikační autority upgradovány na verzi 2006, ale ještě nebyl upgradován primární server, požadavky budou směrovány přes poskytovatele CAS. Pokud je zprostředkovatel vzdálený, může dojít k vnitřní chybě serveru z konzoly pro správu. 
-
-**Alternativní řešení:** Postupujte podle pokynů pro [certifikační autority](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) s scénářem vzdáleného poskytovatele v článku CMPivot, abyste mohli vyřešit tento scénář dvojího směrování.
 
 ### <a name="when-multi-factor-authentication-is-enabled-most-tenant-attach-features-dont-work"></a><a name="bkmk_mfa"></a> Pokud je povolené Multi-Factor Authentication, většina funkcí připojení tenanta nefunguje.
 <!--7986450, 7988266-->

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193959"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564257"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Správa zásad BitLockeru pro Windows 10 v Intune
 
@@ -97,7 +97,7 @@ Použijte jeden z následujících postupů k vytvoření typu zásad, které d�
    1. **Platforma**: Windows 10 a novější
    2. **Typ profilu**: Endpoint Protection
 
-   ![Vybrat profil](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Vyberte profil BitLockeru.](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. Vyberte **Nastavení**  >  **šifrování systému Windows**.
 
@@ -149,6 +149,8 @@ Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na por
 2. Vyberte **zařízení**  >  **všechna zařízení**.
 
 3. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.
+
+4. Stiskněte **klávesu pro obnovení**. Když se tato možnost vybere, vygeneruje se položka protokolu auditu v rámci aktivity Správa služby.
   
    Pokud jsou ve službě Azure AD k dispozici klíče, jsou k dispozici tyto informace:
    - ID klíče BitLockeru
@@ -159,11 +161,13 @@ Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na por
 
 Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.
 
+Další informace o položkách protokolu auditu najdete v tématu [protokoly auditu na webu Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+
 ### <a name="rotate-bitlocker-recovery-keys"></a>Otočit obnovovací klíče BitLockeru
 
 Pomocí akce zařízení v Intune můžete vzdáleně otočit obnovovací klíč BitLockeru zařízení se systémem Windows 10 verze 1909 nebo novějším.
 
-#### <a name="prerequisites"></a>Předpoklady
+#### <a name="prerequisites"></a>Požadavky
 
 Zařízení musí splňovat následující požadavky, aby podporovaly rotaci obnovovacího klíče nástroje BitLocker:
 

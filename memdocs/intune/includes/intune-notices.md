@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9c1f201bc8e9ea170125443c305d5543a515ef89
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068183"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564090"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -52,7 +52,7 @@ Z důvodu těchto změn od společnosti Google už v říjnu 2020 nebudete mít 
 Zařízení, na která bude mít vliv podpora správce pro snižování zařízení, jsou ta, pro kterou platí všechny tři podmínky:
 - Zaregistrováno v správě Správce zařízení.
 - Běžící Android 10 nebo novější.
-- Nejedná se o zařízení Samsung.
+- Všichni výrobci Androidu, s výjimkou Samsung
 
 Tato zařízení nebudou mít vliv, pokud jsou některá z následujících:
 - Není zaregistrované v rámci správy správců zařízení.
