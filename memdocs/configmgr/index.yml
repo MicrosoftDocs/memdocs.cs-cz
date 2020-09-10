@@ -3,12 +3,12 @@ title: Dokumentace k produktu Microsoft Endpoint Configuration Manager
 summary: 'Oficiální dokumentace k následujícím komponentám produktu Microsoft Endpoint Configuration Manager: Configuration Manager, spoluspráva a Desktop Analytics'
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: de62324e6ac5c78467c15b4cac2d4d38955df6c7
-  ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+  ms.openlocfilehash: f86f49d789d2b2c90ab164852305f8426287228f
+  ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 08/27/2020
-  ms.locfileid: "88992721"
+  ms.lasthandoff: 09/09/2020
+  ms.locfileid: "89606380"
 highlightedContent:
   items:
   - title: Novinky
@@ -211,7 +211,7 @@ additionalContent:
     items:
     - title: Vývoj
       links:
-      - url: /powershell/sccm/overview?view=sccm-ps
+      - url: /powershell/sccm/overview
         text: PowerShell
       - url: ./develop/index.yml
         text: Sada SDK (Software Development Kit)

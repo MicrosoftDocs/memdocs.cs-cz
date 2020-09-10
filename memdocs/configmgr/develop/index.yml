@@ -11,12 +11,12 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   ms.date: 04/01/2020
-  ms.openlocfilehash: 3b2a6a9190a468a50543c1ac1adbcb5562ca3614
-  ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+  ms.openlocfilehash: 910cbfc6be7c69338efa6a5f55be518771c2fb91
+  ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
   ms.translationtype: HT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 08/20/2020
-  ms.locfileid: "88700629"
+  ms.lasthandoff: 09/09/2020
+  ms.locfileid: "89606155"
 landingContent:
 - title: O sadě Configuration Manager SDK
   linkLists:
@@ -43,11 +43,11 @@ landingContent:
     - text: Přehled architektury
       url: core/understand/architectural-overview.md
     - text: Začínáme s PowerShellem
-      url: /powershell/sccm/overview?view=sccm-ps%3fview%3dsccm-ps
+      url: /powershell/sccm/overview
   - linkListType: reference
     links:
     - text: Rutiny PowerShellu pro Configuration Manager
-      url: /powershell/sccm/overview?view=sccm-ps
+      url: /powershell/sccm/overview
 - title: Hlavní úkoly
   linkLists:
   - linkListType: how-to-guide

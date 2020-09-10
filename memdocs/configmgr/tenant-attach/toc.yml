@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Instalace aplikací (Preview)
       href: applications.md
+    - name: Časová osa zařízení (Preview)
+      href: timeline.md
+    - name: Průzkumník prostředků (Preview)
+      href: resource-explorer.md
 - name: CMPivot pro zařízení připojená k tenantovi (Preview)
   items:
-    - name: CMPivot – přehled
+    - name: Spuštění nástroje CMPivot (Preview)
+      href: cmpivot-start.md
+    - name: Přehled používání nástroje CMPivot
       href: cmpivot-overview-attached.md
     - name: CMPivot – ukázkové skripty
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Instalace aplikací (Preview)
       href: troubleshoot-applications.md
+    - name: Časová osa (Preview)
+      href: troubleshoot-timeline.md
+    - name: Průzkumník prostředků (Preview)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (Preview)
+      href: troubleshoot-cmpivot.md
