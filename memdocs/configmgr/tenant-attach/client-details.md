@@ -2,7 +2,7 @@
 title: Připojení tenanta – podrobnosti o klientovi ConfigMgr (Preview) v centru pro správu
 titleSuffix: Configuration Manager
 description: Zobrazení podrobností o klientovi pro zařízení Configuration Manager z centra pro správu.
-ms.date: 07/08/2020
+ms.date: 09/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 066a7517700d85315a04bec55b6f8254d3e49255
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fbe75e34465335450f3a09680b68a78520451bd1
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700391"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643393"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a> Připojení tenanta: podrobnosti o klientovi nástroje ConfigMgr v centru pro správu (Preview)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -27,18 +27,18 @@ Microsoft Endpoint Manager je integrované řešení pro správu všech vašich 
 > - Tyto informace se vztahují k funkci ve verzi Preview, která se podstatně změnila předtím, než se komerční verze uvolní. Microsoft neposkytuje žádné záruky, výslovné ani předpokládané, týkající se zde uváděných informací.
 > - Karta skupiny hranic funguje pouze pro samostatné lokality. Karta bude v centru pro správu prázdná, a to i v případě, že se jedná o jinou než samostatnou primární lokalitu.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Prostředí, které je [klientovi připojené k nahraným zařízením](device-sync-actions.md).
 - Jeden z následujících prohlížečů:
   - Microsoft Edge, verze 77 a novější
   - Google Chrome
-- Byl zjištěn uživatelský účet s vyhledáváním [uživatelů služby Azure Active Directory (Azure AD)](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) a [zjišťováním uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- Uživatelský účet, který přistupuje k funkcím připojení tenanta v **centru pro správu Microsoft Endpoint Manageru** , se musí vyhodnotit pomocí [zjišťování uživatelů služby Azure Active Directory (Azure AD)](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) i [zjišťování uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
   - To znamená, že uživatelský účet musí být synchronizovaný objekt uživatele v Azure.
 
 ## <a name="permissions"></a>Oprávnění
 
-Uživatelský účet potřebuje následující oprávnění:
+Uživatelský účet přistupující k funkcím pro připojení klienta v centru pro správu Microsoft Endpoint Manageru potřebuje následující oprávnění:
 
 - Oprávnění **číst** pro **kolekci** zařízení v Configuration Manager.
 - Role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD.

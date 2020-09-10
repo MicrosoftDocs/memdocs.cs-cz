@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2555d933d3ed19c83de02dca1c672031343836fa
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252499"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643509"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Řešení potíží s podrobnostmi klienta nástroje ConfigMgr v centru pro správu (Preview)
 <!--6374854, 6521921-->
@@ -44,7 +44,7 @@ Při prohlížení podrobností klienta nástroje ConfigMgr můžete spustit jed
 
 1. Použijte stejný účet pro přihlášení k centru pro správu. Místní identita musí být synchronizovaná s cloudovou identitou a musí se shodovat.
 1. Ověřte, že účet má oprávnění **ke čtení** pro **kolekci** zařízení v Configuration Manager.
-1. Ujistěte se, že Configuration Manager zjistil účet administrativního uživatele, který používáte. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Vyberte uzel **Uživatelé** a vyhledejte svůj uživatelský účet.
+1. Ujistěte se, že Configuration Manager zjistil účet administrativního uživatele, který používáte pro přístup k funkcím připojení klienta v rámci centra pro správu služby Microsoft Endpoint Manager. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Vyberte uzel **Uživatelé** a vyhledejte svůj uživatelský účet.
 
     Pokud váš účet není uvedený v uzlu **Uživatelé** , Projděte si část konfigurace [zjišťování uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)v lokalitě.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423712"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643626"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -140,9 +140,13 @@ Než začnete, [Zkontrolujte požadavky konektoru](certificate-connectors.md) a 
    > [!WARNING]
    > Ve výchozím nastavení je **Konfigurace rozšířeného zabezpečení** Windows serveru IE nastavená na **zapnuto** , což může způsobit problémy s přihlášením k Office 365.
 
-6. Zavřete okno.
+6. Vyberte kartu **účet certifikační autority** a potom zadejte přihlašovací údaje pro účet, který má oprávnění vydávat a spravovat certifikáty ve vaší vydávající certifikační autoritě. Tyto přihlašovací údaje budou použity k odvolání certifikátu u certifikační autority. 
 
-7. V centru pro správu Microsoft Endpoint Manageru se vraťte k konektorům **pro správu tenanta**  >  **a tokenům**  >  **certifikátů**. Za chvíli se zobrazí zelená značka zaškrtnutí a aktualizuje se stav připojení. Server konektoru teď může komunikovat s Intune.
+    Provedené změny **použijte**.
+
+7. Zavřete okno.
+
+8. V centru pro správu Microsoft Endpoint Manageru se vraťte k konektorům **pro správu tenanta**  >  **a tokenům**  >  **certifikátů**. Za chvíli se zobrazí zelená značka zaškrtnutí a aktualizuje se stav připojení. Server konektoru teď může komunikovat s Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 

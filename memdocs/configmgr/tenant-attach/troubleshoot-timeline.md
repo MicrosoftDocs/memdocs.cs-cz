@@ -10,12 +10,12 @@ ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 979ec6f081a318886eda9eeac91c16adc635701d
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: fd71c622a7fc8086c88ecf116e67abdbcbc2e875
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564292"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643607"
 ---
 # <a name="troubleshoot-the-timeline-for-devices-uploaded-to-the-admin-center-preview"></a><a name="bkmk_timeline"></a> Řešení potíží s časovou osou pro zařízení odeslaná do centra pro správu (Preview)
 <!--CM7141381, IN7552762 pubpreview Sept8, 2020 -->
@@ -37,7 +37,7 @@ Při zobrazení nebo synchronizaci časové osy z centra pro správu Microsoft E
 
 **Možné příčiny:**
 
-- Ujistěte se, že je nakonfigurované zjišťování [uživatelů služby Azure AD](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) a zjišťování [uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) a že je uživatel zjištěný pomocí obou.
+- Ujistěte se, že jsou nakonfigurované zjišťování uživatelů [Azure AD](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) a zjišťování [uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) a že se v obou případech zjistí uživatelský účet, který přistupuje k funkcím pro připojení tenanta z centra pro správu Microsoft Endpoint Manageru.
 - V uživatelském účtu může chybět role **uživatele správce** pro Configuration Manager aplikace mikroslužeb ve službě Azure AD. Přidejte roli ve službě Azure AD z části **podnikové aplikace**  >  **Configuration Manager**  >  **Uživatelé a skupiny**mikroslužeb  >  **Přidat uživatele**. Pokud máte Azure AD Premium, podporují se skupiny. Změny tohoto oprávnění mohou trvat až hodinu.
 
 ### <a name="unable-to-get-timeline-information"></a><a name="bkmk_403"></a> Nepovedlo se získat informace o časové ose.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 7061fbba1171615b265abd895c9c1d30c64d8bfe
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252301"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643600"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -52,19 +52,19 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 | Možnosti správy aplikací | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
 | Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano |
-| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | No | No |  |
-| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | No | No |
-| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | No | Ano | No | No |
-| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | No | Ne <sup>1</sup> |
-| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | No | Ano |
+| Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne |  |
+| Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | Ne | Ne |
+| Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne <sup>1</sup> |
+| Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano |
 | Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano |
-| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | No | No | No | Ano |
+| Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano |
 | Povinná instalace aplikací na zařízení (povinné) <sup>2</sup> | Ano | Ano | Ano | Ano |
 | Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano <sup>3</sup> | Ano | Ano | Ano |
 | Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano <sup>4</sup> | Ano | Ano | Ano |
 | Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano |
-| Aplikace z obchodu | Ano | Ano | No | Ano |
-| Aktualizace aplikací | Ano | Ano | No | Ano |
+| Aplikace z obchodu | Ano | Ano | Ne | Ano |
+| Aktualizace aplikací | Ano | Ano | Ne | Ano |
 
 <sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](../protect/windows-information-protection-configure.md).<br>
 <sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.<br>
@@ -101,6 +101,7 @@ Horní část navigační nabídky úlohy aplikace poskytuje běžně používan
     - **Zásady konfigurace aplikací**: Tuto možnost vyberte k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci. Další informace najdete v tématech [zásady konfigurace aplikací](app-configuration-policies-use-ios.md), [zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md)a [zásady konfigurace aplikací pro Android](app-configuration-policies-overview.md).
     - **Zřizovací profily aplikací pro iOS**: Aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Další informace najdete v tématu [zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md).
     - **Doplňkové zásady v režimu S**: tuto možnost vyberte, pokud chcete, aby se ve spravovaných zařízeních v režimu spouštěly další aplikace. Další informace najdete v tématu [doplňkové zásady pro režim S](apps-win32-s-mode.md).
+    - **Zásady pro aplikace Office**: tuto možnost vyberte, pokud chcete vytvořit zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službě Microsoft 365 Services. Přístup k místním poštovním schránkám systému Exchange můžete chránit také vytvořením zásad ochrany aplikací Intune pro Outlook pro iOS/iPadOS a Androidem s povoleným hybridním moderním ověřováním. Musíte splňovat požadavky na použití zásad pro aplikace Office. Další informace o požadavcích najdete v tématu [požadavky pro použití služby zásady cloudu Office](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). Zásady ochrany aplikací se nepodporují pro jiné aplikace, které se připojují k místním službám Exchange nebo SharePoint. Související informace najdete v tématu [Přehled služby zásady cloudu Office pro aplikace Microsoft 365 pro podniky](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
     - **Sady zásad**: tuto možnost vyberte, pokud chcete vytvořit přiřazenou kolekci aplikací, zásad a dalších objektů pro správu, které jste vytvořili. Další informace najdete v tématu [sady zásad](../fundamentals/policy-sets.md).
 - **Jiné**:   
     - **Selektivní vymazání aplikace**: Tuto možnost vyberte, pokud chcete odebrat pouze firemní data z vybraného zařízení uživatele. Další informace najdete v tématu [selektivní vymazání aplikace](apps-selective-wipe.md).

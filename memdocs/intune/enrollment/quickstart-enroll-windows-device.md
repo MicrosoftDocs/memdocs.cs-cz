@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327057"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643645"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
 
@@ -48,7 +48,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
    ![Snímek obrazovky Nastavení Windows – Systém](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-01.png)
 
-2. Vyberte **systém** > **o produktu**. 
+2. Vyberte **systém**  >  **o produktu**. 
 
    ![Snímek obrazovky s nastavením systému](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-02.png)
 
@@ -68,7 +68,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
    ![Snímek obrazovky Nastavení systému – Účty](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-03.png)
 
-2. Vyberte **přístup do práce nebo do školy** > **připojit**.
+2. Vyberte **přístup do práce nebo do školy**  >  **připojit**.
 
     ![Vyberte možnost Nastavit pracovní nebo školní účet.](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
@@ -87,12 +87,12 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
    ![Snímek obrazovky nově přidaného účtu](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Pokud jste postupovali podle předchozích kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailovému účtu a souborům, postupujte podle kroků v části [Postup řešení potíží, pokud se zobrazí přístup do práce nebo do školy](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Pokud jste postupovali podle předchozích kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailovému účtu a souborům, postupujte podle kroků v tématu [řešení potíží s přístupem k zařízení s Windows 10](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potvrzení registrace zařízení v Intune
 
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako globální správce nebo správce služby Intune.
-2. Vyberte **zařízení** > **všechna zařízení** a podívejte se na zaregistrovaná zařízení v Intune.
+2. Vyberte **zařízení**  >  **všechna zařízení** a podívejte se na zaregistrovaná zařízení v Intune.
 3. Ověřte, že máte v Intune zaregistrované další zařízení.
 
    ![Snímek obrazovky zařízení zaregistrovaných v Intune](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)

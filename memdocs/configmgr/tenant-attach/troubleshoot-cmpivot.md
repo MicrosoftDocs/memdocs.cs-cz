@@ -10,12 +10,12 @@ ms.assetid: 86f97154-c9fc-4efd-9d49-4a253cef5953
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1ca270bc1095e1596f5e725c16a97f4e42e4411
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 7b7e8b347dee46e42f9fe9d9cb89332a3ee1bef5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564289"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643388"
 ---
 # <a name="troubleshoot-cmpivot-preview-for-devices-uploaded-to-the-admin-center"></a>Řešení potíží s CMPivot (Preview) pro zařízení odeslaná do centra pro správu
 <!--6024392-->
@@ -42,7 +42,7 @@ K řešení potíží s CMPivot v centru pro správu Microsoft Endpoint Manageru
 
 1. Použijte stejný účet pro přihlášení k centru pro správu. Místní identita musí být synchronizovaná s cloudovou identitou a musí se shodovat.
 1. Ověřte, že účet má oprávnění **ke čtení** pro **kolekci** zařízení v Configuration Manager.
-1. Ujistěte se, že Configuration Manager zjistil účet administrativního uživatele, který používáte. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Vyberte uzel **Uživatelé** a vyhledejte svůj uživatelský účet.
+1. Ujistěte se, že Configuration Manager zjistil účet administrativního uživatele, který používáte pro přístup k funkcím připojení klienta v rámci centra pro správu služby Microsoft Endpoint Manager. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Vyberte uzel **Uživatelé** a vyhledejte svůj uživatelský účet.
 
     Pokud váš účet není uvedený v uzlu **Uživatelé** , Projděte si část konfigurace [zjišťování uživatelů služby Active Directory](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)v lokalitě.
 

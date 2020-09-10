@@ -1,11 +1,11 @@
 ---
-title: Řešení potíží při registraci zařízení s Windows 10 | Dokumentace Microsoftu
-description: ''
+title: Řešení potíží s přístupem k zařízení s Windows 10 do školy nebo práce | Microsoft Intune
+description: Vyřešte problémy s přístupem nebo připojením k účtu pro zaregistrovaná zařízení s Windows 10.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881762"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643436"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
-Pokud jste zařízení zaregistrovali, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, zkuste tento postup řešení potíží.  
+# <a name="troubleshoot-windows-10-device-access"></a>Řešení potíží s přístupem k zařízení s Windows 10
+Tento článek popisuje, jak vyřešit problémy s přístupem k zaregistrovanému zařízení s Windows 10. 
 
-1. Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
+## <a name="check-wi-fi-connection"></a>Ověřit připojení Wi-Fi  
 
-    Pokud se zobrazí tato obrazovka, použijte postup v tématu [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+Pro přístup k pracovním nebo školním prostředkům se vyžaduje připojení k síti Wi-Fi. Ověřte, zda jste připojeni k síti Wi-Fi, a pak se pokuste o přístup k prostředkům znovu.  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>Přidat pracovní nebo školní účet v aplikaci nastavení  
+Tyto kroky můžete použít k registraci zařízení. Pokud se ale váš účet v aplikaci **Nastavení** nezobrazuje, mnoho toho je potřeba provést znovu.  
 
-    Pokud se zobrazí tato obrazovka, použijte postup v tématu [Postup řešení potíží, pokud se zobrazí Váš účet](#troubleshooting-steps-to-follow-if-you-see-your-account).
+1. Otevřete aplikaci **Nastavení**. 
+2. Vyberte **Účty**.
+3. Tento další krok se liší v závislosti na verzi Windows 10, kterou používáte. 
+    * Verze 1607 a novější: vyberte **přístup do práce nebo do školy**.
+    * Verze 1511 a starší: vyberte **přístup do práce**.  
+4. Ověřte svůj účet. Pokud není v seznamu uveden, přidejte ho kliknutím na tlačítko pro **připojení** a zápis. 
+5. Přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu. 
+6. Postupujte podle výzev na obrazovce a dokončete připojení.  
+7. Po dokončení se Váš účet přidá jako připojení. Budete mít přístup k prostředkům, které vaše organizace zpřístupňuje.   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>Kontaktovat IT podporu pro požadavky na přístup  
+Pokud vidíte svůj pracovní nebo školní účet uvedený v aplikaci nastavení, vaše zařízení a účet už jsou připojené. Další pomoc s problémy s přístupem vám poskytne pracovník podpory IT. Můžou mít omezení nebo požadavky, které znemožňují přístup k určitým prostředkům.  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>Postup řešení potíží, pokud se zobrazí „Přístup do práce nebo do školy“
+## <a name="error-messages"></a>Chybové zprávy  
 
-1. Pokud jste postupovali podle výše uvedených kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu a souborům, vraťte se k **přístupu do práce nebo do školy**.
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>Nepovedlo se nám automaticky zjistit koncový bod správy, který odpovídá zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.
 
-2. Proveďte některou z následujících akcí:
+**Příčina**: váš účet nešlo ověřit vedle zadané adresy URL (označuje se taky jako koncový bod pro správu).  
 
-   - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud vidíte tyto možnosti, jste nyní zaregistrovaní a připojeni.
+#### <a name="resolution"></a>Řešení
+1. Zadejte své uživatelské jméno a heslo znovu. 
+2. Pokud to pořád nefunguje, obraťte se na pracovníky podpory IT, aby získal správnou adresu URL (například: www.yourcompany.onmicrosoft.com). 
+3. Po zobrazení výzvy zadejte zadanou adresu URL. 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>Vypadá to, že nejste připojení. Ujistěte se, že jste připojení k síti.
 
-   - Pokud nevidíte výše uvedené informace o připojení nebo je vidíte, ale chybí některé z možností, klepněte na **připojit**. Pak se přihlaste pomocí svého pracovního nebo školního přihlašovacího údaje a připojte se.  
+**Příčina**: zařízení není připojené k Wi-Fi a připojení k pracovnímu nebo školnímu účtu se vyžaduje.     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí „Váš účet“
+#### <a name="resolution"></a>Řešení
+1. Na panelu nástrojů nebo nastavení zařízení vyberte ikonu zeměkoule **stav sítě** .
+2. Vyberte síť Wi-Fi > **připojit**.  
+3. Zkuste svůj účet znovu připojit.  
 
-Pokud jste postupovali podle výše uvedených kroků, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, přejděte zpátky na **účty**a klepněte na **přístup do práce**.
 
-- Pokud vidíte svůj pracovní nebo školní účet v seznamu, jste připojeni.  
+## <a name="next-steps"></a>Další kroky  
 
-- Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **připojit**a přihlaste se pomocí svých pracovních nebo školních přihlašovacích údajů.
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>Postup řešení potíží, pokud se zobrazí „Nastavení pracovního nebo školního účtu“
-
-Pokud se zobrazí zpráva oznamující, že nemůžeme <strong>automaticky zjistit koncový bod správy, který odpovídá zadanému uživatelskému jménu. Zkontrolujte prosím své uživatelské jméno a zkuste to znovu. Pokud znáte adresu URL koncového bodu správy, zadejte ji prosím.</strong>pak byste se měli pokusit znovu zadat své uživatelské jméno a heslo. Pokud ani to nepomůže, zjistěte od své firemní podpory, který web je potřeba zadat do textového pole <strong>Koncový bod správy</strong>. Web pravděpodobně vypadá nějak takto: <strong>www.vasespolecnost.onmicrosoft.com</strong>.
-
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

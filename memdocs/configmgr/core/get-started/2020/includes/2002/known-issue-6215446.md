@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 02/13/2020
-ms.openlocfilehash: d887f842b789b41260a49b149b61f28741937613
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 979760d1ebdd9d8f91993361921ae437ed5b81b1
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88703657"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644337"
 ---
 ### <a name="cant-delete-collections"></a><a name="ki_coll"></a> Nejde odstranit kolekce.
 
@@ -19,4 +19,4 @@ V této verzi větve Technical Preview nemůžete odstranit kolekce.
 
 Pokud chcete tento problém obejít, odstraňte kolekce pomocí následujícího Configuration Manager rutiny PowerShellu:
 
-- [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection?view=sccm-ps)
+- [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)

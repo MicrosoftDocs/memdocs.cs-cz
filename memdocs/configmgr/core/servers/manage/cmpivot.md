@@ -2,7 +2,7 @@
 title: CMPivot pro data v reálném čase
 titleSuffix: Configuration Manager
 description: Naučte se používat CMPivot v Configuration Manager k dotazování klientů v reálném čase.
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fa96d09302b9b4cd908880e97e1735fff5f43743
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700578"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643573"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>CMPivot pro data v reálném čase v Configuration Manager
 
@@ -32,7 +32,7 @@ Například při [zmírnění ohrožení zabezpečení kanálu na straně spušt
  > - Určitý antimalwarový software může nechtěně aktivovat události proti Configuration Manager spuštění skriptů nebo funkcí CMPivot. Doporučuje se vyloučit%windir%\CCM\ScriptStore, aby antimalwarový software mohl spouštět tyto funkce bez rušivých zásahů.
 
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pro použití CMPivot jsou vyžadovány následující komponenty:
 
@@ -188,7 +188,8 @@ Okno CMPivot obsahuje následující prvky:
 
    - Celkový počet řádků v podokně výsledků. Například `1 objects`.  
 
-
+> [!TIP]
+> Pokud chcete znovu spustit aktuální dotaz CMPivot na klientech, stiskněte **klávesu CTRL** a klikněte na **Spustit**.
 
 ## <a name="example-scenarios"></a>Příklady scénářů
 
@@ -251,7 +252,7 @@ Počínaje Configuration Manager 1810 se může CMPivot dotazovat data inventá�
 
 Vyprší časový limit dotazu po jedné hodině. Například kolekce má 500 zařízení a 450 klientů je aktuálně online. Tato aktivní zařízení dostanou dotaz a vrátí výsledky téměř okamžitě. Pokud necháte okno CMPivot otevřené, protože ostatní klienti 50 přicházejí do režimu online, obdrží také dotaz a vrátí výsledky. 
 
-## <a name="log-files"></a>Soubory protokolu
+## <a name="log-files"></a>Soubory protokolů
 
  Interakce CMPivot se zaznamenávají do následujících souborů protokolu:
 
