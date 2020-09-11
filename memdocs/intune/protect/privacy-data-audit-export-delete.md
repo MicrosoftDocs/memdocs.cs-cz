@@ -2,11 +2,11 @@
 title: Audit, export a odstranění osobních dat
 titleSuffix: Microsoft Intune
 description: Naučte se auditovat, exportovat a odstraňovat osobní data.
-keywords: ''
+keywords: GDPR, osobní údaje, soukromí
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995989"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012625"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -60,10 +60,10 @@ Existují tři způsoby, jak odebrat osobní data spravovaná v Intune:
 
 ### <a name="delete-a-user-from-intune"></a>Odstranění uživatele z Intune
 
-Pokud chcete z Intune odstranit osobní údaje koncového uživatele, správce musí [uživatele odstranit z Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Když se uživatel z AAD odstraní (nevratný), obdrží Intune signál odstranit z AAD a pak automaticky zahájí mazání všech osobních údajů tohoto uživatele ze služby Intune. Informace o uživateli budou odstraněny ze služby Intune do 30 dnů od akce odebrání.
+Pokud chcete z Intune odstranit osobní údaje koncového uživatele, správce musí [uživatele odstranit z Azure Active Directory (Azure AD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). Když se uživatel z Azure AD odstraní (nevratný), obdrží Intune signál odstranit z Azure AD a pak automaticky zahájí mazání všech osobních údajů tohoto uživatele ze služby Intune. Informace o uživateli budou odstraněny ze služby Intune do 30 dnů od akce odebrání.
 
 ### <a name="reset-device-to-factory-settings"></a>Resetování zařízení do továrního nastavení
-Když zařízení resetujete do továrního nastavení, obnoví se všechna firemní i osobní data a nastavení do původního továrního nastavení. To je užitečné, když chcete zařízení předat dalšímu zaměstnanci. Do 30 dnů od odebrání uživatele budou ze služby Intune odstraněny uživatelské soubory, aplikace instalované uživatelem a veškeré nastavení, které není výchozí.
+Když zařízení resetujete do továrního nastavení, obnoví se všechna firemní i osobní data a nastavení do původního továrního nastavení. To je užitečné, když chcete zařízení předat dalšímu zaměstnanci. Uživatelské soubory, aplikace nainstalované uživatelem a jiné než výchozí nastavení se odeberou a tato data se ze služby Intune odstraní do 30 dnů od akce odebrání.
 
 ### <a name="user-self-removal-from-intune-management"></a>Samostatné odebrání uživatele ze správy v Intune
 Uživatelé mohou odebrat osobní zařízení se systémem [Android, Apple nebo Windows](../user-help/unenroll-your-device-from-intune-android.md) ze správy v Intune i bez pomoci správce.   
@@ -77,4 +77,4 @@ Pokud zákazník, který používá tenanta Intune, zruší svůj účet Intune,
 
 ## <a name="next-steps"></a>Další kroky
 
-Přečtete si, jak [auditovat, exportovat nebo odstranit](privacy-data-audit-export-delete.md) osobní data evidovaná v Intune.
+Zjistěte [, jak zobrazit a opravit](privacy-data-view-correct.md) osobní údaje osobních dat v Intune.
