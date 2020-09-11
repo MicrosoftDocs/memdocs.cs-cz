@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: Kontrola protokolů ochrany aplikace
           href: app-protection-policy-settings-log.md
+    - name: Zásady pro aplikace Office
+      href: app-office-policies.md
     - name: Odstraňování potíží
       items:
         - name: Pomoc uživatelům s řešením problémů
