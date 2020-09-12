@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281179"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039393"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -33,7 +33,7 @@ ms.locfileid: "89281179"
 
 Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.12.6 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
 
@@ -70,6 +70,7 @@ Následující soubory hlaviček obsahují rozhraní API, datové typy a protoko
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager. h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ Následující soubory hlaviček obsahují rozhraní API, datové typy a protoko
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile. h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings. h
+-  IntuneMAMUIHelper. h
 -  IntuneMAMVersionInfo.h
 
 Vývojáři mohou vytvářet obsah všech předchozích hlaviček, které jsou k dispozici pouhým importem IntuneMAM. h.
@@ -135,7 +139,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +158,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -214,19 +218,19 @@ Pokud už vaše aplikace používá MSAL, vyžadují se následující konfigura
 
 3. Ve slovníku **IntuneMAMSettings** s názvem klíče také `ADALRedirectUri` Zadejte identifikátor URI pro přesměrování, který se má použít pro volání MSAL. Alternativně můžete místo toho zadat `ADALRedirectScheme`, pokud identifikátor URI pro přesměrování dané aplikace je ve formátu `scheme://bundle_id`.
 
-Dále můžou aplikace přepsat tato nastavení Azure AD za běhu. K tomu stačí nastavit vlastnosti `aadAuthorityUriOverride`, `aadClientIdOverride` a `aadRedirectUriOverride` v instanci `IntuneMAMPolicyManager`.
+Dále můžou aplikace přepsat tato nastavení Azure AD za běhu. K tomu stačí nastavit `aadAuthorityUriOverride` `aadClientIdOverride` vlastnosti, a `aadRedirectUriOverride` ve `IntuneMAMSettings` třídě.
 
 4. Zajistěte, aby byla dodržena oprávnění aplikace pro iOS ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](app-sdk-get-started.md#next-steps-after-integration) v části "[poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
-> Použití souboru Info.plist se doporučuje pro všechna nastavení, která jsou statická a nevyžadují, aby se určovala za běhu. Hodnoty přiřazené vlastnostem v instanci `IntuneMAMPolicyManager` mají přednost před odpovídajícími hodnotami zadanými v souboru Info.plist a zachovají se i po restartování aplikace. Sada SDK je bude dále používat pro kontroly zásad, dokud se registrace daného uživatele nezruší nebo se tyto hodnoty nevymažou nebo nezmění.
+> Použití souboru Info.plist se doporučuje pro všechna nastavení, která jsou statická a nevyžadují, aby se určovala za běhu. Hodnoty přiřazené `IntuneMAMSettings` vlastnostem třídy za běhu mají přednost před odpovídajícími hodnotami zadanými v souboru info. plist a zachovají se i po restartování aplikace. Sada SDK je bude dále používat pro kontroly zásad, dokud se registrace daného uživatele nezruší nebo se tyto hodnoty nevymažou nebo nezmění.
 
 ### <a name="if-your-app-does-not-use-msal"></a>Pokud vaše aplikace nepoužívá MSAL
 
 Jak už jsme uvedli, sada Intune App SDK používá pro své scénáře ověřování a podmíněného spuštění [knihovnu Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) . Také spoléhá na MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení. Pokud **vaše aplikace nepoužívá MSAL pro vlastní mechanismus ověřování**, možná budete muset nakonfigurovat vlastní nastavení AAD:
 
 * Vývojáři potřebují v AAD vytvořit registraci aplikace s vlastním identifikátorem URI pro přesměrování ve formátu zadaném [zde](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). 
-* Vývojáři by měli nastavit `ADALClientID` `ADALRedirectUri` výše zmíněná nastavení a, nebo ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti `IntuneMAMPolicyManager` instance. 
+* Vývojáři by měli nastavit `ADALClientID` `ADALRedirectUri` výše zmíněná nastavení a, nebo ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti `IntuneMAMSettings` třídy. 
 * Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
 
 ### <a name="special-considerations-when-using-msal"></a>Zvláštní důležité důvody při použití MSAL 
@@ -553,7 +557,7 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
 
-1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Příklad:
+1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Například:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -766,7 +770,7 @@ Pokud má vaše aplikace možnost zobrazit webové stránky ve webovém zobrazen
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Webová zobrazení, která zobrazují jenom nefiremní obsah nebo weby
 
-Pokud vaše aplikace nezobrazuje žádná firemní data ve webovém zobrazení a uživatelé mají možnost přejít na libovolné weby, kde by mohly kopírovat a vkládat spravovaná data z jiných částí aplikace do veřejného fóra, aplikace zodpovídá za nastavení aktuální identity, aby se spravovaná data nedala přerušit přes webové zobrazení. Příklady tohoto příkladu jsou webové stránky funkce nebo zpětné vazby, které mají buď přímé nebo nepřímé odkazy na vyhledávací web. Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity a před zobrazením WebView před ním předat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat setUIPolicyIdentity, která předává aktuální identitu. Aplikace s jedinou identitou by měly volat IntuneMAMPolicyManager setCurrentThreadIdentity a před zobrazením WebView před ním předávat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat setCurrentThreadIdentity, která předává Nil. Tím se zajistí, že Intune SDK bude považovat webzobrazení za nespravované a že neumožní vložení spravovaných dat z jiných částí aplikace do zobrazení WebView, pokud je zásada nakonfigurovaná jako taková. 
+Pokud vaše aplikace nezobrazuje žádná firemní data ve webovém zobrazení a uživatelé mají možnost přejít na libovolné weby, kde by mohly kopírovat a vkládat spravovaná data z jiných částí aplikace do veřejného fóra, aplikace zodpovídá za nastavení aktuální identity, aby se spravovaná data nedala přerušit přes webové zobrazení. Příklady tohoto příkladu jsou webové stránky funkce nebo zpětné vazby, které mají buď přímé nebo nepřímé odkazy na vyhledávací web. Aplikace s více identitami by měly zavolat `setUIPolicyIdentity` na `IntuneMAMPolicyManager` instanci a před zobrazením WebView před ním předat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat `setUIPolicyIdentity` , aby prošla aktuální identitou. Aplikace s jedinou identitou by měly zavolat `setCurrentThreadIdentity` na `IntuneMAMPolicyManager` instanci a před zobrazením WebView před ním předat prázdný řetězec. Po ukončení WebView by aplikace měla zavolat `setCurrentThreadIdentity` a předat Nil. Tím se zajistí, že Intune SDK bude považovat webzobrazení za nespravované a že neumožní vložení spravovaných dat z jiných částí aplikace do zobrazení WebView, pokud je zásada nakonfigurovaná jako taková. 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Webová zobrazení, která zobrazují jenom firemní obsah a weby
 
@@ -774,9 +778,9 @@ Pokud vaše aplikace zobrazuje pouze podniková data ve webovém zobrazení a u�
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Webové zobrazení, která mohou zobrazovat firemní i nefiremní obsah nebo weby
 
-V tomto scénáři je podporována pouze WKWebView. Aplikace, které používají starší verze UIWebView, by měly přejít na WKWebView. Pokud vaše aplikace zobrazuje podnikový obsah v rámci WKWebView a uživatelé mohou také přistupovat k nefiremnímu obsahu nebo webům, což by mohlo vést k úniku dat, musí aplikace implementovat metodu isExternalURL: Delegate definovanou v IntuneMAMPolicyDelegate. h. Aplikace by měly určit, jestli adresa URL předaná metodě delegáta představuje podnikový web, na kterém můžou být spravovaná data vložená nebo nepodniková webová stránka, která by mohla způsobit nevracení firemních dat. 
+V tomto scénáři je podporována pouze WKWebView. Aplikace, které používají starší verze UIWebView, by měly přejít na WKWebView. Pokud vaše aplikace zobrazuje podnikový obsah v rámci WKWebView a uživatelé můžou také přistupovat k obsahu nebo webům, které by mohly vést k úniku dat, musí aplikace implementovat `isExternalURL:` metodu delegáta definovanou v `IntuneMAMPolicyDelegate.h` . Aplikace by měly určit, jestli adresa URL předaná metodě delegáta představuje podnikový web, na kterém můžou být spravovaná data vložená nebo nepodniková webová stránka, která by mohla způsobit nevracení firemních dat. 
 
-Vrácení NO v isExternalURL oznámí sadě Intune SDK, kterou načtený web představuje podnikové umístění, ve kterém se můžou spravovat spravovaná data. Pokud se vrátí Ano, sada Intune SDK otevře tuto adresu URL v Edge, nikoli WKWebView, pokud to nastavení zásad vyžaduje. Tím se zajistí, že se žádná spravovaná data v rámci aplikace nevrátí na externí Web.
+Když se vrátí žádná v `isExternalURL` sadě Intune SDK, bude se jednat o firemní umístění, kde se spravovaná data můžou sdílet. Pokud se vrátí Ano, sada Intune SDK otevře tuto adresu URL v Edge, nikoli WKWebView, pokud to nastavení zásad vyžaduje. Tím se zajistí, že se žádná spravovaná data v rámci aplikace nevrátí na externí Web.
 
 ## <a name="ios-best-practices"></a>Doporučené postupy pro iOS
 
@@ -794,7 +798,7 @@ Rozhraní API sady Intune App SDK jsou v cíli-C a nepodporují **nativní** SWI
 
 ### <a name="do-all-users-of-my-application-need-to-be-registered-with-the-app-we-service"></a>Musí být všichni uživatelé mojí aplikace zaregistrovaní ve službě APP-WE?
 
-Ne. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
+No. V Intune App SDK by se měly registrovat jen pracovní a školní účty. Za zjištění, jestli je účet používán jako pracovní nebo školní, zodpovídají aplikace.
 
 ### <a name="what-about-users-that-have-already-signed-in-to-the-application-do-they-need-to-be-enrolled"></a>A co uživatelé, kteří se už do aplikace přihlásili? Musí se zaregistrovat?
 
@@ -827,7 +831,7 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Je k dispozici ukázková aplikace, která demonstruje integraci sady SDK?
 
-Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
+Ano! Podívejte se prosím na [ukázkovou aplikaci chatu](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Jak můžu řešit potíže s aplikací?
 

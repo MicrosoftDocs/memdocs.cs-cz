@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23af858db709deb041fa1259d7c7d203eaa65dd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 148e549d72c3d5802bc9d86f7d0fd81d55b21aa7
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217715"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039223"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Android do Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Obchodní aplikace (LOB) je aplikace, kterou do Intune přidáte z instalačního souboru aplikace. Tento typ aplikace zpravidla vzniká interně. Intune nainstaluje obchodní aplikaci na zařízení uživatele. 
+Obchodní aplikace (LOB) je aplikace, kterou do Intune přidáte z instalačního souboru aplikace. Tento typ aplikace zpravidla vzniká interně. Intune nainstaluje obchodní aplikaci na zařízení uživatele. To platí jenom pro zařízení spravovaná správcem zařízení.
 
 > [!Note]
 > Další informace o obchodních aplikacích a konzole pro vývojáře Google Play najdete v tématu [spravovaná Google Play Private (LOB) publikování aplikací pomocí konzole pro vývojáře Google](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
 
 > [!Note]
-> Zařízení s Androidem for Work najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise v Intune](apps-add-android-for-work.md). 
+> Informace o zařízeních s Androidem Enterprise najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise pomocí Intune](apps-add-android-for-work.md). 
 
 ## <a name="select-the-app-type"></a>Vyberte typ aplikace.
 

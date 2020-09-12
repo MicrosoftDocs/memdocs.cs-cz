@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564090"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045063"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -108,7 +108,7 @@ V tomto okamžiku bude mít vliv na zařízení spravovaná správcem zařízen�
 - Označení zařízení jako vlastněných společností pomocí IMEI nebo sériového čísla nebudou automaticky označovat zařízení jako ve vlastnictví firmy. 
 - IMEI a sériové číslo se už nebudou zobrazovat správcům IT v Intune. 
 
-**Android 11**: budeme i nadále testovat nejnovější verzi Androidu 11 Beta, abyste mohli vyhodnotit dopad na zařízení spravovaná správcem zařízení. Tady je seznam toho, co jsme našli: 
+**Android 11**: Jedná se o změny, které budou mít vliv na zařízení spravovaná správcem zařízení při aktualizaci na Android 11: 
 - Pro zařízení Správce zařízení (s výjimkou Samsung) se systémem Android 11 a novějším společnost Google odebrala možnost pro agenty pro správu, jako je Portál společnosti k vykonání blokující kamery, a to i před vydáním aktualizace Portál společnosti aplikace v říjnu. Zásady blokující kameru, které se použijí na zařízení před aktualizací Androidu 11, se budou dál uplatňovat.  
 - V systému Android 11 již nelze důvěryhodné kořenové certifikáty nasadit do zařízení zaregistrovaných u Správce zařízení (s výjimkou zařízení Samsung). Uživatelé musí na zařízení ručně nainstalovat důvěryhodný kořenový certifikát. Po ruční instalaci důvěryhodného kořenového certifikátu na zařízení můžete pomocí protokolu SCEP zřídit certifikáty pro zařízení. V tomto scénáři musíte pořád vytvořit a nasadit zásady důvěryhodných certifikátů na zařízení a propojit tyto zásady s profilem certifikátu SCEP. 
     - Pokud je důvěryhodný kořenový certifikát na zařízení, profil certifikátu SCEP se nainstaluje úspěšně.  

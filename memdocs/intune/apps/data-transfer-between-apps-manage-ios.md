@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 5a2a82d63b4b13f16ced558ae515c3100a8a21ad
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410840"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039410"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -61,7 +61,9 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
      > [!NOTE]
      > Nasaďte nastavení konfigurace aplikace IntuneMAMUPN do cílové spravované aplikace, která odesílá data, nikoli přijímající aplikaci. 
-
+     
+     > [!NOTE]
+     > V současné době není v aplikaci žádná podpora pro registraci v jiném uživateli, pokud se na stejném zařízení nachází registrovaný účet MDM. 
 
 4. Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 

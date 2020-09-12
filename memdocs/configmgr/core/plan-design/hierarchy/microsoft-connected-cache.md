@@ -2,7 +2,7 @@
 title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Použití distribučního bodu Configuration Manager jako serveru místní mezipaměti pro optimalizaci doručení
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699326"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039291"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Mezipaměť propojená Microsoftem v Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699326"
 
 <!--3555764-->
 
-Počínaje verzí 1906 můžete nainstalovat server Microsoft Connected cache do distribučních bodů. Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, ale můžete přispět k ochraně WAN Links.
+Počínaje verzí 1906 můžete nainstalovat server Microsoft Connected cache do distribučních bodů. Uložením tohoto obsahu do mezipaměti v místním prostředí můžou vaši klienti těžit z funkce Optimalizace doručení, která může pomáhat chránit sítě WAN.
 
 > [!NOTE]
 > Počínaje verzí 1910 je tato funkce nyní označována jako **propojená s mezipamětí Microsoft**. Dříve byla známá jako Optimalizace doručení v síťové mezipaměti.
@@ -109,7 +109,7 @@ Změna jednotky po instalaci připojené mezipaměti:
 
 - Pokud je nastavena na hodnotu automaticky, vytvořte nejprve soubor **NO_SMS_ON_DRIVE. SMS** . Pak proveďte nějaké změny vlastností distribučního bodu, aby se aktivovala Změna konfigurace.
 
-### <a name="automation"></a>Automatizace
+### <a name="automation"></a>Automation
 
 <!-- SCCMDocs#1911 -->
 
@@ -148,7 +148,7 @@ Podrobnější informace najdete v tématu [řešení potíží s propojenou mez
 
 Pokud v Configuration Manager distribučních bodech povolíte připojenou mezipaměť, počínaje verzí 1910, mohou aplikace Microsoft Intune Win32 sloužit spoluspravovaným klientům.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadavky
 
 #### <a name="client"></a>Klient
 
@@ -191,7 +191,7 @@ Pokud v Configuration Manager distribučních bodech povolíte připojenou mezip
     > [!TIP]
     > Použijte následující nastavení zásad skupiny: Konfigurace počítače > Šablony pro správu > součásti systému Windows > Optimalizace doručení > **minimální velikost souboru obsahu sdílené mezipaměti (v MB)**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Optimalizace aktualizací Windows 10 s optimalizací doručení](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)
 

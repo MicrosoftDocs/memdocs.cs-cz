@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 92af53db4645b13d82552f6baff0ccebe8f14138
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051576"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039359"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -51,7 +51,7 @@ Tyto profily jsou určené v pořadí podle priority. použije se nejvyšší pl
 K přizpůsobení chování stránky stavu registrace můžete nakonfigurovat následující nastavení:
 
 <table>
-<th align="left">Nastavení<th align="left">Ano<th align="left">Ne
+<th align="left">Nastavení<th align="left">Yes<th align="left">No
 <tr><td>Zobrazit průběh instalace aplikací a profilů<td>Zobrazí se stránka stav registrace.<td>Stránka stavu registrace se nezobrazuje.
 <tr><td>Zablokovat používání zařízení, dokud se nenainstalují všechny aplikace a profily<td>Nastavení v této tabulce jsou dostupná k přizpůsobení chování stránky stavu registrace, aby uživatel mohl řešit potenciální problémy s instalací.
 <td>Stránka stavu registrace se zobrazí bez dalších možností pro řešení chyb při instalaci.
@@ -153,53 +153,6 @@ U nastavení účtu se na stránce Stav registrace sleduje následující polož
 - Certifikáty
   - Profily certifikátů, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
 
-### <a name="troubleshooting"></a>Řešení potíží
-
-Níže najdete běžné otázky týkající se řešení potíží týkajících se stránky stavu registrace.
-
-- Proč byly moje aplikace nainstalovány a sledovány pomocí stránky stavu registrace?
-  - Chcete-li zaručit, že aplikace jsou nainstalovány a sledovány pomocí stránky stav registrace, ujistěte se, že:
-      - Aplikace se přiřazují ke skupině Azure AD, která obsahuje zařízení (pro aplikace cílené na zařízení), nebo uživateli (pro aplikace cílené na uživatele) pomocí "povinného" přiřazení.  (Aplikace cílené na zařízení jsou sledovány během fáze zařízení ESP, zatímco cílové aplikace jsou sledovány během fáze uživatele protokolu ESP.)
-      - Buď zadáte **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily** , nebo dokud nenainstalujete aplikaci do **zařízení blokovat, dokud nebudou nainstalovány požadované aplikace** .
-      - Aplikace se instalují v kontextu zařízení a nemají žádná pravidla použitelnosti kontextu uživatele.
-
-- Proč se stránka stavu registrace zobrazuje pro autopilotní nasazení, například když se uživatel poprvé přihlásí na Configuration Manager zařízení, které spoluvlastní Správa zaregistrovalo?  
-  - Stránka stav registrace uvádí stav instalace pro všechny metody registrace, včetně
-      - Autopilot
-      - Configuration Manager spolusprávu
-      - Když se nový uživatel přihlásí k zařízení, které má při prvním použití zásady stránky stavu registrace
-      - Když je na zařízení, které je zřízené a nastavené jako nastavení spouštěné při **prvním zapnutí (OOBE)** , zapnutá možnost Zobrazit na stránce jenom první uživatel, který se do zařízení přihlásí, získá stav registrace.
-
-- Jak můžu zakázat stránku stavu registrace, pokud byla nakonfigurovaná na zařízení?
-  - Zásady stránky stavu registrace se v době registrace nastaví na zařízení. Chcete-li zakázat stránku stavu registrace, je nutné zakázat oddíly stránky stavu registrace uživatele a zařízení. Tyto oddíly zakážete vytvořením vlastního nastavení OMA-URI s následujícími konfiguracemi.
-
-      Zakázat stránku stavu registrace uživatele:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Zakázat stav registrace zařízení – stránka:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- Jak můžu shromáždit soubory protokolu?
-  - Existují dva způsoby, jak můžete shromáždit soubory protokolu stránky stavu registrace:
-      - Umožňuje uživatelům shromažďovat protokoly v zásadách ESP. Pokud na stránce Stav registrace dojde k vypršení časového limitu, může koncový uživatel zvolit možnost **shromažďovat protokoly**. Vložením jednotky USB můžete zkopírovat soubory protokolu na jednotku.
-      - Otevřete příkazový řádek zadáním klávesy SHIFT + F10 a potom zadejte následující příkazový řádek, který vygeneruje soubory protokolu: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
-
 ### <a name="known-issues"></a>Známé problémy
 
 Níže jsou uvedené známé problémy související se stránkou stavu registrace.
@@ -219,4 +172,6 @@ Níže jsou uvedené známé problémy související se stránkou stavu registra
 
 ## <a name="next-steps"></a>Další kroky
 
-Po nastavení stránek registrace zařízení s Windows se naučte spravovat zařízení s Windows. Další informace najdete v tématu [co je Správa zařízení Microsoft Intune?](../remote-actions/device-management.md)
+Po nastavení stránek pro zápis do systému Windows se naučíte [spravovat zařízení s Windows](../remote-actions/device-management.md).
+
+[Řešení potíží se stránkou stavu registrace systému Windows](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698482"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039342"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Účty používané v Configuration Manager
 
@@ -200,10 +200,10 @@ Ve výchozím nastavení má tato skupina oprávnění **číst**, **číst & sp
 Tato skupina má také oprávnění **ke čtení** pro podsložky na serveru lokality níže `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
 Má také následující oprávnění pro podsložky níže `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
-- **Číst**  
+- **Oprávnění**  
 - **Čtení & provedení**  
 - **Výpis obsahu složky**  
-- **Zápis**  
+- **Psal**  
 - **Upravit**   
 
 
@@ -336,7 +336,7 @@ Můžete zadat více než jeden účet klientské nabízené instalace. Configur
 > 4. Pak odeberte starý účet z Configuration Manager a Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Neudělujte tomuto účtu oprávnění k místnímu přihlášení.  
+> Pomocí zásad domény nebo místních zásad skupiny přiřaďte uživatelské právo Windows k **Odepření přihlášení místně**. Jako člen skupiny Administrators bude mít tento účet právo přihlásit se místně, což není nutné. Pro zajištění lepšího zabezpečení explicitně zakažte právo pro tento účet. Právo odepřít nahrazuje právo povolit.<!--MEMDocs#744-->
 
 Další informace najdete v tématu [klientská nabízená instalace](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
@@ -411,7 +411,7 @@ Vytvořte účet v libovolné doméně, která poskytuje nezbytný přístup k p
 
 2.  Ve skupině **Nastavení** na pásu karet vyberte možnost **Konfigurovat součásti webu**a zvolte možnost **distribuce softwaru**.  
 
-3.  Zvolte kartu **účet přístupu k síti** . Nastavte jeden nebo víc účtů a pak zvolte **OK**.  
+3.  Vyberte kartu **účet přístupu k síti** . Nastavte jeden nebo více účtů a klikněte na **tlačítko OK**.  
 
 
 ### <a name="package-access-account"></a>Účet pro přístup k balíčku  

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 7d16fc974e268b03b89ecd984bfbf56637ae47c0
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564274"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039376"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -36,10 +36,10 @@ Zařízení, která už nepotřebujete, která využíváte k jinému účelu ne
 
 Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data uživatele se zachovají, pokud zaškrtnete políčko **Zachovat stav registrace a uživatelský účet**. Jinak se odeberou všechna data, aplikace a nastavení.
 
-|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Description|
+|Akce vymazání|**Zachovat stav registrace a uživatelský účet**|Odebráno ze správy v Intune|Popis|
 |:-------------:|:------------:|:------------:|------------|
-|**Vymazání**| Není zaškrtnuto | Ano | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
-|**Vymazání**| Zaškrtnuto | Ne | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Není zaškrtnuto | Yes | Vymaže všechny uživatelské účty, data, zásady MDM a nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
+|**Vymazání**| Zaškrtnuto | No | Vymaže všechny zásady MDM. Zachová uživatelské účty a data. Obnoví nastavení uživatele zpět na výchozí nastavení. Obnoví operační systém do výchozího stavu a nastavení.|
 
 
 > [!NOTE]
@@ -168,7 +168,7 @@ Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, kt
 4. Klikněte na tlačítko **Uložit**.
 
 > [!NOTE]
-> Pravidla čištění zařízení nejsou k dispozici pro scénáře Android Enterprise, jako je [plně spravovaná](../enrollment/android-fully-managed-enroll.md), [vyhrazená](../enrollment/android-kiosk-enroll.md)a [Podniková s pracovním profilem](../enrollment/android-corporate-owned-work-profile-enroll.md). 
+> Pravidla čištění zařízení nejsou k dispozici pro zařízení spravovaná Jamf a scénáře pro Android Enterprise, jako je [plně spravovaná](../enrollment/android-fully-managed-enroll.md), [vyhrazená](../enrollment/android-kiosk-enroll.md)a [ve vlastnictví firmy s pracovním profilem](../enrollment/android-corporate-owned-work-profile-enroll.md).
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Odstranění zařízení z portálu služby Azure Active Directory
 
