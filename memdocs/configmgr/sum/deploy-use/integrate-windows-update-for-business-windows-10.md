@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699802"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083892"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Integrace s web Windows Update pro firmy
 
@@ -90,9 +90,9 @@ Další informace o programu Windows Insider najdete v tématu [Začínáme s pr
     - **Úroveň připravenosti větve**: nastavte větev, pro kterou bude zařízení přijímat aktualizace Windows. Vyberte buď půlroční kanál (cílený), půlroční kanál nebo Build Windows Insider.
 
         > [!NOTE]
-        > Nasaďte zásady pro **půlroční kanál (cílený)** na Windows 10 *verze 1903 nebo novější*. Nasaďte zásady pro **půlroční kanál** na Windows 10 *verze 1809 nebo starší*.
+        > Nasaďte zásady pro **půlroční kanál** na Windows 10 *verze 1903 nebo novější*. Nasaďte zásady pro **půlroční kanál (cílený)** na Windows 10, *verze 1809 nebo starší*.
         >
-        > Pokud nasadíte zásadu pro **půlroční kanál** na Windows 10 verze 1903 nebo novější, nasazení se nezdařilo s chybou **0x8004100C**.<!-- 5593139 -->
+        > Pokud nasadíte zásadu pro **půlroční kanál (cílený)** na Windows 10 verze 1903 nebo novější, nasazení se nepovede a zobrazí se chyba **0x8004100C**.<!-- 5593139 -->
 
     - Doba odkladu **(dny)**: zadejte počet dní, po které budou aktualizace funkcí odloženy. Příjem těchto aktualizací funkcí můžete odložit až o 365 dní od jejich vydání.
     - **Pozastavení funkcí aktualizace od**: Určete, jestli se mají zařízení pozastavit od přijetí aktualizací funkcí po dobu až 35 dnů od doby, kdy jste aktualizace pozastavili. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit. Zaškrtnutím políčka můžete zrušit pozastavení aktualizací funkcí.

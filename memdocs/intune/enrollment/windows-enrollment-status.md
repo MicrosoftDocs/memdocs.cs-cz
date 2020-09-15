@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92af53db4645b13d82552f6baff0ccebe8f14138
-ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039359"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076120"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -122,8 +122,8 @@ V případě přípravy zařízení se stránka stavu registrace sleduje:
 Stránka stav registrace sleduje následující položky nastavení zařízení:
 
 - Zásady zabezpečení
-  - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
-  - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
+  - Zásady pro Microsoft Edge, přiřazený přístup a veřejný prohlížeč jsou aktuálně sledovány.
+  - Další zásady nejsou sledovány.
 - Aplikace
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač.
   - Obchodní aplikace pro Store s kontextem instalace = zařízení.
@@ -138,8 +138,8 @@ Stránka stav registrace sleduje následující položky nastavení zařízení:
 U nastavení účtu se na stránce Stav registrace sleduje následující položky, pokud jsou přiřazené k aktuálně přihlášenému uživateli:
 
 - Zásady zabezpečení
-  - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
-  - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
+  - Zásady pro Microsoft Edge, přiřazený přístup a veřejný prohlížeč jsou aktuálně sledovány.
+  - Další zásady nejsou sledovány.
 - Aplikace
   - Počet obchodních aplikací Instalační služby MSI na jednoho uživatele, které jsou přiřazeny ke všem zařízením, všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
