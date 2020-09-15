@@ -29,7 +29,7 @@ ms.locfileid: "90083793"
 
 Než budete moct přidat aplikaci Win32 do Microsoft Intune, musíte aplikaci připravit pomocí [Nástroje pro přípravu obsahu Microsoft Win32](https://go.microsoft.com/fwlink/?linkid=2065730).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete používat správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
 

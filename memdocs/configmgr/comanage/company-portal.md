@@ -48,7 +48,7 @@ Další informace najdete v následujících článcích:
 
 - [Postup přepnutí úloh Configuration Manager do Intune](how-to-switch-workloads.md)
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Configuration Manager aktuální větve verze 2006 nebo novější <sup>([Viz časté otázky](#bkmk_ver-prereq))</sup>
 
@@ -130,11 +130,11 @@ Microsoft doporučuje:
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Podporuje Portál společnosti aplikace nasazené jako aktualizace softwaru z Configuration Manager?
 
-Yes. Pokud nasadíte aplikaci pomocí funkce aktualizace softwaru, klient je považuje za shodný s tím, že se uživatelské prostředí Portál společnosti nebo centra softwaru.
+Ano. Pokud nasadíte aplikaci pomocí funkce aktualizace softwaru, klient je považuje za shodný s tím, že se uživatelské prostředí Portál společnosti nebo centra softwaru.
 
 ### <a name="can-users-repair-uninstall-and-update-configuration-manager-apps-in-company-portal"></a>Můžou uživatelé opravovat, odinstalovat a aktualizovat aplikace Configuration Manager v Portál společnosti?
 
-Yes. Pokud nakonfigurujete aplikaci Configuration Manager tak, aby podporovala tyto další akce, Portál společnosti podporuje opravu, odinstalaci a aktualizaci.
+Ano. Pokud nakonfigurujete aplikaci Configuration Manager tak, aby podporovala tyto další akce, Portál společnosti podporuje opravu, odinstalaci a aktualizaci.
 
 ## <a name="known-issues"></a>Známé problémy
 
