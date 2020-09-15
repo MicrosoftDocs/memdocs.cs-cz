@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423811"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076215"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -46,10 +46,10 @@ Když použijete certifikační autoritu (CA) Microsoftu:
 
 - Používání profilů certifikátů SCEP:
   - [Nastavte server služby zápisu síťových zařízení (NDES)](certificates-scep-configure.md#set-up-ndes) pro použití s Intune.
-  - [Nainstalujte Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Nainstalujte Microsoft Certificate Connector](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - Používání profilů certifikátů PKCS:
-  - [Instalace Certificate Connectoru PFX pro Microsoft Intune] (Imported-Certificates-PFX-configure.
+  - [Nainstalujte Certificate Connector PFX pro Microsoft Intune](certficates-pfx-configure.md).
   
 - Použití importovaných certifikátů PKCS:
   - [Nainstalujte Certificate Connector PFX pro Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
@@ -133,7 +133,7 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil důvěryhodného certifikátu pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Další**.
+6. Vyberte **Next** (Další).
 
 7. V **nastavení konfigurace**určete soubor. cer pro certifikát důvěryhodné kořenové certifikační autority, který jste předtím exportovali. 
 
@@ -145,15 +145,15 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
    ![Vytvoření profilu a nahrání důvěryhodného certifikátu](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-8. Vyberte **Další**.
+8. Vyberte **Next** (Další).
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Další**.
+   Vyberte **Next** (Další).
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Další**.
+    Vyberte **Next** (Další).
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 

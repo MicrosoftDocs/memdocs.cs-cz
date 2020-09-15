@@ -2,7 +2,7 @@
 title: Verze Technical Preview
 titleSuffix: Configuration Manager
 description: Přečtěte si o větvi Technical Preview, která vám umožní testovat nové funkce a funkce v Configuration Manager.
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564206"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081735"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Technical Preview pro Configuration Manager
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 V nejnovější verzi Configuration Manager Technical Preview jsou k dispozici následující funkce:
 
-### <a name="technical-preview-version-2008"></a>Technical Preview verze 2008
+### <a name="technical-preview-version-2009"></a>Technical Preview verze 2009
 
-- [Náhled dotazu na kolekci](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Analýza chyb SetupDiag pro aktualizace funkcí](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Monitorování stavu scénáře](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Zobrazení vyhodnocení kolekce](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [Zobrazení velikosti pořadí úloh v konzole nástroje](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Úloha odstranění starých shromážděných diagnostických souborů](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Importovat objekty do aktuální složky](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Brána pro správu cloudu se sadou škálování virtuálních počítačů](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Vylepšení vzdáleného řízení](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Nasazení operačního systému přes CMG pomocí spouštěcího média](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [Zobrazení vztahů shromažďování](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Vybudit počítač v konečném termínu nasazení pomocí probuzení z partnerského zařízení](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Vylepšení oznámení v konzole](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Oznámení pro zařízení, která už nezískávají aktualizace](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Vylepšené možnosti restartování Windows serveru pro účty bez oprávnění správce](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [Vylepšení nasazení operačního systému](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Funkce, které byly k dispozici v předchozí verzi Technical Preview, zůstávají dostupné v novějších verzích. Podobně funkce, které jsou přidány do Configuration Manager aktuální větve, zůstávají dostupné ve větvi Technical Preview.
@@ -145,6 +147,16 @@ Následující funkce byly vydány s předchozími verzemi větve Configuration 
 
 > [!TIP]
 > Když je k dispozici nová verze aktuální větve, funkce, které jsou v této verzi k dispozici, jsou uvedeny v článku *co je nového* . Další informace najdete v tématu [co je nového v přírůstkových verzích](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+### <a name="technical-preview-version-2008"></a>Technical Preview verze 2008
+
+- [Náhled dotazu na kolekci](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Analýza chyb SetupDiag pro aktualizace funkcí](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Monitorování stavu scénáře](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Zobrazení vyhodnocení kolekce](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Zobrazení velikosti pořadí úloh v konzole nástroje](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Úloha odstranění starých shromážděných diagnostických souborů](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Importovat objekty do aktuální složky](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Technical Preview verze 2007
 
@@ -164,7 +176,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Následující funkce byly vydány s předchozími verzemi větve Configuration Manager Technical Preview. Tyto funkce zůstanou dostupné v novějších verzích, ale ještě nejsou k dispozici v aktuální větvi.
 
-| Funkce        | Verze Technical Preview |
+| Příznak        | Verze Technical Preview |
 |----------------|---------------------------|
 | Vylepšení dostupných aplikací prostřednictvím CMG <!--7033501--> | [Verze Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
 | Připojení tenanta: spuštění skriptů z centra pro správu <!--6234688--> | [Verze Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |

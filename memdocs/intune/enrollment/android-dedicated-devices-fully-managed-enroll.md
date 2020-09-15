@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/15/2018
+ms.date: 9/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: eec0f59504351f6b40e221a15d89a62e9a28be05
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915241"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076198"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Registrace firemních zařízení s Androidem, plně spravovaných nebo vlastněných společností s pracovními profily
 
-Po nastavení podnikových [zařízení](android-kiosk-enroll.md)s Androidem, [plně spravovaných zařízení](android-fully-managed-enroll.md)nebo [zařízení pracovních profilů vlastněných společností](android-corporate-owned-work-profile-enroll.md) v Intune můžete zařízení zaregistrovat. Registrace v Intune pro vyhrazená zařízení i pro plně spravovaná zařízení začíná Obnovením továrního nastavení. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
+Po nastavení podnikových [zařízení](android-kiosk-enroll.md)s Androidem, [plně spravovaných zařízení](android-fully-managed-enroll.md)nebo [zařízení pracovních profilů vlastněných společností](android-corporate-owned-work-profile-enroll.md) v Intune můžete zařízení zaregistrovat. Registrace v Intune pro vyhrazená zařízení, plně spravovaná zařízení a firmy, které mají pracovní profil, začínají s obnovením do továrního nastavení. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
 
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |

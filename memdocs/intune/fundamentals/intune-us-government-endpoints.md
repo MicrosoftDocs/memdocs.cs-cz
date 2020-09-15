@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25ec8099c628c4a39266a9352b3b4b9810698592
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 032e6468ce326637e264b232cdd4e4d954ea70d8
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996584"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081803"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
-Tato stránka obsahuje seznam koncových bodů pro státní správu USA potřebných pro nastavení proxy serveru v nasazeních Intune.
+Tato stránka obsahuje seznam koncových bodů USA, USA (USA) High a Department of obrany (DoD), které jsou potřeba pro nastavení proxy serveru v nasazeních Intune.
 
 Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 

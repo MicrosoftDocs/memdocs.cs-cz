@@ -2,7 +2,7 @@
 title: Nastavení klienta
 titleSuffix: Configuration Manager
 description: Přečtěte si o výchozím a vlastním nastavení pro řízení chování klienta.
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693416"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076086"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Informace o nastavení klienta v Configuration Manager
 
@@ -644,11 +644,9 @@ Tuto možnost nastavte na **Ano** , pokud chcete k navázání připojení vzdá
 ### <a name="select-the-user-portal"></a>Výběr uživatelského portálu
 
 <!--CMADO-3601237,INADO-4297660-->
-Pokud nasadíte Portál společnosti do spoluspravovaných zařízení verze 2006, nakonfigurujte toto nastavení na **portál společnosti**. Toto nastavení zajistí, že uživatelé budou dostávat jenom oznámení od Portál společnosti.
+Pokud nasadíte Portál společnosti do spoluspravovaných zařízení verze 2006, nakonfigurujte toto nastavení na **portál společnosti**. Toto nastavení zajistí, aby oznámení z Configuration Manager a Intune spouštěla Portál společnosti. Pokud je oznámení Configuration Manager pro scénář, který Portál společnosti nepodporuje, vyberte oznámení, že se spustí Centrum softwaru.
 
-Pokud Portál společnosti nainstalujete na spoluspravované zařízení, ale nakonfigurujete toto nastavení na **Centrum softwaru**, budou se uživatelům zobrazovat oznámení z obou portálů. Toto prostředí může být matoucí pro uživatele.
-
-Pokud změníte nastavení klienta pro Portál společnosti, když uživatel vybere Configuration Manager oznámení, spustí Portál společnosti. Pokud je oznámení pro scénář, který Portál společnosti nepodporuje, pak se při výběru oznámení spustí Centrum softwaru.
+Pokud nainstalujete Portál společnosti do spoluspravovaného zařízení, ale nakonfigurujete toto nastavení na **Centrum softwaru**, budou oznámení z Configuration Manager spustit Centrum softwaru. Oznámení z Intune spustí Portál společnosti. Toto chování může být matoucí pro uživatele, kteří budou pracovat s různými portály.
 
 Chování Portál společnosti závisí na konfiguraci úloh spolusprávy. Další informace najdete v tématu [použití portál společnosti aplikace na spoluspravovaných zařízeních](../../../comanage/company-portal.md).
 

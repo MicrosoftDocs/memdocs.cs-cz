@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990672"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081786"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -35,6 +35,8 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 > Uživatelé iOS zařízení můžou odebrat některé výchozí aplikace pro iOS, například Akcie nebo Mapy. Intune je ale neumožňuje znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu nainstalovat z App Storu.
 >
 > obchodní aplikace pro iOS mají maximální velikost 2 GB na aplikaci.
+>
+> Apple Shared iPady nepodporují obchodní aplikace.
 
 > [!NOTE]
 > Identifikátory sady prostředků (například *com. contoso. app*) mají být jedinečné identifikátory aplikace. Například pokud chcete pro účely testování nainstalovat beta verzi obchodní aplikace v rámci produkční verze, beta verze musí mít jiný jedinečný identifikátor (například *com. contoso. app-beta*). V opačném případě se beta verze překryje s produkčním prostředím a bude se považovat za upgrade. Přejmenování souboru. ipa nemá žádný vliv na toto chování.

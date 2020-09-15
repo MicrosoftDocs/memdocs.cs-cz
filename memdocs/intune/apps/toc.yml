@@ -81,9 +81,17 @@
             - name: Obchodní aplikace pro macOS
               href: lob-apps-macos.md
             - name: Správa aplikací Win32
-              href: apps-win32-app-management.md
-            - name: Aplikace Win32 – zařízení v režimu S
-              href: apps-win32-s-mode.md
+              items:
+                - name: Přehled správy aplikací Win32
+                  href: apps-win32-app-management.md
+                - name: Příprava aplikace Win32
+                  href: apps-win32-prepare.md
+                - name: Přidání aplikace Win32
+                  href: apps-win32-add.md
+                - name: Řešení problémů s aplikacemi Win32
+                  href: apps-win32-troubleshoot.md
+                - name: Aplikace Win32 – zařízení v režimu S
+                  href: apps-win32-s-mode.md
         - name: Přidání specifických aplikací
           items:
             - name: Aplikace Portál společnosti – Autopilot

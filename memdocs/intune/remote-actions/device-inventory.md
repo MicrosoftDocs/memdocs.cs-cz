@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906816"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076137"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -70,7 +70,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 
 |Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
-|Název|Název zařízení|Windows, iOS|
+|Name|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
 |UDID|Jedinečný identifikátor zařízení|Windows, iOS|
 |ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|Windows, iOS|
@@ -87,7 +87,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |IMEI|Mezinárodní identita mobilního zařízení|Windows, iOS/iPadOS, Android|
 |MEID|Identifikátor mobilního zařízení|Windows, iOS/iPadOS, Android|
 |Manufacturer|Výrobce zařízení|Windows, iOS/iPadOS, Android|
-|Model|Model zařízení|Windows, iOS/iPadOS, Android|
+|Modelování|Model zařízení|Windows, iOS/iPadOS, Android|
 |Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS/iPadOS, Android *|
 |Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|Windows, iOS/iPadOS, Android|
 |Mobilní technologie|Rádiový systém používaný zařízením|Windows, iOS/iPadOS, Android|
@@ -105,7 +105,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
-> Telefonní číslo není v inventáři na vyhrazených nebo plně spravovaných zařízeních s Androidem Enterprise.
+> Telefonní číslo se nepoužívá v inventáři ve vyhrazených, plně spravovaných nebo podnikových pracovních profilech pro Android Enterprise.
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991076"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076171"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -34,7 +34,7 @@ Tento článek se odkazuje na krok 2 [přehledu komunikačního toku SCEP](troub
 Protokoly služby IIS obsahují stejný typ položek pro všechny platformy.
 
 
-1. Na serveru NDES otevřete nejnovější soubor protokolu služby IIS, který najdete v následující složce: *%systemdrive%\inetpub\logs\LogFiles\W3SVC1*
+1. Na serveru NDES otevřete nejnovější soubor protokolu služby IIS, který najdete v následující složce:   *%systemdrive%\inetpub\logs\LogFiles\W3SVC1*
 
 2. V protokolu vyhledejte položky podobné následujícím příkladům. Oba příklady obsahují stav **200**, který se zobrazí poblíž konce:
 
@@ -44,7 +44,7 @@ Protokoly služby IIS obsahují stejný typ položek pro všechny platformy.
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACert&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 3567 0`
 
-3. Když zařízení kontaktuje službu IIS, zaprotokoluje se požadavek HTTP GET pro mscep. dll.
+3. Když zařízení kontaktuje službu IIS, zaprotokoluje se požadavek HTTP GET pro mscep.dll.
 
    Zkontrolujte stavový kód na konci tohoto požadavku:
    - **Stavový kód 200**: Tento stav označuje úspěšné připojení k serveru NDES.
@@ -76,8 +76,8 @@ Zkontrolujte [protokol OMADM zařízení](troubleshoot-scep-certificate-profiles
 Klíčové položky obsahují následující vzorové textové řetězce:
 
 - K dispozici jsou 1 žádosti.
-- Při odesílání GetCACaps (CA) do serveru https://byla přijata zpráva "200 OK" \< >. msappproxy. NET/certsrv/mscep/mscep. dll? operace = GetCACaps & zpráva = CA
-- Podepisování pkiMessage pomocí klíče patřícího k [DN = CN = \< username>; Serial = 1]
+- Při odesílání GetCACaps (CA) do https://. mscep.dll msappproxy.net/certsrv/mscep/se přijala zpráva "200 OK" \<server> ? operace = GetCACaps&zpráva = CA
+- Podepisování pkiMessage pomocí klíče patřícího k [DN = CN = \<username> ; Serial = 1]
 
 
 Služba IIS protokoluje i připojení ve složce%SystemDrive%\inetpub\logs\LogFiles\W3SVC1\ serveru NDES. Například:
@@ -153,7 +153,7 @@ Připojení, která se podobají následujícímu příkladu, s kódem stavu 500
 
 4. Klikněte **na Přidat uživatele nebo skupinu...**, do **pole zadejte názvy objektů k výběru**zadejte **IIS_IURS** a pak klikněte na **OK**.
 
-5. Klikněte na tlačítko **OK**.
+5. Klikněte na **OK**.
 
 6. Restartujte počítač a potom se znovu pokuste o připojení ze zařízení.
 
@@ -181,7 +181,7 @@ Když přejdete na adresu URL serveru SCEP, obdržíte následující zprávu sl
 
 - **Příčina**: k tomuto problému obvykle dochází v případě potíží s instalací konektoru Microsoft Intune.
 
-  Mscep. dll je rozšíření ISAPI, které zachycuje příchozí požadavek a zobrazí chybu HTTP 403, pokud je správně nainstalován.
+  Mscep.dll je rozšíření ISAPI, které zachycuje příchozí požadavek, a pokud je správně nainstalovaná, zobrazí se chyba HTTP 403.
   
   **Řešení**: Zkontrolujte soubor *SetupMsi. log* a zjistěte, zda byl konektor Microsoft Intune úspěšně nainstalován. V následujícím příkladu se *instalace úspěšně dokončila* a byla dokončena *instalace nebo stav chyby: 0* označuje úspěšnou instalaci:
 
@@ -191,6 +191,7 @@ Když přejdete na adresu URL serveru SCEP, obdržíte následující zprávu sl
   ```
 
   Pokud instalace neproběhne úspěšně, odeberte konektor Microsoft Intune a pak ho znovu nainstalujte.
+  Pokud byla instalace úspěšná a nadále obdržíte zprávu o žánru NDES, spusťte příkaz **iisreset** a restartujte službu IIS.
 
 #### <a name="http-error-503"></a>Chyba protokolu HTTP 503
 
@@ -224,7 +225,7 @@ Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událost�
 
   **Řešení**: Odeberte zprostředkující certifikáty z úložiště certifikátů důvěryhodných kořenových certifikačních autorit a pak restartujte server NDES.
   
-  Chcete-li identifikovat všechny zprostředkující certifikáty v úložišti certifikátů důvěryhodných kořenových certifikačních autorit, spusťte následující rutinu prostředí PowerShell:`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
+  Chcete-li identifikovat všechny zprostředkující certifikáty v úložišti certifikátů důvěryhodných kořenových certifikačních autorit, spusťte následující rutinu prostředí PowerShell: `Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
   Certifikát, který má stejný **stav vydaný pro** a **vydaný** hodnotou, je kořenový certifikát. V opačném případě se jedná o zprostředkující certifikát.
 
@@ -268,7 +269,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
 #### <a name="http-414-request-uri-too-long"></a>Požadavek HTTP 414 – identifikátor URI je příliš dlouhý.
 
-Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:`HTTP 414 Request-URI Too Long`
+Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba: `HTTP 414 Request-URI Too Long`
 
 - **Příčina**: filtrování požadavků služby IIS není nakonfigurováno pro podporu dlouhých adres URL (dotazů), které služba NDES obdrží. Tato podpora se konfiguruje při [konfiguraci služby NDES](certificates-scep-configure.md#configure-the-ndes-service) pro použití s infrastrukturou pro SCEP.
 

@@ -2,11 +2,11 @@
 title: Ukládání a zpracovávání údajů v Intune
 titleSuffix: Microsoft Intune
 description: Přečtěte si informace o ukládání a zpracovávání osobních údajů v Intune.
-keywords: ''
+keywords: data, ochrana osobních údajů
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 09/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,40 +18,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bb40b21d9a257586bbd38d24b2e9b6b0a9f8ce3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92c7c597a6d196ab5f8c3170cd5880682a280e73
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079531"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076059"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Ukládání a zpracovávání údajů v Intune
 
-Jakmile Intune [shromáždí údaje](privacy-data-collect.md), následuje jejich uložení a zpracování popsané níže.
+### <a name="storing-customer-data"></a>Ukládání zákaznických dat
 
-## <a name="storing-personal-data"></a>Ukládání osobních údajů
-
-Veškeré shromážděné údaje, které nepatří mezi telemetrická data, se zpracovávají prostřednictvím služby Intune a ukládají nejméně v jednom z následujících umístění: 
-
-- SQLAzure 
-- Spolehlivé kolekce (Service Fabric)  
-- Úložiště Azure 
-
-Telemetrie (protokoly služeb, protokoly výkonu, chyby atd.), které jsou klíčem k monitorování a poskytování stabilní služby se odesílají do úložišť dat telemetrie Microsoftu.
+Jakmile Intune [data shromáždí](privacy-data-collect.md), Intune sleduje standardní zásady zpracování dat pro Microsoft 365, které určují, jak se budou zákaznická data ukládat a zpracovávat. Podívejte [se, kde jsou uložená zákaznická data Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations). Osobní údaje jsou zpracovávány v rámci auditované hranice dodržování předpisů služby Intune v rámci opatření technického zabezpečení, která jsou zajištěna prostřednictvím [podmínek služby Microsoft Online Services (OST)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 ### <a name="storage-locations"></a>Umístění úložišť
 
 Microsoft nabízí a provozuje služby Intune v mnoha oblastech po celém světe. Intune respektuje volbu umístění úložiště pro zákaznická data provedenou správcem.
 
-Další informace najdete v tématu [kde se nacházejí vaše data?](https://www.microsoft.com/trust-center/privacy/data-location)
+Další informace najdete v tématu [umístění datového centra](https://docs.microsoft.com/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations) .
 
 ### <a name="personal-data-retention"></a>Uchovávání osobních údajů
 
-Obecně platí, že Intune uchovává osobní údaje až po dobu 30 dnů od odebrání uživatele ze správy Intune.
+Microsoft 365 standardní zásady pro zpracování dat určují, jak dlouho se budou data zákazníků uchovávat po odstranění. Existují dva scénáře, ve kterých jsou odstraněna zákaznická data:
 
-Data telemetrie shromážděná jako součást využití Intune se uchovávají po dobu maximálně 30 dnů.
+-**Aktivní odstranění**: tenant má aktivní předplatné a uživatel nebo správce odstraní data nebo správce odstraní uživatele.
+-**Pasivní odstranění**: předplatné tenanta skončí.
 
-Protokoly auditů se uchovávají až jeden rok.
+Pro každý scénář odstranění najdete informace v tématu [uchovávání, odstraňování a zničení dat v Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide).  
+
+Obecně platí, že osobní údaje shromážděné službou Intune budou odebrány do 30 dnů po odstranění. Protokoly auditu se uchovávají až po dobu jednoho roku z hlediska zabezpečení. 
+
 
 ## <a name="processing-personal-data"></a>Zpracovávání osobních údajů
 
@@ -60,15 +56,6 @@ Intune zpracovává osobní údaje pomocí systémů s certifikací ISO. Další
 ### <a name="profiling-and-marketing"></a>Profilace a marketing
 
 Žádné osobní údaje shromážděné v rámci poskytování služeb nejsou službou Microsoft Intune využívány k profilování ani marketingovým účelům. 
-
-### <a name="restrict-processing-of-personal-data"></a>Omezení zpracování osobních údajů
-
-Chcete-li omezit zpracování osobních údajů uživatele, můžete účet uživatele odstranit pomocí:
-1. Export elektronické kopie osobních údajů uživatele, jejíž součástí jsou také:
-    - accounts
-    - Data služby
-    - přidružených protokolů.
-2. Odstraňuje se účet uživatele a přidružená data z Intune.
 
 ## <a name="next-steps"></a>Další kroky
 
