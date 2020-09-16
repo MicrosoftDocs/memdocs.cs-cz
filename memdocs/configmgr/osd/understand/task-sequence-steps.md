@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606976"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574792"
 ---
 # <a name="task-sequence-steps"></a>Kroky pořadí úkolů
 
@@ -160,7 +160,7 @@ Zadejte všechny ovladače velkokapacitních paměťových zařízení potřebn�
 
 Vyberte soubor ovladače velkokapacitního úložiště, který se má nainstalovat před instalací klasického operačního systému. Rozevírací seznam se naplní ze zadaného balíčku.  
 
-##### <a name="model"></a>Model
+##### <a name="model"></a>Modelování
 
 Zadejte zařízení kritické pro spouštění, které je potřeba pro nasazení z operačního systému staršího než Windows Vista.  
 
@@ -623,7 +623,7 @@ Na kartě **vlastnosti** tohoto kroku nakonfigurujte nastavení popsaná v této
 
 Cesta systému souborů k umístění, které Configuration Manager používá při ukládání zachycené image operačního systému.  
 
-#### <a name="description"></a>Popis  
+#### <a name="description"></a>Description  
 
 Volitelný uživatelsky definovaný popis zachycené image operačního systému uložený v souboru bitové kopie.  
 
@@ -1096,8 +1096,9 @@ Pokud je pevný disk už zašifrovaný, ale BitLocker je zakázaný, pak krok **
 
 V tomto kroku použijte následující proměnné pořadí úkolů:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>Rutiny pro zapnutí nástroje BitLocker
 
@@ -1238,7 +1239,7 @@ Typ disku, který se má formátovat Z rozevíracího seznamu můžete vybrat je
 
 Konkrétní informace o oddílu nebo svazku, které pořadí úkolů vytvoří, včetně následujících atributů:  
 
-- Název  
+- Name  
 - Zbývající místo na disku  
 
 Pokud chcete vytvořit nový oddíl, vyberte **Nový** a otevřete tak dialogové okno **Vlastnosti oddílu** . Zadejte typ a velikost oddílu a v případě, že se jedná o spouštěcí oddíl. Pokud chcete upravit existující oddíl, vyberte oddíl, který se má upravit, a pak klikněte na tlačítko **vlastnosti** . Další informace o tom, jak nakonfigurovat oddíly pevných disků, najdete v jednom z následujících článků:  
@@ -1592,12 +1593,20 @@ Tento krok použijte k odebrání nebo konfiguraci klienta Configuration Manager
 
 Tento krok úplně odebere klienta Configuration Manager, místo aby se odebraly jenom informace o klíči. Když pořadí úkolů nasadí zachycenou image operačního systému, nainstaluje se vždy nový Configuration Manager klienta.  
 
-> [!Note]  
-> Modul pořadí úloh odebere klienta pouze během **sestavování a zaznamenání referenčního pořadí úkolů operačního systému** . Modul pořadí úloh neodebere klienta během jiných metod zachycení, například záznamového média nebo vlastního pořadí úkolů.  
+> [!TIP]
+> Ve výchozím nastavení modul pořadí úloh odebere klienta pouze během **sestavování a zaznamenání referenčního pořadí úloh operačního systému** . Modul pořadí úloh neodebere klienta během jiných metod zachycení, například záznamového média nebo vlastního pořadí úkolů. Toto chování můžete overide pro pořadí úkolů nasazení operačního systému. Před krok **připravit klienta nástroje ConfigMgr pro zaznamenání** nastavte proměnnou pořadí úloh **SMSTSUninstallCCMClient** na **hodnotu true** . Tato proměnná a chování se vztahuje jenom na pořadí úkolů nasazení operačního systému. Po příštím restartování zařízení odebere klienta.
 
 Tento krok pořadí úkolů se spouští jenom v plném operačním systému. Neběží v systému Windows PE.  
 
 Chcete-li přidat tento krok v editoru pořadí úloh, vyberte možnost **Přidat**, vyberte možnost **bitové kopie**a vyberte možnost **připravit klienta nástroje ConfigMgr pro zaznamenání**.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>Proměnné pro přípravu klienta nástroje ConfigMgr pro zaznamenání
+
+V tomto kroku použijte následující proměnné pořadí úkolů:  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>Rutiny pro přípravu klienta nástroje ConfigMgr pro zaznamenání
 

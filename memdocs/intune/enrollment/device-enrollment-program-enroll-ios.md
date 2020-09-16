@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907292"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574877"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -59,7 +59,7 @@ Podpora pro zařízení s nekontrolovaným ADE je v iOS/iPadOS 11 zastaralá. V 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Zařízení zakoupená v nástroji [ADE společnosti Apple](https://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
@@ -226,14 +226,13 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
 
 14. Pokud jste v předchozím kroku zvolili **Povolit Apple Configurator podle certifikátu**, zvolte certifikát Apple Configuratoru, který se má importovat.
 
-15. Můžete zadat formát pojmenování pro zařízení, která se při registraci a při každém úspěšném vrácení se změnami automaticky používají. Chcete-li vytvořit šablonu pro pojmenování, vyberte možnost **Ano** v části **použít šablonu názvu zařízení**. Pak v poli **šablona názvu zařízení** zadejte šablonu, která se má použít pro názvy používané tímto profilem. Můžete zadat formát šablony, který zahrnuje typ zařízení a sériové číslo. 
-
+15. Můžete zadat formát pojmenování pro zařízení, která se při registraci a při každém úspěšném vrácení se změnami automaticky používají. Chcete-li vytvořit šablonu pro pojmenování, vyberte možnost **Ano** v části **použít šablonu názvu zařízení**. Pak v poli **šablona názvu zařízení** zadejte šablonu, která se má použít pro názvy používané tímto profilem. Můžete zadat formát šablony, který zahrnuje typ zařízení a sériové číslo. Šablona názvu zařízení zahrnuje podporu pro iPhone, iPad a iPod touch. 
 16. Klikněte na tlačítko **Další: přizpůsobení pomocníka s nastavením**.
 
 17. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![ přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Nastavení oddělení | Popis |
+    | Nastavení oddělení | Description |
     |---|---|
     | <strong>Department Name</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |

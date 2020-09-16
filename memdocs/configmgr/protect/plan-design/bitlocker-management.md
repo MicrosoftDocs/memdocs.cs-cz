@@ -2,7 +2,7 @@
 title: Plánování správy nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Plánování správy nástroj BitLocker Drive Encryption s využitím Configuration Manager
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574527"
 ---
 # <a name="plan-for-bitlocker-management"></a>Plánování správy nástroje BitLocker
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699955"
 
 <!-- 3601034 -->
 
-Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitLocker Drive Encryption (BDE) pro místní klienty Windows, které jsou připojené ke službě Active Directory. Azure Active Directory se připojili nebo klienti v pracovní skupině nejsou podporováni. Poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM).
+Počínaje verzí 1910 použijte Configuration Manager ke správě nástroj BitLocker Drive Encryption (BDE) pro místní klienty Windows, které jsou připojené ke službě Active Directory. Poskytuje úplnou správu životního cyklu BitLockeru, která může nahradit použití nástroje Microsoft BitLocker Administration and Monitoring (MBAM).
 
 > [!NOTE]
 > Configuration Manager ve výchozím nastavení nepovolí tuto volitelnou funkci. Tuto funkci musíte před použitím povolit. Další informace naleznete v části [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Další informace najdete v tématu [Přehled nástroje BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
+Obecnější informace o nástroji BitLocker najdete v tématu [Přehled nástroje BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Pokud chcete spravovat šifrování na zařízeních s Windows 10 spravovaných pomocí cloudové služby Microsoft Endpoint Manager, přepněte [ **Endpoint Protection** úlohy](../../comanage/workloads.md#endpoint-protection) do Intune. Další informace o používání Intune najdete v tématu [šifrování Windows](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -70,7 +70,9 @@ Umožněte jiným osoby ve vaší organizaci mimo konzolu Configuration Manager,
 
 Umožněte uživatelům využít klíč s jedním klíčem k odemknutí zařízení zašifrovaného nástrojem BitLocker. Po použití tohoto klíče se pro zařízení vygeneruje nový klíč.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
+
+- Klienti v pracovní skupině nebo klienti v nedůvěryhodných doménách nejsou podporováni Azure Active Directoryi. Klient aktuálně musí být připojený k místní službě Active Directory. Tato konfigurace se ověřuje pomocí služby obnovení, aby v úschově klíče.
 
 - K vytvoření zásady správy BitLockeru potřebujete roli **úplného správce** v Configuration Manager.
 

@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697343"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574724"
 ---
 # <a name="task-sequence-variables"></a>Proměnné pořadí úkolů
 
@@ -579,6 +579,12 @@ Pokud je v katalogu ovladačů více ovladačů zařízení, které jsou kompati
 (vstup)
 
 Seznam jedinečných ID kategorií v katalogu ovladačů oddělených čárkami. Krok **automaticky použít ovladač** se považuje jenom na ovladače alespoň v jedné ze zadaných kategorií. Tato hodnota je volitelná a ve výchozím nastavení není nastavená. Získání dostupných ID kategorií pomocí výčtu seznamu **SMS_CategoryInstance** objektů na webu.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*Platí pro krok [zapnout nástroj BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) .*
+
+Zadejte kód PIN pro šifrování BitLockeru. Tato proměnná je platná pouze v případě, že je režim nástroje BitLocker **TPM a kód PIN**.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1878,7 +1884,7 @@ Následující proměnné jsou zastaralé:
 *Předchozí chování*: při použití image proměnná OSDPreverveDriveLetter určuje, jestli pořadí úkolů používá písmeno jednotky zaznamenané v souboru bitové kopie (WIM). Nastavte hodnotu této proměnné na, pokud chcete `false` použít umístění, které určíte v nastavení **cíl** v kroku pořadí úkolů **použít operační systém** . Další informace najdete v tématu [použití bitové kopie operačního systému](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage).
 
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Kroky pořadí úkolů](task-sequence-steps.md)
 - [Použití proměnných pořadí úloh](using-task-sequence-variables.md)

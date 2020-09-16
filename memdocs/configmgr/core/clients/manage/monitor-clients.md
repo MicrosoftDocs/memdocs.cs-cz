@@ -2,7 +2,7 @@
 title: Monitorování klientů
 titleSuffix: Configuration Manager
 description: Získejte podrobné pokyny k monitorování klientů v Configuration Manager
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525909"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574608"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Postup monitorování klientů v Configuration Manager
 
@@ -24,7 +24,7 @@ ms.locfileid: "87525909"
 Po instalaci klienta Configuration Manager do zařízení s Windows ve vaší lokalitě monitorujte svůj stav a činnost v konzole Configuration Manager.  
 
 
-## <a name="about-client-status"></a><a name="bkmk_about"></a>O stavu klienta
+## <a name="about-client-status"></a><a name="bkmk_about"></a> O stavu klienta
 
 Configuration Manager poskytuje následující typy informací jako stav klienta:  
 
@@ -47,7 +47,7 @@ Configuration Manager poskytuje následující typy informací jako stav klienta
 - **Zastaralé**: web zjistil nový záznam zařízení se stejným ID hardwaru, takže označí starý záznam jako zastaralý. Sestavy nepočítají zastaralé záznamy stejného zařízení vícekrát. Stále můžete cílit na zásady na zastaralá zařízení. Pokud web po 90 dnech nečinnosti neobdrží prezenční signál pro zastaralý záznam, odebere zastaralé zařízení, když spustí úlohu údržby lokality **Odstranit zastaralá data zjišťování klientů**.
 
 
-## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a>Monitorování jednotlivých klientů
+## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a> Monitorování jednotlivých klientů
 
 1. V konzole Configuration Manager přejdete do pracovního prostoru **prostředky a kompatibilita** . Vyberte uzel **zařízení** nebo zvolte kolekci v části **kolekce zařízení**.  
 
@@ -71,16 +71,16 @@ Configuration Manager poskytuje následující typy informací jako stav klienta
 3. Výběrem jednotlivého klienta v podokně se seznamem zobrazíte další stav v podokně podrobností. Tyto informace zahrnují činnost klienta a stav kontroly klienta.  
 
 
-## <a name="client-health-dashboard"></a><a name="bkmk_health"></a>Řídicí panel stavu klienta
+## <a name="client-health-dashboard"></a><a name="bkmk_health"></a> Řídicí panel stavu klienta
 
 <!--3599209-->
 Nasadíte aktualizace softwaru a další aplikace, které vám pomůžou zabezpečit vaše prostředí, ale tato nasazení dosáhnou jenom zdravých klientů. Bezstavové Configuration Manager klienti nepříznivě ovlivňují celkové dodržování předpisů. Určení stavu klienta může být náročné v závislosti na jmenovateli: kolik zařízení by mělo být v oboru správy? Pokud například zjistíte všechny systémy ze služby Active Directory, i když některé z těchto záznamů jsou pro vyřazené počítače, tento proces zvýší váš jmenovatel.
 
-Počínaje verzí 1902 si prohlédněte řídicí panel s informacemi o stavu klientů Configuration Manager ve vašem prostředí. Zobrazit stav klienta, stav scénáře a běžné chyby. Filtrovat zobrazení podle několika atributů, aby se zobrazily případné problémy podle verzí operačního systému a klienta.
+Configuration Manager poskytuje řídicí panel s informacemi o stavu klientů ve vašem prostředí. Zobrazit stav klienta, stav scénáře a běžné chyby. Filtrovat zobrazení podle několika atributů, aby se zobrazily případné problémy podle verzí operačního systému a klienta.
 
 V konzole Configuration Manager přejdete do pracovního prostoru **monitorování** . Rozbalte položku **stav klienta**a vyberte uzel **řídicí panel stavu klienta** .
 
-![Snímek obrazovky řídicího panelu stavu klienta](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="Snímek obrazovky řídicího panelu stavu klienta" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > Neexistují žádné změny, které by bylo možné ccmevalovat.  
@@ -91,18 +91,18 @@ Ve výchozím nastavení se na řídicím panelu stavu klienta zobrazují online
 
 V horní části řídicího panelu je k dispozici sada filtrů pro úpravu dat zobrazených na řídicím panelu.
 
-- **Kolekce**: ve výchozím nastavení se na řídicím panelu zobrazí zařízení v kolekci **všechny systémy** . Vyberte kolekci zařízení ze seznamu pro určení oboru zobrazení pro podmnožinu zařízení v určité kolekci.  
+- **Stav klienta pro klienty v následujících kolekcích**: ve výchozím nastavení zobrazuje řídicí panel zařízení v kolekci **všechny systémy** . Vyberte kolekci zařízení pro určení oboru zobrazení pro podmnožinu zařízení v určité kolekci.  
 
-- **Online/offline**: ve výchozím nastavení se na řídicím panelu zobrazí jenom online klienti. Tento stav pochází z kanálu oznámení klienta, který každých pět minut aktualizuje stav klienta. Další informace najdete v tématu [o stavu klienta](monitor-clients.md#bkmk_about).  
+- **Klient aktivní během posledního počtu dnů**: ve výchozím nastavení se na řídicím panelu zobrazí klienti, kteří jsou v posledních třech dnech aktivní.  
 
-- **Aktivní \# dny**: ve výchozím nastavení se na řídicím panelu zobrazí klienti, kteří jsou v posledních třech dnech aktivní.  
+- **Zahrnout stav klienta pro offline klienty**: ve výchozím nastavení se na řídicím panelu zobrazí jenom online klienti. Tento stav pochází z kanálu oznámení klienta, který každých pět minut aktualizuje stav klienta. Další informace najdete v tématu [o stavu klienta](monitor-clients.md#bkmk_about).  
 
-- **Pouze selhání**: umožňuje určit rozsah zobrazení jenom na zařízení, která hlásí chybu stavu klienta.  
+- **Zobrazit jenom podrobnosti o nesprávném klientovi: umožňuje**určit rozsah zobrazení jenom na zařízení, která hlásí chybu stavu klienta.  
 
     > [!Tip]  
     > Tento filtr použijte spolu s dlaždicemi verze klienta a verze operačního systému. Další informace najdete v tématu [verze dlaždic](#version-tiles).
 
-### <a name="client-health-percentage"></a>Procento stavu klienta
+### <a name="overall-client-health"></a>Celkový stav klienta
 
 Tato dlaždice zobrazuje celkový stav klienta ve vaší hierarchii.
 
@@ -161,7 +161,7 @@ Failure 1 description
 Solution for failure 1 -->
 
 
-## <a name="monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a>Monitorování stavu všech klientů
+## <a name="monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> Monitorování stavu všech klientů
 
 1. V konzole Configuration Manager otevřete pracovní prostor **monitorování** a vyberte uzel **stav klienta** . Projděte si celkové statistiky pro činnost klienta a kontroly klientů napříč lokalitou. Změňte rozsah informací výběrem jiné kolekce.  
 
@@ -174,7 +174,7 @@ Solution for failure 1 -->
     Nakonfigurujte výstrahy, které vás upozorní, když výsledky kontroly klienta nebo aktivita klienta poklesne pod zadané procento. Tato lokalita může také upozorňovat na případ, kdy náprava selhává v zadaném procentu klientů. Další informace najdete v tématu [Postup konfigurace stavu klienta](../deploy/configure-client-status.md).  
 
 
-## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a>Kontroly stavu klienta
+## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a> Kontroly stavu klienta
 
 Kontrola klienta spustí následující kontroly a nápravy:  
 

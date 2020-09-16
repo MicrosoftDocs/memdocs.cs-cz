@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088186"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574826"
 ---
 # <a name="unlicensed-admins"></a>Nelicencovaní správci
+
+> [!Important]
+> Tato možnost pouze odebere licenční požadavek pro správce k přístupu ke službě Microsoft Endpoint Manager. Používání dalších funkcí nebo služeb, například Azure Active Directory Premium, může stále vyžadovat licenci pro správce.
 
 Správci služby Intune a správce koncového bodu Microsoftu můžete udělit přístup ke správcům bez licencí Intune.
 

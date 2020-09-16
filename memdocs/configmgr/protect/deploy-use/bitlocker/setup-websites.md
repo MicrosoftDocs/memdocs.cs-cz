@@ -2,7 +2,7 @@
 title: Nastavení portálů nástroje BitLocker
 titleSuffix: Configuration Manager
 description: Instalace součástí pro správu nástroje BitLocker pro samoobslužný portál a web pro správu a monitorování
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697258"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574588"
 ---
 # <a name="set-up-bitlocker-portals"></a>Nastavení portálů nástroje BitLocker
 
@@ -55,7 +55,7 @@ Na cílovém webovém serveru proveďte následující akce:
     .\MBAMWebSiteInstaller.ps1 -SqlServerName <ServerName> -SqlInstanceName <InstanceName> -SqlDatabaseName <DatabaseName> -ReportWebServiceUrl <ReportWebServiceUrl> -HelpdeskUsersGroupName <DomainUserGroup> -HelpdeskAdminsGroupName <DomainUserGroup> -MbamReportUsersGroupName <DomainUserGroup> -SiteInstall Both
     ```
 
-    Příklad:
+    Třeba
 
     ``` PowerShell
     .\MBAMWebSiteInstaller.ps1 -SqlServerName sql.contoso.com -SqlInstanceName instance1 -SqlDatabaseName CM_ABC -ReportWebServiceUrl https://rsp.contoso.com/ReportServer -HelpdeskUsersGroupName "contoso\BitLocker help desk users" -HelpdeskAdminsGroupName "contoso\BitLocker help desk admins" -MbamReportUsersGroupName "contoso\BitLocker report users" -SiteInstall Both
@@ -106,6 +106,8 @@ Tento proces používá skript prostředí PowerShell, MBAMWebSiteInstaller.ps1 
 - `-IISWebSite`: Web, na který skript nainstaluje webové aplikace MBAM. Ve výchozím nastavení používá výchozí web služby IIS. Před použitím tohoto parametru vytvořte vlastní web.
 
 - `-InstallDirectory`: Cesta, kam skript nainstaluje soubory webových aplikací. Ve výchozím nastavení je tato cesta `C:\inetpub` . Před použitím tohoto parametru vytvořte vlastní adresář.
+
+- `-DomainName`*platí pro verzi 2002 a novější*: zadejte název domény pro rozhraní NetBIOS serveru pomocí služby technické podpory nebo samoobslužného webového portálu. Nutné pouze v případě, že název domény pro rozhraní NetBIOS neodpovídá názvu domény DNS. Tato konfigurace je také známá jako oddělený obor názvů domény. Například `-DomainName fabrikham` Pokud je název domény DNS `contoso.com` .<!-- MEMDocs #759 -->
 
 - `-Uninstall`: Odinstaluje webové portály pro správu nástroje BitLocker a samoobslužné webové portály na webovém serveru, kde byly dříve nainstalovány.
 

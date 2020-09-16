@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606931"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574674"
 ---
 # <a name="deploy-bitlocker-management"></a>Nasazení správy nástroje BitLocker
 
@@ -35,7 +35,7 @@ Před vytvořením a nasazením zásad správy BitLockeru postupujte takto:
 
 - V případě potřeby [Zašifrujte klíče pro obnovení](encrypt-recovery-data.md) v databázi lokality.
 
-## <a name="create-a-policy"></a>Vytvoření zásady
+## <a name="create-a-policy"></a>Vytvoření zásad
 
 Když tuto zásadu vytvoříte a nasadíte, povolí klient Configuration Manager v zařízení agenta pro správu BitLockeru.
 
@@ -214,7 +214,8 @@ Pokud chcete tento problém obejít, nejdřív na zařízení zakažte nástroj 
 
 Obslužná rutina klienta Configuration Manager pro BitLocker se spolupracuje. Pokud je zařízení spoluspravované a přepnete [Endpoint Protection úlohy](../../../comanage/workloads.md#endpoint-protection) do Intune, bude klient Configuration Manager ignorovat zásady BitLockeru. Zařízení získá zásady šifrování Windows z Intune.
 
-Když přepnete autority pro správu šifrování a také požadovaný šifrovací algoritmus, budete muset naplánovat [nové šifrování](#re-encryption) .
+> [!NOTE]
+> Přepínání autorit pro správu šifrování při zachování požadovaného šifrovacího algoritmu nevyžaduje na klientovi žádné další akce. Pokud však přepnete autority pro správu šifrování a požadovaný šifrovací algoritmus, bude nutné naplánovat [nové šifrování](#re-encryption).
 
 Další informace o správě nástroje BitLocker s Intune najdete v následujících článcích:
 
