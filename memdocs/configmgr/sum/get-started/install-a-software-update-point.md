@@ -5,17 +5,17 @@ description: Primární lokality vyžadují bod aktualizace softwaru v lokalitě
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715470"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718837"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Instalace a konfigurace bodu aktualizace softwaru  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81715470"
 ### <a name="configure-ssl-communications-to-wsus"></a>Konfigurace komunikace SSL se službou WSUS  
  Komunikaci SSL můžete nakonfigurovat na stránce průvodce **Obecné** nebo na kartě **Obecné** ve vlastnostech bodu aktualizace softwaru.  
 
- Další informace o používání protokolu SSL najdete v článku [Rozhodnutí ohledně konfigurace serveru WSUS pro použití protokolu SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ Další informace o použití protokolu SSL najdete v tématu [rozhodnutí, jestli se má služba WSUS nakonfigurovat tak, aby používala protokol SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) , a [nakonfigurujte bod aktualizace softwaru tak, aby používal protokol TLS/SSL s certifikátem PKI](../get-started/software-update-point-ssl.md).  
 
 ### <a name="wsus-server-connection-account"></a>Účet připojení serveru služby WSUS  
  Můžete nastavit účet, který má server lokality používat při připojení do služby WSUS běžící v bodě aktualizace softwaru. Pokud tento účet nenakonfigurujete, používá Configuration Manager k připojení ke službě WSUS účet počítače pro server lokality. Na stránce **Nastavení serveru proxy a účtu** v průvodci nebo na kartě **Nastavení serveru proxy a účtu** ve vlastnostech bodu aktualizace softwaru nakonfigurujte účet pro připojení serveru WSUS.  V závislosti na používané verzi Configuration Manager můžete účet nakonfigurovat na různých místech průvodce.  
@@ -93,7 +93,7 @@ ms.locfileid: "81715470"
     > [!NOTE]  
     >  Pokud je mezi bodem aktualizace softwaru a internetem brána firewall, může být potřeba nakonfigurovat ji tak, aby podporovala porty HTTP a HTTPS použité pro web služby WSUS. Přístup na bráně firewall však můžete také omezit na vybrané domény. Další informace o naplánování brány firewall podporující aktualizace softwaru najdete v tématu [Konfigurace bran firewall](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **Synchronizovat z umístění nadřazeného zdroje dat: pomocí tohoto nastavení můžete synchronizovat metadata aktualizací softwaru z nadřazeného zdroje synchronizací. <a name="BKMK_wsussync"> </a>** Podřízené primární lokality a sekundární lokality budou automaticky nakonfigurovány tak, aby využívaly adresu URL nadřazené lokality pro toto nastavení. Můžete nastavit synchronizaci aktualizací softwaru z existujícího serveru služby WSUS. Zadejte adresu URL, například `https://WSUSServer:8531`, kde 8531 je port, který se používá pro připojení k serveru WSUS.  
+-   ** <a name="BKMK_wsussync"></a> Synchronizovat z umístění nadřazeného zdroje dat**: pomocí tohoto nastavení můžete synchronizovat metadata aktualizací softwaru z nadřazeného zdroje synchronizací. Podřízené primární lokality a sekundární lokality budou automaticky nakonfigurovány tak, aby využívaly adresu URL nadřazené lokality pro toto nastavení. Můžete nastavit synchronizaci aktualizací softwaru z existujícího serveru služby WSUS. Zadejte adresu URL, například `https://WSUSServer:8531` , kde 8531 je port, který se používá pro připojení k serveru WSUS.  
 
 -   **Nesynchronizovat ze služby Microsoft Update nebo z nadřazeného zdroje dat**: Při tomto nastavení se budou při odpojení bodu aktualizace softwaru na nejvyšší úrovni od Internetu synchronizovat aktualizace softwaru ručně. Další informace najdete v tématu [Synchronizace aktualizací softwaru z odpojeného bodu aktualizace softwaru](synchronize-software-updates-disconnected.md).  
 

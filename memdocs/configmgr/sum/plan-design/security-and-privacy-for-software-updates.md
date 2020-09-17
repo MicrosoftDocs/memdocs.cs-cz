@@ -3,19 +3,19 @@ title: Zabezpečení a ochrana osobních údajů pro aktualizace softwaru
 titleSuffix: Configuration Manager
 description: Použijte tyto osvědčené postupy pro zabezpečení aktualizací softwaru a Naučte se, jak Configuration Manager zpracovává informace o ochraně osobních údajů.
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724003"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718718"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Zabezpečení a ochrana osobních údajů pro aktualizace softwaru v Configuration Manager
 
@@ -42,7 +42,9 @@ Toto téma obsahuje informace o zabezpečení a ochraně osobních údajů pro a
 
 -   Povolte protokol SSL u služby WSUS a použijte osvědčené postupy zabezpečení služby WSUS (Windows Server Update Services).  
 
-     Identifikujte a dodržujte osvědčené postupy zabezpečení pro verzi služby WSUS, kterou používáte s Configuration Manager.  
+     Identifikujte a dodržujte osvědčené postupy zabezpečení pro verzi služby WSUS, kterou používáte s Configuration Manager. 
+
+     Další informace o povolení protokolu SSL najdete v tématu [konfigurace bodu aktualizace softwaru pro používání protokolu TLS/SSL s kurzem certifikátu PKI](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  Pokud nastavíte bod aktualizace softwaru, aby při komunikaci se serverem služby WSUS používal protokol SSL, musíte na serveru služby WSUS nastavit virtuální kořeny pro protokol SSL.  
@@ -59,7 +61,7 @@ Toto téma obsahuje informace o zabezpečení a ochraně osobních údajů pro a
 
      Další informace naleznete v části [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
-##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a>Informace o ochraně osobních údajů pro aktualizace softwaru  
+##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Informace o ochraně osobních údajů pro aktualizace softwaru  
  Aktualizace softwaru prohledávají klientské počítače a zjišťují, jaké aktualizace softwaru potřebujete. Tyto informace pak odesílají zpět do databáze lokality. Během procesu aktualizace softwaru Configuration Manager může přenášet informace mezi klienty a servery, které identifikují počítač a účty přihlášení.  
 
  Configuration Manager udržuje informace o stavu procesu nasazení softwaru. Informace nejsou při přenosu a uchovávání šifrovány. Informace o stavu jsou uloženy v databázi Configuration Manager a jsou odstraněny úlohami údržby databáze. Žádné informace o stavu nejsou odesílány společnosti Microsoft.  

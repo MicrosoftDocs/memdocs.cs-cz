@@ -5,17 +5,17 @@ description: Tyto osvědčené postupy použijte pro aktualizace softwaru v nás
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696634"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718684"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Osvědčené postupy pro aktualizace softwaru v Configuration Manager
 
@@ -53,7 +53,8 @@ Pokud databáze Configuration Manager a WSUS sdílejí stejnou instanci SQL Serv
 
 Při instalaci služby WSUS vyberte nastavení pro **ukládání aktualizací místně**. Toto nastavení způsobí, že služba WSUS stáhne licenční smlouvy, které jsou přidruženy k aktualizacím softwaru. Stáhne je během procesu synchronizace a uloží je na místní pevný disk pro server WSUS. Pokud toto nastavení nevyberete, mohou klientské počítače selhat při kontrole aktualizací softwaru, které mají licenční podmínky. Součást **Správce synchronizace služby WSUS** v bodu aktualizace softwaru ověřuje, že ve výchozím nastavení je toto nastavení povoleno každých 60 minut.  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> Konfigurace bodů aktualizace softwaru tak, aby používaly protokol TLS/SSL
+Konfigurace serverů Windows Server Update Services (WSUS) a jejich odpovídajících bodů aktualizace softwaru na používání protokolu TLS/SSL může snížit schopnost potenciálního útočníka vzdáleně napadnout klienta a zvýšit oprávnění. Aby bylo zajištěno, že jsou zavedeny nejlepší protokoly zabezpečení, důrazně doporučujeme používat protokol TLS/SSL k zabezpečení vaší infrastruktury aktualizace softwaru. Další informace najdete v tématu [konfigurace bodu aktualizace softwaru pro používání protokolu TLS/SSL s kurzem certifikátu PKI](../get-started/software-update-point-ssl.md).
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> Provozní osvědčené postupy  
 

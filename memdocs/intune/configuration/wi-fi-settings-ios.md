@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e3206bf7092218eaa1cf05f77cf310be54ac5336
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327352"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718752"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s iOS a iPadOS v Microsoft Intune
 
@@ -31,7 +31,7 @@ Tato nastavení Wi-Fi jsou rozdělena do dvou kategorií: základní nastavení 
 
 Těmito nastaveními se zabývá tento článek.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil zařízení](wi-fi-settings-configure.md).
 
@@ -44,7 +44,7 @@ Těmito nastaveními se zabývá tento článek.
 - **Název sítě**: Zadejte název pro toto připojení Wi-Fi. Tato hodnota představuje název, který uživatelé na svém zařízení uvidí při procházení seznamu dostupných připojení.
 - **SSID**: Zkratka pro **Service Set Identifier**. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Připojovat automaticky**: Zvolte **Povolit**, pokud se chcete automaticky připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
-- **Skrytá síť**: vyberte **Povolit** , pokud se identifikátor SSID sítě nevysílá. Pokud je SSID sítě všesměrové a viditelné, vyberte **Zakázat** .
+- **Skrytá síť**: **Povolit** odpovídá nastavení zařízení s nastavením v konfiguraci Wi-Fi směrovače. Takže pokud je síť nastavená na skrytou, pak je v profilu sítě Wi-Fi taky skrytá. Vyberte možnost **Zakázat** , pokud je síťové SSID všesměrové a viditelné.
 - **Typ zabezpečení**: Vyberte protokol zabezpečení, který se má použít k ověření sítě Wi-Fi. Možnosti:
 
   - **Otevřené (bez zabezpečení):** tuto možnost použijte jenom v případě, že síť není zabezpečená.
@@ -61,7 +61,7 @@ Těmito nastaveními se zabývá tento článek.
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
 - **SSID**: Zkratka pro **Service Set Identifier**. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Připojovat automaticky**: Zvolte **Povolit**, pokud se chcete automaticky připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
-- **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
+- **Skrytá síť**: **Povolit** odpovídá nastavení zařízení s nastavením v konfiguraci Wi-Fi směrovače. Takže pokud je síť nastavená na skrytou, pak je v profilu sítě Wi-Fi taky skrytá. Vyberte možnost **Zakázat** , pokud je síťové SSID všesměrové a viditelné.
 - **Typ zabezpečení**: Vyberte protokol zabezpečení, který se má použít k ověření sítě Wi-Fi. Možnosti:
   - **WPA-podnikové**
   - **WPA/WPA2-podnikové**
@@ -78,7 +78,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů, které se používají v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA), na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver` . Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klienta** Vyberte **metodu ověřování**. Možnosti:
@@ -91,7 +91,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů, které se používají v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA), na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver` . Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
@@ -111,7 +111,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **PEAP**: Dále zadejte:
 
-    - **Názvy důvěryhodných** - **certifikátů**serveru: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Vztah důvěryhodnosti serveru**  -  **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů, které se používají v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA), na servery bezdrátové sítě pro přístup. Například přidejte `mywirelessserver.contoso.com` nebo `mywirelessserver` . Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:

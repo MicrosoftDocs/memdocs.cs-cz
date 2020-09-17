@@ -5,17 +5,17 @@ description: Plán pro infrastrukturu bodu aktualizace softwaru je nezbytný, ne
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696714"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718820"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Plánování aktualizací softwaru v Configuration Manager
 
@@ -260,10 +260,10 @@ Pokud je server WSUS nakonfigurovaný jako bod aktualizace softwaru, už ho nebu
 Když přidáte roli bodu aktualizace softwaru na primární server lokality, nemůžete použít server WSUS, který je nakonfigurovaný jako replika. Pokud je server WSUS nakonfigurovaný jako replika, Configuration Manager se nepovede nakonfigurovat server WSUS a synchronizace WSUS se nezdařila. První bod aktualizace softwaru, který nainstalujete v primární lokalitě, je výchozím bodem aktualizace softwaru. Další body aktualizace softwaru v lokalitě jsou konfigurovány jako repliky výchozího bodu aktualizace softwaru.  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> Rozhodnutí ohledně konfigurace serveru WSUS pro použití protokolu SSL  
-Použijte protokol SSL k zajištění zabezpečení bodu aktualizace softwaru. Služba WSUS používá protokol SSL při ověřování klientských počítačů a podřízených serverů WSUS daného serveru. Server WSUS využívá protokol SSL také k šifrování metadat aktualizace softwaru. Pokud se rozhodnete zabezpečit službu WSUS pomocí protokolu SSL, připravte server WSUS před instalací bodu aktualizace softwaru. Další informace najdete v článku [Konfigurace protokolu SSL v serveru WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) v dokumentaci pro službu WSUS. 
 
-Když nainstalujete a nakonfigurujete bod aktualizace softwaru, vyberte možnost **povolení komunikace SSL pro server WSUS**. V opačném případě Configuration Manager nakonfiguruje službu WSUS, aby nepoužívala protokol SSL. Pokud povolíte protokol SSL v bodě aktualizace softwaru, nakonfigurujte také všechny body aktualizace softwaru v podřízených lokalitách, aby používaly protokol SSL.  
+Důrazně doporučujeme použít protokol SSL k usnadnění zabezpečení bodu aktualizace softwaru. Služba WSUS používá protokol SSL při ověřování klientských počítačů a podřízených serverů WSUS daného serveru. Server WSUS využívá protokol SSL také k šifrování metadat aktualizace softwaru. Pokud se rozhodnete zabezpečit službu WSUS pomocí protokolu SSL, připravte server WSUS před instalací bodu aktualizace softwaru.
 
+Když nainstalujete a nakonfigurujete bod aktualizace softwaru, vyberte možnost **povolení komunikace SSL pro server WSUS**. V opačném případě Configuration Manager nakonfiguruje službu WSUS, aby nepoužívala protokol SSL. Pokud povolíte protokol SSL v bodě aktualizace softwaru, nakonfigurujte také všechny body aktualizace softwaru v podřízených lokalitách, aby používaly protokol SSL. Další informace najdete v tématu [konfigurace bodu aktualizace softwaru pro používání protokolu TLS/SSL s kurzem certifikátu PKI](../get-started/software-update-point-ssl.md).
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Konfigurace bran firewall  
 
@@ -290,7 +290,7 @@ Tato část obsahuje následující podtémata:
 - [Zdroj synchronizace](#BKMK_SyncSource)
 - [Plán synchronizace](#BKMK_SyncSchedule)
 - [Klasifikace aktualizací](#BKMK_UpdateClassifications)
-- [Produktech](#BKMK_UpdateProducts)
+- [Produkty](#BKMK_UpdateProducts)
 - [Pravidla nahrazení](#BKMK_SupersedenceRules)
 - [Jazyky](#BKMK_UpdateLanguages)  
 - [Maximální doba běhu](#bkmk_maxruntime)

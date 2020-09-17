@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a1929749c5921714078ec54ac687f4cefe1474
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf538bc7dae5ae52c0f550d4193916f5dd5897b
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915870"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718735"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Použití WDAC a prostředí Windows PowerShell k povolení nebo blokování aplikací na zařízeních HoloLens 2 pomocí Microsoft Intune
 
@@ -45,7 +45,7 @@ V Intune je potřeba vytvořit vlastní konfigurační profil pro použití zpro
 
 Kroky v tomto článku použijte jako šablonu a umožněte nebo zamítnout otevírání určitých aplikací na zařízeních HoloLens 2.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 - Seznámení s prostředím Windows PowerShell.
 - Přihlaste se k Intune jako člen:
@@ -65,7 +65,7 @@ Kroky v tomto článku použijte jako šablonu a umožněte nebo zamítnout otev
 V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení aplikací (WDAC) v programu Windows Defender. Zásada zabraňuje otevření konkrétní aplikace. Pak pomocí Intune Nasaďte zásadu na zařízení HoloLens 2.
 
 1. Na stolním počítači otevřete aplikaci **Windows PowerShell** .
-2. Získat informace o nainstalovaném balíčku aplikace na stolním počítači:
+2. Získat informace o nainstalovaném balíčku aplikace na stolním počítači a HoloLens:
 
     ```powershell
     $package1 = Get-AppxPackage -name *<applicationname>*
@@ -74,7 +74,7 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
     Zadejte například .
 
     ```powershell
-    $package1 = Get-AppxPackage -name *cortana*
+    $package1 = Get-AppxPackage -name Microsoft.MicrosoftEdge
     ```
 
     Dále ověřte, že balíček obsahuje atributy aplikace:
@@ -86,16 +86,16 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
     Zobrazí se podobné atributy jako v následujících podrobnostech o aplikaci:
 
     ```powershell
-    Name              : Microsoft.Windows.Cortana
-    Publisher         : CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Name              : Microsoft.MicrosoftEdge
+    Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Architecture      : Neutral
-    ResourceId        : neutral
-    Version           : 1.13.0.18362
-    PackageFullName   : Microsoft.Windows.Cortana_1.13.0.18362_neutral_neutral_cw5n1h2txyewy
-    InstallLocation   : C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy
+    ResourceId        :
+    Version           : 44.20190.1000.0
+    PackageFullName   : Microsoft.MicrosoftEdge_44.20190.1000.0_neutral__8wekyb3d8bbwe
+    InstallLocation   : C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe
     IsFramework       : False
-    PackageFamilyName : Microsoft.Windows.Cortana_cw5n1h2txyewy
-    PublisherId       : cw5n1h2txyewy
+    PackageFamilyName : Microsoft.MicrosoftEdge_8wekyb3d8bbwe
+    PublisherId       : 8wekyb3d8bbwe
     IsResourcePackage : False
     IsBundle          : False
     IsDevelopmentMode : False
