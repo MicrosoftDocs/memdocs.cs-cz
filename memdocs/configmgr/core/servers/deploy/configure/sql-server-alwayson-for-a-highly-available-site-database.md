@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607550"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689408"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Příprava na používání skupin dostupnosti Always On SQL Server s Configuration Manager
 
@@ -85,7 +85,7 @@ Každá instance SQL Server může běžet pod účtem uživatele domény (**ú�
 - Další informace najdete v tématu [Vytvoření koncového bodu zrcadlení databáze pro skupiny dostupnosti Always On](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell).  
 
 
-### <a name="database"></a>databáze
+### <a name="database"></a>Databáze
 
 #### <a name="configure-the-database-on-a-new-replica"></a>Konfigurace databáze na nové replice
 
@@ -390,6 +390,9 @@ Nastavte model obnovení databáze lokality na hodnotu **Full**. Tato konfigurac
 Pokud je alespoň jeden uzel skupiny dostupnosti stále funkční, přeskočte pomocí možnosti Site Recovery **obnovení databáze (tuto možnost použijte v případě, že databáze webového serveru nebyla nijak ovlivněna)**.
 
 Počínaje verzí 1906 může Site Recovery znovu vytvořit databázi na skupině SQL Always On. Tento proces funguje s ručním i automatickým osazením.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Když spustíte Průvodce instalací/obnovením, stránka **databáze nové skupiny dostupnosti** se vztahuje jenom na ruční počáteční konfigurace. Při automatickém osazení není k dispozici žádná záloha sdílené databáze, takže se tato stránka Průvodce nezobrazí.<!-- SCCMDocs #2242 -->
 
 Pokud ve verzi 1902 nebo starší dojde ke ztrátě všech uzlů skupiny dostupnosti, před obnovením lokality nejprve vytvořte skupinu dostupnosti. Configuration Manager nemůže znovu sestavit nebo obnovit uzel dostupnosti. Znovu vytvořte skupinu, obnovte zálohu a znovu nakonfigurujte SQL. Pak pomocí možnosti Site Recovery **přeskočíte obnovení databáze (tuto možnost použijte, pokud databáze lokality nebyla nijak ovlivněna)**.
 

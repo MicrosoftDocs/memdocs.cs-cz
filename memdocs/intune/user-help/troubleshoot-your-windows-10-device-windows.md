@@ -19,12 +19,12 @@ ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 268ef3b9931c86a73ccf4e681240e4d2333c8026
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643436"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689391"
 ---
 # <a name="troubleshoot-windows-10-device-access"></a>Řešení potíží s přístupem k zařízení s Windows 10
 Tento článek popisuje, jak vyřešit problémy s přístupem k zaregistrovanému zařízení s Windows 10. 
@@ -57,7 +57,7 @@ Pokud vidíte svůj pracovní nebo školní účet uvedený v aplikaci nastaven�
 
 #### <a name="resolution"></a>Řešení
 1. Zadejte své uživatelské jméno a heslo znovu. 
-2. Pokud to pořád nefunguje, obraťte se na pracovníky podpory IT, aby získal správnou adresu URL (například: www.yourcompany.onmicrosoft.com). 
+2. Pokud to pořád nefunguje, obraťte se na pracovníky podpory IT, aby získal správnou adresu URL (například: <code>www.yourcompany.onmicrosoft.com</code> ). 
 3. Po zobrazení výzvy zadejte zadanou adresu URL. 
 
 ### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>Vypadá to, že nejste připojení. Ujistěte se, že jste připojení k síti.

@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574724"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689459"
 ---
 # <a name="task-sequence-variables"></a>Proměnné pořadí úkolů
 
@@ -423,7 +423,7 @@ Následující názvy proměnných použijte k definování vlastností *prvníh
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
-Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Příklad:
+Toto nastavení je povinné. Možné hodnoty jsou `True` nebo `False`. Například:
 
 `true`: Povolte pro adaptér protokol DHCP (Dynamic Host Configuration Protocol).
 
@@ -1651,7 +1651,9 @@ Pomocí této proměnné lze dočasně zachovat obsah v mezipaměti pořadí úl
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Určuje příkaz, který se spustí po dokončení pořadí úloh. Například určete `shutdown.exe /r /t 30 /f` restart počítače 30 sekund po dokončení pořadí úloh.
+Určuje příkaz, který se spustí po dokončení pořadí úloh. Těsně před ukončením pořadí úloh vytvoří proces TSManager zadanou akci post. Nečeká ani nezaznamenává žádný stav, po volání tohoto příkazu se pouze ukončí.<!-- MEMDocs #719 -->
+
+Například určete `shutdown.exe /r /t 30 /f` restart počítače 30 sekund po dokončení pořadí úloh.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

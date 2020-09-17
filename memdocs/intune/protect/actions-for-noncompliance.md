@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1394d16dc8493efd258cb8a6779a5d5ff7b7dec1
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909648"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689493"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -39,11 +39,13 @@ Ne všechny akce jsou k dispozici pro všechny platformy.
 
 ## <a name="available-actions-for-noncompliance"></a>Dostupné akce při nedodržení předpisů
 
-K dispozici jsou následující akce při nedodržení předpisů. Pokud není uvedeno jinak, každá akce je k dispozici pro všechny platformy podporované službou Intune:
+K dispozici jsou následující akce při nedodržení předpisů:
 
 - **Označit zařízení jako nevyhovující**: ve výchozím nastavení je tato akce nastavená pro každou zásadu dodržování předpisů a má časový plán nula (**0**), což znamená, že zařízení se ihned označí jako nedodržující předpisy.
 
   Když změníte výchozí plán, zadáte dobu odkladu, ve které může uživatel opravit problémy nebo že bude kompatibilní bez označení jako nevyhovující.
+
+  Tato akce je podporovaná na všech platformách podporovaných službou Intune.
 
 - **Odeslat e-mail koncovému uživateli**: Tato akce odešle uživateli e-mailové oznámení.
 Když povolíte tuto akci:
@@ -51,7 +53,9 @@ Když povolíte tuto akci:
   - Vyberte *šablonu zprávy s oznámením* , kterou tato akce odešle. Před přiřazením jedné k této akci můžete [vytvořit šablonu zprávy s oznámením](#create-a-notification-message-template) . Když vytvoříte vlastní oznámení, přizpůsobíte předmět, text zprávy a může obsahovat logo společnosti, název společnosti a další kontaktní informace.
   - Zvolte, že se má zpráva odeslat dalším příjemcům výběrem jedné nebo více skupin Azure AD.
 
-Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o zařízení, které nedodržuje předpisy.
+  Po odeslání e-mailu Intune zahrne do e-mailového oznámení podrobnosti o zařízení, které nedodržuje předpisy.
+
+  Tato akce je podporovaná na všech platformách podporovaných službou Intune.
 
 - **Vzdáleně uzamknout zařízení, které nedodržuje předpisy**: pomocí této akce můžete vystavit vzdálený zámek zařízení. Uživateli se zobrazí výzva k zadání PIN kódu nebo hesla k odemknutí zařízení. Další informace o funkci [vzdáleného uzamčení](../remote-actions/device-remote-lock.md).
 
@@ -125,7 +129,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 2. Vybrat oznámení dodržování předpisů pro zařízení **zabezpečení Endpoint Security**  >  **Device compliance**  >  **Notifications**  >  **vytvořit oznámení**
 3. V části *základy*zadejte následující informace:
 
-   - **Name**
+   - **Název**
    - **Předmět**
    - **Zpráva**
 

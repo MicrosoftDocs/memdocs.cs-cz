@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,17 +17,17 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2660530e85730b192def24f91b77b151d5ed799c
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193908"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689476"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
 > [!TIP]
-> Na trhu je k dispozici celá řada aplikací MTD. Vaše organizace by vám měla sdělit, která z nich se má použít. Pokud se zobrazí výzva k instalaci aplikace MTD a nebudete okamžitě přesměrováni na nastavení nebo instalaci aplikace, požádejte o pomoc pracovníka podpory IT.  
+> Na trhu je k dispozici celá řada aplikací MTD. Vaše organizace by vám měla sdělit, která z nich se má použít. Pokud se zobrazí výzva k instalaci aplikace MTD a nebudete okamžitě přesměrováni na nastavení nebo instalaci aplikace, požádejte o pomoc pracovníka podpory IT. Tento článek také obsahuje odkazy na výpisy obchodů.   
 
 V rámci požadavků na zabezpečení vaší organizace může být nutné nainstalovat aplikaci pro dodavatele ochrany před mobilními hrozbami (MTD). Tento typ aplikace detekuje a upozorňuje na hrozby na vašem zařízení, jako jsou podezřelé aplikace, sítě nebo ohrožení zabezpečení operačního systému.  
 
@@ -36,18 +36,26 @@ Pokud nemáte požadovanou aplikaci MTD, budete mít k vašemu pracovnímu nebo 
 ## <a name="mtd-apps-for-ios"></a>Aplikace MTD pro iOS
 Na zařízeních s iOS se běžně používají tyto aplikace MTD. Výběrem aplikace otevřete její výpis v App Storu.   
 
+* [ActiveShield](https://go.microsoft.com/fwlink/?linkid=2143345)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
-* [Symantec Endpoint Protection (SEP) – mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2139141)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Zabezpečení Pradeo](https://go.microsoft.com/fwlink/?linkid=2143272)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sophos zachytit X pro mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2143414)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143505)
 * [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
 
 
 ## <a name="mtd-apps-for-android"></a>Aplikace MTD pro Android 
 Na zařízeních s Androidem se běžně používají tyto aplikace MTD. Výběrem aplikace otevřete její výpis v Google Play.  
 
+* [Aktivní ochranný podnik](https://go.microsoft.com/fwlink/?linkid=2143507) 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
-* [Symantec Endpoint Protection (SEP) – mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2139454)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Zabezpečení Pradeo](https://go.microsoft.com/fwlink/?linkid=2143413)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [SEP Mobile (Symantec Endpoint Protection) (https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sophos zachytit X pro mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2143273)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zimperium mobilní IP adresy (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
@@ -112,7 +120,7 @@ Pokud se zjistí hrozba, která překročí definovanou úroveň hrozby vaší o
 2. Přečtěte si podrobnosti o hrozbách v aplikaci, které vysvětlují, jak může hrozba ovlivnit vaše zařízení, pokud je ponecháno nevyřešené a jak ho vyřešit. 
 3. Až v zařízení provedete požadované změny, vraťte se do aplikace MTD a spusťte novou kontrolu. Opakujte tyto kroky, dokud nebudou vyřešeny všechny hrozby. Synchronizace změn ve vaší organizaci může trvat několik minut. Jakmile se tyto změny synchronizují, znovu získáte přístup k chráněné aplikaci. 
 
-## <a name="get-support"></a>Získání podpory
+## <a name="get-support"></a>Získat podporu
 Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) . Požádejte je, aby vám pomohli:
 
 * Určení používané aplikace MTD  
