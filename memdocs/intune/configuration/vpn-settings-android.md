@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13d1f65ab9164c20923fa7293b19bc707718d6a7
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 41b1bbe90d9cda68b9e9f37206eadbd9dbffce09
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146384"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814786"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci sítě VPN v Intune
 
@@ -32,7 +32,7 @@ Další informace o profilech sítě VPN v Intune najdete v tématu [Profily sí
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte konfigurační profil zařízení](vpn-settings-configure.md)a vyberte **Správce zařízení s Androidem**.
+Vytvořte [profil konfigurace zařízení VPN Správce zařízení s Androidem](vpn-settings-configure.md).
 
 ## <a name="base-vpn"></a>Základní síť VPN
 

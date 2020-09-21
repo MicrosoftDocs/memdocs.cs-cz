@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ba8445f2e1892ade0aa6ef04488abd37bf00e87a
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913779"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815102"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -39,9 +39,11 @@ Jako součást řešení správy mobilních zařízení (MDM) použijte tyto kon
 
 Tento článek obsahuje přehled různých typů profilů, které můžete vytvořit. Pomocí těchto profilů povolíte nebo zakážete některé funkce v zařízeních.
 
-## <a name="administrative-templates"></a>Šablony pro správu
+## <a name="administrative-templates-and-group-policy"></a>Šablony pro správu a zásady skupiny
 
 [Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, Microsoft Edge, OneDrive, Vzdálená plocha, Word, Excel a další programy Office. Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které se podobá zásadám skupiny, ale jsou 100% cloudu.
+
+[Zásady skupiny Analytics](group-policy-analytics.md) analyzuje vaše místní objekty zásad skupiny a ukazuje, která nastavení zásad jsou podporovaná, zastaralá a další.
 
 Tato funkce podporuje:
 
@@ -142,7 +144,7 @@ Tato funkce podporuje:
 
 [Nastavení vzdělávání – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny pro iOS/iPadOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -207,7 +209,7 @@ Tato funkce podporuje:
 
 - Správce zařízení s Androidem
 
-## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 [Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) se integruje s Intune, aby monitoroval a chránil zařízení. Nastavíte úrovně rizika a určíte, co se stane, když zařízení překročí tuto úroveň. V kombinaci s podmíněným přístupem můžete přispět k tomu, abyste zabránili škodlivé aktivitě ve vaší organizaci.
 

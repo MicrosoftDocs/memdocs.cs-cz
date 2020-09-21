@@ -1,7 +1,7 @@
 ---
 title: nastavení zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních s iOS/iPadOS k omezení funkcí, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, povolení celoobrazovkového režimu, přidání domén a řízení způsobu interakce uživatelů s webovým prohlížečem Safari v Microsoft Intune.
+description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních s iOS/iPadOS k omezení funkcí v Microsoft Intune. Vytvářejte požadavky na heslo, řídíte uzamčenou obrazovku, využijte integrované aplikace, přidávejte omezené nebo schválené aplikace, zpracujte zařízení Bluetooth, připojte se ke cloudu pro zálohování a úložiště, povolte celoobrazovkový režim, přidejte domény a můžete řídit, jak uživatelé pracují s webovým prohlížečem Safari.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: b82e69c06868416f60a137a71fc72db8e39375b9
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574809"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813852"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -35,7 +35,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvoří konfigurační profil omezení zařízení](device-restrictions-configure.md).
+Vytvořte [konfigurační profil omezení zařízení s iOS/iPadOS](device-restrictions-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
@@ -54,6 +54,16 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Zablokovat vysoce dolety aktualizace PKI**: **blok** znemožní uživatelům přijímat aktualizace softwaru, pokud nejsou zařízení připojená k počítači. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zařízení přijímat aktualizace softwaru bez připojení k počítači.
 - **Omezení sledování služby AD**: **limit** zakáže identifikátor inzerce zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém ponechat povolený.
 - **Vztah důvěryhodnosti pro podnikovou aplikaci**: **blok** **odebere v nastavení** > obecné > profily & správu zařízení na zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby důvěřovali aplikacím, které nebyly staženy z App Storu.
+- **Blokovat klipy aplikací**: **Ano** blokovat klipy aplikací na spravovaných zařízeních. Konkrétně nastavení na **hodnotu Ano**:
+
+  - Zabrání uživatelům přidávat na zařízení klipy aplikací.
+  - Odebere existující klipy aplikací na zařízeních.
+
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém přidávat a odebírat klipy aplikací na zařízeních.
+
+  Tato funkce platí pro:  
+  - iOS 14,0 a novější
+  - iPadOS 14,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -135,7 +145,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
     Pokud je například iOS 12. a k dispozici **1. ledna**a je **zpoždění viditelnosti** nastaveno na **5 dní**, pak iOS 12. a není zobrazeno jako dostupná aktualizace na uživatelských zařízeních. Po **šestém dni** od vydání je tato aktualizace dostupná a uživatelé ji můžou nainstalovat.
 
-    Toto nastavení platí pro:  
+    Tato funkce platí pro:  
     - iOS 11,3 a novější
     - iPadOS 13,0 a novější
 
@@ -179,7 +189,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   
 - **Maximální počet minut po uzamčení obrazovky, po kterém se vyžaduje zadání hesla**<sup>1</sup>: zadejte, jak dlouho mají zařízení zůstat nečinné, než uživatelé musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte.
 
-  Toto nastavení platí pro:  
+  Tato funkce platí pro:  
   - iOS 8.0 +
   - iPadOS 13.0 +
 
@@ -622,13 +632,13 @@ Pokud chcete přidat aplikace, můžete:
 
 ## <a name="autonomous-single-app-mode-asam"></a>Autonomní režim jedné aplikace (ASAM)
 
-Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Když je tento režim nakonfigurovaný a uživatelé spouštějí jednu z nakonfigurovaných aplikací, zařízení je do této aplikace uzamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
+Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace (ASAM). Pokud je nakonfigurováno co nejdříve a uživatelé spustí jednu z nakonfigurovaných aplikací, zařízení je v této aplikaci zamčené. Přepínání aplikace nebo úlohy je zakázané, dokud uživatelé neukončí povolenou aplikaci.
 
 Aby se mohla konfigurace ASAM použít, uživatelé musí ručně otevřít konkrétní aplikaci. Tato úloha se vztahuje také na Portál společnosti aplikaci.
 
 - Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se uživatel neověří. Pokud jsou akce aplikace dokončené uživateli nebo pokud tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
-- Ne všechny aplikace podporují autonomní režim jedné aplikace. K umístění aplikace v autonomním režimu jedné aplikace se obvykle vyžadují ID sady prostředků nebo dvojice klíč-hodnota, které jsou poskytovány zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
+- Ne všechny aplikace podporují autonomní režim jedné aplikace. Pro vložení aplikace do ASAM se obvykle vyžadují ID sady prostředků nebo dvojice klíčových hodnot poskytované zásadami konfigurace aplikace. Další informace najdete v části [ `autonomousSingleAppModePermittedAppIDs` omezení](https://developer.apple.com/documentation/devicemanagement/restrictions) v dokumentaci k MDM společnosti Apple. Další informace o konkrétním nastavení požadovaném pro aplikaci, kterou konfigurujete, najdete v dokumentaci od dodavatele.
 
   Pokud třeba chcete nakonfigurovat místnosti lupy v autonomním režimu jedné aplikace, přiblížením říkáte, že se má použít `us.zoom.zpcontroller` ID sady prostředků. V této instanci provedete také změnu webového portálu zoom. Další informace najdete v centru pro [nápovědu lupy](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
@@ -663,7 +673,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 - **Mono zvuk**: **vyžaduje** , aby bylo na zařízeních nastaveno nastavení usnadnění Mono zvuk. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení se operační systém nemusí spustit nebo povolit tuto funkci v celoobrazovkovém režimu.
 - **Ovládání hlasu**: **vyžaduje** povolení ovládání hlasu na zařízeních a umožňuje uživatelům plně ovládat operační systém pomocí příkazů Siri. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zakázat ovládání hlasu.
 
-  Toto nastavení platí pro:  
+  Tato funkce platí pro:  
   - iOS 13,0 a novější
   - iPadOS 13,0 a novější
   
@@ -683,7 +693,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 - **Mluvit na vybraném textu**: **povolí** nastavení usnadnění výběru řeči na zařízeních. Tato funkce přečte text nahlas, který uživatelé vyberou. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tuto funkci zakázat.
 - **Úpravy hlasového ovládacího prvku**: **umožňuje** uživatelům změnit stav ovládacího prvku hlas na svých zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zablokovat uživatelům změnu stavu ovládání hlasu na svých zařízeních.
 
-  Toto nastavení platí pro:  
+  Tato funkce platí pro:  
   - iOS 13,0 a novější
   - iPadOS 13,0 a novější
 
@@ -706,7 +716,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 
 - Domény pro automatické **vyplňování hesel v Safari**  >  **Adresa URL domény**: přidejte do seznamu jednu nebo více adres URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
 
-  Toto nastavení platí pro:  
+  Tato funkce platí pro:  
   - iOS 9,3 a novější
   - iPadOS 13,0 a novější
 

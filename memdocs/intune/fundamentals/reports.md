@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8d6c159f775ffbc169f2f91b9cf447f24eaf0df4
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912470"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813767"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
 Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
@@ -49,7 +49,7 @@ V protokolech mohou uživatelé s následujícími oprávněními zkontrolovat:
 - Správci přiřazení k roli Intune s oprávněním **ke čtení**
 
 ## <a name="non-compliant-devices-report-operational"></a>Sestava nevyhovujících zařízení (provozní)
-Zařízení nedodržující předpisy sestavují data Surface, která obvykle používá role helpdesku nebo správce k identifikaci problémů a k nápravě problémů. Data nalezená v těchto sestavách jsou včasná, volají neočekávané chování a mají smysl na to, aby se mohla jednat. Sestava je k dispozici společně s úlohou, takže zařízení nedodržující předpisy budou dostupná, aniž by bylo nutné procházet aktivní pracovní postupy. Tato sestava poskytuje možnosti filtrování, vyhledávání, stránkování a řazení. Můžete také přejít k podrobnostem, abyste mohli řešit problémy.
+Sestava zařízení nedodržujících předpisy poskytuje data, která obvykle používá role helpdesku nebo správce k identifikaci problémů a k nápravě problémů. Data nalezená v této sestavě jsou včasná, volají neočekávané chování a mají smysl. Sestava je k dispozici společně s úlohou, takže zařízení nedodržující předpisy budou dostupná, aniž by bylo nutné procházet aktivní pracovní postupy. Tato sestava poskytuje možnosti filtrování, vyhledávání, stránkování a řazení. Můžete také přejít k podrobnostem, abyste mohli řešit problémy.
 
 Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí následujících kroků:
 
@@ -60,6 +60,38 @@ Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí nás
 
     > [!TIP]
     > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a **vyberete zařízení nedodržující**  >  **předpisy**.
+
+## <a name="windows-10-unhealthy-endpoints-report-operational"></a>Sestava nestavových koncových bodů ve Windows 10 (provozní)
+Sestavy pro **koncové body Windows 10 v pořádku** sestavují data Surface, která obvykle používá role helpdesku nebo správce k identifikaci problémů a k nápravě problémů. Data nalezená v této sestavě jsou včasná, volají zařízení, které není v pořádku, primární hlavní název uživatele (UPN) a stav řady nastavení. Sestava je k dispozici jako karta v rámci primární úlohy **antivirové ochrany** . Tato sestava poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Sestavu **koncových bodů Windows 10** , které jsou v pořádku, můžete zobrazit pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **Endpoint Security**  >  **antivirový**  >  **program Windows 10 – koncové body**nejsou v pořádku.
+
+## <a name="windows-10-detected-malware-report-operational"></a>Zjištěná zpráva o malwaru Windows 10 (provozní)
+Zpráva o **malwaru zjištěná ve Windows 10** poskytuje data k identifikaci zařízení s problémy malwaru a k nápravě problémů. Data, která jsou v této sestavě zastaralá, zavolají zařízení, které není v pořádku, uživatelské jméno a závažnost. Sestava je k dispozici jako karta v rámci primární úlohy **antivirové ochrany** . Tato sestava poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Zprávu o **malwaru zjištěné Windows 10** můžete zobrazit pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **Endpoint Security**  >  **Antivirus**  >  **Windows 10 zjištěný malware**.
+
+### <a name="bulk-actions-for-devices"></a>Hromadné akce pro zařízení
+Zpráva o **malwaru zjištěná ve Windows 10** poskytuje hromadné akce, které se vztahují na zařízení vybraná v rámci sestavy. Chcete-li použít hromadnou akci, vyberte řádek odpovídající jednotlivým zařízením (až 100 zařízení po dobu) a vyberte akci. K dispozici jsou následující akce:
+- **Restartovat** – Tato akce provede restart vybraných zařízení.
+- **Rychlé prověřování** – Tato akce provede rychlou kontrolu na vybraných zařízeních v programu Windows Defender. 
+- **Úplná kontrola** – Tato akce provede úplnou kontrolu na vybraných zařízeních v programu Windows Defender. 
+
+Další informace o rozdílu mezi *rychlou kontrolou* a *úplným prohledáním*najdete v tématu [Konfigurace naplánovaných rychlých nebo úplných kontrol virů v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+
+## <a name="feature-update-failures-report-operational"></a>Sestava o chybách aktualizace funkcí (provozní)
+Provozní sestava **neúspěšné aktualizace funkcí** poskytuje podrobnosti o selhání pro zařízení, na která cílí zásada **aktualizace funkcí Windows 10** , a pokusy o aktualizaci. Data nalezená v této sestavě jsou včasná a volají počet zařízení s chybami. Můžete přejít k podrobnostem, abyste mohli řešit problémy. Tato sestava poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Zprávu o **chybách aktualizace funkcí** si můžete prohlédnout pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení**  >  **monitorování**  >  **Selhání aktualizací funkcí**.
 
 ## <a name="device-compliance-report-organizational"></a>Sestava dodržování předpisů pro zařízení (organizace)
 
@@ -89,6 +121,31 @@ Sestava dodržování předpisů zařízení je k dispozici jako Souhrnná sesta
 
     ![Souhrn sestav Intune](./media/intune-reports/intune-reports-01.png)
 
+## <a name="antivirus-agent-status-report-organizational"></a>Zpráva o stavu agenta antivirového programu (organizace)
+Sestava **Stav agenta antivirového** programu poskytuje stav agenta pro zařízení vaší organizace. Tato sestava zobrazuje, která zařízení mají ochranu v reálném čase nebo v síti, i jejich stav. Data, která jsou v této sestavě zastaralá, zavolají zařízení, které není v pořádku, uživatelské jméno a závažnost. Sestava je k dispozici z primární úlohy **antivirové ochrany v programu Microsoft Defender** . Tato sestava poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Zprávu o **stavu antivirového agenta** si můžete zobrazit pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Výběr **sestav**  >  Stav agenta antivirové ochrany**antivirového programu společnosti Microsoft Defender**  >  **Antivirus agent status**.
+
+## <a name="detected-malware-report-organizational"></a>Zjištěná zpráva o malwaru (organizace)
+Sestava **zjištěného malwaru** poskytuje stav malwaru pro zařízení vaší organizace. Tato sestava zobrazuje počet zařízení se zjištěným malwarem a také podrobnosti o malwaru. Data nalezená v této sestavě jsou zastaralá, volají název a závažnost zařízení a také další podrobnosti související s malwarem. Sestava je k dispozici z primární úlohy **antivirové ochrany v programu Microsoft Defender** . Tato sestava také poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Zjištěnou zprávu o **malwaru** můžete zobrazit pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Výběr **sestav**program  >  **Microsoft Defender Antivirus**  >  **zjistil malware**.
+
+## <a name="windows-10-feature-updates-organizational"></a>Aktualizace funkcí Windows 10 (organizace)
+Sestava **aktualizací funkcí Windows 10** poskytuje celkový přehled o dodržování předpisů u zařízení, na která cílí zásada **aktualizace funkcí Windows 10** . Tato sestava uvádí stav aktualizace na základě stavu aktualizace. Můžete si také prohlédnout podrobnosti o konkrétní aktualizaci zařízení. Data zjištěná v těchto sestavách jsou včasná, volají název a stav zařízení a také další podrobnosti související s aktualizací. V úloze **aktualizace systému Windows** je k dispozici Souhrnná sestava. Tato sestava také poskytuje filtrování, vyhledávání, stránkování a řazení. 
+
+Sestavu **aktualizací funkcí Windows 10** můžete zobrazit pomocí následujících kroků:
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Pokud **Reports**  >  chcete zobrazit souhrnnou sestavu, vyberte sestavy**aktualizace pro Windows** .
+3. Vyberte kartu **sestavy** a kliknutím na **sestavu aktualizace funkcí Windows** Zobrazte sestavu **aktualizace funkcí Windows 10** .
+
 ## <a name="device-compliance-trend-report-historical"></a>Sestava trend dodržování předpisů pro zařízení (historická)
 
 Sestavy trendu dodržování předpisů pro zařízení jsou pravděpodobně používány správci a architekty k identifikaci dlouhodobých trendů dodržování předpisů zařízením. Agregovaná data se zobrazují v časovém intervalu a jsou užitečná pro budoucí rozhodování o investicích, řízení procesů a vyšetřování jakýchkoli anomálií. Filtry je také možné použít k zobrazení konkrétních trendů. Data poskytnutá touto sestavou jsou snímkem aktuálního stavu tenanta (téměř v reálném čase). 
@@ -115,13 +172,13 @@ Vlastní sestavy můžete vytvářet a zobrazovat pomocí následujících krok�
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **sestavy**  >  **nastavení diagnostiky** přidat [nastavení diagnostiky](reports.md#diagnostic-settings).
 
-    ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04.png)
+    ![Sestavy Intune – přidání nastavení diagnostiky](./media/intune-reports/intune-reports-04.png)
 
 3. Kliknutím na **Přidat nastavení diagnostiky** zobrazíte podokno **nastavení diagnostiky** . 
 4. Přidejte **název** nastavení diagnostiky. 
 5. Vyberte nastavení **odeslat Log Analytics** a **DeviceComplianceOrg** .
 
-    ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04a.png)
+    ![Sestavy Intune – nastavení diagnostiky](./media/intune-reports/intune-reports-04a.png)
 
 6. Klikněte na **Uložit**.
 7. V dalším kroku vyberte **Log Analytics** pro vytvoření a spuštění nového dotazu protokolu pomocí [Log Analytics](reports.md#log-analytics).

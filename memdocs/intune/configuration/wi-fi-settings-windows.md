@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 4ffa0fd0bc1c3b1ed1fe7f5d79ae009aaf9fc713
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820625"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815119"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -31,7 +31,7 @@ Těmito nastaveními se zabývá tento článek.
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil zařízení](wi-fi-settings-configure.md).
+Vytvořte [konfigurační profil zařízení s Windows 10 Wi-Fi](wi-fi-settings-configure.md).
 
 ## <a name="basic-profile"></a>Základní profil
 

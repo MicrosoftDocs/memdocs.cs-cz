@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b4c518a443b728d23c7090a06c0158e48facda5a
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915700"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814596"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novějších pro správu sdílených zařízení pomocí Intune
 
@@ -36,7 +36,7 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 
 ## <a name="before-your-begin"></a>Před začátkem
 
-[Vytvořte profil](shared-user-device-settings.md).
+Vytvoří [sdílený konfigurační profil zařízení s více uživateli ve Windows 10](shared-user-device-settings.md).
 
 ## <a name="shared-multi-user-device-settings"></a>Sdílená nastavení zařízení s více uživateli
 

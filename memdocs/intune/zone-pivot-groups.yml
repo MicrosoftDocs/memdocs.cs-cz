@@ -12,6 +12,8 @@ groups:
   title: Základní verze Windows MDM
   prompt: Zvolit verzi
   pivots:
+  - id: mdm-sept-2020
+    title: Září 2020
   - id: mdm-may-2019
     title: Květen 2019
   - id: mdm-preview
@@ -28,14 +30,16 @@ groups:
   title: Základní verze ATP
   prompt: Zvolit verzi
   pivots:
+  - id: atp-sept-2020
+    title: Září 2020
   - id: atp-april-2020
     title: Duben 2020
   - id: atp-march-2020
     title: Březen 2020
 metadata:
-  ms.openlocfilehash: 304a1087e156f7c491afd83b9981cdba996dc9fc
-  ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+  ms.openlocfilehash: 551f892419f29b83002484b743c2c8c5a8c607e0
+  ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82693285"
+  ms.lasthandoff: 09/19/2020
+  ms.locfileid: "90815166"

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b5f08f4ce77bf068ac67e6a83e4e15e9a11f6e2d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262774"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814854"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s Androidem v Microsoft Intune
 
@@ -50,7 +50,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil Android**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte **Android**.
+    - **Platforma**: vyberte **Správce zařízení s Androidem**.
     - **Typ profilu**: vyberte **vlastní**.
 
 4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
@@ -63,7 +63,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
       - Řetězec
       - Řetězec (soubor XML)
       - Datum a čas
-      - Celé číslo
+      - Integer
       - Plovoucí desetinná čárka
       - Logická hodnota
       - Base64 (soubor)

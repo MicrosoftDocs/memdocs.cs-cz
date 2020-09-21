@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b716a7e85f817e95a9f1fec992458e052570d81
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f10a84415f42632b0a9d7b17829feb0b7c99d0a4
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429519"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815404"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-and-system-extensions-in-intune"></a>macOS nastavení zařízení pro konfiguraci a používání jádra a rozšíření systému v Intune
 
@@ -35,9 +35,9 @@ Další informace o rozšířeních v Intune a všech požadavcích najdete v t�
 
 Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí do zařízení macOS.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte konfigurační profil rozšíření MacOS](kernel-extensions-overview-macos.md).
+Vytvořte [profil konfigurace zařízení rozšíření MacOS](kernel-extensions-overview-macos.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace. Další informace o různých typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).

@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: Správa nastavení pro aktualizace softwaru
       href: get-started/manage-settings-for-software-updates.md
+    - name: Konfigurace bodu aktualizace softwaru na použití SSL
+      href: get-started/software-update-point-ssl.md
     - name: Synchronizace aktualizací softwaru v odpojených prostředích
       items:
         - name: "Synchronizace aktualizací softwaru z\_odpojeného bodu aktualizace softwaru"

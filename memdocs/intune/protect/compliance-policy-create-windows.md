@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a234b445edad80a985074ee1be875b1f50378fcc
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909342"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779575"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -51,6 +51,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   
   [Zařízení HealthAttestation CSP – BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
+  
 - **Vyžadovat, aby na zařízení bylo povolené zabezpečené spouštění**:  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   - **Vyžadovat** – systém je nucen spouštět do důvěryhodného stavu výroby. Základní komponenty, které se používají ke spouštění počítače, musí mít správné kryptografické podpisy, které jsou důvěryhodné pro organizaci, která zařízení vyrobila. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud jsou nějaké soubory úmyslně poškozeny, což přeruší svůj podpis, systém se nespustí.
@@ -172,7 +173,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
    [DeviceStatus CSP – DeviceStatus/dodržování předpisů/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > Nastavení **Šifrování datového úložiště na zařízení** kontroluje obecnou přítomnost šifrování v zařízení. Pokud chcete nastavení šifrování zkontrolovat důkladněji, použijte možnost **Vyžadovat BitLocker**, která k ověření stavu BitLockeru na úrovni čipu TPM používá službu Ověření stavu zařízení s Windows.
+  > **Šifrování úložiště dat v** zařízení obecně kontroluje přítomnost šifrování na zařízení, přesněji na úrovni jednotky operačního systému. Pokud chcete nastavení šifrování zkontrolovat důkladněji, použijte možnost **Vyžadovat BitLocker**, která k ověření stavu BitLockeru na úrovni čipu TPM používá službu Ověření stavu zařízení s Windows.
 
 ### <a name="device-security"></a>Zabezpečení zařízení  
 
@@ -231,7 +232,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
   [Zásady CSP – Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 ### <a name="microsoft-defender-advanced-threat-protection-rules"></a>Pravidla rozšířené ochrany před internetovými útoky v programu Microsoft Defender
 

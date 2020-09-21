@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 07980da205dcc222216ec7607cf7488bbb0f356a
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607651"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90802876"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -32,9 +32,13 @@ Pokud chcete plně využít nové funkce Configuration Manager, po aktualizaci l
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Připojení tenanta Microsoft Endpoint Manageru
 
+### <a name="scripts-from-the-admin-center"></a>Skripty z centra pro správu
+<!--IN7220536, CM6234688  -->
+Využijte možnosti Configuration Manager funkce místního [spouštění skriptů](../../../apps/deploy-use/create-deploy-scripts.md) do centra pro správu Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, ke spouštění skriptů PowerShellu z cloudu na základě individuální Configuration Manager spravovaného zařízení v reálném čase. To poskytuje všechny tradiční výhody skriptů PowerShellu, které již byly definovány a schváleny správcem Configuration Manager k tomuto novému prostředí. Další informace najdete v tématu věnovaném [připojení klienta: skripty z centra pro správu](../../../tenant-attach/scripts.md).
+
 ### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Časová osa zařízení v centru pro správu
 <!--7220536, CM7141381-->
-Když Configuration Manager synchronizuje zařízení s Microsoft Endpoint Managerem prostřednictvím připojení tenanta, budete moct zobrazit časovou osu událostí. Tato časová osa zobrazuje minulou aktivitu v zařízení, která vám může pomoct při řešení problémů. Další informace najdete v části [Časová osa zařízení v centru pro správu](../../../tenant-attach/timeline.md).
+Když Configuration Manager synchronizuje zařízení s Microsoft Endpoint Managerem prostřednictvím připojení tenanta, budete moct zobrazit časovou osu událostí. Tato časová osa zobrazuje minulou aktivitu v zařízení, která vám může pomoct při řešení problémů. Další informace najdete v tématu [připojení klienta: časová osa zařízení v centru pro správu](../../../tenant-attach/timeline.md).
 
 ### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Průzkumník prostředků v centru pro správu
 <!--6479284-->
@@ -44,9 +48,9 @@ V centru pro správu Microsoft Endpoint Management můžete zobrazit inventář 
 <!--6024392-->
 Využijte sílu CMPivot do centra pro správu služby Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, aby bylo možné iniciovat dotazy v reálném čase z cloudu proti jednotlivým zařízením spravovaným nástrojem ConfigMgr a vracet výsledky zpátky do centra pro správu. To poskytuje všechny tradiční výhody CMPivot, které správcům IT a dalším určeným osoby schopnost rychle vyhodnotit stav zařízení ve svém prostředí a provést akci.
 
-Další informace o CMPivot z centra pro správu najdete v tématu [CMPivot požadavky](../../../tenant-attach/cmpivot-start.md), [CMPivot Overview](../../../tenant-attach/cmpivot-overview-attached.md)a [CMPivot Sample Scripts](../../../tenant-attach/cmpivot-samples-attached.md).
+Další informace o CMPivot z centra pro správu najdete v tématu věnovaném [připojení tenanta: spuštění CMPivot v centru pro správu](../../../tenant-attach/cmpivot-start.md), [CMPivot Overview](../../../tenant-attach/cmpivot-overview-attached.md)a [CMPivot Sample Scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
-### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Připojení tenanta: zásady antivirové ochrany v Microsoft Defenderu v centru pro správu Microsoft Endpoint Manageru
+### <a name="microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Zásady antivirové ochrany v programu Microsoft Defender v centru pro správu Microsoft Endpoint Manager
 <!--4812909-->
 Nyní můžete vytvořit zásady ochrany před viry v programu Microsoft Defender v konzole Microsoft Endpoint Manager a nasadit je do kolekcí Configuration Manager. Další informace, včetně podrobných pokynů a dostupných nastavení, najdete v následujících článcích:
 - [Připojení tenanta: zprovoznění klientů Configuration Manager do služby Microsoft Defender ATP z centra pro správu (Preview)](../../../tenant-attach/atp-onboard.md)

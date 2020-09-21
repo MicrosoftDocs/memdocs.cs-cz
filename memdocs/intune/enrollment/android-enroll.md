@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b2a948b99abed1f2f7cb988016d047e5d1a86c11
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461755"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814983"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -35,13 +35,13 @@ Jako správce Intune můžete zařízení s Androidem registrovat následující
     - [**Vyhrazená podniková**](android-kiosk-enroll.md)platforma pro Android: pro zařízení vlastněná společností, jako je digitální podpis, tisk lístku nebo Správa inventáře. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
     - [**Plně spravovaná platforma Android Enterprise**](android-fully-managed-enroll.md): pro samostatná zařízení vlastněná společností, která slouží výhradně pro práci a nikoli pro osobní použití. Správci můžou spravovat celé zařízení a vynutilit ovládací prvky zásad nedostupné pro pracovní profily.
     - [**Android Enterprise – vlastněný s pracovním profilem**](android-corporate-owned-work-profile-enroll.md): pro samostatná zařízení vlastněná společností, která jsou určená pro podnikové a osobní použití.
-- [**Správce zařízení s Androidem**](android-enroll-device-administrator.md), včetně zařízení se zabezpečením Samsung KNOX Standard a [zařízení Zebra](../configuration/android-zebra-mx-overview.md). 
+- [**Správce zařízení s Androidem**](android-enroll-device-administrator.md), včetně zařízení se zabezpečením Samsung KNOX Standard a [zařízení Zebra](../configuration/android-zebra-mx-overview.md). V oblastech, kde je k dispozici Android Enterprise, Google podporuje pohyb od správy zařízení (DA) tím, že snižuje podporu správy v nových verzích Androidu. Pokud však nejsou k dispozici Android Enterprise nebo GMS, budete chtít použít Správce zařízení a seznámit se s těmito změnami. Další informace najdete v části [je Android Enterprise k dispozici ve své zemi](https://support.google.com/work/android/answer/6270910)?
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](../fundamentals/mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 
-V případě Androidu Enterprise se podívejte na následující článek podpory od společnosti Google a ujistěte se, že je Android Enterprise k dispozici ve vaší zemi nebo oblasti:https://support.google.com/work/android/answer/6270910
+V případě Androidu Enterprise se podívejte na následující článek podpory od společnosti Google a ujistěte se, že je Android Enterprise k dispozici ve vaší zemi nebo oblasti: https://support.google.com/work/android/answer/6270910
 
 Pro zařízení vyráběná technologiemi Zebra může být potřeba udělit Portál společnosti dodatečná oprávnění v závislosti na možnostech konkrétního zařízení. [Rozšíření mobility na zařízeních Zebra](../configuration/android-zebra-mx-overview.md) obsahují další podrobnosti.
 

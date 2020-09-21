@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 764e8f64380d917fa5bf8ebcbed3981e5ad7652e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913456"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814803"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad pro omezení možností útoku pro zabezpečení koncového bodu v Intune
 
@@ -190,7 +190,7 @@ Podporované platformy a profily:
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou ignorovat upozornění filtru SmartScreen pro soubory a škodlivé aplikace.
-  - **Ano** – filtr SmartScreen je povolen a uživatelé nemohou obejít upozornění na soubory nebo škodlivé aplikace.
+  - **Ano** – filtr SmartScreen je povolen a uživatelé nemůžou obejít upozornění pro soubory nebo škodlivé aplikace.
 
 - **Zapnout filtr Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -394,7 +394,7 @@ Podporované platformy a profily:
   Nastavení této zásady se vynutilo jenom v případě, že je povolené BitLocker nebo šifrování zařízení.
 
   - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – zablokuje přímý přístup do paměti (DMA) pro všechny bezplatných portů PCI pro příjem dat, dokud se uživatel do Windows nepřihlásí. Jakmile se uživatel přihlásí, systém Windows zobrazí zařízení PCI připojená k portům plug-in hostitele. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už byla ve výčtu v době, kdy byl počítač odemčený, budou dál fungovat, dokud nebude odpojená.
+  - **Ano** – zablokuje přímý přístup do paměti (DMA) pro všechny bezplatných portů PCI pro příjem dat, dokud se uživatel do Windows nepřihlásí. Jakmile se uživatel přihlásí, systém Windows zobrazí zařízení PCI připojená k portům plug-in hostitele. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený.
 
 - **Výčet externích zařízení nekompatibilních s režimem ochrany DMA v jádře**  
   CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
@@ -445,6 +445,18 @@ Podporované platformy a profily:
 
   - **Přidat** – zadejte povolené služby a profily Bluetooth jako šestnáctkové řetězce, například `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
   - **Import** – importujte soubor. csv, který obsahuje seznam služeb a profilů Bluetooth, jako šestnáctkové řetězce, například `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
+- **Vyměnitelné úložiště**  
+  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess) 
+
+  - **Blokovat** (*výchozí*) – zabrání uživatelům v používání externích úložných zařízení, jako jsou karty SD, na zařízení.
+  - **Není nakonfigurováno**
+
+- **Připojení USB (jenom HoloLens)**  
+  CSP: [připojení/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
+  - **Blok** – zabraňuje použití připojení USB mezi zařízením a počítačem k synchronizaci souborů nebo použití vývojářských nástrojů k nasazení nebo ladění aplikací. Zpoplatnění USB to neovlivní.
+  - **Nenakonfigurováno** (*výchozí*)
 
 ## <a name="exploit-protection-profile"></a>Profil ochrany před zneužitím
 

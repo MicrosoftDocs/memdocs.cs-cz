@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d050139ae017f5800670518a41d75fba469ceac
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 34a21f0fd1a3579c95766088c77c5919603d3550
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146469"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815523"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Nastavení zařízení s Windows 10 (a novější) pro upgrade edice nebo povolení režimu S v Intune
 
@@ -34,7 +34,7 @@ Další informace o této funkci najdete v tématu [upgrade edice Windows 10 neb
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil](edition-upgrade-configure-windows-10.md#create-the-profile).
+Vytvořte [profil konfigurace zařízení s přepínačem pro upgrade a režim Windows 10](edition-upgrade-configure-windows-10.md#create-the-profile).
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 

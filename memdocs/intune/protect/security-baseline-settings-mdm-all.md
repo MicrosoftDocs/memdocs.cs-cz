@@ -5,7 +5,7 @@ description: Zkontrolujte výchozí a dostupná nastavení pro různé verze sta
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,25 +18,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 63bf4e680dea22a5ca69227fe3701f9ba6f2e0de
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914884"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815200"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
 Zobrazte nastavení základní hodnoty zabezpečení MDM, které Microsoft Intune podporuje pro zařízení se systémem Windows 10 nebo novějším. Výchozí hodnoty pro nastavení v tomto směrném plánu reprezentují doporučenou konfiguraci pro příslušná zařízení. Výchozí hodnoty pro jednu základnu se nemusí shodovat s výchozími hodnotami z jiných standardních hodnot zabezpečení nebo z jiných verzí tohoto směrného plánu.
 
 - Další informace o použití standardních hodnot zabezpečení s Intune a postup upgradu základní verze v profilech standardních hodnot zabezpečení najdete v tématu [použití standardních hodnot zabezpečení](security-baselines.md).
-- Nejnovější základní verze je základní hodnota **zabezpečení MDM pro květen 2019**
+- Nejnovější základní verze je **směrný plán zabezpečení MDM za září 2020** .
 
 Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
 
 Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
-<!-- Cookies might be required to enable some browsers to display the zone options -->
 
+::: zone pivot="mdm-sept-2020"
+
+**Směrný plán zabezpečení MDM za září 2020**  
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí standardní hodnoty, což je *základní hodnota zabezpečení MDM pro květen 2019*. Profily, které se vytvořily před dostupností tohoto směrného plánu, se neaktualizují, aby odrážely nová nastavení nebo hodnoty.  I když nemůžete vytvořit nové profily založené na předchozí základní verzi, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě předchozí verze.
+
+Informace o tom, co se změnilo v této verzi směrného plánu z předchozí verze, najdete v tématu [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **Základní hodnota zabezpečení MDM pro květen 2019**:  
@@ -53,7 +60,7 @@ Informace o tom, co se změnilo v této verzi směrného plánu z předchozí ve
 > Toto je verze Preview směrného plánu zabezpečení MDM vydaná v říjnu od 2018. Tato verze Preview byla v červnu 2019 nahrazena vydáním *směrného plánu zabezpečení MDM pro šablonu květen 2019* , která je všeobecně dostupná (není ve verzi Preview). Profily, které byly vytvořeny před dostupností *směrného plánu zabezpečení MDM pro květen 2019* , se nebudou aktualizovat tak, aby odrážely nastavení a hodnoty, které jsou v směrném plánu zabezpečení MDM pro verzi květen 2019. I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## <a name="above-lock"></a>Nad zámkem
 
@@ -66,13 +73,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Abo
   **Výchozí**: Ano
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Hlasové aktivace aplikací z uzamčené obrazovky**:  
   **Výchozí**: zakázáno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="app-runtime"></a>Modul runtime aplikace
 
@@ -89,6 +96,24 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) .
 
 ::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **Blokovat instalaci aplikací se zvýšenými oprávněními**: Tato zásada nastaví instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používala zvýšená oprávnění. Pokud nastavení této zásady povolíte, budou se oprávnění rozšířit na všechny programy. To umožňuje uživatelům instalovat programy, které vyžadují přístup k adresářům, které uživatel nemusí mít oprávnění k zobrazení nebo změně, včetně adresářů na vysoce omezených počítačích.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067134)
+
+  **Výchozí**: Ano.
+
+- **Blokovat uživatelský ovládací prvek při instalacích**:  
+  Nastavení této zásady umožňuje uživatelům změnit možnosti instalace, které jsou obvykle k dispozici pouze správcům systému. Pokud toto nastavení zásad povolíte, přeskočí se některé funkce zabezpečení Instalační služba systému Windows. Umožňuje dokončení instalací, které by jinak bylo zastaveno z důvodu porušení zabezpečení. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, funkce zabezpečení Instalační služba systému Windows zabrání uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například určení adresáře, do kterého jsou soubory nainstalovány. Pokud Instalační služba systému Windows zjistí, že instalační balíček povolil uživateli změnu chráněné možnosti, zastaví instalaci a zobrazí zprávu. Tyto funkce zabezpečení fungují pouze v případě, že instalační program běží v privilegovaném kontextu zabezpečení, ve kterém má přístup k adresářům odepřeným uživateli. Nastavení této zásady je určené pro méně omezující prostředí. Dá se použít k obcházení chyb v instalačním programu, který brání instalaci softwaru.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067060)
+
+- **Blokovat hru DVR (jenom Desktop)**:  
+  Konfiguruje, zda je povoleno nahrávání a vysílání her.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067056)
+
+  **Výchozí**: Ano
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Blokovat uživatelský ovládací prvek při instalacích**:  
@@ -102,7 +127,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 
   - *Pokud nastavení této zásady povolíte*, budou se oprávnění rozšířit na všechny programy. Obvykle jsou tato oprávnění vyhrazena pro programy, které jsou přiřazeny uživateli (které jsou nabízeny na ploše), jsou přiřazeny k počítači (nainstalovány automaticky), nebo jsou k dispozici v Ovládacích panelech přidat nebo odebrat programy. Toto nastavení profilu umožňuje uživatelům instalovat programy, které vyžadují přístup k adresářům, které uživatel nemusí mít oprávnění k zobrazení nebo změně, včetně adresářů na vysoce omezených počítačích.
 
-  - *Pokud toto nastavení zásad zakážete nebo*nenakonfigurujete, použije systém při instalaci programů, které správce systému nedistribuuje nebo nenabízí, oprávnění aktuálního uživatele. Poznámka: nastavení této zásady se zobrazuje jak v konfiguraci počítače, tak ve složkách Konfigurace uživatele. Aby bylo nastavení této zásady účinné, musíte je povolit v obou složkách. Upozornění: zkušení uživatelé můžou využít výhod oprávnění, která tato zásada umožňuje změnit jejich oprávnění a získat trvalý přístup k souborům a složkám s omezeným přístupem. Verze konfigurace tohoto nastavení zásad uživatele není zaručená zabezpečení.  
+  - *Pokud nastavení této zásady zakážete nebo nenakonfigurujete*, použije systém při instalaci programů, které správce systému nedistribuuje nebo nenabízí, oprávnění aktuálního uživatele. Poznámka: nastavení této zásady se zobrazuje jak v konfiguraci počítače, tak ve složkách Konfigurace uživatele. Aby bylo nastavení této zásady účinné, musíte je povolit v obou složkách. Upozornění: zkušení uživatelé můžou využít výhod oprávnění, která tato zásada umožňuje změnit jejich oprávnění a získat trvalý přístup k souborům a složkám s omezeným přístupem. Verze konfigurace tohoto nastavení zásad uživatele není zaručená zabezpečení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Výchozí**: Ano
@@ -115,6 +140,133 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067056)
 
   **Výchozí**: Ano
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+## <a name="audit"></a>Auditování
+
+- **Ověření přihlašovacích údajů k auditu přihlášení k účtu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události generované ověřovacími testy pro přihlašovací údaje uživatelského účtu. Události v této podkategorii se vyskytují pouze v počítači, který je autoritativní pro tyto přihlašovací údaje. U doménových účtů je řadič domény autoritativní. V případě místních účtů je místní počítač autoritativní.
+
+  **Výchozí**: úspěch a selhání
+
+- **Ověřovací služba Kerberos pro audit přihlášení k účtu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události generované požadavky lístku TGT (TGT) ověřování pomocí lístku TGT (Ticket-Granting Ticket). Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu po požadavku TGT ověřování protokolem Kerberos. Audity úspěchu zaznamenávají úspěšné požadavky a audity selhání zaznamenávají neúspěšné požadavky. Pokud nastavení této zásady nenakonfigurujete, negeneruje se po požadavku TGT ověřovacího lístku protokolu Kerberos žádná událost auditu.
+
+  **Výchozí**: žádné
+
+- **Uzamčení účtu audit při odhlášení přihlášení (zařízení)**:  
+
+  **Výchozí**: Chyba
+
+- **Členství ve skupině auditu pro odhlášení přihlášení účtu (zařízení)**:  
+  Tato zásada vám umožní auditovat informace o členství ve skupinách v přihlašovacím tokenu uživatele. Události v této podkategorii jsou generovány v počítači, na kterém je vytvořena přihlašovací relace. V případě interaktivního přihlašování se událost audit zabezpečení vygeneruje v počítači, ke kterému se uživatel přihlásil. V případě přihlášení k síti, jako je například přístup ke sdílené složce v síti, je událost audit zabezpečení vygenerována v počítači, který je hostitelem prostředku. Při konfiguraci tohoto nastavení se pro každé úspěšné přihlášení vygeneruje jedna nebo víc událostí auditu zabezpečení. Musíte taky povolit nastavení auditovat přihlášení v části Upřesnit zásady auditu Configuration\System zásady auditu \ přihlášení a odhlášení. Pokud se informace o členství ve skupině nevejdou do jedné události auditu zabezpečení, vygenerují se vícenásobné události.
+
+  **Výchozí**: úspěch
+
+- **Přihlašovací přihlášení k auditu přihlášení k účtu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované pokusy o přihlášení k účtu uživatele v počítači. Události v této podkategorii souvisejí s vytvářením přihlašovacích relací a jsou k dispozici v počítači, ke kterému došlo. V případě interaktivního přihlašování se událost audit zabezpečení vygeneruje v počítači, ke kterému je přihlášený uživatelský účet. V případě přihlášení k síti, jako je například přístup ke sdílené složce v síti, je událost audit zabezpečení vygenerována v počítači, který je hostitelem prostředku. Jsou zahrnuty následující události: úspěšné pokusy o přihlášení. Neúspěšné pokusy o přihlášení Pokusy o přihlášení pomocí explicitních přihlašovacích údajů. Tato událost se vygeneruje, když se proces pokusí přihlásit k účtu explicitním zadáním přihlašovacích údajů k účtům. K tomu nejčastěji dochází v konfiguraci dávkového přihlášení, například v naplánovaných úlohách nebo při použití příkazu RUNAS. Identifikátory zabezpečení (SID) byly filtrovány a nejsou povoleny pro přihlášení.
+
+  **Výchozí**: úspěch a selhání
+
+- **Auditovat jiné události odhlašovacího přihlášení (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat další události týkající se přihlášení a odhlášení, které nejsou zahrnuté v nastavení zásad *přihlášení a odhlášení* , jako jsou třeba následující: odpojení relace Terminálové služby. Nové relace Terminálové služby. Uzamykání a odemknutí pracovní stanice. Vyvolává se spořič obrazovky. Vynechává se spořič obrazovky. Detekce útoku na přehrání protokolu Kerberos, ve kterém byl požadavek Kerberos přijat dvakrát se stejnými informacemi. Tato podmínka může být způsobena chybnou konfigurací sítě. Přístup k bezdrátové síti udělené uživateli nebo účtu počítače. Přístup k drátové síti 802.1 x udělené uživateli nebo účtu počítače.
+
+  **Výchozí**: úspěch a selhání
+
+- **Auditovat speciální přihlašování (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované speciálními přihlášeními, jako jsou například následující: použití zvláštního přihlášení, což je přihlašovací jméno, které má oprávnění správce a dá se použít ke zvýšení úrovně procesu na vyšší úroveň. Přihlášení členem speciální skupiny. Speciální skupiny umožňují Auditovat události vygenerované při přihlášení člena určité skupiny do vaší sítě. V registru můžete nakonfigurovat seznam identifikátorů zabezpečení (SID) skupiny. Pokud se některá z těchto identifikátorů SID přidají do tokenu během přihlašování a je povolená podkategorie, zaprotokoluje se událost. Další informace o této funkci najdete v článku 947223 znalostní báze Microsoft Knowledge Base ( https://go.microsoft.com/fwlink/?LinkId=121697) .
+
+  **Výchozí**: úspěch
+
+- **Auditovat správu skupin zabezpečení (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované změnami do skupin zabezpečení, jako jsou následující: Skupina zabezpečení se vytváří, mění nebo odstraňuje. Člen se přidal nebo odebral ze skupiny zabezpečení. Typ skupiny se změnil. Pokud toto nastavení zásad nakonfigurujete, vygeneruje se při pokusu o změnu skupiny zabezpečení událost auditu. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud toto nastavení zásad nenakonfigurujete, negeneruje se při změně skupiny zabezpečení žádná událost auditu.
+
+  **Výchozí**: úspěch
+
+- **Auditovat správu účtů uživatelů (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat změny uživatelských účtů. Mezi tyto události patří: uživatelský účet je vytvořený, změněný, odstraněný; přejmenováno, zakázáno, povoleno, uzamčeno nebo odemčeno. Uživatelský účet??? s nastaveným nebo změněným heslem. K historii identifikátorů SID uživatelského účtu se přidá identifikátor zabezpečení (SID). Heslo režimu obnovení adresářových služeb je nakonfigurované. Oprávnění k účtům administrativních uživatelů se změnila. Přihlašovací údaje správce přihlašovacích údajů se zálohují nebo obnovují. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se při pokusu o změnu uživatelského účtu událost auditu. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud nastavení této zásady nenakonfigurujete, nebude při změně uživatelského účtu vygenerována žádná událost auditu.
+
+  **Výchozí**: úspěch a selhání
+
+- **Podrobné sledování audit aktivity PnP (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat, když technologie Plug and Play detekuje externí zařízení. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu vždy, když zařízení Plug and Play detekuje externí zařízení. Pro tuto kategorii se zaznamenávají jenom audity po úspěšném provedení. Pokud nastavení této zásady nenakonfigurujete, nevygeneruje se žádná událost auditu, když zařízení Plug and Play detekuje externí zařízení.
+
+  **Výchozí**: úspěch
+
+- **Podrobné sledování procesu vytváření auditu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované při vytvoření nebo spuštění procesu. Bude také auditován název aplikace nebo uživatele, který proces vytvořil. Pokud nakonfigurujete toto nastavení zásad, při vytvoření procesu se vygeneruje událost auditu. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud toto nastavení zásad nenakonfigurujete, nevygeneruje se při vytvoření procesu žádná událost auditu.
+
+  **Výchozí**: úspěch
+
+- **Auditování přístupu k objektům podrobné sdílení souborů (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat pokusy o přístup k souborům a složkám ve sdílené složce. Nastavení podrobná sdílená složka protokoluje událost pokaždé, když se k souboru nebo složce přistupovala, zatímco nastavení sdílení souborů pouze zaznamenává jednu událost pro jakékoli připojení navázané mezi klientem a sdílenou složkou souborů. Podrobná událost auditu sdílení souborů obsahuje podrobné informace o oprávněních nebo jiných kritériích, která se používají k udělení nebo zamítnutí přístupu. Pokud nakonfigurujete toto nastavení zásad, při pokusu o přístup k souboru nebo složce ve sdílené složce se vygeneruje událost auditu. Správce může určit, jestli se má auditovat jenom úspěchy, jenom chyby, nebo jak budou úspěšné a neúspěšné. Poznámka: pro sdílené složky neexistují žádné seznamy řízení přístupu (SACL) systému. Pokud je toto nastavení zásad povolené, bude Auditovat přístup ke všem sdíleným souborům a složkám v systému.
+
+  **Výchozí**: Chyba
+
+- **Auditovat přístup ke sdíleným složkám souborů (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat pokusy o přístup ke sdílené složce. Pokud nakonfigurujete toto nastavení zásad, při pokusu o přístup ke sdílené složce se vygeneruje událost auditu. Pokud je toto nastavení zásad definované, může správce určit, jestli se má auditovat jenom úspěchy, jenom chyby, nebo jak budou úspěšné a neúspěšné. Poznámka: pro sdílené složky neexistují žádné seznamy řízení přístupu (SACL) systému. Pokud je toto nastavení zásad povolené, bude Auditovat přístup ke všem sdíleným složkám v systému.
+
+  **Výchozí**: úspěch a selhání
+
+- **Audit přístupu k objektům další události přístupu k objektu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované správou úloh plánovače úloh nebo objektů COM+. Pro úlohy Scheduleru jsou auditovány následující: vytvořená úloha. Úloha se odstranila. Úloha je povolena. Úloha je zakázaná. Úloha se aktualizovala. V případě objektů modelu COM+ jsou auditovány následující: objekt katalogu byl přidán. Objekt Catalog se aktualizoval. Objekt katalogu byl odstraněn.
+
+  **Výchozí**: úspěch a selhání
+
+- **Auditovat přístup k objektům Vyměnitelné úložiště (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat pokusy uživatele o přístup k objektům systému souborů na vyměnitelném paměťovém zařízení. Událost auditu zabezpečení je vygenerována pouze pro všechny objekty pro všechny požadované typy přístupu. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu pokaždé, když účet přistupuje k objektu systému souborů na vyměnitelném úložišti. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud toto nastavení zásad nenakonfigurujete, nevygeneruje se žádná událost auditu, pokud účet přistupuje k objektu systému souborů na vyměnitelném úložišti.
+
+  **Výchozí**: úspěch a selhání
+
+- **Auditovat změnu zásad ověřování (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované změnami v zásadách ověřování, jako je například následující: vytvoření doménové struktury a vztahů důvěryhodnosti domén. Úprava vztahů důvěryhodnosti doménové struktury a domény. Odebrání vztahů důvěryhodnosti doménové struktury a domény. Změny zásad protokolu Kerberos v části počítač \ zabezpečení \ Settings\Account Policies\Kerberos Policy. Udělení kterékoli z následujících uživatelských práv uživateli nebo skupině: přístup k tomuto počítači ze sítě. Povolte místní přihlášení. Povolí přihlášení prostřednictvím Terminálové služby. Přihlaste se jako dávková úloha. Přihlaste se ke službě. Kolize oboru názvů Například pokud má nový vztah důvěryhodnosti stejný název jako existující název oboru názvů. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu při pokusu o změnu zásad ověřování. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud nastavení této zásady nenakonfigurujete, negeneruje se při změně zásad ověřování žádná událost auditu. Poznámka: při použití zásad skupiny se zaprotokoluje událost audit zabezpečení. Nedochází v době, kdy došlo ke změně nastavení.
+
+  **Výchozí**: úspěch
+
+- **Změna zásad na úrovni pravidla pro audit změny zásad (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované změnami v pravidlech zásad používaných službou Microsoft Protection Service (MPSSVC). Tuto službu používá brána Windows Firewall. Mezi tyto události patří: vytváření sestav aktivních zásad při spuštění služby Brána Windows Firewall. Změny pravidel brány Windows Firewall. Změny v seznamu výjimek brány Windows Firewall. Změny nastavení brány Windows Firewall. Pravidla se ignorovala nebo nepoužívají službou brány Windows Firewall. Změny nastavení Zásady skupiny brány Windows Firewall. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu pomocí pokusů o změnu pravidel zásad používaných službou MPSSVC. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud nastavení této zásady nenakonfigurujete, negenerují se žádné události auditu pomocí změn pravidel zásad používaných službou MPSSVC.
+
+  **Výchozí**: úspěch a selhání
+
+- **Změny zásad Auditovat jiné události změny zásad (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované jinými změnami zásad zabezpečení, které nejsou auditovány v kategorii změny zásad, například následující: změny konfigurace čipu TPM (Trusted Platform Module). Kryptografické testy v režimu jádra. Operace zprostředkovatele kryptografických služeb. Operace nebo změny kryptografického kontextu. Změny zásad centrálního přístupu (CAPs) byly aplikovány. Změny konfigurační data spouštění (BCD).
+
+  **Výchozí**: Chyba
+
+- **Auditovat změny v zásadách auditu (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat změny v nastavení zásad auditu zabezpečení, jako jsou například následující: nastavení oprávnění a auditování v objektu zásad auditu. Změny zásad auditování systému. Registrace zdrojů událostí zabezpečení. Zrušte registraci zdrojů událostí zabezpečení. Změny nastavení auditování pro jednotlivé uživatele. Změny hodnoty CrashOnAuditFail. Změny v seznamu řízení přístupu k systému souborů nebo objektu registru. Změny v seznamu speciálních skupin. Poznámka: auditování změn v seznamu řízení přístupu k systému (SACL) se provádí, když se změní seznam SACL pro objekt a je povolená kategorie změny zásad. Volitelný seznam řízení přístupu (DACL) a změny vlastnictví jsou auditovány v případě, že je povoleno auditování přístupu k objektu a seznam SACL objektu je nakonfigurován pro auditování změny seznamu DACL nebo vlastníka.
+
+  **Výchozí**: úspěch
+
+- **Oprávnění použít audit použití citlivých oprávnění (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události vygenerované při použití citlivých oprávnění (uživatelských práv), jako jsou například následující: je volána privilegovaná služba. Jsou volána některá z následujících oprávnění: jednat jako součást operačního systému. Zálohujte soubory a adresáře. Vytvořte objekt tokenu. Ladění programů. Povolit důvěryhodnost účtů počítačů a uživatelů pro delegování. Vygenerujte audity zabezpečení. Zosobnit klienta po ověření. Načtěte a uvolněte ovladače zařízení. Správa auditování a protokolu zabezpečení. Upravte hodnoty prostředí firmwaru. Nahraďte token na úrovni procesu. Obnovte soubory a adresáře. Převezme vlastnictví souborů nebo jiných objektů. Pokud nakonfigurujete toto nastavení zásad, vygeneruje se událost auditu, když se provedou požadavky na citlivé oprávnění. Audity úspěchu zaznamenávají úspěšné požadavky a audity selhání zaznamenávají neúspěšné požadavky. Pokud nastavení této zásady nenakonfigurujete, nebude při vytváření citlivých žádostí o oprávnění vygenerována žádná událost auditu.
+
+  **Výchozí**: úspěch a selhání
+
+- **Audit systému jiné systémové události (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat kteroukoli z následujících událostí: spuštění a vypnutí služby a ovladače brány Windows Firewall. Zásady zabezpečení zpracovávají službu brány Windows Firewall. Soubor kryptografických klíčů a operace migrace.
+
+  **Výchozí**: úspěch a selhání
+
+- **Změna stavu zabezpečení auditování systému (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat kteroukoli z následujících událostí: spuštění a vypnutí služby a ovladače brány Windows Firewall. Zásady zabezpečení zpracovávají službu brány Windows Firewall. Soubor kryptografických klíčů a operace migrace.
+
+  **Výchozí**: úspěch
+
+- **Auditovat rozšíření systému zabezpečení (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události související s rozšířeními nebo službami zabezpečení systému, jako jsou následující: je načteno rozšíření systému zabezpečení, jako je například ověřování, oznámení nebo balíček zabezpečení, a je zaregistrováno v rámci místního úřadu zabezpečení (LSA). Slouží k ověřování pokusů o přihlášení, odesílání žádostí o přihlášení a všech změnách účtu nebo hesla. Mezi příklady rozšíření systému zabezpečení patří Kerberos a NTLM. Služba je nainstalována a zaregistrována ve Správci řízení služeb. Protokol auditu obsahuje informace o názvu služby, binárním souboru, typu, typu spuštění a účtu služby. Pokud nakonfigurujete toto nastavení zásad, při pokusu o načtení rozšíření systému zabezpečení se vygeneruje událost auditu. Audity úspěchu zaznamenávají úspěšné pokusy a audity selhání zaznamenávají neúspěšné pokusy. Pokud nastavení této zásady nenakonfigurujete, negeneruje se při pokusu o načtení rozšíření systému zabezpečení žádná událost auditu.
+
+  **Výchozí**: úspěch
+
+- **Integrita systému pro audit systému (zařízení)**:  
+  Toto nastavení zásad umožňuje auditovat události, které porušují integritu subsystému zabezpečení, například následující: události, které nebylo možné zapsat do protokolu událostí z důvodu problému se systémem auditování. Proces, který používá port místního volání procedur (LPC), který není platný při pokusu o zosobnění klienta prostřednictvím odpovědi, čtení nebo zápisu do nebo z adresního prostoru klienta. Detekce vzdáleného volání procedur (RPC), které ohrožuje integritu systému. Detekce hodnoty hash spustitelného souboru, který není platný v závislosti na integritě kódu. Kryptografické operace, které ohrožují integritu systému.
+
+  **Výchozí**: úspěch a selhání
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="auto-play"></a>Automatické přehrávání
 
@@ -146,10 +298,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
   Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067140)
 
+  **Výchozí**: Konfigurace
+
   Pro zásady vyměnitelné jednotky nástrojem BitLocker nakonfigurujte následující nastavení:
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
   - **Zablokovat přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker**:  
     **Výchozí**: Ano
@@ -189,7 +343,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
     **Výchozí**: AES 256bit XTS
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="browser"></a>Prohlížeč
 
@@ -236,7 +390,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: povoleno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Nakonfigurujte zabezpečený přístup k cestám UNC**:  
   Nastavením této zásady lze nakonfigurovat zabezpečený přístup k cestám UNC. Pokud tuto zásadu povolíte, systém Windows povolí přístup k zadaným cestám UNC jenom po splnění dalších požadavků na zabezpečení.  
@@ -250,7 +404,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
     Vyberte **Přidat** a zadejte další příznaky zabezpečení a cesty k serveru.
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Blokovat stahování ovladačů tisku přes http**:  
   Nastavení této zásady určuje, jestli chcete, aby tento klient mohl stahovat balíčky ovladačů tiskáren přes HTTP. Aby bylo možné nastavit tisk přes protokol HTTP, je nutné stáhnout ovladače, které nejsou doručeny přes protokol HTTP. Poznámka: Toto nastavení zásad nebrání klientovi v tisku na tiskárny v intranetu ani na internetu přes HTTP. Zakazuje jenom stahování ovladačů, které ještě nejsou nainstalované místně. Pokud nastavení této zásady povolíte, nebude možné stáhnout ovladače tisku přes HTTP. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, uživatelé mohou stahovat ovladače tisku přes protokol HTTP.  
@@ -299,13 +453,15 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   **Výchozí**: Povolit s ZÁMKem UEFI
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Zabezpečení na základě virtualizace**:  
+  Při příštím restartování zapne zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace používá hypervisor Windows k poskytování podpory pro služby zabezpečení.
+
   **Výchozí**: Povolit vbs s zabezpečeným spouštěním
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Povolit zabezpečení na základě virtualizace**:  
   Při příštím restartování zapne zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.  
@@ -314,6 +470,8 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   **Výchozí**: Ano
 
 - **Spustit ochranu systému**:  
+  Povolí zabezpečené spuštění, pokud je podporováno hardwarem.
+
   **Výchozí**: povoleno
 
 ## <a name="device-installation"></a>Instalace zařízení
@@ -360,12 +518,6 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) .
 
-- **Zabránit použití kamery**:  
-  Zakáže přepínač kamery zamykací obrazovky v nastavení počítače a zabraňuje tomu, aby se kamera vyvolala na zamykací obrazovce. Ve výchozím nastavení můžou uživatelé povolit vyvolání dostupné kamery na zamykací obrazovce. Pokud povolíte toto nastavení, uživatelé nebudou moci povolit ani zakázat přístup k fotoaparátu zamykací obrazovky v nastavení počítače a fotoaparát nelze vyvolat na zamykací obrazovce.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067052)
-
-  **Výchozí**: povoleno
-
 - **Vyžadovat heslo**:  
   Určuje, jestli je povolený zámek zařízení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067049)  
@@ -374,17 +526,11 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   
   Pokud je možnost *vyžadovat heslo* nastavená na *hodnotu Ano*, jsou k dispozici následující nastavení.
 
-  - **Minimální počet znakových sad pro heslo**:  
-    Počet komplexních typů prvků (velká a malá písmena, číslice a interpunkční znaménka) vyžadované pro silný kód PIN nebo heslo. PIN kód vynutil následující chování pro stolní a mobilní zařízení: 1-číslice pouze 2 – číslice a malá písmena jsou vyžadována 3 číslicemi, malými písmeny a velkými písmeny. Nepodporováno v účtech Microsoft Desktop a doménových účtů. vyžadují se 4 číslice, malá písmena, Velká písmena a speciální znaky. Nepodporuje se v desktopu.  
-    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067055)
+  - **Požadované heslo**:  
+    Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
+    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)
 
-    **Výchozí hodnota**: 3
-
-  - **Počet neúspěšných přihlášení před vymazáním zařízení**:  
-    Počet povolených neúspěšných ověření, než se zařízení vymaže. Hodnota 0 zakáže funkci vymazání zařízení.  
-    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067030)
-
-    **Výchozí**: 10  
+    **Výchozí**: alfanumerické
 
   - **Vypršení platnosti hesla (dny)**:  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.  
@@ -392,17 +538,30 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 
     **Výchozí**: 60
 
-  - **Požadované heslo**:  
-    Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
-    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)
+  - **Minimální počet znakových sad pro heslo**:  
+    Počet komplexních typů prvků (velká a malá písmena, číslice a interpunkční znaménka) vyžadované pro silný kód PIN nebo heslo. PIN kód vynutil následující chování pro stolní a mobilní zařízení: 1-číslice pouze 2 – číslice a malá písmena jsou vyžadována 3 číslicemi, malými písmeny a velkými písmeny. Nepodporováno v účtech Microsoft Desktop a doménových účtů. vyžadují se 4 číslice, malá písmena, Velká písmena a speciální znaky. Nepodporuje se v desktopu.  
+    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067055)
 
-    **Výchozí**: alfanumerické
+    **Výchozí hodnota**: 3
+
+  - **Zakázat opakované použití předchozích hesel**:  
+    Určuje, kolik hesel je uloženo v historii, kterou nelze použít. Hodnota zahrnuje aktuální heslo uživatele. Například když se nastaví hodnota *1* , nemůže uživatel při volbě nového hesla znovu použít svoje aktuální heslo. Nastavení *5* znamená, že uživatel nemůže nastavit nové heslo na aktuální heslo nebo předchozí čtyři hesla.  
+    [Další informace](https://go.microsoft.com/fwlink/?linkid=2066795)
+
+    **Výchozí hodnota**: 24
 
   - **Minimální délka hesla**:  
     Nastavení zásad minimální délky hesla určuje nejmenší počet znaků, které mohou vytvořit heslo pro uživatelský účet. Můžete nastavit hodnotu v rozmezí 1 až 14 znaků nebo můžete určit, že není vyžadováno žádné heslo nastavením počtu znaků na 0.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067024)
 
     **Výchozí**: 8
+
+
+  - **Počet neúspěšných přihlášení před vymazáním zařízení**:  
+    Počet povolených neúspěšných ověření, než se zařízení vymaže. Hodnota 0 zakáže funkci vymazání zařízení.  
+    [Další informace](https://go.microsoft.com/fwlink/?linkid=2067030)
+
+    **Výchozí**: 10
 
   - **Blokovat jednoduchá hesla**:  
     Určuje, jestli jsou povolené PIN kódy nebo hesla, jako je "1111" nebo "1234". Pro plochu také řídí použití hesel s obrázkem.  
@@ -411,28 +570,26 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
     **Výchozí**: Ano  
     *Nastavení Ano zabraňuje použití jednoduchých hesel.*
 
-  - **Zakázat opakované použití předchozích hesel**:  
-    Určuje, kolik hesel je uloženo v historii, kterou nelze použít. Hodnota zahrnuje aktuální heslo uživatele. Například když se nastaví hodnota *1* , nemůže uživatel při volbě nového hesla znovu použít svoje aktuální heslo. Nastavení *5* znamená, že uživatel nemůže nastavit nové heslo na aktuální heslo nebo předchozí čtyři hesla.  
-    [Další informace](https://go.microsoft.com/fwlink/?linkid=2066795)
-
-    **Výchozí hodnota**: 24
-
-- **Zabránit zobrazení prezentace**:  
-  Zakáže nastavení prezentace snímků zamykací obrazovky v nastavení počítače a zabrání přehrávání prezentace na zamykací obrazovce. Ve výchozím nastavení mohou uživatelé povolit zobrazení prezentace, které se spustí poté, co počítač zamkne. Pokud toto nastavení povolíte, uživatelé nebudou moct měnit nastavení prezentace v nastavení počítače a nebude možné spustit žádné zobrazení prezentace.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067105)
-
-  **Výchozí**: povoleno  
-
-  *Nastavení Enabled zabraňuje spuštění snímků.*
-
 - **Minimální stáří hesla ve dnech**:  
   Nastavení zásad minimální stáří hesla určuje, jak dlouho (ve dnech) se musí heslo použít, než ho uživatel může změnit. Můžete nastavit hodnotu v rozmezí od 1 do 998 dnů nebo můžete změny hesel okamžitě zakázat nastavením počtu dnů na 0. Minimální stáří hesla musí být kratší než maximální stáří hesla, pokud je maximální stáří hesla nastaveno na hodnotu 0, což znamená, že hesla nebudou nikdy vypršet. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla se dá nastavit na libovolnou hodnotu mezi 0 a 998.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067022)
 
   **Výchozí hodnota**: 1
 
+- **Zabránit použití kamery**:  
+  Zakáže přepínač kamery zamykací obrazovky v nastavení počítače a zabraňuje tomu, aby se kamera vyvolala na zamykací obrazovce. Ve výchozím nastavení můžou uživatelé povolit vyvolání dostupné kamery na zamykací obrazovce. Pokud povolíte toto nastavení, uživatelé nebudou moci povolit ani zakázat přístup k fotoaparátu zamykací obrazovky v nastavení počítače a fotoaparát nelze vyvolat na zamykací obrazovce.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067052)
+
+  **Výchozí**: povoleno
+
+- **Zabránit zobrazení prezentace**:  
+  Zakáže nastavení prezentace snímků zamykací obrazovky v nastavení počítače a zabrání přehrávání prezentace na zamykací obrazovce. Ve výchozím nastavení mohou uživatelé povolit zobrazení prezentace, které se spustí poté, co počítač zamkne. Pokud toto nastavení povolíte, uživatelé nebudou moct měnit nastavení prezentace v nastavení počítače a nebude možné spustit žádné zobrazení prezentace.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067105)
+
+  **Výchozí**: povoleno *nastavení povoleno zabraňuje spuštění snímků.*
+
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="dma-guard"></a>Ochrana DMA
 
@@ -445,11 +602,17 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dma
   **Výchozí**: Blokovat vše
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="event-log-service"></a>Služba protokolu událostí
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) .
+
+- **Maximální velikost souboru protokolu aplikace v KB**:  
+  Nastavení této zásady určuje maximální velikost souboru protokolu v kilobajtech. Pokud nastavení této zásady povolíte, můžete nakonfigurovat maximální velikost souboru protokolu na 1 megabajt (1024 kilobajtů) a 2 terabajty (2147483647 kilobajtů) v kilobajtech. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude maximální velikost souboru protokolu nastavena na místně konfigurovanou hodnotu. Tuto hodnotu může změnit místní správce pomocí dialogu Vlastnosti protokolu a výchozí hodnota je 20 megabajtů.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067125)
+
+  **Výchozí**: 32768
 
 - **Maximální velikost souboru protokolu zabezpečení v KB**:  
   Nastavení této zásady určuje maximální velikost souboru protokolu v kilobajtech. Pokud nastavení této zásady povolíte, můžete nakonfigurovat maximální velikost souboru protokolu na 1 megabajt (1024 kilobajtů) a 2 terabajty (2147483647 kilobajtů) v kilobajtech. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude maximální velikost souboru protokolu nastavena na místně konfigurovanou hodnotu. Tuto hodnotu může změnit místní správce pomocí dialogu Vlastnosti protokolu a výchozí hodnota je 20 megabajtů.  
@@ -460,12 +623,6 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Eve
 - **Maximální velikost souboru protokolu systému v KB**:  
   Nastavení této zásady určuje maximální velikost souboru protokolu v kilobajtech. Pokud nastavení této zásady povolíte, můžete nakonfigurovat maximální velikost souboru protokolu na 1 megabajt (1024 kilobajtů) a 2 terabajty (2147483647 kilobajtů) v kilobajtech. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude maximální velikost souboru protokolu nastavena na místně konfigurovanou hodnotu. Tuto hodnotu může změnit místní správce pomocí dialogu Vlastnosti protokolu a výchozí hodnota je 20 megabajtů.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2066798)
-
-  **Výchozí**: 32768
-
-- **Maximální velikost souboru protokolu aplikace v KB**:  
-  Nastavení této zásady určuje maximální velikost souboru protokolu v kilobajtech. Pokud nastavení této zásady povolíte, můžete nakonfigurovat maximální velikost souboru protokolu na 1 megabajt (1024 kilobajtů) a 2 terabajty (2147483647 kilobajtů) v kilobajtech. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, bude maximální velikost souboru protokolu nastavena na místně konfigurovanou hodnotu. Tuto hodnotu může změnit místní správce pomocí dialogu Vlastnosti protokolu a výchozí hodnota je 20 megabajtů.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067125)
 
   **Výchozí**: 32768
 
@@ -519,7 +676,7 @@ Další informace najdete v dokumentaci k systému Windows v tématu [zásady CS
 
   **Výchozí**: zakázáno
 
-## <a name="firewall"></a>Firewall
+## <a name="firewall"></a>Brána firewall
 
 Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.
 
@@ -585,14 +742,14 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   Toto nastavení zásad umožňuje spravovat, jestli má skript povoleno aktualizovat stavový řádek v rámci zóny.
 
   - *Pokud nastavení této zásady povolíte*, můžou skripty aktualizovat stavový řádek.
-  - *Pokud toto nastavení zásad zakážete nebo*nenakonfigurujete, skripty nemůžou aktualizovat stavový řádek.
+  - *Pokud nastavení této zásady zakážete nebo nenakonfigurujete*, skripty nemůžou aktualizovat stavový řádek.
 
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067074)
 
   **Výchozí**: zakázáno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - Internet **Explorer zóna Internet přetahováním nebo kopírováním a vkládáním souborů**:  
   Toto nastavení zásad umožňuje spravovat, jestli uživatelé můžou přetahovat soubory nebo kopírovat a vkládat soubory ze zdroje v rámci zóny. Pokud nastavení této zásady povolíte, budou uživatelé moci automaticky přetahovat soubory nebo kopírovat a vkládat soubory z této zóny. Pokud v rozevíracím seznamu vyberete možnost zobrazit výzvu, zobrazí se uživatelům dotaz, zda chcete soubory přetáhnout nebo zkopírovat z této zóny. Pokud nastavení této zásady zakážete, uživatelé nebudou moci přetahovat soubory nebo kopírovat a vkládat soubory z této zóny. Pokud nastavení této zásady nenakonfigurujete, uživatelé mohou automaticky přetahovat soubory nebo kopírovat a vkládat soubory z této zóny.  
@@ -613,7 +770,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázáno
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Přístup k internetovým zónám Internet Exploreru k datovým zdrojům**:  
   Toto nastavení zásad umožňuje spravovat, jestli Internet Explorer může získat přístup k datům z jiné zóny zabezpečení pomocí analyzátoru MSXML (Microsoft XML Parser) nebo rozhraní ADO (ActiveX Data Objects) (ADO). Pokud nastavení této zásady povolíte, uživatelé mohou načíst stránku v zóně, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud v rozevíracím seznamu vyberete příkaz Dotázat se na uživatele, zobrazí se dotaz, jestli chcete, aby se stránka načetla do zóny, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud nastavení této zásady zakážete, uživatelé nemůžou načíst stránku v zóně, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud nastavení této zásady nenakonfigurujete, uživatelé nebudou moci načíst stránku v zóně, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně.  
@@ -688,7 +845,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázat
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Automaticky vyzvat k stahování souborů v internetové zóně Internet Exploreru**:  
   Nastavení této zásady určuje, jestli se uživatelům zobrazí výzva k zadání souborů ke stažení, který není inicializovaný uživatelem. Bez ohledu na toto nastavení budou uživatelé dostávat dialogy pro stažení souborů pro uživatelem iniciované soubory ke stažení. Pokud povolíte toto nastavení, uživatelé obdrží dialog pro stažení souboru pro automatické pokusy o stažení. Pokud toto nastavení zakážete nebo nenakonfigurujete, soubory ke stažení, které nejsou inicializované uživatelem, se zablokují a uživatelům se zobrazí oznamovací panel místo dialogového okna pro stažení souboru. Uživatelé pak můžou kliknout na oznamovací pruh, aby se povolilo zobrazení výzvy ke stažení souboru.  
@@ -706,7 +863,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: povoleno
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Upozornění zabezpečení zóny s omezeným přístupem aplikace Internet Explorer pro potenciálně nebezpečné soubory**:  
   Toto nastavení zásad určuje, jestli se při pokusu uživatele o otevření spustitelných souborů nebo jiných potenciálně nebezpečných souborů (z intranetového sdílení souborů pomocí Průzkumníka souborů) zobrazí zpráva "otevření souboru – upozornění zabezpečení". Pokud nastavení této zásady povolíte a nastavíte rozevírací nabídku na povolit, tyto soubory se otevřou bez upozornění zabezpečení. Pokud nastavíte rozevírací seznam na dotazování, zobrazí se před otevřením souborů upozornění zabezpečení. Pokud nastavení této zásady zakážete, tyto soubory se neotevřou. Pokud nastavení této zásady nenakonfigurujete, může uživatel nakonfigurovat, jak tento počítač zpracovává tyto soubory. Ve výchozím nastavení jsou tyto soubory zablokované v zóně s omezeným přístupem, které jsou povolené v zónách intranetu a místní počítač, a nastavte, aby se zobrazila výzva v Internetu a v důvěryhodných zónách.  
@@ -727,7 +884,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: žádné lokality
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Podpora šifrování v aplikaci Internet Explorer**:  
   Toto nastavení zásad umožňuje vypnout podporu protokolu TLS (Transport Layer Security) 1,0, TLS 1,1, TLS 1,2, SSL (Secure Sockets Layer) (SSL) 2,0 nebo SSL 3,0 v prohlížeči. TLS a SSL jsou protokoly, které vám pomůžou chránit komunikaci mezi prohlížečem a cílovým serverem. Když se prohlížeč pokusí nastavit chráněnou komunikaci s cílovým serverem, prohlížeč a server vyjednají, který protokol a verze se mají použít. Prohlížeč a server se snaží porovnat seznam podporovaných protokolů a verzí každého druhého a vybere upřednostňovanou shodu. Pokud nastavení této zásady povolíte, bude prohlížeč vyjednávat šifrovací tunel pomocí metod šifrování, které vyberete v rozevíracím seznamu, nebo vyjednávat. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, uživatel může vybrat metodu šifrování, kterou prohlížeč podporuje.  
@@ -737,7 +894,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   *Výběrem šipky dolů zobrazíte možnosti, které můžete pro toto nastavení vybrat.*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer uzamkl inteligentní obrazovka internetové zóny**:  
   Nastavení této zásady určuje, zda bude filtr SmartScreen kontrolovat stránky v této zóně na škodlivý obsah. Pokud toto nastavení zásad povolíte, vyhledá filtr SmartScreen stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady zakážete, filtr SmartScreen nebude skenovat stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, zda má filtr SmartScreen kontrolovat stránky v této zóně pro škodlivý obsah. Poznámka: v Internet Exploreru 7 Toto nastavení zásad určuje, jestli má filtr útoků phishing kontrolovat stránky v této zóně pro škodlivý obsah.  
@@ -1398,7 +1555,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Chování výzvy ke zvýšení úrovně oprávnění správce**:  
-  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Dostupné možnosti:
+  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Možnosti:
 
   - *Zvýšení oprávnění bez výzvy* – umožňuje privilegovaným účtům provést operaci, která vyžaduje zvýšení oprávnění bez vyžadování souhlasu nebo přihlašovacích údajů. Poznámka: tuto možnost použijte jenom v nejvíc omezených prostředích.
 
@@ -1417,7 +1574,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyzvat k vyjádření souhlasu na zabezpečené ploše
 
 - **Minimální zabezpečení relace pro klienty založené na NTLM SSP**:  
-  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128 bitů šifrování a zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Dostupné možnosti:
+  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128 bitů šifrování a zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Možnosti:
 
   - *Vyžadovat zabezpečení relace NTLMv2* – Pokud není protokol NTLMv2 vyjednávat, připojení se nezdaří.
 
@@ -1430,7 +1587,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadovat šifrování NTLM v2 128
 
 - **Chování při odebrání čipové karty**:  
-  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Dostupné možnosti:
+  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Možnosti:
 
   - *Žádná akce*.
 
@@ -1474,7 +1631,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: automaticky zamítnout žádosti o zvýšení oprávnění
 
 - **Vyžadovat režim schválení správce pro správce**:  
-  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Dostupné možnosti:
+  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:
 
   - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené.
 
@@ -1502,7 +1659,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: *O:Bag: Bad: (A;; RC;;; BA)*
 
 - **Použít režim schválení správce**:  
-  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Dostupné možnosti:
+  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti:
 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění.
 
@@ -1524,7 +1681,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Zjišťovat instalace aplikací a vyzvat ke zvýšení oprávnění**:  
-  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Dostupné možnosti:
+  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Možnosti:
 
   - *Povoleno* – při zjištění instalačního balíčku aplikace, který vyžaduje zvýšení oprávnění, se uživateli zobrazí výzva k zadání uživatelského jména a hesla pro správu. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s příslušným oprávněním.
 
@@ -1551,7 +1708,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](/windows/client-management/mdm/policy-csp-defender) .
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Zablokuje Adobe Reader při vytváření podřízených procesů**:  
 Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváření dalších procesů. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader. Blokováním podřízených procesů, které jsou vygenerovány aplikací Adobe Reader, se pokus o použití malwaru jako vektoru zabrání v rozprostření.
@@ -1559,7 +1716,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 
   **Výchozí**: Povolit
 
-- **Aplikace Office Communications se spouští v podřízeném procesu**:  
+- **Blokovat spouštění aplikací Office Communications v podřízeném procesu**:  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Výchozí**: Povolit
@@ -1572,19 +1729,45 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   **Výchozí**: 4
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-sept-2020"
+
+- **Typ kontroly**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
+
+  Zadejte typ prohledávání, který se má použít pro prohledávání plánu.
+
+  **Výchozí nastavení** Rychlá kontrola
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Den kontroly plánu Defenderu**:  
   Den kontroly plánu Defenderu
 
   **Výchozí**: každý den
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
 - **Zapnout ochranu s doručováním v cloudu**:  
   CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
   
-  Když se nastaví na Ano, Defender pošle Microsoftu informace o všech nalezených problémech. Pokud je nastavené na Nenakonfigurováno, klient se vrátí k výchozímu, který funkci povolí, ale umožní uživateli ho zakázat.
+  Když se nastaví na Ano, Defender pošle Microsoftu informace o všech nalezených problémech. Pokud je nastavené na Nenakonfigurováno, klient se vrátí k výchozímu, což funkci povolí, ale umožní uživateli ho zakázat.
 
   **Výchozí**: Ano  
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Ochrana Doručená v cloudu**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  Zadejte úroveň ochrany pro potenciálně nežádoucí aplikace (PUAs). Výběr možnosti *Nenakonfigurováno* nastaví klienta na výchozí hodnotu, která vypne PUA ochranu. Při použití PUA se ochrana před nežádoucími aplikacemi vypne a nebude chráněná. Když vyberete povolit, zapnete PUA ochranu a zablokují se zjištěné položky. Režim auditování umožňuje PUA detekovat potenciálně nežádoucí aplikace, ale neprovede žádnou akci. [Přečtěte si další informace](https://go.microsoft.com/fwlink/?linkid=2113937).
+
+  **Výchozí**: Nenakonfigurováno
+  
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Zapnout ochranu v reálném čase**  
   CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
@@ -1603,7 +1786,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 - **Zapnout monitorování chování**:  
   CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
-  Pokud je toto nastavení nastaveno na Ano, vynutilo se monitorování chování a uživatel ho nemůže zakázat. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
+  Pokud je toto nastavení nastaveno na Ano, vynutilo se monitorování chování a uživatel ho nebude moct zakázat. Pokud je nastavené na Nenakonfigurováno, nastavení se vrátí do výchozího nastavení klienta, které je zapnuté, ale uživatel ho může změnit. Pokud chcete zakázat monitorování v reálném čase, použijte vlastní identifikátor URI.
 
   **Výchozí**: Ano
 
@@ -1617,13 +1800,13 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**:  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  Když se nastaví na Ano, provedou se při úplné kontrole vyměnitelných jednotek (například jednotky USB Flash). Když se nastaví jako nenakonfigurované, nastavení se vrátí do výchozího klienta, který prohledá vyměnitelné jednotky, ale uživatel ho může zakázat.
+  Když se nastaví na Ano, prohledají se při úplné kontrole vyměnitelných jednotek (například jednotky USB Flash). Když se nastaví jako nenakonfigurované, nastavení se vrátí do výchozího klienta, který prohledá vyměnitelné jednotky, ale uživatel ho může zakázat.
   **Výchozí**: Ano  
 
 - **Blokovat aplikacím Office vkládání kódu do jiných procesů**:  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=872974)
 
-  Při nastavení Ano budou aplikace Office zablokované v vkládání kódu do jiných procesů. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  Při nastavení Ano budou aplikace Office zablokované v vkládání kódu do jiných procesů. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo pro omezení možností útoku (ASR) se řídí pomocí tohoto identifikátoru GUID: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Výchozí**: blok
 
@@ -1655,12 +1838,28 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   
   **Výchozí**: blok
 
-- **Typ spuštění obsahu e-mailu**:    
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Typ spuštění obsahu e-mailu**:  
   [Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty](https://go.microsoft.com/fwlink/?linkid=872980)
 
   Pokud je nastaveno na Ano, spustitelný obsah stažený z e-mailu a klientů webové pošty se zablokuje. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté.
 
   **Výchozí**: blok
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty**:   
+  [Blokovat stahování spustitelného obsahu z e-mailu a klientů webové pošty](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Pokud je nastaveno na Ano, spustitelný obsah stažený z e-mailu a klientů webové pošty se zablokuje. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté.
+
+  **Výchozí**: blok
+
+::: zone-end
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Zabránit krádeži pověření typu**:  
   [Chránit zařízení před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)
@@ -1683,7 +1882,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
 
   **Výchozí**: blok
 
-- **Ochrana sítě**:  
+- **Povolit ochranu sítě**:  
   [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
   Pokud je nastaveno na Ano, bude ochrana sítě povolena pro všechny uživatele systému. Ochrana sítě chrání zaměstnance před přístupem k podvodným podvodům a škodlivému obsahu na internetu. Patří sem prohlížeče třetích stran. Když nastavení nastavíte jenom na audit, nebudou se uživatelé z nebezpečných domén zablokovat, ale místo toho se vyvolají události Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je zakázáno.
@@ -1711,7 +1910,7 @@ Toto pravidlo zabraňuje útokům blokováním aplikace Adobe Reader v vytváře
   Když se nastaví hodnota Ano, Defender bude blokovat spouštění souborů JavaScript nebo VBScript, které byly staženy z Internetu. Pokud je nastaveno pouze na audit, budou namísto blokování zavolány události systému Windows. Nastavení Nenakonfigurováno vrátí nastavení výchozí nastavení systému Windows, které je vypnuté. Toto pravidlo ASR se ovládá pomocí následujícího identifikátoru GUID: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## <a name="ms-security-guide"></a>Průvodce zabezpečením MS
 
@@ -1795,7 +1994,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – nap
   **Výchozí**: povoleno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="remote-assistance"></a>Vzdálená pomoc
 
@@ -1808,31 +2007,15 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   - *Pokud nastavení této zásady zakážete*, uživatelé v tomto počítači nebudou moct pomocí e-mailu nebo přenosu souborů požádat někoho o pomoc. Uživatelé navíc nemohou použít programy pro rychlé zasílání zpráv k povolení připojení k tomuto počítači.
 
-  - *Pokud nastavení této zásady*nenakonfigurujete, uživatelé můžou v Ovládacích panelech zapnout nebo vypnout funkci vyžádaná (požádat o) pro vzdálenou pomoc na ovládacím panelu Vlastnosti systému. Uživatelé můžou taky nakonfigurovat nastavení vzdálené pomoci.
+  - *Pokud nastavení této zásady nenakonfigurujete*, uživatelé můžou v Ovládacích panelech zapnout nebo vypnout funkci vyžádaná (požádat o) pro vzdálenou pomoc v nástroji vlastnosti systému. Uživatelé můžou taky nakonfigurovat nastavení vzdálené pomoci.
 
   Pokud toto nastavení zásad povolíte, budete mít dva způsoby, jak pomocníkům umožnit poskytování vzdálené pomoci: "Povolit pomocníkům pouze zobrazit počítač" nebo "Povolit pomoc při vzdáleném řízení počítače." Nastavení "maximální doba lístku" Nastavuje omezení pro dobu, po kterou může být otevřené pozvání vzdálené pomoci vytvořené pomocí e-mailu nebo přenosu souborů. Nastavení vyberte metodu pro odesílání e-mailových pozvánek určuje, která e-mailová norma se má použít k odeslání pozvání vzdálené pomoci. V závislosti na e-mailovém programu můžete použít buď standard *mailto* (příjemce pozvánky prostřednictvím připojení k Internetu), nebo rozhraní SMAPI (Simple MAPI) Standard (Pozvánka je připojená k vaší e-mailové zprávě). Nastavení této zásady není k dispozici v systému Windows Vista, protože rozhraní SMAPI je jedinou podporovanou metodou. Pokud nastavení této zásady povolíte, měli byste taky povolit příslušné výjimky brány firewall, aby bylo možné povolit komunikaci vzdálené pomoci.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067198)
 
   **Výchozí**: zakázat vzdálenou pomoc
 
-<!-- These settings are not available: 
-  When set to *Enable Remote Assistance*, configure the following additional settings:
-
-  - **Remote Assistance solicited permission**:  
-    **Default**: View
-
-  - **Maximum ticket time value**:  
-    **Default**: *Not configured*
-
-  - **Maximum ticket time period**:  
-    **Default**: Minutes
-
-  - **E-Mail invitation method**:  
-    **Default**: Simple MAPI
--->
-
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="remote-desktop-services"></a>Vzdálená plocha
 
@@ -1968,12 +2151,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: Ano
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Zapnout filtr Windows SmartScreen**  
   CSP: [SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
 
-  Při nastavení Ano se vynutilo použití filtru SmartScreen pro všechny uživatele. Když nastavení nastavíte na Nenakonfigurováno, vrátí nastavení výchozí nastavení systému Windows, které povoluje filtr SmartScreen, ale uživatelé můžou toto nastavení změnit. Chcete-li zakázat filtr SmartScreen, použijte vlastní identifikátor URI.
+  Při nastavení Ano se vynutilo použití filtru SmartScreen pro všechny uživatele. Když nastavení nastavíte na Nenakonfigurováno, vrátí nastavení výchozí nastavení Windows, což znamená Povolit filtr SmartScreen, ale uživatelé můžou toto nastavení změnit. Chcete-li zakázat filtr SmartScreen, použijte vlastní identifikátor URI.
 
   **Výchozí**: Ano
 
@@ -1987,7 +2170,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: Ano
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="system"></a>Systém
 
@@ -2013,15 +2196,15 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – sys
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WiFi](/windows/client-management/mdm/policy-csp-wifi) .
 
-- **Blokovat sdílení internetu**:  
-  Určuje, jestli je na zařízení možné sdílení internetu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067327)
-
-  **Výchozí**: Ano
-
 - **Blokovat automatické připojení k Wi-Fi hotspotům**:  
   Povolí nebo zakáže, aby se zařízení automaticky připojovala k Wi-Fi hotspotům.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067320)
+
+  **Výchozí**: Ano
+
+- **Blokovat sdílení internetu**:  
+  Určuje, jestli je na zařízení možné sdílení internetu.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067327)
 
   **Výchozí**: Ano
 
@@ -2042,12 +2225,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   **Výchozí**: povoleno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
 - **Blokovat Windows Hello pro firmy**  
-  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, zařízení zřídí Windows Hello pro firmy. Pokud nastavení této zásady povolíte, zařízení nezřídí Windows Hello pro firmy pro žádného uživatele.
+  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, zařízení zřídí Windows Hello pro firmy. Pokud nastavení této zásady povolíte, zařízení nezřídí Windows Hello pro firmy pro žádného uživatele.
 
   **Výchozí**: povoleno
   
@@ -2056,7 +2239,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   - **Minimální délka PIN kódu**  
     Minimální délka kódu PIN musí být mezi 4 a 127.
 
-    **Výchozí**: *Nenakonfigurováno*
+    **Výchozí**: Nenakonfigurováno
 
   - **Povolit používání rozšířené ochrany proti falšování identity, pokud je dostupná**  
     [Ochrana proti falšování identity](https://go.microsoft.com/fwlink/?linkid=2067192)
@@ -2064,6 +2247,9 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
     Pokud je tato možnost povolená, budou zařízení používat rozšířenou ochranu proti falšování identity, pokud je dostupná. Pokud není nakonfigurováno, bude dodržena konfigurace klienta pro ochranu proti falšování identity.
 
     **Výchozí**: Nenakonfigurováno
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
 
   - **Malá písmena v PIN kódu**:  
     V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.
@@ -2074,7 +2260,6 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
     V případě potřeby musí kód PIN uživatele zahrnovat aspoň jeden speciální znak.
 
     **Výchozí**: nepovolené
- 
 
   - **Velká písmena v PIN kódu**:  
     Pokud se to vyžaduje, PIN kód uživatele musí obsahovat aspoň jedno velké písmeno.
@@ -2082,7 +2267,25 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
     **Výchozí**: nepovolené
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-sept-2020"
+
+  - **Malá písmena v PIN kódu**:  
+    V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.
+
+    **Výchozí**: Nenakonfigurováno
+
+  - **Speciální znaky v PIN kódu**:  
+    V případě potřeby musí kód PIN uživatele zahrnovat aspoň jeden speciální znak.
+
+    **Výchozí**: Nenakonfigurováno
+
+  - **Velká písmena v PIN kódu**:  
+    Pokud se to vyžaduje, PIN kód uživatele musí obsahovat aspoň jedno velké písmeno.
+
+    **Výchozí**: Nenakonfigurováno
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="windows-ink-workspace"></a>Pracovní prostor Windows Ink
 
@@ -2115,6 +2318,8 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 ::: zone pivot="mdm-may-2019"
 
 ## <a name="whats-changed-in-the-new-template"></a>Co se změnilo v nové šabloně
+
+<!-- This section is deprecated from future baseline updates. Use the Compare feature to identify changes -->
 
 Šablona *základní hodnoty zabezpečení MDM pro šablonu květen 2019* obsahuje následující změny v šabloně *Preview* .
 
@@ -2206,6 +2411,8 @@ Následující nastavení:
 - **Vyžadovat speciální znaky v PIN kódech**
 - **Minimální délka PIN kódu**
 - **Vyžadovat v PIN kódu velká písmena**
+
+<!-- END OF DEPRECATED SECTION -->
 
 ::: zone-end
 

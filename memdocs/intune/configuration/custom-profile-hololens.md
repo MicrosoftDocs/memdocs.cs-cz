@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf538bc7dae5ae52c0f550d4193916f5dd5897b
-ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
+ms.openlocfilehash: dd0d83912a5362225cd49773eda334113d11482e
+ms.sourcegitcommit: 84b134594a62ec6df4188cf39f3ea29b0b5f765b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718735"
+ms.locfileid: "90747191"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Použití WDAC a prostředí Windows PowerShell k povolení nebo blokování aplikací na zařízeních HoloLens 2 pomocí Microsoft Intune
 
@@ -175,11 +175,13 @@ V tomto příkladu se pomocí Windows PowerShellu vytvoří zásada řízení ap
 
     2. Když vytváříte profil, zadejte následující nastavení:
 
-      - **OMA-URI:** Zadejte `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>`. Nahraďte `<PolicyGUID>` uzlem PolicyTypeID v souboru **mergedPolicy.xml** , který jste vytvořili v kroku 6.
+      - **OMA-URI:** Zadejte `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy`. Nahraďte `<PolicyGUID>` uzlem PolicyTypeID v souboru **mergedPolicy.xml** , který jste vytvořili v kroku 6.
 
-        V našem příkladu zadejte `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076` .
+        V našem příkladu zadejte `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy` .
 
         Identifikátor GUID zásad se **musí shodovat** s uzlem PolicyTypeID v souboru **mergedPolicy.xml** (vytvořený v kroku 6).
+
+        OMA-URI používá [zprostředkovatele CSP pro ApplicationControl](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp). Další informace o uzlech tohoto CSP najdete na webu [APPLICATIONCONTROL CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp).
 
       - **Datový typ**: nastavte na **soubor Base64**. Soubor automaticky převede z přihrádky na base64.
       - **Soubor certifikátu**: Nahrajte binární soubor **compiledPolicy. bin** (vytvořený v kroku 9).

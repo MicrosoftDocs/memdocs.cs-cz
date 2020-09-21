@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 553715c2c47d96202ff30d2b27c871562fc6e0af
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912691"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815506"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurace aplikace pořizovat test na zařízeních s Windows 10 pomocí Intune
 
@@ -34,7 +34,7 @@ Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovac
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
+Vytvořit [profil konfigurace zařízení pro zabezpečení Windows 10 pro vzdělávání](education-settings-configure.md#create-a-device-profile)
 
 ## <a name="take-a-test-settings"></a>Provést nastavení testu
 

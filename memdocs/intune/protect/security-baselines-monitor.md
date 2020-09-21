@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6623afcce55c6598ed69fdb78d35235e0fd39dc5
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914867"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815357"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Sledujte standardní hodnoty a profily zabezpečení v Microsoft Intune
 
-Intune nabízí několik možností monitorování standardních hodnot zabezpečení. Další možnosti:
+Intune poskytuje několik možností pro sledování standardních hodnot zabezpečení. Další možnosti:
 
 - Sledujte základní hodnoty zabezpečení a všechna zařízení, která se shodují (nebo se neshodují) s doporučenými hodnotami.
 - Monitorujte profil standardních hodnot zabezpečení, který se týká vašich uživatelů a zařízení.
@@ -33,95 +33,103 @@ Intune nabízí několik možností monitorování standardních hodnot zabezpe�
 
 Můžete si také prohlédnout *Konfigurace zabezpečení koncového bodu* , které se vztahují na jednotlivá zařízení, která zahrnují standardní hodnoty zabezpečení.
 
-Tento článek vás provede těmito možnostmi monitorování.
-
-[Směrné plány zabezpečení v Intune](security-baselines.md) poskytují další podrobnosti o funkci směrného plánu zabezpečení v Microsoft Intune.
+Další informace o této funkci najdete v tématu [základní hodnoty zabezpečení v Intune](security-baselines.md).
 
 ## <a name="monitor-the-baseline-and-your-devices"></a>Monitorování standardních hodnot a zařízení
 
-Při sledování směrného plánu získáte přehled o stavu zabezpečení vašich zařízení na základě doporučení Microsoftu. Pokud si chcete zobrazit tyto přehledy, přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), klikněte na směrné plány zabezpečení služby **Endpoint Security**  >  **Security baselines** a vyberte typ standardních hodnot zabezpečení, jako je *základní hodnota zabezpečení MDM*. Pak v podokně *profil* vyberte instanci profilu, pro kterou chcete zobrazit podrobnosti. Otevře se okno *vlastnosti* profilů, kde můžete vybrat libovolnou sestavu profilu z části *monitorování* . 
+Při sledování směrného plánu získáte přehled o stavu zabezpečení vašich zařízení na základě doporučení Microsoftu. Pokud si chcete zobrazit tyto přehledy, přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), klikněte na směrné plány zabezpečení služby **Endpoint Security**  >  **Security baselines** a vyberte typ standardních hodnot zabezpečení, jako je *základní hodnota zabezpečení MDM*. Potom v podokně *verze* vyberte instanci profilu, pro kterou chcete zobrazit podrobnosti, a otevřete její podokno *přehledu* . 
 
-Po prvním přiřazení směrného plánu trvá zobrazení dat až 24 hodin. Pozdější změny se projeví až po šesti hodinách.
+V podokně *Přehled* se zobrazí dvě zobrazení stavu pro vybraný směrný plán:
 
-Při přechodu k sestavám a zařízením jsou k dispozici různé podrobnosti.
+- **Stav tabulka standardních hodnot zabezpečení** – tento graf zobrazuje nejdůležitější podrobnosti o stavu zařízení pro základní verzi. Dostupné podrobnosti:
+  - **Odpovídá výchozímu směrnému plánu** – tento stav určuje, kdy se konfigurace zařízení shoduje s výchozí (neupravenou) konfigurací standardních hodnot.
+  - **Odpovídá vlastnímu nastavení** – tento stav identifikuje, kdy konfigurace zařízení odpovídá přizpůsobené verzi směrného plánu, který jste nasadili. 
+  - **Nesprávně nakonfigurovaný** – tento stav představuje souhrn, který reprezentuje tři stavové stavy ze zařízení: *Chyba*, *čeká*nebo *konflikt*. Tyto samostatné stavy jsou k dispozici v jiných zobrazeních, jako je například *standardní hodnota zabezpečení stav podle kategorie*, zobrazení seznamu, které se zobrazí pod tímto grafem.
+  - **Netýká** se – tento stav představuje zařízení, které tyto zásady nemůžou přijmout. Například zásada aktualizuje nastavení specifické pro nejnovější verzi Windows, ale zařízení používá starší (starší) verzi, která toto nastavení nepodporuje. 
 
-<!-- UI is changing, unclear how yet: 
+- **Základní hodnota zabezpečení stav podle kategorie** – zobrazení seznamu, které zobrazuje stav zařízení podle kategorie. V tomto zobrazení seznamu jsou k dispozici stejné podrobnosti jako *stav graf zabezpečení standardních hodnot* . Místo chybných *konfigurací* se ale zobrazí tři sloupce stavu stav, který je nesprávně nakonfigurovaný:
 
+  - **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení.
+  - **Konflikt**: pro stejné zařízení se aplikují dvě nastavení a Intune ho nedokáže rozřadit do konfliktu. Správce by měl provést kontrolu.
+  - **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout.
+ 
+Když přejdete na dva předchozí zobrazení, můžete zobrazit následující podrobnosti o stavu nastavení a zobrazeních seznamu stavů zařízení:
 
-- **Device view** – A summary of how many devices are in each status category for the baseline.
-- **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
+- **Úspěch**: zásada se použije.
+- **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení.
+- **Konflikt**: pro stejné zařízení se aplikují dvě nastavení a Intune ho nedokáže rozřadit do konfliktu. Správce by měl provést kontrolu.
+- **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout.
+- **Nedá se použít**: zařízení nemůže tuto zásadu přijmout. Například zásada aktualizuje nastavení specifické pro nejnovější verzi Windows, ale zařízení používá starší (starší) verzi, která toto nastavení nepodporuje.
 
-Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
+V zobrazení *verze* můžete vybrat **stav zařízení**. V zobrazení stav zařízení se zobrazí seznam zařízení, která obdrží tyto standardní hodnoty, a obsahuje následující podrobnosti:
+- *Hlavní název uživatele* – zobrazuje profil uživatele přidružený ke směrnému plánu na zařízení. 
+- *Zabezpečení standardních hodnot stav* – v tomto sloupci se zobrazuje stav zařízení:
+  - **Úspěch**: zásada se použije.
+  - **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení.
+  - **Konflikt**: pro stejné zařízení se aplikují dvě nastavení a Intune ho nedokáže rozřadit do konfliktu. Správce by měl provést kontrolu.
+  - **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout.
+  - **Nedá se použít**: zařízení nemůže tuto zásadu přijmout. Například zásada aktualizuje nastavení specifické pro nejnovější verzi Windows, ale zařízení používá starší (starší) verzi, která toto nastavení nepodporuje.
+- *Poslední vrácení se změnami* – při posledním přijetí stavu ze zařízení.
 
-- **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
-
-  > [!NOTE]
-  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
-
-- **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
-- **Not applicable** - At least one setting isn't applicable and isn't applied.
-
-### Device view
-
-The Overview pane displays a chart-based summary of how many devices have a specific status for the baseline; **Security baseline posture for assigned Windows 10 devices**.
-
-![Check the status of the devices](./media/security-baselines-monitor/overview.png)
-
-When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
-
-For example, if a device has a setting that's classified as *misconfigured* and one or more settings that are classified as *Does not match baseline*, the device is classified as *Misconfigured*.
-
-You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
-
-- Select **Device configuration** > Select the profile with an Error state:
-
-  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
-
-- Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
-
-  ![See the setting causing the error](./media/security-baselines-monitor/profile-with-error-status.png)
-
-Use this reporting to see any settings in a profile that are causing an issue. Also get more details of policies and profiles deployed to devices.
-
-> [!NOTE]
-> When a property is set to **Not configured** in the baseline, the setting is ignored, and no restrictions are enforced. The property isn't shown in any reporting.
-
-### Per category view
-
-The Overview pane displays a per-category chart for the baseline named **Security baseline posture by category**.  This view displays each category from the baseline, and identifies the percentage of devices that fall into a status classification for each of those categories.
-
-![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
-
-Status for **Matches baseline** doesn't display until 100% of devices report that status for the category.
-
-You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
--->
+> [!TIP]  
+> Po prvním přiřazení směrného plánu trvá zobrazení dat až 24 hodin. Pozdější změny se projeví až po šesti hodinách.
 
 ## <a name="monitor-the-profile"></a>Monitorování profilu
 
 Monitorování profilu poskytuje přehled o stavu nasazení vašich zařízení, ale ne stav zabezpečení na základě základních doporučení.
 
-1. V Intune vyberte **standardní hodnoty zabezpečení** > výběrem směrného plánu otevřete jeho podokno *profily* .
+1. V Intune vyberte **Endpoint security**  >  **standardní hodnoty zabezpečení**Endpoint Security, *Vyberte typ standardních hodnot zabezpečení, jako je například směrný plán zabezpečení MDM*  >  *Vyberte instanci těchto vlastností směrného plánu*  >  **Properties**.
 
-<!-- More churn  
-2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
+2. Ve *vlastnostech* směrného plánu rozbalte **Nastavení** pro procházení a zobrazte všechny kategorie nastavení a jednotlivá nastavení ve standardních hodnotách, včetně jejich konfigurace pro tuto instanci směrného plánu.
 
-   ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
---> 
-3. V části **Spravovat**  >  **vlastnosti**se zobrazí seznam všech nastavení ve standardních hodnotách. Můžete také změnit kterékoli z těchto nastavení:
+   ![Obrázek obrazovky znázorňující zobrazení nastavení](./media/security-baselines-monitor/manage-settings.png)
 
-   ![Zobrazit a aktualizovat nastavení v profilu standardních hodnot zabezpečení](./media/security-baselines-monitor/manage-settings.png)
-
-4. V okně **monitor**můžete zobrazit stav nasazení profilu na jednotlivých zařízeních, stav pro každého uživatele a stav každého nastavení ve standardních hodnotách:
+3. Pomocí možností **monitorování** můžete zobrazit stav nasazení profilu na jednotlivých zařízeních, stav pro každého uživatele a stav nastavení z instance směrného plánu:
 
    ![Zobrazit různé možnosti monitorování pro profil standardních hodnot zabezpečení](./media/security-baselines-monitor/monitor-status-options.png)
+
+## <a name="resolve-conflicts-for-security-baselines"></a>Řešení konfliktů pro standardní hodnoty zabezpečení
+
+Pokud chcete vyřešit konflikt nebo chybu nastavení v profilech standardních hodnot zabezpečení nebo zásadách zabezpečení koncového bodu, Prohlédněte si **konfiguraci zabezpečení koncového bodu** zařízení.  Toto zobrazení založené na zařízení vám pomůže zjistit, kde profily a zásady obsahují nastavení, která zastavují stav konflikt nebo chyba. 
+
+Informace o konfliktních nastaveních a chybách můžete získat pomocí dvou cest v centru pro správu Microsoft Endpoint Manageru:
+
+- Zabezpečení koncového **bodu**  >  **Standardní hodnoty zabezpečení**  >  *Vyberte typ*  >  směrného plánu. **Profily**  >  *Vyberte instanci*  >  standardních hodnot. **Stav zařízení**  >  Konfigurace zabezpečení koncového **bodu**  >  *nastavení, které zobrazuje konflikty nebo chyby*.
+- **Zařízení**  >  *Vyberte zařízení*  >  . Konfigurace zabezpečení koncového **bodu**  >  *Vyberte profil nebo směrný plán*  >  . *Vyberte nastavení ze seznamu nastavení, které zobrazuje konflikty nebo chyby*.
+
+V zobrazení **Konfigurace zabezpečení koncového bodu** zařízení Intune zobrazuje každý základní profil a zásadu z zabezpečení koncového bodu, které je přiřazené k tomuto zařízení. Toto zobrazení také identifikuje přidružený hlavní název uživatele pro každou položku a stav profilu standardních hodnot nebo zásad. Profil nebo zásada se můžou v zařízení objevit několikrát, jednou pro každý jiný hlavní název uživatele, který je k němu přidružený. 
+
+<!-- pending
+The **Baseline status** represents the worst available status from any applicable setting in that profile or policy. For example, if on the device a single setting from a profile is found to be in conflict while the rest of the baselines’ settings are successful, the *Baseline status* is set to *Conflict*. 
+
+The available status from best to worst:
+
+- **Success** - The setting on the device matches the value as configured in the profile, and there are no conflicting configurations. This is either a default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Error** - The profile and settings failed to apply.
+- **Conflict** - The setting conflicts with another instance of the setting from another policy, has an error, or is pending an update. This setting isn’t sent to the device until the conflict is resolved.
+--> 
+
+### <a name="drill-in-to-identify-and-resolve-conflicts"></a>Procházení k identifikaci a řešení konfliktů
+
+1. Při prohlížení konfigurace zabezpečení koncového bodu v zařízení vyberte profil, který chcete zobrazit, a získejte další informace o problému, který má za následek konflikt nebo stav chyby.
+
+   Když přejdete k podrobnostem, Intune zobrazí seznam nastavení pro tento profil, který obsahuje všechna nastavení, která nebyla nastavena jako *nenakonfigurovaná*, a stav tohoto nastavení. Zobrazení lze uspořádat podle kategorie, názvu nastavení nebo stavu. Pokud filtrujete stav, můžete se rychle zaměřit jenom na nastavení, která mají chybu nebo konflikt.  
+
+2. Pokud chcete zobrazit podrobnosti o konkrétním nastavení, vyberte ho a otevřete tak podokno **Podrobnosti nastavení** . V tomto podokně se zobrazí:
+   - Nastavení – název nastavení.
+   - State – stav nastavení na zařízení. 
+   - Zdrojový profil – Toto je seznam každého profilu zabezpečení koncového bodu nebo standardní hodnoty zabezpečení, který konfiguruje stejné nastavení, ale s jinou hodnotou.
+
+   > [!TIP]  
+   > Na rozdíl od konfiguračních profilů zařízení neposkytují profily zabezpečení Endpoint kódy chyb ani související podrobnosti.
+
+3. Chcete-li znovu nakonfigurovat konfliktní profily, vyberte záznam ze seznamu **Profil zdroje** a otevřete tak zobrazení konfigurace těchto profilů. V zobrazení konfigurace profilu můžete zkontrolovat a upravit nastavení v tomto profilu pro odstranění konfliktu.
 
 ## <a name="view-settings-from-profiles-that-apply-to-a-device"></a>Zobrazit nastavení z profilů, které se vztahují k zařízení
 
 Můžete vybrat profil pro standardní hodnoty zabezpečení a přejít k podrobnostem a zobrazit si seznam nastavení z tohoto profilu, která se vztahují na jednotlivá zařízení.  Pokud chcete tento seznam zobrazit, Projděte si základní hodnoty zabezpečení **Endpoint**Security.  >  **Security baselines**  >  *Vyberte typ standardních hodnot*zabezpečení,  >  *Vyberte profil, ve kterém chcete zobrazit*  >  **stav zařízení**. Seznam můžete zobrazit také tak, že kliknete na **zabezpečení koncového bodu**  >  **všechna zařízení**  >  *Vybrat*  >  **Konfigurace zabezpečení koncového bodu**zařízení  >  *Vybrat základní verzi*.
 
-Po výběru zařízení se v centru pro správu Microsoft Endpoint Manageru zobrazí seznam nastavení z tohoto profilu, včetně kategorie, ze které se nastavení nachází, a stavu konfigurace na zařízení. Stavy konfigurace obsahují tyto hodnoty:
+Po výběru zařízení se v centru pro správu Microsoft Endpoint Manageru zobrazí seznam nastavení z tohoto profilu, který obsahuje kategorii, ze které se nastavení nachází, a stav konfigurace na zařízení. Stavy konfigurace obsahují tyto hodnoty:
 
 - **Úspěch** – nastavení zařízení odpovídá hodnotě nakonfigurované v profilu. Toto je výchozí nastavení a doporučená hodnota nebo vlastní hodnota zadaná správcem při konfiguraci profilu.
 - **Konflikt** – nastavení je v konfliktu s jinou zásadou, obsahuje chybu nebo čeká na aktualizaci.
@@ -182,3 +190,5 @@ Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické 
 - [Sledování profilů zařízení](../configuration/device-profile-monitor.md) 
 - [Běžné problémy a jejich řešení](../configuration/device-profile-troubleshoot.md).
 - [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+
+

@@ -217,6 +217,8 @@
       items:
         - name: Sestavy Intune
           href: reports.md
+        - name: Export sestav pomocí Graph API
+          href: reports-export-graph-apis.md
         - name: Protokoly auditu pro aktivity v Intune
           href: monitor-audit-logs.md
         - name: Kontrola protokolů pomocí Azure Monitoru

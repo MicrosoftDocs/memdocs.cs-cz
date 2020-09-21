@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 1486b75526af470444c6a5880ccd27920f2ceb00
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286267"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814837"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Průvodce testováním sady Microsoft Intune App SDK pro vývojáře v Androidu
 
@@ -33,7 +33,7 @@ Pokud ještě nemáte tenanta s vaší společností, můžete vytvořit ukázko
 1. Přejděte na [web pro vytvoření tenanta Microsoft CDX](https://cdx.transform.microsoft.com/my-tenants/create-tenant) a vytvořte tenanta Microsoft 365 Enterprise.
 2. [Nastavte Intune](../fundamentals/setup-steps.md) pro povolení správy mobilních zařízení (MDM).
 3. [Vytvořte uživatele](../fundamentals/users-add.md).
-4. [Vytvořit skupiny].. /Fundamentals/(skupiny – přidat. MD).
+4. [Vytvořte skupiny](../fundamentals/groups-add.md).
 5. [Přiřaďte licence](../fundamentals/licenses-assign.md) podle potřeby pro vaše testování.
 
 
@@ -49,7 +49,7 @@ Následující testovací případy poskytují kroky konfigurace a potvrzení. P
 
 ### <a name="required-pin-and-corporate-credentials"></a>Požadované PIN a firemní přihlašovací údaje
 
-Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete taky vymáhat podnikové ověřování, aby mohli uživatelé používat spravované aplikace. Zde je uveden postup:
+Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete taky vymáhat podnikové ověřování, aby mohli uživatelé používat spravované aplikace. Jak na to:
 
 1. Nastavte **vyžadovat pro přístup kód PIN** a pro přístup k **Ano** **vyžadovat podnikové přihlašovací údaje** . Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Potvrďte následující podmínky:
@@ -71,7 +71,6 @@ Tyto zásady ovlivňují použití záměrů a poskytovatelů obsahu.
     - Správné otevření z nespravované aplikace do funkce aplikace.
     - Sdílení obsahu mezi vaší aplikací a spravovanými aplikacemi je povolené.
     - Sdílení z aplikace do nespravovaných aplikací (například Chrome) je zablokované.
-
 
 #### <a name="restrict-receiving-data-from-other-apps"></a>Omezit příjem dat z jiných aplikací
 
@@ -97,7 +96,7 @@ Systémovou schránku můžete omezit na spravované aplikace následujícím zp
     - Kopírování textu z aplikace do nespravované aplikace (například zprávy) je zablokované.
 
 ### <a name="prevent-save"></a>Zabránit uložení
-Pokud vaše aplikace vyžaduje integrované ovládací prvky Uložit jako, můžete řídit funkci **Uložit jako** , a to následujícím způsobem:
+Pokud vaše aplikace vyžaduje [Integrované ovládací prvky Uložit jako](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations), můžete řídit funkci **Uložit jako** , a to následujícím způsobem:
 
 1. Nastavte možnost **zakázat možnost Uložit jako** na **hodnotu Ano**.
 2. Potvrďte následující podmínky:
@@ -118,7 +117,7 @@ Zálohování aplikací můžete řídit následujícím způsobem:
     - Zálohy jsou omezené.
 
 ### <a name="wipe"></a>Vymazání
-Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e-mailu a dokumentů. Osobní údaje se dešifrují, když už nejsou spravované. Zde je uveden postup:
+Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e-mailu a dokumentů. Osobní údaje se dešifrují, když už nejsou spravované. Jak na to:
 
 1. Z Azure Portal [vydejte vymazání](../apps/apps-selective-wipe.md).
 2. Pokud se vaše aplikace neregistruje pro žádné obslužné rutiny vymazání, potvrďte následující podmínky:

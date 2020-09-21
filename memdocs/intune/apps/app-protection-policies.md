@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: c1886501852ab7a5723638ff098e9ed0afb19c0e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217636"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815285"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -75,12 +75,12 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 
     | Hodnota/možnost | Popis |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne**  . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state) . |
+    | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne**  . Informace najdete v tématu [cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
-    | Veřejné aplikace | Klikněte na **Vybrat veřejné aplikace** a vyberte aplikace, které se mají cílit. |
+    | Veřejné aplikace | <ul><li>V rozevíracím seznamu **cíl do** vyberte cíl zásady ochrany aplikací pro **všechny veřejné aplikace**, aplikace **Microsoftu**nebo **základní aplikace Microsoftu**. V dalším kroku můžete vybrat **Zobrazit seznam aplikací, na které se bude cílit,** a zobrazit tak seznam aplikací, na které budou tyto zásady ovlivněny.</li><li>V případě potřeby se můžete rozhodnout cílit na jednotlivé aplikace kliknutím na **Vybrat veřejné aplikace**.   |
     | Vlastní aplikace | Klikněte na **Vybrat vlastní aplikace** a vyberte vlastní aplikace, které chcete cílit na základě ID sady prostředků. |
 
-    Vybrané aplikace se zobrazí v seznamu veřejné a vlastní aplikace.
+    Pokud jste vybrali jednotlivé aplikace, aplikace se zobrazí v seznamu veřejné a vlastní aplikace.
 6. Kliknutím na **Další** zobrazte stránku **Ochrana dat** .<br>
     Tato stránka poskytuje nastavení pro řízení ochrany před únikem informací (DLP), včetně omezení pro vyjmutí, kopírování, vložení a uložení. Tato nastavení určují, jak uživatelé pracují s daty v aplikacích, které tato zásada ochrany aplikací používá.
 
@@ -115,7 +115,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     > [!IMPORTANT]
     > Použití zásad ochrany aplikací v existujících zařízeních může trvat dlouho. Koncovým uživatelům se na zařízení zobrazí oznámení, když se použijí zásady ochrany aplikací. Před použitím pravidel přístupu condidtional použijte zásady ochrany aplikací na zařízení.
 
-Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace:
+Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace naleznete v tématu:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 * [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 
@@ -138,7 +138,7 @@ Aby se změny projevily hned, musí se koncový uživatel odhlásit od aplikace 
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Cíl pro aplikace na všech typech zařízení | Tuto možnost použijte, pokud chcete zásady zaměřit na aplikace na zařízeních libovolného stavu správy. Pokud chcete cílit aplikace na konkrétní typy zařízení, vyberte **ne**  . Pro toto nastavení může být vyžadována další konfigurace aplikace. Podrobnosti najdete v tématu [Cílení zásad ochrany aplikací na základě stavu správy zařízení](#target-app-protection-policies-based-on-device-management-state). |
     |     Typy zařízení | Tuto možnost použijte, pokud chcete určit, jestli se tato zásada vztahuje na zařízení spravovaná MDM nebo na nespravovaná zařízení. V případě zásad aplikací pro iOS/iPadOS vyberte možnost z **nespravovaných** a **spravovaných** zařízení. V případě zásad aplikací pro Android vyberte z **nespravovaného**, **Správce zařízení s Androidem**a **Android Enterprise**.  |
-    | Veřejné aplikace | Klikněte na **Vybrat veřejné aplikace** a vyberte aplikace, které se mají cílit. |
+    | Veřejné aplikace | <ul><li>V rozevíracím seznamu **cíl do** vyberte cíl zásady ochrany aplikací pro **všechny veřejné aplikace**, aplikace **Microsoftu**nebo **základní aplikace Microsoftu**. V dalším kroku můžete vybrat **Zobrazit seznam aplikací, na které se bude cílit,** a zobrazit tak seznam aplikací, na které budou tyto zásady ovlivněny.</li><li>V případě potřeby se můžete rozhodnout cílit na jednotlivé aplikace kliknutím na **Vybrat veřejné aplikace**.   |
     | Vlastní aplikace | Klikněte na **Vybrat vlastní aplikace** a vyberte vlastní aplikace, které chcete cílit na základě ID sady prostředků. |
 
     Vybrané aplikace se zobrazí v seznamu veřejné a vlastní aplikace.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: abbd81320a354c90814e424574dbc0c5aa055f79
+ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574860"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767090"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -343,7 +343,7 @@ Tato funkce platí pro:
   - Adresy URL musí začínat na `http://` nebo `https://` .
 
 - **Další konfigurace** (Microsoft Azure AD, přesměrování a přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
-  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` . `AppAllowList` rozlišuje velká a malá písmena. Nezapomeňte přesně zadat ' AppAllowList '. 
+  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name` nebo ' AppAllowList '.  
   - **Typ**: zadejte typ dat. Možnosti:
 
     - Řetězec

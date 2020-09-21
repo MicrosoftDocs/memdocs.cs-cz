@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d7e5fc7d16212c40fbbe5c1486ed3be76d2738f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fa293b61a3343f4b4041a75a6aecb6118b7d8742
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983110"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815336"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -33,14 +33,14 @@ Tento dokument popisuje jak resetování hesla na úrovni zařízení, tak reset
 
 | Platforma | Podporované? |
 | ---- | ---- |
-| Zařízení s Androidem verze 6.x nebo starší | Ano |
-| Zařízení s Androidem Enterprise zaregistrovaná jako vlastník zařízení | Ano |
-| zařízení s iOS/iPadOS | Ano |
-| zařízení se systémem iOS/iPadOS zaregistrovaná pomocí zápisu uživatelů | Ne |
-| Zařízení s Androidem zaregistrovaná s pracovním profilem | Ne |
-| Zařízení s Androidem, verze 7.0 nebo novější | Ne |
-| macOS | Ne |
-| Windows | Ne |
+| Zařízení s Androidem verze 6.x nebo starší | Yes |
+| Zařízení s Androidem Enterprise zaregistrovaná jako vlastník zařízení | Yes |
+| zařízení s iOS/iPadOS | Yes |
+| zařízení se systémem iOS/iPadOS zaregistrovaná pomocí zápisu uživatelů | No |
+| Zařízení s Androidem zaregistrovaná s pracovním profilem | No |
+| Zařízení s Androidem, verze 7.0 nebo novější | No |
+| macOS | No |
+| Windows | No |
 
 U zařízení s Androidem to znamená, že obnovení hesla na úrovni zařízení se podporuje jenom na zařízeních s 6. x nebo starším nebo na zařízeních s Androidem Enterprise spuštěnou v celoobrazovkovém režimu. Je to proto, že společnost Google odebrala podporu pro resetování hesla a hesla zařízení s Androidem 7 v rámci aplikace s oprávněním správce zařízení a platí pro všechny dodavatele MDM.
 
@@ -48,9 +48,11 @@ U zařízení s Androidem to znamená, že obnovení hesla na úrovni zařízen�
 
 | Platforma | Podporované? |
 | ---- | ---- |
-| Zařízení s Androidem Enterprise zaregistrovaná s pracovním profilem a se spuštěnou verzí 8.0 nebo novější | Ano |
-| Zařízení s Androidem Enterprise zaregistrovaná s pracovním profilem a se spuštěnou verzí 7.x nebo starší | Ne |
-| Zařízení s Androidem se spuštěnou verzí 7.x nebo starší | Ne |
+| Zařízení s Androidem Enterprise zaregistrovaná s pracovním profilem a se spuštěnou verzí 8.0 nebo novější | Yes |
+| Zařízení vlastněná podnikem v Androidu s pracovním profilem | Yes |
+| Zařízení s Androidem Enterprise zaregistrovaná s pracovním profilem a se spuštěnou verzí 7.x nebo starší | No |
+| Zařízení s Androidem se spuštěnou verzí 7.x nebo starší | No |
+
 
 K vytvoření nového hesla pracovního profilu použijte akci Resetovat heslo. Touto akcí vyzvete uživatele k resetování hesla a vytvoření nového, dočasného hesla, které je jenom pro pracovní profil. 
 

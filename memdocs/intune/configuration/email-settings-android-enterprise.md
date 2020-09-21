@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99e4e037faf5253f92b4907f9b8746dbd58038eb
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 316c66e1c03d18ec7ffb85895d254ea8b3cfeb71
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146061"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815489"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem Enterprise pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
@@ -33,7 +33,8 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ## <a name="before-you-begin"></a>Než začnete
 
-Vytvořte [profil konfigurace zařízení](email-settings-configure.md) (vyberte pracovní profil) nebo vytvořte [zásadu konfigurace aplikace](../apps/app-configuration-policies-use-android.md).
+- Vytvořte pracovní profil pro [profil konfigurace e-mailového zařízení s Androidem Enterprise](email-settings-configure.md)  >  **Work profile**.
+- Nebo vytvořte [zásadu konfigurace aplikace](../apps/app-configuration-policies-use-android.md).
 
 ## <a name="android-enterprise"></a>Android Enterprise
 

@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aa473d15b5abfbab7049a1e822a890d76aee239b
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700544"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779545"
 ---
 # <a name="log-file-reference"></a>Referenční informace k protokolům
 
@@ -75,7 +75,7 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Desktop Analytics](#desktop-analytics)
 
-  - [Zjišťování](#BKMK_DiscoveryLog)  
+  - [Rozpoznávání](#BKMK_DiscoveryLog)  
 
   - [Analýza koncového bodu](#bkmk_analytics)
   
@@ -95,7 +95,7 @@ Následující části obsahují podrobné informace o různých souborech proto
 
   - [Vzdálené řízení](#BKMK_RCLog)  
 
-  - [Vytváření sestav](#BKMK_ReportLog)  
+  - [Generování sestav](#BKMK_ReportLog)  
 
   - [Správa na základě rolí](#BKMK_RBALog)  
 
@@ -584,7 +584,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace so
 
 #### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Poznámka 1: protokoly synchronizované z Azure
 
-Jedná se o místní soubory Configuration Manager protokolů, které Cloud Service Manager synchronizuje z Azure Storage každých pět minut. Brána pro správu cloudu každých pět minut připisuje protokoly do Azure Storage. Proto je maximální zpoždění 10 minut. Podrobné přepínače ovlivňují místní i vzdálené protokoly. Mezi skutečné názvy souborů patří název služby a identifikátor instance role. Například CMG-*ServiceName* - *RoleInstanceID*-CMGSetup. log
+Jedná se o místní soubory Configuration Manager protokolů, které Cloud Service Manager synchronizuje z Azure Storage každých pět minut. Brána pro správu cloudu každých pět minut připisuje protokoly do Azure Storage. Proto je maximální zpoždění 10 minut. Podrobné přepínače ovlivňují místní i vzdálené protokoly. Mezi skutečné názvy souborů patří název služby a identifikátor instance role. Například CMG-*ServiceName* - *RoleInstanceID*-CMGSetup. log. Tyto soubory protokolu se synchronizují, takže je nemusíte v bráně pro správu cloudu získat a tato možnost není podporovaná.
 
 ### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Nastavení dodržování předpisů a přístup k prostředkům společnosti
 
@@ -917,7 +917,7 @@ Následující tabulka uvádí soubory protokolů, které obsahují informace t�
 
 Tyto soubory protokolu jsou umístěné ve `%ProgramFiles%\Update Services\LogFiles` složce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Informace o souborech protokolu](about-log-files.md)
 

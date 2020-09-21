@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 498983a8512891b0c2d41e006ce81245b4356664
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606954"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814674"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -29,7 +29,10 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
+Vytvoření [profilu omezení pro zařízení s Androidem Enterprise](device-restrictions-configure.md):
+
+- Plně spravovaný, vyhrazený a podnikový pracovní profil
+- Pracovní profil
 
 ## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Plně spravovaný, vyhrazený a podnikový pracovní profil
 
@@ -39,7 +42,7 @@ Některá nastavení nejsou podporovaná všemi typy registrace. Pokud chcete zj
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Podívejte se na záhlaví nastavení uživatelé a účty pro Android Enterprise a na typy registrace, které se vztahují na Microsoft Intune a správce koncových bodů.":::
 
-Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení vlastněná společností s pracovním profilem. Tato nastavení stále platí pro plně spravovaná a vyhrazená zařízení, která jsou v plném rozsahu. Tato nastavení jsou v uživatelském rozhraní označena popisovačem na *úrovni pracovního profilu* .
+Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení vlastněná společností s pracovním profilem. Pro plně spravovaná a vyhrazená zařízení tato nastavení platí pro celé zařízení. Tato nastavení jsou označena pomocí textu na *úrovni pracovního profilu* v uživatelském rozhraní.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Podívejte se na nastavení Android Enterprise Applications, která se vztahují na úrovni pracovního profilu v Microsoft Intune a ve Správci koncových bodů.":::
 
@@ -57,7 +60,7 @@ Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení
   - **Automaticky udělit**: Oprávnění jsou udělena automaticky.
   - **Automaticky odepřít**: Oprávnění jsou odepřena automaticky.
 - **Změny data a času**: **blok** zabraňuje uživatelům v ručním nastavení data a času. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na zařízení nastavili datum a čas.
-- **Změny svazku**: **blok** znemožní uživatelům měnit svazek zařízení a také mutes hlavní svazek. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém použít nastavení svazku na zařízení.
+- **Změny svazku**: **blok** znemožní uživatelům měnit hlasitost zařízení a také mutes hlavní svazek. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém použít nastavení svazku na zařízení.
 - **Obnovení továrního**nastavení: **blok** znemožní uživatelům používat v nastavení zařízení možnost továrního obnovení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit použít toto nastavení na zařízení.
 - **Bezpečné spuštění**: **blok** zabraňuje uživatelům v restartování zařízení v nouzovém režimu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit restartovat zařízení v nouzovém režimu.
 - **Stavový řádek**: **blok** zabraňuje přístupu ke stavovým řádku, včetně oznámení a rychlých nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přístup ke stavovým řádkům.
@@ -100,7 +103,7 @@ Některá nastavení platí jenom na úrovni pracovního profilu pro zařízení
 
 Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních nebo si můžete přizpůsobit prostředí domovské obrazovky na plně spravovaných zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštěla jednu aplikaci nebo spouštěla spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte.
 
-**Typ profilu registrace**: Vyberte typ profilu registrace a začněte konfigurovat spouštěč Microsoftu nebo domovskou obrazovku Microsoft spravované na vašich zařízeních. Možnosti:
+**Typ profilu registrace**: Vyberte typ profilu registrace a začněte konfigurovat spouštěč Microsoftu nebo domovskou obrazovku spravovanou Microsoftem na vašich zařízeních. Možnosti:
 
 - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení se uživatelům může zobrazit výchozí prostředí domovské obrazovky zařízení.
 - **Vyhrazené zařízení**: Nakonfigurujte na vyhrazených zařízeních možnosti veřejného terminálu. Před konfigurací těchto nastavení nezapomeňte [Přidat](../apps/apps-add-android-for-work.md) a [přiřadit](../apps/apps-deploy.md) aplikace, které chcete na zařízeních.
@@ -163,11 +166,11 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
       - **Opustit celoobrazovkový režim**: **Povolit** umožňuje správcům dočasně pozastavit celoobrazovkový režim a aktualizovat zařízení. Chcete-li použít tuto funkci, správce:
   
-        1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko **ukončit veřejný terminál** . 
+        1. Pokračuje v výběru tlačítka zpět, dokud se neobjeví tlačítko **ukončit celoobrazovkový** .
         2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
         3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok znovu zamkne zařízení do celoobrazovkového režimu s více aplikacemi.
 
-        Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit správcům v pozastavení celoobrazovkového režimu. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
+        Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit správcům v pozastavení celoobrazovkového režimu. Pokud správce zachová tlačítko zpět a vybere tlačítko Ukončit veřejný **terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
 
       - **Opustit beznabídkový režim**: zadejte číslici a kód PIN pro číslo 4-6. Správce použije tento PIN kód k dočasnému pozastavení celoobrazovkového režimu.
 
@@ -258,11 +261,11 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
     - **Bottom**: panel hledání se zobrazuje v dolní části zařízení.
     - **Skrýt**: panel hledání je skrytý.
 
-<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
+<!-- MandiA (7.16.2020) The following setting may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
-### <a name="password"></a>Heslo
+### <a name="device-password"></a>Heslo zařízení
 
 - **Zakázat zamykací obrazovku**: Pokud chcete zabránit uživatelům používat na zařízení funkci zámku zamykací obrazovky, vyberte **Zakázat** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům umožňovat použití funkcí ochrany před ochranou.
 - **Zakázané funkce zamykací obrazovky**: Pokud je na zařízení povolená klávesa Guard, vyberte, které funkce se mají zakázat. Pokud je například zaškrtnuto políčko **Zabezpečená kamera** , funkce kamery je na zařízení zakázaná. Na zařízení jsou povolené všechny funkce, které nejsou zaškrtnuté.
@@ -376,6 +379,43 @@ End of comment -->
     Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 
   Další informace o této funkci najdete v tématu [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (otevře web s Androidem).
+
+### <a name="work-profile-password"></a>Heslo pracovního profilu
+
+- **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
+  - **Výchozí ze zařízení**
+  - **Vyžaduje se heslo, žádná omezení.**
+  - **Slabý biometrika**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
+  - **Číselná**: heslo musí obsahovat pouze čísla, například `123456789` . Dále zadejte:
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například "1111" nebo "1234", nejsou povolena. Dále zadejte:
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+  - **Abecedy**: jsou vyžadovány písmena v abecedě. Čísla a symboly nejsou požadovány. Dále zadejte:
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+  - **Alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice. Dále zadejte:
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+  - **Alfanumerické znaky se symboly**: zahrnují velká písmena, malá písmena, číslice, interpunkční znaménka a symboly. Dále zadejte:
+
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+    - **Požadovaný počet znaků**: zadejte počet znaků, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných malých**písmen: zadejte počet malých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných velkých znaků**: zadejte počet velkých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
+    - **Požadovaný počet**číslic: zadejte počet číselných znaků ( `1` , `2` , `3` atd.), které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Požadovaný počet znaků symbolů**: zadejte počet znaků symbolu (,, atd `&` `#` `%` .), které musí heslo obsahovat, 0 až 16 znaků.
+
+- **Počet dní do vypršení platnosti hesla**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet hesel vyžadovaných před opětovným použitím hesla uživatelem**: Toto nastavení použijte, pokud chcete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+
+  > [!NOTE]
+  > Plně spravovaná, vyhrazená a podnikově vlastněná zařízení pracovního profilu nejsou vyzváni k nastavení hesla. Nastavení je povinné, ale uživatelé nemusí být upozorňováni. Uživatelé musí heslo nastavit ručně. Zásady se nezdařily, dokud uživatel nezadá heslo, které vyhovuje vašim požadavkům.
+
+### <a name="personal-profile"></a>Osobní profil
+
+- **Kamera**: **Block** zabraňuje přístupu ke kameře během osobního použití. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém použít fotoaparát v osobním profilu.
+- **Snímek obrazovky**: **blok** zabraňuje zachycení obrazovky během osobního použití. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby na osobním profilu získali snímky obrazovky nebo snímky obrazovky.
+- **Povolit uživatelům povolit instalaci aplikací z neznámých zdrojů v osobním profilu**: vyberte **Povolit** , aby uživatelé mohli instalovat aplikace z neznámých zdrojů v osobním profilu. Umožňuje uživatelům instalovat aplikace z jiných zdrojů než z Obchod Google Play. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit uživatelům v instalaci aplikací z neznámých zdrojů v osobním profilu.
 
 ## <a name="work-profile-only"></a>Pouze pracovní profil
 
@@ -525,7 +565,7 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
   > [!IMPORTANT]
   > - Klient VPN, kterého zvolíte, musí být nainstalovaný na zařízení a musí podporovat VPN pro jednotlivé aplikace v pracovních profilech. V opačném případě dojde k chybě.
   > - Aplikaci klienta VPN je potřeba schválit ve **spravovaném obchodu Google Play**, synchronizovat ji do Intune a nasadit ji do zařízení. Až to vše uděláte, bude aplikace nainstalovaná v pracovním profilu uživatele.
-  > - Při použití sítě VPN pro aplikaci s přístupem F5 pro Android 3.0.4 můžou nastat známé problémy. Další informace najdete v [poznámkách k verzi F5's pro přístup F5 pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
+  > - Při použití sítě VPN pro aplikaci s přístupem F5 pro Android 3.0.4 můžou nastat známé problémy. Další informace najdete v tématu [poznámky k verzi F5's pro přístup F5 pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Režim uzamčení**: **Povolit** u všech síťových přenosů, aby používaly tunelové propojení VPN. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
 

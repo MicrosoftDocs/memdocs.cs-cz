@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 02212ddeb4c2522738389c152c038e59fe1db92b
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643626"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814881"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -214,7 +214,11 @@ Než začnete, [Zkontrolujte požadavky konektoru](certificate-connectors.md) a 
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
 6. Vyberte **Další**.
-7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte vaši platformu: – Správce zařízení s Androidem – Android Enterprise – iOS/iPadOS-Windows 10
+7. Nastavení, která můžete konfigurovat v **nastavení konfigurace**, se liší v závislosti na zvolené platformě. Pro podrobnější nastavení vyberte svou platformu:
+   - Správce zařízení s Androidem
+   - Android Enterprise
+   - iOS/iPadOS
+   - Windows 10
    
    |Nastavení     | Platforma     | Podrobnosti   |
    |------------|------------|------------|
@@ -224,9 +228,9 @@ Než začnete, [Zkontrolujte požadavky konektoru](certificate-connectors.md) a 
    |**Certifikační autorita**      |<ul><li>Vše         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
    |**Název certifikační autority** |<ul><li>Vše         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
    |**Název šablony certifikátu**    |<ul><li>Vše         |Zobrazuje název šablony certifikátu. |
-   |**Typ certifikátu**             |<ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější|Vyberte typ: <ul><li> Certifikáty **uživatelů** můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení. </il><li>Certifikáty **zařízení** mohou obsahovat pouze atributy zařízení v předmětu a San certifikátu. Použijte zařízení pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo jiná sdílená zařízení.  <br><br> Tento výběr má vliv na formát názvu subjektu. |
+   |**Typ certifikátu**             |<ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější|Vyberte typ: <ul><li> Certifikáty **uživatelů** mohou obsahovat atributy uživatele i zařízení v předmětu a alternativním názvu předmětu (San) certifikátu. </il><li>Certifikáty **zařízení** mohou obsahovat pouze atributy zařízení v předmětu a San certifikátu. Použijte zařízení pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo jiná sdílená zařízení.  <br><br> Tento výběr má vliv na formát názvu subjektu. |
    |**Formát názvu subjektu**          |<ul><li>Vše         |Podrobnosti o tom, jak nakonfigurovat formát názvu subjektu, najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.  <br><br> U většiny platforem použijte možnost **běžný název** , pokud není vyžadováno jinak. <br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p>  |
-   |**Alternativní název subjektu**     |<ul><li>Vše         |V případě *atributu*vyberte **hlavní název uživatele (UPN)** , pokud není vyžadováno jinak, nakonfigurujte odpovídající *hodnotu*a klikněte na tlačítko **Přidat**. <br><br>Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.|
+   |**Alternativní název subjektu**     |<ul><li>Vše         |V případě *atributu*vyberte **hlavní název uživatele (UPN)** , pokud není vyžadováno jinak, nakonfigurujte odpovídající *hodnotu*a klikněte na tlačítko **Přidat**. <br><br> Pro síť SAN obou typů certifikátů můžete použít proměnné nebo statický text. Použití proměnné není vyžadováno.<br><br>Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.|
    |**Rozšířené použití klíče**           |<ul><li> Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) </li><li>Windows 10 |Certifikáty obvykle vyžadují *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. |
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |

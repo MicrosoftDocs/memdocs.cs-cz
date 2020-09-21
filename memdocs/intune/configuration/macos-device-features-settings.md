@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: c117da3962e791fe1cf23b591085aba00969cbc0
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194194"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815085"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -36,7 +36,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil funkcí zařízení MacOS](device-features-configure.md).
+Vytvořte [profil konfigurace funkcí zařízení MacOS](device-features-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).

@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: Odstraňování potíží s Wi-Fi
           href: troubleshoot-wi-fi-profiles.md
-    - name: Šablony pro správu
-      displayName: 'admx, gpo, group policy'
+    - name: Zásady skupiny a šablony pro správu
+      displayName: 'admx, gpo'
       items:
+        - name: Analýza zásad skupiny
+          href: group-policy-analytics.md
         - name: Vytvoření šablon pro správu
           href: administrative-templates-windows.md
         - name: Aktualizace Office pomocí šablon pro správu

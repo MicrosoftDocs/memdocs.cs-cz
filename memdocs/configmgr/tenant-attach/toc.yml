@@ -12,6 +12,8 @@
       href: timeline.md
     - name: Průzkumník prostředků (Preview)
       href: resource-explorer.md
+    - name: Spouštění skriptů (Preview)
+      href: scripts.md
 - name: CMPivot pro zařízení připojená k tenantovi (Preview)
   items:
     - name: Spuštění nástroje CMPivot (Preview)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Nastavení zásad antivirové ochrany v programu Microsoft Defender
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Referenční informace
+  items:
+    - name: Shromažďování dat pro připojení tenanta
+      href: data-collection.md
 - name: Odstraňování potíží
   items:
     - name: Připojení tenanta a akce zařízení
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: Průzkumník prostředků (Preview)
       href: troubleshoot-resource-explorer.md
+    - name: Spouštění skriptů (Preview)
+      href: troubleshoot-scripts.md
     - name: CMPivot (Preview)
       href: troubleshoot-cmpivot.md

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ce540e15427dd425734d2ee95fbf25040bf29efb
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915972"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814932"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa softwarových aktualizací Windows 10 v Intune
 
@@ -40,7 +40,7 @@ Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 
 
 Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](/windows/deployment/update/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, musí se splnit následující požadavky.
 
@@ -154,7 +154,7 @@ Když je aktualizační kanál pozastaven, můžete vybrat možnost **Rozšíře
 2. Vyberte z dostupných možností, aby se obnovily buď aktualizace **funkcí** , nebo **kvality** , a pak vyberte **OK**.
 3. Po rozšíření pozastavení pro jeden typ aktualizace můžete vybrat rozšířit znovu a rozšířit jiný typ aktualizace.
 
-#### <a name="uninstall"></a>Odinstalace  
+#### <a name="uninstall"></a>Odinstalovat  
 
 Správce Intune může pomocí **odinstalace** odinstalovat (vrátit zpátky) nejnovější aktualizaci *funkcí* nebo nejnovější aktualizaci *kvality* pro aktivní nebo pozastavený aktualizační kanál. Po odinstalování jednoho typu můžete odinstalovat jiný typ. Intune nepodporuje nebo nespravuje možnost uživatelů odinstalovat aktualizace.  
 
@@ -248,6 +248,8 @@ V tomto podokně můžete:
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Ověřování a vytváření sestav pro aktualizace Windows 10
 
 Pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10 použijte [zprávy o dodržování předpisů Intune](windows-update-compliance-reports.md) k monitorování stavu aktualizace zařízení. Toto řešení používá [Update Compliance](/windows/deployment/update/update-compliance-monitor) s vaším předplatným Azure.
+
+Pokud chcete monitorovat chyby aktualizace funkcí Windows 10, použijte sestavu **chyby aktualizace funkcí** . Tato sestava obsahuje podrobnosti o selhání pro zařízení, na která cílí zásada **aktualizace funkcí Windows 10** , a pokusy o aktualizaci. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)můžete **Devices**  >  **Monitor**  >  k zobrazení této sestavy vybrat zařízení monitorování**Selhání aktualizací funkcí** . Další informace najdete v tématu [sestavy Intune](../fundamentals/reports.md).
 
 ## <a name="next-steps"></a>Další kroky
 

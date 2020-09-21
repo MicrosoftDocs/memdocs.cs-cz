@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
-ms.openlocfilehash: e8359077ac363d2d732b2ffa6712c9b938a2c709
-ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
+ms.openlocfilehash: 4f21af0a5431b5d06f6d96504fa99b52aa43e324
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718958"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814460"
 ---
 # <a name="tutorial-configure-a-software-update-point-to-use-tlsssl-with-a-pki-certificate"></a>Kurz: konfigurace bodu aktualizace softwaru pro použití TLS/SSL s certifikátem PKI
 
@@ -70,9 +70,12 @@ Pokud už máte příslušný certifikát v úložišti **osobních** certifiká
 1. Vyberte **všechny úlohy** a pak **požádejte o nový certifikát**.
 1. Kliknutím na tlačítko **Další** zahajte zápis certifikátu.
 1. Vyberte typ certifikátu, který chcete zaregistrovat. Účelem certifikátu je **ověřování serveru** a šablona certifikátu společnosti Microsoft, která se má použít, je **webový server** nebo vlastní šablona, která má **ověřování serveru** zadáno jako **rozšířené použití klíče**. Může se zobrazit výzva k zadání dalších informací k registraci certifikátu. Obvykle zadáte minimálně tyto informace:
+
    - **Běžný název:** Nachází se na kartě **subjekt** , nastavte hodnotu na plně kvalifikovaný název domény serveru WSUS.
    - **Popisný název:** Na kartě **Obecné** nastavte hodnotu na popisný název, abyste mohli certifikát později identifikovat.
-:::image type="content" source="media/certificate-properties.png" alt-text="Okno vlastností certifikátu pro určení dalších informací pro registraci":::
+   
+   :::image type="content" source="media/certificate-properties.png" alt-text="Okno vlastností certifikátu pro určení dalších informací pro registraci":::
+
 1. **Kliknutím na** **Registrovat** dokončete registraci.
 1. Otevřete certifikát, pokud chcete zobrazit podrobnosti, jako je například kryptografický otisk certifikátu.
 
@@ -87,9 +90,13 @@ Jakmile máte certifikát v úložišti osobních certifikátů serveru WSUS, p�
 1. Přejít na **lokality**  >  **Správa služby WSUS**.
 1. V nabídce Akce nebo kliknutím pravým tlačítkem myši na webu vyberte **vazby** .
 1. V okně **vazby webu** vyberte řádek pro **https**a pak vyberte **Upravit...**.
+
    - Neodstraňujte vazbu webu HTTP. Služba WSUS používá pro soubory obsahu aktualizace protokol HTTP.
-1. V části **certifikát SSL** vyberte certifikát, který chcete vytvořit pro web správy služby WSUS. V rozevírací nabídce se zobrazí popisný název certifikátu. Pokud není zadaný popisný název, `IssuedTo` zobrazí se pole certifikátu. Pokud si nejste jisti, který certifikát se má použít, vyberte **Zobrazit** a ověřte, jestli se kryptografický otisk shoduje s vámi získanou.  
+   
+1. V části **certifikát SSL** vyberte certifikát, který chcete vytvořit pro web správy služby WSUS. V rozevírací nabídce se zobrazí popisný název certifikátu. Pokud není zadaný popisný název, `IssuedTo` zobrazí se pole certifikátu. Pokud si nejste jisti, který certifikát se má použít, vyberte **Zobrazit** a ověřte, jestli se kryptografický otisk shoduje s vámi získanou.
+
    :::image type="content" source="media/edit-site-binding.png" alt-text="Upravit okno vazby webu pomocí výběru certifikátu SSL":::
+
 1. Až skončíte, vyberte **OK** a pak **zavřete** , aby se vazby lokality ukončily. Správce služby Internetová informační služba (IIS) zůstane otevřený pro další kroky.
 
 
@@ -106,11 +113,11 @@ Jakmile máte certifikát v úložišti osobních certifikátů serveru WSUS, p�
    - SimpleAuthWebService
 
    Proveďte následující změny:
-
-      1. Vyberte **Nastavení SSL**.
-      1. Povolte možnost **vyžadovat protokol SSL** .
-      1. Ověřte, jestli je možnost **klientské certifikáty** nastavená na **Ignorovat**.
-      1. Vyberte **Použít**.
+   
+   1. Vyberte **Nastavení SSL**.
+   1. Povolte možnost **vyžadovat protokol SSL** .
+   1. Ověřte, jestli je možnost **klientské certifikáty** nastavená na **Ignorovat**.
+   1. Vyberte **Použít**.
 
 Neinstalujte nastavení SSL na nejvyšší úrovni lokality pro správu služby WSUS, protože některé funkce, například obsah, potřebují používat protokol HTTP.
 
@@ -119,13 +126,16 @@ Neinstalujte nastavení SSL na nejvyšší úrovni lokality pro správu služby 
 Jakmile budou webové služby nastaveny tak, aby vyžadovaly protokol SSL, musí být aplikace WSUS upozorněna, aby mohla provést nějakou další konfiguraci pro podporu změny.
 
 1. Otevřete příkazový řádek správce na serveru WSUS. Uživatelský účet, který spouští tento příkaz, musí být členem skupiny Správci služby WSUS nebo místní skupiny Administrators.
-1. Změňte adresář na složku Tools pro službu WSUS:  
+1. Změňte adresář na složku Tools pro službu WSUS:
+
    `cd "c:\Program Files\Update Services\Tools"`
+   
 1. Nakonfigurujte službu WSUS tak, aby používala protokol SSL, s následujícím příkazem:
 
     `WsusUtil.exe configuressl server.contoso.com`
    
    Kde *Server.contoso.com* je plně kvalifikovaný název domény serveru WSUS.
+   
 1. WsusUtil vrátí adresu URL serveru WSUS s číslem portu zadaným na konci. Port bude buď 8531 (výchozí), nebo 443. Ověřte, že vrácená adresa URL je to, co jste očekávali. Pokud něco nebylo naproti nějakému typu, můžete znovu spustit příkaz.
 
    :::image type="content" source="media/wsusutil.png" alt-text="Příkaz WSUSutil configuressl vracející adresu URL HTTPS pro službu WSUS":::
@@ -147,8 +157,11 @@ Otevřete konzolu služby WSUS a ověřte, zda můžete použít připojení SSL
 1. Otevřete konzolu WSUS a vyberte **Akce**  >  **připojit k serveru**.
 1. Pro možnost **název serveru** zadejte plně kvalifikovaný název domény serveru WSUS.
 1. Vyberte **číslo portu** vrácené v adrese URL z WSUSutil.
+
 1. Možnost **použít SSL (Secure Sockets Layer) (SSL) pro připojení k tomuto serveru** automaticky povolí, když zvolíte buď 8531 (výchozí), nebo 443.
-       :::image type="content" source="media/connect-wsus-console.png" alt-text="Připojte se ke konzole služby WSUS přes port HTTPS.":::
+
+       :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
+       
 1. Pokud je server lokality Configuration Manager vzdálený z bodu aktualizace softwaru, spusťte konzolu služby WSUS ze serveru lokality a ověřte, zda se Konzola služby WSUS může připojit přes protokol SSL.
    - Pokud se Vzdálená konzola služby WSUS nemůže připojit, může to vést k potížím s důvěryhodným certifikátem, překladem názvů nebo blokovaným portem.
 
@@ -168,6 +181,7 @@ Chcete-li nakonfigurovat bod aktualizace softwaru tak, aby vyžadoval komunikaci
 1. Povolte možnost **vyžadovat komunikaci SSL s možností serveru služby WSUS** .
 
    :::image type="content" source="media/sup-properties.png" alt-text="Vlastnosti SUP ukazující možnost vyžadovat komunikaci SSL se serverem WSUS":::
+   
 1. V [**WCM. log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) pro lokalitu se při uplatnění změny zobrazí následující položky:
 
    ```
@@ -191,7 +205,9 @@ Příklady souborů protokolu byly upraveny pro odebrání nepotřebných inform
 1. Přejít na přehled softwarových **knihoven**  >  **Overview**  >  **aktualizace softwaru**  >  **všechny aktualizace softwaru**.
 1. Na pásu karet vyberte možnost **synchronizovat aktualizace softwaru**.
 1. Vyberte **Ano** pro oznámení s dotazem, zda chcete zahájit synchronizaci v rámci lokality pro aktualizace softwaru.
+
    - Vzhledem k tomu, že se konfigurace služby WSUS změnila, proběhne úplná synchronizace aktualizací softwaru, nikoli rozdílová synchronizace.
+   
 1. Otevřete **souboru wsyncmgr. log** pro lokalitu. Pokud sledujete podřízenou lokalitu, budete muset počkat, než se nejdřív Nadřazená lokalita dokončí synchronizace. Ověřte, že se server úspěšně synchronizuje, a to tak, že zkontroluje protokol pro položky podobné následujícímu:
 
    ```
@@ -246,6 +262,7 @@ Změníte-li bod aktualizace softwaru tak, aby vyžadoval protokol SSL, Configur
 
 1. Zkontrolujte **protokol LocationServices. log** a ověřte, zda klient vidí správnou adresu URL služby WSUS.
 **LocationServices.log**
+
    ```
    WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
    ...

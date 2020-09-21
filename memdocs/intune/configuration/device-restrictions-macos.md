@@ -1,12 +1,12 @@
 ---
 title: nastavení zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidávání, nastavování nebo vytváření nastavení na zařízeních macOS, aby se omezily funkce, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, povolení celoobrazovkového režimu, přidávání domén a řízení způsobu interakce uživatelů s webovým prohlížečem Safari v Microsoft Intune.
+description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních macOS k omezení funkcí v Microsoft Intune. Nastavte požadavky na heslo, nastavte si uzamčenou obrazovku, používejte integrované aplikace, přidejte omezené nebo schválené aplikace, zpracujte zařízení Bluetooth, připojte se ke cloudu pro zálohování a úložiště, povolte celoobrazovkový režim, přidejte domény a nastavte, jak uživatelé pracují s webovým prohlížečem Safari.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d762f3729f104bedc992c93f1a445ab00b547841
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996686"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813655"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -35,7 +35,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvoří konfigurační profil omezení zařízení MacOS](device-restrictions-configure.md).
+Vytvoří [konfigurační profil omezení zařízení MacOS](device-restrictions-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace. Další informace o různých typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).
@@ -100,24 +100,34 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   Tato funkce platí pro:  
   - macOS 10,13 a novější
 
-- **Odložit aktualizace softwaru**: **Ano** umožňuje zpozdit, kdy se na zařízeních zobrazí aktualizace softwaru, od 0-90 dnů. Toto nastavení neřídí, kdy jsou aktualizace nebo nejsou nainstalovány. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém na zařízeních zobrazovat aktualizace, když je Apple uvolňuje. Pokud se třeba aktualizace macOS uvolní od společnosti Apple po konkrétní datum, pak se tato aktualizace přirozeně zobrazuje na zařízeních v datu vydání verze. Aktualizace sestavení v počátečním nasazení jsou povoleny bez zpoždění.  
+- **Blokovat snímky obrazovky a záznam obrazovky**: zařízení musí být zaregistrované v automatickém zápisu zařízení (DEP) společnosti Apple. Hodnota **Ano** zabraňuje uživatelům ukládat snímky obrazovky obrazovky. Zabraňuje také aplikaci učeben v pozorování vzdálených obrazovek. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit zachytit snímky obrazovky a umožňuje aplikaci učeben zobrazit vzdálené obrazovky.
 
-  - **Zpoždění viditelnosti aktualizací softwaru**: zadejte hodnotu od 0-90 dnů. Po vypršení zpoždění budou uživatelé dostávat oznámení o aktualizaci na nejstarší verzi operačního systému, která je k dispozici při spuštění zpoždění.
+### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení schválená uživatelem, automatický zápis zařízení (pod dohledem)
+
+- **Odložit aktualizace softwaru**: hodnota **Ano** umožňuje zpoždění, pokud se na zařízeních zobrazují aktualizace operačního systému a aktualizace bez OS. Toto nastavení neřídí, kdy jsou aktualizace nebo nejsou nainstalovány. Pokud není nic vybráno, Intune toto nastavení nezmění ani neaktualizuje.
+
+  Ve výchozím nastavení může operační systém na zařízeních zobrazovat aktualizace, když je Apple uvolňuje. Ve výchozím nastavení nejsou aktualizace softwaru zpožděny. Pokud toto nastavení nakonfigurujete, budou se v závislosti na vybraných možnostech zpozdit i aktualizace softwaru v operačních systémech a jiných operačních systémech. Rozevírací seznam přesně vybíráte. Může zpoždění odložit, ani zpozdit ani jedno z nich.
+
+  Pokud se třeba aktualizace macOS uvolní od společnosti Apple po konkrétní datum, pak se tato aktualizace přirozeně zobrazuje na zařízeních v datu vydání verze. Aktualizace sestavení v počátečním nasazení jsou povoleny bez zpoždění.  
+
+  - **Zpoždění viditelnosti aktualizací softwaru**: zadejte hodnotu od 0-90 dnů. Ve výchozím nastavení jsou aktualizace pro dny zpožděny `30` . Tato hodnota se vztahuje na vybrané možnosti pro **odložení aktualizací softwaru** . Pokud vyberete pouze **aktualizace operačního systému**, budou po dobu 30 dnů zpožděny pouze aktualizace operačního systému. Pokud vyberete **aktualizace operačního systému** a **aktualizace, které nejsou v operačním systému**, budou obě služby zpožděné po dobu 30 dnů.
+
+    Po vypršení zpoždění budou uživatelé dostávat oznámení o aktualizaci na nejstarší verzi, která je k dispozici při aktivaci zpoždění.
 
     Pokud je například macOS aktualizace k dispozici **1. ledna**a je **zpoždění viditelnosti** nastaveno na **5 dní**, aktualizace se nezobrazí jako dostupná aktualizace. Po **šestém dni** od vydání je tato aktualizace dostupná a uživatelé ji můžou nainstalovat.
 
     Tato funkce platí pro:  
     - macOS 10.13.4 a novější
 
-- **Blokovat snímky obrazovky a záznam obrazovky**: zařízení musí být zaregistrované v automatickém zápisu zařízení (DEP) společnosti Apple. Hodnota **Ano** zabraňuje uživatelům ukládat snímky obrazovky obrazovky. Zabraňuje také aplikaci učeben v pozorování vzdálených obrazovek. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit zachytit snímky obrazovky a umožňuje aplikaci učeben zobrazit vzdálené obrazovky.
+### <a name="settings-apply-to-automated-device-enrollment"></a>Nastavení platí pro: automatický zápis zařízení
 
-  - **Zakázat AirPlay, zobrazit obrazovku podle aplikace učebny a sdílení obrazovky**: **Ano** blokuje AirPlay a zabraňuje sdílení obrazovky jiným zařízením. Také brání učitelům v používání aplikace učebny, aby viděli své obrazovky studentů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém může učitelům dovolit zobrazit své obrazovky studentů.
+- **Zakázat AirPlay, zobrazit obrazovku podle aplikace učebny a sdílení obrazovky**: **Ano** blokuje AirPlay a zabraňuje sdílení obrazovky jiným zařízením. Také brání učitelům v používání aplikace učebny, aby viděli své obrazovky studentů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém může učitelům dovolit zobrazit své obrazovky studentů.
 
-    Chcete-li použít toto nastavení, nastavte nastavení **blokovat snímky obrazovky a nahrávání obrazovky** na **Nenakonfigurováno** (snímky obrazovky jsou povoleny).
+  Chcete-li použít toto nastavení, nastavte nastavení **blokovat snímky obrazovky a nahrávání obrazovky** na **Nenakonfigurováno** (snímky obrazovky jsou povoleny).
 
-  - **Dovolit aplikaci učeben provádět AirPlay a zobrazovat obrazovku bez zobrazení výzvy**: **Ano** umožní učitelům zobrazit obrazovky studentů, aniž by museli souhlasit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém při zobrazení obrazovky učitelům vyžadovat, aby studenti mohli souhlasit.
+- **Dovolit aplikaci učeben provádět AirPlay a zobrazovat obrazovku bez zobrazení výzvy**: **Ano** umožní učitelům zobrazit obrazovky studentů, aniž by museli souhlasit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém při zobrazení obrazovky učitelům vyžadovat, aby studenti mohli souhlasit.
 
-    Chcete-li použít toto nastavení, nastavte nastavení **blokovat snímky obrazovky a nahrávání obrazovky** na **Nenakonfigurováno** (snímky obrazovky jsou povoleny).
+  Chcete-li použít toto nastavení, nastavte nastavení **blokovat snímky obrazovky a nahrávání obrazovky** na **Nenakonfigurováno** (snímky obrazovky jsou povoleny).
 
 - **Vyžadovat oprávnění učitelů k opuštění nespravovaných tříd aplikace učebny**: **Ano** vynutí studenty zaregistrované v nespravovaném kurzu, aby získali schválení učitelů, aby mohl kurz opustit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém při každém výběru studenta dovolit kurzu opustit kurz.
 
@@ -309,7 +319,7 @@ Tato funkce platí pro:
   - **Události Apple**: Toto nastavení umožňuje aplikacím odesílat omezené události Apple do jiné aplikace nebo procesu. Vyberte **Přidat** a přidejte přijímající aplikaci nebo proces. Zadejte následující informace o přijímající aplikaci nebo procesu:
 
     - **Typ identifikátoru**: vyberte **ID sady prostředků** , pokud je přijímací identifikátor aplikace. Vyberte **cestu** , pokud je přijímací identifikátor proces nebo spustitelný soubor.
-    
+
     - **Identifikátor**: Zadejte ID sady prostředků aplikace nebo instalační cestu procesu, který přijímá událost Apple.  
 
     - **Požadavek na kód**: zadejte podpis kódu pro přijímající aplikaci nebo proces.

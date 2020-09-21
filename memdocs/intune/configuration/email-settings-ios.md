@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72c4405d68d2a1c9a5294a7d05acffb106837f60
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 853804f4c65d1c984e9b301212848c14329cc11e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996397"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815251"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS a iPadOS v Microsoft Intune
 
@@ -30,16 +30,18 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil konfigurace zařízení](email-settings-configure.md).
+Vytvořte [konfigurační profil zařízení s iOS/iPadOS](email-settings-configure.md).
 
 > [!NOTE]
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
+>
+> Tato nastavení používají [datovou část Apple ExchangeActiveSync](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (otevře web společnosti Apple).
 
 ## <a name="exchange-activesync-account-settings"></a>Nastavení účtu Exchange ActiveSync
 
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru.
 - **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
-- **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá od služby Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+- **Atribut UserName z AAD**: Tento název je atribut Intune získá z Azure Active Directory. Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
   - **Hlavní název uživatele**: Získá jméno, například `user1` nebo `user1@contoso.com`.
   - **Primární adresa SMTP**: Získá jméno ve formátu e-mailové adresy, například `user1@contoso.com`.
   - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`. Dále zadejte:  
@@ -75,7 +77,8 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
     Výchozí akcí je přidání aplikace pomocí [přístupového panelu aplikace](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Přidat funkci aplikace** **bez schválení od firmy**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
-  > Když povolíte OAuth, stane se následující:  
+  > Když povolíte OAuth, stane se následující:
+  >
   > 1. Zařízením, která už jsou zacílená, se vystaví nový profil.
   > 2. Koncovým uživatelům se zobrazí výzva k opětovnému zadání přihlašovacích údajů.
 
@@ -157,6 +160,13 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
 - **Povolit přesouvání zpráv do jiných e-mailových účtů**: **Povolit** (výchozí) umožňuje uživatelům přesouvat e-mailové zprávy mezi různými účty, které uživatelé na svých zařízeních nakonfigurovali.
 - **Povolit odesílání e-mailů z aplikací třetích stran**: **Povolit** (výchozí) umožní uživatelům vybrat tento profil jako výchozí účet pro odesílání e-mailů. Aplikacím třetích stran umožňuje otevírat e-maily v nativní e-mailové aplikaci, například při připojení souborů k e-mailu.
 - **Synchronizovat naposledy použité e-mailové adresy**: **Povolit** (výchozí) umožní uživatelům synchronizovat seznam e-mailových adres, které se nedávno používaly na zařízení se serverem.
+- **Profil VPN pro jednotlivé účty VPN**: počínaje iOS/iPadOS 14 se přenos e-mailů pro nativní e-mailové aplikace dá směrovat přes síť VPN na základě účtu, který uživatel používá. Když nastavíte možnost **žádné**, Intune pro tento e-mailový profil NEPOVOLÍ síť VPN pro jednotlivé účty.
+
+  V tomto seznamu jsou uvedena připojení VPN pro jednotlivé aplikace, která jste vytvořili. Pokud vyberete profil sítě VPN ze seznamu, všechny e-maily, na které se pošle nebo z tohoto účtu, v e-mailové aplikaci použije tunel VPN. Připojení VPN pro jednotlivé aplikace se automaticky zapne, když uživatelé použijí účet organizace v e-mailové aplikaci.
+
+  Tato funkce platí pro:  
+  - iOS 14 a novější
+  - iPadOS 14 a novější
 
 ## <a name="next-steps"></a>Další kroky
 

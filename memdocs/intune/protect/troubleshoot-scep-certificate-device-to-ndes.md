@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: 4d225f9254dc66b10e28367b390b31afe8f6ee59
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076171"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815183"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -191,7 +191,7 @@ Když přejdete na adresu URL serveru SCEP, obdržíte následující zprávu sl
   ```
 
   Pokud instalace neproběhne úspěšně, odeberte konektor Microsoft Intune a pak ho znovu nainstalujte.
-  Pokud byla instalace úspěšná a nadále obdržíte zprávu o žánru NDES, spusťte příkaz **iisreset** a restartujte službu IIS.
+  Pokud byla instalace úspěšná a nadále obdržíte obecnou zprávu NDES, spusťte příkaz **iisreset** a restartujte službu IIS.
 
 #### <a name="http-error-503"></a>Chyba protokolu HTTP 503
 
@@ -251,7 +251,7 @@ Pokud není fond aplikací SCEP spuštěný, podívejte se na protokol událost�
   **Řešení**: Aktualizujte odkaz pomocí kryptografického otisku platného certifikátu.
   1. Identifikujte náhradní certifikát:
      - Obnovit existující certifikát
-     - Vyberte jiný certifikát s podobným vlastnosti (předmět, rozšířené použití klíče, typ a délka atd.).
+     - Vyberte jiný certifikát s podobnými vlastnostmi (předmět, rozšířené použití klíče, typ a délku atd.).
      - Registrace nového certifikátu
   2. Exportujte `NDESPolicy` klíč registru pro zálohování aktuálních hodnot.
   3. Nahraďte data `NDESCertThumbprint` hodnoty registru kryptografickým otiskem nového certifikátu, odeberete všechny prázdné znaky a text převede na malá písmena.
@@ -263,9 +263,9 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
 ![Chyba Gatewaytimeout](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **Příčina**: Služba **Microsoft AAD Application proxy Connector** není spuštěná.
+- **Příčina**: Služba **Microsoft Azure AD Application proxy Connector** není spuštěná.
 
-  **Řešení**: Spusťte **Services. msc**a potom se ujistěte, že je spuštěná služba **Microsoft AAD Application proxy Connector** a že **Typ spuštění** je nastaven na hodnotu **automaticky**.
+  **Řešení**: Spusťte **Services. msc**a potom se ujistěte, že je spuštěná služba **konektor proxy serveru Microsoft Azure AD** , a **Typ spuštění** je nastaven na hodnotu **automaticky**.
 
 #### <a name="http-414-request-uri-too-long"></a>Požadavek HTTP 414 – identifikátor URI je příliš dlouhý.
 

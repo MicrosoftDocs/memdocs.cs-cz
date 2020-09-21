@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cd3505d0a0067adfe9082d7aa3882f3421a2183
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 818c157b2ae34a3c54531b2e4343d8665c30b78e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429610"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815472"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10-in-microsoft-intune"></a>Nastavení e-mailového profilu pro zařízení s Windows 10 v Microsoft Intune
 
 Pomocí nastavení e-mailového profilu můžete nakonfigurovat aplikaci pošty na zařízeních s Windows 10 a novějším.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil](email-settings-configure.md).
+Vytvoří [konfigurační profil pro e-mailové zařízení s Windows 10](email-settings-configure.md).
 
 ## <a name="email-settings"></a>Nastavení e-mailu
 

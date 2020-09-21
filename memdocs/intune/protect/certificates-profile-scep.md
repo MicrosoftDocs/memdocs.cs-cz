@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,19 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b6e6f02f5c2b25d397a3e3e23d644e9d17122ba0
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915581"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813570"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
 Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu certifikátů Simple Certificate ENROLLMENT Protocol (SCEP), můžete vytvořit a přiřadit profily certifikátů SCEP pro uživatele a zařízení v Intune.
 
-> [!IMPORTANT]
-> Aby zařízení používala profil certifikátu SCEP, musí důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Důvěryhodnost kořenové certifikační autority se nejlépe zřídí nasazením [profilu důvěryhodného certifikátu](../protect/certificates-configure.md#create-trusted-certificate-profiles) do stejné skupiny, která obdrží profil certifikátu SCEP. Profily důvěryhodných certifikátů zřídí certifikát důvěryhodné kořenové certifikační autority.
+Aby zařízení používala profil certifikátu SCEP, musí důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Důvěryhodnost kořenové certifikační autority se nejlépe zřídí nasazením [profilu důvěryhodného certifikátu](../protect/certificates-configure.md#create-trusted-certificate-profiles) do stejné skupiny, která obdrží profil certifikátu SCEP. Profily důvěryhodných certifikátů zřídí certifikát důvěryhodné kořenové certifikační autority.
+
+> [!NOTE]
+> Od verze Android 11 nebudou profily důvěryhodných certifikátů moci nadále instalovat důvěryhodný kořenový certifikát na zařízení, která jsou zaregistrována jako *Správce zařízení s Androidem*. Toto omezení se nevztahuje na Samsung KNOX.
+>
+> Další informace o tomto omezení najdete v tématu [profily důvěryhodných certifikátů pro správce zařízení s Androidem](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
@@ -115,7 +119,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
          Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) popisuje tuto funkci a její podporované řetězce.
          
-         \* Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, například janedoe@contoso.com
+         Pro profily pracovních profilů, které jsou plně spravované, vyhrazené a podnikové vlastnictví v Androidu, nebude nastavení **CN = {{userPrincipalName}}** fungovat. Pro zařízení bez uživatele se dají používat profily pracovních profilů s plnou správou Androidu, vyhrazené a podnikové vlastnictví, takže tento profil nebude moct získat hlavní název uživatele (UPN). Pokud opravdu potřebujete tuto možnost pro zařízení s uživateli, můžete použít alternativní řešení: **CN = {{UserName}} \@ contoso.com** bude poskytovat uživatelské jméno a doménu, kterou jste přidali ručně, například janedoe@contoso.com
 
       - **Typ certifikátu zařízení**
 
@@ -139,7 +143,10 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
         > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
         > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v názvu subjektu profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, profil se nepodaří nainstalovat.
 
-   - **Alternativní název subjektu**: Vyberte způsob, jakým Intune automaticky vytvoří alternativní název subjektu (San) v žádosti o certifikát. Možnosti pro síť SAN závisí na typu certifikátu, který jste vybrali. buď na **uživatele** , nebo na **zařízení**.
+   - **Alternativní název subjektu**:  
+     Vyberte způsob, jakým Intune automaticky vytvoří alternativní název subjektu (SAN) v žádosti o certifikát. Možnosti pro síť SAN závisí na typu certifikátu, který jste vybrali. buď na **uživatele** , nebo na **zařízení**.
+
+     Pro síť SAN obou typů certifikátů můžete použít proměnné nebo statický text. Použití proměnné není vyžadováno.
 
       - **Typ uživatelského certifikátu**
 
@@ -207,7 +214,11 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
    - **Velikost klíče (bity)**:
 
-     Vyberte počet bitů obsažených v klíči.
+     Vyberte počet bitů obsažených v klíči:
+     - Nenakonfigurováno
+     - 1024
+     - 2 048
+     - 4096 *(podporováno pro iOS/iPadOS 14 a novější a MacOS 11 a novější)*
 
    - **Algoritmus hash**:
 

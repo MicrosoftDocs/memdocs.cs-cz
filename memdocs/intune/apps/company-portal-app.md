@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: ecee35682d1da15dba27cd7280998209f0add85d
+ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390805"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767073"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Přizpůsobení aplikací Portál společnosti Intune, Portál společnosti webu a Intune
 
@@ -113,8 +113,8 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro zápis:
 
 |    Možnosti registrace zařízení    |    Popis    |    Výzvy kontrolního seznamu    |    Notification (Oznámení)    |    Stav podrobnosti o zařízení    |    Podrobnosti o stavu aplikace (aplikace, která vyžaduje registraci)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Ano    |    Ano    |    Ano    |    Ano    |
-|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Ano    |    Ano    |
+|    K dispozici, s výzvami    |    Výchozí prostředí s výzvou k registraci ve všech možných umístěních.    |    Yes    |    Yes    |    Yes    |    Yes    |
+|    K dispozici, žádné výzvy    |    Uživatel se může zaregistrovat přes stav v podrobnostech o zařízení pro svoje aktuální zařízení nebo aplikace, které vyžadují registraci.    |    No    |    No    |    Yes    |    Yes    |
 |    Neaktivní    |    Pro uživatele neexistuje žádný způsob, jak ho zaregistrovat.    |    No    |    No    |    No    |    No    |
 
 ### <a name="privacy"></a>Ochrana osobních údajů
@@ -151,7 +151,7 @@ Následující tabulka uvádí podrobnosti konfigurace specifické pro zdroj apl
 #### <a name="app-source-setting-options"></a>Možnosti nastavení zdroje aplikace
 
 > [!NOTE]
-> Web Portál společnosti začne na začátku podporovat zobrazování aplikací z jiných služeb Microsoftu.
+> Zobrazení aplikací z jiných služeb Microsoftu se podporuje jenom ve Windows Portál společnosti a na webu Portál společnosti.
 
 Pro každého koncového uživatele můžete skrýt nebo zobrazit **aplikace Azure AD Enterprise** a **aplikace Office Online** v portál společnosti. Možnost **Zobrazit** způsobí, že portál společnosti zobrazí celý katalog aplikací od vybraných služeb společnosti Microsoft přiřazených uživateli. **Podnikové aplikace Azure AD** se registrují a přiřazují prostřednictvím [Azure Portal](https://portal.azure.com). **Aplikace Office Online** se přiřazují pomocí řídicích mechanismů licencování dostupných v [centru pro správu M365](https://admin.microsoft.com). V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **přizpůsobení správy tenanta**  >  **Customization** a najděte toto nastavení konfigurace. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. 
 

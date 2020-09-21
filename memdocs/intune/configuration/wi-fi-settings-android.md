@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ca465bf8356a16f9716d45456f9675384ffb518
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d892142b22c76bae25ff1754dde7cd56a22960d0
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086418"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815017"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Androidem v Microsoft Intune
 
@@ -32,9 +32,9 @@ Tato nastavení Wi-Fi jsou rozdělena do dvou kategorií: základní nastavení 
 
 Těmito nastaveními se zabývá tento článek.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil zařízení](wi-fi-settings-configure.md).
+Vytvořte [profil konfigurace zařízení Wi-Fi Správce zařízení s Androidem](wi-fi-settings-configure.md).
 
 ## <a name="basic"></a>Základní
 
@@ -51,15 +51,15 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
-    - **Client Authentication** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klienta**  -  **Klientský certifikát pro ověření klienta (certifikát identity)**: vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -77,14 +77,14 @@ Těmito nastaveními se zabývá tento článek.
 
   - **PEAP**: Dále zadejte:
 
-    - **Server Trust** - **Kořenový certifikát důvěryhodnosti serveru pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru**  -  **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Ověřování metodou bez protokolu EAP (vnitřní identita)**: Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
 
-          - **Žádné**
+          - **Žádný**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.

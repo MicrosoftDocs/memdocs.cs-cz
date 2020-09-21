@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f510bd51a9fbc84e839ee37a0c5d4195f4eed021
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461687"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815217"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Přidání nastavení sítě Wi-Fi pro vyhrazená a plně spravovaná zařízení s Androidem v Microsoft Intune
 
@@ -31,7 +31,10 @@ Těmito nastaveními se zabývá tento článek. [Použití Wi-Fi na vašich za�
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil zařízení](wi-fi-settings-configure.md).
+Vytvoření [profilu konfigurace zařízení se systémem Android Enterprise Wi-Fi](wi-fi-settings-configure.md):
+
+- Plně spravovaný, vyhrazený a podnikový pracovní profil
+- Pracovní profil
 
 ## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Plně spravovaný, vyhrazený a podnikový pracovní profil
 
@@ -161,8 +164,8 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
 
   - IP adresa. Například `10.0.0.11`.
-  - ADRESA URL. Například `http://proxyserver.contoso.com`.
-  - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
+  - ADRESA URL. Například, `http://proxyserver.contoso.com`.
+  - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Například: `http://proxy.contoso.com/proxy.pac`.
 
   Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 

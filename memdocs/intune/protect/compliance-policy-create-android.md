@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f8cb75907befaa747ebae1718815d9722ff7085
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: b205a367f70d9bfda7540b30501c7c94a01a7773
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729228"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814966"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení pro Android označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -34,11 +34,11 @@ Tato funkce platí pro:
 
 Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte zásady dodržování předpisů](create-compliance-policy.md#create-the-policy). Pro možnost **platforma**vyberte **Správce zařízení s Androidem**.
 
-## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+## <a name="microsoft-defender-atp"></a>Ochrana ATP v programu Microsoft Defender
 
 - **Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače**  
 
@@ -47,7 +47,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Vymazat**
   - **Nízká**
   - **Medium**
-  - **Maximální**
+  - **Vysoké**
 
 ## <a name="device-health"></a>Stav zařízení
 
@@ -119,49 +119,6 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="system-security"></a>Zabezpečení systému
 
-### <a name="password"></a>Heslo
-
-- **Vyžadovat heslo k odemknutí mobilních zařízení**  
-  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
-
-  Toto nastavení určuje, jestli se má po uživatelích vyžadovat zadání hesla, než bude udělen přístup k informacím uloženým v jejich mobilních zařízeních. Doporučená hodnota: vyžadovat  
-
-  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
-
-- **Vyžadovaný typ hesla**  
-  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
-
-  Vyberte, jestli má heslo obsahovat jenom číselné znaky, nebo kombinaci číslic a dalších znaků.
-
-  - **Výchozí nastavení zařízení** – vyhodnotit dodržování předpisů heslem, nezapomeňte vybrat jinou sílu hesla než **výchozí zařízení**.
-  - **Biometrika s nízkým zabezpečením**
-  - **Aspoň číselné**
-  - **Číselné komplexní** – opakující se nebo po sobě jdoucí číslice `1111` , `1234`například nebo, nejsou povoleny.
-  - **Aspoň abecední**
-  - **Aspoň alfanumerické**
-  - **Aspoň alfanumerické se symboly**
-
-  Na základě konfigurace tohoto nastavení je k dispozici minimálně jedna z následujících možností:
-
-  - **Minimální délka hesla**  
-    *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
-
-    Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-
-  - **Maximální počet minut nečinnosti před vyžadováním hesla**  
-    *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
-
-    Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
-
-  - **Počet dní do vypršení platnosti hesla**  
-  *Podporováno v systému Android 4,0 a novějším nebo KNOX 4,0 a novějším.*
-
-  Vyberte počet dní do vypršení platnosti hesla a uživatel musí vytvořit nové heslo.
-
-  - **Počet předchozích hesel, která zabrání opakovanému použití**  
-    Zadejte počet nedávných hesel, která se nedají znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve. (Podporuje se pro Android 4,0 a vyšší nebo KNOX 4,0 a vyšší.)
-
 ### <a name="encryption"></a>Šifrování
 
 - **Šifrování datového úložiště na zařízení**  
@@ -207,6 +164,79 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 - **Omezené aplikace**  
   Zadejte **název aplikace** a **ID sady prostředků aplikace** pro aplikace, které by měly být omezené, a pak vyberte **Přidat**. Pokud je na zařízení nainstalovaná aspoň jedna zakázaná aplikace, označí se zařízení jako nevyhovující.
+
+### <a name="password"></a>Heslo
+
+Dostupná nastavení pro hesla se liší podle verze Androidu na zařízení.
+
+#### <a name="all-android-devices"></a>Všechna zařízení s Androidem
+
+*Následující nastavení jsou podporována v systémech Android 4,0 a novějších a KNOX 4,0 a novějších.*
+
+- **Maximální počet minut nečinnosti před vyžadováním hesla**  
+  Toto nastavení určuje dobu, po jejímž uplynutí bude obrazovka mobilního zařízení uzamčena. Možnosti jsou v rozsahu od *1 minuty* do *8 hodin*. Doporučená hodnota je *15 minut*.
+
+  - **Nenakonfigurováno** *(výchozí)*
+
+#### <a name="android-10-and-later"></a>Android 10 a novější
+
+*Následující nastavení jsou podporovaná v Androidu 10 nebo novějším, ale ne v Knox.*
+
+- **Složitost hesla**  
+ *Toto nastavení se podporuje v Androidu 10 nebo novějším, ale ne na Samsung KNOX. V zařízeních se systémem Android 9 a starším nebo Samsung KNOX se nastavení délka hesla a typ přepíše tímto nastavením na složitost*.
+  
+  Zadejte požadované složitosti hesla.
+
+  - **Žádný** *(výchozí)* – není vyžadováno žádné heslo.
+  - **Nízká** – heslo splňuje jednu z následujících podmínek:
+    - Vzor
+    - KÓD PIN má sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468).
+  - **Střední** – heslo splňuje jednu z následujících podmínek:
+    - KÓD PIN nemá sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468) a má minimální délku 4.
+    - Abecední, s minimální délkou 4.
+    - Alfanumerické znaky s minimální délkou 4.
+  - **Vysoká** – heslo splňuje jednu z následujících podmínek:
+    - KÓD PIN nemá sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468) a má minimální délku 8.
+    - Abecední, s minimální délkou 6.
+    - Alfanumerické znaky s minimální délkou 6.
+
+#### <a name="android-9-and-earlier-or-samsung-knox"></a>Android 9 a starší nebo Samsung KNOX
+
+*Následující nastavení jsou podporovaná v Androidu 9,0 a starších verzích a v jakékoli verzi Samsung KNOX.*
+
+- **Vyžadovat heslo k odemknutí mobilních zařízení**  
+  Toto nastavení určuje, jestli se má po uživatelích vyžadovat zadání hesla, než bude udělen přístup k informacím uloženým v jejich mobilních zařízeních. Doporučená hodnota: vyžadovat  
+
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
+  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
+  
+  Pokud nastavíte hodnotu *vyžadovat*, je možné nakonfigurovat následující nastavení:
+
+  **Vyžadovaný typ hesla**  
+  Vyberte, jestli má heslo obsahovat jenom číselné znaky, nebo kombinaci číslic a dalších znaků.
+
+  - **Výchozí nastavení zařízení** – vyhodnotit dodržování předpisů heslem, nezapomeňte vybrat jinou sílu hesla než **výchozí zařízení**.
+  - **Biometrika s nízkým zabezpečením**
+  - **Aspoň číselné**
+  - **Číselné komplexní** – opakující se nebo po sobě jdoucí číslice, například `1111` nebo `1234` , nejsou povoleny.
+  - **Aspoň abecední**
+  - **Aspoň alfanumerické**
+  - **Aspoň alfanumerické se symboly**
+
+  Na základě konfigurace tohoto nastavení je k dispozici minimálně jedna z následujících možností:
+
+  - **Minimální délka hesla**  
+    Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+
+  - **Maximální počet minut nečinnosti před vyžadováním hesla**  
+    Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
+
+  - **Počet dní do vypršení platnosti hesla**  
+    Vyberte počet dní do vypršení platnosti hesla a uživatel musí vytvořit nové heslo.
+
+  - **Počet předchozích hesel, která zabrání opakovanému použití**  
+    Zadejte počet nedávných hesel, která se nedají znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
+
 
 ## <a name="next-steps"></a>Další kroky
 

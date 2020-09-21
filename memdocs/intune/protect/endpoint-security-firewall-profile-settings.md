@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/28/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 9b6af399d0f3fbd721932b47e8f1bc388711ca58
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068129"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814708"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Nastavení zásad brány firewall pro zabezpečení koncového bodu v Intune
 
@@ -72,12 +72,13 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
 Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení koncového bodu pro brány firewall systému Windows 10](../protect/endpoint-security-firewall-policy.md).
 
-- **Zakázat stavovou protokol FTP (File Transfer Protocol) (FTP)**  
+- **Stavová protokol FTP (File Transfer Protocol) (FTP)**  
   CSP: [MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
 
-  - **Nenakonfigurováno** (*výchozí*) – brána firewall používá ke kontrole a filtrování sekundárních síťových připojení protokol FTP, což by mohlo způsobit ignorování pravidel brány firewall.
-  - **Ano**
-  
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Povoleno** – brána firewall provádí filtrování stavových protokol FTP (File Transfer Protocol) (FTP) pro povolení sekundárních připojení. 
+  - **Zakázaný** stav FTP je zakázaný.
+
 - **Počet sekund, po které může být přidružení zabezpečení nečinné, než se odstraní**  
   CSP: [MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
@@ -94,35 +95,39 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   - **Žádný**
   - **UTF**
 
-- **Výjimky brány firewall s povoleným PROTOKOLem Neighbor Discovery**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+- **Žádné výjimky pro IP adresu brány firewall sec**  
+  - **Nenakonfigurováno** (*výchozí*) – Pokud není nakonfigurovaný, budete mít přístup k následujícím nastavením pro výjimku protokolu IP, která můžete nakonfigurovat individuálně.
+  - **Ano** – vypne výjimky brány firewall s protokolem IPSec. Následující nastavení není možné konfigurovat.
 
-  - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – výjimky protokolu IPSec brány firewall umožňují sousední zjišťování.
+  - **Výjimky brány firewall s povoleným PROTOKOLem Neighbor Discovery**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Výjimka brány firewall protokolu IP s povoleným protokolem ICMP**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Nenakonfigurováno** (*výchozí*)
+    - **Ano** – výjimky protokolu IPSec brány firewall umožňují sousední zjišťování.
 
-  - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – výjimky protokolu IPSec brány firewall umožňují protokol ICMP.
+  - **Výjimka brány firewall protokolu IP s povoleným protokolem ICMP**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Výjimky brány firewall protokolu IP s umožňují zjišťování směrovačů**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Nenakonfigurováno** (*výchozí*)
+    - **Ano** – výjimky protokolu IPSec brány firewall umožňují protokol ICMP.
 
-  - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – výjimky protokolu IPSec brány firewall umožňují zjišťování směrovačů.
+  - **Výjimky brány firewall protokolu IP s umožňují zjišťování směrovačů**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Výjimka brány firewall protokolu IP s povoleným protokolem DHCP**  
-  CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Nenakonfigurováno** (*výchozí*)
+    - **Ano** – výjimky protokolu IPSec brány firewall umožňují zjišťování směrovačů.
 
-  - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – výjimky brány firewall s protokolem IP s umožňují protokol DHCP
+  - **Výjimka brány firewall protokolu IP s povoleným protokolem DHCP**  
+    CSP: [MdmStore/Global/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+
+    - **Nenakonfigurováno** (*výchozí*)
+    - **Ano** – výjimky brány firewall s protokolem IP s umožňují protokol DHCP
 
 - **Ověření seznamu odvolaných certifikátů (CRL)**  
   CSP: [MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
    Určete, jak se vynutilo ověřování seznamu odvolaných certifikátů (CRL).
-  - **Nenakonfigurováno** (*výchozí*) – výchozí nastavení klienta je zakázat ověření seznamu CRL.
+  - **Nenakonfigurováno** (*výchozí*) – použijte výchozí nastavení klienta, které umožňuje zakázat ověření seznamu CRL.
   - **Žádný**
   - **Byl**
   - **Vyžadovat**
@@ -131,13 +136,14 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)
 
   - **Nenakonfigurováno** (*výchozí*)
-  - **Ano** – moduly pro tvorbu klíčů ignorují nepodporované sady ověřování.
+  - **Zakázáno**
+  - **Povoleno** – moduly pro tvorbu klíčů ignorují nepodporované sady ověřování.
 
 - **Řízení front paketů**  
   CSP: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
   Určete, jak povolit škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.
-  - **Nenakonfigurováno** (*výchozí*) – služba Řízení front paketů se vrátí zpátky do výchozího nastavení klienta, což je zakázané.
+  - **Nenakonfigurováno** (*výchozí*) – služba Řízení front paketů se vrátí do výchozího stavu klienta, který je zakázaný.
   - **Zakázáno**
   - **Příchozí fronta**
   - **Odchozí fronta**
@@ -147,24 +153,247 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
   - **Nenakonfigurováno** (*výchozí*) – klient se vrátí k výchozímu, což znamená povolení brány firewall.
-  - **Ano** – firewall **v programu Microsoft** Defender pro typ sítě je zapnutý a vynucované.
+  - **Ano** – firewall **v programu Microsoft** Defender pro typ sítě je zapnutý a vynucované. Získáte také přístup k dalším nastavením této sítě.
   - **Ne** – zakázat bránu firewall.
+
+  Další nastavení pro tuto síť, pokud je nastaveno na *Ano*:
+
+  - **Blokovat neviditelný režim**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Ve výchozím nastavení je v zařízeních povolený neviditelný režim. Pomáhá zabránit uživatelům se zlými úmysly v zjišťování informací o síťových zařízeních a službách, které spouštějí. Zakázáním režimu utajení můžou být zařízení zranitelná vůči útokům.
+    - **Nenakonfigurováno** *(výchozí)*
+    - **Ano**
+    - **Ne**
+
+  - **Povolit stíněný režim**  
+    CSP: [stíněný](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Nenakonfigurováno** *(výchozí)* – použijte výchozí nastavení klienta, které slouží k zakázání stíněného režimu.
+    - **Ano** – počítač je přepnut do *chráněného režimu*, který ho izoluje od sítě. Veškerý provoz je zablokovaný.
+    - **Ne**
+
+  - **Blokovat odezvy jednosměrového vysílání na vysílání vícesměrového vysílání**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se povolí jednosměrové odpovědi.
+    - **Yes** Odpovědi na jednosměrové vysílání v případě odesílání na vícesměrové vysílání jsou zablokované.
+    - **Ne** – vynutilo výchozí nastavení klienta, což umožňuje používat jednosměrové odpovědi.
+
+  - **Zakázat příchozí oznámení**  
+    [DISABLEINBOUNDNOTIFICATIONS](https://go.microsoft.com/fwlink/?linkid=872563) CSP
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které umožní oznámení uživateli.
+    - **Ano** – oznámení uživateli je potlačeno, pokud je aplikace blokována příchozím pravidlem.
+    - **Žádná** oznámení o uživateli nejsou povolena.
+
+  - **Blokovat odchozí připojení**  
+
+    *Toto nastavení platí pro Windows verze 1809 a novější*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, což umožňuje připojení.
+    - **Ano** – všechna odchozí připojení, která neodpovídají odchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají odchozímu pravidlu, jsou povolená.
+
+  - **Blokovat příchozí připojení**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se zablokuje připojení.
+    - **Ano** – všechna příchozí připojení, která neodpovídají příchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají příchozímu pravidlu, jsou povolená.
+
+  - **Ignorovat pravidla brány firewall autorizovaných aplikací**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall aplikací ověřená v místním úložišti se ignorují.
+    - Nejsou dodržena **žádná** pravidla brány firewall pro aplikace, která nejsou autorizována.
+
+  - **Ignorovat pravidla brány firewall globálního portu**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – globální pravidla brány firewall portu v místním úložišti se ignorují.
+    - **Ne** – budou dodržena globální pravidla brány firewall portů.
+
+  - **Ignorovat všechna místní pravidla brány firewall**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – všechna pravidla brány firewall v místním úložišti se ignorují.
+    - **Ne** – respektují se pravidla brány firewall v místním úložišti.
+
+  - **Ignorovat pravidla zabezpečení připojení** CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall IPsec v místním úložišti se ignorují.
+    - V místním úložišti se neuplatňují pravidla brány **firewall pro IPsec** .
 
 - **Zapnout firewall v programu Microsoft Defender pro privátní sítě**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
   - **Nenakonfigurováno** (*výchozí*) – klient se vrátí k výchozímu, což znamená povolení brány firewall.
-  - **Ano** – firewall v programu Microsoft Defender pro typ sítě **Private** je zapnutý a vynucované.
+  - **Ano** – firewall v programu Microsoft Defender pro typ sítě **Private** je zapnutý a vynucované. Získáte také přístup k dalším nastavením této sítě.
   - **Ne** – zakázat bránu firewall.
+
+  Další nastavení pro tuto síť, pokud je nastaveno na *Ano*:
+
+  - **Blokovat neviditelný režim**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Ve výchozím nastavení je v zařízeních povolený neviditelný režim. Pomáhá zabránit uživatelům se zlými úmysly v zjišťování informací o síťových zařízeních a službách, které spouštějí. Zakázáním režimu utajení můžou být zařízení zranitelná vůči útokům.
+    - **Nenakonfigurováno** *(výchozí)*
+    - **Ano**
+    - **Ne**
+
+  - **Povolit stíněný režim**  
+    CSP: [stíněný](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Nenakonfigurováno** *(výchozí)* – použijte výchozí nastavení klienta, které slouží k zakázání stíněného režimu.
+    - **Ano** – počítač je přepnut do *chráněného režimu*, který ho izoluje od sítě. Veškerý provoz je zablokovaný.
+    - **Ne**
+
+  - **Blokovat odezvy jednosměrového vysílání na vysílání vícesměrového vysílání**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se povolí jednosměrové odpovědi.
+    - **Yes** Odpovědi na jednosměrové vysílání v případě odesílání na vícesměrové vysílání jsou zablokované.
+    - **Ne** – vynutilo výchozí nastavení klienta, což umožňuje používat jednosměrové odpovědi.
+
+  - **Zakázat příchozí oznámení**  
+    [DISABLEINBOUNDNOTIFICATIONS](https://go.microsoft.com/fwlink/?linkid=872563) CSP
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které umožní oznámení uživateli.
+    - **Ano** – oznámení uživateli je potlačeno, pokud je aplikace blokována příchozím pravidlem.
+    - **Žádná** oznámení o uživateli nejsou povolena.
+
+  - **Blokovat odchozí připojení**  
+
+    *Toto nastavení platí pro Windows verze 1809 a novější*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, což umožňuje připojení.
+    - **Ano** – všechna odchozí připojení, která neodpovídají odchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají odchozímu pravidlu, jsou povolená.
+
+  - **Blokovat příchozí připojení**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se zablokuje připojení.
+    - **Ano** – všechna příchozí připojení, která neodpovídají příchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají příchozímu pravidlu, jsou povolená.
+
+  - **Ignorovat pravidla brány firewall autorizovaných aplikací**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall aplikací ověřená v místním úložišti se ignorují.
+    - Nejsou dodržena **žádná** pravidla brány firewall pro aplikace, která nejsou autorizována.
+
+  - **Ignorovat pravidla brány firewall globálního portu**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – globální pravidla brány firewall portu v místním úložišti se ignorují.
+    - **Ne** – budou dodržena globální pravidla brány firewall portů.
+
+  - **Ignorovat všechna místní pravidla brány firewall**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – všechna pravidla brány firewall v místním úložišti se ignorují.
+    - **Ne** – respektují se pravidla brány firewall v místním úložišti.
+
+  - **Ignorovat pravidla zabezpečení připojení** CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall IPsec v místním úložišti se ignorují.
+    - V místním úložišti se neuplatňují pravidla brány **firewall pro IPsec** .
 
 - **Zapnout firewall v programu Microsoft Defender pro veřejné sítě**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
   - **Nenakonfigurováno** (*výchozí*) – klient se vrátí k výchozímu, což znamená povolení brány firewall.
-  - **Ano** – firewall **v programu Microsoft** Defender pro typ sítě je zapnutý a vynucované.
+  - **Ano** – firewall **v programu Microsoft** Defender pro typ sítě je zapnutý a vynucované. Získáte také přístup k dalším nastavením této sítě.
   - **Ne** – zakázat bránu firewall.
 
-<!-- Microsoft Defender Firewall rules added in 2005  -->
+  Další nastavení pro tuto síť, pokud je nastaveno na *Ano*:
+
+  - **Blokovat neviditelný režim**  
+    CSP: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Ve výchozím nastavení je v zařízeních povolený neviditelný režim. Pomáhá zabránit uživatelům se zlými úmysly v zjišťování informací o síťových zařízeních a službách, které spouštějí. Zakázáním režimu utajení můžou být zařízení zranitelná vůči útokům.
+    - **Nenakonfigurováno** *(výchozí)*
+    - **Ano**
+    - **Ne**
+
+  - **Povolit stíněný režim**  
+    CSP: [stíněný](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Nenakonfigurováno** *(výchozí)* – použijte výchozí nastavení klienta, které slouží k zakázání stíněného režimu.
+    - **Ano** – počítač je přepnut do *chráněného režimu*, který ho izoluje od sítě. Veškerý provoz je zablokovaný.
+    - **Ne**
+
+  - **Blokovat odezvy jednosměrového vysílání na vysílání vícesměrového vysílání**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se povolí jednosměrové odpovědi.
+    - **Yes** Odpovědi na jednosměrové vysílání v případě odesílání na vícesměrové vysílání jsou zablokované.
+    - **Ne** – vynutilo výchozí nastavení klienta, což umožňuje používat jednosměrové odpovědi.
+
+  - **Zakázat příchozí oznámení**  
+    [DISABLEINBOUNDNOTIFICATIONS](https://go.microsoft.com/fwlink/?linkid=872563) CSP
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které umožní oznámení uživateli.
+    - **Ano** – oznámení uživateli je potlačeno, pokud je aplikace blokována příchozím pravidlem.
+    - **Žádná** oznámení o uživateli nejsou povolena.
+
+  - **Blokovat odchozí připojení**  
+
+    *Toto nastavení platí pro Windows verze 1809 a novější*.
+    CSP: [DefaultOutboundAction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, což umožňuje připojení.
+    - **Ano** – všechna odchozí připojení, která neodpovídají odchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají odchozímu pravidlu, jsou povolená.
+
+  - **Blokovat příchozí připojení**  
+    CSP: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Toto pravidlo je vyhodnoceno na konci seznamu pravidel.
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, kterým se zablokuje připojení.
+    - **Ano** – všechna příchozí připojení, která neodpovídají příchozímu pravidlu, jsou blokovaná.
+    - **Ne** – všechna připojení, která neodpovídají příchozímu pravidlu, jsou povolená.
+
+  - **Ignorovat pravidla brány firewall autorizovaných aplikací**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall aplikací ověřená v místním úložišti se ignorují.
+    - Nejsou dodržena **žádná** pravidla brány firewall pro aplikace, která nejsou autorizována.
+
+  - **Ignorovat pravidla brány firewall globálního portu**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – globální pravidla brány firewall portu v místním úložišti se ignorují.
+    - **Ne** – budou dodržena globální pravidla brány firewall portů.
+
+  - **Ignorovat všechna místní pravidla brány firewall**  
+    CSP: [IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – všechna pravidla brány firewall v místním úložišti se ignorují.
+    - **Ne** – respektují se pravidla brány firewall v místním úložišti.
+
+  - **Ignorovat pravidla zabezpečení připojení** CSP: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Nenakonfigurováno** *(výchozí)* – nastavení se vrátí do výchozího nastavení klienta, které má respektovat místní pravidla.
+    - **Ano** – pravidla brány firewall IPsec v místním úložišti se ignorují.
+    - V místním úložišti se neuplatňují pravidla brány **firewall pro IPsec** .
 
 ### <a name="microsoft-defender-firewall-rules"></a>Pravidla firewallu v programu Microsoft Defender
 
@@ -174,7 +403,7 @@ Následující nastavení jsou nakonfigurovaná jako [zásady zabezpečení konc
 
 #### <a name="windows-firewall-rule"></a>Pravidlo brány Windows Firewall
 
-- **Name**  
+- **Název**  
   Zadejte popisný název pravidla. Tento název se zobrazí v seznamu pravidel, který vám pomůže ho identifikovat.
 
 - **Popis**  

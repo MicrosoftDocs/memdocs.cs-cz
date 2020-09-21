@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 0aef706071952dc632161f4c73e380c5af3ae99d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502370"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815136"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -32,7 +32,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
+Vytvoří [konfigurační profil omezení zařízení s Androidem pro správce zařízení](device-restrictions-configure.md).
 
 ## <a name="general"></a>Obecné
 
@@ -58,18 +58,62 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 
 ## <a name="password"></a>Heslo
 
+- **Šifrování**: vyberte **vyžadovat** , aby soubory v zařízení byly šifrované. Ne všechna zařízení podporují šifrování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud chcete nakonfigurovat toto nastavení a správně ohlásit dodržování předpisů, nakonfigurujte taky:
+  1. **Heslo**: nastavte na **vyžadovat**.
+  2. **Požadovaný typ hesla**: nastavte **aspoň na číslo**.
+  3. **Minimální délka hesla**: Nastavte aspoň na `4` .
+
+  > [!NOTE]
+  > Pokud se vynucují zásady šifrování, zařízení Samsung Knox po uživatelích vyžadují nastavení šestiznakového složitého hesla jako hesla k zařízení.
+
+### <a name="all-android-devices"></a>Všechna zařízení s Androidem
+
+Tato nastavení platí pro:  
+- Android 4,0 a novější
+- KNOX 4,0 a novější
+
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte například, `5` Pokud chcete zařízení zamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
+
+  V zařízení uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
+
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0` (nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+
+
+### <a name="android-10-and-later"></a>Android 10 a novější
+
+- **Složitost hesla**: zadejte složitost hesla, kterou potřebujete. Možnosti:
+
+  - **Žádný** (výchozí): není vyžadováno žádné heslo.
+  - **Nízká**: heslo splňuje jednu z následujících podmínek:
+    - Vzor
+    - KÓD PIN má sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468).
+  - **Střední**: heslo splňuje jednu z následujících podmínek:
+    - KÓD PIN nemá sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468) a má minimální délku 4.
+    - Abecední, s minimální délkou 4.
+    - Alfanumerické znaky s minimální délkou 4.
+  - **Vysoká**: heslo splňuje jednu z následujících podmínek:
+    - KÓD PIN nemá sekvenci opakování (4444) nebo seřazené (1234, 4321, 2468) a má minimální délku 8.
+    - Abecední, s minimální délkou 6.
+    - Alfanumerické znaky s minimální délkou 6.
+
+  Toto nastavení platí pro:  
+  - Android 10 a novější, ale ne na Samsung KNOX.
+ 
+### <a name="android-9-and-earlier-or-samsung-knox"></a>Android 9 a starší nebo Samsung KNOX
+
+Tato nastavení platí pro:  
+- Android 9,0 a starší
+- Jakákoli verze Samsung KNOX
+
 - **Heslo**: **vyžaduje** , aby uživatelé zadali heslo pro přístup k zařízením. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit přístup k zařízením bez zadání hesla.
 
     > [!NOTE]
     > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení s Androidem můžou automaticky vyžadovat PIN kód, aby mohl být kompatibilní s podmíněným přístupem.
 
 - **Minimální délka hesla**: zadejte minimální počet požadovaných znaků od 4-16. Zadejte například, pokud `6` chcete pro délku hesla vyžadovat alespoň šest číslic nebo znaků.
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být zařízení nečinné, než se automaticky uzamkne obrazovka. Zadejte například, `5` Pokud chcete zařízení zamknout po 5 minutách nečinnosti. Když je hodnota prázdná nebo nastavená na **nenakonfigurovaná**, Intune se nezmění ani neaktualizuje.
 
-  V zařízení uživatelé nemůžou nastavit časovou hodnotu větší než nakonfigurovanou dobu v profilu. Uživatelé můžou nastavit nižší časovou hodnotu. Pokud je profil nastavený například na `15` minuty, uživatelé můžou hodnotu nastavit na 5 minut. Uživatelé nemůžou hodnotu nastavit na 30 minut.
-
-- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet chybných hesel povolených před vymazáním zařízení, od 4-11. `0`(nula) může zakázat funkci vymazání zařízení. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
 - **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení, od 1-365. Zadejte například `90` platnost hesla po 90 dnech. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+
 - **Vyžadovaný typ hesla**: zadejte požadovanou úroveň složitosti hesla a to, jestli se můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkou úrovní zabezpečení**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
@@ -86,22 +130,15 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
   - **Aspoň alfanumerické se symboly**: obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly.
 
 - **Zakázat opakované použití předchozích hesel**: pomocí tohoto nastavení můžete uživatelům zabránit ve vytváření hesel, která používali dřív. Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte, `5` že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel. Pokud je hodnota prázdná, Intune se nezmění ani neaktualizuje.
+
 - **Odemknutí otiskem prstu (jenom Samsung KNOX)**: **blok** zabraňuje použití otisku prstu k odemknutí zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém uživatelům dovolit, aby zařízení odemkli pomocí otisku prstu.
+
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: **blok** brání Smart Lock nebo jiným agentům pro určování důvěryhodnosti v nastavení zamykací obrazovky. Pokud je zařízení v důvěryhodném umístění, pak tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení. Tuto funkci můžete například použít, když jsou zařízení připojená k určitému zařízení Bluetooth nebo když jsou zařízení blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
   Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
-  Toto nastavení platí pro:
-
+  Toto nastavení platí pro:  
   - Samsung KNOX standard 5.0 +
-
-- **Šifrování**: vyberte **vyžadovat** , aby byly soubory v zařízení šifrované. Ne všechna zařízení podporují šifrování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud chcete nakonfigurovat toto nastavení a správně ohlásit dodržování předpisů, nakonfigurujte taky:
-  1. **Heslo**: nastavte na **vyžadovat**.
-  2. **Požadovaný typ hesla**: nastavte **aspoň na číslo**.
-  3. **Minimální délka hesla**: Nastavte aspoň na `4` .
-
-  > [!NOTE]
-  > Pokud se vynucují zásady šifrování, zařízení Samsung Knox po uživatelích vyžadují nastavení šestiznakového složitého hesla jako hesla k zařízení.
 
 ## <a name="google-play-store"></a>Obchod Google Play
 

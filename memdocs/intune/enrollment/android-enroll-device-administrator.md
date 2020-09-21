@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c342fcb4c7930861e4b851cba5c7d203f159dee
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2f4683f3c7a243c6342d5fed99b534767bb943fd
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915207"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815000"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registrace správce zařízení s Androidem
 
@@ -32,6 +32,9 @@ Správce zařízení s Androidem (někdy označovaný jako "starší verze" spr�
 Proto doporučujeme, abyste zabránili zaregistrování nových zařízení pomocí procesu Správce zařízení popsaného níže.
 
 Ze stejných důvodů doporučujeme, abyste v případě, že se zařízení aktualizují na Android 10, migrovali zařízení mimo správu Správce zařízení. 
+
+> [!IMPORTANT]
+> V oblastech, kde je k dispozici Android Enterprise, Google podporuje pohyb od správy zařízení (DA) tím, že snižuje podporu správy v nových verzích Androidu. Pokud však nejsou k dispozici Android Enterprise nebo GMS, budete chtít použít Správce zařízení a seznámit se s těmito změnami. Další informace najdete v části [je Android Enterprise k dispozici ve své zemi](https://support.google.com/work/android/answer/6270910)?
 
 Pokud se přesto rozhodnete, že mají uživatelé zaregistrovat svoje zařízení s Androidem pomocí správy Správce zařízení, pokračujte k další části.  
 

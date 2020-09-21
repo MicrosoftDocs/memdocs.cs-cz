@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: 8d02f32d11cedae94cc179f6a7bdeba553063c8d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879715"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815387"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Správa zabezpečení koncového bodu v Microsoft Intune
 
@@ -29,7 +29,7 @@ Jako správce zabezpečení můžete pomocí uzlu *Security Endpoint* v Intune n
 
 Uzel zabezpečení koncového bodu seskupuje nástroje, které jsou k dispozici prostřednictvím Intune, které budete používat k zajištění zabezpečení zařízení:
 
-- **Zkontrolujte stav všech spravovaných zařízení**. Použijte zobrazení [všechna zařízení](#manage-devices) , kde můžete zobrazit dodržování předpisů zařízením z vysoké úrovně a pak přejít na konkrétní zařízení, abyste zjistili, které zásady dodržování předpisů nejsou splněné, abyste je mohli vyřešit.
+- **Zkontrolujte stav všech spravovaných zařízení**. Použijte zobrazení [všechna zařízení](#manage-devices) , kde můžete zobrazit dodržování předpisů zařízením z vysoké úrovně. Pak přejděte na konkrétní zařízení, abyste zjistili, které zásady dodržování předpisů nejsou splněné, abyste je mohli vyřešit.
 
 - **Nasaďte standardní hodnoty zabezpečení, které vytvoří konfigurace zabezpečení osvědčených postupů pro zařízení**. Intune zahrnuje [základní hodnoty zabezpečení](#manage-security-baselines) pro zařízení s Windows a rostoucí seznam aplikací, jako je Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) a Microsoft Edge. Směrné plány zabezpečení jsou předem nakonfigurované skupiny nastavení Windows, které vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které doporučují příslušné bezpečnostní týmy.
 
@@ -137,7 +137,7 @@ I když se může Intune integrovat s několika [partnery ochrany před mobilní
 Aby bylo možné spravovat úlohy v uzlu Security Endpoint v centru pro správu služby Microsoft Endpoint Manager, musí účet:
 
 - Mít přiřazenou licenci pro Intune.
-- Mít oprávnění řízení přístupu na základě role (RBAC) rovna oprávněním, která poskytuje integrovaná role Intune služby **Endpoint Security Manager**. Role *Správce zabezpečení koncového bodu* uděluje přístup k centru pro správu služby Microsoft Endpoint Manager. Tuto roli můžou použít jednotlivci, kteří spravují funkce zabezpečení a dodržování předpisů, včetně standardních hodnot zabezpečení, dodržování předpisů zařízením, podmíněného přístupu a ochrany ATP v programu Microsoft Defender.
+- Mít oprávnění řízení přístupu na základě role (RBAC) rovna oprávněním, která poskytuje integrovaná role Intune služby  **Endpoint Security Manager**. Role *Správce zabezpečení koncového bodu* uděluje přístup k centru pro správu služby Microsoft Endpoint Manager. Tuto roli můžou použít jednotlivci, kteří spravují funkce zabezpečení a dodržování předpisů, včetně standardních hodnot zabezpečení, dodržování předpisů zařízením, podmíněného přístupu a ochrany ATP v programu Microsoft Defender.
 
 Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md)
 
@@ -148,62 +148,69 @@ Následující seznam oprávnění můžete zobrazit v centru pro správu Micros
 **Nastaven**
 
 - **Android for Work**
-  - Čtení
+  - Číst
 - **Data auditu**
-  - Čtení
+  - Číst
 - **Identifikátory podnikových zařízení**
-  - Čtení
+  - Číst
 - **Zásady dodržování předpisů pro zařízení**
-  - Přiřazení
+  - Přiřadit
   - Vytvořit
   - Odstranit
-  - Čtení
+  - Číst
   - Aktualizace
   - Zobrazení sestav
 - **Konfigurace zařízení**
-  - Čtení
+  - Číst
 - **Správci registrace zařízení**
-  - Čtení
+  - Číst
 - **Sestavy aplikace Endpoint Protection**
-  - Čtení
+  - Číst
 - **Registrace programů**
   - Číst zařízení
   - Číst profil
   - Token pro čtení
 - **Datový sklad Intune**
-  - Čtení
+  - Číst
 - **Spravované aplikace**
-  - Čtení
+  - Číst
 - **Spravovaná zařízení**
   - Odstranit
-  - Čtení
+  - Číst
   - Nastavit primárního uživatele
   - Aktualizace
 - **Mobilní aplikace**
-  - Čtení
+  - Číst
 - **Organizace**
-  - Čtení
+  - Číst
 - **PolicySets**
-  - Čtení
+  - Číst
 - **Vzdálená pomoc**
-  - Čtení
+  - Číst
 - **Vzdálené úlohy**
-  - Získat klíč trezoru.
+  - Získat klíč trezoru
+  - Zahájit akci Správce konfigurace
+  - Microsoft Defender
+  - Restartovat hned
+  - vzdálené uzamčení
+  - Otočit BitLockerKeys (Preview)
+  - Otočit klíč trezoru
+  - Synchronizovat zařízení
 - **Role**
-  - Čtení
+  - Číst
 - **Základní nastavení zabezpečení**
-  - Přiřazení
+  - Přiřadit
   - Vytvořit
   - Odstranit
-  - Čtení
+  - Číst
   - Aktualizace
 - **Úlohy zabezpečení**
-  - Čtení
+  - Číst
   - Aktualizace
 - **Výdaje na telekomunikaci**
-  - Čtení
+  - Číst
 - **Podmínky a ujednání**
-  - Čtení
+  - Číst
 
 ## <a name="avoid-policy-conflicts"></a>Vyhnout se konfliktům zásad
 
@@ -218,7 +225,7 @@ Například nastavení zjištěná v zásadách zabezpečení koncového bodu js
 
 Jedním ze způsobů, jak zabránit konfliktům, je nepoužívat jiné směrné plány, instance stejného směrného plánu nebo různé typy a instance zásad pro správu stejných nastavení na zařízení. To vyžaduje plánování, které metody použijete k nasazení konfigurací do různých zařízení. Pokud ke konfiguraci stejného nastavení použijete více metod nebo instancí stejné metody, zajistěte, aby vaše různé metody buď souhlasily, nebo nebyly nasazeny do stejného zařízení.
 
-Pokud dojde ke konfliktům, můžete k identifikaci a řešení zdroje těchto konfliktů použít integrované nástroje Intune. Další informace:
+Pokud dojde ke konfliktům, můžete k identifikaci a řešení zdroje těchto konfliktů použít integrované nástroje Intune. Další informace naleznete v tématu:
 
 - [Řešení potíží se zásadami a profily v Intune](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [Monitorování standardních hodnot zabezpečení](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)

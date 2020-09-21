@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f659197c8c1f9dac3f29c89f5c7676d1ae3a3f09
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461245"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779544"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Řešení potíží se zařízeními s Androidem Enterprise v Microsoft Intune
 
@@ -49,7 +49,7 @@ Toto chování je očekávané.
 Toto chování je očekávané. V okně zjištěné aplikace jsou v inventáři pouze systémové aplikace nainstalované v pracovním profilu. Pokud chcete zobrazit nainstalované spravované aplikace Google Play, použijte okno **spravované aplikace** .
 
 ### <a name="are-web-applications-supported-for-work-profile-enrolled-devices"></a>Jsou webové aplikace podporované pro zařízení zaregistrovaná v pracovním profilu?
-Yes. Další informace najdete v tématu [spravované Google Play webové odkazy](../apps/apps-add-android-for-work.md#managed-google-play-web-links) .
+Ano. Další informace najdete v tématu [spravované Google Play webové odkazy](../apps/apps-add-android-for-work.md#managed-google-play-web-links) .
 
 ## <a name="device-management"></a>Správa zařízení
 
@@ -85,6 +85,24 @@ U zaregistrovaných zařízení pracovního profilu můžete resetovat jenom hes
 - koncový uživatel ho může resetovat.
 
 Pro vyhrazená zařízení (COSU) a plně spravovaná se podporuje resetování hesla zařízení.
+
+## <a name="duo-devices"></a>Zařízení Duo
+
+### <a name="company-portal-not-prompting-users-to-enroll"></a>Portál společnosti nedotazování uživatelů k registraci
+V některých případech se kontrolní seznam registrace nemusí zobrazovat podle očekávání, když uživatelé spustí aplikaci Portál společnosti.
+
+Pokud se uživatelům nezobrazuje kontrolní seznam registrací, můžou na něj vždycky přejít v pravém horním rohu Portál společnosti aplikace a klepnutím na oznámení, které zobrazí kontrolní seznam registrace.
+
+### <a name="users-unable-to-find-the-microsoft-launcher-app"></a>Uživatelé nemůžou najít aplikaci spouštěče Microsoft.
+Uživatelé nemůžou najít ani spustit aplikaci spouštěče Microsoft pracovní profil. 
+
+Aplikace spouštěče Microsoft je výchozí spouštěcí aplikace v zařízeních Duo, takže ikona aplikace byla skrytá ze seznamu aplikací a v obchodech s osobním a pracovním Playem. Tato akce bude opravena v nadcházející aktualizaci.
+
+### <a name="edge-sign-in-prompt-during-enrollment"></a>Při registraci se zobrazí výzva k zadání okraje.
+Když se nezaregistrovaný uživatel pokusí o přístup k podnikovým datům v aplikaci chráněné pomocí podmíněného přístupu (CA), bude uživatel vyzván k registraci svého zařízení. Během tohoto toku registrace se spustí aplikace Edge, aby se otevřel web Portál společnosti. V některých případech může aplikace Edge požádat uživatele, aby se přihlásil k hraničnímu zařízení, které uživatele přesměruje z toku registrace.
+
+Pokud se tomu chcete vyhnout, sdělte uživatelům, aby se zaregistrovali Portál společnosti před tím, než se pokusíte získat přístup k datům organizace. Pokud se uživatel pokusí o přístup k datům organizace před registrací, má-li uživatel výzvu k přihlášení, přeskočí krok přihlášení k okraji, aby bylo možné pokračovat v toku registrace. Uživatelé můžou v předinstalované Portál společnosti aplikaci vždycky zahájit registraci.
+
 
 
 ## <a name="next-steps"></a>Další kroky

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6348b4d630fec09cf4bb408aee1581b172da947f
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915496"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814691"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
@@ -38,7 +38,7 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil konfigurace zařízení VPN](vpn-settings-configure.md).
+Vytvořte [konfigurační profil zařízení s Windows 10 VPN](vpn-settings-configure.md).
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 

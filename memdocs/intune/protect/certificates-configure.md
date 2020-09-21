@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: 577cec0a37d106b7ac772c2853bb7239caf55028
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076215"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814820"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -81,7 +81,7 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 
 | Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
 |--|--|--|--|---|
-| Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
+| Správce zařízení s Androidem | ![Podporuje se](./media/certificates-configure/green-check.png) <br>*(viz **Poznámka 1**)*| ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
 | Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png)  |
 | Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)|
 | Android Enterprise <br> – Pracovní profil ve vlastnictví firmy   | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  | ![Podporováno](./media/certificates-configure/green-check.png)  |
@@ -90,6 +90,8 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
 | Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
+
+- ***Poznámka 1*** – počínaje Androidem 11 profily důvěryhodných certifikátů už nemůžou do zařízení, která jsou zaregistrovaná jako *Správce zařízení s Androidem*, instalovat důvěryhodný kořenový certifikát. Toto omezení se nevztahuje na Samsung KNOX. Další informace najdete v tématu [profily důvěryhodných certifikátů pro správce zařízení s Androidem](#trusted-certificate-profiles-for-android-device-administrator).
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.
 
@@ -108,12 +110,25 @@ Profily certifikátů SCEP přímo odkazují na profil důvěryhodného certifik
 Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu zařízení, kterou chcete podporovat, stejně jako u profilů certifikátů SCEP, PKCS a PKCS.
 
 > [!IMPORTANT]
-> Důvěryhodné kořenové profily, které vytvoříte pro platformu *Windows 10 a novější*, se zobrazí v centru pro správu Microsoft Endpoint Manageru jako profily pro platformu *Windows 8.1 a novější*. 
+> Důvěryhodné kořenové profily, které vytvoříte pro platformu *Windows 10 a novější*, se zobrazí v centru pro správu Microsoft Endpoint Manageru jako profily pro platformu *Windows 8.1 a novější*.
 >
 > Jedná se o známý problém s prezentací platformy pro profily důvěryhodných certifikátů. I když profil zobrazuje platformu Windows 8.1 a novější, je funkční pro Windows 10 a novější.
 
 > [!NOTE]
 > Profil *důvěryhodného certifikátu* v Intune se dá použít jenom k doručování kořenových nebo zprostředkujících certifikátů. Účelem nasazení takových certifikátů je vytvořit řetěz důvěryhodnosti. Použití profilu důvěryhodného certifikátu k doručování certifikátů jiných než kořenových nebo zprostředkujících certifikátů není společností Microsoft podporováno. Při výběru profilu důvěryhodného certifikátu na portálu Intune může být zablokovaný import certifikátů, které se nepovažují za kořenové nebo zprostředkující certifikáty. I když můžete importovat a nasadit certifikát, který není ani kořenovým nebo zprostředkujícím certifikátem, který používá tento typ profilu, pravděpodobně dojde k neočekávaným výsledkům mezi různými platformami, jako je iOS nebo Android.
+
+### <a name="trusted-certificate-profiles-for-android-device-administrator"></a>Profily důvěryhodných certifikátů pro správce zařízení s Androidem
+
+Od verze Android 11 už nebudete moct k nasazení důvěryhodného kořenového certifikátu do zařízení, která jsou zaregistrovaná jako *Správce zařízení s Androidem*, používat profil důvěryhodného certifikátu. Toto omezení se nevztahuje na Samsung KNOX.
+
+Vzhledem k tomu, že profily certifikátů SCEP vyžadují, aby byl na zařízení nainstalovaný důvěryhodný kořenový certifikát, a musí odkazovat na profil důvěryhodného certifikátu, který zase odkazuje na tento certifikát, použijte následující postup, který toto omezení obejít:
+
+1. Ručně zřídí zařízení s důvěryhodným kořenovým certifikátem.
+2. Nasaďte do zařízení, profil důvěryhodného kořenového certifikátu, který odkazuje na důvěryhodný kořenový certifikát, který jste nainstalovali do zařízení.
+3. Nasaďte profil certifikátu SCEP do zařízení, které odkazuje na profil důvěryhodného kořenového certifikátu.
+Tento problém se neomezuje jenom na profily certifikátů SCEP. Proto Naplánujte ruční instalaci důvěryhodného kořenového certifikátu na příslušná zařízení, pokud chcete použít profily certifikátů PKCS, nebo profily certifikátů PKCS, které vyžaduje.
+
+Přečtěte si další informace o [snížení podpory pro správce zařízení s Androidem](https://techcommunity.microsoft.com/t5/intune-customer-success/decreasing-support-for-android-device-administrator/ba-p/1441935) z techcommunity.Microsoft.com.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
@@ -133,9 +148,9 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například *profil důvěryhodného certifikátu pro celou firmu*.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **Next** (Další).
+6. Vyberte **Další**.
 
-7. V **nastavení konfigurace**určete soubor. cer pro certifikát důvěryhodné kořenové certifikační autority, který jste předtím exportovali. 
+7. V **nastavení konfigurace**určete soubor. cer pro certifikát důvěryhodné kořenové certifikační autority, který jste předtím exportovali.
 
    Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
 
@@ -145,15 +160,15 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 
    ![Vytvoření profilu a nahrání důvěryhodného certifikátu](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-8. Vyberte **Next** (Další).
+8. Vyberte **Další**.
 
 9. V části **značky oboru** (volitelné) přiřaďte značku pro filtrování profilu pro konkrétní IT skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment` . Další informace o značkách oboru naleznete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-   Vyberte **Next** (Další).
+   Vyberte **Další**.
 
 10. V části **přiřazení**vyberte uživatele nebo skupiny, které obdrží váš profil. Další informace o přiřazování profilů najdete v tématu [přiřazení profilů uživatelů a zařízení](../configuration/device-profile-assign.md).
 
-    Vyberte **Next** (Další).
+    Vyberte **Další**.
 
 11. (*Platí jenom pro Windows 10*) V části **pravidla použitelnosti**zadejte pravidla použitelnosti pro upřesnění přiřazení tohoto profilu. Můžete vybrat, že chcete profil přiřadit nebo nepřiřadit, na základě edice nebo verze operačního systému zařízení.
 

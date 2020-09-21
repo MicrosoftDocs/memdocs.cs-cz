@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8beb69178c6f845592caa9890bc8ed9759eb2e23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 87120128efcf927887de7e60fa59c4060592e87c
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983039"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815319"
 ---
 # <a name="rename-a-device-in-intune"></a>Přejmenování zařízení v Intune
 
@@ -29,6 +29,7 @@ Akce **Přejmenovat zařízení** umožňuje přejmenovat zařízení, které je
 
 Můžete přejmenovat následující typy zařízení:
 - Okna vlastněná společností 
+- spoluspravovaná zařízení ve vlastnictví firmy, která jsou připojená k Azure AD 
 - iOS/iPadOS pod dohledem
 - MacOS vlastněné společností 10
 

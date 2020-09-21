@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 11a0b2967f98600bf5468e30579f2c42069b298d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993314"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813672"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Nastavení Windows 10 Team pro povolení nebo omezení funkcí v zařízeních Surface Hub s využitím Intune
 
@@ -29,7 +29,7 @@ V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízen
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil zařízení](device-restrictions-configure.md#create-the-profile).
+Vytvořte [konfigurační profil omezení zařízení s Windows 10 Teams](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="apps-and-experience"></a>Aplikace a prostředí
 
