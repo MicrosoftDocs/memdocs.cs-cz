@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0561a7f7615b4f8aee8fd60b2b2b2481923c07ff
-ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
+ms.openlocfilehash: 1b83ae8b5da0f0cc8a53f26b6a4bcc0797cd4a19
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/18/2020
-ms.locfileid: "90767141"
+ms.locfileid: "90802917"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,6 +57,13 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 <!-- ########################## -->
 ## <a name="week-of-september-14-2020"></a>Týden od 14. září 2020
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="device-management"></a>Správa zařízení
+
+### <a name="tenant-attach-run-scripts-from-the-admin-center"></a>Připojení tenanta: spuštění skriptů z centra pro správu
+<!--7220536, CM6234688-->
+Využijte možnosti Configuration Manager funkce místního [spouštění skriptů](../../configmgr/apps/deploy-use/create-deploy-scripts.md) do centra pro správu Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, ke spouštění skriptů PowerShellu z cloudu na základě individuální Configuration Manager spravovaného zařízení v reálném čase. To poskytuje všechny tradiční výhody skriptů PowerShellu, které již byly definovány a schváleny správcem Configuration Manager k tomuto novému prostředí. Další informace najdete v tématu věnovaném [připojení tenanta: spuštění skriptů z centra pro správu](../../configmgr/tenant-attach/scripts.md).
+
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861-wnready---"></a>Jednotné doručování aplikací Azure AD Enterprise a Office Online v systému Windows Portál společnosti<!-- 1817861 wnready -->

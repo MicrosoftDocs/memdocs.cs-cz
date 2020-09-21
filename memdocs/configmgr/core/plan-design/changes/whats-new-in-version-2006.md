@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 07980da205dcc222216ec7607cf7488bbb0f356a
-ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
+ms.openlocfilehash: d3e6146b2388478356778175691beae126f5e1d3
+ms.sourcegitcommit: a61d4f73bdee6872db723514a865d7b1bb76d815
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90802876"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837070"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Co je nového ve verzi 2006 Configuration Manager Current Branch
 
@@ -151,7 +151,7 @@ Chcete-li lépe zarovnávat požadavky na analýzu plochy pro diagnostická data
 |---------|---------|
 | Vyžadováno | Základní |
 | Volitelné (omezené) | Rozšířené (omezené) |
-| – | Rozšířené |
+| Není k dispozici | Rozšířené |
 | Volitelné | Do bloku |
 
 Pokud jste dříve nakonfigurovali všechna zařízení na **vyšší** úrovni při upgradu na verzi 2006, vrátí se k **volitelnému (omezenému)**. Pak budou do Microsoftu posílat méně dat. Tato změna by neměla mít vliv na to, co vidíte v Desktop Analytics.
@@ -365,15 +365,15 @@ The following update rollup (4517869) is available in the console starting on Oc
 
 -->
 
-<!--
-### Hotfixes
 
-The following additional hotfixes are available to address specific issues:
+### <a name="hotfixes"></a>Opravy hotfix
 
-| ID | Title | Date | In-console |
+K vyřešení konkrétních problémů jsou k dispozici následující další opravy hotfix:
+
+| ID | Nadpis | Datum | V konzole |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
-
+| [4580678](https://support.microsoft.com/help/4580678) | Souhrn připojení tenanta pro Configuration Manager aktuální větev verze 2006 | 18. září 2020 | Ano |
+<!--
 > [!NOTE]  
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->

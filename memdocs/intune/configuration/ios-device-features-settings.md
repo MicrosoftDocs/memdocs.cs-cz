@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd81320a354c90814e424574dbc0c5aa055f79
-ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
+ms.openlocfilehash: 8a7148d9458b32f194cc62c7b4d53e1b8fcad40a
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90767090"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815438"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -33,7 +33,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 ## <a name="before-you-begin"></a>Než začnete
 
-[Vytvořte profil funkcí zařízení s iOS/iPadOS](device-features-configure.md).
+Vytvořte [profil konfigurace funkcí zařízení s iOS/iPadOS](device-features-configure.md).
 
 > [!NOTE]
 > Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
