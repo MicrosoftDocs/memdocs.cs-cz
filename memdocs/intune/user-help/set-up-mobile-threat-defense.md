@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 2660530e85730b192def24f91b77b151d5ed799c
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 2bd7cd16e904395b1afdb24dbd2e1937544c922e
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689476"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848364"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Instalace aplikace Mobile Threat Defense  
 
@@ -53,7 +53,7 @@ Na zařízeních s Androidem se běžně používají tyto aplikace MTD. Výběr
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Zabezpečení Pradeo](https://go.microsoft.com/fwlink/?linkid=2143413)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
-* [SEP Mobile (Symantec Endpoint Protection) (https://go.microsoft.com/fwlink/?linkid=2139454)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139454)
 * [Sophos zachytit X pro mobilní zařízení](https://go.microsoft.com/fwlink/?linkid=2143273)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zimperium mobilní IP adresy (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
@@ -120,7 +120,7 @@ Pokud se zjistí hrozba, která překročí definovanou úroveň hrozby vaší o
 2. Přečtěte si podrobnosti o hrozbách v aplikaci, které vysvětlují, jak může hrozba ovlivnit vaše zařízení, pokud je ponecháno nevyřešené a jak ho vyřešit. 
 3. Až v zařízení provedete požadované změny, vraťte se do aplikace MTD a spusťte novou kontrolu. Opakujte tyto kroky, dokud nebudou vyřešeny všechny hrozby. Synchronizace změn ve vaší organizaci může trvat několik minut. Jakmile se tyto změny synchronizují, znovu získáte přístup k chráněné aplikaci. 
 
-## <a name="get-support"></a>Získat podporu
+## <a name="get-support"></a>Získání podpory
 Pokud chcete najít kontaktní údaje vaší organizace, navštivte [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) . Požádejte je, aby vám pomohli:
 
 * Určení používané aplikace MTD  

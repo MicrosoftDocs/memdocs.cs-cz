@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1394d16dc8493efd258cb8a6779a5d5ff7b7dec1
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 36cb7902fdc9e05aaef9ace8ceaa28e675ca1abc
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689493"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848500"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Konfigurace akcí pro zařízení nedodržující předpisy v Intune
 
@@ -151,7 +151,9 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
 Vytvořená oznámení jsou k dispozici na stránce *oznámení zásad dodržování předpisů*  >  *Notifications* . Na stránce můžete vybrat oznámení a zobrazit jeho konfiguraci a:
 
-- Vyberte možnost **Odeslat náhled e-mailu** , abyste odeslali náhled e-mailu s oznámením na účet, který jste použili k přihlášení do Intune. 
+- Vyberte možnost **Odeslat náhled e-mailu** , abyste odeslali náhled e-mailu s oznámením na účet, který jste použili k přihlášení do Intune.
+
+  Aby bylo možné úspěšně odeslat e-mail verze Preview, váš účet musí mít oprávnění rovnající se následujícím skupinám Azure AD nebo rolím Intune: *globální správce Azure AD*, *správce* Intune (Správce služby Intune Azure AD Intune) nebo zásady Intune *a Správce profilů*.
 - Vyberte možnost **Upravit** pro *základy* nebo *značky oboru* a proveďte změnu.
 
 ## <a name="add-actions-for-noncompliance"></a>Přidání akcí při nedodržení předpisů

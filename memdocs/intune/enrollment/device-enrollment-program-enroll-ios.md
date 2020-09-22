@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: 96f6c2a40fa373c73aac30061ddaaaa1ddf0c8a6
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574877"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848398"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Automatické registrace zařízení společnosti Apple
 
@@ -218,7 +218,7 @@ Teď, když jste nainstalovali token, můžete vytvořit profil zápisu pro zař
     > - **Sdílený iPad** = * * Ano * *.
     > Dočasné relace jsou ve výchozím nastavení povolené a umožňují vašim uživatelům přihlašovat se ke sdílenému iPadu bez spravovaného účtu Apple ID. Můžete zakázat dočasné relace na sdíleném iPadu tím, že nakonfigurujete [Nastavení omezení pro zařízení](../configuration/device-restrictions-ios.md)s platformou iOS/iPadOS Shared.  
 
-13. Vyberte, jestli chcete, aby zařízení, která používají tento profil, mohla **synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**.
+13. Vyberte, jestli chcete, aby zařízení, která používají tento profil, mohla **synchronizovat s počítači**. Pokud vyberete **Povolit Apple Configurator podle certifikátu**, musíte zvolit certifikát v části **Certifikáty Apple Configuratoru**. Pro iOS/iPadOS 13,0 a novější se toto nastavení už nepoužívá od společnosti Apple. 
 
      > [!NOTE]
      > Pokud je **synchronizace s počítači** nastavená na **Odepřít vše**, port bude omezený na zařízeních s iOS a iPadOS. Port lze použít pouze pro zpoplatnění a žádné jiné. Port se zablokuje pomocí iTunes nebo Apple Configuratoru 2.

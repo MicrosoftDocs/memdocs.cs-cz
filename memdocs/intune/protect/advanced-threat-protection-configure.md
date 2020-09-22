@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c8a499829f769b5533be6786b261aba1b6ddb6fc
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909580"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848517"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Konfigurace ochrany ATP v programu Microsoft Defender v Intune
 
@@ -59,6 +59,8 @@ Pro každého tenanta stačí pouze povolit Microsoft Defender ATP v jednom okam
 4. V centru pro správu Microsoft Endpoint Manageru se vraťte do **ATP Microsoft Defender** . V části **nastavení zásad dodržování předpisů MDM**v závislosti na potřebách vaší organizace:
    - Nastavte **připojit zařízení s Windows verze 10.0.15063 a novější pro Microsoft Defender ATP** na **on** .
    - Nastavte **připojit zařízení s Androidem verze 6.0.0 a vyšší pro Microsoft Defender ATP** na **on** .
+  
+   Po nastavení těchto konfigurací na *zapnuto*budou platná zařízení, která už jsou spravovaná pomocí Intune, i zařízení, která v budoucnu zaregistrujete, připojí se ke službě Microsoft Defender ATP za účelem dodržování předpisů.
 
 5. Vyberte **Uložit**.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: cb9c5c43e3e5c1f9542e06ab1fa4b3b1868924e8
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564240"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848381"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Ve vývoji pro Microsoft Intune
 
@@ -241,7 +241,7 @@ Na stránce Podrobnosti o hardwaru zařízení budete moct zobrazit následujíc
 ## <a name="intune-apps"></a>Aplikace Intune
 
 ### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861----"></a>Jednotné doručování aplikací Azure AD Enterprise a Office Online v systému Windows Portál společnosti<!-- 1817861  -->
-Ve verzi 2006 jsme oznámili [jednotné doručování aplikací Azure AD Enterprise a Office Online v portál společnosti](../fundamentals/whats-new.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal). Tato funkce bude podporována ve Windows Portál společnosti. V podokně **vlastní nastavení** v Intune budete moct vybrat možnost **Skrýt** nebo **Zobrazit** **podnikové aplikace Azure AD** a **aplikace Office Online** ve Windows portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberete vlastní nastavení **správy tenanta**  >  **Customization** a vyhledáte toto nastavení konfigurace. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
+Ve verzi 2006 jsme oznámili [jednotné doručování aplikací Azure AD Enterprise a Office Online v portál společnosti](../fundamentals/whats-new.md). Tato funkce bude podporována ve Windows Portál společnosti. V podokně **vlastní nastavení** v Intune budete moct vybrat možnost **Skrýt** nebo **Zobrazit** **podnikové aplikace Azure AD** a **aplikace Office Online** ve Windows portál společnosti. Každý koncový uživatel uvidí ze zvolené služby Microsoftu celý katalog aplikací. Ve výchozím nastavení se každý další zdroj aplikace nastaví jako **skrytý**. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberete vlastní nastavení **správy tenanta**  >  **Customization** a vyhledáte toto nastavení konfigurace. Související informace najdete v tématu [Postup přizpůsobení aplikací portál společnosti Intune, portál společnosti webu a aplikace Intune](../apps/company-portal-app.md).
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63bf4e680dea22a5ca69227fe3701f9ba6f2e0de
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 8410a72ffe5dcf09ad81429bc6817ac16f31582a
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90815200"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848483"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -104,8 +104,10 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
   **Výchozí**: Ano.
 
 - **Blokovat uživatelský ovládací prvek při instalacích**:  
-  Nastavení této zásady umožňuje uživatelům změnit možnosti instalace, které jsou obvykle k dispozici pouze správcům systému. Pokud toto nastavení zásad povolíte, přeskočí se některé funkce zabezpečení Instalační služba systému Windows. Umožňuje dokončení instalací, které by jinak bylo zastaveno z důvodu porušení zabezpečení. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, funkce zabezpečení Instalační služba systému Windows zabrání uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například určení adresáře, do kterého jsou soubory nainstalovány. Pokud Instalační služba systému Windows zjistí, že instalační balíček povolil uživateli změnu chráněné možnosti, zastaví instalaci a zobrazí zprávu. Tyto funkce zabezpečení fungují pouze v případě, že instalační program běží v privilegovaném kontextu zabezpečení, ve kterém má přístup k adresářům odepřeným uživateli. Nastavení této zásady je určené pro méně omezující prostředí. Dá se použít k obcházení chyb v instalačním programu, který brání instalaci softwaru.  
+  Tato zásada zabraňuje uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. Pokud je nastavené na Nenakonfigurováno (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení Instalační služba systému Windows může zabránit uživatelům v změně těchto možností instalace a některé z funkcí zabezpečení Instalační služba systému Windows se přeskočí.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067060)
+
+  **Výchozí**: Ano
 
 - **Blokovat hru DVR (jenom Desktop)**:  
   Konfiguruje, zda je povoleno nahrávání a vysílání her.  
@@ -117,7 +119,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 ::: zone pivot="mdm-may-2019"
 
 - **Blokovat uživatelský ovládací prvek při instalacích**:  
-  Nastavení této zásady umožňuje uživatelům změnit možnosti instalace, které jsou obvykle k dispozici pouze správcům systému. Pokud toto nastavení zásad povolíte, přeskočí se některé funkce zabezpečení Instalační služba systému Windows. Umožňuje dokončení instalací, které by jinak bylo zastaveno z důvodu porušení zabezpečení. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, funkce zabezpečení Instalační služba systému Windows zabrání uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například určení adresáře, do kterého jsou soubory nainstalovány. Pokud Instalační služba systému Windows zjistí, že instalační balíček povolil uživateli změnu chráněné možnosti, zastaví instalaci a zobrazí zprávu. Tyto funkce zabezpečení fungují pouze v případě, že instalační program běží v privilegovaném kontextu zabezpečení, ve kterém má přístup k adresářům odepřeným uživateli. Nastavení této zásady je určené pro méně omezující prostředí. Dá se použít k obcházení chyb v instalačním programu, který brání instalaci softwaru.  
+  Tato zásada zabraňuje uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. Pokud je nastavené na Nenakonfigurováno (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení Instalační služba systému Windows může zabránit uživatelům v změně těchto možností instalace a některé z funkcí zabezpečení Instalační služba systému Windows se přeskočí.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067060)
 
   **Výchozí**: Ano
@@ -2116,7 +2118,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Hledat
+## <a name="search"></a>Search
 
 Další informace najdete v tématu [zásady CSP – hledání](/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 
