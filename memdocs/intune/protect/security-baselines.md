@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2047e0224294156a3de5dd08b163c8fd40687e0f
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 570d848f624b5558d84177b66751f55c0a0ab4ae
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90815034"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002728"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -59,7 +59,7 @@ Následující instance standardních hodnot zabezpečení jsou k dispozici pro 
 
 - **Základní hodnoty** 
    ATP v programu Microsoft Defender *(K použití tohoto směrného plánu musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
-  - [Směrné plány ATP programu Microsoft Defender pro září 2020 – verze 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
+  - [Směrné plány ATP v programu Microsoft Defender pro srpna 2020 – verze 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
   - [Směrné plány ATP v programu Microsoft Defender pro 2020. dubna verze 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Směrné plány ATP v programu Microsoft Defender pro březen 2020 – verze 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 

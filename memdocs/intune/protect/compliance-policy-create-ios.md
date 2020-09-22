@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 231bffb475679a6fd043242563444a4896e7c85c
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871912"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002745"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS/iPadOS pro označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -150,6 +150,9 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 
   - **Název aplikace** – zadejte uživatelsky přívětivý název, který vám usnadní identifikaci ID sady prostředků.
   - **ID sady prostředků aplikace** – zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. Pokud chcete najít ID sady prostředků, přečtěte si téma [ID sady pro nativní aplikace pro iOS a iPadOS](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) na adrese support.Apple.com, nebo se obraťte na dodavatele softwaru aplikace.
+  
+  > [!NOTE]
+  > Nastavení *omezených aplikací* platí pro nespravované aplikace, které jsou nainstalovány mimo kontext správy.
 
 ## <a name="next-steps"></a>Další kroky
 

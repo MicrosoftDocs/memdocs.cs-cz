@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6d062af4859dcca6c762bf401e1007a9fc9af126
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992938"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002660"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
@@ -113,7 +113,7 @@ Pokud zařízení nesplňuje podmínky nastavené, koncový uživatel se provede
 > [!NOTE]
 > Od 1. července 2020 se podpora pro Exchange Connector zastaralá a nahrazuje ji pomocí [hybridního moderního ověřování](/office365/enterprise/hybrid-modern-auth-overview) Exchange (HMA). Použití paměti HMA nevyžaduje instalaci Intune a použití konektoru Exchange. Díky této změně se uživatelské rozhraní pro konfiguraci a správu Exchange Connectoru pro Intune odebralo z centra pro správu Microsoft Endpoint Manageru, pokud už nepoužíváte Exchange Connector s vaším předplatným.
 >
-> Pokud máte ve svém prostředí nastavený Exchange Connector, zůstane klient Intune pro jeho použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Další informace najdete v tématu věnovaném [instalaci konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md) . Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
+> Pokud máte ve svém prostředí nastavený Exchange Connector, váš tenant Intune zůstane pro své použití podporovaný a vy budete mít přístup k uživatelskému rozhraní, které podporuje jeho konfiguraci. Další informace najdete v tématu věnovaném [instalaci konektoru Exchange On-Premises Connector](../protect/exchange-connector-install.md) . Můžete dál používat konektor nebo nakonfigurovat HMA a pak konektor odinstalovat.
 >
 > Hybridní moderní ověřování nabízí funkce, které dříve poskytoval Exchange Connector pro Intune: mapování identity zařízení na záznam Exchange.  Toto mapování se teď stane mimo konfiguraci, kterou provedete v Intune, nebo požadavek konektoru Intune, aby se zajistilo přemostění Intune a Exchange. S HMA je nutné odebrat požadavek na použití konfigurace specifické pro Intune (konektor).
 

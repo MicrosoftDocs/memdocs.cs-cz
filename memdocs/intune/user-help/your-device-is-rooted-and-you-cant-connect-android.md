@@ -1,11 +1,11 @@
 ---
-title: Zařízení s Androidem obsahuje root a nemůže se připojit
-description: ''
+title: Vaše zařízení s Androidem má root a nemůže se připojit-Microsoft Intune
+description: Zjistěte, proč se vám zobrazuje zpráva, že vaše zařízení má root.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 09/22/2017
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,23 +19,27 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 464bc84c6d638ccb113b4d0ad98db268d98e2292
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f790c814046e0fd275385cbf996f58c92d3b7a13
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877037"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002856"
 ---
-# <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Byl proveden root zařízení s Androidem a zařízení nemůže se připojit
+# <a name="android-device-is-rooted-so-you-cant-connect"></a>Zařízení s Androidem je rootované, takže se nebudete moct připojit.  
 
-Na tuto stránku jste se dostali, protože se vám zobrazila zpráva, že byl na vašem zařízení proveden _root_.
+Zařízení bude mít blokovaný přístup k podnikovým prostředkům, pokud:  
 
-Pokud byl na zařízení s Androidem proveden tzv. „root“, znamená to, že některá část softwaru zařízení byla změněna, aby se povolily možnosti, které jinak nejsou k dispozici. Tyto úpravy můžou často ohrozit zabezpečený přístup k prostředkům organizace, jako jsou e-maily a dokumenty. Zařízením s rootem se proto zabraňuje v přístupu k těmto prostředkům, dokud se problém nevyřeší.  
+- Na zařízení nainstalujete aplikaci, kterou software pro zjišťování rootu považuje za bezpečnostní riziko. Pokud budete vyzváni k odinstalování zařízení hned po instalaci aplikace, zkuste tuto aplikaci odinstalovat.  
 
-Zařízení může být rootované několika způsoby:
+- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Požádejte o pomoc pracovníka podpory IT. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-- Mohli jste na zařízení instalovat aplikaci, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. Pokud se tato zpráva zobrazí okamžitě po instalaci nějaké aplikace, zkuste aplikaci odinstalovat.
+- Zařízení jste rootem. Vraťte se ke kořenovému adresáři (obvykle se jedná o POČÍTAČovém softwaru nebo aplikacích) a obnovte zařízení zpátky do předchozího stavu. Než začnete, nezapomeňte zařízení zálohovat. 
 
-- Výrobce zařízení instaloval na zařízení software, o které software pro zjišťování rootu předpokládá, že je bezpečnostním rizikem. V takovém případě musíte požádat o pomoc firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="why-your-access-is-blocked"></a>Proč je zablokovaný váš přístup
 
-Pokud jste zařízení rootovali sami, budete muset provést opačný proces a obnovit zařízení do nerootovaného stavu.
+Kořenová složka zařízení zahrnuje změnu jejího softwaru. Díky těmto změnám je zařízení náchylné k neoprávněnému přístupu a škodlivým útokům. Proto je to kvůli tomu, proč se rootem zařízení často blokují přístup k firemnímu e-mailu nebo souborům.  
+
+## <a name="next-steps"></a>Další kroky  
+
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

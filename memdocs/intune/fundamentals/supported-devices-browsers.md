@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 463e2b7c72c91131de88eb3de956556d65d50788
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996278"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002762"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -95,7 +95,7 @@ Jako alternativní metodu registrace jde na počítače s Windows nasadit a nain
 > [!Note]
 > Microsoft oznámil, že podpora Windows 7 končí 14 ledna 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
 >
-> Další informace najdete v tématu [plán pro změny v Intune: konec podpory pro Windows 7](whats-new.md#windows-7-ends-extended-support).
+> Další informace najdete v tématu [plán pro změny v Intune: konec podpory pro Windows 7](whats-new-archive.md#windows-7-ends-extended-support).
 >
 > Microsoft Intune vyřadí podporu pro konzolu Intune založenou na Silverlightu 15. října 2020. Toto vyřazení zahrnuje koncovou podporu konzoly Silverlight nakonfigurovaného POČÍTAČového softwaru klienta (označuje se také jako agent pro počítače).
 >

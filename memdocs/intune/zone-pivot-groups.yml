@@ -13,7 +13,7 @@ groups:
   prompt: Zvolit verzi
   pivots:
   - id: mdm-sept-2020
-    title: Září 2020
+    title: Srpen 2020
   - id: mdm-may-2019
     title: Květen 2019
   - id: mdm-preview
@@ -37,9 +37,9 @@ groups:
   - id: atp-march-2020
     title: Březen 2020
 metadata:
-  ms.openlocfilehash: 551f892419f29b83002484b743c2c8c5a8c607e0
-  ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+  ms.openlocfilehash: 339abb3d5dae662b7c83000369529c8115aeaf99
+  ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/19/2020
-  ms.locfileid: "90815166"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "91002677"

@@ -1,12 +1,12 @@
 ---
-title: Potřebujete vypnout Ladění USB | Dokumentace Microsoftu
+title: Musíte vypnout ladění USB – Microsoft Intune | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: Na našem zařízení je třeba vypnout ladění USB.
+description: Naučte se vypnout ladění USB, abyste mohli přistupovat k pracovním nebo školním aplikacím.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,19 +18,28 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: 4cc6b1e5f96ff68ac9b73c5e050ff587bdb21506
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a7e93aca7ae3b6d5a2cf817ea355c6d02a080cb1
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882525"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002626"
 ---
-# <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
+# <a name="turn-off-usb-debugging-mode"></a>Vypnout režim ladění USB 
 
-_Ladění USB_ je režim, ve kterém zařízení s Androidem můžou komunikovat s počítači. Cílem je zjednodušit vývojářům ladění aplikací pro Android. Tento režim umožňuje jistý přístup ke zvláštním oblastem telefonu, se kterými nemusí většina lidí pravidelně pracovat. Mít takový přístup je sice užitečné, ale zařízení může být během připojení k počítači vystavené dalšímu ohrožení informací. Vaše firemní podpora požaduje, aby kvůli lepší ochraně firemních dat ve vašem zařízení bylo toto nastavení vypnuté.
+Vypnutí režimu ladění USB:  
+1. Přejít na **Nastavení**.
+2. Klepněte **System**na  >  **Možnosti pro vývojáře**systému. 
+2. Přejděte na **ladění USB** a překlopte přepínač a zapněte ho. 
+3. Než se pokusíte o přístup k pracovním nebo školním prostředkům, počkejte několik minut, než se změny v zařízení zaregistrují.  
 
-Ladění USB můžete vypnout tak, že kliknete na **Nastavení**  >  **Možnosti pro vývojáře**a vypnete **ladění USB**.
+Na panelu hledání můžete taky zadat **ladění USB** a přejít přímo na toto nastavení.  
 
-Po vypnutí **ladění USB** pár minut počkejte. Potom byste měli být schopni zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
+Nejaktuálnější pokyny najdete v dokumentaci k nápovědě poskytované výrobcem zařízení.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="what-is-usb-debugging"></a>Co je ladění USB?  
+
+Pro vývojáře často používají _ladění USB_ , které umožňuje připojení a přenos dat ze zařízení s Androidem do počítače. I když je tato funkce užitečná, zařízení není tak zabezpečené, pokud je připojené k počítači. Proto některé organizace vyžadují, abyste toto nastavení vypnuli.  
+
+## <a name="next-steps"></a>Další kroky  
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

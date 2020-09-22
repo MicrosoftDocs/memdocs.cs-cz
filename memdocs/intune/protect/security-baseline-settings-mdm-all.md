@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8410a72ffe5dcf09ad81429bc6817ac16f31582a
-ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
+ms.openlocfilehash: 0fe4c785ce8a7943f0555f8d9f696c183e823f32
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90848483"
+ms.locfileid: "91002609"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
 Zobrazte nastavení základní hodnoty zabezpečení MDM, které Microsoft Intune podporuje pro zařízení se systémem Windows 10 nebo novějším. Výchozí hodnoty pro nastavení v tomto směrném plánu reprezentují doporučenou konfiguraci pro příslušná zařízení. Výchozí hodnoty pro jednu základnu se nemusí shodovat s výchozími hodnotami z jiných standardních hodnot zabezpečení nebo z jiných verzí tohoto směrného plánu.
 
 - Další informace o použití standardních hodnot zabezpečení s Intune a postup upgradu základní verze v profilech standardních hodnot zabezpečení najdete v tématu [použití standardních hodnot zabezpečení](security-baselines.md).
-- Nejnovější základní verze je **směrný plán zabezpečení MDM za září 2020** .
+- Nejnovější základní verze je **směrný plán zabezpečení MDM pro 2020. srpna** .
 
 Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
 
@@ -38,7 +38,7 @@ Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
 
 ::: zone pivot="mdm-sept-2020"
 
-**Směrný plán zabezpečení MDM za září 2020**  
+**Směrný plán zabezpečení MDM pro 2020. srpna**  
 Tato verze standardních hodnot zabezpečení nahrazuje předchozí standardní hodnoty, což je *základní hodnota zabezpečení MDM pro květen 2019*. Profily, které se vytvořily před dostupností tohoto směrného plánu, se neaktualizují, aby odrážely nová nastavení nebo hodnoty.  I když nemůžete vytvořit nové profily založené na předchozí základní verzi, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě předchozí verze.
 
 Informace o tom, co se změnilo v této verzi směrného plánu z předchozí verze, najdete v tématu [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).
@@ -2118,7 +2118,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: ověřeno
 
-## <a name="search"></a>Search
+## <a name="search"></a>Hledat
 
 Další informace najdete v tématu [zásady CSP – hledání](/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.
 

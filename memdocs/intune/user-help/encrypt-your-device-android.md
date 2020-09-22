@@ -1,11 +1,11 @@
 ---
-title: Zašifrovat zařízení s Androidem pro Intune | Microsoft Docs
-description: Postup zapnutí šifrování zařízení s Androidem v případě potřeby službou Intune
+title: Šifrování zařízení s Androidem – Microsoft Intune | Microsoft Docs
+description: Zjistěte, jak v případě potřeby v Intune zapnout šifrování zařízení s Androidem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268e1ab9b76cc214b7e755763ada6a2bd09ed80e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 98950a6907db0ac6869b55ae26718a2919048154
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880580"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002643"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
-Šifrování zařízení chrání soubory a složky před neoprávněným přístupem v případě ztráty nebo odcizení zařízení. Data v zařízení jsou nepřístupná a nečitelná pro uživatele bez hesla. 
+Šifrování zařízení chrání soubory a složky před neoprávněným přístupem v případě ztráty nebo odcizení zařízení. Data jsou nepřístupná a nečitelná pro uživatele, kteří nemají heslo. 
 
 Než budete moct přistupovat do školních nebo pracovních prostředků, vaše organizace může vyžadovat:
 
@@ -41,12 +41,10 @@ Než budete moct přistupovat do školních nebo pracovních prostředků, vaše
 
 ## <a name="encrypt-device"></a>Šifrovat zařízení
 
-Pomocí těchto kroků Zašifrujte své zařízení. Vaše zařízení se může několikrát restartovat. 
-
-Název a umístění možnosti šifrování se budou lišit v závislosti na výrobci zařízení a verzi Androidu. 
+Pomocí těchto kroků Zašifrujte své zařízení. Vaše zařízení se může několikrát restartovat. Název a umístění možnosti šifrování se budou lišit v závislosti na výrobci zařízení a verzi Androidu. 
 
 1. Otevřete aplikaci **Nastavení**.
-2. Zadejte **zabezpečení** nebo **Zašifrujte** na panelu hledání aplikace a vyhledejte související nastavení.
+2. V panelu hledání zadejte **zabezpečení** nebo **Zašifrujte** , chcete-li najít související nastavení.  
 3. Klepněte na možnost k zašifrování zařízení. Postupujte podle pokynů na obrazovce.  
 4. Po zobrazení výzvy nastavte heslo zamykací obrazovky, kód PIN nebo jinou metodu ověřování (pokud to vaše organizace dovoluje). 
 5. Chcete-li znovu kontrolovat nastavení, otevřete Portál společnosti nebo Microsoft Intune aplikaci.
@@ -55,9 +53,9 @@ Název a umístění možnosti šifrování se budou lišit v závislosti na vý
 
 ## <a name="enable-secure-startup"></a>Povolit zabezpečené spuštění
 
-Vaše organizace může vyžadovat, abyste v rámci svých zásad šifrování povolili zabezpečené spouštění. Tato funkce dále chrání vaše zařízení tím, že vyžaduje, abyste před zahájením telefonu zadali heslo nebo PIN kód. Mnoho dalších možností ověřování se liší, ale bude se lišit podle toho, co vaše organizace povoluje. 
+Vaše organizace může vyžadovat, abyste povolili *Zabezpečené spouštění*. Zabezpečené spuštění chrání vaše zařízení tím, že při každém zapnutí zařízení vyžaduje heslo nebo kód PIN. V závislosti na tom, co vaše organizace povoluje, můžou být k dispozici další možnosti ověřování, které můžete použít. 
 
-Název a umístění možnosti zabezpečeného spuštění se budou lišit v závislosti na výrobci zařízení a verzi Androidu. V některých zařízeních se toto nastavení může volat jako **silná ochrana**. 
+Název a umístění možnosti zabezpečeného spuštění se budou lišit také v závislosti na výrobci zařízení a verzi Androidu. V některých zařízeních se toto nastavení nazývá **silná ochrana**. 
 
 1. Otevřete aplikaci **Nastavení**.
 2. Zadejte **zabezpečené spuštění** na panelu hledání aplikace.
@@ -69,9 +67,9 @@ Název a umístění možnosti zabezpečeného spuštění se budou lišit v zá
 
 
 ## <a name="set-startup-passcode"></a>Nastavit spouštěcí heslo   
-Když [zařízení zašifrujete](#encrypt-device) a [povolíte zabezpečené spouštění](#enable-secure-startup), budete VYZVÁNI k nastavení PIN kódu zařízení, hesla nebo jiné metody ověřování (pokud to vaše organizace dovoluje). Nejsou potřeba žádné další kroky. 
+Po zašifrování zařízení a zapnutí zabezpečeného spuštění se zobrazí výzva k nastavení kódu PIN, hesla nebo jiné metody ověřování (pokud to vaše organizace dovoluje). Konkurenční krok bude vyhovovat požadavku na spouštěcí heslo. 
 
-Chcete-li zvolit nebo změnit typ zamykací obrazovky:
+Chcete-li na zařízení nastavit zamykací obrazovku nebo změnit typ, který aktuálně používáte:  
 
 1. Otevřete aplikaci **Nastavení**.
 2. Na panelu hledání aplikace zadejte **Zámek obrazovky** .
