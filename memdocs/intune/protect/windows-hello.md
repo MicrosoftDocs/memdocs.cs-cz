@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 70c0418f02bd94a957967c72045be210dad56c78
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 64eab64259a2d2a6222275576df8fac9fced2b34
+ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914697"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91107447"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -118,6 +118,10 @@ Zbývající část tohoto článku se zaměřuje na vytvoření výchozích zá
    - **Povolení přihlášení telefonem**:
 
      Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný PIN kód pro Windows Hello pro firmy.
+
+   - **Použít bezpečnostní klíče pro přihlášení**:
+
+     Když je tato možnost nastavená na **Povolit**, poskytuje kapacitu pro vzdálené zapnutí nebo vypnutí bezpečnostních klíčů Windows Hello pro všechny počítače v organizaci zákazníka.
 
 ## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
 

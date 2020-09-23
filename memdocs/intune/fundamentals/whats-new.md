@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49f3bcd1fafac132771e966a8dc7bad8a823e194
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 0f169da16cec126dd160a32543a835fbb99db546
+ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91008392"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91107563"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -66,6 +66,14 @@ Podívejte se, co je nového v jednom týdnu v Microsoft Intune v [centru pro sp
 Využijte možnosti Configuration Manager funkce místního [spouštění skriptů](../../configmgr/apps/deploy-use/create-deploy-scripts.md) do centra pro správu Microsoft Endpoint Manager. Umožněte dalším osoby, jako je helpdesk, ke spouštění skriptů PowerShellu z cloudu na základě individuální Configuration Manager spravovaného zařízení v reálném čase. To poskytuje všechny tradiční výhody skriptů PowerShellu, které již byly definovány a schváleny správcem Configuration Manager k tomuto novému prostředí. Další informace najdete v tématu věnovaném [připojení tenanta: spuštění skriptů z centra pro správu](../../configmgr/tenant-attach/scripts.md).
 
 ### <a name="app-management"></a>Správa aplikací
+
+#### <a name="app-protection-policies-allow-administrators-to-configure-incoming-org-data-locations---4176693---"></a>Zásady ochrany aplikací umožňují správcům konfigurovat umístění příchozích dat organizace.<!-- 4176693 -->
+Nyní můžete určit, které důvěryhodné zdroje dat smějí být otevřeny do dokumentů organizace. Podobně jako u stávajících možností **Uložit kopie pro** zásady ochrany aplikací pro organizace můžete definovat, která umístění příchozích dat jsou důvěryhodná. Tato funkce se týká následujících nastavení zásad ochrany aplikací:
+- **Uložení kopií dat org**
+- **Otevřít data do organizačních dokumentů**
+- **Umožňuje uživatelům otevírat data z vybraných služeb.**
+
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **Zásady ochrany aplikací**  >  **vytvořit zásadu**. Aby bylo možné tuto funkci používat, musí aplikace spravované zásadou Intune implementovat podporu tohoto ovládacího prvku. Další informace najdete v [Nastavení zásad ochrany aplikací pro iOS](../apps/app-protection-policy-settings-ios.md) a [Nastavení zásad ochrany aplikací pro Android](../apps/app-protection-policy-settings-android.md).
 
 #### <a name="new-app-categories-to-target-app-protection-policies-more-easily---4802581----"></a>Nové kategorie aplikací pro snazší cílení zásad ochrany aplikací<!-- 4802581  -->
 S vydáním verze 2009 služby Intune jsme vylepšili uživatelské prostředí Microsoft Endpoint Manageru tím, že vytvoříte kategorie aplikací, které můžete použít k jednoduššímu a rychlému zacílení zásad ochrany aplikací. Tyto kategorie jsou **všechny veřejné aplikace**, aplikace **Microsoftu**a **základní aplikace Microsoftu**. Po vytvoření cílové zásady ochrany aplikací můžete vybrat **Zobrazit seznam aplikací, které budou cílené** na zobrazení seznamu aplikací, na které budou tyto zásady ovlivněny. Když se podporují nové aplikace, budeme tyto kategorie dynamicky aktualizovat, aby se tyto aplikace podle potřeby zahrnuly, a vaše zásady budou automaticky platit pro všechny aplikace ve vybrané kategorii. V případě potřeby můžete i nadále cílit na zásady pro jednotlivé aplikace. Další informace najdete v tématu [jak vytvořit a přiřadit zásady ochrany aplikací](../apps/app-protection-policies.md) a [vytvořit a nasadit zásady Windows Information Protection (NV) pomocí Intune](../apps/windows-information-protection-policy-create.md).
