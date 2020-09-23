@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2f584221643c82f07924d96f72fa01c4321b79
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 959aea0411f25f62857d1f7aaed902c2a8005c17
+ms.sourcegitcommit: 6e488937039e8437866d55f2f23e5944a4b35a35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91017705"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022364"
 ---
 # <a name="monitor-microsoft-tunnel"></a>Monitorování tunelu Microsoft
 
@@ -37,7 +37,7 @@ Ve verzi Preview zobrazuje stav pouze, zda je server připojen za posledních 5 
 
 K získání informací o serveru tunelu Microsoft použijte nástroj příkazového řádku **MST-CLI** . Tento soubor se přidá na server Linux při instalaci tunelu Microsoft. Nástroj je umístěný na adrese: **/usr/sbin/MST-CLI**.
 
-Další informace a příklady příkazového řádku najdete v tématu [nástroj příkazového řádku MST-CLI pro tunelové propojení Microsoft) (.. /Protect/Microsoft-Tunnel-reference.MD # MST-CLI-Command-line-nástroj-for-Microsoft-Tunnel)
+Další informace a příklady příkazového řádku najdete v tématu [Nástroj příkazového řádku MST-CLI pro tunelové propojení Microsoft](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway).
 
 ## <a name="next-steps"></a>Další kroky
 
