@@ -23,6 +23,8 @@
     - name: Ochrana soukromí a osobní údaje
       href: privacy-personal-data.md
       items:
+        - name: Volitelná diagnostická data v klientských aplikacích
+          href: client-apps-optional-data.md
         - name: Shromažďování dat
           href: privacy-data-collect.md
         - name: Ukládání a zpracovávání údajů
