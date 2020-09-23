@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b37eda7cb134230842205f986cea9f89545ec40a
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 687fd002f8635ed92887e259cc44f29d4f9f6b61
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90814725"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008222"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -337,7 +337,7 @@ Při práci s různými typy nastavení bude mít požadavek na verzi Intune SDK
 ## <a name="app-protection-experience-for-android-devices"></a>Prostředí ochrany aplikací pro zařízení s Androidem
 
 ### <a name="device-biometric-authentication"></a>Biometrické ověřování zařízení
-U zařízení s Androidem, která podporují biometrické ověřování, můžete koncovým uživatelům dovolit, aby používali otisk otisku prstu nebo obličeje v závislosti na tom, co zařízení s Androidem podporuje. Můžete nakonfigurovat, jestli se pro ověřování mají použít všechny typy biometriky, otisky prstů se budou přijímat, jinak se biometrika nebude přijímat. Všimněte si, že otisk prstu a obličeje je k dispozici jenom pro zařízení, která jsou vyráběná tak, aby podporovala tyto biometrické typy a používají správnou verzi Androidu. Pro otisk prstu se vyžaduje Android 6 a novější a pro odemknutí obličeje se vyžaduje Android 10 a vyšší.
+U zařízení s Androidem, která podporují biometrické ověřování, můžete koncovým uživatelům dovolit, aby používali otisk otisku prstu nebo obličeje v závislosti na tom, co zařízení s Androidem podporuje. Můžete nakonfigurovat, zda lze k ověřování použít všechny typy biometriky mimo otisk prstu. Všimněte si, že otisk prstu a obličeje je k dispozici jenom pro zařízení, která jsou vyráběná tak, aby podporovala tyto biometrické typy a používají správnou verzi Androidu. Pro otisk prstu se vyžaduje Android 6 a novější a pro odemknutí obličeje se vyžaduje Android 10 a vyšší.
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Portál společnosti aplikace a ochrana aplikací Intune
 Většina funkcí ochrany aplikací je integrovaná do aplikace Portál společnosti. Registrace zařízení se _nevyžaduje, i když_ je aplikace Portál společnosti vždycky povinná. Pro správu mobilních aplikací bez registrace (MAM-WE) potřebuje koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.

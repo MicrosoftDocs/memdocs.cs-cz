@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75de46da55f790ffada4477a281695820d5110c4
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: 49f3bcd1fafac132771e966a8dc7bad8a823e194
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002711"
+ms.locfileid: "91008392"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -202,8 +202,13 @@ Teď můžete přejmenovat spoluspravované zařízení, které je připojené k
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Zabezpečení zařízení
 
+#### <a name="microsoft-tunnel-gateway-vpn-solution-in-preview---7843124----"></a>Řešení VPN brány Microsoft Tunnel Gateway ve verzi Preview<!-- 7843124  -->
+Teď můžete nasadit [Microsoft Tunnel Gateway](../protect/microsoft-tunnel-overview.md) , který bude poskytovat vzdálený přístup k místním prostředkům na zařízeních s iOS a Androidem Enterprise (plně spravovaná firemní pracovní profil, pracovní profil).
+
+Tunelové propojení Microsoftu podporuje moderní ověřování pomocí sítě VPN pro jednotlivé aplikace a celé zařízení, dělení tunelového propojení a možnosti podmíněného přístupu.  Tunelové propojení může podporovat více serverů brány pro zajištění vysoké dostupnosti pro produkční připravenost.
+
 #### <a name="additional-biometric-authentication-support-for-android-devices---5706213----"></a>Další podpora biometrického ověřování pro zařízení s Androidem<!-- 5706213  -->
-Nová zařízení s Androidem využívají více různorodé sady biometrika než otisky prstů. Když výrobci OEM implementují podporu pro biometrika bez otisků prstů, koncoví uživatelé můžou využít tuto možnost pro zabezpečený přístup a lepší prostředí. S vydáním verze 2009 služby Intune můžete koncovým uživatelům dovolit, aby v závislosti na tom, co zařízení s Androidem podporuje, používali otisk prstu nebo odemknutí obličeje. Můžete nakonfigurovat, jestli se pro ověřování mají použít všechny typy biometriky, otisky prstů se budou přijímat, jinak se biometrika nebude přijímat. Další informace najdete v tématu [prostředí pro ochranu aplikací pro zařízení s Androidem](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
+Nová zařízení s Androidem využívají více různorodé sady biometrika než otisky prstů. Když výrobci OEM implementují podporu pro biometrika bez otisků prstů, koncoví uživatelé můžou využít tuto možnost pro zabezpečený přístup a lepší prostředí. S vydáním verze 2009 služby Intune můžete koncovým uživatelům dovolit, aby v závislosti na tom, co zařízení s Androidem podporuje, používali otisk prstu nebo odemknutí obličeje. Můžete nakonfigurovat, zda lze k ověřování použít všechny typy biometriky mimo otisk prstu. Další informace najdete v tématu [prostředí pro ochranu aplikací pro zařízení s Androidem](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
 
 #### <a name="new-details-in-the-endpoint-security-configuration-for-a-device---7745029-------"></a>Nové podrobnosti v konfiguraci zabezpečení koncového bodu pro zařízení<!-- 7745029     -->
 Teď si můžete zobrazit další podrobnosti o zařízeních jako součást *Konfigurace zabezpečení koncového bodu*zařízení. Když přejdete k podrobnostem, abyste si zobrazili podrobnosti o stavu zásad, které jste nasadili na zařízení, najdete následující:
@@ -256,7 +261,7 @@ Když konfigurujete profil *certifikátu SCEP* pro zařízení s iOS/IPadOS nebo
  
 Intune podporuje 4096 bitů pro následující platformy: 
 - iOS 14 a novější
-- macOS 11 a novější    
+- macOS 11 a novější  
  
 Informace o konfiguraci profilů certifikátů SCEP najdete v tématu [Vytvoření profilu certifikátu SCEP](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 

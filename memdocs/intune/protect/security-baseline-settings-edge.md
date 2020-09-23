@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ed235acefe62b7c432351273d1defe9db89f0f60
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914425"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008375"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -44,10 +44,21 @@ Zobrazení standardních nastavení webového prohlížeče Microsoft Edge, kter
 > [!NOTE]
 > Směrný plán Microsoft Edge pro říjen 2019 je v Public Preview.
 
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+**Směrný plán Microsoft Edge pro duben 2020 (Edge verze 80)**  
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
+
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"

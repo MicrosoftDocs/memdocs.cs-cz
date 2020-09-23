@@ -5,7 +5,7 @@ description: Zkontrolujte výchozí a dostupná nastavení pro různé verze sta
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fe4c785ce8a7943f0555f8d9f696c183e823f32
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: 5a043224036fd0cc8e5362e2166d278c4aa9006c
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002609"
+ms.locfileid: "91008324"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -32,25 +32,30 @@ Zobrazte nastavení základní hodnoty zabezpečení MDM, které Microsoft Intun
 - Další informace o použití standardních hodnot zabezpečení s Intune a postup upgradu základní verze v profilech standardních hodnot zabezpečení najdete v tématu [použití standardních hodnot zabezpečení](security-baselines.md).
 - Nejnovější základní verze je **směrný plán zabezpečení MDM pro 2020. srpna** .
 
-Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
-
-Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
-
 ::: zone pivot="mdm-sept-2020"
 
 **Směrný plán zabezpečení MDM pro 2020. srpna**  
-Tato verze standardních hodnot zabezpečení nahrazuje předchozí standardní hodnoty, což je *základní hodnota zabezpečení MDM pro květen 2019*. Profily, které se vytvořily před dostupností tohoto směrného plánu, se neaktualizují, aby odrážely nová nastavení nebo hodnoty.  I když nemůžete vytvořit nové profily založené na předchozí základní verzi, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě předchozí verze.
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
 
-Informace o tom, co se změnilo v této verzi směrného plánu z předchozí verze, najdete v tématu [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **Základní hodnota zabezpečení MDM pro květen 2019**:  
-> [!NOTE]
-> V červnu 2019 byla šablona *zabezpečení MDM pro květen 2019* vydaná jako obecně dostupná (není ve verzi Preview). Tato verze standardních hodnot zabezpečení nahrazuje předchozí standardní hodnoty *zabezpečení MDM pro 2018. října*.  Profily, které byly vytvořeny před dostupností směrného plánu květen 2019, se neaktualizují, aby odrážely nastavení a hodnoty, které jsou ve verzi květen 2019.  I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
 
-Informace o tom, co se změnilo v této verzi směrného plánu z předchozí verze, najdete v tématu [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -58,6 +63,10 @@ Informace o tom, co se změnilo v této verzi směrného plánu z předchozí ve
 **Preview – směrný plán zabezpečení MDM pro říjen 2018**:  
 > [!NOTE]
 > Toto je verze Preview směrného plánu zabezpečení MDM vydaná v říjnu od 2018. Tato verze Preview byla v červnu 2019 nahrazena vydáním *směrného plánu zabezpečení MDM pro šablonu květen 2019* , která je všeobecně dostupná (není ve verzi Preview). Profily, které byly vytvořeny před dostupností *směrného plánu zabezpečení MDM pro květen 2019* , se nebudou aktualizovat tak, aby odrážely nastavení a hodnoty, které jsou v směrném plánu zabezpečení MDM pro verzi květen 2019. I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.
+
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"

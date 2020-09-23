@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443820"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008171"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -36,17 +36,17 @@ Po [Přidání aplikace](apps-add.md) pro Microsoft Intune můžete aplikaci př
 
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
-| Parametr  | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
+| Možnost  | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
-| Přiřadit uživatelům | Ano | Ano |
-| Přiřadit zařízením | Ano | Ne |
-| Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací) | Ano | Ano |
-| Přiřadit aplikace jako K dispozici | Ano | Ano |
-| Přiřadit aplikace jako Povinné | Ano | Ne |
-| Odinstalovat aplikace | Ano | Ne |
-| Dostávat aktualizace aplikací z Intune | Ano | Ne |
-| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Ano | Ne |
-| Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Ano | Ano |
+| Přiřadit uživatelům | Yes | Yes |
+| Přiřadit zařízením | Yes | No |
+| Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací) | Yes | Yes |
+| Přiřadit aplikace jako K dispozici | Yes | Yes |
+| Přiřadit aplikace jako Povinné | Yes | No |
+| Odinstalovat aplikace | Yes | No |
+| Dostávat aktualizace aplikací z Intune | Yes | No |
+| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Yes | No |
+| Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Yes | Yes |
 
 > [!NOTE]
 > V současné době můžete k zařízením, která nejsou zaregistrovaná v Intune, přiřazovat aplikace pro iOS/iPadOS a Android (aplikace pro firmy i aplikace z obchodu pro nákup).
@@ -64,7 +64,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
    - **K dispozici pro zaregistrovaná zařízení**: přiřaďte aplikaci skupinám uživatelů, kteří můžou aplikaci instalovat z aplikace Portál společnosti nebo webu.
    - **K dispozici s registrací i bez ní**: Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Uživatelům musí být přiřazena licence Intune, viz [licence Intune](../fundamentals/licenses.md).
    - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy mohou mít další výzvy, aby koncový uživatel mohl potvrdit před zahájením instalace aplikace.
-   - **Odinstalace**: aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune tuto aplikaci do zařízení dřív nainstaloval pomocí stejného nasazení prostřednictvím "dostupného pro zaregistrovaná zařízení" nebo "povinného" přiřazení. Po nasazení nelze odebrat webové odkazy.
+   - **Odinstalace**: aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune tuto aplikaci do zařízení dřív nainstaloval pomocí stejného nasazení prostřednictvím "dostupného pro zaregistrovaná zařízení" nebo "povinného" přiřazení. 
 
      > [!NOTE]
      > **Jenom pro aplikace pro iOS/iPadOS**:
@@ -93,21 +93,21 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
-|Uživatel: Povinné|Uživatel: Odinstalace|Povinné|
-|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
+|Uživatel: Povinné|Uživatel: Odinstalace|Vyžadováno|
+|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalovat|
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
 |Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá K dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
 |Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
-|Zařízení: Povinné|Zařízení: Odinstalace|Povinné|
+|Zařízení: Povinné|Zařízení: Odinstalace|Vyžadováno|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
 |Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
-|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Povinné
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Vyžadováno
 |Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
 |Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portál společnosti, bude tato odinstalace dodržena.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
@@ -138,10 +138,10 @@ Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení 
 
 |Typ aplikace pro iOS | Výchozí nastavení pro možnost odinstalovat při odebrání zařízení |
 |--------------------|----------------|
-| Obchodní aplikace | Ano |
-| Aplikace pro Store | Ne |
-| Aplikace VPP | Ne |
-| Integrovaná aplikace | Ne |
+| Obchodní aplikace | Yes |
+| Aplikace pro Store | No |
+| Aplikace VPP | No |
+| Integrovaná aplikace | No |
 
 >[!NOTE]
 >**Typy přiřazení "dostupné":** Pokud aktualizujete toto nastavení pro skupiny "k dispozici pro zaregistrovaná zařízení" nebo "k dispozici v rámci nebo bez registrace", uživatelé, kteří už mají spravovanou aplikaci, nebudou mít aktualizované nastavení, dokud zařízení nesynchronizují s Intune a znovu nenainstaluje aplikaci. 

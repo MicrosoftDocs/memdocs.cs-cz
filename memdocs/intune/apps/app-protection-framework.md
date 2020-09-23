@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a6ca36dab6e0dffb1e2e9a2e968d271e58d33ab4
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913371"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008136"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad APP (App Protection Policies) 
 
@@ -49,7 +49,7 @@ Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací násled
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Kontrola kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Preview  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | –  | 7 dní do několika týdnů, po verzi Preview  |
+| Produkce  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | Není k dispozici  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele.
 
@@ -120,7 +120,8 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 | Přepsat biometriku místo kódu PIN pro přístup  | Vyžadovat  | iOS/iPadOS, Android  |   |
 | Časový limit (minuty aktivity)  | 720  | iOS/iPadOS, Android  |   |
 | ID obličeje místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS  |   |
-| Resetovat PIN kód po počtu dní  | Ne  | iOS/iPadOS, Android  |   |
+| Biometrika místo kódu PIN pro přístup  | Povolit  | Android  |   |
+| Resetovat PIN kód po počtu dní  | No  | iOS/iPadOS, Android  |   |
 | PIN kód aplikace, když je nastavený PIN kód zařízení  | Vyžadovat  | iOS/iPadOS, Android  | Pokud je zařízení zaregistrované v Intune, můžou správci zvážit nastavení "Nepožadováno", pokud vynucuje silný PIN kód zařízení pomocí zásad dodržování předpisů zařízením.  |
 | Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Nevyžadováno  | iOS/iPadOS, Android  |   |
 | Znovu ověřit požadavky na přístup po (minuty neaktivity)  | 30  | iOS/iPadOS, Android  |   |
@@ -179,6 +180,8 @@ Nastavení zásad vyžadované v úrovni 3 zahrnuje všechna nastavení zásad d
 | Přenos dat |       Přenést telekomunikační data do  |          Konkrétní aplikace pro telefonování |          iOS/iPadOS  |  |
 | Přenos dat |       Schéma adresy URL aplikace vytáčení  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | V systému iOS/iPadOS musí být tato hodnota nahrazena schématem adresy URL vlastní používané aplikace. Pokud není schéma adresy URL známé, obraťte se na vývojáře aplikace, kde najdete další informace. Další informace o schématech URL najdete v tématu [Definování vlastního schématu adresy URL pro vaši aplikaci](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Přenos dat |       Příjem dat z jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android         |  |
+| Přenos dat |       Otevřít data do organizačních dokumentů  |          Blok  |          iOS/iPadOS, Android         |  |
+| Přenos dat |       Umožňuje uživatelům otevírat data z vybraných služeb.  |          OneDrive pro firmy, SharePoint  |          iOS/iPadOS, Android         |  |
 | Přenos dat |       Klávesnice třetích stran  |          Blok  |          iOS/iPadOS        | V systému iOS/iPadOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
 | Přenos dat |       Schválené klávesnice  |          Vyžadovat  |          Android        |  |
 | Přenos dat |       Vybrat klávesnice ke schválení  |          *Přidat nebo odebrat klávesnice*  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
@@ -190,7 +193,7 @@ Nastavení zásad vyžadované v úrovni 3 zahrnuje všechna nastavení zásad d
 |-----------------------------------------------------------|--------------------|---------------------------------|
 |       Jednoduchý PIN kód  |          Blok  |          iOS/iPadOS, Android  |
 |       Vyberte minimální délku PIN kódu.  |          6  |          iOS/iPadOS, Android  |
-|       Resetovat PIN kód po počtu dní  |          Ano  |          iOS/iPadOS, Android  |
+|       Resetovat PIN kód po počtu dní  |          Yes  |          iOS/iPadOS, Android  |
 |       Počet dní  |          365  |          iOS/iPadOS, Android  |
 
 #### <a name="conditional-launch"></a>Podmíněné spouštění

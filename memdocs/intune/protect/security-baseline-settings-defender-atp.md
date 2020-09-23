@@ -5,7 +5,7 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: c6985dfd419932bf93dcb10cae1cb1d530b8c563
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: a91a15bde690840f81a6895baf3724fcde173003
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90814949"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008357"
 ---
 <!-- Pivots in use: 
 
@@ -56,17 +56,43 @@ Zobrazit základní nastavení nástroje Microsoft Defender Advanced Threat Prot
 
 ::: zone pivot="atp-sept-2020"
 
-Podrobnosti v tomto článku se týkají verze 54 standardních hodnot ATP v programu Microsoft Defender, které byly vydány 21. září 2020. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+**Směrné plány ATP programu Microsoft Defender pro září 2020 – verze 5**  
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
+
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="atp-april-2020"
 
-Podrobnosti v tomto článku se týkají verze 4 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 21. dubna 2020. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+**Směrné plány ATP v programu Microsoft Defender pro 2020. dubna verze 4**  
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
+
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-Podrobnosti v tomto článku se týkají verze 3 standardních hodnot ATP v programu Microsoft Defender, který byl vydán 1. března 2020. Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán.
+**Směrné plány ATP v programu Microsoft Defender pro březen 2020 – verze 3**  
+Tato verze standardních hodnot zabezpečení nahrazuje předchozí verze. Profily, které byly vytvořeny před dostupností této základní verze:
+
+
+- Jsou nyní jen pro čtení. Tyto profily můžete nadále používat, ale nemůžete je upravovat, abyste změnili jejich konfiguraci.
+- Dá se aktualizovat na nejnovější verzi. Po aktualizaci aktuální základní verze můžete upravit profil a upravit nastavení.
+
+Chcete-li zjistit, co se změnilo v této verzi směrného plánu z předchozích verzí, použijte akci [Porovnat směrné plány](../protect/security-baselines.md#compare-baseline-versions) , která je k dispozici při prohlížení podokna *verze* pro tento směrný plán. Nezapomeňte vybrat verzi směrného plánu, kterou chcete zobrazit.
+
+Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovější verzi tohoto směrného plánu, přečtěte si téma [Změna základní verze profilu](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"

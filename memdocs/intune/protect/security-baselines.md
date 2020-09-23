@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 570d848f624b5558d84177b66751f55c0a0ab4ae
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: f99adfc51ce680cb604281cd74c3f91cee409885
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002728"
+ms.locfileid: "91008409"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -53,7 +53,7 @@ Hlavní [směry zabezpečení Windows](/windows/security/threat-protection/windo
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu.
 
 - **Základní hodnoty zabezpečení MDM**
-  - [Směrný plán zabezpečení MDM za září 2019](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+  - [Směrný plán zabezpečení MDM pro 2020. srpna](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
@@ -72,7 +72,7 @@ Následující instance standardních hodnot zabezpečení jsou k dispozici pro 
 
 Můžete dál používat a upravovat profily, které jste předtím vytvořili na základě šablony verze Preview, a to i v případě, že tato šablona Preview už není dostupná pro vytváření nových profilů.
 
-Až budete připraveni přejít na novější verzi používaného směrného plánu, přečtěte si téma [Změna základní verze profilu](#change-the-baseline-version-for-a-profile) v tomto článku. 
+Až budete připraveni přejít na novější verzi používaného směrného plánu, přečtěte si téma [Změna základní verze profilu](#change-the-baseline-version-for-a-profile) v tomto článku.
 
 ## <a name="about-baseline-versions-and-instances"></a>Základní verze a instance
 
@@ -171,23 +171,48 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
 
-Můžete změnit verzi základní instance, která se používá s profilem.  Když změníte verzi, vyberete dostupnou instanci stejného směrného plánu. Nemůžete měnit mezi dvěma různými typy standardních hodnot, jako je například změna profilu z použití směrného plánu pro ATP v programu Defender na používání standardních hodnot zabezpečení MDM.
+Po vydání nové verze pro směrný plán Naplánujte aktualizaci stávajících profilů na novou verzi:
 
-Když nakonfigurujete změnu základní verze, můžete si stáhnout soubor CSV, který obsahuje seznam změn mezi dvěma zahrnutými základními verzemi. Můžete také zvolit, že chcete zachovat všechna vlastní nastavení z původní základní verze, nebo implementovat novou verzi pomocí všech výchozích hodnot. Při změně verze směrného plánu pro profil nemáte možnost provádět změny v individuálním nastavení.
+- Stávající profily se automaticky neupgradují na nové verze.
+- Základní profily, které nepoužívají novou verzi, jsou jen pro čtení. Můžete pokračovat v používání profilů, které používají starší verzi směrného plánu, ale nebudete je moci upravovat, dokud nebudou aktualizovány na nejnovější základní verzi.  
 
-Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí na přiřazené skupiny.
+Před aktualizací vašich živých profilů doporučujeme [otestovat aktualizaci verze](#test-the-conversion-and-updated-baseline) na kopii stávajících profilů.
 
-**Během převodu**:
+Když změníte verzi profilu:
 
-- Nová nastavení, která neexistovala v původní verzi, kterou jste použili, se přidají a nastaví tak, aby používala výchozí hodnoty.
+- Vyberete poslední instanci stejného směrného plánu. Nemůžete měnit mezi dvěma různými typy standardních hodnot, jako je například změna profilu z použití směrného plánu pro ATP v programu Defender na používání standardních hodnot zabezpečení MDM.
+- Máte možnost stáhnout soubor CSV, který obsahuje seznam změn mezi těmito dvěma základními verzemi.
+- Musíte zvolit, jak se má profil aktualizovat:
+  - Můžete zachovat všechna vlastní nastavení z původní základní verze.
+  - Můžete použít výchozí hodnoty pro všechna nastavení v nové základní verzi.
+
+  V profilu není během aktualizace možnost měnit pouze některá nastavení.
+
+Během převodu:
+
+- Přidala se nová nastavení, která nepoužívala starší verze. Jakékoli nové nastavení z nové verze bude používat výchozí hodnoty.
 
 - Nastavení, která nejsou ve vybrané verzi nového směrného plánu, se odeberou a už se tímto profilem standardních hodnot zabezpečení neuplatní.
 
   Pokud se nastavení už nespravuje pomocí směrného plánu, toto nastavení se na zařízení neresetuje. Místo toho zůstane nastavení v zařízení nastavené na poslední konfiguraci, dokud jiný proces nespravuje nastavení, aby ho změnil. Příklady procesů, které mohou změnit nastavení po zastavení správy, zahrnují jiný základní profil, nastavení zásad skupiny nebo ruční konfiguraci provedenou na zařízení.
 
+Po převodu na novou základní verzi je dokončena:
+
+- Směrný plán se hned znovu nasadí do přiřazených skupin.
+- Můžete upravit směrný plán a změnit jednotlivá nastavení.
+
+#### <a name="test-the-conversion-and-updated-baseline"></a>Testování převodu a aktualizovaného směrného plánu
+
+Než aktualizujete základní profil na novou verzi, vytvořte jeho kopii, abyste mohli otestovat novou verzi profilu na skupinu zařízení. Další informace najdete v části [Duplikace standardních hodnot zabezpečení](#duplicate-a-security-baseline) dále v tomto článku.
+
+- Při vytváření kopie nejsou zahrnutá přiřazení skupin. To znamená, že se vaše základní kopie nebude nasazovat do žádného zařízení v době, kdy kopii vytvoříte, nebo v době, kdy ji aktualizujete na novou verzi.
+- Až profil aktualizujete na nejnovější verzi, můžete ho upravit. Aktualizovanou kopii můžete přiřadit skupině zařízení a upravit ji tak, aby se v profilu projevily změny v jednotlivých nastaveních.
+
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+Před aktualizací verze profilu, který je přiřazený skupinám, [otestujte aktualizaci verze](#test-the-conversion-and-updated-baseline) na kopii profilu, abyste pak mohli ověřit nové nastavení standardních hodnot na testovací skupině zařízení.
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vyberte **Endpoint security**možnost  >  **základní hodnoty zabezpečení**Endpoint Security a potom vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
 

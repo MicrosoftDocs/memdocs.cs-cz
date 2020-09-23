@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
-ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
+ms.openlocfilehash: 2d6de0d9033e7eec4a3854053ef24cae4b065ec5
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039393"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008205"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -35,9 +35,9 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.12.6 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
+- Budete potřebovat Mac OS počítač s nainstalovaným Xcode 11 nebo novějším.
 
-- Vaše aplikace musí být zaměřená na iOS 11 nebo vyšší.
+- Vaše aplikace musí být zaměřená na iOS 12 nebo vyšší.
 
 - Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
 
@@ -45,7 +45,7 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 ## <a name="whats-in-the-sdk-repository"></a>Co je v úložišti SDK
 
-Následující soubory jsou relevantní pro aplikace/rozšíření, které neobsahují žádný kód SWIFT nebo jsou kompilovány s verzí Xcode před 10,2:
+Následující soubory jsou relevantní pro aplikace a rozšíření, která neobsahují kód SWIFT:
 
 * **IntuneMAM.framework**: Model Intune App SDK. Doporučujeme propojit toto rozhraní s vaší aplikací nebo rozšířeními a povolit správu klientských aplikací Intune. Někteří vývojáři ale mohou preferovat výhody výkonu statické knihovny. Podívejte se na následující.
 
@@ -53,7 +53,7 @@ Následující soubory jsou relevantní pro aplikace/rozšíření, které neobs
 
 * **IntuneMAMResources.** Resource: sada prostředků obsahující prostředky, na kterých SDK spoléhá. Sada prostředků je nutná jenom pro aplikace, které integrují statickou knihovnu (libIntuneMAM. a).
 
-Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahují kód SWIFT a jsou kompilovány pomocí Xcode 10.2 +:
+Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahují kód SWIFT:
 
 * **IntuneMAMSwift. Framework**: architektura SWIFT sady Intune App SDK. Toto rozhraní obsahuje všechny hlavičky rozhraní API, které vaše aplikace bude volat. Pokud chcete povolit správu klientských aplikací Intune, propojte tuto architekturu s aplikací nebo rozšířeními.
 
@@ -101,14 +101,14 @@ Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti spr
 
 Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
-1. **Možnost 1 – rozhraní (doporučeno)**: Pokud používáte Xcode 10.2 + a vaše aplikace/rozšíření obsahuje kód SWIFT, odkaz `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` cíl: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do seznamu **vložených binárních souborů** cíle projektu.
+1. **Možnost 1 – rozhraní (doporučeno)**: Pokud vaše aplikace nebo rozšíření obsahuje kód SWIFT, odkaz `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` cíl: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
     V opačném případě odkaz `IntuneMAM.framework` na cíl: Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
    > [!NOTE]
    > Pokud tuto architekturu použijete, nezapomeňte z univerzální architektury před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#submit-your-app-to-the-app-store), kde najdete další podrobnosti.
 
-   **Možnost 2 – Statická knihovna**: Tato možnost je k dispozici pouze pro aplikace a rozšíření, které neobsahují žádný kód SWIFT nebo byly sestaveny pomocí Xcode < 10,2. Připojte se ke `libIntuneMAM.a` knihovně. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
+   **Možnost 2 – Statická knihovna**: Tato možnost je dostupná jenom pro aplikace a rozšíření, které neobsahují žádný kód SWIFT. Připojte se ke `libIntuneMAM.a` knihovně. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
     ![Intune App SDK iOS: propojené architektury a knihovny](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -139,7 +139,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -158,7 +158,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -235,7 +235,7 @@ Jak už jsme uvedli, sada Intune App SDK používá pro své scénáře ověřov
 
 ### <a name="special-considerations-when-using-msal"></a>Zvláštní důležité důvody při použití MSAL 
 
-1. **Zkontrolujte si WebView** – doporučujeme, aby aplikace nepoužívaly SFSafariViewController, SFAuthSession nebo ASWebAuthSession jako své WebView pro všechny operace MSAL pro ověřování iniciované aplikacemi. Pokud z nějakého důvodu vaše aplikace musí použít jedno z těchto webzobrazení pro všechny interaktivní operace ověřování MSAL, pak musí být také nastavené `SafariViewControllerBlockedOverride` na `true` `IntuneMAMSettings` slovník v souboru info. plist aplikace. Upozornění: Tato akce vypne SafariViewController zavěšení služby Intune, aby umožnila relaci ověřování. Tím se riziková data nevrátí jinde v aplikaci, pokud aplikace používá SafariViewController k zobrazení podnikových dat, takže by aplikace neměla v žádném z těchto typů WebView zobrazovat podniková data.
+1. **Zkontrolujte si WebView** – doporučujeme, aby aplikace nepoužívaly SFSafariViewController, SFAuththenticationSession nebo ASWebAuthenticationSession jako své WebView pro všechny operace MSAL pro ověřování iniciované aplikacemi. Ve výchozím nastavení MSAL používá ASWebAuthenticationSession, takže vývojáři aplikací by měli [explicitně nastavit typ WebView](https://docs.microsoft.com/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request). Pokud z nějakého důvodu musí vaše aplikace používat typ WebView jiný než WKWebView pro jakékoli interaktivní operace ověřování MSAL, pak musí být také nastavené `SafariViewControllerBlockedOverride` na `true` `IntuneMAMSettings` slovník v souboru info. plist aplikace. Upozornění: Tato akce vypne SafariViewController zavěšení služby Intune, aby umožnila relaci ověřování. Tím se riziková data nevrátí jinde v aplikaci, pokud aplikace používá SafariViewController k zobrazení podnikových dat, takže by aplikace neměla v žádném z těchto typů WebView zobrazovat podniková data.
 2. **Propojení ADAL a MSAL** – vývojáři musí souhlasit, pokud chtějí v tomto scénáři Intune upřednostnit MSAL přes ADAL. Ve výchozím nastavení Intune bude upřednostňovat podporované verze ADAL pro podporované verze MSAL, pokud jsou oba propojeny za běhu. Intune bude upřednostňovat jenom podporovanou verzi MSAL jenom v případě, že v době první operace ověřování Intune `IntuneMAMUseMSALOnNextLaunch` je `true` v `NSUserDefaults` . Pokud `IntuneMAMUseMSALOnNextLaunch` je `false` nebo není nastavené, Intune se vrátí k výchozímu chování. Jak název navrhuje, změna se projeví `IntuneMAMUseMSALOnNextLaunch` při příštím spuštění.
 
 
@@ -557,7 +557,7 @@ Od verze 8.0.2 může sada Intune App SDK filtrovat akce `UIActivityViewControll
 
 Při sdílení dokumentů přes `UIActivityViewController` a `UIDocumentInteractionController` iOS se zobrazí akce kopírovat do pro každou aplikaci, která podporuje otevření sdíleného dokumentu. Aplikace deklarují podporované typů dokumentů prostřednictvím nastavení `CFBundleDocumentTypes` ve svém souboru Info.plist. Pokud zásady zakazují sdílení s nespravovanými aplikacemi, nebude už tento typ sdílení k dispozici. Místo toho bude potřeba přidat do aplikace rozšíření akce, které se nevztahuje k uživatelskému rozhraní, a propojit ho se sadou Intune App SDK. Rozšíření akce je jenom zástupná procedura. Sada SDK implementuje chování sdílení souborů. Postupujte následovně:
 
-1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Například:
+1. Vaše aplikace musí mít alespoň jednu schemeURL definovanou v souboru info. plist `CFBundleURLTypes` společně se svým `-intunemam` protějškem. Příklad:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>

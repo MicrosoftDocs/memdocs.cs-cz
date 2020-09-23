@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268ef3b9931c86a73ccf4e681240e4d2333c8026
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 01e802ba551321853ca9367ff8e1d9cbe67b1819
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689391"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008103"
 ---
 # <a name="troubleshoot-windows-10-device-access"></a>Řešení potíží s přístupem k zařízení s Windows 10
 Tento článek popisuje, jak vyřešit problémy s přístupem k zaregistrovanému zařízení s Windows 10. 
@@ -34,7 +34,7 @@ Tento článek popisuje, jak vyřešit problémy s přístupem k zaregistrované
 Pro přístup k pracovním nebo školním prostředkům se vyžaduje připojení k síti Wi-Fi. Ověřte, zda jste připojeni k síti Wi-Fi, a pak se pokuste o přístup k prostředkům znovu.  
 
 ## <a name="add-work-or-school-account-in-settings-app"></a>Přidat pracovní nebo školní účet v aplikaci nastavení  
-Tyto kroky můžete použít k registraci zařízení. Pokud se ale váš účet v aplikaci **Nastavení** nezobrazuje, mnoho toho je potřeba provést znovu.  
+Tyto kroky můžete použít k registraci zařízení. Pokud se ale váš účet v aplikaci **Nastavení** nezobrazuje, možná budete muset provést tyto kroky znovu.  
 
 1. Otevřete aplikaci **Nastavení**. 
 2. Vyberte **Účty**.
@@ -68,6 +68,13 @@ Pokud vidíte svůj pracovní nebo školní účet uvedený v aplikaci nastaven�
 1. Na panelu nástrojů nebo nastavení zařízení vyberte ikonu zeměkoule **stav sítě** .
 2. Vyberte síť Wi-Fi > **připojit**.  
 3. Zkuste svůj účet znovu připojit.  
+
+### <a name="your-device-is-already-being-managed-by-an-organization"></a>Vaše zařízení už spravuje organizace.  
+
+**Příčina**: vaše zařízení už je zaregistrované v Intune nebo jiném poskytovateli správy mobilních zařízení (MDM).    
+
+#### <a name="resolution"></a>Řešení  
+Obraťte se na pracovníky podpory IT a zjistěte, jak budete chtít pokračovat.    
 
 
 ## <a name="next-steps"></a>Další kroky  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ef364647ee007027ea709a7f84004063618155f7
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820506"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008154"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -50,7 +50,7 @@ Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licenc
 |------- | -----------------| ---------------|
 | Přihlášení do App Storu | Nepožadováno. | Každý koncový uživatel musí při zobrazení výzvy k přihlášení do App Storu použít jedinečné Apple ID. |
 | Konfigurace zařízení blokující přístup k obchodu s aplikacemi | Aplikace se dají nainstalovat a aktualizovat pomocí Portál společnosti. | Pozvánka k připojení k programu Apple VPP vyžaduje přístup k App Storu. Pokud jste nastavili zásadu pro zakázání App Storu, Licencování uživatelů pro aplikace VPP nebude fungovat. |
-| Automatická aktualizace aplikace | Jak je nakonfiguroval správce Intune v nastavení tokenu Apple VPP.<p>Pokud je typ přiřazení dostupný pro zaregistrovaná zařízení, můžete z Portál společnosti nainstalovat taky dostupné aktualizace aplikací, a to tak, že na stránce podrobností aplikace vyberete akci **aktualizovat** . | Jak je nakonfigurované koncovým uživatelem v nastavení osobního obchodu s aplikacemi. Tuto funkci nemůže spravovat správce Intune. |
+| Automatická aktualizace aplikace | Jak je nakonfiguroval správce Intune v nastavení tokenu Apple VPP.<p>Pokud je typ přiřazení dostupný pro zaregistrovaná zařízení, můžete z Portál společnosti nainstalovat taky dostupné aktualizace aplikací, a to tak, že na stránce podrobností aplikace vyberete akci **aktualizovat** . | Jak je nakonfiguroval správce Intune v nastavení tokenu Apple VPP.<p>Pokud je typ přiřazení dostupný pro zaregistrovaná zařízení, můžete z Portál společnosti nainstalovat taky dostupné aktualizace aplikací, a to tak, že na stránce podrobností aplikace vyberete akci **aktualizovat** . |
 | Zápis uživatele | Nepodporováno | Podporováno pomocí spravovaných Apple ID. |
 | Knihy | Nepodporováno | Podporuje se. |
 | Používané licence | 1 licence na zařízení Licence je přidružená k zařízení. | 1 licence pro až 5 zařízení, která používají stejné osobní Apple ID. Licence je přidružena k uživateli.<p>Koncový uživatel přidružený k osobnímu Apple ID a spravovanému Apple ID v Intune spotřebovává 2 licence aplikací. |
@@ -64,7 +64,7 @@ Můžete zakoupit a distribuovat veřejné i soukromé aplikace pomocí nástroj
 - **Aplikace pro Store:** Pomocí Apple Business Manageru můžou správci obsahu koupit bezplatné i placené aplikace, které jsou k dispozici v obchodě s aplikacemi.
 - **Vlastní aplikace:** Pomocí Apple Business Manageru můžou správci obsahu taky koupit vlastní aplikace, které jsou pro vaši organizaci k dispozici soukromě. Tyto aplikace jsou přizpůsobené konkrétním potřebám vaší organizace vývojářům, se kterými přímo pracujete. Přečtěte si další informace o [tom, jak distribuovat vlastní aplikace](https://developer.apple.com/business/custom-apps/).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Účet [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/) pro vaši organizaci. 
 - Zakoupené licence aplikace přiřazené k jedné nebo více tokenům umístění. 
 - Byly staženy tokeny umístění. 

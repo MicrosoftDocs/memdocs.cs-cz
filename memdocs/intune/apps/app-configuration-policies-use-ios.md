@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8480ec3f7d83ad5819e21ad34b9dfbc67f38999
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 843a6d36fa736485494dfb891fed31c5f3f7b96f
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907336"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008239"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -116,9 +116,13 @@ Jako správce Microsoft Intune můžete určit, které pracovní nebo školní �
    > [!NOTE]
    > Následující aplikace zpracovávají výše uvedenou konfiguraci aplikace a povolují jenom účty organizace:
    > - Edge pro iOS (44.8.7 a novější)
+   > - Office, Word, Excel, PowerPoint pro iOS (2,41 a novější)
    > - OneDrive pro iOS (10,34 a novější)
+   > - OneNote pro iOS (2,41 a novější)
    > - Outlook pro iOS (2.99.0 a novější)
    > - Týmy pro iOS (2.0.15 a novější)
+   > - Office, Word, Excel, PowerPoint pro iOS (2,41 a novější)
+   
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 

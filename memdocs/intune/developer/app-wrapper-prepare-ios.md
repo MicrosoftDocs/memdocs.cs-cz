@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 0a171ff37485a64e730fca80839d2f71457f1021
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405915"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008018"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -38,13 +38,13 @@ Než nástroj App Wrapping Tool spustíte, musíte splnit některé obecné pož
 
 * Stáhněte si nástroj [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) z GitHubu.
 
-* Potřebujete počítač s macOS, na kterém běží OS X 10.8.5 nebo novější a je na něm nainstalovaná sada nástrojů Xcode verze 9 nebo novější.
+* Počítač s macOS, na kterém je nainstalovaná sada nástrojů Xcode verze 11 nebo novější.
 
 * Vstupní aplikaci pro iOS musí vyvinout a podepsat vaše společnost nebo nezávislý výrobce softwaru (ISV).
 
   * Soubor vstupní aplikace musí mít příponu **.ipa** nebo **.app**.
 
-  * Vstupní aplikace musí být zkompilována pro iOS 11 nebo novější.
+  * Vstupní aplikace musí být zkompilována pro iOS 12 nebo novější.
 
   * Vstupní aplikace nemůže být zašifrovaná.
 
@@ -194,7 +194,7 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 |Vlastnost|Jak ji použít|
 |---------------|--------------------------------|
 |**-i**|`<Path of the input native iOS application file>`. Název souboru musí končit na .app nebo .ipa. |
-|**-o**|`<Path of the wrapped output application>` |
+|**– o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Zobrazí podrobné informace o použití dostupných vlastností příkazového řádku nástroje App Wrapping. |
@@ -203,7 +203,7 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 |**– ar**|(Volitelné) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor URI přesměrování konfigurovaný v registraci vaší aplikace. Obvykle by to byl protokol adresy URL aplikace, kterou Microsoft Authenticator aplikace vrátila po zprostředkované ověřování. |
 |**-v**| (Nepovinná) Zobrazí v konzole podrobné zprávy. Tento příznak doporučujeme používat k ladění všech chyb. |
 |**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další podrobnosti najdete v tématu [Nastavení nároků aplikace](#setting-app-entitlements) .|
-|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další podrobnosti najdete v tématu [Nastavení nároků aplikace](#setting-app-entitlements) . |
+|**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další podrobnosti najdete v tématu  [Nastavení nároků aplikace](#setting-app-entitlements) . |
 |**-x**| (Nepovinná) `<An array of paths to extension provisioning profiles>` Tuto vlastnost použijte v případě, že vaše aplikace potřebuje zřizovací profily rozšíření.|
 |**– b**|(Nepovinná) Pokud chcete, aby měla zabalená výstupní aplikace stejnou verzi balíčku jako vstupní aplikace, použijte vlastnost -b bez argumentu (nedoporučuje se to). <br/><br/> Když chcete, aby měla zabalená aplikace vlastní verzi balíčku (CFBundleVersion), použijte vlastnost `-b <custom bundle version>`. Pokud se rozhodnete zadat vlastní CFBundleVersion, je vhodné zvýšit CFBundleVersion nativní aplikace o nejmenší významnou součást, například 1.0.0-> 1.0.1. |
 |**– Citrix**|Volitelné Zahrňte sadu Citrix XenMobile App SDK (variantu jenom sítě). Abyste mohli použít tuto možnost, musíte mít nainstalovanou [sadu Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) . |
@@ -319,7 +319,7 @@ Aby bylo možné zaručit plnou funkčnost nástroje App Wrapping Tool pro iOS, 
 |---------------|-----------|
 |Profil pro zřizování iOS|Zkontrolujte platnost zřizovacího profilu, než ho zahrnete. Při zpracování aplikace pro iOS nástroj App Wrapping nekontroluje, jestli vypršela platnost zřizovacího profilu. Když je zadaný profil zřizování s ukončenou platností, bude nástroj pro zabalení aplikace zahrnovat tento profil a vy nepoznáte, jestli existuje problém, dokud neselže instalace aplikace na zařízení s iOSem.|
 |Podpisový certifikát iOS|Před zadáním podpisového certifikátu zkontrolujte jeho platnost. Nástroj při zpracování aplikací pro iOS nekontroluje, jestli nevypršela platnost certifikátu. Pokud je zadaný hash pro prošlý certifikát, nástroj zpracuje a podepíše aplikaci, ale nenainstaluje ji na zařízení.<br /><br />Zkontrolujte, jestli se certifikát dodaný k podpisu zabalené aplikace shoduje se zřizovacím profilem. Nástroj neověřuje, jestli pro certifikát poskytnutý k podepsání zabalené aplikace existuje shoda ve zřizovacím profilu.|
-|Ověřování|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
+|Authentication|Aby šifrování fungovalo, musí mít zařízení PIN. Když se uživatel zařízení, do kterého jste nasadili zabalenou aplikaci, dotkne stavového řádku, musí se znovu přihlásit přes svůj pracovní nebo školní účet. Podle výchozí zásady zabalené aplikace probíhá *ověřování při opakovaném spuštění*. V iOSu se každé externí oznámení (třeba při telefonním hovoru) zpracuje tak, že se aplikace ukončí a potom znovu spustí.
 
 ## <a name="setting-app-entitlements"></a>Nastavení oprávnění aplikace
 
@@ -327,7 +327,7 @@ Před zabalením aplikace můžete udělit *[nárokům](https://developer.apple.
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Podporované schopnosti nástroje App Wrapping pro iOS
 
-|Schopnost|Popis|Doporučené pokyny|
+|Schopnost|Description|Doporučené pokyny|
 |--------------|---------------|------------------------|
 |Skupiny aplikací|Ve skupinách aplikací můžete více aplikacím povolit přístup ke sdíleným kontejnerům a povolit mezi aplikacemi další komunikaci na úrovni procesů.<br /><br />Pokud chcete povolit skupiny aplikací, otevřete podokno **Schopnosti** a v části **Skupiny aplikací** klikněte na **ZAPNUTO**. Můžete přidat nové skupiny aplikací nebo vybrat stávající.|U skupin aplikací používejte zpětný zápis DNS:<br /><br />*group.com.companyName.AppGroup*|
 |Režimy pozadí|Pokud povolíte režimy pozadí, může vaše aplikace pro iOS běžet dál na pozadí.||
