@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a043224036fd0cc8e5362e2166d278c4aa9006c
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 2cbaeed40bb5f39401e1b311bb2ee48bf8818b67
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91008324"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134947"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -69,7 +69,7 @@ Chcete-li aktualizovat profil standardních hodnot zabezpečení na nejnovějš�
 
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="above-lock"></a>Nad zámkem
 
@@ -82,7 +82,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Abo
   **Výchozí**: Ano
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 - **Hlasové aktivace aplikací z uzamčené obrazovky**:  
   **Výchozí**: zakázáno
@@ -411,8 +411,8 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   Když *nakonfigurujete systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat *seznam pro zpřísněnou cestu UNC*.
 
-  - **Seznam cest pro zpřísněnou cestu UNC**:  
-    Vyberte **Přidat** a zadejte další příznaky zabezpečení a cesty k serveru.
+- **Seznam cest pro zpřísněnou cestu UNC**:  
+  Vyberte **Přidat** a zadejte další příznaky zabezpečení a cesty k serveru.
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
@@ -2236,7 +2236,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   **Výchozí**: povoleno
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
@@ -2259,9 +2259,6 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
     **Výchozí**: Nenakonfigurováno
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
   - **Malá písmena v PIN kódu**:  
     V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.
 
@@ -2276,9 +2273,6 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
     Pokud se to vyžaduje, PIN kód uživatele musí obsahovat aspoň jedno velké písmeno.
 
     **Výchozí**: nepovolené
-
-::: zone-end
-::: zone pivot="mdm-sept-2020"
 
   - **Malá písmena v PIN kódu**:  
     V případě potřeby musí kód PIN uživatele obsahovat aspoň jedno malé písmeno.

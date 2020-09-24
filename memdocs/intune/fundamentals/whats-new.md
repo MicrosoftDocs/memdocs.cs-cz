@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f169da16cec126dd160a32543a835fbb99db546
-ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
+ms.openlocfilehash: 9a0f1b386127470585b935fca30792e1ff6c89df
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91107563"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134879"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -74,9 +74,6 @@ Nyní můžete určit, které důvěryhodné zdroje dat smějí být otevřeny d
 - **Umožňuje uživatelům otevírat data z vybraných služeb.**
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace**  >  **Zásady ochrany aplikací**  >  **vytvořit zásadu**. Aby bylo možné tuto funkci používat, musí aplikace spravované zásadou Intune implementovat podporu tohoto ovládacího prvku. Další informace najdete v [Nastavení zásad ochrany aplikací pro iOS](../apps/app-protection-policy-settings-ios.md) a [Nastavení zásad ochrany aplikací pro Android](../apps/app-protection-policy-settings-android.md).
-
-#### <a name="new-app-categories-to-target-app-protection-policies-more-easily---4802581----"></a>Nové kategorie aplikací pro snazší cílení zásad ochrany aplikací<!-- 4802581  -->
-S vydáním verze 2009 služby Intune jsme vylepšili uživatelské prostředí Microsoft Endpoint Manageru tím, že vytvoříte kategorie aplikací, které můžete použít k jednoduššímu a rychlému zacílení zásad ochrany aplikací. Tyto kategorie jsou **všechny veřejné aplikace**, aplikace **Microsoftu**a **základní aplikace Microsoftu**. Po vytvoření cílové zásady ochrany aplikací můžete vybrat **Zobrazit seznam aplikací, které budou cílené** na zobrazení seznamu aplikací, na které budou tyto zásady ovlivněny. Když se podporují nové aplikace, budeme tyto kategorie dynamicky aktualizovat, aby se tyto aplikace podle potřeby zahrnuly, a vaše zásady budou automaticky platit pro všechny aplikace ve vybrané kategorii. V případě potřeby můžete i nadále cílit na zásady pro jednotlivé aplikace. Další informace najdete v tématu [jak vytvořit a přiřadit zásady ochrany aplikací](../apps/app-protection-policies.md) a [vytvořit a nasadit zásady Windows Information Protection (NV) pomocí Intune](../apps/windows-information-protection-policy-create.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení

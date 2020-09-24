@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ff661683bdb1d7ff491186ab214719c8d073b72a
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134930"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Optimalizace doručování aktualizací Windows 10 pomocí Configuration Manager
 
@@ -105,14 +105,14 @@ Výběr správné technologie peere naukládání do mezipaměti pro soubory Exp
 
 | Funkce  | Optimalizace doručení  | Sdílená mezipaměť  | Služba BranchCache  |
 |---------|---------|---------|---------|
-| Podporováno mezi podsítěmi | Ano | Ano | Ne |
+| Podporováno mezi podsítěmi | Yes | Yes | No |
 | Omezení šířky pásma | Ano (nativní) | Ano (přes BITS) | Ano (přes BITS) |
 | Podpora částečného obsahu | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. | Jenom pro aplikace Microsoft 365 a expresní aktualizace | Ano, u všech podporovaných typů obsahu uvedených v tomto sloupci na dalším řádku. |
 | Podporované typy obsahu | **Prostřednictvím nástroje ConfigMgr:** </br> – Expresní aktualizace </br> – Všechny aktualizace Windows (počínaje verzí 1910). To nezahrnuje aktualizace Microsoft 365ch aplikací.</br> </br> **Přes Microsoft Cloud:**</br> – Windows a aktualizace zabezpečení</br> – Ovladače</br> – Aplikace pro Windows Store</br> – Aplikace pro Windows Store pro firmy | Všechny typy obsahu nástroje ConfigMgr, včetně obrázků stažených v [systému Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | Všechny typy obsahu nástroje ConfigMgr kromě imagí |
-| Velikost mezipaměti na ovládacím prvku disku | Ano | Ano | Ano |
+| Velikost mezipaměti na ovládacím prvku disku | Yes | Yes | Yes |
 | Zjišťování zdroje partnerského vztahu | Automaticky | Ruční (nastavení agenta klienta) | Automaticky |
 | Rovnocenné zjišťování | Přes cloudovou službu optimalizace doručování (vyžaduje přístup k Internetu) | Přes bod správy (na základě skupin hranic klientů) | Odesílání |
-| Vytváření sestav | Ano (použití Desktop Analytics) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
+| Přehledy | [Update Compliance](/windows/deployment/update/update-compliance-get-started) | Řídicí panel zdrojů dat klienta nástroje ConfigMgr | Řídicí panel zdrojů dat klienta nástroje ConfigMgr |
 | Řízení využití sítě WAN | Ano (nativní, lze ovládat pomocí nastavení zásad skupiny) | Skupiny hranic | Pouze podpora podsítí |
 | Správa prostřednictvím nástroje ConfigMgr | Částečný (nastavení klientského agenta) | Ano (nastavení agenta klienta) | Ano (nastavení agenta klienta) |
 
@@ -177,7 +177,7 @@ Windows 10 verze 1703 (a novější) obsahuje dvě nové rutiny PowerShellu **Ge
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>Jak klienti komunikují s optimalizací doručování přes síť?
 Další informace o síťových portech, požadavcích na proxy serveru a názvůch hostitelů pro brány firewall najdete v tématu [Nejčastější dotazy k optimalizaci doručení](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions).
 
-## <a name="log-files"></a>Soubory protokolu
+## <a name="log-files"></a>Soubory protokolů
 
 Ke sledování rozdílového stahování použijte následující soubory protokolu:
 
