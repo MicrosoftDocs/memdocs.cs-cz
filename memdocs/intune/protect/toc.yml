@@ -115,6 +115,14 @@
               href: encrypt-devices-filevault.md
             - name: Monitorování šifrování disků
               href: encryption-monitor.md
+    - name: Microsoft Tunnel
+      items:
+        - name: Přehled aplikace Microsoft Tunnel
+          href: microsoft-tunnel-overview.md
+        - name: Konfigurace aplikace Microsoft Tunnel
+          href: microsoft-tunnel-configure.md
+        - name: Monitorování aplikace Microsoft Tunnel
+          href: microsoft-tunnel-monitor.md
     - name: Ochrana identit
       items:
         - name: Windows Hello
@@ -338,6 +346,8 @@
           href: security-baseline-settings-defender-atp.md
         - name: Nastavení standardních hodnot zabezpečení Microsoft Edge
           href: security-baseline-settings-edge.md
+    - name: Nástroje příkazového řádku pro Microsoft Tunnel
+      href: microsoft-tunnel-reference.md
     - name: Nastavení služby Windows Update
       href: windows-update-settings.md
     - name: Kódy a popisy chyb

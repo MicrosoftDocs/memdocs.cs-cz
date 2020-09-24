@@ -153,6 +153,8 @@
               href: network-bandwidth-use.md
             - name: Používání virtuálních počítačů s Windows 10 s Intune
               href: windows-10-virtual-machines.md
+            - name: Použití služby Windows Virtual Desktop s Intune
+              href: windows-virtual-desktop.md
             - name: Koncové body Intune
               href: intune-endpoints.md
             - name: Koncové body Intune pro vládu USA

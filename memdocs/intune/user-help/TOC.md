@@ -22,6 +22,7 @@
 ##### [Registrace pomocí Intercede](enroll-android-device-intercede.md)
 ##### [Registrace pomocí DISA Purebred](enroll-android-device-disa-purebred.md)
 ### [Přechod do nastavení správy nového zařízení](move-to-new-device-management-setup.md)
+### [Použití aplikace Microsoft Tunnel pro Android](use-microsoft-tunnel-android.md)
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 ### [Zašifrování zařízení](encrypt-your-device-android.md)
 ### [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Registrace pomocí Entrust Datacard](enroll-ios-device-entrust-datacard.md)
 ##### [Registrace pomocí Intercede](enroll-ios-device-intercede.md)
 ##### [Registrace pomocí DISA Purebred](enroll-ios-device-disa-purebred.md)
-
+### [Použití aplikace Microsoft Tunnel pro iOS](use-microsoft-tunnel-iOS.md)
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
